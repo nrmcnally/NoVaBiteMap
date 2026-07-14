@@ -50,6 +50,27 @@ class ApiTests(unittest.TestCase):
         self.assertTrue({"lake-fairfax", "gravelly-point", "beaverdam-reservoir"}.issubset(ids))
         fountainhead = next(item for item in locations if item["id"] == "fountainhead")
         self.assertEqual(fountainhead["consumption_advisory"]["status"], "active")
+        fountainhead_rules = fountainhead["consumption_advisory"]["matching_restrictions"]
+        self.assertTrue(any(rule["species_ids"] == ["largemouth-bass"] and rule["severity"] == "do-not-eat" for rule in fountainhead_rules))
+        self.assertTrue(any(rule["species_ids"] == ["bluegill"] and rule["severity"] == "two-meals-per-month" for rule in fountainhead_rules))
+
+    def test_advisory_segments_do_not_overgeneralize_whole_rivers(self):
+        locations = self.client.get("/api/locations", params={"limit": 200}).json()
+        by_id = {item["id"]: item for item in locations}
+
+        bentonville = by_id["bentonville"]["consumption_advisory"]
+        self.assertEqual([segment["id"] for segment in bentonville["segments"]], ["shenandoah-mercury"])
+
+        morgans = by_id["morgans-ford"]["consumption_advisory"]
+        self.assertEqual([segment["id"] for segment in morgans["segments"]], ["shenandoah-pcb-lower-reaches"])
+
+        self.assertEqual(by_id["catletts-ford"]["consumption_advisory"]["status"], "no-advisory-found")
+        self.assertEqual(by_id["occoquan-hand-carry"]["consumption_advisory"]["status"], "jurisdiction-check")
+        self.assertEqual(by_id["berrys"]["waterbody"], "Shenandoah River")
+
+        pohick_rules = by_id["pohick-bay"]["consumption_advisory"]["matching_restrictions"]
+        channel_rules = [rule for rule in pohick_rules if rule["species_ids"] == ["channel-catfish"]]
+        self.assertEqual({rule["size_qualifier"] for rule in channel_rules}, {"18 inches or longer", "shorter than 18 inches"})
 
     def test_location_alias_search(self):
         response = self.client.get("/api/locations/search", params={"q": "Burke Lake Park"})

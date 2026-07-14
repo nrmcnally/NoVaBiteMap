@@ -2,6 +2,7 @@
 
 import { AlertTriangle, CheckCircle2, Clock3, DatabaseZap, ExternalLink, Fish, MapPin, ServerCog, ShieldCheck } from "lucide-react";
 import { TopNav } from "../../components/TopNav";
+import { advisorySegments } from "../../lib/advisories";
 import { locations, sourceLinks, species } from "../../lib/data";
 
 const countByAuthority = (authority: string) => locations.filter((location) => location.accessAuthority === authority).length;
@@ -13,6 +14,7 @@ const providers = [
   { name: "NOVA Parks", status: "Healthy", detail: `${countByAuthority("NOVA Parks")} verified regional park locations`, updated: "Reviewed Jul 13", href: sourceLinks.novaOccoquan },
   { name: "Virginia and Prince William parks", status: "Healthy", detail: `${countByAuthority("Virginia State Parks") + countByAuthority("Prince William County Parks")} verified locations`, updated: "Reviewed Jul 13", href: sourceLinks.pwcFishing },
   { name: "Virginia DWR fisheries", status: "Healthy", detail: "Curated species evidence with source dates", updated: "Reviewed Jul 13", href: sourceLinks.shenandoah },
+  { name: "VDH fish consumption advisories", status: "Healthy", detail: `${advisorySegments.length} versioned NOVA segment mappings with species rules`, updated: "2025 / 2026 basin sheets", href: sourceLinks.vdhFishAdvisories },
   { name: "National Weather Service", status: "Live request", detail: "Selected-location hourly forecast", updated: "On demand", href: sourceLinks.nws },
   { name: "USGS Water Data", status: "Needs review", detail: "No automatic nearest-gage fallback", updated: "Association queue", href: "https://waterdata.usgs.gov/" },
   { name: "USGS Aquatic GAP", status: "Pipeline ready", detail: "Version-pinned modeled evidence import", updated: "Release v2.0", href: sourceLinks.aquaticGap },

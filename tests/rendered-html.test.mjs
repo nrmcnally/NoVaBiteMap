@@ -49,18 +49,23 @@ test("methodology explains the score without exposing provider health", async ()
   assert.doesNotMatch(methodology, /Inspect provider health|data-health/);
 });
 
-test("source code preserves the species gate, provenance, and missing-data language", async () => {
-  const [scoring, conditions, data, coverage] = await Promise.all([
+test("source code preserves the species gate, provenance, and precise advisory language", async () => {
+  const [scoring, conditions, data, coverage, advisories] = await Promise.all([
     readFile(new URL("../app/lib/scoring.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/api/conditions/route.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/lib/data.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/lib/coverage-data.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/lib/advisories.ts", import.meta.url), "utf8"),
   ]);
   assert.match(scoring, /Math\.pow\(evidence\.availability, 1\.5\)/);
   assert.match(conditions, /did not create a fallback observation/);
   assert.match(data, /Public access is verified by Virginia DWR/);
-  assert.match(data, /VDH PFOS advisory/);
-  assert.match(data, /not a guarantee that fish are safe to eat/i);
+  assert.match(advisories, /PotomacRiver_2026-1\.pdf/);
+  assert.match(advisories, /ShenandoahRiver_2025\.pdf/);
+  assert.match(advisories, /18 inches or longer/);
+  assert.match(advisories, /no-selected-species-match/);
+  assert.match(advisories, /not a general safety guarantee/i);
+  assert.match(advisories, /consumptionAdviceFor/);
   assert.match(coverage, /Lake Fairfax Park/);
   assert.match(coverage, /Gravelly Point/);
   assert.match(coverage, /accessAuthority/);

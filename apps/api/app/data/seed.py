@@ -6,6 +6,8 @@ ACCESS_SOURCE = "https://services.dwr.virginia.gov/arcgis/rest/services/Public/B
 SHENANDOAH_SOURCE = "https://dwr.virginia.gov/blog/five-great-places-in-the-northern-shenandoah-valley-to-fish-after-work/"
 WALLEYE_SOURCE = "https://dwr.virginia.gov/wp-content/uploads/media/Walleye-Fishing-Forecast-2026.pdf"
 VDH_ADVISORY_SOURCE = "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/"
+VDH_POTOMAC_2026 = "https://www.vdh.virginia.gov/content/uploads/sites/20/PotomacRiver_2026-1.pdf"
+VDH_SHENANDOAH_2025 = "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
 
 SPECIES = [
     {"id": "smallmouth-bass", "common_name": "Smallmouth bass", "scientific_name": "Micropterus dolomieu", "code": "SMB", "aliases": ["smallie", "smallmouth"]},
@@ -102,7 +104,7 @@ LOCATIONS = [
     location("point-of-rocks", "McKimmey (Point of Rocks)", "Potomac River", "Loudoun", 39.272516, -77.546888, 48, ["shore", "kayak", "boat"], aliases=["Point of Rocks", "McKimmey"]),
     location("lake-curtis", "Lake Curtis", "Lake Curtis", "Stafford", 38.436285, -77.561260, 54, ["shore", "kayak", "boat"], aliases=["Curtis Lake"]),
     location("rocky-pen-park", "Rocky Pen Park", "Rocky Pen Run Reservoir", "Stafford", 38.334227, -77.543775, 62, ["shore", "kayak", "boat"], aliases=["Rocky Pen Run"]),
-    location("berrys", "Berry's", "South Fork Shenandoah River", "Clarke", 39.041631, -77.999671, 54, ["shore", "kayak", "boat"], river_evidence(), activity_estimate=0.75),
+    location("berrys", "Berry's", "Shenandoah River", "Clarke", 39.041631, -77.999671, 54, ["shore", "kayak", "boat"], river_evidence(True), activity_estimate=0.75),
     location("castlemans-ferry", "Castleman's Ferry", "Shenandoah River", "Clarke", 39.123933, -77.891047, 57, ["shore", "kayak", "boat"], river_evidence(True), activity_estimate=0.73),
     location("lockes", "Lockes", "Shenandoah River", "Clarke", 39.101569, -77.964838, 58, ["shore", "kayak", "boat"], river_evidence(True), activity_estimate=0.71),
     location("bentonville", "Bentonville", "South Fork Shenandoah River", "Warren", 38.840096, -78.330420, 68, ["shore", "wade", "kayak", "boat"], river_evidence(), activity_estimate=0.78),
@@ -115,6 +117,9 @@ LOCATIONS = [
 ] + COVERAGE_LOCATIONS
 
 
+SHENANDOAH_PCB_IDS = {"front-royal", "riverton", "morgans-ford", "berrys", "castlemans-ferry", "lockes"}
+SHENANDOAH_MERCURY_IDS = {"bentonville", "karo", "simpsons", "front-royal", "riverton"}
+POTOMAC_TIDAL_TRIBUTARY_IDS = {"pohick-bay", "occoquan-regional"}
 OCCOQUAN_ADVISORY_IDS = {
     "fountainhead",
     "bull-run-marina",
@@ -122,6 +127,87 @@ OCCOQUAN_ADVISORY_IDS = {
     "occoquan-regional",
     "mason-neck",
 }
+BOUNDARY_CHECK_IDS = {"occoquan-hand-carry", "roaches-run"}
+
+
+def restriction(id: str, severity: str, label: str, species_label: str, species_ids: list[str], contaminant: str, *, size_qualifier: str | None = None, applies_to_all_species: bool = False) -> dict:
+    return {
+        "id": id,
+        "severity": severity,
+        "label": label,
+        "species_label": species_label,
+        "species_ids": species_ids,
+        "contaminant": contaminant,
+        "size_qualifier": size_qualifier,
+        "applies_to_all_species": applies_to_all_species,
+    }
+
+
+ADVISORY_SEGMENTS = [
+    {
+        "id": "shenandoah-pcb-lower-reaches",
+        "waterbody": "Lower South Fork, lower North Fork, and main-stem Shenandoah River",
+        "section": "South Fork downstream from the Route 619 bridge near Front Royal to the confluence; North Fork from its mouth upstream to Riverton Dam; and the Shenandoah from the fork confluence to the Virginia/West Virginia line.",
+        "contaminants": ["PCBs"],
+        "location_ids": SHENANDOAH_PCB_IDS,
+        "source_url": VDH_SHENANDOAH_2025,
+        "source_version": "Current VDH Shenandoah basin sheet · 2025",
+        "restrictions": [
+            restriction("shen-pcb-carp", "do-not-eat", "Do not eat", "Carp", ["common-carp"], "PCBs"),
+            restriction("shen-pcb-channel-cat", "do-not-eat", "Do not eat", "Channel Catfish", ["channel-catfish"], "PCBs"),
+            restriction("shen-pcb-white-sucker", "do-not-eat", "Do not eat", "White Sucker", [], "PCBs"),
+            restriction("shen-pcb-rock-bass", "two-meals-per-month", "No more than 2 meals/month", "Rock Bass", [], "PCBs"),
+            restriction("shen-pcb-sunfish", "two-meals-per-month", "No more than 2 meals/month", "Sunfish", ["bluegill", "redbreast-sunfish"], "PCBs"),
+            restriction("shen-pcb-smallmouth", "two-meals-per-month", "No more than 2 meals/month", "Smallmouth Bass", ["smallmouth-bass"], "PCBs"),
+            restriction("shen-pcb-largemouth", "two-meals-per-month", "No more than 2 meals/month", "Largemouth Bass", ["largemouth-bass"], "PCBs"),
+        ],
+    },
+    {
+        "id": "shenandoah-mercury",
+        "waterbody": "South Fork, lower North Fork, and upper main-stem Shenandoah River",
+        "section": "South Fork from Port Republic to the fork confluence; North Fork from its mouth upstream to Riverton Dam; and the Shenandoah from the fork confluence to Warren Power Dam.",
+        "contaminants": ["Mercury"],
+        "location_ids": SHENANDOAH_MERCURY_IDS,
+        "source_url": VDH_SHENANDOAH_2025,
+        "source_version": "Current VDH Shenandoah basin sheet · 2025",
+        "restrictions": [restriction("shen-mercury-all", "two-meals-per-month", "No more than 2 meals/month", "All species", [], "Mercury", applies_to_all_species=True)],
+    },
+    {
+        "id": "potomac-tidal-tributaries-pcb",
+        "waterbody": "Tidal Potomac tributaries and embayments",
+        "section": "Named tidal tributaries and embayments between the I-395 bridge and the Route 301 Potomac River bridge, including Pohick Creek and the Occoquan River system.",
+        "contaminants": ["PCBs"],
+        "location_ids": POTOMAC_TIDAL_TRIBUTARY_IDS,
+        "source_url": VDH_POTOMAC_2026,
+        "source_version": "Current VDH Potomac basin sheet · 2026",
+        "restrictions": [
+            restriction("potomac-pcb-carp", "do-not-eat", "Do not eat", "Carp", ["common-carp"], "PCBs"),
+            restriction("potomac-pcb-eel", "do-not-eat", "Do not eat", "American Eel", [], "PCBs"),
+            restriction("potomac-pcb-channel-large", "do-not-eat", "Do not eat", "Channel Catfish", ["channel-catfish"], "PCBs", size_qualifier="18 inches or longer"),
+            restriction("potomac-pcb-channel-small", "two-meals-per-month", "No more than 2 meals/month", "Channel Catfish", ["channel-catfish"], "PCBs", size_qualifier="shorter than 18 inches"),
+            restriction("potomac-pcb-bullhead", "two-meals-per-month", "No more than 2 meals/month", "Bullhead Catfish", [], "PCBs"),
+            restriction("potomac-pcb-largemouth", "two-meals-per-month", "No more than 2 meals/month", "Largemouth Bass", ["largemouth-bass"], "PCBs"),
+            restriction("potomac-pcb-striped", "two-meals-per-month", "No more than 2 meals/month", "Anadromous Striped Bass", ["striped-bass"], "PCBs"),
+            restriction("potomac-pcb-sunfish", "two-meals-per-month", "No more than 2 meals/month", "Sunfish species", ["bluegill", "redbreast-sunfish"], "PCBs"),
+            restriction("potomac-pcb-smallmouth", "two-meals-per-month", "No more than 2 meals/month", "Smallmouth Bass", ["smallmouth-bass"], "PCBs"),
+            restriction("potomac-pcb-white-perch", "two-meals-per-month", "No more than 2 meals/month", "White Perch", ["white-perch"], "PCBs"),
+            restriction("potomac-pcb-yellow-perch", "two-meals-per-month", "No more than 2 meals/month", "Yellow Perch", ["yellow-perch"], "PCBs"),
+        ],
+    },
+    {
+        "id": "occoquan-pfos",
+        "waterbody": "Occoquan River and Occoquan Reservoir",
+        "section": "The tidal Occoquan below the reservoir dam through Occoquan Bay and Belmont Bay, plus the reservoir from the named backwater boundaries to the Fairfax Water supply dam.",
+        "contaminants": ["PFOS"],
+        "location_ids": OCCOQUAN_ADVISORY_IDS,
+        "source_url": VDH_POTOMAC_2026,
+        "source_version": "Current VDH Potomac basin sheet · 2026",
+        "restrictions": [
+            restriction("occoquan-pfos-largemouth", "do-not-eat", "Do not eat", "Largemouth Bass", ["largemouth-bass"], "PFOS"),
+            restriction("occoquan-pfos-bluegill", "two-meals-per-month", "No more than 2 meals/month", "Bluegill Sunfish", ["bluegill"], "PFOS"),
+        ],
+    },
+]
 
 
 def consumption_advisory(location_record: dict) -> dict:
@@ -133,37 +219,30 @@ def consumption_advisory(location_record: dict) -> dict:
     waterbody = location_record["waterbody"]
     location_id = location_record["id"]
 
-    if "Shenandoah" in waterbody:
+    segments = [segment for segment in ADVISORY_SEGMENTS if location_id in segment["location_ids"]]
+    if segments:
+        serialized_segments = [{**segment, "location_ids": sorted(segment["location_ids"])} for segment in segments]
+        matching_restrictions = [rule for segment in serialized_segments for rule in segment["restrictions"]]
         return {
             **common,
             "status": "active",
-            "label": "VDH consumption advisory",
-            "summary": "VDH lists PCB and mercury meal limits across Shenandoah segments, including do-not-eat guidance for some species and reaches.",
-            "contaminants": ["PCBs", "Mercury"],
+            "label": "VDH consumption restrictions",
+            "summary": f"{len(segments)} current VDH advisory segment{' applies' if len(segments) == 1 else 's apply'} at this access point. Restrictions depend on species and sometimes fish length.",
+            "contaminants": sorted({contaminant for segment in segments for contaminant in segment["contaminants"]}),
+            "segments": serialized_segments,
+            "matching_restrictions": matching_restrictions,
+            "selected_species_ids": [],
         }
-    if location_id in OCCOQUAN_ADVISORY_IDS:
-        return {
-            **common,
-            "status": "active",
-            "label": "VDH PFOS advisory",
-            "summary": "VDH advises no largemouth bass meals from specified Occoquan River and Reservoir reaches and limits bluegill in the wider watershed.",
-            "contaminants": ["PFOS"],
-        }
-    if location_id == "pohick-bay":
-        return {
-            **common,
-            "status": "active",
-            "label": "VDH PCB advisory",
-            "summary": "VDH lists species-specific PCB restrictions for tidal Potomac tributaries and embayments that include Pohick Creek.",
-            "contaminants": ["PCBs"],
-        }
-    if waterbody == "Potomac River":
+    if waterbody == "Potomac River" or location_id in BOUNDARY_CHECK_IDS:
         return {
             **common,
             "status": "jurisdiction-check",
-            "label": "Check exact jurisdiction",
-            "summary": "Potomac harvest guidance can depend on the exact Virginia, Maryland, or DC bank and river segment. Check the applicable advisory before keeping fish.",
+            "label": "Check advisory boundary" if location_id == "occoquan-hand-carry" else "Check exact jurisdiction",
+            "summary": "Confirm the exact catch location against the current jurisdiction and VDH segment before keeping fish.",
             "contaminants": [],
+            "segments": [],
+            "matching_restrictions": [],
+            "selected_species_ids": [],
         }
     return {
         **common,
@@ -171,6 +250,9 @@ def consumption_advisory(location_record: dict) -> dict:
         "label": "No VDH advisory match found",
         "summary": "No matching location was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
         "contaminants": [],
+        "segments": [],
+        "matching_restrictions": [],
+        "selected_species_ids": [],
     }
 
 

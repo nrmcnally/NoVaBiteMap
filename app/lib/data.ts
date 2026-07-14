@@ -1,18 +1,9 @@
 import { coverageLocations } from "./coverage-data";
+import { advisoryForLocation, vdhAdvisoryIndexUrl, type ConsumptionAdvisory } from "./advisories";
 
 export type AccessMethod = "shore" | "wade" | "kayak" | "boat";
 export type WaterbodyType = "river" | "reservoir" | "lake" | "pond" | "bay" | "stream";
-export type AdvisoryStatus = "active" | "no-advisory-found" | "jurisdiction-check";
-
-export type ConsumptionAdvisory = {
-  status: AdvisoryStatus;
-  label: string;
-  summary: string;
-  contaminants: string[];
-  sourceName: string;
-  sourceUrl: string;
-  reviewed: string;
-};
+export type { AdvisoryStatus, ConsumptionAdvisory } from "./advisories";
 
 export type Species = {
   id: string;
@@ -91,7 +82,7 @@ export const sourceLinks = {
   dcrLeesylvania: "https://www.dcr.virginia.gov/state-parks/leesylvania",
   dcrMasonNeck: "https://www.dcr.virginia.gov/state-parks/mason-neck",
   pwcFishing: "https://www.pwcva.gov/department/parks-recreation/fishing/",
-  vdhFishAdvisories: "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+  vdhFishAdvisories: vdhAdvisoryIndexUrl,
 };
 
 export const species: Species[] = [
@@ -360,7 +351,7 @@ const dwrLocations: Array<Omit<FishingLocationSeed, "accessAuthority" | "accessS
     evidence: [],
   },
   ...[
-    ["berrys", "Berry’s", "South Fork Shenandoah River", "Clarke", 39.041631, -77.999671, 43, 54, ["shore", "kayak", "boat"], 0.75, 0.83],
+    ["berrys", "Berry’s", "Shenandoah River", "Clarke", 39.041631, -77.999671, 43, 54, ["shore", "kayak", "boat"], 0.75, 0.83],
     ["castlemans-ferry", "Castleman’s Ferry", "Shenandoah River", "Clarke", 39.123933, -77.891047, 45, 57, ["shore", "kayak", "boat"], 0.73, 0.88],
     ["lockes", "Lockes", "Shenandoah River", "Clarke", 39.101569, -77.964838, 46, 58, ["shore", "kayak", "boat"], 0.71, 0.82],
     ["bentonville", "Bentonville", "South Fork Shenandoah River", "Warren", 38.840096, -78.33042, 58, 68, ["shore", "wade", "kayak", "boat"], 0.78, 0.91],
@@ -406,73 +397,9 @@ const sourcedLocations: FishingLocationSeed[] = [
   ...coverageLocations,
 ];
 
-const occoquanAdvisoryIds = new Set([
-  "fountainhead",
-  "bull-run-marina",
-  "lake-ridge-marina",
-  "occoquan-regional",
-  "mason-neck",
-]);
-
-function consumptionAdvisoryFor(location: FishingLocationSeed): ConsumptionAdvisory {
-  const common = {
-    sourceName: "Virginia Department of Health",
-    sourceUrl: sourceLinks.vdhFishAdvisories,
-    reviewed: "2026-07-13",
-  };
-
-  if (location.waterbody.includes("Shenandoah")) {
-    return {
-      ...common,
-      status: "active",
-      label: "VDH consumption advisory",
-      summary: "VDH lists PCB and mercury meal limits across Shenandoah segments, including do-not-eat guidance for some species and reaches.",
-      contaminants: ["PCBs", "Mercury"],
-    };
-  }
-
-  if (occoquanAdvisoryIds.has(location.id)) {
-    return {
-      ...common,
-      status: "active",
-      label: "VDH PFOS advisory",
-      summary: "VDH advises no largemouth bass meals from specified Occoquan River and Reservoir reaches and limits bluegill in the wider watershed.",
-      contaminants: ["PFOS"],
-    };
-  }
-
-  if (location.id === "pohick-bay") {
-    return {
-      ...common,
-      status: "active",
-      label: "VDH PCB advisory",
-      summary: "VDH lists species-specific PCB restrictions for tidal Potomac tributaries and embayments that include Pohick Creek.",
-      contaminants: ["PCBs"],
-    };
-  }
-
-  if (location.waterbody === "Potomac River") {
-    return {
-      ...common,
-      status: "jurisdiction-check",
-      label: "Check exact jurisdiction",
-      summary: "Potomac harvest guidance can depend on the exact Virginia, Maryland, or DC bank and river segment. Check the applicable advisory before keeping fish.",
-      contaminants: [],
-    };
-  }
-
-  return {
-    ...common,
-    status: "no-advisory-found",
-    label: "No VDH advisory match found",
-    summary: "No matching location was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
-    contaminants: [],
-  };
-}
-
 export const locations: FishingLocation[] = sourcedLocations.map((location) => ({
   ...location,
-  consumptionAdvisory: consumptionAdvisoryFor(location),
+  consumptionAdvisory: advisoryForLocation(location),
 }));
 
 export const locationById = (id: string) => locations.find((location) => location.id === id);

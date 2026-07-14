@@ -18,16 +18,22 @@ import {
   Waves,
 } from "../../components/ClientIcons";
 import { TopNav } from "../../components/TopNav";
+import { consumptionAdviceFor } from "../../lib/advisories";
 import { locationById, sourceLinks, speciesById } from "../../lib/data";
 import { estimatedHourlyScores, opportunityFor } from "../../lib/scoring";
 import { googleDirectionsUrl } from "../../lib/travel";
 
-type LocationPageProps = { params: Promise<{ id: string }> };
+type LocationPageProps = { params: Promise<{ id: string }>; searchParams: Promise<{ species?: string }> };
 
-export default async function LocationPage({ params }: LocationPageProps) {
+export default async function LocationPage({ params, searchParams }: LocationPageProps) {
   const { id } = await params;
+  const { species: speciesQuery } = await searchParams;
   const location = locationById(id);
   if (!location) notFound();
+
+  const advisorySpeciesIds = (speciesQuery ?? "").split(",").filter((speciesId) => Boolean(speciesById(speciesId)));
+  const consumptionAdvisory = consumptionAdviceFor(location.consumptionAdvisory, advisorySpeciesIds);
+  const advisorySpeciesNames = advisorySpeciesIds.map((speciesId) => speciesById(speciesId)?.name).filter(Boolean);
 
   const primaryEvidence = location.evidence[0];
   const opportunity = primaryEvidence ? opportunityFor(location, primaryEvidence.speciesId) : null;
@@ -151,21 +157,44 @@ export default async function LocationPage({ params }: LocationPageProps) {
               <p>{location.notice}</p>
               <p>Do not wade rising water. Check severe weather, closures, and posted property boundaries.</p>
             </section>
-            <section className={`consumption-panel consumption-${location.consumptionAdvisory.status}`}>
+            <section className={`consumption-panel consumption-${consumptionAdvisory.status}`}>
               <div className="consumption-heading">
-                {location.consumptionAdvisory.status === "active" ? <AlertTriangle size={20} /> : location.consumptionAdvisory.status === "jurisdiction-check" ? <Info size={20} /> : <CheckCircle2 size={20} />}
-                <div><span className="eyebrow">Fish consumption guidance</span><h2>{location.consumptionAdvisory.label}</h2></div>
+                {consumptionAdvisory.status === "active" ? <AlertTriangle size={20} /> : consumptionAdvisory.status === "jurisdiction-check" ? <Info size={20} /> : <CheckCircle2 size={20} />}
+                <div><span className="eyebrow">{advisorySpeciesNames.length > 0 ? `${advisorySpeciesNames.join(", ")} guidance` : "Fish consumption guidance"}</span><h2>{consumptionAdvisory.label}</h2></div>
               </div>
-              <p>{location.consumptionAdvisory.summary}</p>
-              {location.consumptionAdvisory.contaminants.length > 0 && (
+              <p>{consumptionAdvisory.summary}</p>
+              {consumptionAdvisory.contaminants.length > 0 && (
                 <div className="contaminant-list">
-                  {location.consumptionAdvisory.contaminants.map((contaminant) => <span key={contaminant}>{contaminant}</span>)}
+                  {consumptionAdvisory.contaminants.map((contaminant) => <span key={contaminant}>{contaminant}</span>)}
                 </div>
               )}
-              <a href={location.consumptionAdvisory.sourceUrl} target="_blank" rel="noreferrer">
-                Check the current VDH species and segment table <ExternalLink size={14} />
+              {consumptionAdvisory.segments.map((segment) => {
+                const relevantRestrictions = advisorySpeciesIds.length === 0
+                  ? segment.restrictions
+                  : segment.restrictions.filter((restriction) => consumptionAdvisory.matchingRestrictions.some((match) => match.id === restriction.id));
+                return (
+                  <div className="advisory-segment" key={segment.id}>
+                    <strong>{segment.waterbody}</strong>
+                    <p>{segment.section}</p>
+                    {relevantRestrictions.length > 0 ? (
+                      <div className="restriction-list">
+                        {relevantRestrictions.map((restriction) => (
+                          <div className={`restriction-row restriction-${restriction.severity}`} key={restriction.id}>
+                            <span>{restriction.label}</span>
+                            <strong>{restriction.speciesLabel}{restriction.sizeQualifier ? ` · ${restriction.sizeQualifier}` : ""}</strong>
+                            <small>{restriction.contaminant}</small>
+                          </div>
+                        ))}
+                      </div>
+                    ) : <small>No restriction in this segment names the selected species.</small>}
+                    <a href={segment.sourceUrl} target="_blank" rel="noreferrer">{segment.sourceVersion} <ExternalLink size={14} /></a>
+                  </div>
+                );
+              })}
+              <a href={consumptionAdvisory.sourceUrl} target="_blank" rel="noreferrer">
+                Check the complete current VDH advisory table <ExternalLink size={14} />
               </a>
-              <small>Reviewed {location.consumptionAdvisory.reviewed}. Advisories are species- and segment-specific. No mapped match is not a safety guarantee.</small>
+              <small>Reviewed {consumptionAdvisory.reviewed}. One meal is eight ounces. VDH advises pregnant or potentially pregnant people, nursing mothers, and young children not to eat any fish listed in an advisory. No mapped match is a safety guarantee.</small>
             </section>
             <section>
               <span className="eyebrow">Source trail</span>

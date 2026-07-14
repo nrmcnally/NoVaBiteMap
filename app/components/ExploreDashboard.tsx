@@ -30,6 +30,7 @@ import {
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { FormEvent, ReactNode } from "react";
 import { FishingMap } from "./FishingMap";
+import { consumptionAdviceFor } from "../lib/advisories";
 import { locations, species, speciesById, type AccessMethod, type WaterbodyType } from "../lib/data";
 import { opportunityFor } from "../lib/scoring";
 import { estimateTravel, googleDirectionsUrl, type TravelOrigin } from "../lib/travel";
@@ -99,8 +100,8 @@ const waterTypeOptions: { value: WaterbodyType; label: string }[] = [
 
 const harvestOptions: { value: HarvestFilter; label: string; detail: string }[] = [
   { value: "any", label: "Show every water", detail: "Advisories remain visible on result cards." },
-  { value: "hide-active", label: "Hide mapped advisories", detail: "Keeps Potomac sites that still need a jurisdiction check." },
-  { value: "keep-and-eat", label: "Keep-and-eat mode", detail: "Only shows waters with no VDH advisory match found in this review." },
+  { value: "hide-active", label: "Hide relevant restrictions", detail: "Uses selected species when available; boundary-check sites remain visible." },
+  { value: "keep-and-eat", label: "Keep-and-eat mode", detail: "Requires no matching VDH restriction for the selected species and no boundary check." },
 ];
 
 export function ExploreDashboard() {
@@ -123,12 +124,12 @@ export function ExploreDashboard() {
   const visibleRows = useMemo(() => {
     const normalized = query.trim().toLowerCase();
     return locations
-      .map((location) => ({ location, travel: estimateTravel(location, origin) }))
-      .filter(({ location, travel }) => {
+      .map((location) => ({ location, travel: estimateTravel(location, origin), advisory: consumptionAdviceFor(location.consumptionAdvisory, speciesIds) }))
+      .filter(({ location, travel, advisory }) => {
         if (access !== "any" && !location.access.includes(access)) return false;
         if (waterbodyTypes.length > 0 && !waterbodyTypes.includes(location.waterbodyType)) return false;
-        if (harvestFilter === "hide-active" && location.consumptionAdvisory.status === "active") return false;
-        if (harvestFilter === "keep-and-eat" && location.consumptionAdvisory.status !== "no-advisory-found") return false;
+        if (harvestFilter === "hide-active" && advisory.status === "active") return false;
+        if (harvestFilter === "keep-and-eat" && !["no-advisory-found", "no-selected-species-match"].includes(advisory.status)) return false;
         if (timeFilter === "walkable" && (!origin || travel.walkMinutes > 30)) return false;
         if (timeFilter !== "any" && timeFilter !== "walkable" && travel.driveMinutes > Number(timeFilter)) return false;
         if (!normalized) return true;
@@ -146,13 +147,13 @@ export function ExploreDashboard() {
   const ranked = useMemo(() => {
     if (speciesIds.length === 0) return [];
     return visibleRows
-      .map(({ location, travel }) => {
+      .map(({ location, travel, advisory }) => {
         const matches = speciesIds.flatMap((speciesId) => {
           const opportunity = opportunityFor(location, speciesId);
           const fish = speciesById(speciesId);
           return opportunity && fish ? [{ fish, opportunity }] : [];
         }).sort((a, b) => b.opportunity.score - a.opportunity.score);
-        return { location, travel, opportunity: matches[0]?.opportunity ?? null, matches };
+        return { location, travel, advisory, opportunity: matches[0]?.opportunity ?? null, matches };
       })
       .filter((row) => Boolean(row.opportunity))
       .sort((a, b) => (b.opportunity!.score - a.opportunity!.score) || (b.matches.length - a.matches.length));
@@ -171,6 +172,7 @@ export function ExploreDashboard() {
   const selectedOpportunity = selected?.opportunity ?? null;
   const selectedSpecies = speciesIds.map((id) => speciesById(id)).filter((item): item is NonNullable<typeof item> => Boolean(item));
   const mapLocations = useMemo(() => visibleRows.map(({ location }) => location), [visibleRows]);
+  const activeAdvisoryCount = useMemo(() => mapLocations.filter((location) => consumptionAdviceFor(location.consumptionAdvisory, speciesIds).status === "active").length, [mapLocations, speciesIds]);
 
   const speciesHealth = useMemo(() => new Map(species.map((fish) => {
     const bestScore = Math.max(0, ...visibleRows.map(({ location }) => opportunityFor(location, fish.id)?.score ?? 0));
@@ -443,7 +445,7 @@ export function ExploreDashboard() {
                   </button>
                 ))}
               </div>
-              <p className="advisory-disclaimer"><AlertTriangle size={14} /> No listed advisory is not proof that fish are safe. Always check current species- and segment-specific guidance.</p>
+              <p className="advisory-disclaimer"><AlertTriangle size={14} /> The filter follows the selected species, exact mapped access segment, and size rules where VDH provides them. No listed restriction is not proof that fish are safe.</p>
               <a className="official-advisory-link" href="https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/" target="_blank" rel="noreferrer">Open current Virginia advisories <ArrowRight size={13} /></a>
             </FilterMenu>
 
@@ -501,6 +503,7 @@ export function ExploreDashboard() {
                 <span><i className="marker-pending" /> evidence pending</span>
               </>
             )}
+            {activeAdvisoryCount > 0 && <span><i className="marker-advisory" /> {activeAdvisoryCount} relevant VDH restriction{activeAdvisoryCount === 1 ? "" : "s"}</span>}
           </div>
           <div className="map-source"><ShieldCheck size={14} /> Access verified by official agency sources</div>
         </div>
@@ -536,7 +539,7 @@ export function ExploreDashboard() {
             </div>
           ) : (
             <div className="results-list">
-              {ranked.map(({ location, opportunity, travel, matches }, index) => {
+              {ranked.map(({ location, opportunity, travel, matches, advisory }, index) => {
                 if (!opportunity) return null;
                 const isSelected = location.id === selectedLocation?.id;
                 const isSaved = favoriteIds.has(location.id);
@@ -559,18 +562,28 @@ export function ExploreDashboard() {
                         {walkable && <span><Footprints size={14} /> ~{travel.walkMinutes} min walk</span>}
                         <span><Clock3 size={14} /> {location.bestWindow}</span>
                         <span className={`confidence confidence-${opportunity.confidenceLabel.toLowerCase()}`}>{opportunity.confidenceLabel} confidence</span>
-                        <span className={`advisory-badge advisory-${location.consumptionAdvisory.status}`}>
-                          {location.consumptionAdvisory.status === "active" ? <AlertTriangle size={13} /> : location.consumptionAdvisory.status === "jurisdiction-check" ? <Info size={13} /> : <ShieldCheck size={13} />}
-                          {location.consumptionAdvisory.label}
+                        <span className={`advisory-badge advisory-${advisory.status}`}>
+                          {advisory.status === "active" ? <AlertTriangle size={13} /> : advisory.status === "jurisdiction-check" ? <Info size={13} /> : <ShieldCheck size={13} />}
+                          {advisory.label}
                         </span>
                       </div>
+                      {advisory.status === "active" && advisory.matchingRestrictions.length > 0 && (
+                        <div className="advisory-rule-preview">
+                          {advisory.matchingRestrictions.slice(0, 3).map((restriction) => (
+                            <span className={`restriction-${restriction.severity}`} key={restriction.id}>
+                              <strong>{restriction.label}</strong> {restriction.speciesLabel}{restriction.sizeQualifier ? ` · ${restriction.sizeQualifier}` : ""}
+                            </span>
+                          ))}
+                          {advisory.matchingRestrictions.length > 3 && <small>+{advisory.matchingRestrictions.length - 3} more rules</small>}
+                        </div>
+                      )}
                       {matches.length > 1 && <div className="species-match-row" aria-label="Matching selected species">
                         {matches.map((match) => <span key={match.fish.id}>{match.fish.short} <strong>{match.opportunity.score}</strong></span>)}
                       </div>}
                       <p className="why-line"><strong>Why it ranks:</strong> {opportunity.evidence.evidenceSummary}</p>
                       <div className="result-actions">
                         <a href={googleDirectionsUrl(location, origin)} target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()}><Navigation size={14} /> Google Maps directions</a>
-                        <Link href={`/locations/${location.id}`} onClick={(event) => event.stopPropagation()}>Spot details <ArrowRight size={14} /></Link>
+                        <Link href={`/locations/${location.id}${speciesIds.length > 0 ? `?species=${speciesIds.join(",")}` : ""}`} onClick={(event) => event.stopPropagation()}>Spot details <ArrowRight size={14} /></Link>
                       </div>
                     </div>
                   </article>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { consumptionAdviceFor } from "../lib/advisories";
 import type { FishingLocation } from "../lib/data";
 import { opportunityFor } from "../lib/scoring";
 import type { TravelOrigin } from "../lib/travel";
@@ -47,6 +48,7 @@ export function FishingMap({ locations, speciesIds, selectedId, origin, onSelect
           .filter((item): item is NonNullable<typeof item> => Boolean(item))
           .sort((a, b) => b.score - a.score);
         const opportunity = opportunities[0] ?? null;
+        const advisory = consumptionAdviceFor(location.consumptionAdvisory, speciesIds);
         const score = opportunity?.score ?? 0;
         const selected = location.id === selectedId;
         const hasSpeciesEvidence = Boolean(opportunity);
@@ -59,6 +61,17 @@ export function FishingMap({ locations, speciesIds, selectedId, origin, onSelect
               : score >= 55
                 ? "#edae49"
                 : "#1c6c72";
+        if (advisory.status === "active") {
+          L.circleMarker([location.lat, location.lng], {
+            radius: selected ? 17 : 14,
+            color: "#a84f35",
+            weight: 3,
+            opacity: 0.92,
+            fillOpacity: 0,
+            dashArray: "4 3",
+            interactive: false,
+          }).addTo(map!);
+        }
         const marker = L.circleMarker([location.lat, location.lng], {
           radius: selected ? 12 : 9,
           color: selected ? "#fff8e8" : "#173b3f",
@@ -67,7 +80,7 @@ export function FishingMap({ locations, speciesIds, selectedId, origin, onSelect
           fillOpacity: hasSpeciesEvidence || speciesIds.length === 0 ? 1 : 0.72,
         }).addTo(map!);
         marker.bindTooltip(
-          `<div class="map-tooltip"><strong>${location.name}</strong><span>${speciesIds.length === 0 ? "Verified public access" : score ? `${score}/100 best selected target${opportunities.length > 1 ? ` · ${opportunities.length} matches` : ""}` : "Selected-species evidence pending"}</span></div>`,
+          `<div class="map-tooltip"><strong>${location.name}</strong><span>${speciesIds.length === 0 ? "Verified public access" : score ? `${score}/100 best selected target${opportunities.length > 1 ? ` · ${opportunities.length} matches` : ""}` : "Selected-species evidence pending"}</span>${advisory.status === "active" ? `<em>${advisory.label}</em>` : ""}</div>`,
           { direction: "top", offset: [0, -8], opacity: 1 },
         );
         marker.on("click", () => onSelect(location.id));

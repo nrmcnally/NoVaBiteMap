@@ -58,6 +58,12 @@ export default function MethodologyPage() {
         </section>
 
         <section className="limits-panel">
+          <span className="eyebrow">Consumption-advisory matching</span>
+          <h2>Water segment first. Species rule second.</h2>
+          <p>BiteMap maps an access point to the named boundary in the current VDH basin sheet, then evaluates the selected species and any published size qualifier. Unclear boundaries and Potomac jurisdictions remain explicit checks. A missing match is never presented as proof that a fish is safe to eat.</p>
+        </section>
+
+        <section className="limits-panel">
           <span className="eyebrow">Known limitations</span>
           <h2>Fishing is variable. The data is uneven.</h2>
           <p>Agency surveys are designed for fisheries management, not real-time angler success. Weather forecasts change. Gages may not represent an access point. Broad river evidence may not describe every reach. Habitat models work at landscape scale. BiteMap exposes those limits instead of hiding them behind decimal precision.</p>
