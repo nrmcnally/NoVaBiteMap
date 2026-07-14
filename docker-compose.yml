@@ -1,0 +1,56 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    ports:
+      - "3000:3000"
+    environment:
+      API_BASE_URL: http://api:8000
+      NWS_USER_AGENT: ${NWS_USER_AGENT}
+    depends_on:
+      - api
+
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql+psycopg://bitemap:bitemap@db:5432/bitemap
+      REDIS_URL: redis://redis:6379/0
+      NWS_USER_AGENT: ${NWS_USER_AGENT}
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+
+  db:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_DB: bitemap
+      POSTGRES_USER: bitemap
+      POSTGRES_PASSWORD: bitemap
+    ports:
+      - "5432:5432"
+    volumes:
+      - bitemap_postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bitemap -d bitemap"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - bitemap_redis:/data
+
+volumes:
+  bitemap_postgres:
+  bitemap_redis:
+
