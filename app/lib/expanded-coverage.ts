@@ -313,6 +313,70 @@ export function waterbodySpeciesFor(location: Pick<FishingLocationSeed, "waterbo
   }));
 }
 
+// ---------------------------------------------------------------------------
+// Basin inference — last-resort, clearly-labeled evidence for waters with no
+// agency documentation (small streams, small park ponds). A tributary of a
+// documented smallmouth river very likely holds smallmouth + redbreast; a public
+// park pond very likely holds largemouth + bluegill. These are INFERENCES, not
+// surveys: flagged modeled, low availability/confidence, and only applied when a
+// water has no documented evidence at all.
+// ---------------------------------------------------------------------------
+const SHENANDOAH_COUNTIES = new Set(["Page", "Warren", "Shenandoah", "Clarke", "Frederick", "Rockingham"]);
+const RAPPAHANNOCK_COUNTIES = new Set(["Culpeper", "Madison", "Rappahannock", "Orange", "Spotsylvania", "King George", "Fredericksburg", "Fauquier"]);
+const SHEN_URL = "https://dwr.virginia.gov/blog/five-great-places-in-the-northern-shenandoah-valley-to-fish-after-work/";
+const RAPP_URL = "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/";
+const POTOMAC_SMB_URL = "https://dwr.virginia.gov/blog/10-top-virginia-fishing-waters-rivers/";
+const TIDAL_URL = "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/";
+const POND_URL = "https://www.fairfaxcounty.gov/parks/fishing";
+
+function inferredRecord(speciesId: string, basinLabel: string, waterName: string, sourceUrl: string): SpeciesEvidence {
+  return {
+    speciesId,
+    availability: 0.44,
+    quality: null,
+    evidenceConfidence: 0.5,
+    evidenceType: "modeled",
+    evidenceSummary: `Inferred from the documented ${basinLabel}; BiteMap has no survey of ${waterName} specifically.`,
+    lastEvidence: "Basin inference (connected drainage), 2026-07-14",
+    technique: "Match a compact natural presentation to the visible current, cover, and depth",
+    depth: "Work accessible current breaks, pools, and cover first",
+    positive: [`${speciesId.replace(/-/g, " ")} is documented in the connected ${basinLabel}`],
+    negative: [
+      "This is a basin inference, not a survey of this specific water",
+      "Small headwater streams and ponds may not hold every basin species",
+    ],
+    sourceName: "Virginia Department of Wildlife Resources",
+    sourceUrl,
+    modeled: true,
+  } as SpeciesEvidence;
+}
+
+export function inferredEvidenceFor(
+  location: Pick<FishingLocationSeed, "waterbody" | "waterbodyType" | "county" | "lng" | "name">,
+): SpeciesEvidence[] {
+  const name = location.name;
+  if (location.waterbodyType === "stream" || location.waterbodyType === "river") {
+    let label = "Occoquan/Piedmont tributary fishery";
+    let species = ["smallmouth-bass", "redbreast-sunfish"];
+    let url = POTOMAC_SMB_URL;
+    if (SHENANDOAH_COUNTIES.has(location.county)) {
+      label = "Shenandoah River smallmouth fishery"; url = SHEN_URL;
+    } else if (RAPPAHANNOCK_COUNTIES.has(location.county)) {
+      label = "Rappahannock River smallmouth fishery"; url = RAPP_URL;
+    } else if (location.lng > -77.15) {
+      // Eastern/tidal NOVA creeks are warmwater, not smallmouth.
+      label = "tidal Potomac tributary fishery"; species = ["largemouth-bass", "bluegill", "redbreast-sunfish"]; url = TIDAL_URL;
+    }
+    return species.map((s) => inferredRecord(s, label, name, url));
+  }
+  if (["lake", "pond", "reservoir", "bay"].includes(location.waterbodyType)) {
+    return ["largemouth-bass", "bluegill"].map((s) =>
+      inferredRecord(s, "warmwater fishery typical of the region's public impoundments and embayments", name, POND_URL),
+    );
+  }
+  return [];
+}
+
 export const expandedCoverageStats = {
   dwrAccessSites: dwrSites.length,
   dwrRetrieved: dwrMeta.retrieved,

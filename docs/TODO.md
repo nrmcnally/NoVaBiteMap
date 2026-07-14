@@ -62,6 +62,18 @@ sources, with an **access-status model** so honesty scales with breadth:
   (Barcroft, Montclair, Manassas, the Reston lakes never appear) and unnamed
   stormwater/infrastructure ponds.
 
+**Evidence coverage (2026-07-14):** the authoritative per-water species source is
+Virginia DWR waterbody pages + Fisheries Management Reports. Researched for every
+named lake/reservoir/river → `waterbody-species-nova.json` (byKey + byWaterbody),
+attached by waterbody/display-name. For waters DWR does not document per-water
+(small streams, small park ponds) BiteMap adds **clearly-labeled basin inference**
+(`inferredEvidenceFor` in expanded-coverage.ts): a tributary of a documented
+smallmouth river gets low-confidence "inferred" smallmouth/redbreast; a park pond
+gets largemouth/bluegill — flagged modeled, "not a survey", shown as an "Inferred
+(basin)" badge, and only used when a water has no documented evidence. Every water
+now shows fish (71 documented, rest inferred); only spotted bass has zero evidence
+region-wide (correctly — not documented here).
+
 **Honest finding on the ceiling:** NOVA's genuinely-public, named, fishable water
 universe is bounded — most named ponds are private HOA/community lakes the app
 must not list. To go beyond ~95 honestly, the levers are: per-county park GIS

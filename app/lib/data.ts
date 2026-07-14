@@ -2,7 +2,7 @@ import { coverageLocations } from "./coverage-data";
 import { advisoryForLocation, vdhAdvisoryIndexUrl, type ConsumptionAdvisory } from "./advisories";
 import { hydrologyForLocation, type HydrologyAssociation } from "./hydrology";
 import { aquaticGapEvidenceForLocation, troutLocations } from "./public-evidence";
-import { dwrAccessLocations, nhdParkWaterLocations, nhdStreamLocations, waterbodySpeciesFor } from "./expanded-coverage";
+import { dwrAccessLocations, inferredEvidenceFor, nhdParkWaterLocations, nhdStreamLocations, waterbodySpeciesFor } from "./expanded-coverage";
 
 export type AccessMethod = "shore" | "wade" | "kayak" | "boat";
 export type WaterbodyType = "river" | "reservoir" | "lake" | "pond" | "bay" | "stream";
@@ -548,12 +548,16 @@ export const locations: FishingLocation[] = sourcedLocations.map((location) => {
   const withWaterbody = [...location.evidence, ...waterbodyEvidence];
   // Modeled nearby-reach (Aquatic GAP) evidence fills any remaining gaps.
   const aquaticGapEvidence = aquaticGapEvidenceForLocation(location).filter((candidate) => !has(withWaterbody, candidate.speciesId));
+  const documented = [...withWaterbody, ...aquaticGapEvidence];
+  // Only when a water has no documented evidence at all, add clearly-labeled
+  // basin-inferred species so public waters aren't left blank.
+  const inferred = documented.length === 0 ? inferredEvidenceFor(location) : [];
   const hydrology = hydrologyForLocation(location.id);
   return {
     ...location,
     accessStatus: location.accessStatus ?? "verified",
     flowStatus: hydrology ? `USGS ${hydrology.stationId} linked · live reading on details` : location.flowStatus,
-    evidence: [...withWaterbody, ...aquaticGapEvidence],
+    evidence: [...documented, ...inferred],
     hydrology,
     consumptionAdvisory: advisoryForLocation(location),
   };

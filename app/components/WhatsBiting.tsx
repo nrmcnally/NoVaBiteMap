@@ -32,7 +32,8 @@ const EVIDENCE_LABEL: Record<string, string> = {
   modeled: "Nearby / modeled",
 };
 
-function evidenceBadge(type: string, modeled: boolean) {
+function evidenceBadge(type: string, modeled: boolean, summary?: string | null) {
+  if (summary && summary.toLowerCase().startsWith("inferred")) return "Inferred (basin)";
   if (modeled) return "Nearby / modeled";
   return EVIDENCE_LABEL[type] ?? type;
 }
@@ -92,7 +93,7 @@ export async function WhatsBiting({ locationId, known }: Props) {
                 <div className="biting-meta">
                   <span><Gauge size={13} /> {species.confidence_label} confidence · {species.confidence_score}%</span>
                   {species.bestWindow && <span><Clock3 size={13} /> Best window {species.bestWindow}</span>}
-                  <span className="biting-evidence">{evidenceBadge(species.evidence_type, species.modeled)}</span>
+                  <span className="biting-evidence">{evidenceBadge(species.evidence_type, species.modeled, species.evidence_summary)}</span>
                 </div>
                 {species.evidence_summary && <p className="biting-summary">{species.evidence_summary}</p>}
                 {species.factors?.negative?.length > 0 && (
@@ -143,7 +144,7 @@ export async function WhatsBiting({ locationId, known }: Props) {
                   <div className="biting-name">
                     <Fish size={16} />
                     <strong>{species.name}</strong>
-                    <span className="biting-badge biting-badge-neutral">{evidenceBadge(species.evidenceType, species.modeled)}</span>
+                    <span className="biting-badge biting-badge-neutral">{evidenceBadge(species.evidenceType, species.modeled, species.evidenceSummary)}</span>
                   </div>
                   <div className="biting-score biting-score-muted">
                     <strong>{Math.round(species.availability * 100)}</strong>

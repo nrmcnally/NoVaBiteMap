@@ -84,8 +84,8 @@ def test_data_source_status_is_derived_from_real_counts_and_runs(client):
     assert counts["species"] == 20
     assert counts["hydrologyAssociations"] == 19
     assert counts["stockingRecords"] == 13
-    assert counts["modeledEvidence"] == 38
-    assert counts["locationsWithEvidence"] == 78
+    assert counts["modeledEvidence"] == 285
+    assert counts["locationsWithEvidence"] == 196
     assert status["lastSuccessfulIngestion"] is not None
     assert status["lastSuccessfulIngestion"]["status"] == "success"
 
@@ -119,8 +119,14 @@ def test_multispecies_panel_ranks_and_separates_insufficient(client):
     assert all("factors" in s and "positive" in s["factors"] for s in species)
 
 
-def test_access_only_location_offers_no_species(client):
-    # Huntsman Lake is a small Fairfax park lake with no agency species documentation.
+def test_basin_inference_is_flagged_not_presented_as_survey(client):
+    # Huntsman Lake has no agency documentation, so it shows clearly-labeled basin
+    # inference (largemouth/bluegill typical of regional park impoundments).
     payload = client.get("/api/locations/huntsman-lake/species", params={"live": "false"}).json()
-    assert payload["species"] == []
-    assert payload["insufficient"] == []
+    assert len(payload["species"]) >= 1
+    for s in payload["species"]:
+        assert s["modeled"] is True
+        assert "inferred" in (s["evidence_summary"] or "").lower()
+    # Documented waters are NOT inferred.
+    burke = client.get("/api/locations/lake-burke/species", params={"live": "false"}).json()
+    assert any(not s["modeled"] for s in burke["species"])
