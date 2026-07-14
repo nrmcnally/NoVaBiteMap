@@ -42,6 +42,8 @@ next-env.d.ts
 /.pip-cache/
 /.venv/
 /bitemap.db
+__pycache__/
+*.py[cod]
 !/.env.example
 /outputs/
 /work/
