@@ -7,16 +7,30 @@ def test_health_and_openapi(client):
 
 
 def test_locations_list_has_provenance_backed_locations(client):
-    locations = client.get("/api/locations", params={"limit": 300}).json()
-    assert len(locations) == 67  # 63 original + 4 verified Rappahannock access points
+    locations = client.get("/api/locations", params={"limit": 200}).json()
+    assert len(locations) == 95  # curated + region-wide DWR ramps + NHD public-park waters
     assert all(item.get("sourceName") for item in locations)
     ids = {item["id"] for item in locations}
     assert {"lake-fairfax", "gravelly-point", "beaverdam-reservoir", "kellys-ford"}.issubset(ids)
 
 
+def test_access_status_classifies_public_waters(client):
+    locations = client.get("/api/locations", params={"limit": 200}).json()
+    by_status = {}
+    for item in locations:
+        by_status[item.get("accessStatus", "verified")] = by_status.get(item.get("accessStatus", "verified"), 0) + 1
+    assert by_status["verified"] >= 80
+    assert by_status["listed"] >= 5  # named waters on public parkland
+    # DWR-added ramps are verified; NHD park waters are listed
+    dwr = next(item for item in locations if item["id"].startswith("dwr-boat-"))
+    assert dwr["accessStatus"] == "verified"
+    nhd = next(item for item in locations if item["id"].startswith("nhd-"))
+    assert nhd["accessStatus"] == "listed"
+
+
 def test_rappahannock_watershed_is_now_covered(client):
     rapp = client.get("/api/locations", params={"watershed": "Rappahannock", "limit": 50}).json()
-    assert len(rapp) == 4
+    assert len(rapp) >= 4
     kellys = next(item for item in rapp if item["id"] == "kellys-ford")
     assert "smallmouth-bass" in kellys["evidenceSpeciesIds"]
 
@@ -59,12 +73,12 @@ def test_species_detail_lists_locations_with_evidence(client):
 def test_data_source_status_is_derived_from_real_counts_and_runs(client):
     status = client.get("/api/data-sources/status").json()
     counts = status["counts"]
-    assert counts["locations"] == 67
+    assert counts["locations"] == 95
     assert counts["species"] == 20
     assert counts["hydrologyAssociations"] == 19
     assert counts["stockingRecords"] == 13
-    assert counts["modeledEvidence"] == 16
-    assert counts["locationsWithEvidence"] == 45
+    assert counts["modeledEvidence"] == 40
+    assert counts["locationsWithEvidence"] == 50
     assert status["lastSuccessfulIngestion"] is not None
     assert status["lastSuccessfulIngestion"]["status"] == "success"
 

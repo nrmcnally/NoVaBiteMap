@@ -136,6 +136,7 @@ class FishingLocationRecord(Base):
     county: Mapped[str] = mapped_column(String(100), index=True)
     state: Mapped[str] = mapped_column(String(4), default="VA")
     public_access: Mapped[bool] = mapped_column(Boolean, default=True)
+    access_status: Mapped[str] = mapped_column(String(20), default="verified")  # verified|listed|unverified
     access_methods: Mapped[list] = mapped_column(JSON, default=list)  # shore|wade|kayak|boat
     distance_miles: Mapped[float | None] = mapped_column(Float)
     travel_minutes: Mapped[int | None] = mapped_column(Integer)

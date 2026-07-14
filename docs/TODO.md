@@ -45,6 +45,31 @@ public standalone app (email auth). Delivered this sprint:
   accurately-sourced smallmouth/redbreast (upper) and largemouth/channel-catfish
   (tidal) evidence. Now 67 locations / 99 evidence records / 45 with evidence.
 
+## Coverage sprint — multi-source waters (2026-07-14)
+
+Expanded the catalog from 67 → 95 public waters from multiple authoritative
+sources, with an **access-status model** so honesty scales with breadth:
+
+- `accessStatus`: **verified** (agency-confirmed public access) / **listed**
+  (named water on public parkland, exact access not pinpointed) / **unverified**
+  (reserved for future discovery tier). Surfaced as chips on results, the map,
+  and the detail page.
+- **DWR boating access** (region-wide ArcGIS, `scripts/ingest-dwr-access.mts`):
+  +21 verified public ramps not already curated (Shenandoah forks, Rapidan River).
+- **NHD named waters × public parks** (`scripts/ingest-nhd-waters.mts`): a spatial
+  join of USGS NHD named lakes/ponds against the ESRI USA Parks layer keeps only
+  waters on public land (+7 listed) and **excludes every private community lake**
+  (Barcroft, Montclair, Manassas, the Reston lakes never appear) and unnamed
+  stormwater/infrastructure ponds.
+
+**Honest finding on the ceiling:** NOVA's genuinely-public, named, fishable water
+universe is bounded — most named ponds are private HOA/community lakes the app
+must not list. To go beyond ~95 honestly, the levers are: per-county park GIS
+(Fairfax/PWC/Loudoun have far more small park ponds than the national USA Parks
+layer captures), named-stream ingestion (NHD flowlines), nearby MD/DC waters
+(one-line region change), and hand-curated county park fishing waters. None of
+these should relax the private-property exclusion.
+
 ## Sprint 2.1 — UX fixes + fish glossary (2026-07-14)
 
 - **Fish glossary** at `/fish` (new top-nav "Fish guide" tab): all 20 species A–Z,

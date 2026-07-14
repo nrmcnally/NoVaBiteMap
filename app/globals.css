@@ -414,6 +414,14 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .route-loading-spinner { width: 30px; height: 30px; border: 3px solid var(--line); border-top-color: var(--water); border-radius: 50%; animation: route-spin .8s linear infinite; }
 @keyframes route-spin { to { transform: rotate(360deg); } }
 
+/* Access-status chips (public-parkland / unverified waters) */
+.access-chip { display: inline-flex; align-items: center; gap: 4px; margin-top: 6px; margin-right: 6px; padding: 2px 7px; border-radius: 999px; font-size: 8px; font-weight: 850; text-transform: uppercase; letter-spacing: .3px; }
+.access-chip svg { flex: 0 0 auto; }
+.access-listed { background: #eef3f6; color: #2f5d63; border: 1px solid #c6dbe0; }
+.access-unverified { background: #f4ecdd; color: #7a5f2a; border: 1px solid #e0cfa6; }
+.access-pill-listed { background: #eef3f6 !important; color: #2f5d63 !important; }
+.access-pill-unverified { background: #f4ecdd !important; color: #7a5f2a !important; }
+
 /* Best-fish chip on result cards (no target species selected) */
 .best-fish-chip { display: inline-flex; align-items: center; gap: 5px; margin-top: 6px; padding: 3px 8px; background: #eef3ec; border: 1px solid #cfdcc9; border-radius: 999px; font-size: 9px; font-weight: 850; color: #3d6b4c; }
 .best-fish-chip svg { color: var(--water); }

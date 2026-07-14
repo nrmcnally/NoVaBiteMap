@@ -66,7 +66,13 @@ export default async function LocationPage({ params, searchParams }: LocationPag
           <div>
             <div className="hero-tags">
               <span><MapPin size={14} /> {location.county} County, Virginia</span>
-              <span className="verified-pill">Verified by {location.accessAuthority}</span>
+              {location.accessStatus === "listed" ? (
+                <span className="verified-pill access-pill-listed">Public parkland · {location.accessAuthority} · confirm access</span>
+              ) : location.accessStatus === "unverified" ? (
+                <span className="verified-pill access-pill-unverified">Access unverified · confirm before fishing</span>
+              ) : (
+                <span className="verified-pill">Verified by {location.accessAuthority}</span>
+              )}
             </div>
             <h1>{location.name}</h1>
             <p>{location.waterbody} · {location.waterbodyType} · Public access point</p>

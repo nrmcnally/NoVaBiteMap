@@ -2,9 +2,9 @@
   "meta": {
     "generatedFrom": "app/lib/data.ts",
     "schemaVersion": "1.0",
-    "locationCount": 67,
+    "locationCount": 95,
     "speciesCount": 20,
-    "evidenceCount": 99,
+    "evidenceCount": 123,
     "stationCount": 7
   },
   "species": [
@@ -269,6 +269,7 @@
       "accessAuthority": "Virginia Department of Wildlife Resources",
       "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -330,6 +331,7 @@
       "accessAuthority": "Virginia Department of Wildlife Resources",
       "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -407,6 +409,7 @@
       "accessAuthority": "Virginia Department of Wildlife Resources",
       "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -513,6 +516,7 @@
       "accessAuthority": "Virginia Department of Wildlife Resources",
       "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "hydrology": {
         "stationId": "01638500",
         "stationName": "Potomac River at Point of Rocks, MD",
@@ -563,6 +567,7 @@
       "accessAuthority": "Virginia Department of Wildlife Resources",
       "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -604,6 +609,7 @@
       "accessAuthority": "Virginia Department of Wildlife Resources",
       "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -682,6 +688,7 @@
       "accessAuthority": "Virginia Department of Wildlife Resources",
       "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "hydrology": {
         "stationId": "01636500",
         "stationName": "Shenandoah River at Millville, WV",
@@ -929,6 +936,7 @@
       "accessAuthority": "Virginia Department of Wildlife Resources",
       "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "hydrology": {
         "stationId": "01636500",
         "stationName": "Shenandoah River at Millville, WV",
@@ -1176,6 +1184,7 @@
       "accessAuthority": "Virginia Department of Wildlife Resources",
       "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "hydrology": {
         "stationId": "01636500",
         "stationName": "Shenandoah River at Millville, WV",
@@ -1407,6 +1416,7 @@
       "accessAuthority": "Virginia Department of Wildlife Resources",
       "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "hydrology": {
         "stationId": "01629500",
         "stationName": "South Fork Shenandoah River near Luray, VA",
@@ -1521,6 +1531,7 @@
       "accessAuthority": "Virginia Department of Wildlife Resources",
       "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "hydrology": {
         "stationId": "01634000",
         "stationName": "North Fork Shenandoah River near Strasburg, VA",
@@ -1591,6 +1602,7 @@
       "accessAuthority": "Virginia Department of Wildlife Resources",
       "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "hydrology": {
         "stationId": "01631000",
         "stationName": "South Fork Shenandoah River at Front Royal, VA",
@@ -1862,6 +1874,7 @@
       "accessAuthority": "Virginia Department of Wildlife Resources",
       "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "hydrology": {
         "stationId": "01631000",
         "stationName": "South Fork Shenandoah River at Front Royal, VA",
@@ -1993,6 +2006,7 @@
       "accessAuthority": "Virginia Department of Wildlife Resources",
       "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "hydrology": {
         "stationId": "01636500",
         "stationName": "Shenandoah River at Millville, WV",
@@ -2223,6 +2237,7 @@
       "accessAuthority": "Virginia Department of Wildlife Resources",
       "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "hydrology": {
         "stationId": "01634000",
         "stationName": "North Fork Shenandoah River near Strasburg, VA",
@@ -2494,6 +2509,7 @@
       "accessAuthority": "Virginia Department of Wildlife Resources",
       "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "hydrology": {
         "stationId": "01631000",
         "stationName": "South Fork Shenandoah River at Front Royal, VA",
@@ -2630,6 +2646,7 @@
       "accessAuthority": "Virginia Department of Wildlife Resources",
       "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -2694,6 +2711,7 @@
       "accessAuthority": "Virginia Department of Wildlife Resources",
       "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -2758,6 +2776,7 @@
       "accessAuthority": "Virginia Department of Wildlife Resources",
       "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -2839,6 +2858,7 @@
       "accessAuthority": "Virginia Department of Wildlife Resources",
       "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -2918,6 +2938,7 @@
       "accessAuthority": "Fairfax County Park Authority",
       "accessSourceUrl": "https://www.fairfaxcounty.gov/parks/fishing",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -2996,6 +3017,7 @@
       "accessAuthority": "Fairfax County Park Authority",
       "accessSourceUrl": "https://www.fairfaxcounty.gov/parks/fishing",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "hydrology": {
         "stationId": "01646500",
         "stationName": "Potomac River near Washington, DC",
@@ -3065,6 +3087,7 @@
       "accessAuthority": "Fairfax County Park Authority",
       "accessSourceUrl": "https://www.fairfaxcounty.gov/parks/fishing",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -3103,6 +3126,7 @@
       "accessAuthority": "Fairfax County Park Authority",
       "accessSourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -3143,6 +3167,7 @@
       "accessAuthority": "Fairfax County Park Authority",
       "accessSourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -3183,6 +3208,7 @@
       "accessAuthority": "Fairfax County Park Authority",
       "accessSourceUrl": "https://www.fairfaxcounty.gov/parks/fishing",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -3220,6 +3246,7 @@
       "accessAuthority": "Fairfax County Park Authority",
       "accessSourceUrl": "https://www.fairfaxcounty.gov/parks/fishing",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -3260,6 +3287,7 @@
       "accessAuthority": "Fairfax County Park Authority",
       "accessSourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -3300,6 +3328,7 @@
       "accessAuthority": "Fairfax County Park Authority",
       "accessSourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -3337,6 +3366,7 @@
       "accessAuthority": "National Park Service",
       "accessSourceUrl": "https://www.nps.gov/gwmp/planyourvisit/fishing.htm",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -3376,6 +3406,7 @@
       "accessAuthority": "National Park Service",
       "accessSourceUrl": "https://www.nps.gov/gwmp/planyourvisit/fishing.htm",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -3417,6 +3448,7 @@
       "accessAuthority": "National Park Service",
       "accessSourceUrl": "https://www.nps.gov/gwmp/planyourvisit/fishing.htm",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -3458,6 +3490,7 @@
       "accessAuthority": "National Park Service",
       "accessSourceUrl": "https://www.nps.gov/gwmp/planyourvisit/fishing.htm",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -3497,6 +3530,7 @@
       "accessAuthority": "National Park Service",
       "accessSourceUrl": "https://www.nps.gov/gwmp/planyourvisit/fishing.htm",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -3534,6 +3568,7 @@
       "accessAuthority": "National Park Service",
       "accessSourceUrl": "https://www.nps.gov/gwmp/planyourvisit/fishing.htm",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -3573,6 +3608,7 @@
       "accessAuthority": "National Park Service",
       "accessSourceUrl": "https://www.nps.gov/gwmp/planyourvisit/fishing.htm",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -3610,6 +3646,7 @@
       "accessAuthority": "National Park Service",
       "accessSourceUrl": "https://www.nps.gov/gwmp/planyourvisit/fishing.htm",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -3649,6 +3686,7 @@
       "accessAuthority": "National Park Service",
       "accessSourceUrl": "https://www.nps.gov/gwmp/planyourvisit/fishing.htm",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -3708,6 +3746,7 @@
       "accessAuthority": "NOVA Parks",
       "accessSourceUrl": "https://www.novaparks.com/parks/fountainhead-regional-park/things-to-do/fishing",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "hydrology": {
         "stationId": "01656703",
         "stationName": "Occoquan Reservoir above Bull Run near Clifton, VA",
@@ -3821,6 +3860,7 @@
       "accessAuthority": "NOVA Parks",
       "accessSourceUrl": "https://www.novaparks.com/parks/bull-run-marina/things-to-do/fishing",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "hydrology": {
         "stationId": "01656703",
         "stationName": "Occoquan Reservoir above Bull Run near Clifton, VA",
@@ -4011,6 +4051,7 @@
       "accessAuthority": "NOVA Parks",
       "accessSourceUrl": "https://www.novaparks.com/parks/pohick-bay-regional-park/things-to-do/fishing",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -4428,6 +4469,7 @@
       "accessAuthority": "NOVA Parks",
       "accessSourceUrl": "https://www.novaparks.com/parks/algonkian-regional-park/things-to-do/fishing",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "hydrology": {
         "stationId": "01646500",
         "stationName": "Potomac River near Washington, DC",
@@ -4584,6 +4626,7 @@
       "accessAuthority": "NOVA Parks",
       "accessSourceUrl": "https://www.novaparks.com/parks/piscataway-crossing-regional-park/things-to-do/fishing",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "hydrology": {
         "stationId": "01638500",
         "stationName": "Potomac River at Point of Rocks, MD",
@@ -4630,6 +4673,7 @@
       "accessAuthority": "NOVA Parks",
       "accessSourceUrl": "https://www.novaparks.com/parks/seneca-regional-park/things-to-do/fishing",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "hydrology": {
         "stationId": "01646500",
         "stationName": "Potomac River near Washington, DC",
@@ -4793,6 +4837,7 @@
       "accessAuthority": "NOVA Parks",
       "accessSourceUrl": "https://www.novaparks.com/parks/occoquan-regional-park/things-to-do/fishing",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -5208,6 +5253,7 @@
       "accessAuthority": "NOVA Parks",
       "accessSourceUrl": "https://www.novaparks.com/parks/reservoir-park/things-to-do/fishing",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -5267,6 +5313,7 @@
       "accessAuthority": "Virginia State Parks",
       "accessSourceUrl": "https://www.dcr.virginia.gov/state-parks/leesylvania",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -5325,6 +5372,7 @@
       "accessAuthority": "Virginia State Parks",
       "accessSourceUrl": "https://www.dcr.virginia.gov/state-parks/mason-neck",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -5489,6 +5537,7 @@
       "accessAuthority": "Prince William County Parks",
       "accessSourceUrl": "https://www.pwcva.gov/department/parks-recreation/fishing/",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "hydrology": {
         "stationId": "01656703",
         "stationName": "Occoquan Reservoir above Bull Run near Clifton, VA",
@@ -5659,6 +5708,7 @@
       "accessAuthority": "Prince William County Parks",
       "accessSourceUrl": "https://www.pwcva.gov/department/parks-recreation/fishing/",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -5756,6 +5806,7 @@
       "accessAuthority": "Prince William County Parks",
       "accessSourceUrl": "https://www.pwcva.gov/department/parks-recreation/fishing/",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -5793,6 +5844,7 @@
       "accessAuthority": "Prince William County Parks",
       "accessSourceUrl": "https://www.pwcva.gov/department/parks-recreation/fishing/",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -5833,6 +5885,7 @@
       "accessAuthority": "Prince William County Parks",
       "accessSourceUrl": "https://www.pwcva.gov/department/parks-recreation/fishing/",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -5873,6 +5926,7 @@
       "accessAuthority": "National Park Service",
       "accessSourceUrl": "https://www.nps.gov/grfa/planyourvisit/outdooractivities.htm",
       "sourceReviewed": "2026-07-13",
+      "accessStatus": "verified",
       "hydrology": {
         "stationId": "01646500",
         "stationName": "Potomac River near Washington, DC",
@@ -6039,6 +6093,7 @@
         "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Accotink%20Creek%27%20AND%20Designation=%27DH%27%20AND%20StockSched=%27DH%27",
         "planUrl": "https://dwr.virginia.gov/wp-content/uploads/media/catchable-trout-stocking-plan.pdf"
       },
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -6133,6 +6188,7 @@
         "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Holmes%20Run%27%20AND%20Designation=%27DH%27%20AND%20StockSched=%27DH%27",
         "planUrl": "https://dwr.virginia.gov/wp-content/uploads/media/catchable-trout-stocking-plan.pdf"
       },
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -6205,6 +6261,7 @@
         "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Hogue%20Creek%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27B%27",
         "planUrl": "https://dwr.virginia.gov/wp-content/uploads/media/catchable-trout-stocking-plan.pdf"
       },
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -6321,6 +6378,7 @@
         "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Paddy%20Run%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27B%27",
         "planUrl": "https://dwr.virginia.gov/wp-content/uploads/media/catchable-trout-stocking-plan.pdf"
       },
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -6393,6 +6451,7 @@
         "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Cub%20Run%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27B%27",
         "planUrl": "https://dwr.virginia.gov/wp-content/uploads/media/catchable-trout-stocking-plan.pdf"
       },
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -6465,6 +6524,7 @@
         "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Hawksbill%20Creek%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27A%27",
         "planUrl": "https://dwr.virginia.gov/wp-content/uploads/media/catchable-trout-stocking-plan.pdf"
       },
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -6559,6 +6619,7 @@
         "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Upper%20Passage%20Creek%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27C%27",
         "planUrl": "https://dwr.virginia.gov/wp-content/uploads/media/catchable-trout-stocking-plan.pdf"
       },
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -6675,6 +6736,7 @@
         "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Mill%20Creek%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27B%27",
         "planUrl": "https://dwr.virginia.gov/wp-content/uploads/media/catchable-trout-stocking-plan.pdf"
       },
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -6791,6 +6853,7 @@
         "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Passage%20Creek%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27A%27",
         "planUrl": "https://dwr.virginia.gov/wp-content/uploads/media/catchable-trout-stocking-plan.pdf"
       },
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -6863,6 +6926,7 @@
         "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Peters%20Mill%20Run%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27C%27",
         "planUrl": "https://dwr.virginia.gov/wp-content/uploads/media/catchable-trout-stocking-plan.pdf"
       },
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -6979,6 +7043,7 @@
         "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Stony%20Creek%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27A%27",
         "planUrl": "https://dwr.virginia.gov/wp-content/uploads/media/catchable-trout-stocking-plan.pdf"
       },
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -7095,6 +7160,7 @@
         "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Happy%20Creek%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27B%27",
         "planUrl": "https://dwr.virginia.gov/wp-content/uploads/media/catchable-trout-stocking-plan.pdf"
       },
+      "accessStatus": "verified",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
@@ -7211,6 +7277,1666 @@
         "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Passage%20Creek%27%20AND%20Designation=%27DH%27%20AND%20StockSched=%27DH%27",
         "planUrl": "https://dwr.virginia.gov/wp-content/uploads/media/catchable-trout-stocking-plan.pdf"
       },
+      "accessStatus": "verified",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "dwr-boat-11",
+      "name": "Lake Shenandoah",
+      "waterbody": "Lake Shenandoah",
+      "waterbodyType": "lake",
+      "county": "Rockingham",
+      "lat": 38.38169164,
+      "lng": -78.83919305,
+      "distanceMiles": 89,
+      "travelMinutes": 130,
+      "publicAccess": true,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "aliases": [
+        "Lake Shenandoah"
+      ],
+      "notice": "Virginia DWR maintains this public boating/fishing access. Verify current ramp rules, hours, parking, launch fees, and posted conditions before departure.",
+      "flowStatus": "Live water data unavailable",
+      "activityEstimate": 0.5,
+      "accessFit": 0.82,
+      "bestWindow": "Unavailable",
+      "evidence": [],
+      "accessAuthority": "Virginia Department of Wildlife Resources",
+      "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "verified",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "dwr-boat-15",
+      "name": "Port Republic",
+      "waterbody": "S. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Rockingham",
+      "lat": 38.29583648,
+      "lng": -78.80798901,
+      "distanceMiles": 90,
+      "travelMinutes": 131,
+      "publicAccess": true,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "aliases": [
+        "Port Republic"
+      ],
+      "notice": "Virginia DWR maintains this public boating/fishing access. Verify current ramp rules, hours, parking, launch fees, and posted conditions before departure.",
+      "flowStatus": "Representative gage not yet verified",
+      "activityEstimate": 0.5,
+      "accessFit": 0.78,
+      "bestWindow": "Unavailable",
+      "evidence": [
+        {
+          "speciesId": "bluegill",
+          "availability": 0.52,
+          "quality": null,
+          "evidenceConfidence": 0.48,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "USGS Aquatic GAP v2.0 contains 1 presence record on sampled NHDPlus reaches within 1.75 miles. BiteMap treats this as nearby historic stream evidence, not proof at the access point.",
+          "lastEvidence": "Latest nearby sample 1998-08-25 · USGS release v2.0 (December 2024)",
+          "technique": "Match the species to visible current, cover, and depth; begin with a compact natural presentation",
+          "depth": "Probe accessible current breaks and cover before expanding to adjacent habitat",
+          "positive": [
+            "1 nearby presence record · closest 1.3 mi",
+            "Published sources: EPA EMAP Mid-Atlantic Region"
+          ],
+          "negative": [
+            "The record is historic and associated by nearby reach midpoint, not this exact access point",
+            "Sampling methods and dates vary; this evidence cannot describe current abundance"
+          ],
+          "sourceName": "USGS Aquatic GAP presence/absence database",
+          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R"
+        },
+        {
+          "speciesId": "channel-catfish",
+          "availability": 0.52,
+          "quality": null,
+          "evidenceConfidence": 0.48,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "USGS Aquatic GAP v2.0 contains 1 presence record on sampled NHDPlus reaches within 1.75 miles. BiteMap treats this as nearby historic stream evidence, not proof at the access point.",
+          "lastEvidence": "Latest nearby sample 1998-08-25 · USGS release v2.0 (December 2024)",
+          "technique": "Match the species to visible current, cover, and depth; begin with a compact natural presentation",
+          "depth": "Probe accessible current breaks and cover before expanding to adjacent habitat",
+          "positive": [
+            "1 nearby presence record · closest 1.3 mi",
+            "Published sources: EPA EMAP Mid-Atlantic Region"
+          ],
+          "negative": [
+            "The record is historic and associated by nearby reach midpoint, not this exact access point",
+            "Sampling methods and dates vary; this evidence cannot describe current abundance"
+          ],
+          "sourceName": "USGS Aquatic GAP presence/absence database",
+          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R"
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "availability": 0.52,
+          "quality": null,
+          "evidenceConfidence": 0.48,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "USGS Aquatic GAP v2.0 contains 1 presence record on sampled NHDPlus reaches within 1.75 miles. BiteMap treats this as nearby historic stream evidence, not proof at the access point.",
+          "lastEvidence": "Latest nearby sample 1998-08-25 · USGS release v2.0 (December 2024)",
+          "technique": "Match the species to visible current, cover, and depth; begin with a compact natural presentation",
+          "depth": "Probe accessible current breaks and cover before expanding to adjacent habitat",
+          "positive": [
+            "1 nearby presence record · closest 1.3 mi",
+            "Published sources: EPA EMAP Mid-Atlantic Region"
+          ],
+          "negative": [
+            "The record is historic and associated by nearby reach midpoint, not this exact access point",
+            "Sampling methods and dates vary; this evidence cannot describe current abundance"
+          ],
+          "sourceName": "USGS Aquatic GAP presence/absence database",
+          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R"
+        },
+        {
+          "speciesId": "rainbow-trout",
+          "availability": 0.52,
+          "quality": null,
+          "evidenceConfidence": 0.48,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "USGS Aquatic GAP v2.0 contains 1 presence record on sampled NHDPlus reaches within 1.75 miles. BiteMap treats this as nearby historic stream evidence, not proof at the access point.",
+          "lastEvidence": "Latest nearby sample 1998-08-25 · USGS release v2.0 (December 2024)",
+          "technique": "Match the species to visible current, cover, and depth; begin with a compact natural presentation",
+          "depth": "Probe accessible current breaks and cover before expanding to adjacent habitat",
+          "positive": [
+            "1 nearby presence record · closest 1.3 mi",
+            "Published sources: EPA EMAP Mid-Atlantic Region"
+          ],
+          "negative": [
+            "The record is historic and associated by nearby reach midpoint, not this exact access point",
+            "Sampling methods and dates vary; this evidence cannot describe current abundance"
+          ],
+          "sourceName": "USGS Aquatic GAP presence/absence database",
+          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R"
+        },
+        {
+          "speciesId": "redbreast-sunfish",
+          "availability": 0.52,
+          "quality": null,
+          "evidenceConfidence": 0.48,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "USGS Aquatic GAP v2.0 contains 1 presence record on sampled NHDPlus reaches within 1.75 miles. BiteMap treats this as nearby historic stream evidence, not proof at the access point.",
+          "lastEvidence": "Latest nearby sample 1998-08-25 · USGS release v2.0 (December 2024)",
+          "technique": "Match the species to visible current, cover, and depth; begin with a compact natural presentation",
+          "depth": "Probe accessible current breaks and cover before expanding to adjacent habitat",
+          "positive": [
+            "1 nearby presence record · closest 1.3 mi",
+            "Published sources: EPA EMAP Mid-Atlantic Region"
+          ],
+          "negative": [
+            "The record is historic and associated by nearby reach midpoint, not this exact access point",
+            "Sampling methods and dates vary; this evidence cannot describe current abundance"
+          ],
+          "sourceName": "USGS Aquatic GAP presence/absence database",
+          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R"
+        },
+        {
+          "speciesId": "smallmouth-bass",
+          "availability": 0.52,
+          "quality": null,
+          "evidenceConfidence": 0.48,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "USGS Aquatic GAP v2.0 contains 1 presence record on sampled NHDPlus reaches within 1.75 miles. BiteMap treats this as nearby historic stream evidence, not proof at the access point.",
+          "lastEvidence": "Latest nearby sample 1998-08-25 · USGS release v2.0 (December 2024)",
+          "technique": "Match the species to visible current, cover, and depth; begin with a compact natural presentation",
+          "depth": "Probe accessible current breaks and cover before expanding to adjacent habitat",
+          "positive": [
+            "1 nearby presence record · closest 1.3 mi",
+            "Published sources: EPA EMAP Mid-Atlantic Region"
+          ],
+          "negative": [
+            "The record is historic and associated by nearby reach midpoint, not this exact access point",
+            "Sampling methods and dates vary; this evidence cannot describe current abundance"
+          ],
+          "sourceName": "USGS Aquatic GAP presence/absence database",
+          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R"
+        }
+      ],
+      "accessAuthority": "Virginia Department of Wildlife Resources",
+      "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "verified",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "dwr-boat-30",
+      "name": "Mountain Run",
+      "waterbody": "Mountain Run Lake",
+      "waterbodyType": "lake",
+      "county": "Culpeper",
+      "lat": 38.4795596,
+      "lng": -78.06986653,
+      "distanceMiles": 48,
+      "travelMinutes": 75,
+      "publicAccess": true,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "aliases": [
+        "Mountain Run"
+      ],
+      "notice": "Virginia DWR maintains this public boating/fishing access. Verify current ramp rules, hours, parking, launch fees, and posted conditions before departure.",
+      "flowStatus": "Live water data unavailable",
+      "activityEstimate": 0.5,
+      "accessFit": 0.82,
+      "bestWindow": "Unavailable",
+      "evidence": [],
+      "accessAuthority": "Virginia Department of Wildlife Resources",
+      "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "verified",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "dwr-boat-33",
+      "name": "Grove Hill",
+      "waterbody": "S. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Page",
+      "lat": 38.52734876,
+      "lng": -78.59470751,
+      "distanceMiles": 73,
+      "travelMinutes": 108,
+      "publicAccess": true,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "aliases": [
+        "Grove Hill"
+      ],
+      "notice": "Virginia DWR maintains this public boating/fishing access. Verify current ramp rules, hours, parking, launch fees, and posted conditions before departure.",
+      "flowStatus": "Representative gage not yet verified",
+      "activityEstimate": 0.5,
+      "accessFit": 0.78,
+      "bestWindow": "Unavailable",
+      "evidence": [
+        {
+          "speciesId": "bluegill",
+          "availability": 0.52,
+          "quality": null,
+          "evidenceConfidence": 0.48,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "USGS Aquatic GAP v2.0 contains 1 presence record on sampled NHDPlus reaches within 1.75 miles. BiteMap treats this as nearby historic stream evidence, not proof at the access point.",
+          "lastEvidence": "Latest nearby sample 2010-10-13 · USGS release v2.0 (December 2024)",
+          "technique": "Match the species to visible current, cover, and depth; begin with a compact natural presentation",
+          "depth": "Probe accessible current breaks and cover before expanding to adjacent habitat",
+          "positive": [
+            "1 nearby presence record · closest 1.2 mi",
+            "Published sources: Southeast Aquatic Resources Partnership (SARP)"
+          ],
+          "negative": [
+            "The record is historic and associated by nearby reach midpoint, not this exact access point",
+            "Sampling methods and dates vary; this evidence cannot describe current abundance"
+          ],
+          "sourceName": "USGS Aquatic GAP presence/absence database",
+          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R"
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "availability": 0.52,
+          "quality": null,
+          "evidenceConfidence": 0.48,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "USGS Aquatic GAP v2.0 contains 1 presence record on sampled NHDPlus reaches within 1.75 miles. BiteMap treats this as nearby historic stream evidence, not proof at the access point.",
+          "lastEvidence": "Latest nearby sample 2010-10-13 · USGS release v2.0 (December 2024)",
+          "technique": "Match the species to visible current, cover, and depth; begin with a compact natural presentation",
+          "depth": "Probe accessible current breaks and cover before expanding to adjacent habitat",
+          "positive": [
+            "1 nearby presence record · closest 1.2 mi",
+            "Published sources: Southeast Aquatic Resources Partnership (SARP)"
+          ],
+          "negative": [
+            "The record is historic and associated by nearby reach midpoint, not this exact access point",
+            "Sampling methods and dates vary; this evidence cannot describe current abundance"
+          ],
+          "sourceName": "USGS Aquatic GAP presence/absence database",
+          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R"
+        },
+        {
+          "speciesId": "redbreast-sunfish",
+          "availability": 0.52,
+          "quality": null,
+          "evidenceConfidence": 0.48,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "USGS Aquatic GAP v2.0 contains 1 presence record on sampled NHDPlus reaches within 1.75 miles. BiteMap treats this as nearby historic stream evidence, not proof at the access point.",
+          "lastEvidence": "Latest nearby sample 2010-10-13 · USGS release v2.0 (December 2024)",
+          "technique": "Match the species to visible current, cover, and depth; begin with a compact natural presentation",
+          "depth": "Probe accessible current breaks and cover before expanding to adjacent habitat",
+          "positive": [
+            "1 nearby presence record · closest 1.2 mi",
+            "Published sources: Southeast Aquatic Resources Partnership (SARP)"
+          ],
+          "negative": [
+            "The record is historic and associated by nearby reach midpoint, not this exact access point",
+            "Sampling methods and dates vary; this evidence cannot describe current abundance"
+          ],
+          "sourceName": "USGS Aquatic GAP presence/absence database",
+          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R"
+        },
+        {
+          "speciesId": "smallmouth-bass",
+          "availability": 0.52,
+          "quality": null,
+          "evidenceConfidence": 0.48,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "USGS Aquatic GAP v2.0 contains 1 presence record on sampled NHDPlus reaches within 1.75 miles. BiteMap treats this as nearby historic stream evidence, not proof at the access point.",
+          "lastEvidence": "Latest nearby sample 2010-10-13 · USGS release v2.0 (December 2024)",
+          "technique": "Match the species to visible current, cover, and depth; begin with a compact natural presentation",
+          "depth": "Probe accessible current breaks and cover before expanding to adjacent habitat",
+          "positive": [
+            "1 nearby presence record · closest 1.2 mi",
+            "Published sources: Southeast Aquatic Resources Partnership (SARP)"
+          ],
+          "negative": [
+            "The record is historic and associated by nearby reach midpoint, not this exact access point",
+            "Sampling methods and dates vary; this evidence cannot describe current abundance"
+          ],
+          "sourceName": "USGS Aquatic GAP presence/absence database",
+          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R"
+        }
+      ],
+      "accessAuthority": "Virginia Department of Wildlife Resources",
+      "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "verified",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "dwr-boat-36",
+      "name": "Newport",
+      "waterbody": "S. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Page",
+      "lat": 38.58317914,
+      "lng": -78.59435509,
+      "distanceMiles": 72,
+      "travelMinutes": 107,
+      "publicAccess": true,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "aliases": [
+        "Newport"
+      ],
+      "notice": "Virginia DWR maintains this public boating/fishing access. Verify current ramp rules, hours, parking, launch fees, and posted conditions before departure.",
+      "flowStatus": "Representative gage not yet verified",
+      "activityEstimate": 0.5,
+      "accessFit": 0.78,
+      "bestWindow": "Unavailable",
+      "evidence": [
+        {
+          "speciesId": "bluegill",
+          "availability": 0.52,
+          "quality": null,
+          "evidenceConfidence": 0.48,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "USGS Aquatic GAP v2.0 contains 1 presence record on sampled NHDPlus reaches within 1.75 miles. BiteMap treats this as nearby historic stream evidence, not proof at the access point.",
+          "lastEvidence": "Latest nearby sample 1998-08-26 · USGS release v2.0 (December 2024)",
+          "technique": "Match the species to visible current, cover, and depth; begin with a compact natural presentation",
+          "depth": "Probe accessible current breaks and cover before expanding to adjacent habitat",
+          "positive": [
+            "1 nearby presence record · closest 1.5 mi",
+            "Published sources: EPA EMAP Mid-Atlantic Region"
+          ],
+          "negative": [
+            "The record is historic and associated by nearby reach midpoint, not this exact access point",
+            "Sampling methods and dates vary; this evidence cannot describe current abundance"
+          ],
+          "sourceName": "USGS Aquatic GAP presence/absence database",
+          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R"
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "availability": 0.52,
+          "quality": null,
+          "evidenceConfidence": 0.48,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "USGS Aquatic GAP v2.0 contains 1 presence record on sampled NHDPlus reaches within 1.75 miles. BiteMap treats this as nearby historic stream evidence, not proof at the access point.",
+          "lastEvidence": "Latest nearby sample 1998-08-26 · USGS release v2.0 (December 2024)",
+          "technique": "Match the species to visible current, cover, and depth; begin with a compact natural presentation",
+          "depth": "Probe accessible current breaks and cover before expanding to adjacent habitat",
+          "positive": [
+            "1 nearby presence record · closest 1.5 mi",
+            "Published sources: EPA EMAP Mid-Atlantic Region"
+          ],
+          "negative": [
+            "The record is historic and associated by nearby reach midpoint, not this exact access point",
+            "Sampling methods and dates vary; this evidence cannot describe current abundance"
+          ],
+          "sourceName": "USGS Aquatic GAP presence/absence database",
+          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R"
+        },
+        {
+          "speciesId": "redbreast-sunfish",
+          "availability": 0.52,
+          "quality": null,
+          "evidenceConfidence": 0.48,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "USGS Aquatic GAP v2.0 contains 1 presence record on sampled NHDPlus reaches within 1.75 miles. BiteMap treats this as nearby historic stream evidence, not proof at the access point.",
+          "lastEvidence": "Latest nearby sample 1998-08-26 · USGS release v2.0 (December 2024)",
+          "technique": "Match the species to visible current, cover, and depth; begin with a compact natural presentation",
+          "depth": "Probe accessible current breaks and cover before expanding to adjacent habitat",
+          "positive": [
+            "1 nearby presence record · closest 1.5 mi",
+            "Published sources: EPA EMAP Mid-Atlantic Region"
+          ],
+          "negative": [
+            "The record is historic and associated by nearby reach midpoint, not this exact access point",
+            "Sampling methods and dates vary; this evidence cannot describe current abundance"
+          ],
+          "sourceName": "USGS Aquatic GAP presence/absence database",
+          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R"
+        },
+        {
+          "speciesId": "smallmouth-bass",
+          "availability": 0.52,
+          "quality": null,
+          "evidenceConfidence": 0.48,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "USGS Aquatic GAP v2.0 contains 1 presence record on sampled NHDPlus reaches within 1.75 miles. BiteMap treats this as nearby historic stream evidence, not proof at the access point.",
+          "lastEvidence": "Latest nearby sample 1998-08-26 · USGS release v2.0 (December 2024)",
+          "technique": "Match the species to visible current, cover, and depth; begin with a compact natural presentation",
+          "depth": "Probe accessible current breaks and cover before expanding to adjacent habitat",
+          "positive": [
+            "1 nearby presence record · closest 1.5 mi",
+            "Published sources: EPA EMAP Mid-Atlantic Region"
+          ],
+          "negative": [
+            "The record is historic and associated by nearby reach midpoint, not this exact access point",
+            "Sampling methods and dates vary; this evidence cannot describe current abundance"
+          ],
+          "sourceName": "USGS Aquatic GAP presence/absence database",
+          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R"
+        }
+      ],
+      "accessAuthority": "Virginia Department of Wildlife Resources",
+      "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "verified",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "dwr-boat-61",
+      "name": "Fosters",
+      "waterbody": "S. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Page",
+      "lat": 38.7703249,
+      "lng": -78.42248922,
+      "distanceMiles": 60,
+      "travelMinutes": 91,
+      "publicAccess": true,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "aliases": [
+        "Fosters"
+      ],
+      "notice": "Virginia DWR maintains this public boating/fishing access. Verify current ramp rules, hours, parking, launch fees, and posted conditions before departure.",
+      "flowStatus": "Representative gage not yet verified",
+      "activityEstimate": 0.5,
+      "accessFit": 0.82,
+      "bestWindow": "Unavailable",
+      "evidence": [],
+      "accessAuthority": "Virginia Department of Wildlife Resources",
+      "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "verified",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "dwr-boat-79",
+      "name": "Lake Orange",
+      "waterbody": "Lake Orange",
+      "waterbodyType": "lake",
+      "county": "Orange",
+      "lat": 38.22465916,
+      "lng": -78.02027205,
+      "distanceMiles": 58,
+      "travelMinutes": 88,
+      "publicAccess": true,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "aliases": [
+        "Lake Orange"
+      ],
+      "notice": "Virginia DWR maintains this public boating/fishing access. Verify current ramp rules, hours, parking, launch fees, and posted conditions before departure.",
+      "flowStatus": "Live water data unavailable",
+      "activityEstimate": 0.5,
+      "accessFit": 0.82,
+      "bestWindow": "Unavailable",
+      "evidence": [],
+      "accessAuthority": "Virginia Department of Wildlife Resources",
+      "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "verified",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "dwr-boat-99",
+      "name": "Meems Bottom",
+      "waterbody": "N. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Shenandoah",
+      "lat": 38.7066986,
+      "lng": -78.65096625,
+      "distanceMiles": 73,
+      "travelMinutes": 109,
+      "publicAccess": true,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "aliases": [
+        "Meems Bottom"
+      ],
+      "notice": "Virginia DWR maintains this public boating/fishing access. Verify current ramp rules, hours, parking, launch fees, and posted conditions before departure.",
+      "flowStatus": "Representative gage not yet verified",
+      "activityEstimate": 0.5,
+      "accessFit": 0.78,
+      "bestWindow": "Unavailable",
+      "evidence": [],
+      "accessAuthority": "Virginia Department of Wildlife Resources",
+      "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "verified",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "dwr-boat-102",
+      "name": "Grottoes Park",
+      "waterbody": "South River",
+      "waterbodyType": "river",
+      "county": "Rockingham",
+      "lat": 38.28469111,
+      "lng": -78.83401976,
+      "distanceMiles": 91,
+      "travelMinutes": 133,
+      "publicAccess": true,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "aliases": [
+        "Grottoes Park"
+      ],
+      "notice": "Virginia DWR maintains this public boating/fishing access. Verify current ramp rules, hours, parking, launch fees, and posted conditions before departure.",
+      "flowStatus": "Representative gage not yet verified",
+      "activityEstimate": 0.5,
+      "accessFit": 0.78,
+      "bestWindow": "Unavailable",
+      "evidence": [
+        {
+          "speciesId": "bluegill",
+          "availability": 0.52,
+          "quality": null,
+          "evidenceConfidence": 0.48,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "USGS Aquatic GAP v2.0 contains 1 presence record on sampled NHDPlus reaches within 1.75 miles. BiteMap treats this as nearby historic stream evidence, not proof at the access point.",
+          "lastEvidence": "Latest nearby sample 1998-08-25 · USGS release v2.0 (December 2024)",
+          "technique": "Match the species to visible current, cover, and depth; begin with a compact natural presentation",
+          "depth": "Probe accessible current breaks and cover before expanding to adjacent habitat",
+          "positive": [
+            "1 nearby presence record · closest 1.7 mi",
+            "Published sources: EPA EMAP Mid-Atlantic Region"
+          ],
+          "negative": [
+            "The record is historic and associated by nearby reach midpoint, not this exact access point",
+            "Sampling methods and dates vary; this evidence cannot describe current abundance"
+          ],
+          "sourceName": "USGS Aquatic GAP presence/absence database",
+          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R"
+        },
+        {
+          "speciesId": "channel-catfish",
+          "availability": 0.52,
+          "quality": null,
+          "evidenceConfidence": 0.48,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "USGS Aquatic GAP v2.0 contains 1 presence record on sampled NHDPlus reaches within 1.75 miles. BiteMap treats this as nearby historic stream evidence, not proof at the access point.",
+          "lastEvidence": "Latest nearby sample 1998-08-25 · USGS release v2.0 (December 2024)",
+          "technique": "Match the species to visible current, cover, and depth; begin with a compact natural presentation",
+          "depth": "Probe accessible current breaks and cover before expanding to adjacent habitat",
+          "positive": [
+            "1 nearby presence record · closest 1.7 mi",
+            "Published sources: EPA EMAP Mid-Atlantic Region"
+          ],
+          "negative": [
+            "The record is historic and associated by nearby reach midpoint, not this exact access point",
+            "Sampling methods and dates vary; this evidence cannot describe current abundance"
+          ],
+          "sourceName": "USGS Aquatic GAP presence/absence database",
+          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R"
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "availability": 0.52,
+          "quality": null,
+          "evidenceConfidence": 0.48,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "USGS Aquatic GAP v2.0 contains 1 presence record on sampled NHDPlus reaches within 1.75 miles. BiteMap treats this as nearby historic stream evidence, not proof at the access point.",
+          "lastEvidence": "Latest nearby sample 1998-08-25 · USGS release v2.0 (December 2024)",
+          "technique": "Match the species to visible current, cover, and depth; begin with a compact natural presentation",
+          "depth": "Probe accessible current breaks and cover before expanding to adjacent habitat",
+          "positive": [
+            "1 nearby presence record · closest 1.7 mi",
+            "Published sources: EPA EMAP Mid-Atlantic Region"
+          ],
+          "negative": [
+            "The record is historic and associated by nearby reach midpoint, not this exact access point",
+            "Sampling methods and dates vary; this evidence cannot describe current abundance"
+          ],
+          "sourceName": "USGS Aquatic GAP presence/absence database",
+          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R"
+        },
+        {
+          "speciesId": "rainbow-trout",
+          "availability": 0.52,
+          "quality": null,
+          "evidenceConfidence": 0.48,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "USGS Aquatic GAP v2.0 contains 1 presence record on sampled NHDPlus reaches within 1.75 miles. BiteMap treats this as nearby historic stream evidence, not proof at the access point.",
+          "lastEvidence": "Latest nearby sample 1998-08-25 · USGS release v2.0 (December 2024)",
+          "technique": "Match the species to visible current, cover, and depth; begin with a compact natural presentation",
+          "depth": "Probe accessible current breaks and cover before expanding to adjacent habitat",
+          "positive": [
+            "1 nearby presence record · closest 1.7 mi",
+            "Published sources: EPA EMAP Mid-Atlantic Region"
+          ],
+          "negative": [
+            "The record is historic and associated by nearby reach midpoint, not this exact access point",
+            "Sampling methods and dates vary; this evidence cannot describe current abundance"
+          ],
+          "sourceName": "USGS Aquatic GAP presence/absence database",
+          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R"
+        },
+        {
+          "speciesId": "redbreast-sunfish",
+          "availability": 0.52,
+          "quality": null,
+          "evidenceConfidence": 0.48,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "USGS Aquatic GAP v2.0 contains 1 presence record on sampled NHDPlus reaches within 1.75 miles. BiteMap treats this as nearby historic stream evidence, not proof at the access point.",
+          "lastEvidence": "Latest nearby sample 1998-08-25 · USGS release v2.0 (December 2024)",
+          "technique": "Match the species to visible current, cover, and depth; begin with a compact natural presentation",
+          "depth": "Probe accessible current breaks and cover before expanding to adjacent habitat",
+          "positive": [
+            "1 nearby presence record · closest 1.7 mi",
+            "Published sources: EPA EMAP Mid-Atlantic Region"
+          ],
+          "negative": [
+            "The record is historic and associated by nearby reach midpoint, not this exact access point",
+            "Sampling methods and dates vary; this evidence cannot describe current abundance"
+          ],
+          "sourceName": "USGS Aquatic GAP presence/absence database",
+          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R"
+        },
+        {
+          "speciesId": "smallmouth-bass",
+          "availability": 0.52,
+          "quality": null,
+          "evidenceConfidence": 0.48,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "USGS Aquatic GAP v2.0 contains 1 presence record on sampled NHDPlus reaches within 1.75 miles. BiteMap treats this as nearby historic stream evidence, not proof at the access point.",
+          "lastEvidence": "Latest nearby sample 1998-08-25 · USGS release v2.0 (December 2024)",
+          "technique": "Match the species to visible current, cover, and depth; begin with a compact natural presentation",
+          "depth": "Probe accessible current breaks and cover before expanding to adjacent habitat",
+          "positive": [
+            "1 nearby presence record · closest 1.7 mi",
+            "Published sources: EPA EMAP Mid-Atlantic Region"
+          ],
+          "negative": [
+            "The record is historic and associated by nearby reach midpoint, not this exact access point",
+            "Sampling methods and dates vary; this evidence cannot describe current abundance"
+          ],
+          "sourceName": "USGS Aquatic GAP presence/absence database",
+          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R"
+        }
+      ],
+      "accessAuthority": "Virginia Department of Wildlife Resources",
+      "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "verified",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "dwr-boat-114",
+      "name": "Deer Rapids",
+      "waterbody": "N. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Shenandoah",
+      "lat": 38.95457009,
+      "lng": -78.37517285,
+      "distanceMiles": 58,
+      "travelMinutes": 88,
+      "publicAccess": true,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "aliases": [
+        "Deer Rapids"
+      ],
+      "notice": "Virginia DWR maintains this public boating/fishing access. Verify current ramp rules, hours, parking, launch fees, and posted conditions before departure.",
+      "flowStatus": "Representative gage not yet verified",
+      "activityEstimate": 0.5,
+      "accessFit": 0.78,
+      "bestWindow": "Unavailable",
+      "evidence": [],
+      "accessAuthority": "Virginia Department of Wildlife Resources",
+      "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "verified",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "dwr-boat-122",
+      "name": "Chapmans",
+      "waterbody": "N. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Shenandoah",
+      "lat": 38.84543186,
+      "lng": -78.52968681,
+      "distanceMiles": 66,
+      "travelMinutes": 99,
+      "publicAccess": true,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "aliases": [
+        "Chapmans"
+      ],
+      "notice": "Virginia DWR maintains this public boating/fishing access. Verify current ramp rules, hours, parking, launch fees, and posted conditions before departure.",
+      "flowStatus": "Representative gage not yet verified",
+      "activityEstimate": 0.5,
+      "accessFit": 0.82,
+      "bestWindow": "Unavailable",
+      "evidence": [],
+      "accessAuthority": "Virginia Department of Wildlife Resources",
+      "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "verified",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "dwr-boat-150",
+      "name": "Island Ford",
+      "waterbody": "S. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Rockingham",
+      "lat": 38.35482684,
+      "lng": -78.69564898,
+      "distanceMiles": 82,
+      "travelMinutes": 121,
+      "publicAccess": true,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "aliases": [
+        "Island Ford"
+      ],
+      "notice": "Virginia DWR maintains this public boating/fishing access. Verify current ramp rules, hours, parking, launch fees, and posted conditions before departure.",
+      "flowStatus": "Representative gage not yet verified",
+      "activityEstimate": 0.5,
+      "accessFit": 0.78,
+      "bestWindow": "Unavailable",
+      "evidence": [],
+      "accessAuthority": "Virginia Department of Wildlife Resources",
+      "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "verified",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "dwr-boat-173",
+      "name": "Hunting Run",
+      "waterbody": "Rapidan River",
+      "waterbodyType": "river",
+      "county": "Spotsylvania",
+      "lat": 38.35912392,
+      "lng": -77.63532184,
+      "distanceMiles": 38,
+      "travelMinutes": 61,
+      "publicAccess": true,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "aliases": [
+        "Hunting Run"
+      ],
+      "notice": "Virginia DWR maintains this public boating/fishing access. Verify current ramp rules, hours, parking, launch fees, and posted conditions before departure.",
+      "flowStatus": "Representative gage not yet verified",
+      "activityEstimate": 0.5,
+      "accessFit": 0.78,
+      "bestWindow": "Unavailable",
+      "evidence": [],
+      "accessAuthority": "Virginia Department of Wildlife Resources",
+      "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "verified",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "dwr-boat-177",
+      "name": "Alma",
+      "waterbody": "S. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Page",
+      "lat": 38.5887879,
+      "lng": -78.56577496,
+      "distanceMiles": 70,
+      "travelMinutes": 105,
+      "publicAccess": true,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "aliases": [
+        "Alma"
+      ],
+      "notice": "Virginia DWR maintains this public boating/fishing access. Verify current ramp rules, hours, parking, launch fees, and posted conditions before departure.",
+      "flowStatus": "Representative gage not yet verified",
+      "activityEstimate": 0.5,
+      "accessFit": 0.78,
+      "bestWindow": "Unavailable",
+      "evidence": [
+        {
+          "speciesId": "bluegill",
+          "availability": 0.52,
+          "quality": null,
+          "evidenceConfidence": 0.48,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "USGS Aquatic GAP v2.0 contains 1 presence record on sampled NHDPlus reaches within 1.75 miles. BiteMap treats this as nearby historic stream evidence, not proof at the access point.",
+          "lastEvidence": "Latest nearby sample 1998-08-26 · USGS release v2.0 (December 2024)",
+          "technique": "Match the species to visible current, cover, and depth; begin with a compact natural presentation",
+          "depth": "Probe accessible current breaks and cover before expanding to adjacent habitat",
+          "positive": [
+            "1 nearby presence record · closest 0.2 mi",
+            "Published sources: EPA EMAP Mid-Atlantic Region"
+          ],
+          "negative": [
+            "The record is historic and associated by nearby reach midpoint, not this exact access point",
+            "Sampling methods and dates vary; this evidence cannot describe current abundance"
+          ],
+          "sourceName": "USGS Aquatic GAP presence/absence database",
+          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R"
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "availability": 0.52,
+          "quality": null,
+          "evidenceConfidence": 0.48,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "USGS Aquatic GAP v2.0 contains 1 presence record on sampled NHDPlus reaches within 1.75 miles. BiteMap treats this as nearby historic stream evidence, not proof at the access point.",
+          "lastEvidence": "Latest nearby sample 1998-08-26 · USGS release v2.0 (December 2024)",
+          "technique": "Match the species to visible current, cover, and depth; begin with a compact natural presentation",
+          "depth": "Probe accessible current breaks and cover before expanding to adjacent habitat",
+          "positive": [
+            "1 nearby presence record · closest 0.2 mi",
+            "Published sources: EPA EMAP Mid-Atlantic Region"
+          ],
+          "negative": [
+            "The record is historic and associated by nearby reach midpoint, not this exact access point",
+            "Sampling methods and dates vary; this evidence cannot describe current abundance"
+          ],
+          "sourceName": "USGS Aquatic GAP presence/absence database",
+          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R"
+        },
+        {
+          "speciesId": "redbreast-sunfish",
+          "availability": 0.52,
+          "quality": null,
+          "evidenceConfidence": 0.48,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "USGS Aquatic GAP v2.0 contains 1 presence record on sampled NHDPlus reaches within 1.75 miles. BiteMap treats this as nearby historic stream evidence, not proof at the access point.",
+          "lastEvidence": "Latest nearby sample 1998-08-26 · USGS release v2.0 (December 2024)",
+          "technique": "Match the species to visible current, cover, and depth; begin with a compact natural presentation",
+          "depth": "Probe accessible current breaks and cover before expanding to adjacent habitat",
+          "positive": [
+            "1 nearby presence record · closest 0.2 mi",
+            "Published sources: EPA EMAP Mid-Atlantic Region"
+          ],
+          "negative": [
+            "The record is historic and associated by nearby reach midpoint, not this exact access point",
+            "Sampling methods and dates vary; this evidence cannot describe current abundance"
+          ],
+          "sourceName": "USGS Aquatic GAP presence/absence database",
+          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R"
+        },
+        {
+          "speciesId": "smallmouth-bass",
+          "availability": 0.52,
+          "quality": null,
+          "evidenceConfidence": 0.48,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "USGS Aquatic GAP v2.0 contains 1 presence record on sampled NHDPlus reaches within 1.75 miles. BiteMap treats this as nearby historic stream evidence, not proof at the access point.",
+          "lastEvidence": "Latest nearby sample 1998-08-26 · USGS release v2.0 (December 2024)",
+          "technique": "Match the species to visible current, cover, and depth; begin with a compact natural presentation",
+          "depth": "Probe accessible current breaks and cover before expanding to adjacent habitat",
+          "positive": [
+            "1 nearby presence record · closest 0.2 mi",
+            "Published sources: EPA EMAP Mid-Atlantic Region"
+          ],
+          "negative": [
+            "The record is historic and associated by nearby reach midpoint, not this exact access point",
+            "Sampling methods and dates vary; this evidence cannot describe current abundance"
+          ],
+          "sourceName": "USGS Aquatic GAP presence/absence database",
+          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R"
+        }
+      ],
+      "accessAuthority": "Virginia Department of Wildlife Resources",
+      "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "verified",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "dwr-boat-182",
+      "name": "Elys Ford",
+      "waterbody": "Rapidan River",
+      "waterbodyType": "river",
+      "county": "Spotsylvania",
+      "lat": 38.35928979,
+      "lng": -77.68546185,
+      "distanceMiles": 39,
+      "travelMinutes": 63,
+      "publicAccess": true,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "aliases": [
+        "Elys Ford"
+      ],
+      "notice": "Virginia DWR maintains this public boating/fishing access. Verify current ramp rules, hours, parking, launch fees, and posted conditions before departure.",
+      "flowStatus": "Representative gage not yet verified",
+      "activityEstimate": 0.5,
+      "accessFit": 0.78,
+      "bestWindow": "Unavailable",
+      "evidence": [],
+      "accessAuthority": "Virginia Department of Wildlife Resources",
+      "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "verified",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "dwr-boat-191",
+      "name": "Strasburg",
+      "waterbody": "N. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Shenandoah",
+      "lat": 38.97317812,
+      "lng": -78.35130256,
+      "distanceMiles": 57,
+      "travelMinutes": 87,
+      "publicAccess": true,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "aliases": [
+        "Strasburg"
+      ],
+      "notice": "Virginia DWR maintains this public boating/fishing access. Verify current ramp rules, hours, parking, launch fees, and posted conditions before departure.",
+      "flowStatus": "Representative gage not yet verified",
+      "activityEstimate": 0.5,
+      "accessFit": 0.82,
+      "bestWindow": "Unavailable",
+      "evidence": [],
+      "accessAuthority": "Virginia Department of Wildlife Resources",
+      "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "verified",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "dwr-boat-202",
+      "name": "Massanutten",
+      "waterbody": "S. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Page",
+      "lat": 38.67240004,
+      "lng": -78.52913478,
+      "distanceMiles": 67,
+      "travelMinutes": 100,
+      "publicAccess": true,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "aliases": [
+        "Massanutten"
+      ],
+      "notice": "Virginia DWR maintains this public boating/fishing access. Verify current ramp rules, hours, parking, launch fees, and posted conditions before departure.",
+      "flowStatus": "Representative gage not yet verified",
+      "activityEstimate": 0.5,
+      "accessFit": 0.82,
+      "bestWindow": "Unavailable",
+      "evidence": [],
+      "accessAuthority": "Virginia Department of Wildlife Resources",
+      "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "verified",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "dwr-boat-216",
+      "name": "Shenandoah Riverside",
+      "waterbody": "S. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Page",
+      "lat": 38.48035995,
+      "lng": -78.62373099,
+      "distanceMiles": 75,
+      "travelMinutes": 112,
+      "publicAccess": true,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "aliases": [
+        "Shenandoah Riverside"
+      ],
+      "notice": "Virginia DWR maintains this public boating/fishing access. Verify current ramp rules, hours, parking, launch fees, and posted conditions before departure.",
+      "flowStatus": "Representative gage not yet verified",
+      "activityEstimate": 0.5,
+      "accessFit": 0.82,
+      "bestWindow": "Unavailable",
+      "evidence": [],
+      "accessAuthority": "Virginia Department of Wildlife Resources",
+      "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "verified",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "dwr-boat-218",
+      "name": "White House",
+      "waterbody": "S. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Page",
+      "lat": 38.64607743,
+      "lng": -78.53448305,
+      "distanceMiles": 68,
+      "travelMinutes": 101,
+      "publicAccess": true,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "aliases": [
+        "White House"
+      ],
+      "notice": "Virginia DWR maintains this public boating/fishing access. Verify current ramp rules, hours, parking, launch fees, and posted conditions before departure.",
+      "flowStatus": "Representative gage not yet verified",
+      "activityEstimate": 0.5,
+      "accessFit": 0.82,
+      "bestWindow": "Unavailable",
+      "evidence": [],
+      "accessAuthority": "Virginia Department of Wildlife Resources",
+      "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "verified",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "dwr-boat-224",
+      "name": "Elkton",
+      "waterbody": "S. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Rockingham",
+      "lat": 38.40947242,
+      "lng": -78.63497496,
+      "distanceMiles": 78,
+      "travelMinutes": 115,
+      "publicAccess": true,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "aliases": [
+        "Elkton"
+      ],
+      "notice": "Virginia DWR maintains this public boating/fishing access. Verify current ramp rules, hours, parking, launch fees, and posted conditions before departure.",
+      "flowStatus": "Representative gage not yet verified",
+      "activityEstimate": 0.5,
+      "accessFit": 0.78,
+      "bestWindow": "Unavailable",
+      "evidence": [],
+      "accessAuthority": "Virginia Department of Wildlife Resources",
+      "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "verified",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "dwr-boat-234",
+      "name": "Inskeep",
+      "waterbody": "S. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Page",
+      "lat": 38.7015585,
+      "lng": -78.49173634,
+      "distanceMiles": 65,
+      "travelMinutes": 97,
+      "publicAccess": true,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "aliases": [
+        "Inskeep"
+      ],
+      "notice": "Virginia DWR maintains this public boating/fishing access. Verify current ramp rules, hours, parking, launch fees, and posted conditions before departure.",
+      "flowStatus": "Representative gage not yet verified",
+      "activityEstimate": 0.5,
+      "accessFit": 0.78,
+      "bestWindow": "Unavailable",
+      "evidence": [],
+      "accessAuthority": "Virginia Department of Wildlife Resources",
+      "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "verified",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "nhd-wilderness-run-lake",
+      "name": "Wilderness Run Lake",
+      "waterbody": "Wilderness Run Lake",
+      "waterbodyType": "lake",
+      "county": "Spotsylvania",
+      "lat": 38.306364,
+      "lng": -77.739801,
+      "distanceMiles": 44,
+      "travelMinutes": 69,
+      "publicAccess": true,
+      "access": [
+        "shore"
+      ],
+      "aliases": [
+        "Wilderness Run Lake"
+      ],
+      "notice": "This named public water (~28 acres) sits within Fredericksburg Spotsylvania National Military Park. BiteMap has not pinpointed a designated fishing access point or confirmed that fishing is permitted here — verify park rules, access, and parking before you go.",
+      "flowStatus": "Live water data unavailable",
+      "activityEstimate": 0.5,
+      "accessFit": 0.68,
+      "bestWindow": "Unavailable",
+      "evidence": [],
+      "accessAuthority": "Fredericksburg Spotsylvania National Military Park",
+      "accessSourceUrl": "https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer/12",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "listed",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "nhd-seven-fountains-lake",
+      "name": "Seven Fountains Lake",
+      "waterbody": "Seven Fountains Lake",
+      "waterbodyType": "lake",
+      "county": "Shenandoah",
+      "lat": 38.843865,
+      "lng": -78.402924,
+      "distanceMiles": 59,
+      "travelMinutes": 90,
+      "publicAccess": true,
+      "access": [
+        "shore"
+      ],
+      "aliases": [
+        "Seven Fountains Lake"
+      ],
+      "notice": "This named public water (~20 acres) sits within George Washington National Forest. BiteMap has not pinpointed a designated fishing access point or confirmed that fishing is permitted here — verify park rules, access, and parking before you go.",
+      "flowStatus": "Live water data unavailable",
+      "activityEstimate": 0.5,
+      "accessFit": 0.68,
+      "bestWindow": "Unavailable",
+      "evidence": [],
+      "accessAuthority": "George Washington National Forest",
+      "accessSourceUrl": "https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer/12",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "listed",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "nhd-grant-lake",
+      "name": "Grant Lake",
+      "waterbody": "Grant Lake",
+      "waterbodyType": "lake",
+      "county": "Spotsylvania",
+      "lat": 38.299536,
+      "lng": -77.730182,
+      "distanceMiles": 44,
+      "travelMinutes": 70,
+      "publicAccess": true,
+      "access": [
+        "shore"
+      ],
+      "aliases": [
+        "Grant Lake"
+      ],
+      "notice": "This named public water (~18 acres) sits within Fredericksburg Spotsylvania National Military Park. BiteMap has not pinpointed a designated fishing access point or confirmed that fishing is permitted here — verify park rules, access, and parking before you go.",
+      "flowStatus": "Live water data unavailable",
+      "activityEstimate": 0.5,
+      "accessFit": 0.68,
+      "bestWindow": "Unavailable",
+      "evidence": [],
+      "accessAuthority": "Fredericksburg Spotsylvania National Military Park",
+      "accessSourceUrl": "https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer/12",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "listed",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "nhd-lee-lake",
+      "name": "Lee Lake",
+      "waterbody": "Lee Lake",
+      "waterbodyType": "lake",
+      "county": "Spotsylvania",
+      "lat": 38.303152,
+      "lng": -77.734384,
+      "distanceMiles": 44,
+      "travelMinutes": 69,
+      "publicAccess": true,
+      "access": [
+        "shore"
+      ],
+      "aliases": [
+        "Lee Lake"
+      ],
+      "notice": "This named public water (~11 acres) sits within Fredericksburg Spotsylvania National Military Park. BiteMap has not pinpointed a designated fishing access point or confirmed that fishing is permitted here — verify park rules, access, and parking before you go.",
+      "flowStatus": "Live water data unavailable",
+      "activityEstimate": 0.5,
+      "accessFit": 0.68,
+      "bestWindow": "Unavailable",
+      "evidence": [],
+      "accessAuthority": "Fredericksburg Spotsylvania National Military Park",
+      "accessSourceUrl": "https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer/12",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "listed",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "nhd-happyland-camp-five-lake",
+      "name": "Happyland Camp Five Lake",
+      "waterbody": "Happyland Camp Five Lake",
+      "waterbodyType": "lake",
+      "county": "Prince William",
+      "lat": 38.580405,
+      "lng": -77.411772,
+      "distanceMiles": 19,
+      "travelMinutes": 36,
+      "publicAccess": true,
+      "access": [
+        "shore"
+      ],
+      "aliases": [
+        "Happyland Camp Five Lake"
+      ],
+      "notice": "This named public water (~7 acres) sits within Prince William Forest Park. BiteMap has not pinpointed a designated fishing access point or confirmed that fishing is permitted here — verify park rules, access, and parking before you go.",
+      "flowStatus": "Live water data unavailable",
+      "activityEstimate": 0.5,
+      "accessFit": 0.68,
+      "bestWindow": "Unavailable",
+      "evidence": [],
+      "accessAuthority": "Prince William Forest Park",
+      "accessSourceUrl": "https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer/12",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "listed",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "nhd-strasburg-reservoir",
+      "name": "Strasburg Reservoir",
+      "waterbody": "Strasburg Reservoir",
+      "waterbodyType": "reservoir",
+      "county": "Shenandoah",
+      "lat": 38.945542,
+      "lng": -78.354095,
+      "distanceMiles": 57,
+      "travelMinutes": 87,
+      "publicAccess": true,
+      "access": [
+        "shore"
+      ],
+      "aliases": [
+        "Strasburg Reservoir"
+      ],
+      "notice": "This named public water (~5 acres) sits within George Washington National Forest. BiteMap has not pinpointed a designated fishing access point or confirmed that fishing is permitted here — verify park rules, access, and parking before you go.",
+      "flowStatus": "Live water data unavailable",
+      "activityEstimate": 0.5,
+      "accessFit": 0.68,
+      "bestWindow": "Unavailable",
+      "evidence": [],
+      "accessAuthority": "George Washington National Forest",
+      "accessSourceUrl": "https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer/12",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "listed",
+      "consumptionAdvisory": {
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+        "reviewed": "2026-07-13",
+        "selectedSpeciesIds": [],
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching access-point segment was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+        "segments": [],
+        "matchingRestrictions": []
+      }
+    },
+    {
+      "id": "nhd-woodstock-reservoir",
+      "name": "Woodstock Reservoir",
+      "waterbody": "Woodstock Reservoir",
+      "waterbodyType": "reservoir",
+      "county": "Shenandoah",
+      "lat": 38.920249,
+      "lng": -78.656763,
+      "distanceMiles": 73,
+      "travelMinutes": 108,
+      "publicAccess": true,
+      "access": [
+        "shore"
+      ],
+      "aliases": [
+        "Woodstock Reservoir"
+      ],
+      "notice": "This named public water (~4 acres) sits within George Washington National Forest. BiteMap has not pinpointed a designated fishing access point or confirmed that fishing is permitted here — verify park rules, access, and parking before you go.",
+      "flowStatus": "Live water data unavailable",
+      "activityEstimate": 0.5,
+      "accessFit": 0.68,
+      "bestWindow": "Unavailable",
+      "evidence": [],
+      "accessAuthority": "George Washington National Forest",
+      "accessSourceUrl": "https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer/12",
+      "sourceReviewed": "2026-07-14",
+      "accessStatus": "listed",
       "consumptionAdvisory": {
         "sourceName": "Virginia Department of Health",
         "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",

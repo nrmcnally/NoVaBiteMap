@@ -1,0 +1,139 @@
+{
+  "meta": {
+    "source": "USGS NHD named waterbodies × ESRI USA Parks (public-land spatial join)",
+    "nhdUrl": "https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer/12",
+    "parksUrl": "https://www.arcgis.com/home/item.html?id=578968f975774d3fab79fe56c8c90941",
+    "license": "Public domain (USGS NHD); ESRI USA Parks reference layer",
+    "retrieved": "2026-07-14",
+    "region": {
+      "xmin": -78.75,
+      "ymin": 38.05,
+      "xmax": -76.95,
+      "ymax": 39.35
+    },
+    "minAreaAcres": 2,
+    "waterCount": 12
+  },
+  "waters": [
+    {
+      "permanentId": "46564455",
+      "name": "Burke Lake",
+      "waterbodyType": "lake",
+      "county": "Fairfax",
+      "latitude": 38.762788,
+      "longitude": -77.299287,
+      "areaAcres": 208,
+      "park": "Burke Lake Park"
+    },
+    {
+      "permanentId": "46562761",
+      "name": "Lake Accotink",
+      "waterbodyType": "lake",
+      "county": "Fairfax",
+      "latitude": 38.796287,
+      "longitude": -77.22448,
+      "areaAcres": 74,
+      "park": "Lake Accotink Park"
+    },
+    {
+      "permanentId": "46562839",
+      "name": "Lake Royal",
+      "waterbodyType": "lake",
+      "county": "Fairfax",
+      "latitude": 38.804696,
+      "longitude": -77.288736,
+      "areaAcres": 37,
+      "park": "Kings Park West"
+    },
+    {
+      "permanentId": "66984200",
+      "name": "Wilderness Run Lake",
+      "waterbodyType": "lake",
+      "county": "Spotsylvania",
+      "latitude": 38.306364,
+      "longitude": -77.739801,
+      "areaAcres": 28,
+      "park": "Fredericksburg Spotsylvania National Military Park"
+    },
+    {
+      "permanentId": "33486265",
+      "name": "Seven Fountains Lake",
+      "waterbodyType": "lake",
+      "county": "Shenandoah",
+      "latitude": 38.843865,
+      "longitude": -78.402924,
+      "areaAcres": 20,
+      "park": "George Washington National Forest"
+    },
+    {
+      "permanentId": "51772223",
+      "name": "Lake Fairfax",
+      "waterbodyType": "lake",
+      "county": "Fairfax",
+      "latitude": 38.966152,
+      "longitude": -77.319585,
+      "areaAcres": 20,
+      "park": "Lake Fairfax Park"
+    },
+    {
+      "permanentId": "66984252",
+      "name": "Grant Lake",
+      "waterbodyType": "lake",
+      "county": "Spotsylvania",
+      "latitude": 38.299536,
+      "longitude": -77.730182,
+      "areaAcres": 18,
+      "park": "Fredericksburg Spotsylvania National Military Park"
+    },
+    {
+      "permanentId": "66984220",
+      "name": "Lee Lake",
+      "waterbodyType": "lake",
+      "county": "Spotsylvania",
+      "latitude": 38.303152,
+      "longitude": -77.734384,
+      "areaAcres": 11,
+      "park": "Fredericksburg Spotsylvania National Military Park"
+    },
+    {
+      "permanentId": "46568833",
+      "name": "Marumsco Acres Lake",
+      "waterbodyType": "lake",
+      "county": "Prince William",
+      "latitude": 38.641018,
+      "longitude": -77.253652,
+      "areaAcres": 7,
+      "park": "Marumsco Acre Lake Park"
+    },
+    {
+      "permanentId": "54017298",
+      "name": "Happyland Camp Five Lake",
+      "waterbodyType": "lake",
+      "county": "Prince William",
+      "latitude": 38.580405,
+      "longitude": -77.411772,
+      "areaAcres": 7,
+      "park": "Prince William Forest Park"
+    },
+    {
+      "permanentId": "33485249",
+      "name": "Strasburg Reservoir",
+      "waterbodyType": "reservoir",
+      "county": "Shenandoah",
+      "latitude": 38.945542,
+      "longitude": -78.354095,
+      "areaAcres": 5,
+      "park": "George Washington National Forest"
+    },
+    {
+      "permanentId": "33485795",
+      "name": "Woodstock Reservoir",
+      "waterbodyType": "reservoir",
+      "county": "Shenandoah",
+      "latitude": 38.920249,
+      "longitude": -78.656763,
+      "areaAcres": 4,
+      "park": "George Washington National Forest"
+    }
+  ]
+}

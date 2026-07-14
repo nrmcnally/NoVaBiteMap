@@ -1,0 +1,669 @@
+{
+  "meta": {
+    "source": "Virginia DWR Maintained Boating Access Locations (ArcGIS)",
+    "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
+    "license": "Public data — Virginia Department of Wildlife Resources",
+    "retrieved": "2026-07-14",
+    "counties": [
+      "Fairfax",
+      "Prince William",
+      "Loudoun",
+      "Fauquier",
+      "Arlington",
+      "Alexandria",
+      "Stafford",
+      "Clarke",
+      "Warren",
+      "Frederick",
+      "Culpeper",
+      "Spotsylvania",
+      "King George",
+      "Fredericksburg",
+      "Page",
+      "Shenandoah",
+      "Rappahannock",
+      "Madison",
+      "Orange",
+      "Rockingham"
+    ],
+    "siteCount": 41
+  },
+  "sites": [
+    {
+      "objectId": 1,
+      "name": "Bentonville",
+      "waterbody": "S. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Warren",
+      "latitude": 38.84009573,
+      "longitude": -78.33041989,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "ramps": 0,
+      "accessArea": "BENTONVILLE"
+    },
+    {
+      "objectId": 6,
+      "name": "Lake Frederick",
+      "waterbody": "Lake Frederick",
+      "waterbodyType": "lake",
+      "county": "Frederick",
+      "latitude": 39.04301231,
+      "longitude": -78.15688297,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "ramps": 1,
+      "accessArea": "LAKE FREDERICK"
+    },
+    {
+      "objectId": 7,
+      "name": "Lake Burke",
+      "waterbody": "Lake Burke",
+      "waterbodyType": "lake",
+      "county": "Fairfax",
+      "latitude": 38.75640706,
+      "longitude": -77.30134326,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "ramps": 1,
+      "accessArea": "LAKE BURKE"
+    },
+    {
+      "objectId": 11,
+      "name": "Lake Shenandoah",
+      "waterbody": "Lake Shenandoah",
+      "waterbodyType": "lake",
+      "county": "Rockingham",
+      "latitude": 38.38169164,
+      "longitude": -78.83919305,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "ramps": 1,
+      "accessArea": "LAKE SHENANDOAH"
+    },
+    {
+      "objectId": 12,
+      "name": "McKimmey (Point of Rocks)",
+      "waterbody": "Potomac River",
+      "waterbodyType": "river",
+      "county": "Loudoun",
+      "latitude": 39.27251646,
+      "longitude": -77.54688805,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "ramps": 1,
+      "accessArea": "MCKIMMEY (POINT OF ROCKS)"
+    },
+    {
+      "objectId": 15,
+      "name": "Port Republic",
+      "waterbody": "S. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Rockingham",
+      "latitude": 38.29583648,
+      "longitude": -78.80798901,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "ramps": 0,
+      "accessArea": "PORT REPUBLIC"
+    },
+    {
+      "objectId": 26,
+      "name": "Morgan's Ford",
+      "waterbody": "Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Warren",
+      "latitude": 38.95783282,
+      "longitude": -78.12170846,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "ramps": 0,
+      "accessArea": "MORGAN'S FORD"
+    },
+    {
+      "objectId": 30,
+      "name": "Mountain Run",
+      "waterbody": "Mountain Run Lake",
+      "waterbodyType": "lake",
+      "county": "Culpeper",
+      "latitude": 38.4795596,
+      "longitude": -78.06986653,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "ramps": 1,
+      "accessArea": "MOUNTAIN  RUN LAKE"
+    },
+    {
+      "objectId": 33,
+      "name": "Grove Hill",
+      "waterbody": "S. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Page",
+      "latitude": 38.52734876,
+      "longitude": -78.59470751,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "ramps": 0,
+      "accessArea": "GROVE HILL"
+    },
+    {
+      "objectId": 36,
+      "name": "Newport",
+      "waterbody": "S. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Page",
+      "latitude": 38.58317914,
+      "longitude": -78.59435509,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "ramps": 0,
+      "accessArea": "NEWPORT"
+    },
+    {
+      "objectId": 46,
+      "name": "Karo",
+      "waterbody": "S. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Warren",
+      "latitude": 38.87152065,
+      "longitude": -78.25264353,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "ramps": 0,
+      "accessArea": "KARO"
+    },
+    {
+      "objectId": 53,
+      "name": "Motts",
+      "waterbody": "Rappahannock River",
+      "waterbodyType": "river",
+      "county": "Spotsylvania",
+      "latitude": 38.31362057,
+      "longitude": -77.54063658,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "ramps": 0,
+      "accessArea": "MOTTS RUN"
+    },
+    {
+      "objectId": 61,
+      "name": "Fosters",
+      "waterbody": "S. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Page",
+      "latitude": 38.7703249,
+      "longitude": -78.42248922,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "ramps": 1,
+      "accessArea": "FOSTERS"
+    },
+    {
+      "objectId": 73,
+      "name": "Hopyard Landing",
+      "waterbody": "Rappahannock River",
+      "waterbodyType": "river",
+      "county": "King George",
+      "latitude": 38.24426274,
+      "longitude": -77.22582493,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "ramps": 1,
+      "accessArea": "RAPPAHANNOCK RIVER"
+    },
+    {
+      "objectId": 75,
+      "name": "Simpson's",
+      "waterbody": "Shenandoah River (South)",
+      "waterbodyType": "river",
+      "county": "Warren",
+      "latitude": 38.87875059,
+      "longitude": -78.26197728,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "ramps": 0,
+      "accessArea": "SIMPSON'S LANDING"
+    },
+    {
+      "objectId": 79,
+      "name": "Lake Orange",
+      "waterbody": "Lake Orange",
+      "waterbodyType": "lake",
+      "county": "Orange",
+      "latitude": 38.22465916,
+      "longitude": -78.02027205,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "ramps": 1,
+      "accessArea": "LAKE ORANGE"
+    },
+    {
+      "objectId": 96,
+      "name": "Rocky Pen Park",
+      "waterbody": "Rocky Pen Run Reservoir",
+      "waterbodyType": "reservoir",
+      "county": "Stafford",
+      "latitude": 38.33422742,
+      "longitude": -77.54377515,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "ramps": 1,
+      "accessArea": "ROCKY PEN RUN LANDING"
+    },
+    {
+      "objectId": 99,
+      "name": "Meems Bottom",
+      "waterbody": "N. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Shenandoah",
+      "latitude": 38.7066986,
+      "longitude": -78.65096625,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "ramps": 0,
+      "accessArea": "MEEMS BOTTOM"
+    },
+    {
+      "objectId": 102,
+      "name": "Grottoes Park",
+      "waterbody": "South River",
+      "waterbodyType": "river",
+      "county": "Rockingham",
+      "latitude": 38.28469111,
+      "longitude": -78.83401976,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "ramps": 0,
+      "accessArea": "GROTTOES LANDING"
+    },
+    {
+      "objectId": 105,
+      "name": "Riverton",
+      "waterbody": "N. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Warren",
+      "latitude": 38.94963167,
+      "longitude": -78.19808424,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "ramps": 1,
+      "accessArea": "RIVERTON"
+    },
+    {
+      "objectId": 114,
+      "name": "Deer Rapids",
+      "waterbody": "N. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Shenandoah",
+      "latitude": 38.95457009,
+      "longitude": -78.37517285,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "ramps": 0,
+      "accessArea": "DEER RAPIDS"
+    },
+    {
+      "objectId": 115,
+      "name": "Berry's",
+      "waterbody": "S. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Clarke",
+      "latitude": 39.04163139,
+      "longitude": -77.99967069,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "ramps": 1,
+      "accessArea": "BERRY'S"
+    },
+    {
+      "objectId": 121,
+      "name": "Lake Curtis",
+      "waterbody": "Lake Curtis",
+      "waterbodyType": "lake",
+      "county": "Stafford",
+      "latitude": 38.43628527,
+      "longitude": -77.56126019,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "ramps": 1,
+      "accessArea": "LAKE CURTIS"
+    },
+    {
+      "objectId": 122,
+      "name": "Chapmans",
+      "waterbody": "N. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Shenandoah",
+      "latitude": 38.84543186,
+      "longitude": -78.52968681,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "ramps": 1,
+      "accessArea": "CHAPMAN'S"
+    },
+    {
+      "objectId": 140,
+      "name": "Front Royal",
+      "waterbody": "Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Warren",
+      "latitude": 38.91369746,
+      "longitude": -78.20974005,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "ramps": 0,
+      "accessArea": "FRONT ROYAL"
+    },
+    {
+      "objectId": 150,
+      "name": "Island Ford",
+      "waterbody": "S. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Rockingham",
+      "latitude": 38.35482684,
+      "longitude": -78.69564898,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "ramps": 0,
+      "accessArea": "ISLAND FORD"
+    },
+    {
+      "objectId": 167,
+      "name": "Lockes",
+      "waterbody": "Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Clarke",
+      "latitude": 39.1015686,
+      "longitude": -77.96483841,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "ramps": 1,
+      "accessArea": "LOCKES"
+    },
+    {
+      "objectId": 173,
+      "name": "Hunting Run",
+      "waterbody": "Rapidan River",
+      "waterbodyType": "river",
+      "county": "Spotsylvania",
+      "latitude": 38.35912392,
+      "longitude": -77.63532184,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "ramps": 0,
+      "accessArea": "HUNTING RUN"
+    },
+    {
+      "objectId": 174,
+      "name": "Catletts Ford Landing",
+      "waterbody": "N. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Warren",
+      "latitude": 38.97848221,
+      "longitude": -78.2587145,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "ramps": 0,
+      "accessArea": "CATLETTS FORD LANDING"
+    },
+    {
+      "objectId": 175,
+      "name": "City Docks",
+      "waterbody": "Rappahannock River",
+      "waterbodyType": "river",
+      "county": "Fredericksburg",
+      "latitude": 38.29652692,
+      "longitude": -77.45313419,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "ramps": 2,
+      "accessArea": "CITY DOCKS"
+    },
+    {
+      "objectId": 176,
+      "name": "Castleman's Ferry",
+      "waterbody": "Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Clarke",
+      "latitude": 39.12393317,
+      "longitude": -77.89104654,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "ramps": 1,
+      "accessArea": "CASTLEMAN'S FERRY"
+    },
+    {
+      "objectId": 177,
+      "name": "Alma",
+      "waterbody": "S. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Page",
+      "latitude": 38.5887879,
+      "longitude": -78.56577496,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "ramps": 0,
+      "accessArea": "ALMA"
+    },
+    {
+      "objectId": 179,
+      "name": "Kelly's Ford",
+      "waterbody": "Rappahannock River",
+      "waterbodyType": "river",
+      "county": "Culpeper",
+      "latitude": 38.47704352,
+      "longitude": -77.78068796,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "ramps": 0,
+      "accessArea": "KELLY'S FORD"
+    },
+    {
+      "objectId": 182,
+      "name": "Elys Ford",
+      "waterbody": "Rapidan River",
+      "waterbodyType": "river",
+      "county": "Spotsylvania",
+      "latitude": 38.35928979,
+      "longitude": -77.68546185,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "ramps": 0,
+      "accessArea": "ELYS FORD"
+    },
+    {
+      "objectId": 191,
+      "name": "Strasburg",
+      "waterbody": "N. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Shenandoah",
+      "latitude": 38.97317812,
+      "longitude": -78.35130256,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "ramps": 1,
+      "accessArea": "STRASBURG LANDING"
+    },
+    {
+      "objectId": 200,
+      "name": "Lake Brittle",
+      "waterbody": "Lake Brittle",
+      "waterbodyType": "lake",
+      "county": "Fauquier",
+      "latitude": 38.74782582,
+      "longitude": -77.69123882,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "ramps": 1,
+      "accessArea": "LAKE BRITTLE"
+    },
+    {
+      "objectId": 202,
+      "name": "Massanutten",
+      "waterbody": "S. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Page",
+      "latitude": 38.67240004,
+      "longitude": -78.52913478,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "ramps": 1,
+      "accessArea": "MASSANUTTEN"
+    },
+    {
+      "objectId": 216,
+      "name": "Shenandoah Riverside",
+      "waterbody": "S. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Page",
+      "latitude": 38.48035995,
+      "longitude": -78.62373099,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "ramps": 1,
+      "accessArea": "SHENANDOAH RIVERSIDE"
+    },
+    {
+      "objectId": 218,
+      "name": "White House",
+      "waterbody": "S. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Page",
+      "latitude": 38.64607743,
+      "longitude": -78.53448305,
+      "access": [
+        "shore",
+        "kayak",
+        "boat"
+      ],
+      "ramps": 1,
+      "accessArea": "WHITE HOUSE"
+    },
+    {
+      "objectId": 224,
+      "name": "Elkton",
+      "waterbody": "S. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Rockingham",
+      "latitude": 38.40947242,
+      "longitude": -78.63497496,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "ramps": 0,
+      "accessArea": "ELKTON"
+    },
+    {
+      "objectId": 234,
+      "name": "Inskeep",
+      "waterbody": "S. Fork Shenandoah River",
+      "waterbodyType": "river",
+      "county": "Page",
+      "latitude": 38.7015585,
+      "longitude": -78.49173634,
+      "access": [
+        "shore",
+        "kayak"
+      ],
+      "ramps": 0,
+      "accessArea": "INSKEEP"
+    }
+  ]
+}

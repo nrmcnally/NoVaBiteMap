@@ -575,6 +575,12 @@ export function ExploreDashboard() {
                         <div>
                           <h3>{location.name}</h3>
                           <p>{location.waterbody} · {location.county} County</p>
+                          {location.accessStatus === "listed" && (
+                            <span className="access-chip access-listed"><Info size={11} /> Public parkland · confirm access</span>
+                          )}
+                          {location.accessStatus === "unverified" && (
+                            <span className="access-chip access-unverified"><AlertTriangle size={11} /> Access unverified</span>
+                          )}
                           {speciesIds.length === 0 && matches[0] && (
                             <span className="best-fish-chip"><Fish size={12} /> Top target: {matches[0].fish.name}</span>
                           )}

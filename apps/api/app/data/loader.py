@@ -322,6 +322,7 @@ def _upsert_all(session: Session, payload: dict, profiles_payload: dict) -> tupl
         record.county = loc["county"]
         record.state = "VA"
         record.public_access = loc.get("publicAccess", True)
+        record.access_status = loc.get("accessStatus", "verified")
         record.access_methods = loc.get("access", [])
         record.distance_miles = loc.get("distanceMiles")
         record.travel_minutes = loc.get("travelMinutes")

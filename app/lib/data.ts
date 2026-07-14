@@ -2,9 +2,15 @@ import { coverageLocations } from "./coverage-data";
 import { advisoryForLocation, vdhAdvisoryIndexUrl, type ConsumptionAdvisory } from "./advisories";
 import { hydrologyForLocation, type HydrologyAssociation } from "./hydrology";
 import { aquaticGapEvidenceForLocation, troutLocations } from "./public-evidence";
+import { dwrAccessLocations, nhdParkWaterLocations } from "./expanded-coverage";
 
 export type AccessMethod = "shore" | "wade" | "kayak" | "boat";
 export type WaterbodyType = "river" | "reservoir" | "lake" | "pond" | "bay" | "stream";
+// How well public access is established:
+//  verified  = agency-confirmed public access point (DWR/park/NPS).
+//  listed    = named public water an agency lists, access point not pinpointed.
+//  unverified = named water surfaced for discovery; confirm public access before fishing.
+export type AccessStatus = "verified" | "listed" | "unverified";
 export type { AdvisoryStatus, ConsumptionAdvisory } from "./advisories";
 
 export type Species = {
@@ -53,6 +59,7 @@ export type FishingLocation = {
   accessAuthority: string;
   accessSourceUrl: string;
   sourceReviewed: string;
+  accessStatus?: AccessStatus;
   hydrology?: HydrologyAssociation;
   stocking?: {
     category: string;
@@ -506,7 +513,7 @@ const dwrLocations: Array<Omit<FishingLocationSeed, "accessAuthority" | "accessS
   ...rappahannockLocations,
 ];
 
-const sourcedLocations: FishingLocationSeed[] = [
+const curatedLocations: FishingLocationSeed[] = [
   ...dwrLocations.map((location) => ({
     ...location,
     accessAuthority: "Virginia Department of Wildlife Resources",
@@ -517,6 +524,22 @@ const sourcedLocations: FishingLocationSeed[] = [
   ...troutLocations,
 ];
 
+// Layer in region-wide public waters not already curated (deduped by proximity +
+// name): DWR boating-access sites (agency-verified) and named NHD waters on public
+// parkland (access "listed"). Private waters are never added.
+const toPoint = (location: FishingLocationSeed) => ({
+  id: location.id,
+  name: location.name,
+  lat: location.lat,
+  lng: location.lng,
+  waterbody: location.waterbody,
+});
+const curatedPoints = curatedLocations.map(toPoint);
+const dwrAdded = dwrAccessLocations(curatedPoints);
+const nhdAdded = nhdParkWaterLocations([...curatedPoints, ...dwrAdded.map(toPoint)]);
+
+const sourcedLocations: FishingLocationSeed[] = [...curatedLocations, ...dwrAdded, ...nhdAdded];
+
 export const locations: FishingLocation[] = sourcedLocations.map((location) => {
   const aquaticGapEvidence = aquaticGapEvidenceForLocation(location).filter(
     (candidate) => !location.evidence.some((existing) => existing.speciesId === candidate.speciesId),
@@ -524,6 +547,7 @@ export const locations: FishingLocation[] = sourcedLocations.map((location) => {
   const hydrology = hydrologyForLocation(location.id);
   return {
     ...location,
+    accessStatus: location.accessStatus ?? "verified",
     flowStatus: hydrology ? `USGS ${hydrology.stationId} linked · live reading on details` : location.flowStatus,
     evidence: [...location.evidence, ...aquaticGapEvidence],
     hydrology,
