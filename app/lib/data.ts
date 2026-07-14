@@ -1,6 +1,18 @@
 import { coverageLocations } from "./coverage-data";
 
 export type AccessMethod = "shore" | "wade" | "kayak" | "boat";
+export type WaterbodyType = "river" | "reservoir" | "lake" | "pond" | "bay" | "stream";
+export type AdvisoryStatus = "active" | "no-advisory-found" | "jurisdiction-check";
+
+export type ConsumptionAdvisory = {
+  status: AdvisoryStatus;
+  label: string;
+  summary: string;
+  contaminants: string[];
+  sourceName: string;
+  sourceUrl: string;
+  reviewed: string;
+};
 
 export type Species = {
   id: string;
@@ -30,7 +42,7 @@ export type FishingLocation = {
   id: string;
   name: string;
   waterbody: string;
-  waterbodyType: "river" | "reservoir" | "lake";
+  waterbodyType: WaterbodyType;
   county: string;
   lat: number;
   lng: number;
@@ -48,7 +60,10 @@ export type FishingLocation = {
   accessAuthority: string;
   accessSourceUrl: string;
   sourceReviewed: string;
+  consumptionAdvisory: ConsumptionAdvisory;
 };
+
+export type FishingLocationSeed = Omit<FishingLocation, "consumptionAdvisory">;
 
 export const sourceLinks = {
   access:
@@ -76,6 +91,7 @@ export const sourceLinks = {
   dcrLeesylvania: "https://www.dcr.virginia.gov/state-parks/leesylvania",
   dcrMasonNeck: "https://www.dcr.virginia.gov/state-parks/mason-neck",
   pwcFishing: "https://www.pwcva.gov/department/parks-recreation/fishing/",
+  vdhFishAdvisories: "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
 };
 
 export const species: Species[] = [
@@ -222,7 +238,7 @@ const lakeBrittleEvidence: SpeciesEvidence[] = [
 const accessOnlyNotice =
   "Public access is verified by Virginia DWR. Species evidence has not yet cleared the Phase 1 evidence gate.";
 
-const dwrLocations: Array<Omit<FishingLocation, "accessAuthority" | "accessSourceUrl" | "sourceReviewed">> = [
+const dwrLocations: Array<Omit<FishingLocationSeed, "accessAuthority" | "accessSourceUrl" | "sourceReviewed">> = [
   {
     id: "lake-burke",
     name: "Lake Burke",
@@ -380,7 +396,7 @@ const dwrLocations: Array<Omit<FishingLocation, "accessAuthority" | "accessSourc
   }),
 ];
 
-export const locations: FishingLocation[] = [
+const sourcedLocations: FishingLocationSeed[] = [
   ...dwrLocations.map((location) => ({
     ...location,
     accessAuthority: "Virginia Department of Wildlife Resources",
@@ -389,6 +405,75 @@ export const locations: FishingLocation[] = [
   })),
   ...coverageLocations,
 ];
+
+const occoquanAdvisoryIds = new Set([
+  "fountainhead",
+  "bull-run-marina",
+  "lake-ridge-marina",
+  "occoquan-regional",
+  "mason-neck",
+]);
+
+function consumptionAdvisoryFor(location: FishingLocationSeed): ConsumptionAdvisory {
+  const common = {
+    sourceName: "Virginia Department of Health",
+    sourceUrl: sourceLinks.vdhFishAdvisories,
+    reviewed: "2026-07-13",
+  };
+
+  if (location.waterbody.includes("Shenandoah")) {
+    return {
+      ...common,
+      status: "active",
+      label: "VDH consumption advisory",
+      summary: "VDH lists PCB and mercury meal limits across Shenandoah segments, including do-not-eat guidance for some species and reaches.",
+      contaminants: ["PCBs", "Mercury"],
+    };
+  }
+
+  if (occoquanAdvisoryIds.has(location.id)) {
+    return {
+      ...common,
+      status: "active",
+      label: "VDH PFOS advisory",
+      summary: "VDH advises no largemouth bass meals from specified Occoquan River and Reservoir reaches and limits bluegill in the wider watershed.",
+      contaminants: ["PFOS"],
+    };
+  }
+
+  if (location.id === "pohick-bay") {
+    return {
+      ...common,
+      status: "active",
+      label: "VDH PCB advisory",
+      summary: "VDH lists species-specific PCB restrictions for tidal Potomac tributaries and embayments that include Pohick Creek.",
+      contaminants: ["PCBs"],
+    };
+  }
+
+  if (location.waterbody === "Potomac River") {
+    return {
+      ...common,
+      status: "jurisdiction-check",
+      label: "Check exact jurisdiction",
+      summary: "Potomac harvest guidance can depend on the exact Virginia, Maryland, or DC bank and river segment. Check the applicable advisory before keeping fish.",
+      contaminants: [],
+    };
+  }
+
+  return {
+    ...common,
+    status: "no-advisory-found",
+    label: "No VDH advisory match found",
+    summary: "No matching location was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+    contaminants: [],
+  };
+}
+
+export const locations: FishingLocation[] = sourcedLocations.map((location) => ({
+  ...location,
+  consumptionAdvisory: consumptionAdvisoryFor(location),
+}));
 
 export const locationById = (id: string) => locations.find((location) => location.id === id);
 export const speciesById = (id: string) => species.find((item) => item.id === id);

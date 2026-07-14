@@ -28,9 +28,9 @@ import {
   X,
 } from "lucide-react";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import type { FormEvent } from "react";
+import type { FormEvent, ReactNode } from "react";
 import { FishingMap } from "./FishingMap";
-import { locations, species, speciesById, type AccessMethod } from "../lib/data";
+import { locations, species, speciesById, type AccessMethod, type WaterbodyType } from "../lib/data";
 import { opportunityFor } from "../lib/scoring";
 import { estimateTravel, googleDirectionsUrl, type TravelOrigin } from "../lib/travel";
 
@@ -45,6 +45,28 @@ type LiveCondition = {
 
 type FavoriteRecord = { id: number; locationId: string };
 type TimeFilter = "any" | "walkable" | "5" | "15" | "30" | "45" | "60" | "90" | "120" | "180";
+type HarvestFilter = "any" | "hide-active" | "keep-and-eat";
+
+type FilterMenuProps = {
+  label: string;
+  value: string;
+  icon: ReactNode;
+  children: ReactNode;
+  className?: string;
+  highlighted?: boolean;
+};
+
+function FilterMenu({ label, value, icon, children, className = "", highlighted = false }: FilterMenuProps) {
+  return (
+    <div className={`filter-menu-wrap ${className} ${highlighted ? "selected" : ""}`}>
+      <span>{label}</span>
+      <details className="filter-menu">
+        <summary><span className="filter-summary-icon">{icon}</span><strong>{value}</strong><ChevronDown size={15} /></summary>
+        <div className="filter-popover">{children}</div>
+      </details>
+    </div>
+  );
+}
 
 const accessLabels: Record<AccessMethod, string> = {
   shore: "Shore",
@@ -66,11 +88,28 @@ const timeOptions: { value: TimeFilter; label: string }[] = [
   { value: "180", label: "3 hour drive" },
 ];
 
+const waterTypeOptions: { value: WaterbodyType; label: string }[] = [
+  { value: "river", label: "River" },
+  { value: "reservoir", label: "Reservoir" },
+  { value: "lake", label: "Lake" },
+  { value: "pond", label: "Pond" },
+  { value: "bay", label: "Bay / embayment" },
+  { value: "stream", label: "Stream" },
+];
+
+const harvestOptions: { value: HarvestFilter; label: string; detail: string }[] = [
+  { value: "any", label: "Show every water", detail: "Advisories remain visible on result cards." },
+  { value: "hide-active", label: "Hide mapped advisories", detail: "Keeps Potomac sites that still need a jurisdiction check." },
+  { value: "keep-and-eat", label: "Keep-and-eat mode", detail: "Only shows waters with no VDH advisory match found in this review." },
+];
+
 export function ExploreDashboard() {
-  const [speciesId, setSpeciesId] = useState("");
+  const [speciesIds, setSpeciesIds] = useState<string[]>([]);
   const [query, setQuery] = useState("");
   const [access, setAccess] = useState<AccessMethod | "any">("any");
   const [timeFilter, setTimeFilter] = useState<TimeFilter>("any");
+  const [waterbodyTypes, setWaterbodyTypes] = useState<WaterbodyType[]>([]);
+  const [harvestFilter, setHarvestFilter] = useState<HarvestFilter>("any");
   const [selectedId, setSelectedId] = useState<string>();
   const [resultsOpen, setResultsOpen] = useState(false);
   const [favoriteIds, setFavoriteIds] = useState<Map<string, number>>(new Map());
@@ -87,6 +126,9 @@ export function ExploreDashboard() {
       .map((location) => ({ location, travel: estimateTravel(location, origin) }))
       .filter(({ location, travel }) => {
         if (access !== "any" && !location.access.includes(access)) return false;
+        if (waterbodyTypes.length > 0 && !waterbodyTypes.includes(location.waterbodyType)) return false;
+        if (harvestFilter === "hide-active" && location.consumptionAdvisory.status === "active") return false;
+        if (harvestFilter === "keep-and-eat" && location.consumptionAdvisory.status !== "no-advisory-found") return false;
         if (timeFilter === "walkable" && (!origin || travel.walkMinutes > 30)) return false;
         if (timeFilter !== "any" && timeFilter !== "walkable" && travel.driveMinutes > Number(timeFilter)) return false;
         if (!normalized) return true;
@@ -95,33 +137,63 @@ export function ExploreDashboard() {
           location.waterbody,
           location.county,
           ...location.aliases,
-          speciesId ? speciesById(speciesId)?.name ?? "" : "",
+          ...speciesIds.map((speciesId) => speciesById(speciesId)?.name ?? ""),
         ].join(" ").toLowerCase();
         return haystack.includes(normalized);
       });
-  }, [access, origin, query, speciesId, timeFilter]);
+  }, [access, harvestFilter, origin, query, speciesIds, timeFilter, waterbodyTypes]);
 
   const ranked = useMemo(() => {
-    if (!speciesId) return [];
+    if (speciesIds.length === 0) return [];
     return visibleRows
-      .map(({ location, travel }) => ({ location, travel, opportunity: opportunityFor(location, speciesId) }))
+      .map(({ location, travel }) => {
+        const matches = speciesIds.flatMap((speciesId) => {
+          const opportunity = opportunityFor(location, speciesId);
+          const fish = speciesById(speciesId);
+          return opportunity && fish ? [{ fish, opportunity }] : [];
+        }).sort((a, b) => b.opportunity.score - a.opportunity.score);
+        return { location, travel, opportunity: matches[0]?.opportunity ?? null, matches };
+      })
       .filter((row) => Boolean(row.opportunity))
-      .sort((a, b) => b.opportunity!.score - a.opportunity!.score);
-  }, [speciesId, visibleRows]);
+      .sort((a, b) => (b.opportunity!.score - a.opportunity!.score) || (b.matches.length - a.matches.length));
+  }, [speciesIds, visibleRows]);
 
   useEffect(() => {
-    if (!speciesId) return;
+    if (speciesIds.length === 0) return;
     const selectedIsVisible = visibleRows.some(({ location }) => location.id === selectedId);
     if (ranked.length && (!selectedId || !selectedIsVisible)) {
       setSelectedId(ranked[0].location.id);
     }
-  }, [ranked, selectedId, speciesId, visibleRows]);
+  }, [ranked, selectedId, speciesIds, visibleRows]);
 
   const selected = selectedId ? ranked.find(({ location }) => location.id === selectedId) : ranked[0];
   const selectedLocation = selected?.location;
   const selectedOpportunity = selected?.opportunity ?? null;
-  const selectedSpecies = speciesId ? speciesById(speciesId) : undefined;
+  const selectedSpecies = speciesIds.map((id) => speciesById(id)).filter((item): item is NonNullable<typeof item> => Boolean(item));
   const mapLocations = useMemo(() => visibleRows.map(({ location }) => location), [visibleRows]);
+
+  const speciesHealth = useMemo(() => new Map(species.map((fish) => {
+    const bestScore = Math.max(0, ...visibleRows.map(({ location }) => opportunityFor(location, fish.id)?.score ?? 0));
+    return [fish.id, bestScore] as const;
+  })), [visibleRows]);
+
+  const waterTypeCounts = useMemo(() => new Map(waterTypeOptions.map((option) => [
+    option.value,
+    locations.filter((location) => location.waterbodyType === option.value).length,
+  ])), []);
+
+  const selectedSpeciesLabel = selectedSpecies.length === 0
+    ? "Choose fish species"
+    : selectedSpecies.length === 1
+      ? selectedSpecies[0].name
+      : `${selectedSpecies.length} species selected`;
+  const travelLabel = timeOptions.find((option) => option.value === timeFilter)?.label ?? "Any travel time";
+  const waterLabel = waterbodyTypes.length === 0
+    ? "Any water type"
+    : waterbodyTypes.length === 1
+      ? waterTypeOptions.find((option) => option.value === waterbodyTypes[0])?.label ?? "1 type"
+      : `${waterbodyTypes.length} water types`;
+  const harvestLabel = harvestOptions.find((option) => option.value === harvestFilter)?.label ?? "Show every water";
 
   const loadFavorites = useCallback(async () => {
     try {
@@ -170,7 +242,7 @@ export function ExploreDashboard() {
         : await fetch("/api/favorites", {
             method: "POST",
             headers: { "content-type": "application/json" },
-            body: JSON.stringify({ locationId: id, preferredSpecies: speciesId || undefined }),
+            body: JSON.stringify({ locationId: id, preferredSpecies: speciesIds[0] || undefined }),
           });
 
       if (!response.ok) {
@@ -251,25 +323,30 @@ export function ExploreDashboard() {
     if (timeFilter === "walkable") setTimeFilter("any");
   }
 
-  function chooseSpecies(value: string) {
-    setSpeciesId(value);
+  function toggleSpecies(value: string) {
+    setSpeciesIds((current) => current.includes(value) ? current.filter((id) => id !== value) : [...current, value]);
     setSelectedId(undefined);
-    if (value) setResultsOpen(true);
+    setResultsOpen(true);
+  }
+
+  function toggleWaterType(value: WaterbodyType) {
+    setWaterbodyTypes((current) => current.includes(value) ? current.filter((type) => type !== value) : [...current, value]);
+    setSelectedId(undefined);
   }
 
   const selectMapLocation = useCallback((id: string) => {
     setSelectedId(id);
     const location = locations.find((item) => item.id === id);
-    if (!speciesId) {
+    if (speciesIds.length === 0) {
       setToast(`${location?.name ?? "This spot"} is verified access. Choose a species to see a ranking.`);
       return;
     }
-    if (location && opportunityFor(location, speciesId)) {
+    if (location && speciesIds.some((speciesId) => opportunityFor(location, speciesId))) {
       setResultsOpen(true);
     } else {
       setToast(`${location?.name ?? "This spot"} has no qualifying evidence for the selected species yet.`);
     }
-  }, [speciesId]);
+  }, [speciesIds]);
 
   return (
     <main className="explore-shell">
@@ -301,30 +378,74 @@ export function ExploreDashboard() {
           </datalist>
 
           <div className="filter-row">
-            <label className={`filter-field species-filter ${speciesId ? "selected" : "needs-choice"}`}>
-              <span>Target species</span>
-              <div><Fish size={17} />
-                <select value={speciesId} onChange={(event) => chooseSpecies(event.target.value)} aria-label="Target species">
-                  <option value="">Choose a fish species</option>
-                  {species.map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}
-                </select>
-                <ChevronDown size={15} />
+            <FilterMenu label="Target species" value={selectedSpeciesLabel} icon={<Fish size={17} />} className="species-filter-menu" highlighted={speciesIds.length > 0}>
+              <div className="filter-popover-heading">
+                <div><strong>Choose one or more</strong><span>Colors show the best evidence-backed score in your current map.</span></div>
+                {speciesIds.length > 0 && <button type="button" onClick={() => { setSpeciesIds([]); setSelectedId(undefined); }}>Clear</button>}
               </div>
-            </label>
+              <div className="species-option-list">
+                {species.map((item) => {
+                  const score = speciesHealth.get(item.id) ?? 0;
+                  const tier = score >= 70 ? "strong" : score >= 55 ? "fair" : score > 0 ? "limited" : "pending";
+                  const selected = speciesIds.includes(item.id);
+                  return (
+                    <button type="button" className={`filter-option species-option ${selected ? "active" : ""}`} key={item.id} onClick={() => toggleSpecies(item.id)} aria-pressed={selected}>
+                      <span className="option-check">{selected && <Check size={13} />}</span>
+                      <span className="species-option-copy"><strong>{item.name}</strong><small>{item.habitat}</small></span>
+                      <em className={`species-signal signal-${tier}`}>{score ? `${score} ${tier}` : "Evidence pending"}</em>
+                    </button>
+                  );
+                })}
+              </div>
+              <p className="menu-footnote">With multiple targets, results use the strongest individual species score and show every supported match. Scores are never averaged.</p>
+            </FilterMenu>
 
-            <label className="filter-field">
-              <span>Travel range</span>
-              <div><Clock3 size={17} />
-                <select value={timeFilter} onChange={(event) => setTimeFilter(event.target.value as TimeFilter)} aria-label="Maximum travel time">
-                  {timeOptions.map((option) => (
-                    <option key={option.value} value={option.value} disabled={option.value === "walkable" && !origin}>
-                      {option.label}{option.value === "walkable" && !origin ? " - set an origin" : ""}
-                    </option>
-                  ))}
-                </select>
-                <ChevronDown size={15} />
+            <FilterMenu label="Travel range" value={travelLabel} icon={<Clock3 size={17} />} highlighted={timeFilter !== "any"}>
+              <div className="compact-option-list">
+                {timeOptions.map((option) => (
+                  <button type="button" className={`filter-option compact-option ${timeFilter === option.value ? "active" : ""}`} key={option.value} disabled={option.value === "walkable" && !origin} onClick={(event) => {
+                    setTimeFilter(option.value);
+                    event.currentTarget.closest("details")?.removeAttribute("open");
+                  }}>
+                    <span className="option-check">{timeFilter === option.value && <Check size={13} />}</span>
+                    <strong>{option.label}</strong>
+                    {option.value === "walkable" && !origin && <small>Set a starting point first</small>}
+                  </button>
+                ))}
               </div>
-            </label>
+            </FilterMenu>
+
+            <FilterMenu label="Water type" value={waterLabel} icon={<Waves size={17} />} highlighted={waterbodyTypes.length > 0}>
+              <div className="compact-option-list">
+                {waterTypeOptions.map((option) => {
+                  const count = waterTypeCounts.get(option.value) ?? 0;
+                  const selected = waterbodyTypes.includes(option.value);
+                  return (
+                    <button type="button" className={`filter-option compact-option ${selected ? "active" : ""}`} key={option.value} disabled={count === 0} onClick={() => toggleWaterType(option.value)} aria-pressed={selected}>
+                      <span className="option-check">{selected && <Check size={13} />}</span>
+                      <strong>{option.label}</strong><small>{count || "Coverage coming"}</small>
+                    </button>
+                  );
+                })}
+              </div>
+              {waterbodyTypes.length > 0 && <button type="button" className="menu-clear" onClick={() => setWaterbodyTypes([])}>Show all water types</button>}
+            </FilterMenu>
+
+            <FilterMenu label="Harvest guidance" value={harvestLabel} icon={<ShieldCheck size={17} />} className="harvest-filter-menu" highlighted={harvestFilter !== "any"}>
+              <div className="harvest-option-list">
+                {harvestOptions.map((option) => (
+                  <button type="button" className={`filter-option harvest-option ${harvestFilter === option.value ? "active" : ""}`} key={option.value} onClick={(event) => {
+                    setHarvestFilter(option.value);
+                    event.currentTarget.closest("details")?.removeAttribute("open");
+                  }}>
+                    <span className="option-check">{harvestFilter === option.value && <Check size={13} />}</span>
+                    <span><strong>{option.label}</strong><small>{option.detail}</small></span>
+                  </button>
+                ))}
+              </div>
+              <p className="advisory-disclaimer"><AlertTriangle size={14} /> No listed advisory is not proof that fish are safe. Always check current species- and segment-specific guidance.</p>
+              <a className="official-advisory-link" href="https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/" target="_blank" rel="noreferrer">Open current Virginia advisories <ArrowRight size={13} /></a>
+            </FilterMenu>
 
             <div className="access-filter" role="group" aria-label="Access method filter">
               <span>Access</span>
@@ -356,21 +477,21 @@ export function ExploreDashboard() {
           <div className="map-toolbar">
             <div>
               <span className="map-kicker">Northern Virginia</span>
-              <strong>{visibleRows.length} verified access points{speciesId ? ` · ${ranked.length} ranked` : ""}</strong>
+              <strong>{visibleRows.length} verified access points{speciesIds.length > 0 ? ` · ${ranked.length} ranked` : ""}</strong>
             </div>
             <button className="results-toggle" onClick={() => setResultsOpen((open) => !open)} aria-expanded={resultsOpen}>
-              <ListFilter size={17} /> {resultsOpen ? "Hide results" : speciesId ? `Show ${ranked.length} ranked results` : "Open results"}
+              <ListFilter size={17} /> {resultsOpen ? "Hide results" : speciesIds.length > 0 ? `Show ${ranked.length} ranked results` : "Open results"}
             </button>
           </div>
           <FishingMap
             locations={mapLocations}
-            speciesId={speciesId}
+            speciesIds={speciesIds}
             selectedId={selectedId}
             origin={origin}
             onSelect={selectMapLocation}
           />
           <div className="map-legend">
-            {!speciesId ? (
+            {speciesIds.length === 0 ? (
               <span><i className="marker-access" /> Verified public access</span>
             ) : (
               <>
@@ -387,20 +508,20 @@ export function ExploreDashboard() {
         <aside className={`results-panel ${resultsOpen ? "open" : ""}`} aria-hidden={!resultsOpen}>
           <div className="results-heading">
             <div>
-              <span className="eyebrow">{selectedSpecies ? `Ranked for ${selectedSpecies.short}` : "Opportunity results"}</span>
-              <h2>{selectedSpecies ? selectedSpecies.name : "Choose a target species"}</h2>
+              <span className="eyebrow">{selectedSpecies.length === 1 ? `Ranked for ${selectedSpecies[0].short}` : selectedSpecies.length > 1 ? "Best supported selected target" : "Opportunity results"}</span>
+              <h2>{selectedSpecies.length === 1 ? selectedSpecies[0].name : selectedSpecies.length > 1 ? `${selectedSpecies.length} selected species` : "Choose a target species"}</h2>
             </div>
             <button className="close-results" onClick={() => setResultsOpen(false)} aria-label="Collapse results"><PanelRightClose size={20} /></button>
           </div>
 
-          {selectedSpecies && (
+          {selectedSpecies.length > 0 && (
             <div className="ranking-note">
-              <Info size={15} /> Rankings use official species evidence plus a seasonal activity estimate.
+              <Info size={15} /> {selectedSpecies.length > 1 ? "Each spot is ranked by its strongest selected species; matching scores stay separate." : "Rankings use official species evidence plus a seasonal activity estimate."}
               <Link href="/methodology">What this means</Link>
             </div>
           )}
 
-          {!selectedSpecies ? (
+          {selectedSpecies.length === 0 ? (
             <div className="empty-state choose-species-state">
               <Fish size={34} />
               <h3>No species selected</h3>
@@ -411,11 +532,11 @@ export function ExploreDashboard() {
               <Fish size={34} />
               <h3>No evidence-qualified matches</h3>
               <p>Try a wider travel range, another access method, or a different species. BiteMap will not fill gaps with invented species claims.</p>
-              <button onClick={() => { setQuery(""); setAccess("any"); setTimeFilter("any"); }}>Clear filters</button>
+              <button onClick={() => { setQuery(""); setAccess("any"); setTimeFilter("any"); setWaterbodyTypes([]); setHarvestFilter("any"); }}>Clear filters</button>
             </div>
           ) : (
             <div className="results-list">
-              {ranked.map(({ location, opportunity, travel }, index) => {
+              {ranked.map(({ location, opportunity, travel, matches }, index) => {
                 if (!opportunity) return null;
                 const isSelected = location.id === selectedLocation?.id;
                 const isSaved = favoriteIds.has(location.id);
@@ -438,7 +559,14 @@ export function ExploreDashboard() {
                         {walkable && <span><Footprints size={14} /> ~{travel.walkMinutes} min walk</span>}
                         <span><Clock3 size={14} /> {location.bestWindow}</span>
                         <span className={`confidence confidence-${opportunity.confidenceLabel.toLowerCase()}`}>{opportunity.confidenceLabel} confidence</span>
+                        <span className={`advisory-badge advisory-${location.consumptionAdvisory.status}`}>
+                          {location.consumptionAdvisory.status === "active" ? <AlertTriangle size={13} /> : location.consumptionAdvisory.status === "jurisdiction-check" ? <Info size={13} /> : <ShieldCheck size={13} />}
+                          {location.consumptionAdvisory.label}
+                        </span>
                       </div>
+                      {matches.length > 1 && <div className="species-match-row" aria-label="Matching selected species">
+                        {matches.map((match) => <span key={match.fish.id}>{match.fish.short} <strong>{match.opportunity.score}</strong></span>)}
+                      </div>}
                       <p className="why-line"><strong>Why it ranks:</strong> {opportunity.evidence.evidenceSummary}</p>
                       <div className="result-actions">
                         <a href={googleDirectionsUrl(location, origin)} target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()}><Navigation size={14} /> Google Maps directions</a>

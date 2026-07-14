@@ -7,13 +7,13 @@ import type { TravelOrigin } from "../lib/travel";
 
 type FishingMapProps = {
   locations: FishingLocation[];
-  speciesId: string;
+  speciesIds: string[];
   selectedId?: string;
   origin?: TravelOrigin | null;
   onSelect: (id: string) => void;
 };
 
-export function FishingMap({ locations, speciesId, selectedId, origin, onSelect }: FishingMapProps) {
+export function FishingMap({ locations, speciesIds, selectedId, origin, onSelect }: FishingMapProps) {
   const mapElement = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -42,11 +42,15 @@ export function FishingMap({ locations, speciesId, selectedId, origin, onSelect 
 
       const bounds: [number, number][] = [];
       locations.forEach((location) => {
-        const opportunity = speciesId ? opportunityFor(location, speciesId) : null;
+        const opportunities = speciesIds
+          .map((speciesId) => opportunityFor(location, speciesId))
+          .filter((item): item is NonNullable<typeof item> => Boolean(item))
+          .sort((a, b) => b.score - a.score);
+        const opportunity = opportunities[0] ?? null;
         const score = opportunity?.score ?? 0;
         const selected = location.id === selectedId;
         const hasSpeciesEvidence = Boolean(opportunity);
-        const color = !speciesId
+        const color = speciesIds.length === 0
           ? "#267a82"
           : !hasSpeciesEvidence
             ? "#8b9893"
@@ -60,10 +64,10 @@ export function FishingMap({ locations, speciesId, selectedId, origin, onSelect 
           color: selected ? "#fff8e8" : "#173b3f",
           weight: selected ? 4 : 2,
           fillColor: color,
-          fillOpacity: hasSpeciesEvidence || !speciesId ? 1 : 0.72,
+          fillOpacity: hasSpeciesEvidence || speciesIds.length === 0 ? 1 : 0.72,
         }).addTo(map!);
         marker.bindTooltip(
-          `<div class="map-tooltip"><strong>${location.name}</strong><span>${!speciesId ? "Verified public access" : score ? `${score}/100 opportunity` : "Species evidence pending"}</span></div>`,
+          `<div class="map-tooltip"><strong>${location.name}</strong><span>${speciesIds.length === 0 ? "Verified public access" : score ? `${score}/100 best selected target${opportunities.length > 1 ? ` · ${opportunities.length} matches` : ""}` : "Selected-species evidence pending"}</span></div>`,
           { direction: "top", offset: [0, -8], opacity: 1 },
         );
         marker.on("click", () => onSelect(location.id));
@@ -94,7 +98,7 @@ export function FishingMap({ locations, speciesId, selectedId, origin, onSelect 
       map?.stop();
       map?.remove();
     };
-  }, [locations, onSelect, origin, selectedId, speciesId]);
+  }, [locations, onSelect, origin, selectedId, speciesIds]);
 
   return <div className="leaflet-shell" ref={mapElement} aria-label="Interactive map of fishing opportunities" />;
 }

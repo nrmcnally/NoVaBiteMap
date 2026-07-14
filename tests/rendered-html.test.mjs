@@ -12,9 +12,12 @@ test("build contains the BiteMap opportunity board product contract", async () =
   await access(new URL("../dist/server/index.js", import.meta.url));
   assert.match(page, /ExploreDashboard/);
   assert.match(dashboard, /Find your next/);
-  assert.match(dashboard, /useState\(""\)/);
+  assert.match(dashboard, /useState<string\[\]>\(\[\]\)/);
   assert.match(dashboard, /useState\(false\)/);
-  assert.match(dashboard, /Choose a fish species/);
+  assert.match(dashboard, /Choose fish species/);
+  assert.match(dashboard, /Keep-and-eat mode/);
+  assert.match(dashboard, /scores are never averaged/i);
+  assert.match(dashboard, /Water type/);
   assert.match(dashboard, /Starting address or ZIP/);
   assert.match(dashboard, /Google Maps directions/);
   assert.match(data, /Smallmouth bass/);
@@ -37,11 +40,13 @@ test("favorites refresh live and data health is removed from public navigation",
   assert.match(adminHealth, /requireChatGPTUser/);
 });
 
-test("methodology explains the score without calling it a probability", async () => {
+test("methodology explains the score without exposing provider health", async () => {
   const methodology = await readFile(new URL("../app/methodology/page.tsx", import.meta.url), "utf8");
   assert.match(methodology, /A useful forecast should show its work/);
   assert.match(methodology, /not a catch probability/i);
   assert.match(methodology, /No evidence = no ranking/);
+  assert.match(methodology, /strongest supported target/);
+  assert.doesNotMatch(methodology, /Inspect provider health|data-health/);
 });
 
 test("source code preserves the species gate, provenance, and missing-data language", async () => {
@@ -54,6 +59,8 @@ test("source code preserves the species gate, provenance, and missing-data langu
   assert.match(scoring, /Math\.pow\(evidence\.availability, 1\.5\)/);
   assert.match(conditions, /did not create a fallback observation/);
   assert.match(data, /Public access is verified by Virginia DWR/);
+  assert.match(data, /VDH PFOS advisory/);
+  assert.match(data, /not a guarantee that fish are safe to eat/i);
   assert.match(coverage, /Lake Fairfax Park/);
   assert.match(coverage, /Gravelly Point/);
   assert.match(coverage, /accessAuthority/);

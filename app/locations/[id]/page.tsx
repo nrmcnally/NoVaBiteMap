@@ -151,6 +151,22 @@ export default async function LocationPage({ params }: LocationPageProps) {
               <p>{location.notice}</p>
               <p>Do not wade rising water. Check severe weather, closures, and posted property boundaries.</p>
             </section>
+            <section className={`consumption-panel consumption-${location.consumptionAdvisory.status}`}>
+              <div className="consumption-heading">
+                {location.consumptionAdvisory.status === "active" ? <AlertTriangle size={20} /> : location.consumptionAdvisory.status === "jurisdiction-check" ? <Info size={20} /> : <CheckCircle2 size={20} />}
+                <div><span className="eyebrow">Fish consumption guidance</span><h2>{location.consumptionAdvisory.label}</h2></div>
+              </div>
+              <p>{location.consumptionAdvisory.summary}</p>
+              {location.consumptionAdvisory.contaminants.length > 0 && (
+                <div className="contaminant-list">
+                  {location.consumptionAdvisory.contaminants.map((contaminant) => <span key={contaminant}>{contaminant}</span>)}
+                </div>
+              )}
+              <a href={location.consumptionAdvisory.sourceUrl} target="_blank" rel="noreferrer">
+                Check the current VDH species and segment table <ExternalLink size={14} />
+              </a>
+              <small>Reviewed {location.consumptionAdvisory.reviewed}. Advisories are species- and segment-specific. No mapped match is not a safety guarantee.</small>
+            </section>
             <section>
               <span className="eyebrow">Source trail</span>
               <h2>Why you can trust it</h2>

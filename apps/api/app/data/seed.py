@@ -5,6 +5,7 @@ from .coverage_seed import COVERAGE_LOCATIONS
 ACCESS_SOURCE = "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0"
 SHENANDOAH_SOURCE = "https://dwr.virginia.gov/blog/five-great-places-in-the-northern-shenandoah-valley-to-fish-after-work/"
 WALLEYE_SOURCE = "https://dwr.virginia.gov/wp-content/uploads/media/Walleye-Fishing-Forecast-2026.pdf"
+VDH_ADVISORY_SOURCE = "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/"
 
 SPECIES = [
     {"id": "smallmouth-bass", "common_name": "Smallmouth bass", "scientific_name": "Micropterus dolomieu", "code": "SMB", "aliases": ["smallie", "smallmouth"]},
@@ -112,3 +113,66 @@ LOCATIONS = [
     location("riverton", "Riverton", "North Fork Shenandoah River", "Warren", 38.949632, -78.198084, 58, ["shore", "kayak", "boat"], river_evidence(), activity_estimate=0.74),
     location("simpsons", "Simpson's", "South Fork Shenandoah River", "Warren", 38.878751, -78.261977, 64, ["shore", "wade", "kayak", "boat"], river_evidence(), activity_estimate=0.77),
 ] + COVERAGE_LOCATIONS
+
+
+OCCOQUAN_ADVISORY_IDS = {
+    "fountainhead",
+    "bull-run-marina",
+    "lake-ridge-marina",
+    "occoquan-regional",
+    "mason-neck",
+}
+
+
+def consumption_advisory(location_record: dict) -> dict:
+    common = {
+        "source_name": "Virginia Department of Health",
+        "source_url": VDH_ADVISORY_SOURCE,
+        "reviewed": "2026-07-13",
+    }
+    waterbody = location_record["waterbody"]
+    location_id = location_record["id"]
+
+    if "Shenandoah" in waterbody:
+        return {
+            **common,
+            "status": "active",
+            "label": "VDH consumption advisory",
+            "summary": "VDH lists PCB and mercury meal limits across Shenandoah segments, including do-not-eat guidance for some species and reaches.",
+            "contaminants": ["PCBs", "Mercury"],
+        }
+    if location_id in OCCOQUAN_ADVISORY_IDS:
+        return {
+            **common,
+            "status": "active",
+            "label": "VDH PFOS advisory",
+            "summary": "VDH advises no largemouth bass meals from specified Occoquan River and Reservoir reaches and limits bluegill in the wider watershed.",
+            "contaminants": ["PFOS"],
+        }
+    if location_id == "pohick-bay":
+        return {
+            **common,
+            "status": "active",
+            "label": "VDH PCB advisory",
+            "summary": "VDH lists species-specific PCB restrictions for tidal Potomac tributaries and embayments that include Pohick Creek.",
+            "contaminants": ["PCBs"],
+        }
+    if waterbody == "Potomac River":
+        return {
+            **common,
+            "status": "jurisdiction-check",
+            "label": "Check exact jurisdiction",
+            "summary": "Potomac harvest guidance can depend on the exact Virginia, Maryland, or DC bank and river segment. Check the applicable advisory before keeping fish.",
+            "contaminants": [],
+        }
+    return {
+        **common,
+        "status": "no-advisory-found",
+        "label": "No VDH advisory match found",
+        "summary": "No matching location was found in the current VDH table during this review. That is not a guarantee that fish are safe to eat.",
+        "contaminants": [],
+    }
+
+
+for location_record in LOCATIONS:
+    location_record["consumption_advisory"] = consumption_advisory(location_record)

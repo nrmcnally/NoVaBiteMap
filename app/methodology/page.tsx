@@ -1,7 +1,6 @@
 "use client";
 
-import Link from "next/link";
-import { ArrowRight, CheckCircle2, Database, Fish, Gauge, Info, ShieldCheck, Waves } from "lucide-react";
+import { CheckCircle2, Database, Fish, Gauge, Info, ShieldCheck, Waves } from "lucide-react";
 import { TopNav } from "../components/TopNav";
 
 export default function MethodologyPage() {
@@ -49,8 +48,13 @@ export default function MethodologyPage() {
             <h2>Some conditions cap the score.</h2>
             <p>Rapidly rising rivers, heavy forecast rain, severe weather, closed access, or unsafe wading can cap or suppress an opportunity regardless of the biological score.</p>
             <p>Always verify current regulations, access hours, property boundaries, and hazards with the official authority.</p>
-            <Link href="/data-health">Inspect provider health <ArrowRight size={16} /></Link>
           </div>
+        </section>
+
+        <section className="limits-panel">
+          <span className="eyebrow">Multiple target species</span>
+          <h2>Scores stay species-specific.</h2>
+          <p>When several species are selected, BiteMap ranks each location by its strongest supported target. It never averages unlike species into one score, and every result keeps the matching species scores visible.</p>
         </section>
 
         <section className="limits-panel">

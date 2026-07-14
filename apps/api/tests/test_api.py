@@ -45,8 +45,11 @@ class ApiTests(unittest.TestCase):
         locations = response.json()
         self.assertEqual(len(locations), 50)
         self.assertTrue(all(item.get("source") and item.get("source_name") for item in locations))
+        self.assertTrue(all(item.get("consumption_advisory", {}).get("source_url") for item in locations))
         ids = {item["id"] for item in locations}
         self.assertTrue({"lake-fairfax", "gravelly-point", "beaverdam-reservoir"}.issubset(ids))
+        fountainhead = next(item for item in locations if item["id"] == "fountainhead")
+        self.assertEqual(fountainhead["consumption_advisory"]["status"], "active")
 
     def test_location_alias_search(self):
         response = self.client.get("/api/locations/search", params={"q": "Burke Lake Park"})
