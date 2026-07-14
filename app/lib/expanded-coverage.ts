@@ -1,6 +1,8 @@
 import dwrAccessPayload from "./generated/dwr-access-nova.json";
 import nhdWatersPayload from "./generated/nhd-waters-nova.json";
-import type { AccessMethod, FishingLocationSeed, WaterbodyType } from "./data";
+import nhdStreamsPayload from "./generated/nhd-streams-nova.json";
+import waterbodySpeciesPayload from "./generated/waterbody-species-nova.json";
+import type { AccessMethod, FishingLocationSeed, SpeciesEvidence, WaterbodyType } from "./data";
 
 type DwrAccessSite = {
   objectId: number;
@@ -179,9 +181,143 @@ function isDuplicateWater(water: NhdWater, existing: ExistingPoint[]): boolean {
   });
 }
 
+// ---------------------------------------------------------------------------
+// Named public-park streams (NHD flowlines × parks)
+// ---------------------------------------------------------------------------
+type NhdStream = { name: string; lat: number; lng: number; county: string; park: string };
+const nhdStreams = nhdStreamsPayload.streams as NhdStream[];
+const streamMeta = nhdStreamsPayload.meta;
+
+export function nhdStreamLocations(existing: ExistingPoint[]): FishingLocationSeed[] {
+  const seen = new Set(existing.map((point) => slug(point.name)));
+  const results: FishingLocationSeed[] = [];
+  for (const stream of nhdStreams) {
+    const nameSlug = slug(stream.name);
+    if (seen.has(nameSlug)) continue;
+    const near = existing.some((point) => {
+      const distance = milesBetween(stream.lat, stream.lng, point.lat, point.lng);
+      return distance <= 0.3 || (distance <= 1.5 && wordKey(point.waterbody) === wordKey(stream.name));
+    });
+    if (near) continue;
+    seen.add(nameSlug);
+    const travel = defaultTravel(stream.lat, stream.lng);
+    results.push({
+      id: `nhd-stream-${nameSlug}`,
+      name: stream.name,
+      waterbody: stream.name,
+      waterbodyType: "stream",
+      county: stream.county,
+      lat: stream.lat,
+      lng: stream.lng,
+      ...travel,
+      publicAccess: true,
+      access: ["shore", "wade"],
+      aliases: [stream.name],
+      notice: `${stream.name} crosses ${stream.park}. BiteMap has not pinpointed a designated fishing access point or confirmed fishing rules — verify park regulations, posted access, and parking before you go.`,
+      flowStatus: "Representative gage not yet verified",
+      activityEstimate: 0.5,
+      accessFit: 0.66,
+      bestWindow: "Unavailable",
+      evidence: [],
+      accessAuthority: stream.park,
+      accessSourceUrl: streamMeta.nhdUrl,
+      sourceReviewed: streamMeta.retrieved,
+      accessStatus: "listed",
+    });
+  }
+  return results;
+}
+
+// ---------------------------------------------------------------------------
+// Waterbody-level species evidence (DWR/agency documentation)
+// ---------------------------------------------------------------------------
+type WaterbodyRecord = {
+  speciesId: string;
+  availability: number;
+  quality: number | null;
+  evidenceConfidence: number;
+  summary: string;
+  strengthNote: string | null;
+  sourceUrl: string;
+};
+const wbPayload = waterbodySpeciesPayload as {
+  meta: { retrieved: string };
+  byKey?: Record<string, WaterbodyRecord[]>;
+  byWaterbody?: Record<string, WaterbodyRecord[]>;
+  waters?: Record<string, WaterbodyRecord[]>;
+};
+// byKey holds assemblages that need custom matching (Potomac tidal split, etc.);
+// byWaterbody holds per-named-water DWR communities matched by waterbody name.
+const waterbodyByKey = wbPayload.byKey ?? wbPayload.waters ?? {};
+const waterbodyByName = wbPayload.byWaterbody ?? {};
+const wbMeta = wbPayload.meta;
+
+const normalizeWb = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+const byNameNorm: Record<string, WaterbodyRecord[]> = Object.fromEntries(
+  Object.entries(waterbodyByName).map(([name, records]) => [normalizeWb(name), records]),
+);
+
+function sourceName(url: string): string {
+  if (url.includes("dwr.virginia.gov")) return "Virginia Department of Wildlife Resources";
+  if (url.includes("dnr.maryland.gov")) return "Maryland Department of Natural Resources";
+  if (url.includes("nps.gov")) return "National Park Service";
+  return "State fisheries agency";
+}
+
+// Special assemblages (geographic / multi-name) that aren't a simple name match.
+function specialWaterbodyKey(location: Pick<FishingLocationSeed, "waterbody" | "lat">): string | null {
+  const wb = location.waterbody.toLowerCase();
+  if (wb.includes("occoquan reservoir")) return "occoquan-reservoir";
+  if (wb.includes("pohick bay") || wb.includes("belmont bay")) return "pohick-belmont-bay";
+  if (wb.includes("beaverdam reservoir")) return "beaverdam-reservoir";
+  if (wb.includes("potomac")) return location.lat >= 38.95 ? "nontidal-potomac" : "tidal-potomac";
+  return null;
+}
+
+/**
+ * Documented-waterbody species evidence for a location, as shared-waterbody
+ * official listings (DWR/MD DNR/NPS). Combines the special geographic
+ * assemblages with the per-named-water DWR community, deduped by species
+ * (highest-availability record wins). Caveated as a waterbody listing, not an
+ * angler report at the specific access point.
+ */
+export function waterbodySpeciesFor(location: Pick<FishingLocationSeed, "waterbody" | "lat" | "name">): SpeciesEvidence[] {
+  const records: WaterbodyRecord[] = [];
+  const key = specialWaterbodyKey(location);
+  if (key && waterbodyByKey[key]) records.push(...waterbodyByKey[key]);
+  // Match by waterbody, and by the location's display name too (some waters have
+  // a different official waterbody name, e.g. Lake Frederick = "Wheatlands Lake").
+  const named = byNameNorm[normalizeWb(location.waterbody)] || (location.name ? byNameNorm[normalizeWb(location.name)] : undefined);
+  if (named) records.push(...named);
+  if (records.length === 0) return [];
+
+  const bySpecies = new Map<string, WaterbodyRecord>();
+  for (const record of records) {
+    const current = bySpecies.get(record.speciesId);
+    if (!current || record.availability > current.availability) bySpecies.set(record.speciesId, record);
+  }
+  return [...bySpecies.values()].map((record) => ({
+    speciesId: record.speciesId,
+    availability: record.availability,
+    quality: record.quality,
+    evidenceConfidence: record.evidenceConfidence,
+    evidenceType: "official listing" as const,
+    evidenceSummary: record.summary,
+    lastEvidence: `Agency waterbody documentation reviewed ${wbMeta.retrieved}`,
+    technique: "Match presentation to the species, season, and current conditions",
+    depth: "Work accessible cover and structure first, then probe the first depth change",
+    positive: [record.summary, ...(record.strengthNote ? [record.strengthNote] : [])],
+    negative: ["Evidence is the documented waterbody listing, not an angler report at this specific access point"],
+    sourceName: sourceName(record.sourceUrl),
+    sourceUrl: record.sourceUrl,
+  }));
+}
+
 export const expandedCoverageStats = {
   dwrAccessSites: dwrSites.length,
   dwrRetrieved: dwrMeta.retrieved,
   nhdParkWaters: nhdWaters.length,
   nhdRetrieved: nhdMeta.retrieved,
+  nhdStreams: nhdStreams.length,
+  waterbodySpeciesWaters: Object.keys(waterbodyByKey).length + Object.keys(waterbodyByName).length,
 };

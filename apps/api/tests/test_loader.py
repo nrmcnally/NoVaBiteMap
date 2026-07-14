@@ -21,13 +21,13 @@ def test_seed_counts_match_audited_dataset(seeded_db):
     )
 
     with SessionLocal() as s:
-        assert s.scalar(select(func.count()).select_from(FishingLocationRecord)) == 95
+        assert s.scalar(select(func.count()).select_from(FishingLocationRecord)) == 196
         assert s.scalar(select(func.count()).select_from(SpeciesRecord)) == 20
-        assert s.scalar(select(func.count()).select_from(SpeciesEvidenceRecord)) == 123
+        assert s.scalar(select(func.count()).select_from(SpeciesEvidenceRecord)) == 340
         assert s.scalar(select(func.count()).select_from(SpeciesScoringProfile)) == 20
         assert s.scalar(select(func.count()).select_from(StockingRecord)) == 13
         assert s.scalar(select(func.count()).select_from(LocationStationAssociation)) == 19
-        assert s.scalar(select(func.count(func.distinct(SpeciesEvidenceRecord.location_id)))) == 50
+        assert s.scalar(select(func.count(func.distinct(SpeciesEvidenceRecord.location_id)))) == 78
 
 
 def test_reseed_is_idempotent(seeded_db):
@@ -46,7 +46,7 @@ def test_modeled_evidence_flagged_and_records_a_run(seeded_db):
         modeled = s.scalar(
             select(func.count()).select_from(SpeciesEvidenceRecord).where(SpeciesEvidenceRecord.modeled == True)  # noqa: E712
         )
-        assert modeled == 40
+        assert modeled == 38
         runs = s.scalars(select(DataIngestionRun)).all()
         assert any(r.status == "success" for r in runs)
         assert all(r.checksum for r in runs if r.status == "success")

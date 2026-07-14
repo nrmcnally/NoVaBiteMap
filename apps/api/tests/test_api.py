@@ -8,7 +8,7 @@ def test_health_and_openapi(client):
 
 def test_locations_list_has_provenance_backed_locations(client):
     locations = client.get("/api/locations", params={"limit": 200}).json()
-    assert len(locations) == 95  # curated + region-wide DWR ramps + NHD public-park waters
+    assert len(locations) == 196  # curated + region-wide DWR ramps + NHD public-park waters
     assert all(item.get("sourceName") for item in locations)
     ids = {item["id"] for item in locations}
     assert {"lake-fairfax", "gravelly-point", "beaverdam-reservoir", "kellys-ford"}.issubset(ids)
@@ -26,6 +26,13 @@ def test_access_status_classifies_public_waters(client):
     assert dwr["accessStatus"] == "verified"
     nhd = next(item for item in locations if item["id"].startswith("nhd-"))
     assert nhd["accessStatus"] == "listed"
+
+
+def test_previously_unevidenced_species_now_documented(client):
+    # Tidal-Potomac / reservoir documentation fills the former zero-evidence species.
+    for species_id in ("blue-catfish", "northern-snakehead", "white-perch", "muskellunge", "white-crappie"):
+        detail = client.get(f"/api/species/{species_id}").json()
+        assert len(detail["locations"]) >= 1, f"{species_id} still has no evidenced locations"
 
 
 def test_rappahannock_watershed_is_now_covered(client):
@@ -73,12 +80,12 @@ def test_species_detail_lists_locations_with_evidence(client):
 def test_data_source_status_is_derived_from_real_counts_and_runs(client):
     status = client.get("/api/data-sources/status").json()
     counts = status["counts"]
-    assert counts["locations"] == 95
+    assert counts["locations"] == 196
     assert counts["species"] == 20
     assert counts["hydrologyAssociations"] == 19
     assert counts["stockingRecords"] == 13
-    assert counts["modeledEvidence"] == 40
-    assert counts["locationsWithEvidence"] == 50
+    assert counts["modeledEvidence"] == 38
+    assert counts["locationsWithEvidence"] == 78
     assert status["lastSuccessfulIngestion"] is not None
     assert status["lastSuccessfulIngestion"]["status"] == "success"
 
@@ -113,6 +120,7 @@ def test_multispecies_panel_ranks_and_separates_insufficient(client):
 
 
 def test_access_only_location_offers_no_species(client):
-    payload = client.get("/api/locations/lake-curtis/species", params={"live": "false"}).json()
+    # Huntsman Lake is a small Fairfax park lake with no agency species documentation.
+    payload = client.get("/api/locations/huntsman-lake/species", params={"live": "false"}).json()
     assert payload["species"] == []
     assert payload["insufficient"] == []

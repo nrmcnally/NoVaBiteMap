@@ -2,7 +2,7 @@ import { coverageLocations } from "./coverage-data";
 import { advisoryForLocation, vdhAdvisoryIndexUrl, type ConsumptionAdvisory } from "./advisories";
 import { hydrologyForLocation, type HydrologyAssociation } from "./hydrology";
 import { aquaticGapEvidenceForLocation, troutLocations } from "./public-evidence";
-import { dwrAccessLocations, nhdParkWaterLocations } from "./expanded-coverage";
+import { dwrAccessLocations, nhdParkWaterLocations, nhdStreamLocations, waterbodySpeciesFor } from "./expanded-coverage";
 
 export type AccessMethod = "shore" | "wade" | "kayak" | "boat";
 export type WaterbodyType = "river" | "reservoir" | "lake" | "pond" | "bay" | "stream";
@@ -537,19 +537,23 @@ const toPoint = (location: FishingLocationSeed) => ({
 const curatedPoints = curatedLocations.map(toPoint);
 const dwrAdded = dwrAccessLocations(curatedPoints);
 const nhdAdded = nhdParkWaterLocations([...curatedPoints, ...dwrAdded.map(toPoint)]);
+const streamAdded = nhdStreamLocations([...curatedPoints, ...dwrAdded.map(toPoint), ...nhdAdded.map(toPoint)]);
 
-const sourcedLocations: FishingLocationSeed[] = [...curatedLocations, ...dwrAdded, ...nhdAdded];
+const sourcedLocations: FishingLocationSeed[] = [...curatedLocations, ...dwrAdded, ...nhdAdded, ...streamAdded];
 
 export const locations: FishingLocation[] = sourcedLocations.map((location) => {
-  const aquaticGapEvidence = aquaticGapEvidenceForLocation(location).filter(
-    (candidate) => !location.evidence.some((existing) => existing.speciesId === candidate.speciesId),
-  );
+  const has = (list: SpeciesEvidence[], speciesId: string) => list.some((item) => item.speciesId === speciesId);
+  // Documented-waterbody agency listings layer under curated evidence.
+  const waterbodyEvidence = waterbodySpeciesFor(location).filter((candidate) => !has(location.evidence, candidate.speciesId));
+  const withWaterbody = [...location.evidence, ...waterbodyEvidence];
+  // Modeled nearby-reach (Aquatic GAP) evidence fills any remaining gaps.
+  const aquaticGapEvidence = aquaticGapEvidenceForLocation(location).filter((candidate) => !has(withWaterbody, candidate.speciesId));
   const hydrology = hydrologyForLocation(location.id);
   return {
     ...location,
     accessStatus: location.accessStatus ?? "verified",
     flowStatus: hydrology ? `USGS ${hydrology.stationId} linked · live reading on details` : location.flowStatus,
-    evidence: [...location.evidence, ...aquaticGapEvidence],
+    evidence: [...withWaterbody, ...aquaticGapEvidence],
     hydrology,
     consumptionAdvisory: advisoryForLocation(location),
   };

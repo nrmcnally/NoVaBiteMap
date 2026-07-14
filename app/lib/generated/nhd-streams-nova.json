@@ -1,0 +1,759 @@
+{
+  "meta": {
+    "source": "USGS NHD named streams × ESRI USA Parks (public-land crossing)",
+    "nhdUrl": "https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer/6",
+    "license": "Public domain (USGS NHD); ESRI USA Parks reference layer",
+    "retrieved": "2026-07-14",
+    "region": {
+      "xmin": -78.4,
+      "ymin": 38.3,
+      "xmax": -77,
+      "ymax": 39.3
+    },
+    "streamCount": 106
+  },
+  "streams": [
+    {
+      "name": "Accokeek Creek",
+      "lat": 38.377052,
+      "lng": -77.35535,
+      "county": "Stafford",
+      "park": "Crows Nest State Natural Area Preserve"
+    },
+    {
+      "name": "Accotink Creek",
+      "lat": 38.843712,
+      "lng": -77.223411,
+      "county": "Fairfax",
+      "park": "Accotink Stream Val Park"
+    },
+    {
+      "name": "Backlick Run",
+      "lat": 38.793044,
+      "lng": -77.162934,
+      "county": "Fairfax",
+      "park": "Backlick Stream Val Park"
+    },
+    {
+      "name": "Barnyard Run",
+      "lat": 38.747614,
+      "lng": -77.117421,
+      "county": "Fairfax",
+      "park": "Huntley Meadows Park"
+    },
+    {
+      "name": "Big Rocky Run",
+      "lat": 38.855799,
+      "lng": -77.424719,
+      "county": "Fairfax",
+      "park": "Walney Rd. Visitor Center"
+    },
+    {
+      "name": "Brokenback Run",
+      "lat": 38.57091,
+      "lng": -78.312403,
+      "county": "Madison",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Bullneck Run",
+      "lat": 38.946453,
+      "lng": -77.225142,
+      "county": "Fairfax",
+      "park": "Bull Neck Stream Park"
+    },
+    {
+      "name": "Cabin Run",
+      "lat": 38.930893,
+      "lng": -78.296218,
+      "county": "Warren",
+      "park": "George Washington National Forest"
+    },
+    {
+      "name": "Cameron Run",
+      "lat": 38.807383,
+      "lng": -77.110742,
+      "county": "Alexandria city",
+      "park": "Cameron Run Regional Park"
+    },
+    {
+      "name": "Catharpin Creek",
+      "lat": 38.850387,
+      "lng": -77.63379,
+      "county": "Prince William",
+      "park": "James S Long Regional Park"
+    },
+    {
+      "name": "Cedar Run",
+      "lat": 38.542575,
+      "lng": -78.368395,
+      "county": "Madison",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Cherry Run",
+      "lat": 38.770492,
+      "lng": -77.273143,
+      "county": "Fairfax",
+      "park": "Middle Run Park"
+    },
+    {
+      "name": "Chotank Creek",
+      "lat": 38.360254,
+      "lng": -77.11736,
+      "county": "King George",
+      "park": "Chotank State Natural Area Preserve"
+    },
+    {
+      "name": "Colvin Run",
+      "lat": 38.964356,
+      "lng": -77.323764,
+      "county": "Fairfax",
+      "park": "Lake Fairfax Park"
+    },
+    {
+      "name": "Cub Run",
+      "lat": 38.899804,
+      "lng": -77.467077,
+      "county": "Fairfax",
+      "park": "Cub Run Stream Valley Park"
+    },
+    {
+      "name": "Daniels Run",
+      "lat": 38.851663,
+      "lng": -77.288691,
+      "county": "Fairfax",
+      "park": "Daniels Run Park"
+    },
+    {
+      "name": "Dead Run",
+      "lat": 38.942571,
+      "lng": -77.18587,
+      "county": "Fairfax",
+      "park": "Dead Run Stream Park"
+    },
+    {
+      "name": "Difficult Run",
+      "lat": 38.975839,
+      "lng": -77.245037,
+      "county": "Fairfax",
+      "park": "Great Falls Park"
+    },
+    {
+      "name": "Doctors Run",
+      "lat": 38.861665,
+      "lng": -77.10226,
+      "county": "Arlington",
+      "park": "Alcova Heights Park"
+    },
+    {
+      "name": "Dogue Creek",
+      "lat": 38.759565,
+      "lng": -77.122491,
+      "county": "Fairfax",
+      "park": "Huntley Meadows Park"
+    },
+    {
+      "name": "Donaldson Run",
+      "lat": 38.913122,
+      "lng": -77.111091,
+      "county": "Arlington",
+      "park": "Donaldson Run Park"
+    },
+    {
+      "name": "Dry Run",
+      "lat": 38.761749,
+      "lng": -78.328154,
+      "county": "Page",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "East Fork Dry Run",
+      "lat": 38.768107,
+      "lng": -78.305912,
+      "county": "Page",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "East Hawksbill Creek",
+      "lat": 38.571864,
+      "lng": -78.399529,
+      "county": "Page",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Farm Creek",
+      "lat": 38.624389,
+      "lng": -77.249816,
+      "county": "Prince William",
+      "park": "Featherstone National Wildlife Refuge"
+    },
+    {
+      "name": "Flag Run",
+      "lat": 38.80052,
+      "lng": -77.213659,
+      "county": "Fairfax",
+      "park": "Lake Accotink Park"
+    },
+    {
+      "name": "Flint Run",
+      "lat": 38.797422,
+      "lng": -78.315155,
+      "county": "Warren",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Four Mile Run",
+      "lat": 38.876347,
+      "lng": -77.134921,
+      "county": "Arlington",
+      "park": "Bon Air Park"
+    },
+    {
+      "name": "Gap Run",
+      "lat": 38.991195,
+      "lng": -77.94852,
+      "county": "Fauquier",
+      "park": "Sky Meadows State Park"
+    },
+    {
+      "name": "Gooney Run",
+      "lat": 38.768898,
+      "lng": -78.263627,
+      "county": "Warren",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Greasy Run",
+      "lat": 38.768165,
+      "lng": -78.270072,
+      "county": "Warren",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Hannah Run",
+      "lat": 38.589137,
+      "lng": -78.313458,
+      "county": "Madison",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Happy Creek",
+      "lat": 38.884317,
+      "lng": -78.174627,
+      "county": "Warren",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Hazel River",
+      "lat": 38.63017,
+      "lng": -78.317508,
+      "county": "Rappahannock",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Holmes Run",
+      "lat": 38.830484,
+      "lng": -77.134086,
+      "county": "Alexandria city",
+      "park": "Holmes Run Park"
+    },
+    {
+      "name": "Horsepen Run",
+      "lat": 38.927322,
+      "lng": -77.413435,
+      "county": "Fairfax",
+      "park": "Horsepen Run Stream Valley Park"
+    },
+    {
+      "name": "Hughes River",
+      "lat": 38.601969,
+      "lng": -78.336641,
+      "county": "Madison",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Hungry Run",
+      "lat": 38.904253,
+      "lng": -77.681967,
+      "county": "Fauquier",
+      "park": "Bull Run Mountains State Natural Area Preserve"
+    },
+    {
+      "name": "Indian Run",
+      "lat": 38.807189,
+      "lng": -77.160982,
+      "county": "Fairfax",
+      "park": "Indian Run Stream Val Park"
+    },
+    {
+      "name": "Jeremys Run",
+      "lat": 38.742306,
+      "lng": -78.328677,
+      "county": "Page",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Jordan River",
+      "lat": 38.773558,
+      "lng": -78.164465,
+      "county": "Rappahannock",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Kanes Creek",
+      "lat": 38.651182,
+      "lng": -77.169626,
+      "county": "Fairfax",
+      "park": "Mason Neck State Park"
+    },
+    {
+      "name": "Keatons Run",
+      "lat": 38.325039,
+      "lng": -77.727818,
+      "county": "Spotsylvania",
+      "park": "Fredericksburg Spotsylvania National Military Park"
+    },
+    {
+      "name": "Keyser Run",
+      "lat": 38.733837,
+      "lng": -78.258649,
+      "county": "Rappahannock",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Kinsey Run",
+      "lat": 38.422105,
+      "lng": -78.382315,
+      "county": "Madison",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Lands Run",
+      "lat": 38.827187,
+      "lng": -78.18187,
+      "county": "Warren",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Licking Run",
+      "lat": 38.655887,
+      "lng": -77.788136,
+      "county": "Fauquier",
+      "park": "Warrenton Air Park"
+    },
+    {
+      "name": "Little Bull Run",
+      "lat": 38.815325,
+      "lng": -77.591196,
+      "county": "Prince William",
+      "park": "Conway Robinson State Forest"
+    },
+    {
+      "name": "Little Creek",
+      "lat": 38.554589,
+      "lng": -77.347589,
+      "county": "Prince William",
+      "park": "Prince William Forest Park"
+    },
+    {
+      "name": "Little Difficult Run",
+      "lat": 38.90417,
+      "lng": -77.370496,
+      "county": "Fairfax",
+      "park": "Little Difficult Run Valley Park"
+    },
+    {
+      "name": "Little Hunting Run",
+      "lat": 38.317998,
+      "lng": -77.646293,
+      "county": "Spotsylvania",
+      "park": "Fredericksburg Spotsylvania National Military Park"
+    },
+    {
+      "name": "Little Passage Creek",
+      "lat": 38.898043,
+      "lng": -78.366318,
+      "county": "Shenandoah",
+      "park": "George Washington National Forest"
+    },
+    {
+      "name": "Little Rocky Run",
+      "lat": 38.795474,
+      "lng": -77.434616,
+      "county": "Fairfax",
+      "park": "Bull Run Regional Park"
+    },
+    {
+      "name": "Lubber Run",
+      "lat": 38.868754,
+      "lng": -77.118961,
+      "county": "Arlington",
+      "park": "Lubber Run Park"
+    },
+    {
+      "name": "Lucky Run",
+      "lat": 38.844422,
+      "lng": -77.100607,
+      "county": "Arlington",
+      "park": "Allie S Freed Park"
+    },
+    {
+      "name": "Marumsco Creek",
+      "lat": 38.664846,
+      "lng": -77.272897,
+      "county": "Prince William",
+      "park": "Hammill Mill Park"
+    },
+    {
+      "name": "Middle Run",
+      "lat": 38.756884,
+      "lng": -77.263398,
+      "county": "Fairfax",
+      "park": "Middle Run Park"
+    },
+    {
+      "name": "Mill Run",
+      "lat": 38.877222,
+      "lng": -78.344994,
+      "county": "Shenandoah",
+      "park": "George Washington National Forest"
+    },
+    {
+      "name": "Mine Run",
+      "lat": 38.8839,
+      "lng": -78.376806,
+      "county": "Shenandoah",
+      "park": "George Washington National Forest"
+    },
+    {
+      "name": "Moody Creek",
+      "lat": 38.736266,
+      "lng": -78.358424,
+      "county": "Page",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Mountain Run",
+      "lat": 38.476463,
+      "lng": -77.999008,
+      "county": "Culpeper",
+      "park": "Yowell Meadow Park"
+    },
+    {
+      "name": "Neabsco Creek",
+      "lat": 38.646844,
+      "lng": -77.351196,
+      "county": "Prince William",
+      "park": "Greenwood Farm Park"
+    },
+    {
+      "name": "Nichols Run",
+      "lat": 39.000066,
+      "lng": -77.323723,
+      "county": "Fairfax",
+      "park": "Windermere Park"
+    },
+    {
+      "name": "Ninemile Run",
+      "lat": 38.304592,
+      "lng": -77.625756,
+      "county": "Spotsylvania",
+      "park": "Fredericksburg Spotsylvania National Military Park"
+    },
+    {
+      "name": "North Fork Dry Run",
+      "lat": 38.630309,
+      "lng": -78.35869,
+      "county": "Page",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "North Fork Thornton River",
+      "lat": 38.713873,
+      "lng": -78.318849,
+      "county": "Rappahannock",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "North Wilderness Run",
+      "lat": 38.313307,
+      "lng": -77.739153,
+      "county": "Spotsylvania",
+      "park": "Fredericksburg Spotsylvania National Military Park"
+    },
+    {
+      "name": "Old Sugarland Run",
+      "lat": 39.058354,
+      "lng": -77.33753,
+      "county": "Loudoun",
+      "park": "Northern Virginia Regional Park"
+    },
+    {
+      "name": "Overall Run",
+      "lat": 38.776717,
+      "lng": -78.289453,
+      "county": "Page",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Pass Run",
+      "lat": 38.658679,
+      "lng": -78.327088,
+      "county": "Page",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Peyton Run",
+      "lat": 38.757173,
+      "lng": -77.266085,
+      "county": "Fairfax",
+      "park": "Middle Run Park"
+    },
+    {
+      "name": "Phils Arm Run",
+      "lat": 38.777873,
+      "lng": -78.233449,
+      "county": "Warren",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Pimmit Run",
+      "lat": 38.922301,
+      "lng": -77.171295,
+      "county": "Fairfax",
+      "park": "Kent Gardens Park"
+    },
+    {
+      "name": "Piney River",
+      "lat": 38.701232,
+      "lng": -78.266319,
+      "county": "Rappahannock",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Pohick Creek",
+      "lat": 38.773912,
+      "lng": -77.243548,
+      "county": "Fairfax",
+      "park": "Orange Hunt Estates Park"
+    },
+    {
+      "name": "Popes Head Creek",
+      "lat": 38.780485,
+      "lng": -77.371633,
+      "county": "Fairfax",
+      "park": "Chapel Road Park"
+    },
+    {
+      "name": "Popham Run",
+      "lat": 38.531372,
+      "lng": -78.31548,
+      "county": "Madison",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Quander Brook",
+      "lat": 38.786272,
+      "lng": -77.066854,
+      "county": "Fairfax",
+      "park": "Belle Haven Park"
+    },
+    {
+      "name": "Quantico Creek",
+      "lat": 38.56959,
+      "lng": -77.341774,
+      "county": "Prince William",
+      "park": "Prince William Forest Park"
+    },
+    {
+      "name": "Ragged Run",
+      "lat": 38.538805,
+      "lng": -78.310545,
+      "county": "Madison",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Rapidan River",
+      "lat": 38.450367,
+      "lng": -78.367502,
+      "county": "Madison",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Robinson River",
+      "lat": 38.547281,
+      "lng": -78.353306,
+      "county": "Madison",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Rocky Run",
+      "lat": 38.589748,
+      "lng": -78.285737,
+      "county": "Rappahannock",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Rose River",
+      "lat": 38.519832,
+      "lng": -78.39475,
+      "county": "Madison",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Runyons Run",
+      "lat": 38.623196,
+      "lng": -78.301776,
+      "county": "Rappahannock",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Rush River",
+      "lat": 38.759775,
+      "lng": -78.231881,
+      "county": "Rappahannock",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Sams Run",
+      "lat": 38.617926,
+      "lng": -78.279812,
+      "county": "Rappahannock",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Sandy Run",
+      "lat": 38.721364,
+      "lng": -77.303879,
+      "county": "Fairfax",
+      "park": "Fountainhead Regional Park"
+    },
+    {
+      "name": "Scott Run",
+      "lat": 38.91948,
+      "lng": -77.210235,
+      "county": "Fairfax",
+      "park": "Scott Run Community Park"
+    },
+    {
+      "name": "Slate Run",
+      "lat": 38.687894,
+      "lng": -77.577985,
+      "county": "Prince William",
+      "park": "Nokesville Community Park"
+    },
+    {
+      "name": "Sloan Creek",
+      "lat": 38.889032,
+      "lng": -78.171129,
+      "county": "Warren",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "South Fork Dry Run",
+      "lat": 38.602864,
+      "lng": -78.379585,
+      "county": "Page",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "South Fork Quantico Creek",
+      "lat": 38.576541,
+      "lng": -77.377647,
+      "county": "Prince William",
+      "park": "Prince William Forest Park"
+    },
+    {
+      "name": "South Run",
+      "lat": 38.747345,
+      "lng": -77.281354,
+      "county": "Fairfax",
+      "park": "South Run Park"
+    },
+    {
+      "name": "South Wilderness Run",
+      "lat": 38.30307,
+      "lng": -77.743676,
+      "county": "Spotsylvania",
+      "park": "Fredericksburg Spotsylvania National Military Park"
+    },
+    {
+      "name": "Staunton River",
+      "lat": 38.44477,
+      "lng": -78.372749,
+      "county": "Madison",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Stillwell Run",
+      "lat": 38.729287,
+      "lng": -77.351002,
+      "county": "Fairfax",
+      "park": "Fountainhead Regional Park"
+    },
+    {
+      "name": "Sugarland Run",
+      "lat": 38.981363,
+      "lng": -77.366755,
+      "county": "Fairfax",
+      "park": "Runnymeade Park"
+    },
+    {
+      "name": "Taylor Run",
+      "lat": 38.815006,
+      "lng": -77.077047,
+      "county": "Alexandria city",
+      "park": "Angel Park"
+    },
+    {
+      "name": "Thornton River",
+      "lat": 38.659541,
+      "lng": -78.301615,
+      "county": "Rappahannock",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Tims River",
+      "lat": 38.574039,
+      "lng": -78.355029,
+      "county": "Madison",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Turkey Run",
+      "lat": 38.957618,
+      "lng": -77.157848,
+      "county": "Fairfax",
+      "park": "Langley Oaks Park"
+    },
+    {
+      "name": "Turkeycock Run",
+      "lat": 38.824089,
+      "lng": -77.149524,
+      "county": "Fairfax",
+      "park": "Turkeycock Stream Valley Park"
+    },
+    {
+      "name": "Wilson Run",
+      "lat": 38.445407,
+      "lng": -78.378514,
+      "county": "Madison",
+      "park": "Shenandoah National Park"
+    },
+    {
+      "name": "Windy Run",
+      "lat": 38.90227,
+      "lng": -77.099072,
+      "county": "Arlington",
+      "park": "Windy Run Park"
+    },
+    {
+      "name": "Wolftrap Creek",
+      "lat": 38.918736,
+      "lng": -77.263212,
+      "county": "Fairfax",
+      "park": "Wolf Trap Stream Park"
+    }
+  ]
+}

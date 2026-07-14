@@ -247,6 +247,20 @@ export function ExploreDashboard() {
     };
   }, []);
 
+  // When a spot is selected (e.g. by clicking its map marker), bring its result
+  // card into view within the results list.
+  useEffect(() => {
+    if (!selectedId || !resultsOpen) return;
+    const timer = setTimeout(() => {
+      const list = document.querySelector<HTMLElement>(".results-list");
+      const card = document.querySelector<HTMLElement>(`[data-location-id="${selectedId}"]`);
+      if (!list || !card) return;
+      const target = card.offsetTop - list.offsetTop - 96;
+      list.scrollTo({ top: Math.max(0, target), behavior: "smooth" });
+    }, 150); // allow the panel open-transition + render to settle
+    return () => clearTimeout(timer);
+  }, [selectedId, resultsOpen]);
+
   const refreshConditions = useCallback(async () => {
     if (!selectedLocation) return;
     setLive({ status: "loading" });
@@ -565,7 +579,7 @@ export function ExploreDashboard() {
                 const isSaved = favoriteIds.has(location.id);
                 const walkable = origin && travel.walkMinutes <= 30;
                 return (
-                  <article className={`result-card ${isSelected ? "selected" : ""}`} key={location.id} onClick={() => setSelectedId(location.id)}>
+                  <article className={`result-card ${isSelected ? "selected" : ""}`} key={location.id} data-location-id={location.id} onClick={() => setSelectedId(location.id)}>
                     <div className="rank-number">{String(index + 1).padStart(2, "0")}</div>
                     <div className={`score-orb score-${opportunity.score >= 70 ? "hot" : opportunity.score >= 55 ? "mid" : "low"}`}>
                       <strong>{opportunity.score}</strong><span>/100</span>

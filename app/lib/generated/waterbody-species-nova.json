@@ -1,0 +1,1251 @@
+{
+  "meta": {
+    "source": "Virginia DWR / MD DNR / NPS waterbody species documentation",
+    "retrieved": "2026-07-14",
+    "note": "Documented species per waterbody; attached to matching access points as shared-waterbody official listings (not access-point angler reports).",
+    "byWaterbodyNote": "Per-named-water DWR fish communities (waterbody pages + fisheries reports)."
+  },
+  "byKey": {
+    "tidal-potomac": [
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.9,
+        "quality": 0.95,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR reports excellent largemouth bass fishing in the tidal Potomac, with 2025 adult catch rates the highest documented in 21 years of standardized surveys.",
+        "strengthNote": "Adult bass electrofishing catch rates the highest since standardized surveys began 21 years ago; a premier East Coast largemouth fishery.",
+        "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/"
+      },
+      {
+        "speciesId": "northern-snakehead",
+        "availability": 0.8,
+        "quality": 0.5,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents an established northern snakehead fishery in the tidal Potomac and its northern creeks, rated average-to-below-average for 2026.",
+        "strengthNote": "Snakehead fishing expected average in Aquia Creek, below average in many other northern Potomac creeks below DC.",
+        "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/"
+      },
+      {
+        "speciesId": "blue-catfish",
+        "availability": 0.85,
+        "quality": 0.85,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents blue catfish (an established invasive) as a targetable species across its tidal rivers including the Potomac, where trophy fish are common.",
+        "strengthNote": "Trophy-caliber blue catfish common in tidal Potomac backwaters and tributaries; DWR notes excellent catfishing across Virginia tidal rivers.",
+        "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/"
+      },
+      {
+        "speciesId": "striped-bass",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR lists striped bass among the migratory species of the tidal Potomac River.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/blog/10-top-virginia-fishing-waters-rivers/"
+      },
+      {
+        "speciesId": "white-perch",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents white perch as a species anglers can target on its tidal rivers including the Potomac.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/"
+      },
+      {
+        "speciesId": "yellow-perch",
+        "availability": 0.7,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR documents yellow perch among the species targetable on its tidal rivers including the Potomac.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/"
+      },
+      {
+        "speciesId": "common-carp",
+        "availability": 0.7,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR lists carp among the top targetable species of the tidal Potomac River.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/blog/10-top-virginia-fishing-waters-rivers/"
+      },
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.62,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Channel catfish are documented as a resident catfish species of Virginia's tidal rivers including the tidal Potomac.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/"
+      }
+    ],
+    "nontidal-potomac": [
+      {
+        "speciesId": "smallmouth-bass",
+        "availability": 0.9,
+        "quality": 0.85,
+        "evidenceConfidence": 0.8,
+        "summary": "Maryland DNR calls smallmouth bass the most sought-after gamefish in the nontidal Potomac River, with quality- and preferred-size populations above established benchmarks.",
+        "strengthNote": "Quality-size (11\"+) and preferred-size (14\"+) fish have increased above benchmarks; supplemental stocking 2019-2024 buffered high-flow year-classes.",
+        "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
+      },
+      {
+        "speciesId": "walleye",
+        "availability": 0.85,
+        "quality": 0.75,
+        "evidenceConfidence": 0.8,
+        "summary": "Maryland DNR documents walleye throughout the nontidal Potomac, with the highest densities from Dam 5 downstream to Point of Rocks.",
+        "strengthNote": "Roughly 37-40% of the population exceeds 15 inches; managed under a 15-20\" slot with a January-April harvest window.",
+        "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
+      },
+      {
+        "speciesId": "muskellunge",
+        "availability": 0.8,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Maryland DNR describes muskellunge as an exciting, relatively new addition to the Potomac River sport fishery supported by a dedicated Maryland Muskie Program.",
+        "strengthNote": "Established via a managed muskie program on the upper river.",
+        "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
+      },
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.8,
+        "quality": 0.6,
+        "evidenceConfidence": 0.8,
+        "summary": "Maryland DNR reports a relatively stable channel catfish population in the nontidal Potomac.",
+        "strengthNote": "Electrofishing surveys show ~40-60 channel catfish per hour, roughly three-quarters in the 12-20 inch range.",
+        "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
+      },
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.72,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Maryland DNR lists largemouth bass among the gamefish managed in the nontidal Potomac River.",
+        "strengthNote": null,
+        "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
+      },
+      {
+        "speciesId": "flathead-catfish",
+        "availability": 0.72,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Maryland DNR documents invasive flathead catfish in the nontidal Potomac and encourages anglers to harvest all they catch.",
+        "strengthNote": "Apex predator with a documented threefold abundance increase from 2016 to 2021; targeted for removal.",
+        "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
+      },
+      {
+        "speciesId": "northern-snakehead",
+        "availability": 0.7,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "The National Park Service documents invasive northern snakehead as established in the Potomac River along the C&O Canal / Great Falls corridor.",
+        "strengthNote": "Invasive; NPS instructs anglers not to release and to report catches.",
+        "sourceUrl": "https://www.nps.gov/choh/planyourvisit/fishing.htm"
+      }
+    ],
+    "occoquan-reservoir": [
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.9,
+        "quality": 0.9,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR ranks Occoquan Reservoir's largemouth bass fishery as the best in the district for CPUE of preferred fish over 15 inches.",
+        "strengthNote": "Best in district for CPUE of 15in+ fish; good numbers in the 4-6 lb range, fish up to 21 in.",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+      },
+      {
+        "speciesId": "bluegill",
+        "availability": 0.75,
+        "quality": 0.5,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents a balanced bluegill population in Occoquan Reservoir.",
+        "strengthNote": "Fair numbers in the 5-7 inch range; population declined since the early 1990s but remains balanced.",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+      },
+      {
+        "speciesId": "black-crappie",
+        "availability": 0.8,
+        "quality": 0.75,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents black crappie as part of Occoquan Reservoir's very good crappie fishery.",
+        "strengthNote": "Reservoir has a very good crappie fishery; fish structure in early spring.",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+      },
+      {
+        "speciesId": "white-crappie",
+        "availability": 0.8,
+        "quality": 0.75,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR notes Occoquan is the only District lake to offer white crappie, which typically run larger.",
+        "strengthNote": "Only District lake with white crappie; white crappie typically run larger than black.",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+      },
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.85,
+        "quality": 0.6,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents a self-sustaining channel catfish population in Occoquan Reservoir.",
+        "strengthNote": "Self-sustaining; fish typically 14-20 inches averaging about 2 pounds.",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+      },
+      {
+        "speciesId": "flathead-catfish",
+        "availability": 0.8,
+        "quality": 0.85,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents flathead catfish in Occoquan Reservoir, which produced a former state record.",
+        "strengthNote": "Produced the previous state record flathead catfish of 66 lb 4 oz (May 1994).",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+      },
+      {
+        "speciesId": "white-perch",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR lists white perch as a managed species present in Occoquan Reservoir.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+      },
+      {
+        "speciesId": "yellow-perch",
+        "availability": 0.7,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR's 2022 fisheries management report documents yellow perch among Occoquan Reservoir's supported populations.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+      }
+    ],
+    "pohick-belmont-bay": [
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.85,
+        "quality": 0.95,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR forecasts excellent largemouth bass fishing in the tidal Potomac including Pohick Creek, with 2025 electrofishing catch rates the highest in 21 years.",
+        "strengthNote": "Pohick Creek adult bass catch rates routinely over 100/hour; regional catch rates the best since standardized surveys began.",
+        "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/"
+      },
+      {
+        "speciesId": "northern-snakehead",
+        "availability": 0.8,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents northern snakehead throughout the tidal Potomac tributaries including Pohick Creek, though numbers have stabilized below historical peaks.",
+        "strengthNote": "Established but at reduced/average levels in northern tributaries versus earlier highs.",
+        "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/"
+      },
+      {
+        "speciesId": "white-perch",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR lists white perch in the tidal Occoquan River / Belmont Bay.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
+      },
+      {
+        "speciesId": "striped-bass",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR lists striped bass in the tidal Occoquan River / Belmont Bay.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
+      },
+      {
+        "speciesId": "yellow-perch",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR lists yellow perch in the tidal Occoquan River / Belmont Bay.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
+      },
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR lists channel catfish in the tidal Occoquan River / Belmont Bay.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
+      },
+      {
+        "speciesId": "flathead-catfish",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR lists flathead catfish in the tidal Occoquan River / Belmont Bay.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
+      },
+      {
+        "speciesId": "black-crappie",
+        "availability": 0.65,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR lists crappie in the tidal Occoquan River / Belmont Bay (species not specified; black crappie is the predominant tidal Potomac crappie).",
+        "strengthNote": "DWR names only 'crappie'; mapped to black crappie as the dominant tidal-Potomac species.",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
+      }
+    ],
+    "beaverdam-reservoir": [
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.85,
+        "quality": 0.85,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents largemouth bass as the reservoir's premier fishery, with excellent condition and desirable size structure recovering after the drawdown.",
+        "strengthNote": "2022 CPUE 55/hr, PSD 88, two memorable 20-inch bass; condition rated excellent from abundant forage.",
+        "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Beaverdam-Creek-Reservoir-Fisheries-Management-Report-2023.pdf"
+      },
+      {
+        "speciesId": "bluegill",
+        "availability": 0.8,
+        "quality": 0.4,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents bluegill as present with a moderate catch rate but poor size structure in Beaverdam Creek Reservoir.",
+        "strengthNote": "2022 CPUE 65/hr but all fish under 8 inches; size structure limited by competition from white perch and gizzard shad.",
+        "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Beaverdam-Creek-Reservoir-Fisheries-Management-Report-2023.pdf"
+      },
+      {
+        "speciesId": "black-crappie",
+        "availability": 0.65,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR lists black crappie in the current fishery, though limited numbers remain after the extended drawdown.",
+        "strengthNote": "No crappie collected in 2022; 2020 sample produced twelve fish around 5 inches; population likely limited post-drawdown.",
+        "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Beaverdam-Creek-Reservoir-Fisheries-Management-Report-2023.pdf"
+      },
+      {
+        "speciesId": "common-carp",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR includes common carp in the current fishery of Beaverdam Creek Reservoir.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Beaverdam-Creek-Reservoir-Fisheries-Management-Report-2023.pdf"
+      },
+      {
+        "speciesId": "white-perch",
+        "availability": 0.85,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR reports white perch as one of the most abundant species in Beaverdam Creek Reservoir.",
+        "strengthNote": "Found up to 7 inches; prone to overpopulating and stunting, so anglers encouraged to harvest this abundant resource.",
+        "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Beaverdam-Creek-Reservoir-Fisheries-Management-Report-2023.pdf"
+      },
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR lists channel catfish in the current fishery of Beaverdam Creek Reservoir, originally stocked in 1973.",
+        "strengthNote": "Regulations allow 8 per day with a 15-inch minimum.",
+        "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Beaverdam-Creek-Reservoir-Fisheries-Management-Report-2023.pdf"
+      }
+    ],
+    "lake-anna-region-check": [
+      {
+        "speciesId": "muskellunge",
+        "availability": 0.8,
+        "quality": 0.5,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents muskellunge in the Main Stem Shenandoah River (Warren County, NOVA region), sustained by annual fingerling stocking from Warren Dam to Route 7 landing.",
+        "strengthNote": "Adult musky densities described as low but resembling a wild reproducing population; best water is directly below Warren Dam. South Fork densities noted as excellent where deep pool habitat exists.",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-main-stem/"
+      },
+      {
+        "speciesId": "white-crappie",
+        "availability": 0.6,
+        "quality": 0.3,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR documents white crappie in the Main Stem Shenandoah River (NOVA region), present but subordinate to black crappie.",
+        "strengthNote": "Crappie densities are low; encountered in fair numbers mainly in deep pools, with black crappie the more dominant of the two species.",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-main-stem/"
+      }
+    ]
+  },
+  "byWaterbody": {
+    "Lake Brittle": [
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.85,
+        "quality": 0.7,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents largemouth bass as the primary sport fish and a very good fishery at Lake Brittle.",
+        "strengthNote": "Very good fishery; fish average 2-3 pounds.",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-brittle/"
+      },
+      {
+        "speciesId": "bluegill",
+        "availability": 0.85,
+        "quality": 0.3,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents bluegill as abundant in Lake Brittle, though the population is stunted.",
+        "strengthNote": "Abundant but stunted; poor size structure.",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-brittle/"
+      },
+      {
+        "speciesId": "black-crappie",
+        "availability": 0.75,
+        "quality": 0.3,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents black crappie in Lake Brittle as a stunted fishery with poor growth rates.",
+        "strengthNote": "Present but stunted; poor growth.",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-brittle/"
+      },
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.85,
+        "quality": 0.6,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR stocks channel catfish annually in Lake Brittle to support angling opportunity.",
+        "strengthNote": "Stocked annually at 25/acre; average about 2 pounds.",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-brittle/"
+      },
+      {
+        "speciesId": "walleye",
+        "availability": 0.65,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR has stocked walleye in Lake Brittle since 1979 as a put-and-grow fishery.",
+        "strengthNote": "Stocked (currently ~100/acre); no natural reproduction.",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-brittle/"
+      },
+      {
+        "speciesId": "flathead-catfish",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents flathead catfish as self-sustaining in Lake Brittle after 1990s stockings.",
+        "strengthNote": "Self-sustaining since 1990/1994 stockings; introduced as a predator.",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-brittle/"
+      },
+      {
+        "speciesId": "northern-snakehead",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents northern snakehead in Lake Brittle as established and apparently self-sustaining since 2015.",
+        "strengthNote": "Established via illegal stocking; self-sustaining.",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-brittle/"
+      }
+    ],
+    "Lake Curtis": [
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.85,
+        "quality": 0.9,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents Lake Curtis as an excellent, trophy-class largemouth bass fishery.",
+        "strengthNote": "Excellent; produces large bass, with fish as heavy as 13 pounds; 15-inch minimum.",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-curtis/"
+      },
+      {
+        "speciesId": "bluegill",
+        "availability": 0.85,
+        "quality": 0.85,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR describes Lake Curtis as offering the finest bluegill fishery in the district.",
+        "strengthNote": "Finest bluegill fishery in the district.",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-curtis/"
+      },
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.8,
+        "quality": 0.6,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents an excellent channel catfish population in Lake Curtis.",
+        "strengthNote": "Excellent population; agency stocking discontinued.",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-curtis/"
+      }
+    ],
+    "Rocky Pen Run Reservoir": [
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.85,
+        "quality": 0.7,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR documents largemouth bass as an abundant, naturally colonized fishery in this Stafford reservoir (now cataloged as Lake Mooney).",
+        "strengthNote": "Abundant, high catch rates; fish over 18 inches sampled and anglers report bass over 10 pounds.",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-mooney/"
+      },
+      {
+        "speciesId": "black-crappie",
+        "availability": 0.8,
+        "quality": 0.4,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR documents black crappie as naturally colonized and abundant, though stockpiling at smaller sizes, in this reservoir (Lake Mooney).",
+        "strengthNote": "Abundant but small; harvest to statewide creel limit encouraged.",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-mooney/"
+      },
+      {
+        "speciesId": "bluegill",
+        "availability": 0.7,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR stocked bluegill into this reservoir (Lake Mooney) during its 2014-2016 fill.",
+        "strengthNote": "Stocked 2014-2016.",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-mooney/"
+      },
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.7,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR stocked channel catfish into this reservoir (Lake Mooney) during its 2014-2016 fill.",
+        "strengthNote": "Stocked 2014-2016.",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-mooney/"
+      }
+    ],
+    "Royal Lake": [
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.7,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Fairfax County Park Authority documents largemouth bass in Royal Lake, relocated during a 2015 pre-dredging fish save.",
+        "strengthNote": "Juvenile bass documented in 2015 fish save; large game fish relocated to nearby lakes.",
+        "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes"
+      },
+      {
+        "speciesId": "black-crappie",
+        "availability": 0.7,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Fairfax County Park Authority documents crappie in Royal Lake, relocated during a 2015 pre-dredging fish save.",
+        "strengthNote": "Juvenile crappie documented in 2015 fish save.",
+        "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes"
+      },
+      {
+        "speciesId": "bluegill",
+        "availability": 0.7,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Fairfax County Park Authority documents bluegill in Royal Lake, with large numbers handled during a 2015 fish save.",
+        "strengthNote": "Large numbers of bluegill relocated in 2015 fish save.",
+        "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes"
+      }
+    ],
+    "Walney Pond": [
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.65,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Fairfax County Park Authority documents Walney Pond at Ellanor C. Lawrence Park as containing bass.",
+        "strengthNote": null,
+        "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing"
+      },
+      {
+        "speciesId": "bluegill",
+        "availability": 0.65,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Fairfax County Park Authority documents Walney Pond at Ellanor C. Lawrence Park as containing sunfish.",
+        "strengthNote": null,
+        "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing"
+      },
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.65,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Fairfax County Park Authority documents Walney Pond at Ellanor C. Lawrence Park as containing catfish.",
+        "strengthNote": null,
+        "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing"
+      }
+    ],
+    "Silver Lake": [
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR lists largemouth bass among the catchable species at Silver Lake Regional Park.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/silver-lake-regional-park/"
+      },
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.65,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR lists channel catfish at Silver Lake, noting stocking has been discontinued so catch rates may decline.",
+        "strengthNote": "Stocking discontinued",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/silver-lake-regional-park/"
+      },
+      {
+        "speciesId": "bluegill",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR lists bluegill sunfish among the catchable species at Silver Lake.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/silver-lake-regional-park/"
+      },
+      {
+        "speciesId": "black-crappie",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR lists black crappie among the catchable species at Silver Lake.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/silver-lake-regional-park/"
+      }
+    ],
+    "Locust Shade Pond": [
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.65,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents channel catfish as stocked each spring at Locust Shade Park pond (stockings currently discontinued until further notice).",
+        "strengthNote": "Stocked each spring; creel limit 4",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/locust-shade-park/"
+      },
+      {
+        "speciesId": "rainbow-trout",
+        "availability": 0.65,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR documents Locust Shade Park as an urban trout stocking site with five stockings from November 1 through April 30 (stocked catchable trout).",
+        "strengthNote": "Stocked-only urban trout program, Nov-Apr",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/locust-shade-park/"
+      },
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents a resident largemouth bass population at Locust Shade Park pond.",
+        "strengthNote": "Resident population",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/locust-shade-park/"
+      },
+      {
+        "speciesId": "bluegill",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents a resident bluegill population at Locust Shade Park pond.",
+        "strengthNote": "Resident population",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/locust-shade-park/"
+      }
+    ],
+    "Lake Shenandoah": [
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.75,
+        "quality": 0.5,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR describes the Lake Shenandoah largemouth bass fishery as fair with a good size distribution.",
+        "strengthNote": "Fair; fish 9-15 in make up the bulk",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-shenandoah/"
+      },
+      {
+        "speciesId": "black-crappie",
+        "availability": 0.75,
+        "quality": 0.45,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents black crappie at Lake Shenandoah, historically stunted but with improving sizes.",
+        "strengthNote": "Historically stunted, sizes improving",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-shenandoah/"
+      },
+      {
+        "speciesId": "bluegill",
+        "availability": 0.85,
+        "quality": 0.45,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents abundant bluegill at Lake Shenandoah with good numbers and high catch rates though moderately stunted.",
+        "strengthNote": "Good numbers, high catch rates; few over 6 in",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-shenandoah/"
+      },
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.65,
+        "quality": 0.4,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents channel catfish at Lake Shenandoah with modest catch rates of 12-20 inch fish; stocking discontinued.",
+        "strengthNote": "Modest catch; 12-20 in; stocking discontinued",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-shenandoah/"
+      },
+      {
+        "speciesId": "common-carp",
+        "availability": 0.65,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR lists common carp among the species anglers can catch at Lake Shenandoah.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-shenandoah/"
+      },
+      {
+        "speciesId": "muskellunge",
+        "availability": 0.85,
+        "quality": 0.8,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR calls muskellunge the bright spot at Lake Shenandoah, stocked annually and offering a great opportunity to catch a trophy species.",
+        "strengthNote": "Stocked annually; trophy opportunity",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-shenandoah/"
+      }
+    ],
+    "Mountain Run Lake": [
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.85,
+        "quality": 0.7,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR describes largemouth bass as providing good fishing at Mountain Run Lake.",
+        "strengthNote": "Good fishing",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/mountain-run/"
+      },
+      {
+        "speciesId": "black-crappie",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR lists crappie among the species at Mountain Run Lake.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/mountain-run/"
+      },
+      {
+        "speciesId": "bluegill",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR lists bluegill among the species at Mountain Run Lake.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/mountain-run/"
+      },
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.85,
+        "quality": 0.85,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR describes the Mountain Run Lake channel catfish population as among the best found in a small impoundment in Northern Virginia.",
+        "strengthNote": "Among the best small-impoundment catfish in NoVa",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/mountain-run/"
+      }
+    ],
+    "Lake Orange": [
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.85,
+        "quality": 0.8,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR describes largemouth bass fishing at Lake Orange as very good, with numerous 10-12 inch fish and a decent number of 15-18 inch fish.",
+        "strengthNote": "Very good; 10-12 in numerous, some 15-18 in",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-orange/"
+      },
+      {
+        "speciesId": "black-crappie",
+        "availability": 0.85,
+        "quality": 0.8,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR describes the Lake Orange black crappie population as healthy and abundant and in good condition.",
+        "strengthNote": "Healthy, abundant, good condition",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-orange/"
+      },
+      {
+        "speciesId": "walleye",
+        "availability": 0.75,
+        "quality": 0.6,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents a decent walleye fishery at Lake Orange, stocked regularly with 4-5 pound fish caught routinely.",
+        "strengthNote": "Stocked regularly; 4-5 lb routine",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-orange/"
+      },
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.75,
+        "quality": 0.7,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents a good channel catfish fishery at Lake Orange with numerous fish in the 2-pound-plus range (stockings discontinued until further notice).",
+        "strengthNote": "Good; numerous 2 lb-plus fish",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-orange/"
+      },
+      {
+        "speciesId": "bluegill",
+        "availability": 0.85,
+        "quality": 0.7,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents abundant bluegill at Lake Orange averaging 6-7 inches.",
+        "strengthNote": "Abundant; 6-7 in average",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-orange/"
+      },
+      {
+        "speciesId": "yellow-perch",
+        "availability": 0.65,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR lists yellow perch among the species present at Lake Orange.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-orange/"
+      },
+      {
+        "speciesId": "white-perch",
+        "availability": 0.65,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR lists white perch among the species present at Lake Orange.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-orange/"
+      },
+      {
+        "speciesId": "common-carp",
+        "availability": 0.65,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR lists common carp among the species present at Lake Orange.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-orange/"
+      }
+    ],
+    "Lake Frederick": [
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.85,
+        "quality": 0.9,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents largemouth bass as an excellent, high-quality fishery in Lake Frederick, historically the best in the Shenandoah Valley.",
+        "strengthNote": "Excellent population; many 2-4 lb fish, some up to 10 lb",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-frederick/"
+      },
+      {
+        "speciesId": "bluegill",
+        "availability": 0.85,
+        "quality": 0.8,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents bluegill/sunfish as producing good numbers of large, hand-sized fish in Lake Frederick.",
+        "strengthNote": "Only regional lake producing good numbers of large sunfish; hand-sized",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-frederick/"
+      },
+      {
+        "speciesId": "black-crappie",
+        "availability": 0.75,
+        "quality": 0.6,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents black crappie as a healthy population in Lake Frederick with fish of harvestable size.",
+        "strengthNote": "Healthy; harvestable 8-10 inch fish available",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-frederick/"
+      },
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.85,
+        "quality": 0.8,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents channel catfish in fantastic numbers in Lake Frederick, historically stocked annually.",
+        "strengthNote": "Fantastic numbers; fish over 25 inches; stocking discontinued",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-frederick/"
+      }
+    ],
+    "Lake Fairfax": [
+      {
+        "speciesId": "bluegill",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents bluegill as present in Lake Fairfax.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/fairfax-lake/"
+      },
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents largemouth bass as present in Lake Fairfax.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/fairfax-lake/"
+      },
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.7,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents channel catfish in Lake Fairfax, though stocking has been discontinued.",
+        "strengthNote": "Stocking discontinued; expect lower catch rates over time",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/fairfax-lake/"
+      },
+      {
+        "speciesId": "black-crappie",
+        "availability": 0.7,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR documents crappie as present in Lake Fairfax.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/fairfax-lake/"
+      }
+    ],
+    "Lake Burke": [
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.85,
+        "quality": 0.9,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents the largemouth bass population of Burke Lake as in excellent condition.",
+        "strengthNote": "Excellent; averaging ~3 lb, 6 lb fish common",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-burke/"
+      },
+      {
+        "speciesId": "muskellunge",
+        "availability": 0.85,
+        "quality": 0.95,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents Burke Lake as a stocked trophy muskellunge fishery.",
+        "strengthNote": "Trophy fishery; numerous 20-25 lb fish; 49.25 inch fish netted",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-burke/"
+      },
+      {
+        "speciesId": "walleye",
+        "availability": 0.8,
+        "quality": 0.85,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR stocks walleye (saugeye) annually in Burke Lake and documents a strong fishery.",
+        "strengthNote": "Stocked 100/acre; anglers catch 4-7 lb fish, some over 9 lb",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-burke/"
+      },
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.8,
+        "quality": 0.8,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents a good channel catfish fishery in Burke Lake.",
+        "strengthNote": "Numerous 10-15 lb fish; lake record 21 lb 8 oz; stocking discontinued",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-burke/"
+      },
+      {
+        "speciesId": "bluegill",
+        "availability": 0.85,
+        "quality": 0.5,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents an abundant bluegill population in Burke Lake.",
+        "strengthNote": "Abundant but small; average 5-7 inches",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-burke/"
+      },
+      {
+        "speciesId": "black-crappie",
+        "availability": 0.75,
+        "quality": 0.55,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents a decent black crappie fishery in Burke Lake.",
+        "strengthNote": "Numerous 6-8 inch fish; lake record 3.5 lb",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-burke/"
+      },
+      {
+        "speciesId": "white-perch",
+        "availability": 0.65,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR documents white perch as present in Burke Lake.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-burke/"
+      },
+      {
+        "speciesId": "yellow-perch",
+        "availability": 0.65,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR documents yellow perch as present in Burke Lake.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-burke/"
+      },
+      {
+        "speciesId": "blue-catfish",
+        "availability": 0.65,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR documents occasional blue catfish in Burke Lake.",
+        "strengthNote": "Occasional",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-burke/"
+      },
+      {
+        "speciesId": "northern-snakehead",
+        "availability": 0.65,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR documents northern snakehead as an established invasive target in Burke Lake.",
+        "strengthNote": "Invasive; popular fly and spin target",
+        "sourceUrl": "https://dwr.virginia.gov/blog/let-out-some-line-at-burke-lake/"
+      }
+    ],
+    "Beaverdam Reservoir": [
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.85,
+        "quality": 0.5,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR lists largemouth bass as the best bet in Beaverdam Creek Reservoir.",
+        "strengthNote": "Best bet; ranks 11th of 18 district impoundments for preferred bass catch",
+        "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Beaverdam-Creek-Reservoir-Fisheries-Management-Report-2023.pdf"
+      },
+      {
+        "speciesId": "bluegill",
+        "availability": 0.85,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR documents bluegill, maintained by natural reproduction, in Beaverdam Creek Reservoir.",
+        "strengthNote": "Maintained by natural reproduction",
+        "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Beaverdam-Creek-Reservoir-Fisheries-Management-Report-2023.pdf"
+      },
+      {
+        "speciesId": "black-crappie",
+        "availability": 0.85,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR documents black crappie as a popular fishery in Beaverdam Creek Reservoir.",
+        "strengthNote": "Among most popular targets",
+        "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Beaverdam-Creek-Reservoir-Fisheries-Management-Report-2023.pdf"
+      },
+      {
+        "speciesId": "common-carp",
+        "availability": 0.7,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR documents common carp as present in Beaverdam Creek Reservoir.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Beaverdam-Creek-Reservoir-Fisheries-Management-Report-2023.pdf"
+      },
+      {
+        "speciesId": "white-perch",
+        "availability": 0.7,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR documents white perch as present in Beaverdam Creek Reservoir.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Beaverdam-Creek-Reservoir-Fisheries-Management-Report-2023.pdf"
+      },
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR documents channel catfish as present in Beaverdam Creek Reservoir.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Beaverdam-Creek-Reservoir-Fisheries-Management-Report-2023.pdf"
+      }
+    ],
+    "Occoquan River": [
+      {
+        "speciesId": "white-perch",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents white perch in the tidal Occoquan River.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
+      },
+      {
+        "speciesId": "striped-bass",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents striped bass in the tidal Occoquan River.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
+      },
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents largemouth bass in the tidal Occoquan River.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
+      },
+      {
+        "speciesId": "black-crappie",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR documents crappie in the tidal Occoquan River.",
+        "strengthNote": "DWR page lists generic 'crappie'; mapped to black crappie, the dominant tidal-freshwater crappie",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
+      },
+      {
+        "speciesId": "yellow-perch",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents yellow perch in the tidal Occoquan River.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
+      },
+      {
+        "speciesId": "flathead-catfish",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents flathead catfish in the tidal Occoquan River.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
+      },
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents channel catfish in the tidal Occoquan River.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
+      }
+    ],
+    "Accotink Creek": [
+      {
+        "speciesId": "rainbow-trout",
+        "availability": 0.65,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR designates Accotink Creek (Fairfax County) a delayed-harvest stocked trout water, where rainbow trout are the primary stocked species.",
+        "strengthNote": "Delayed-harvest fishery: Oct 1-May 31 catch-and-release, artificial lures only; stocked put-and-take otherwise.",
+        "sourceUrl": "https://dwr.virginia.gov/fishing/trout/delayed-harvest-waters/"
+      }
+    ],
+    "Holmes Run": [
+      {
+        "speciesId": "rainbow-trout",
+        "availability": 0.65,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR designates Holmes Run (Fairfax County) a delayed-harvest stocked trout water, where rainbow trout are the primary stocked species.",
+        "strengthNote": "Delayed-harvest fishery: Oct 1-May 31 catch-and-release, artificial lures only; stocked put-and-take otherwise.",
+        "sourceUrl": "https://dwr.virginia.gov/fishing/trout/delayed-harvest-waters/"
+      }
+    ],
+    "Quantico Creek": [
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.85,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "The NPS Prince William Forest Park fishing page documents largemouth bass as one of the most commonly found fish in Quantico Creek.",
+        "strengthNote": "Listed among the most commonly caught species",
+        "sourceUrl": "https://www.nps.gov/prwi/planyourvisit/fishing.htm"
+      },
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.85,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "The NPS Prince William Forest Park fishing page documents channel catfish among the most commonly found fish in Quantico Creek.",
+        "strengthNote": "Listed among the most commonly caught species",
+        "sourceUrl": "https://www.nps.gov/prwi/planyourvisit/fishing.htm"
+      },
+      {
+        "speciesId": "bluegill",
+        "availability": 0.85,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "The NPS Prince William Forest Park fishing page documents bluegill among the most commonly found fish in Quantico Creek.",
+        "strengthNote": "Listed among the most commonly caught species",
+        "sourceUrl": "https://www.nps.gov/prwi/planyourvisit/fishing.htm"
+      },
+      {
+        "speciesId": "northern-snakehead",
+        "availability": 0.7,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "The NPS Prince William Forest Park fishing page notes northern snakehead as a documented invasive species present in the park's waters including Quantico Creek.",
+        "strengthNote": "Documented invasive presence",
+        "sourceUrl": "https://www.nps.gov/prwi/planyourvisit/fishing.htm"
+      }
+    ],
+    "Neabsco Creek": [
+      {
+        "speciesId": "northern-snakehead",
+        "availability": 0.85,
+        "quality": 0.7,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR documents northern snakehead as very abundant throughout the tidal Potomac tributaries, which include Neabsco Creek.",
+        "strengthNote": "Described as very abundant in tidal Potomac tributaries",
+        "sourceUrl": "https://dwr.virginia.gov/fishing/snakehead/"
+      }
+    ],
+    "Cameron Run": [
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.8,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents largemouth bass in Cook Lake at Cameron Run Regional Park.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/blog/five-great-places-in-northern-virginia-to-fish-after-work/"
+      },
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.8,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR documents channel catfish in Cook Lake at Cameron Run Regional Park.",
+        "strengthNote": null,
+        "sourceUrl": "https://dwr.virginia.gov/blog/five-great-places-in-northern-virginia-to-fish-after-work/"
+      },
+      {
+        "speciesId": "rainbow-trout",
+        "availability": 0.65,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR notes it stocks trout in the cooler months at Cook Lake, Cameron Run Regional Park (DWR urban stockings are rainbow trout).",
+        "strengthNote": "Seasonally stocked in cooler months",
+        "sourceUrl": "https://dwr.virginia.gov/blog/five-great-places-in-northern-virginia-to-fish-after-work/"
+      }
+    ],
+    "Hazel River": [
+      {
+        "speciesId": "smallmouth-bass",
+        "availability": 0.85,
+        "quality": 0.7,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR (Upper Rappahannock waterbody page) describes the Hazel River as a good smallmouth stream in its own right.",
+        "strengthNote": "Described as a good smallmouth stream",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/"
+      }
+    ],
+    "Thornton River": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.85,
+        "quality": 0.8,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR's North Fork Thornton River waterbody page documents an excellent native brook trout population within Shenandoah National Park near Sperryville.",
+        "strengthNote": "Excellent population; most adults 6-9 inches",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/north-fork-thorton-river/"
+      }
+    ],
+    "Robinson River": [
+      {
+        "speciesId": "rainbow-trout",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR lists the Robinson River (Madison County) as a Category A designated stocked trout water stocked with rainbow trout eight times per season plus a Heritage Day stocking.",
+        "strengthNote": "Primary catchable stocked species; Category A water stocked 8x/season plus Heritage Day event.",
+        "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/catchable-trout-stocking-plan.pdf"
+      },
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.65,
+        "quality": null,
+        "evidenceConfidence": 0.68,
+        "summary": "Virginia DWR documents brook trout among the trout stocked in the Robinson River, Madison County.",
+        "strengthNote": "Secondary stocked species alongside rainbow trout.",
+        "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/catchable-trout-stocking-plan.pdf"
+      }
+    ],
+    "Rose River": [
+      {
+        "speciesId": "rainbow-trout",
+        "availability": 0.75,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "summary": "Virginia DWR lists the Rose River (Madison County) as a Category A designated stocked trout water stocked eight times between October and May, primarily with rainbow trout.",
+        "strengthNote": "Primary catchable stocked species; Category A water stocked 8x/season.",
+        "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/catchable-trout-stocking-plan.pdf"
+      }
+    ]
+  }
+}
