@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from .coverage_seed import COVERAGE_LOCATIONS
+
 ACCESS_SOURCE = "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0"
 SHENANDOAH_SOURCE = "https://dwr.virginia.gov/blog/five-great-places-in-the-northern-shenandoah-valley-to-fish-after-work/"
 WALLEYE_SOURCE = "https://dwr.virginia.gov/wp-content/uploads/media/Walleye-Fishing-Forecast-2026.pdf"
@@ -75,6 +77,8 @@ def location(
         "access": access,
         "public_access": True,
         "source": ACCESS_SOURCE,
+        "source_name": "Virginia Department of Wildlife Resources",
+        "source_reviewed": "2026-07-13",
         "aliases": aliases or [],
         "activity_estimate": activity_estimate,
         "species_evidence": evidence or {},
@@ -107,5 +111,4 @@ LOCATIONS = [
     location("morgans-ford", "Morgan's Ford", "Main Stem Shenandoah River", "Warren", 38.957833, -78.121708, 55, ["shore", "wade", "kayak", "boat"], river_evidence(True), activity_estimate=0.82),
     location("riverton", "Riverton", "North Fork Shenandoah River", "Warren", 38.949632, -78.198084, 58, ["shore", "kayak", "boat"], river_evidence(), activity_estimate=0.74),
     location("simpsons", "Simpson's", "South Fork Shenandoah River", "Warren", 38.878751, -78.261977, 64, ["shore", "wade", "kayak", "boat"], river_evidence(), activity_estimate=0.77),
-]
-
+] + COVERAGE_LOCATIONS

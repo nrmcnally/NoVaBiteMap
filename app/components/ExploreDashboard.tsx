@@ -381,7 +381,7 @@ export function ExploreDashboard() {
               </>
             )}
           </div>
-          <div className="map-source"><ShieldCheck size={14} /> Access verified by Virginia DWR</div>
+          <div className="map-source"><ShieldCheck size={14} /> Access verified by official agency sources</div>
         </div>
 
         <aside className={`results-panel ${resultsOpen ? "open" : ""}`} aria-hidden={!resultsOpen}>

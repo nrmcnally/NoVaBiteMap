@@ -1,3 +1,5 @@
+import { coverageLocations } from "./coverage-data";
+
 export type AccessMethod = "shore" | "wade" | "kayak" | "boat";
 
 export type Species = {
@@ -20,6 +22,8 @@ export type SpeciesEvidence = {
   depth: string;
   positive: string[];
   negative: string[];
+  sourceName?: string;
+  sourceUrl?: string;
 };
 
 export type FishingLocation = {
@@ -41,6 +45,9 @@ export type FishingLocation = {
   accessFit: number;
   bestWindow: string;
   evidence: SpeciesEvidence[];
+  accessAuthority: string;
+  accessSourceUrl: string;
+  sourceReviewed: string;
 };
 
 export const sourceLinks = {
@@ -53,6 +60,22 @@ export const sourceLinks = {
   aquaticGap:
     "https://www.usgs.gov/data/aquatic-gap-analysis-project-aquatic-gap-aquatic-species-distribution-modeling-national",
   nws: "https://www.weather.gov/documentation/services-web-api",
+  fairfaxFishing: "https://www.fairfaxcounty.gov/parks/fishing",
+  fairfaxSmallLakes: "https://www.fairfaxcounty.gov/parks/small-lakes",
+  npsGwmpFishing: "https://www.nps.gov/gwmp/planyourvisit/fishing.htm",
+  npsGreatFalls: "https://www.nps.gov/grfa/planyourvisit/outdooractivities.htm",
+  novaFountainhead: "https://www.novaparks.com/parks/fountainhead-regional-park/things-to-do/fishing",
+  novaBullRun: "https://www.novaparks.com/parks/bull-run-marina/things-to-do/fishing",
+  novaPohick: "https://www.novaparks.com/parks/pohick-bay-regional-park/things-to-do/fishing",
+  novaAlgonkian: "https://www.novaparks.com/parks/algonkian-regional-park/things-to-do/fishing",
+  novaPiscataway: "https://www.novaparks.com/parks/piscataway-crossing-regional-park/things-to-do/fishing",
+  novaSeneca: "https://www.novaparks.com/parks/seneca-regional-park/things-to-do/fishing",
+  novaOccoquan: "https://www.novaparks.com/parks/occoquan-regional-park/things-to-do/fishing",
+  novaReservoir: "https://www.novaparks.com/parks/reservoir-park/things-to-do/fishing",
+  dcrFishing: "https://www.dcr.virginia.gov/state-parks/fishing",
+  dcrLeesylvania: "https://www.dcr.virginia.gov/state-parks/leesylvania",
+  dcrMasonNeck: "https://www.dcr.virginia.gov/state-parks/mason-neck",
+  pwcFishing: "https://www.pwcva.gov/department/parks-recreation/fishing/",
 };
 
 export const species: Species[] = [
@@ -199,7 +222,7 @@ const lakeBrittleEvidence: SpeciesEvidence[] = [
 const accessOnlyNotice =
   "Public access is verified by Virginia DWR. Species evidence has not yet cleared the Phase 1 evidence gate.";
 
-export const locations: FishingLocation[] = [
+const dwrLocations: Array<Omit<FishingLocation, "accessAuthority" | "accessSourceUrl" | "sourceReviewed">> = [
   {
     id: "lake-burke",
     name: "Lake Burke",
@@ -357,6 +380,15 @@ export const locations: FishingLocation[] = [
   }),
 ];
 
+export const locations: FishingLocation[] = [
+  ...dwrLocations.map((location) => ({
+    ...location,
+    accessAuthority: "Virginia Department of Wildlife Resources",
+    accessSourceUrl: sourceLinks.access,
+    sourceReviewed: "2026-07-13",
+  })),
+  ...coverageLocations,
+];
+
 export const locationById = (id: string) => locations.find((location) => location.id === id);
 export const speciesById = (id: string) => species.find((item) => item.id === id);
-

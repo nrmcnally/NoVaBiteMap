@@ -36,7 +36,17 @@ class ApiTests(unittest.TestCase):
         results = response.json()
         self.assertGreater(len(results), 0)
         self.assertTrue(all(item["availability_score"] >= 0.35 for item in results))
-        self.assertTrue(all("Shenandoah" in item["location"]["waterbody"] for item in results))
+        self.assertTrue(all(item["location"]["species_evidence"].get("smallmouth-bass") for item in results))
+        self.assertTrue(any(item["location"]["id"] == "riverbend-park" for item in results))
+
+    def test_coverage_pass_has_fifty_provenance_backed_locations(self):
+        response = self.client.get("/api/locations", params={"limit": 200})
+        self.assertEqual(response.status_code, 200)
+        locations = response.json()
+        self.assertEqual(len(locations), 50)
+        self.assertTrue(all(item.get("source") and item.get("source_name") for item in locations))
+        ids = {item["id"] for item in locations}
+        self.assertTrue({"lake-fairfax", "gravelly-point", "beaverdam-reservoir"}.issubset(ids))
 
     def test_location_alias_search(self):
         response = self.client.get("/api/locations/search", params={"q": "Burke Lake Park"})
@@ -46,4 +56,3 @@ class ApiTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

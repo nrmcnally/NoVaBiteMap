@@ -18,7 +18,7 @@ test("build contains the BiteMap opportunity board product contract", async () =
   assert.match(dashboard, /Starting address or ZIP/);
   assert.match(dashboard, /Google Maps directions/);
   assert.match(data, /Smallmouth bass/);
-  assert.match(dashboard, /Access verified by Virginia DWR/);
+  assert.match(dashboard, /Access verified by official agency sources/);
   assert.match(layout, /BiteMap NOVA/);
   assert.doesNotMatch(`${page}${dashboard}${layout}`, /codex-preview|react-loading-skeleton|Your site is taking shape/i);
 });
@@ -44,13 +44,18 @@ test("methodology explains the score without calling it a probability", async ()
   assert.match(methodology, /No evidence = no ranking/);
 });
 
-test("source code preserves the species gate and missing-data language", async () => {
-  const [scoring, conditions, data] = await Promise.all([
+test("source code preserves the species gate, provenance, and missing-data language", async () => {
+  const [scoring, conditions, data, coverage] = await Promise.all([
     readFile(new URL("../app/lib/scoring.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/api/conditions/route.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/lib/data.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/lib/coverage-data.ts", import.meta.url), "utf8"),
   ]);
   assert.match(scoring, /Math\.pow\(evidence\.availability, 1\.5\)/);
   assert.match(conditions, /did not create a fallback observation/);
   assert.match(data, /Public access is verified by Virginia DWR/);
+  assert.match(coverage, /Lake Fairfax Park/);
+  assert.match(coverage, /Gravelly Point/);
+  assert.match(coverage, /accessAuthority/);
+  assert.equal((coverage.match(/verifiedLocation\(\{ id:/g) ?? []).length, 34);
 });

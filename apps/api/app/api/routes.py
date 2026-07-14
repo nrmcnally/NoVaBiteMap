@@ -338,8 +338,15 @@ def delete_favorite(favorite_id: int, user: User = Depends(current_user), sessio
 
 @router.get("/data-sources/status")
 def data_source_status() -> list[dict]:
+    def records_for(source_name: str) -> int:
+        return sum(1 for location in LOCATIONS if location.get("source_name") == source_name)
+
     return [
-        {"provider": "Virginia DWR access", "status": "healthy", "records": len(LOCATIONS), "freshness": "seed reviewed 2026-07-13"},
+        {"provider": "Virginia DWR access", "status": "healthy", "records": records_for("Virginia Department of Wildlife Resources"), "freshness": "seed reviewed 2026-07-13"},
+        {"provider": "Fairfax County Park Authority", "status": "healthy", "records": records_for("Fairfax County Park Authority"), "freshness": "reviewed 2026-07-13"},
+        {"provider": "National Park Service", "status": "healthy", "records": records_for("National Park Service"), "freshness": "reviewed 2026-07-13"},
+        {"provider": "NOVA Parks", "status": "healthy", "records": records_for("NOVA Parks"), "freshness": "reviewed 2026-07-13"},
+        {"provider": "Virginia and Prince William parks", "status": "healthy", "records": records_for("Virginia State Parks") + records_for("Prince William County Parks"), "freshness": "reviewed 2026-07-13"},
         {"provider": "National Weather Service", "status": "on_demand", "freshness": "live request per selected location"},
         {"provider": "USGS Water Services", "status": "association_required", "freshness": "no automatic nearest-gage fallback"},
         {"provider": "USGS Aquatic GAP", "status": "pipeline_ready", "dataset_version": "2.0 (December 2024)"},

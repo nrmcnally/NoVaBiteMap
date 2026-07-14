@@ -4,8 +4,14 @@ import { AlertTriangle, CheckCircle2, Clock3, DatabaseZap, ExternalLink, Fish, M
 import { TopNav } from "../../components/TopNav";
 import { locations, sourceLinks, species } from "../../lib/data";
 
+const countByAuthority = (authority: string) => locations.filter((location) => location.accessAuthority === authority).length;
+
 const providers = [
-  { name: "Virginia DWR access", status: "Healthy", detail: "16 verified records in NOVA seed", updated: "Reviewed Jul 13", href: sourceLinks.access },
+  { name: "Virginia DWR access", status: "Healthy", detail: `${countByAuthority("Virginia Department of Wildlife Resources")} verified access records`, updated: "Reviewed Jul 13", href: sourceLinks.access },
+  { name: "Fairfax County parks", status: "Healthy", detail: `${countByAuthority("Fairfax County Park Authority")} verified fishing locations`, updated: "Reviewed Jul 13", href: sourceLinks.fairfaxFishing },
+  { name: "National Park Service", status: "Healthy", detail: `${countByAuthority("National Park Service")} verified Potomac access locations`, updated: "Reviewed Jul 13", href: sourceLinks.npsGwmpFishing },
+  { name: "NOVA Parks", status: "Healthy", detail: `${countByAuthority("NOVA Parks")} verified regional park locations`, updated: "Reviewed Jul 13", href: sourceLinks.novaOccoquan },
+  { name: "Virginia and Prince William parks", status: "Healthy", detail: `${countByAuthority("Virginia State Parks") + countByAuthority("Prince William County Parks")} verified locations`, updated: "Reviewed Jul 13", href: sourceLinks.pwcFishing },
   { name: "Virginia DWR fisheries", status: "Healthy", detail: "Curated species evidence with source dates", updated: "Reviewed Jul 13", href: sourceLinks.shenandoah },
   { name: "National Weather Service", status: "Live request", detail: "Selected-location hourly forecast", updated: "On demand", href: sourceLinks.nws },
   { name: "USGS Water Data", status: "Needs review", detail: "No automatic nearest-gage fallback", updated: "Association queue", href: "https://waterdata.usgs.gov/" },
@@ -24,7 +30,7 @@ export function DataHealthClient({ adminName }: { adminName: string }) {
           <div className="admin-badges"><span className="identity-chip"><ShieldCheck size={16} /> {adminName}</span><span className="model-chip"><ServerCog size={17} /> Score profile v1.0 active</span></div>
         </header>
         <section className="health-stats">
-          <article><MapPin size={21} /><strong>{locations.length}</strong><span>Verified locations</span><small>Virginia DWR access layer</small></article>
+          <article><MapPin size={21} /><strong>{locations.length}</strong><span>Verified locations</span><small>Multi-agency access catalog</small></article>
           <article><Fish size={21} /><strong>{species.length}</strong><span>Species profiles</span><small>Configuration catalog</small></article>
           <article><DatabaseZap size={21} /><strong>{evidenceCount}</strong><span>Evidence links</span><small>Source-attributed</small></article>
           <article className="warning-stat"><AlertTriangle size={21} /><strong>{missingEvidence}</strong><span>Access-only records</span><small>Excluded from species ranking</small></article>

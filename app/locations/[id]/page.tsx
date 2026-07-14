@@ -44,7 +44,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
           <div>
             <div className="hero-tags">
               <span><MapPin size={14} /> {location.county} County, Virginia</span>
-              <span className="verified-pill">DWR access verified</span>
+              <span className="verified-pill">Verified by {location.accessAuthority}</span>
             </div>
             <h1>{location.name}</h1>
             <p>{location.waterbody} · {location.waterbodyType} · Public access point</p>
@@ -143,7 +143,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                 <div><dt>Coordinates</dt><dd>{location.lat.toFixed(5)}, {location.lng.toFixed(5)}</dd></div>
                 <div><dt>Drive estimate</dt><dd>{location.travelMinutes} min · {location.distanceMiles} mi</dd></div>
                 <div><dt>Water status</dt><dd>{location.flowStatus}</dd></div>
-                <div><dt>Public access</dt><dd>Verified in DWR access layer</dd></div>
+                <div><dt>Public access</dt><dd>Verified by {location.accessAuthority}</dd></div>
               </dl>
             </section>
             <section className="safety-panel">
@@ -154,11 +154,12 @@ export default async function LocationPage({ params }: LocationPageProps) {
             <section>
               <span className="eyebrow">Source trail</span>
               <h2>Why you can trust it</h2>
-              <a href={sourceLinks.access} target="_blank" rel="noreferrer">Virginia DWR access layer <ExternalLink size={14} /></a>
+              <a href={location.accessSourceUrl} target="_blank" rel="noreferrer">{location.accessAuthority} access source <ExternalLink size={14} /></a>
+              {primaryEvidence?.sourceUrl && <a href={primaryEvidence.sourceUrl} target="_blank" rel="noreferrer">{primaryEvidence.sourceName ?? "Official species evidence"} <ExternalLink size={14} /></a>}
               {location.waterbody.includes("Shenandoah") && <a href={sourceLinks.shenandoah} target="_blank" rel="noreferrer">DWR regional fishery feature <ExternalLink size={14} /></a>}
               {location.id === "lake-brittle" && <a href={sourceLinks.walleye2026} target="_blank" rel="noreferrer">2026 DWR Walleye Forecast <ExternalLink size={14} /></a>}
               <a href="/methodology">Read the scoring methodology <ExternalLink size={14} /></a>
-              <small>Source records reviewed 2026-07-13. Always verify current regulations with the official authority.</small>
+              <small>Access source reviewed {location.sourceReviewed}. Always verify current regulations with the official authority.</small>
             </section>
             <section className="condition-mini">
               <div><Waves size={18} /><span>Hydrology<strong>Association pending</strong></span></div>
