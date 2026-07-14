@@ -3,8 +3,8 @@ import { AlertTriangle, ArrowLeft, ArrowRight, Award, ExternalLink, Fish, Info, 
 import { TopNav } from "../../components/TopNav";
 import { FishFactsPanel } from "../../components/FishFactsPanel";
 import { SeasonalChart, TempGauge, WaterTypeFit } from "../../components/FishVisuals";
-import { fetchSpecies } from "../../lib/api";
 import { speciesById } from "../../lib/data";
+import { localFishFacts, localSpeciesWaters } from "../../lib/fish-facts";
 import { fishImageFor } from "../../lib/fish-images";
 
 type FishPageProps = { params: Promise<{ id: string }> };
@@ -14,17 +14,18 @@ const NATIVE_LABEL: Record<string, string> = { native: "Native to Virginia", int
 export default async function FishPage({ params }: FishPageProps) {
   const { id } = await params;
   const local = speciesById(id);
-  const detail = await fetchSpecies(id);
+  if (!local) notFound();
 
-  if (!detail && !local) notFound();
+  // Rendered entirely from bundled data so the guide works without the backend.
+  const facts = localFishFacts(id);
+  const locations = localSpeciesWaters(id);
+  const disclaimer = "Species facts are researched reference content, not a guarantee of presence or catch at any specific water.";
 
-  const name = detail?.name ?? local?.name ?? id;
-  const scientificName = detail?.scientificName ?? local?.scientificName ?? "";
-  const habitat = detail?.facts?.habitat ?? local?.habitat ?? null;
-  const facts = detail?.facts ?? null;
-  const locations = detail?.locations ?? [];
+  const name = local.name;
+  const scientificName = local.scientificName;
+  const habitat = facts?.habitat ?? local.habitat ?? null;
   const image = fishImageFor(id);
-  const topWaters = locations.slice(0, 20);
+  const topWaters = locations;
 
   return (
     <div className="app-frame detail-page">
@@ -124,21 +125,23 @@ export default async function FishPage({ params }: FishPageProps) {
                 {locations.length > 0 && <a className="see-on-map" href={`/?species=${id}`}>See on map <ArrowRight size={13} /></a>}
               </div>
               {topWaters.length > 0 ? (
-                <div className="fish-location-list ranked">
-                  {topWaters.map((loc) => (
-                    <a key={loc.id} href={`/locations/${loc.id}?species=${id}`} className={`fish-rank-row rank-${loc.state}`}>
-                      <span className={`fish-rank-orb orb-${loc.state}`}>{loc.opportunityScore}</span>
-                      <span className="fish-loc-name">{loc.name}
-                        <small>{loc.waterbody} · {loc.county}{loc.modeled ? " · inferred" : ""}</small>
-                      </span>
-                      <span className="fish-rank-conf">{loc.confidenceLabel}</span>
-                    </a>
-                  ))}
+                <div className="fish-location-scroll">
+                  <div className="fish-location-list ranked">
+                    {topWaters.map((loc) => (
+                      <a key={loc.id} href={`/locations/${loc.id}?species=${id}`} className={`fish-rank-row rank-${loc.state}`}>
+                        <span className={`fish-rank-orb orb-${loc.state}`}>{loc.opportunityScore}</span>
+                        <span className="fish-loc-name">{loc.name}
+                          <small>{loc.waterbody} · {loc.county}{loc.modeled ? " · inferred" : ""}</small>
+                        </span>
+                        <span className="fish-rank-conf">{loc.confidenceLabel}</span>
+                      </a>
+                    ))}
+                  </div>
                 </div>
               ) : (
                 <p className="fish-empty">BiteMap has no location that clears the evidence gate for this species yet. That is not evidence the fish is absent from the region.</p>
               )}
-              {locations.length > 0 && <small className="fish-where-note">Ranked by today&apos;s estimated opportunity (documented waters first). Live conditions refine each score on the spot page.</small>}
+              {locations.length > 0 && <small className="fish-where-note">Ranked by estimated opportunity (documented waters first). Scroll for more; live conditions refine each score on the spot page.</small>}
             </section>
 
             {facts?.stateRecordLb && (
@@ -155,11 +158,9 @@ export default async function FishPage({ params }: FishPageProps) {
               <a href="https://dwr.virginia.gov/fishing/trophy-fish/" target="_blank" rel="noreferrer">DWR Trophy Fish / citation program <ExternalLink size={13} /></a>
             </section>
 
-            {detail?.disclaimer && (
-              <section className="fish-disclaimer-card">
-                <p><Info size={14} /> {detail.disclaimer}</p>
-              </section>
-            )}
+            <section className="fish-disclaimer-card">
+              <p><Info size={14} /> {disclaimer}</p>
+            </section>
           </aside>
         </section>
       </main>
