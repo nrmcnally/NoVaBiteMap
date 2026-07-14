@@ -3,8 +3,11 @@
 export {
   AlertTriangle,
   ArrowLeft,
+  ArrowRight,
+  Award,
   Sailboat,
   CheckCircle2,
+  ChevronDown,
   Clock3,
   Droplets,
   ExternalLink,
@@ -16,8 +19,10 @@ export {
   LockKeyhole,
   MapPin,
   Navigation,
+  Ruler,
   ShieldAlert,
   ShieldCheck,
   Sparkles,
+  Thermometer,
   Waves,
 } from "lucide-react";

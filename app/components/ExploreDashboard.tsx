@@ -147,10 +147,14 @@ export function ExploreDashboard() {
   }, [access, harvestFilter, origin, query, speciesIds, stockedOnly, timeFilter, waterbodyTypes]);
 
   const ranked = useMemo(() => {
-    if (speciesIds.length === 0) return [];
     return visibleRows
       .map(({ location, travel, advisory }) => {
-        const matches = speciesIds.flatMap((speciesId) => {
+        // With a target species, rank by that species. Without one, default to the
+        // location's highest-scoring evidenced fish so a place can be explored solo.
+        const sourceSpecies = speciesIds.length > 0
+          ? speciesIds
+          : [...new Set(location.evidence.map((evidence) => evidence.speciesId))];
+        const matches = sourceSpecies.flatMap((speciesId) => {
           const opportunity = opportunityFor(location, speciesId);
           const fish = speciesById(speciesId);
           return opportunity && fish ? [{ fish, opportunity }] : [];
@@ -169,7 +173,7 @@ export function ExploreDashboard() {
     }
   }, [ranked, selectedId, speciesIds, visibleRows]);
 
-  const selected = selectedId ? ranked.find(({ location }) => location.id === selectedId) : ranked[0];
+  const selected = selectedId ? ranked.find(({ location }) => location.id === selectedId) : undefined;
   const selectedLocation = selected?.location;
   const selectedOpportunity = selected?.opportunity ?? null;
   const selectedSpecies = speciesIds.map((id) => speciesById(id)).filter((item): item is NonNullable<typeof item> => Boolean(item));
@@ -220,6 +224,28 @@ export function ExploreDashboard() {
       window.removeEventListener("bitemap:favorites-changed", refresh);
     };
   }, [loadFavorites]);
+
+  // Close any open top-of-page filter dropdown when clicking/pressing outside it
+  // or pressing Escape. Selections inside a menu keep it open (multi-select).
+  useEffect(() => {
+    function closeOutside(event: Event) {
+      const target = event.target as Node | null;
+      document.querySelectorAll<HTMLDetailsElement>("details.filter-menu[open]").forEach((menu) => {
+        if (!target || !menu.contains(target)) menu.removeAttribute("open");
+      });
+    }
+    function closeOnEscape(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        document.querySelectorAll<HTMLDetailsElement>("details.filter-menu[open]").forEach((menu) => menu.removeAttribute("open"));
+      }
+    }
+    document.addEventListener("pointerdown", closeOutside);
+    document.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.removeEventListener("pointerdown", closeOutside);
+      document.removeEventListener("keydown", closeOnEscape);
+    };
+  }, []);
 
   const refreshConditions = useCallback(async () => {
     if (!selectedLocation) return;
@@ -341,14 +367,14 @@ export function ExploreDashboard() {
   const selectMapLocation = useCallback((id: string) => {
     setSelectedId(id);
     const location = locations.find((item) => item.id === id);
-    if (speciesIds.length === 0) {
-      setToast(`${location?.name ?? "This spot"} is verified access. Choose a species to see a ranking.`);
-      return;
-    }
-    if (location && speciesIds.some((speciesId) => opportunityFor(location, speciesId))) {
+    if (!location) return;
+    const targets = speciesIds.length > 0 ? speciesIds : [...new Set(location.evidence.map((e) => e.speciesId))];
+    if (targets.some((speciesId) => opportunityFor(location, speciesId))) {
       setResultsOpen(true);
+    } else if (speciesIds.length > 0) {
+      setToast(`${location.name} has no qualifying evidence for the selected species yet.`);
     } else {
-      setToast(`${location?.name ?? "This spot"} has no qualifying evidence for the selected species yet.`);
+      setToast(`${location.name} is verified public access, but no species has cleared the evidence gate yet.`);
     }
   }, [speciesIds]);
 
@@ -499,16 +525,10 @@ export function ExploreDashboard() {
             onSelect={selectMapLocation}
           />
           <div className="map-legend">
-            {speciesIds.length === 0 ? (
-              <span><i className="marker-access" /> Verified public access</span>
-            ) : (
-              <>
-                <span><i className="marker-hot" /> 70+ strong</span>
-                <span><i className="marker-mid" /> 55-69 fair</span>
-                <span><i className="marker-low" /> under 55</span>
-                <span><i className="marker-pending" /> evidence pending</span>
-              </>
-            )}
+            <span><i className="marker-hot" /> 70+ strong</span>
+            <span><i className="marker-mid" /> 55-69 fair</span>
+            <span><i className="marker-low" /> under 55</span>
+            <span><i className="marker-pending" /> {speciesIds.length === 0 ? "access · evidence pending" : "evidence pending"}</span>
             {activeAdvisoryCount > 0 && <span><i className="marker-advisory" /> {activeAdvisoryCount} relevant VDH restriction{activeAdvisoryCount === 1 ? "" : "s"}</span>}
           </div>
           <div className="map-source"><ShieldCheck size={14} /> Access verified by official agency sources</div>
@@ -518,29 +538,23 @@ export function ExploreDashboard() {
           <div className="results-heading">
             <div>
               <span className="eyebrow">{selectedSpecies.length === 1 ? `Ranked for ${selectedSpecies[0].short}` : selectedSpecies.length > 1 ? "Best supported selected target" : "Opportunity results"}</span>
-              <h2>{selectedSpecies.length === 1 ? selectedSpecies[0].name : selectedSpecies.length > 1 ? `${selectedSpecies.length} selected species` : "Choose a target species"}</h2>
+              <h2>{selectedSpecies.length === 1 ? selectedSpecies[0].name : selectedSpecies.length > 1 ? `${selectedSpecies.length} selected species` : "Best fish by water"}</h2>
             </div>
             <button className="close-results" onClick={() => setResultsOpen(false)} aria-label="Collapse results"><PanelRightClose size={20} /></button>
           </div>
 
-          {selectedSpecies.length > 0 && (
-            <div className="ranking-note">
-              <Info size={15} /> {selectedSpecies.length > 1 ? "Each spot is ranked by its strongest selected species; matching scores stay separate." : "Rankings use official species evidence plus a seasonal activity estimate."}
-              <Link href="/methodology">What this means</Link>
-            </div>
-          )}
+          <div className="ranking-note">
+            <Info size={15} /> {selectedSpecies.length > 1 ? "Each spot is ranked by its strongest selected species; matching scores stay separate." : selectedSpecies.length === 1 ? "Rankings use official species evidence plus a seasonal activity estimate." : "Each water is ranked by its strongest evidenced species. Pick a target species above to rank for a specific fish."}
+            <Link href="/methodology">What this means</Link>
+          </div>
 
-          {selectedSpecies.length === 0 ? (
-            <div className="empty-state choose-species-state">
-              <Fish size={34} />
-              <h3>No species selected</h3>
-              <p>All verified access points remain visible. Choose a target species above when you want BiteMap to rank the evidence-qualified options.</p>
-            </div>
-          ) : ranked.length === 0 ? (
+          {ranked.length === 0 ? (
             <div className="empty-state">
               <Fish size={34} />
               <h3>No evidence-qualified matches</h3>
-              <p>Try a wider travel range, another access method, or a different species. BiteMap will not fill gaps with invented species claims.</p>
+              <p>{selectedSpecies.length === 0
+                ? "No evidenced fish match your current filters. Try a wider travel range or a different water type — access-only spots stay on the map."
+                : "Try a wider travel range, another access method, or a different species. BiteMap will not fill gaps with invented species claims."}</p>
               <button onClick={() => { setQuery(""); setAccess("any"); setTimeFilter("any"); setWaterbodyTypes([]); setHarvestFilter("any"); }}>Clear filters</button>
             </div>
           ) : (
@@ -558,7 +572,13 @@ export function ExploreDashboard() {
                     </div>
                     <div className="result-copy">
                       <div className="result-title">
-                        <div><h3>{location.name}</h3><p>{location.waterbody} · {location.county} County</p></div>
+                        <div>
+                          <h3>{location.name}</h3>
+                          <p>{location.waterbody} · {location.county} County</p>
+                          {speciesIds.length === 0 && matches[0] && (
+                            <span className="best-fish-chip"><Fish size={12} /> Top target: {matches[0].fish.name}</span>
+                          )}
+                        </div>
                         <button className={`heart-button ${isSaved ? "saved" : ""}`} onClick={(event) => { event.stopPropagation(); void toggleSaved(location.id); }} aria-label={`${isSaved ? "Remove" : "Save"} ${location.name}`}>
                           <Heart size={18} fill={isSaved ? "currentColor" : "none"} />
                         </button>

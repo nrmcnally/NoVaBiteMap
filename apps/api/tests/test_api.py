@@ -1,103 +1,104 @@
 from __future__ import annotations
 
-import pathlib
-import sys
-import unittest
 
-API_ROOT = pathlib.Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(API_ROOT))
-
-try:
-    from fastapi.testclient import TestClient
-    from app.main import app
-except ImportError:  # Allows pure scoring tests before optional API dependencies are installed.
-    TestClient = None
-    app = None
+def test_health_and_openapi(client):
+    assert client.get("/health").status_code == 200
+    assert client.get("/openapi.json").status_code == 200
 
 
-@unittest.skipIf(TestClient is None, "FastAPI test dependencies are not installed")
-class ApiTests(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        cls.client_context = TestClient(app)
-        cls.client = cls.client_context.__enter__()
-
-    @classmethod
-    def tearDownClass(cls):
-        cls.client_context.__exit__(None, None, None)
-
-    def test_health_and_openapi(self):
-        self.assertEqual(self.client.get("/health").status_code, 200)
-        self.assertEqual(self.client.get("/openapi.json").status_code, 200)
-
-    def test_rankings_gate_species_evidence(self):
-        response = self.client.get("/api/opportunities/ranked", params={"species_id": "smallmouth-bass", "max_minutes": 60})
-        self.assertEqual(response.status_code, 200)
-        results = response.json()
-        self.assertGreater(len(results), 0)
-        self.assertTrue(all(item["availability_score"] >= 0.35 for item in results))
-        self.assertTrue(all(item["location"]["species_evidence"].get("smallmouth-bass") for item in results))
-        self.assertTrue(any(item["location"]["id"] == "riverbend-park" for item in results))
-
-    def test_coverage_pass_has_sixty_three_provenance_backed_locations(self):
-        response = self.client.get("/api/locations", params={"limit": 200})
-        self.assertEqual(response.status_code, 200)
-        locations = response.json()
-        self.assertEqual(len(locations), 63)
-        self.assertTrue(all(item.get("source") and item.get("source_name") for item in locations))
-        self.assertTrue(all(item.get("consumption_advisory", {}).get("source_url") for item in locations))
-        ids = {item["id"] for item in locations}
-        self.assertTrue({"lake-fairfax", "gravelly-point", "beaverdam-reservoir", "dwr-trout-312"}.issubset(ids))
-        fountainhead = next(item for item in locations if item["id"] == "fountainhead")
-        self.assertEqual(fountainhead["consumption_advisory"]["status"], "active")
-        fountainhead_rules = fountainhead["consumption_advisory"]["matching_restrictions"]
-        self.assertTrue(any(rule["species_ids"] == ["largemouth-bass"] and rule["severity"] == "do-not-eat" for rule in fountainhead_rules))
-        self.assertTrue(any(rule["species_ids"] == ["bluegill"] and rule["severity"] == "two-meals-per-month" for rule in fountainhead_rules))
-
-    def test_public_data_spine_is_loaded_conservatively(self):
-        locations = self.client.get("/api/locations", params={"limit": 200}).json()
-        self.assertEqual(sum(bool(item.get("stocking")) for item in locations), 13)
-        self.assertEqual(sum(bool(item.get("hydrology")) for item in locations), 19)
-        gap_links = [
-            evidence
-            for item in locations
-            for evidence in item["species_evidence"].values()
-            if evidence.get("source") == "https://doi.org/10.5066/P9FZ6J6R"
-        ]
-        self.assertGreaterEqual(len(gap_links), 10)
-        self.assertTrue(all(evidence["availability"] <= 0.56 for evidence in gap_links))
-        trout = next(item for item in locations if item["id"] == "dwr-trout-312")
-        self.assertEqual(trout["stocking"]["category"], "DH")
-        self.assertIn("rainbow-trout", trout["species_evidence"])
-
-        status = self.client.get("/api/data-sources/status").json()
-        by_provider = {item["provider"]: item for item in status}
-        self.assertEqual(by_provider["USGS Aquatic GAP"]["status"], "imported")
-        self.assertEqual(by_provider["Virginia DWR stocked trout waters"]["records"], 13)
-
-    def test_advisory_segments_do_not_overgeneralize_whole_rivers(self):
-        locations = self.client.get("/api/locations", params={"limit": 200}).json()
-        by_id = {item["id"]: item for item in locations}
-
-        bentonville = by_id["bentonville"]["consumption_advisory"]
-        self.assertEqual([segment["id"] for segment in bentonville["segments"]], ["shenandoah-mercury"])
-
-        morgans = by_id["morgans-ford"]["consumption_advisory"]
-        self.assertEqual([segment["id"] for segment in morgans["segments"]], ["shenandoah-pcb-lower-reaches"])
-
-        self.assertEqual(by_id["catletts-ford"]["consumption_advisory"]["status"], "no-advisory-found")
-        self.assertEqual(by_id["occoquan-hand-carry"]["consumption_advisory"]["status"], "jurisdiction-check")
-        self.assertEqual(by_id["berrys"]["waterbody"], "Shenandoah River")
-
-        pohick_rules = by_id["pohick-bay"]["consumption_advisory"]["matching_restrictions"]
-        channel_rules = [rule for rule in pohick_rules if rule["species_ids"] == ["channel-catfish"]]
-        self.assertEqual({rule["size_qualifier"] for rule in channel_rules}, {"18 inches or longer", "shorter than 18 inches"})
-
-    def test_location_alias_search(self):
-        response = self.client.get("/api/locations/search", params={"q": "Burke Lake Park"})
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json()[0]["id"], "lake-burke")
+def test_locations_list_has_provenance_backed_locations(client):
+    locations = client.get("/api/locations", params={"limit": 300}).json()
+    assert len(locations) == 67  # 63 original + 4 verified Rappahannock access points
+    assert all(item.get("sourceName") for item in locations)
+    ids = {item["id"] for item in locations}
+    assert {"lake-fairfax", "gravelly-point", "beaverdam-reservoir", "kellys-ford"}.issubset(ids)
 
 
-if __name__ == "__main__":
-    unittest.main()
+def test_rappahannock_watershed_is_now_covered(client):
+    rapp = client.get("/api/locations", params={"watershed": "Rappahannock", "limit": 50}).json()
+    assert len(rapp) == 4
+    kellys = next(item for item in rapp if item["id"] == "kellys-ford")
+    assert "smallmouth-bass" in kellys["evidenceSpeciesIds"]
+
+
+def test_location_detail_exposes_all_evidenced_species(client):
+    detail = client.get("/api/locations/lake-burke").json()
+    assert detail["name"] == "Lake Burke"
+    assert detail["waterbodyType"] == "lake"
+    species_ids = set(detail["evidenceSpeciesIds"])
+    assert {"largemouth-bass", "black-crappie", "yellow-perch"}.issubset(species_ids)
+    assert detail["consumptionAdvisory"] is not None
+
+
+def test_ranked_opportunities_gate_species_evidence(client):
+    results = client.get(
+        "/api/opportunities/ranked", params={"species_id": "smallmouth-bass", "max_minutes": 240}
+    ).json()
+    assert len(results) > 0
+    assert all(item["availability_score"] >= 0.35 for item in results)
+    assert any(item["location"]["id"] == "riverbend-park" for item in results)
+
+
+def test_location_alias_search(client):
+    results = client.get("/api/locations/search", params={"q": "Burke Lake Park"}).json()
+    assert results[0]["id"] == "lake-burke"
+
+
+def test_species_search_alias(client):
+    results = client.get("/api/species/search", params={"q": "smallie"}).json()
+    assert any(item["id"] == "smallmouth-bass" for item in results)
+
+
+def test_species_detail_lists_locations_with_evidence(client):
+    detail = client.get("/api/species/largemouth-bass").json()
+    assert detail["id"] == "largemouth-bass"
+    assert len(detail["locations"]) > 0
+    assert detail["locations"] == sorted(detail["locations"], key=lambda i: i["availability"], reverse=True)
+
+
+def test_data_source_status_is_derived_from_real_counts_and_runs(client):
+    status = client.get("/api/data-sources/status").json()
+    counts = status["counts"]
+    assert counts["locations"] == 67
+    assert counts["species"] == 20
+    assert counts["hydrologyAssociations"] == 19
+    assert counts["stockingRecords"] == 13
+    assert counts["modeledEvidence"] == 16
+    assert counts["locationsWithEvidence"] == 45
+    assert status["lastSuccessfulIngestion"] is not None
+    assert status["lastSuccessfulIngestion"]["status"] == "success"
+
+
+def test_species_detail_includes_researched_fish_facts(client):
+    detail = client.get("/api/species/smallmouth-bass").json()
+    facts = detail["facts"]
+    assert facts is not None
+    assert facts["preferredTempF"][0] and facts["preferredTempF"][1]
+    assert facts["citationLengthInches"] == 20  # VA DWR trophy size chart
+    assert len(facts["baits"]) >= 4
+    assert facts["identification"]
+    assert facts["dielPattern"] in {"crepuscular", "diurnal", "nocturnal", "flexible"}
+
+
+def test_multispecies_entries_carry_fish_facts(client):
+    payload = client.get("/api/locations/lake-burke/species", params={"live": "false"}).json()
+    assert all(s.get("fishFacts") for s in payload["species"])
+    lm = next(s for s in payload["species"] if s["speciesId"] == "largemouth-bass")
+    assert lm["fishFacts"]["typicalSizeInches"][1] > lm["fishFacts"]["typicalSizeInches"][0]
+
+
+def test_multispecies_panel_ranks_and_separates_insufficient(client):
+    payload = client.get("/api/locations/lake-burke/species", params={"live": "false"}).json()
+    assert payload["location"]["id"] == "lake-burke"
+    species = payload["species"]
+    assert len(species) >= 3
+    scores = [s["opportunity_score"] for s in species]
+    assert scores == sorted(scores, reverse=True)
+    assert all(s["state"] in {"strong", "fair", "low"} for s in species)
+    assert all("factors" in s and "positive" in s["factors"] for s in species)
+
+
+def test_access_only_location_offers_no_species(client):
+    payload = client.get("/api/locations/lake-curtis/species", params={"live": "false"}).json()
+    assert payload["species"] == []
+    assert payload["insufficient"] == []

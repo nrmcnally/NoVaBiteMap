@@ -19,6 +19,7 @@ import {
 } from "../../components/ClientIcons";
 import { TopNav } from "../../components/TopNav";
 import { LocationIntelligence } from "../../components/LocationIntelligence";
+import { WhatsBiting, type KnownSpecies } from "../../components/WhatsBiting";
 import { consumptionAdviceFor } from "../../lib/advisories";
 import { locationById, sourceLinks, speciesById } from "../../lib/data";
 import { estimatedHourlyScores, opportunityFor } from "../../lib/scoring";
@@ -42,6 +43,18 @@ export default async function LocationPage({ params, searchParams }: LocationPag
   const opportunity = primaryEvidence ? opportunityFor(location, primaryEvidence.speciesId) : null;
   const target = primaryEvidence ? speciesById(primaryEvidence.speciesId) : null;
   const hourly = opportunity ? estimatedHourlyScores(opportunity.score) : [];
+
+  const knownSpecies: KnownSpecies[] = location.evidence.map((evidence) => ({
+    speciesId: evidence.speciesId,
+    name: speciesById(evidence.speciesId)?.name ?? evidence.speciesId,
+    evidenceType: evidence.evidenceType,
+    availability: evidence.availability,
+    evidenceSummary: evidence.evidenceSummary,
+    lastEvidence: evidence.lastEvidence,
+    modeled: evidence.evidenceType === "modeled" || (evidence.sourceName ?? "").toLowerCase().includes("aquatic gap"),
+    sourceName: evidence.sourceName,
+    sourceUrl: evidence.sourceUrl,
+  }));
 
   return (
     <div className="app-frame detail-page">
@@ -98,6 +111,8 @@ export default async function LocationPage({ params, searchParams }: LocationPag
                 <div><span className="eyebrow">Evidence gate active</span><h2>No species outlook yet</h2><p>{location.notice}</p></div>
               </article>
             )}
+
+            <WhatsBiting locationId={location.id} known={knownSpecies} />
 
             {opportunity && target && (
               <LocationIntelligence

@@ -1,12 +1,35 @@
-from .entities import DataSource, FishingLocationRecord, SavedLocation, SessionToken, SpeciesEvidenceRecord, SpeciesRecord, User
+from .entities import (
+    DataIngestionRun,
+    DataSource,
+    FishingLocationAlias,
+    FishingLocationRecord,
+    HydrologyStation,
+    LocationStationAssociation,
+    SavedLocation,
+    SessionToken,
+    SpeciesEvidenceRecord,
+    SpeciesRecord,
+    SpeciesScoringProfile,
+    StockingRecord,
+    User,
+    Waterbody,
+    WaterbodyAlias,
+)
 
 __all__ = [
+    "DataIngestionRun",
     "DataSource",
+    "FishingLocationAlias",
     "FishingLocationRecord",
+    "HydrologyStation",
+    "LocationStationAssociation",
     "SavedLocation",
     "SessionToken",
     "SpeciesEvidenceRecord",
     "SpeciesRecord",
+    "SpeciesScoringProfile",
+    "StockingRecord",
     "User",
+    "Waterbody",
+    "WaterbodyAlias",
 ]
-

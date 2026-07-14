@@ -114,3 +114,4 @@ docker compose run --rm api alembic upgrade head
 - [Data licensing](docs/DATA_LICENSES.md)
 - [Model card](docs/MODEL_CARD.md)
 - [Roadmap](docs/ROADMAP.md)
+- [Prioritized TODO](docs/TODO.md)

@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { Fish, Heart, Map } from "lucide-react";
+import { BookOpen, Fish, Heart, Map } from "lucide-react";
 
 type TopNavProps = {
-  active?: "explore" | "spots" | "methodology";
+  active?: "explore" | "spots" | "methodology" | "fish";
 };
 
 export function TopNav({ active = "explore" }: TopNavProps) {
@@ -20,6 +20,9 @@ export function TopNav({ active = "explore" }: TopNavProps) {
       <nav aria-label="Primary navigation">
         <Link className={active === "explore" ? "active" : ""} href="/">
           <Map size={16} /> Explore
+        </Link>
+        <Link className={active === "fish" ? "active" : ""} href="/fish">
+          <BookOpen size={16} /> Fish guide
         </Link>
         <Link prefetch={false} className={active === "spots" ? "active" : ""} href="/my-spots">
           <Heart size={16} /> My spots

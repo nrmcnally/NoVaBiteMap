@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { consumptionAdviceFor } from "../lib/advisories";
-import type { FishingLocation } from "../lib/data";
+import { speciesById, type FishingLocation } from "../lib/data";
 import { opportunityFor } from "../lib/scoring";
 import type { TravelOrigin } from "../lib/travel";
 
@@ -43,7 +43,12 @@ export function FishingMap({ locations, speciesIds, selectedId, origin, onSelect
 
       const bounds: [number, number][] = [];
       locations.forEach((location) => {
-        const opportunities = speciesIds
+        // With a target species, rank by it; otherwise color by the location's
+        // strongest evidenced fish so the map reflects the default ranking.
+        const sourceSpecies = speciesIds.length > 0
+          ? speciesIds
+          : [...new Set(location.evidence.map((evidence) => evidence.speciesId))];
+        const opportunities = sourceSpecies
           .map((speciesId) => opportunityFor(location, speciesId))
           .filter((item): item is NonNullable<typeof item> => Boolean(item))
           .sort((a, b) => b.score - a.score);
@@ -52,15 +57,13 @@ export function FishingMap({ locations, speciesIds, selectedId, origin, onSelect
         const score = opportunity?.score ?? 0;
         const selected = location.id === selectedId;
         const hasSpeciesEvidence = Boolean(opportunity);
-        const color = speciesIds.length === 0
-          ? "#267a82"
-          : !hasSpeciesEvidence
-            ? "#8b9893"
-            : score >= 70
-              ? "#d65e36"
-              : score >= 55
-                ? "#edae49"
-                : "#1c6c72";
+        const color = !hasSpeciesEvidence
+          ? "#8b9893"
+          : score >= 70
+            ? "#d65e36"
+            : score >= 55
+              ? "#edae49"
+              : "#1c6c72";
         if (advisory.status === "active") {
           L.circleMarker([location.lat, location.lng], {
             radius: selected ? 17 : 14,
@@ -77,10 +80,16 @@ export function FishingMap({ locations, speciesIds, selectedId, origin, onSelect
           color: selected ? "#fff8e8" : "#173b3f",
           weight: selected ? 4 : 2,
           fillColor: color,
-          fillOpacity: hasSpeciesEvidence || speciesIds.length === 0 ? 1 : 0.72,
+          fillOpacity: hasSpeciesEvidence ? 1 : 0.72,
         }).addTo(map!);
+        const topFishName = opportunity ? speciesById(opportunity.evidence.speciesId)?.name ?? "" : "";
+        const tooltipStatus = !hasSpeciesEvidence
+          ? (speciesIds.length === 0 ? "Verified access · evidence pending" : "Selected-species evidence pending")
+          : speciesIds.length === 0
+            ? `${score}/100 · top target ${topFishName}`
+            : `${score}/100 best selected target${opportunities.length > 1 ? ` · ${opportunities.length} matches` : ""}`;
         marker.bindTooltip(
-          `<div class="map-tooltip"><strong>${location.name}</strong><span>${speciesIds.length === 0 ? "Verified public access" : score ? `${score}/100 best selected target${opportunities.length > 1 ? ` · ${opportunities.length} matches` : ""}` : "Selected-species evidence pending"}</span>${advisory.status === "active" ? `<em>${advisory.label}</em>` : ""}</div>`,
+          `<div class="map-tooltip"><strong>${location.name}</strong><span>${tooltipStatus}</span>${advisory.status === "active" ? `<em>${advisory.label}</em>` : ""}</div>`,
           { direction: "top", offset: [0, -8], opacity: 1 },
         );
         marker.on("click", () => onSelect(location.id));

@@ -5,44 +5,59 @@ from math import asin, cos, radians, sin, sqrt
 
 from fastapi import APIRouter, Depends, HTTPException, Query, Response, status
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from ..auth.service import create_session_token, hash_password, token_hash, user_for_token, verify_password
 from ..core.database import get_session
-from ..data.seed import LOCATIONS, SPECIES
-from ..ingestion.service import ingest_dwr_access
-from ..models.entities import SavedLocation, SessionToken, User
+from ..models.entities import (
+    DataIngestionRun,
+    FishingLocationRecord,
+    HydrologyStation,
+    LocationStationAssociation,
+    SavedLocation,
+    SessionToken,
+    SpeciesEvidenceRecord,
+    SpeciesRecord,
+    StockingRecord,
+    User,
+)
 from ..providers.base import ProviderError
-from ..providers.nws import NwsProvider
 from ..providers.usgs import UsgsWaterProvider
 from ..schemas.contracts import FavoriteCreate, FavoriteUpdate, LoginRequest, RegisterRequest, ScoreRequest
-from ..scoring.engine import confidence_score, final_opportunity_score, score_opportunity
+from ..scoring.activity import build_species_forecast
+from ..scoring.engine import score_opportunity
+from ..scoring.service import score_species_at_location
+from ..services import conditions as conditions_service
+from ..services import opportunities as opp
+from . import serializers
 
 router = APIRouter()
 bearer = HTTPBearer(auto_error=False)
 
 
+# ---------------------------------------------------------------------------
+# Search + geo helpers
+# ---------------------------------------------------------------------------
 def normalize(value: str) -> str:
-    return " ".join("".join(character.lower() if character.isalnum() else " " for character in value).split())
+    return " ".join("".join(c.lower() if c.isalnum() else " " for c in value).split())
 
 
-def location_match(location: dict, query: str) -> float:
+def match_score(query: str, *candidates: str) -> float:
+    """Conservative fuzzy match over a set of candidate strings for one entity."""
     needle = normalize(query)
-    candidates = [location["name"], location["waterbody"], location["county"], *location.get("aliases", [])]
-    normalized = [normalize(candidate) for candidate in candidates]
+    normalized = [normalize(c) for c in candidates if c]
+    if not normalized:
+        return 0.0
     if needle in normalized:
         return 1.0
-    if any(candidate.startswith(needle) for candidate in normalized):
+    if any(c.startswith(needle) for c in normalized):
         return 0.9
-    contained = [candidate for candidate in normalized if needle in candidate or candidate in needle]
-    if contained:
+    if any(needle in c or c in needle for c in normalized):
         return 0.78
-    ratios = [SequenceMatcher(None, needle, candidate).ratio() for candidate in normalized]
-    best = max(ratios, default=0)
-    # Conservative fuzzy gate: unrelated names remain excluded.
-    return best if best >= 0.72 else 0.0
+    best = max((SequenceMatcher(None, needle, c).ratio() for c in normalized), default=0.0)
+    return best if best >= 0.72 else 0.0  # conservative gate: unrelated names excluded
 
 
 def haversine_miles(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
@@ -53,34 +68,37 @@ def haversine_miles(lat1: float, lon1: float, lat2: float, lon2: float) -> float
     return 2 * radius * asin(sqrt(value))
 
 
-def get_location(location_id: str) -> dict:
-    location = next((item for item in LOCATIONS if item["id"] == location_id), None)
-    if not location:
+# ---------------------------------------------------------------------------
+# DB fetch helpers
+# ---------------------------------------------------------------------------
+def get_location(session: Session, location_id: str) -> FishingLocationRecord:
+    record = session.get(FishingLocationRecord, location_id)
+    if not record:
         raise HTTPException(status_code=404, detail="Location not found")
-    return location
+    return record
 
 
-def get_species(species_id: str) -> dict:
-    item = next((species for species in SPECIES if species["id"] == species_id), None)
-    if not item:
+def get_species(session: Session, species_id: str) -> SpeciesRecord:
+    record = session.get(SpeciesRecord, species_id)
+    if not record:
         raise HTTPException(status_code=404, detail="Species not found")
-    return item
+    return record
 
 
-def favorite_dict(favorite: SavedLocation) -> dict:
-    return {
-        "id": favorite.id,
-        "location_id": favorite.location_id,
-        "nickname": favorite.nickname,
-        "notes": favorite.notes,
-        "preferred_species_id": favorite.preferred_species_id,
-        "default_access_method": favorite.default_access_method,
-        "sort_order": favorite.sort_order,
-        "created_at": favorite.created_at,
-        "updated_at": favorite.updated_at,
-    }
+def _stocking(session: Session, location_id: str) -> StockingRecord | None:
+    return session.scalar(select(StockingRecord).where(StockingRecord.location_id == location_id))
 
 
+def _station_name(session: Session, station_id: str | None) -> str | None:
+    if not station_id:
+        return None
+    station = session.get(HydrologyStation, station_id)
+    return station.name if station else None
+
+
+# ---------------------------------------------------------------------------
+# Auth dependency
+# ---------------------------------------------------------------------------
 def current_user(
     credentials: HTTPAuthorizationCredentials | None = Depends(bearer),
     session: Session = Depends(get_session),
@@ -93,53 +111,117 @@ def current_user(
     return user
 
 
+# ---------------------------------------------------------------------------
+# Species
+# ---------------------------------------------------------------------------
 @router.get("/species")
-def list_species() -> list[dict]:
-    return SPECIES
+def list_species(session: Session = Depends(get_session)) -> list[dict]:
+    rows = session.scalars(select(SpeciesRecord).order_by(SpeciesRecord.common_name)).all()
+    return [serializers.species_out(r) for r in rows]
 
 
 @router.get("/species/search")
-def search_species(q: str = Query(min_length=1, max_length=100)) -> list[dict]:
+def search_species(q: str = Query(min_length=1, max_length=100), session: Session = Depends(get_session)) -> list[dict]:
     needle = normalize(q)
     results = []
-    for species in SPECIES:
-        names = [species["common_name"], species["code"], *species.get("aliases", [])]
-        if any(needle == normalize(name) or normalize(name).startswith(needle) for name in names):
-            results.append(species)
+    for record in session.scalars(select(SpeciesRecord)).all():
+        names = [record.common_name, record.species_code, *(record.aliases or [])]
+        if any(needle == normalize(n) or normalize(n).startswith(needle) for n in names if n):
+            results.append(serializers.species_out(record))
     return results
 
 
 @router.get("/species/{species_id}")
-def species_detail(species_id: str) -> dict:
-    item = dict(get_species(species_id))
-    item["locations"] = [
-        {"id": location["id"], "name": location["name"], "evidence": location["species_evidence"][species_id]}
-        for location in LOCATIONS
-        if species_id in location["species_evidence"]
-    ]
-    return item
+def species_detail(species_id: str, session: Session = Depends(get_session)) -> dict:
+    record = get_species(session, species_id)
+    profiles = opp.load_active_profiles(session)
+    profile = profiles.get(species_id)
+    evidence = session.scalars(
+        select(SpeciesEvidenceRecord).where(SpeciesEvidenceRecord.species_id == species_id)
+    ).all()
+    locations = []
+    for ev in evidence:
+        loc = session.get(FishingLocationRecord, ev.location_id)
+        if loc:
+            locations.append(
+                {
+                    "id": loc.id,
+                    "name": loc.name,
+                    "waterbody": loc.waterbody,
+                    "waterbodyType": loc.waterbody_type,
+                    "county": loc.county,
+                    "watershed": loc.watershed,
+                    "availability": ev.availability,
+                    "evidenceType": ev.evidence_type,
+                    "modeled": ev.modeled,
+                    "evidenceSummary": ev.evidence_summary,
+                }
+            )
+    locations.sort(key=lambda item: item["availability"], reverse=True)
+    return {
+        **serializers.species_out(record),
+        "facts": serializers.fish_facts(profile, record),
+        "profileVersion": "1.1" if profile else None,
+        "locations": locations,
+        "disclaimer": "Species facts are researched reference content, not a guarantee of presence or catch at any specific water.",
+    }
 
 
+@router.get("/species/{species_id}/locations")
+def species_locations(
+    species_id: str,
+    max_minutes: int = Query(default=240, ge=1, le=600),
+    confidence_threshold: int = Query(default=0, ge=0, le=100),
+    session: Session = Depends(get_session),
+) -> list[dict]:
+    get_species(session, species_id)
+    return _ranked(session, species_id, max_minutes, None, confidence_threshold)
+
+
+# ---------------------------------------------------------------------------
+# Locations
+# ---------------------------------------------------------------------------
 @router.get("/locations")
 def list_locations(
     county: str | None = None,
     access_method: str | None = None,
+    waterbody_type: str | None = None,
+    watershed: str | None = None,
     public_access: bool = True,
-    limit: int = Query(default=50, ge=1, le=200),
+    limit: int = Query(default=50, ge=1, le=300),
     offset: int = Query(default=0, ge=0),
+    session: Session = Depends(get_session),
 ) -> list[dict]:
-    results = [location for location in LOCATIONS if not public_access or location["public_access"]]
+    stmt = select(FishingLocationRecord)
+    if public_access:
+        stmt = stmt.where(FishingLocationRecord.public_access == True)  # noqa: E712
     if county:
-        results = [location for location in results if normalize(location["county"]) == normalize(county)]
+        stmt = stmt.where(func.lower(FishingLocationRecord.county) == county.lower())
+    if waterbody_type:
+        stmt = stmt.where(FishingLocationRecord.waterbody_type == waterbody_type)
+    if watershed:
+        stmt = stmt.where(FishingLocationRecord.watershed == watershed)
+    rows = session.scalars(stmt.order_by(FishingLocationRecord.name)).all()
     if access_method:
-        results = [location for location in results if access_method in location["access"]]
-    return results[offset : offset + limit]
+        rows = [r for r in rows if access_method in (r.access_methods or [])]
+    return [serializers.location_summary(r) for r in rows[offset : offset + limit]]
 
 
 @router.get("/locations/search")
-def search_locations(q: str = Query(min_length=1, max_length=120), limit: int = Query(default=20, ge=1, le=50)) -> list[dict]:
-    scored = [(location_match(location, q), location) for location in LOCATIONS]
-    return [location for score, location in sorted(scored, key=lambda item: item[0], reverse=True) if score > 0][:limit]
+def search_locations(
+    q: str = Query(min_length=1, max_length=120),
+    limit: int = Query(default=20, ge=1, le=50),
+    session: Session = Depends(get_session),
+) -> list[dict]:
+    rows = session.scalars(select(FishingLocationRecord)).all()
+    scored: list[tuple[float, FishingLocationRecord]] = []
+    for record in rows:
+        aliases = [a.alias for a in record.aliases]
+        score = match_score(q, record.name, record.waterbody, record.county, record.watershed or "", *aliases)
+        if score > 0:
+            scored.append((score, record))
+    scored.sort(key=lambda item: item[0], reverse=True)
+    return [serializers.location_summary(r) for _, r in scored[:limit]]
 
 
 @router.get("/locations/nearby")
@@ -147,47 +229,202 @@ def nearby_locations(
     latitude: float = Query(ge=-90, le=90),
     longitude: float = Query(ge=-180, le=180),
     radius_miles: float = Query(default=25, gt=0, le=200),
+    session: Session = Depends(get_session),
 ) -> list[dict]:
     matches = []
-    for location in LOCATIONS:
-        distance = haversine_miles(latitude, longitude, location["latitude"], location["longitude"])
+    for record in session.scalars(select(FishingLocationRecord)).all():
+        distance = haversine_miles(latitude, longitude, record.latitude, record.longitude)
         if distance <= radius_miles:
-            matches.append({**location, "distance_miles": round(distance, 1)})
-    return sorted(matches, key=lambda item: item["distance_miles"])
+            matches.append({**serializers.location_summary(record), "distanceMiles": round(distance, 1)})
+    return sorted(matches, key=lambda item: item["distanceMiles"])
 
 
 @router.get("/locations/{location_id}")
-def location_detail(location_id: str) -> dict:
-    return get_location(location_id)
+def location_detail(location_id: str, session: Session = Depends(get_session)) -> dict:
+    record = get_location(session, location_id)
+    association = opp.get_association(session, location_id)
+    station_name = _station_name(session, association.station_id if association else None)
+    return serializers.location_detail(
+        record, stocking=_stocking(session, location_id), association=association, station_name=station_name
+    )
 
 
 @router.get("/locations/{location_id}/species")
-def location_species(location_id: str) -> dict:
-    return get_location(location_id)["species_evidence"]
+async def location_species(
+    location_id: str,
+    live: bool = Query(default=True, description="Fetch live NWS/USGS to drive species activity"),
+    session: Session = Depends(get_session),
+) -> dict:
+    """Multi-species 'what's biting here' comparison across every evidenced species."""
+    record = get_location(session, location_id)
+    weather = None
+    hydro_state = None
+    if live:
+        weather = await conditions_service.get_weather(record.latitude, record.longitude)
+        association = opp.get_association(session, location_id)
+        if association is not None:
+            hydro_state = await conditions_service.get_hydrology_state(opp.association_dict(association))
+    return opp.score_location_species(session, record, weather=weather, hydro_state=hydro_state)
 
 
 @router.get("/locations/{location_id}/conditions")
-async def location_conditions(location_id: str) -> dict:
-    location = get_location(location_id)
-    try:
-        return await NwsProvider().get_hourly_forecast(location["latitude"], location["longitude"])
-    except ProviderError as error:
-        raise HTTPException(status_code=503, detail=f"{error}. No fallback observation was fabricated.") from error
+async def location_conditions(location_id: str, session: Session = Depends(get_session)) -> dict:
+    record = get_location(session, location_id)
+    weather = await conditions_service.get_weather(record.latitude, record.longitude)
+    if not weather.get("available"):
+        raise HTTPException(status_code=503, detail=f"{weather.get('reason', 'weather unavailable')}. No fallback was fabricated.")
+    return weather
 
 
 @router.get("/locations/{location_id}/hydrology")
-async def location_hydrology(location_id: str) -> dict:
-    location = get_location(location_id)
-    association = location.get("hydrology")
-    if not association:
+async def location_hydrology(location_id: str, session: Session = Depends(get_session)) -> dict:
+    get_location(session, location_id)
+    association = opp.get_association(session, location_id)
+    if association is None:
         raise HTTPException(status_code=404, detail="No manually verified USGS association for this location")
-    try:
-        observations = await UsgsWaterProvider().get_latest_observations(association["station_id"])
-        return {**observations, "association": association, "provisional": True}
-    except ProviderError as error:
-        raise HTTPException(status_code=503, detail=str(error)) from error
+    state = await conditions_service.get_hydrology_state(opp.association_dict(association))
+    if not state.get("available"):
+        raise HTTPException(status_code=503, detail=state.get("reason", "hydrology unavailable"))
+    return state
 
 
+@router.get("/locations/{location_id}/forecast")
+async def location_forecast(
+    location_id: str,
+    species_id: str | None = None,
+    wading: bool = False,
+    session: Session = Depends(get_session),
+) -> dict:
+    """Species-specific multi-day forecast driven by live NWS + USGS + activity model."""
+    record = get_location(session, location_id)
+    profiles = opp.load_active_profiles(session)
+    evidence = session.scalars(
+        select(SpeciesEvidenceRecord).where(SpeciesEvidenceRecord.location_id == location_id)
+    ).all()
+    by_species: dict[str, list[SpeciesEvidenceRecord]] = {}
+    for ev in evidence:
+        by_species.setdefault(ev.species_id, []).append(ev)
+    if not by_species:
+        raise HTTPException(status_code=404, detail="No species evidence at this location to forecast")
+
+    target = species_id or max(by_species, key=lambda sid: max(e.availability for e in by_species[sid]))
+    if target not in by_species:
+        raise HTTPException(status_code=404, detail="Species not evidenced at this location")
+    records = by_species[target]
+
+    weather = await conditions_service.get_weather(record.latitude, record.longitude)
+    if not weather.get("available"):
+        raise HTTPException(status_code=503, detail=f"{weather.get('reason', 'weather unavailable')}. Forecast needs live weather.")
+    association = opp.get_association(session, location_id)
+    hydro_state = None
+    if association is not None:
+        hydro_state = await conditions_service.get_hydrology_state(opp.association_dict(association))
+
+    scored = score_species_at_location(
+        records,
+        activity=record.activity_estimate,
+        activity_available=True,
+        access_fit=record.access_fit,
+        has_hydrology=association is not None,
+        association_factor=association.association_factor if association else 1.0,
+    )
+    profile = profiles.get(target)
+    if profile is None:
+        raise HTTPException(status_code=404, detail="No scoring profile for this species")
+    forecast = build_species_forecast(
+        profile,
+        weather["periods"],
+        waterbody_type=record.waterbody_type,
+        latitude=record.latitude,
+        longitude=record.longitude,
+        availability=scored["availability_score"],
+        quality=scored["fishery_quality_score"],
+        access_fit=record.access_fit,
+        base_confidence=scored["confidence_score"],
+        hydrology=hydro_state if hydro_state and hydro_state.get("available") else None,
+        alerts=weather.get("alerts", []),
+        water_temp_f=hydro_state.get("waterTempF") if hydro_state else None,
+        wading_selected=wading,
+        association_factor=association.association_factor if association else 1.0,
+    )
+    return {
+        "location": {"id": record.id, "name": record.name, "waterbody": record.waterbody},
+        "speciesId": target,
+        "scores": scored,
+        "waterTempStatus": forecast["waterTempStatus"],
+        "forecast": forecast,
+    }
+
+
+# ---------------------------------------------------------------------------
+# Opportunities
+# ---------------------------------------------------------------------------
+def _ranked(session, species_id, max_minutes, access_method, confidence_threshold) -> list[dict]:
+    profiles = opp.load_active_profiles(session)
+    names = opp.species_names(session)
+    evidence_rows = session.scalars(
+        select(SpeciesEvidenceRecord).where(SpeciesEvidenceRecord.species_id == species_id)
+    ).all()
+    results = []
+    for ev in evidence_rows:
+        location = session.get(FishingLocationRecord, ev.location_id)
+        if location is None:
+            continue
+        if location.travel_minutes is not None and location.travel_minutes > max_minutes:
+            continue
+        if access_method and access_method not in (location.access_methods or []):
+            continue
+        records = [
+            r for r in location.evidence if r.species_id == species_id
+        ]
+        association = opp.get_association(session, location.id)
+        scored = score_species_at_location(
+            records,
+            activity=location.activity_estimate,
+            activity_available=False,
+            access_fit=location.access_fit,
+            has_hydrology=association is not None,
+            association_factor=association.association_factor if association else 1.0,
+        )
+        if scored is None or scored["confidence_score"] < confidence_threshold:
+            continue
+        results.append(
+            {
+                "location": serializers.location_summary(location),
+                "speciesId": species_id,
+                **{k: scored[k] for k in (
+                    "availability_score", "fishery_quality_score", "activity_score",
+                    "opportunity_score", "confidence_score", "confidence_label",
+                    "evidence_type", "evidence_summary", "modeled",
+                )},
+                "bestWindow": location.best_window,
+                "scoreBasis": "Agency evidence plus estimated seasonal activity; live conditions are separate.",
+            }
+        )
+    results.sort(key=lambda item: item["opportunity_score"], reverse=True)
+    return results
+
+
+@router.get("/opportunities/ranked")
+def ranked_opportunities(
+    species_id: str,
+    max_minutes: int = Query(default=60, ge=1, le=240),
+    access_method: str | None = None,
+    confidence_threshold: int = Query(default=0, ge=0, le=100),
+    session: Session = Depends(get_session),
+) -> list[dict]:
+    get_species(session, species_id)
+    return _ranked(session, species_id, max_minutes, access_method, confidence_threshold)
+
+
+@router.post("/opportunities/score")
+def calculate_opportunity(payload: ScoreRequest) -> dict:
+    return score_opportunity(payload.model_dump())
+
+
+# ---------------------------------------------------------------------------
+# Hydrology passthrough
+# ---------------------------------------------------------------------------
 @router.get("/hydrology/{station_id}")
 async def hydrology(station_id: str) -> dict:
     if not station_id.isdigit() or not 8 <= len(station_id) <= 15:
@@ -198,54 +435,21 @@ async def hydrology(station_id: str) -> dict:
         raise HTTPException(status_code=503, detail=str(error)) from error
 
 
-@router.get("/opportunities/ranked")
-def ranked_opportunities(
-    species_id: str,
-    max_minutes: int = Query(default=60, ge=1, le=240),
-    access_method: str | None = None,
-    confidence_threshold: int = Query(default=0, ge=0, le=100),
-) -> list[dict]:
-    get_species(species_id)
-    results = []
-    for location in LOCATIONS:
-        evidence = location["species_evidence"].get(species_id)
-        if not evidence or evidence["availability"] < 0.35 or location["travel_minutes"] > max_minutes:
-            continue
-        if access_method and access_method not in location["access"]:
-            continue
-        access_fit = 0.94 if not access_method or access_method in location["access"] else 0.2
-        score = final_opportunity_score(
-            evidence["availability"], evidence.get("quality"), location["activity_estimate"], access_fit
-        )
-        confidence = confidence_score(
-            coverage=0.72 if evidence.get("quality") is not None else 0.58,
-            recency=0.78,
-            authority=0.92,
-            agreement=0.86,
-            directness=evidence["evidence_confidence"],
-            association_factor=0.72,
-        )
-        if confidence < confidence_threshold:
-            continue
-        results.append({
-            "location": location,
-            "species_id": species_id,
-            "availability_score": evidence["availability"],
-            "fishery_quality_score": evidence.get("quality"),
-            "activity_score": location["activity_estimate"],
-            "opportunity_score": score,
-            "confidence_score": confidence,
-            "confidence_label": "High" if confidence >= 75 else "Moderate" if confidence >= 50 else "Low",
-            "evidence_type": evidence["evidence_type"],
-            "explanation": evidence["summary"],
-            "score_basis": "Agency evidence plus estimated seasonal activity; live conditions are separate.",
-        })
-    return sorted(results, key=lambda item: item["opportunity_score"], reverse=True)
-
-
-@router.post("/opportunities/score")
-def calculate_opportunity(payload: ScoreRequest) -> dict:
-    return score_opportunity(payload.model_dump())
+# ---------------------------------------------------------------------------
+# Auth + favorites
+# ---------------------------------------------------------------------------
+def favorite_dict(favorite: SavedLocation) -> dict:
+    return {
+        "id": favorite.id,
+        "location_id": favorite.location_id,
+        "nickname": favorite.nickname,
+        "notes": favorite.notes,
+        "preferred_species_id": favorite.preferred_species_id,
+        "default_access_method": favorite.default_access_method,
+        "sort_order": favorite.sort_order,
+        "created_at": favorite.created_at,
+        "updated_at": favorite.updated_at,
+    }
 
 
 @router.post("/auth/register", status_code=status.HTTP_201_CREATED)
@@ -293,6 +497,13 @@ def me(user: User = Depends(current_user)) -> dict:
     return {"id": user.id, "email": user.email, "display_name": user.display_name}
 
 
+@router.delete("/users/me", status_code=204, response_class=Response)
+def delete_account(user: User = Depends(current_user), session: Session = Depends(get_session)) -> Response:
+    session.delete(user)
+    session.commit()
+    return Response(status_code=204)
+
+
 @router.get("/users/me/favorites")
 def list_favorites(user: User = Depends(current_user), session: Session = Depends(get_session)) -> list[dict]:
     records = list(session.scalars(select(SavedLocation).where(SavedLocation.user_id == user.id).order_by(SavedLocation.sort_order, SavedLocation.id)))
@@ -301,9 +512,9 @@ def list_favorites(user: User = Depends(current_user), session: Session = Depend
 
 @router.post("/users/me/favorites", status_code=201)
 def create_favorite(payload: FavoriteCreate, user: User = Depends(current_user), session: Session = Depends(get_session)) -> dict:
-    get_location(payload.location_id)
+    get_location(session, payload.location_id)
     if payload.preferred_species_id:
-        get_species(payload.preferred_species_id)
+        get_species(session, payload.preferred_species_id)
     favorite = SavedLocation(
         user_id=user.id,
         location_id=payload.location_id,
@@ -332,6 +543,8 @@ def update_favorite(
     favorite = session.scalar(select(SavedLocation).where(SavedLocation.id == favorite_id, SavedLocation.user_id == user.id))
     if not favorite:
         raise HTTPException(status_code=404, detail="Favorite not found")
+    if payload.preferred_species_id:
+        get_species(session, payload.preferred_species_id)
     for field, value in payload.model_dump(exclude_unset=True).items():
         setattr(favorite, field, value)
     session.commit()
@@ -349,25 +562,74 @@ def delete_favorite(favorite_id: int, user: User = Depends(current_user), sessio
     return Response(status_code=204)
 
 
+# ---------------------------------------------------------------------------
+# Data health (derived from real ingestion runs + DB counts)
+# ---------------------------------------------------------------------------
 @router.get("/data-sources/status")
-def data_source_status() -> list[dict]:
-    def records_for(source_name: str) -> int:
-        return sum(1 for location in LOCATIONS if location.get("source_name") == source_name)
+def data_source_status(session: Session = Depends(get_session)) -> dict:
+    location_count = session.scalar(select(func.count()).select_from(FishingLocationRecord)) or 0
+    species_count = session.scalar(select(func.count()).select_from(SpeciesRecord)) or 0
+    evidence_count = session.scalar(select(func.count()).select_from(SpeciesEvidenceRecord)) or 0
+    stocking_count = session.scalar(select(func.count()).select_from(StockingRecord)) or 0
+    assoc_count = session.scalar(select(func.count()).select_from(LocationStationAssociation)) or 0
+    modeled_count = session.scalar(
+        select(func.count()).select_from(SpeciesEvidenceRecord).where(SpeciesEvidenceRecord.modeled == True)  # noqa: E712
+    ) or 0
+    locations_with_evidence = session.scalar(
+        select(func.count(func.distinct(SpeciesEvidenceRecord.location_id)))
+    ) or 0
 
-    return [
-        {"provider": "Virginia DWR access", "status": "healthy", "records": records_for("Virginia Department of Wildlife Resources"), "freshness": "seed reviewed 2026-07-13"},
-        {"provider": "Fairfax County Park Authority", "status": "healthy", "records": records_for("Fairfax County Park Authority"), "freshness": "reviewed 2026-07-13"},
-        {"provider": "National Park Service", "status": "healthy", "records": records_for("National Park Service"), "freshness": "reviewed 2026-07-13"},
-        {"provider": "NOVA Parks", "status": "healthy", "records": records_for("NOVA Parks"), "freshness": "reviewed 2026-07-13"},
-        {"provider": "Virginia and Prince William parks", "status": "healthy", "records": records_for("Virginia State Parks") + records_for("Prince William County Parks"), "freshness": "reviewed 2026-07-13"},
-        {"provider": "National Weather Service", "status": "on_demand", "freshness": "live request per selected location"},
-        {"provider": "USGS Water Services", "status": "on_demand", "records": sum(1 for item in LOCATIONS if item.get("hydrology")), "freshness": "live request for manually verified associations"},
-        {"provider": "USGS Aquatic GAP", "status": "imported", "records": 94, "dataset_version": "2.0 (December 2024)"},
-        {"provider": "Virginia DWR stocked trout waters", "status": "healthy", "records": sum(1 for item in LOCATIONS if item.get("stocking")), "freshness": "layer reviewed 2026-07-14"},
-    ]
+    runs = session.scalars(
+        select(DataIngestionRun).order_by(DataIngestionRun.started_at.desc()).limit(20)
+    ).all()
+    last_success = next((r for r in runs if r.status == "success"), None)
+    last_failure = next((r for r in runs if r.status == "failed"), None)
+
+    def run_out(run: DataIngestionRun | None) -> dict | None:
+        if run is None:
+            return None
+        return {
+            "sourceName": run.source_name,
+            "status": run.status,
+            "startedAt": run.started_at.isoformat() if run.started_at else None,
+            "completedAt": run.completed_at.isoformat() if run.completed_at else None,
+            "recordsSeen": run.records_seen,
+            "recordsCreated": run.records_created,
+            "recordsUpdated": run.records_updated,
+            "error": run.error_message,
+            "datasetVersion": run.dataset_version,
+        }
+
+    return {
+        "counts": {
+            "locations": location_count,
+            "species": species_count,
+            "speciesEvidence": evidence_count,
+            "locationsWithEvidence": locations_with_evidence,
+            "locationsMissingEvidence": location_count - locations_with_evidence,
+            "stockingRecords": stocking_count,
+            "hydrologyAssociations": assoc_count,
+            "modeledEvidence": modeled_count,
+        },
+        "lastSuccessfulIngestion": run_out(last_success),
+        "lastFailedIngestion": run_out(last_failure),
+        "recentRuns": [run_out(r) for r in runs],
+        "liveProviders": [
+            {"provider": "National Weather Service", "mode": "on-demand", "cache": "15-minute"},
+            {"provider": "USGS Water Services", "mode": "on-demand", "cache": "15-minute"},
+        ],
+    }
 
 
-@router.post("/admin/ingestion/dwr-access")
-async def run_dwr_ingestion(_: User = Depends(current_user)) -> dict:
-    result = await ingest_dwr_access(["Fairfax", "Fauquier", "Frederick", "Loudoun", "Stafford", "Clarke", "Warren"])
-    return result.__dict__
+@router.post("/admin/ingestion/reseed")
+def run_reseed(_: User = Depends(current_user), session: Session = Depends(get_session)) -> dict:
+    from ..data.loader import load_seed
+
+    result = load_seed(force=True)
+    return {
+        "status": result.status,
+        "recordsSeen": result.records_seen,
+        "recordsCreated": result.records_created,
+        "recordsUpdated": result.records_updated,
+        "runId": result.run_id,
+    }

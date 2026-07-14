@@ -35,6 +35,47 @@ def availability_score(evidence: Iterable[dict], incompatible_waterbody: bool = 
     return round(clamp(value), 4)
 
 
+def combine_availability(records: Iterable[dict]) -> float:
+    """Aggregate the per-record availability signals for one (location, species).
+
+    Each curated record carries an expert-encoded availability. The engine owns the
+    *combination*: independent positive signals corroborate via noisy-OR (a single
+    record passes through unchanged, so audited numbers do not regress), landscape
+    (modeled) evidence alone cannot exceed a ceiling, and absence records penalise.
+    """
+    records = list(records)
+    positives = [r for r in records if float(r.get("availability", 0)) > 0 and r.get("presence_status", "present") != "absent"]
+    absents = [r for r in records if r.get("presence_status") == "absent"]
+    if not positives:
+        return 0.0
+    product = 1.0
+    for record in positives:
+        product *= 1 - clamp(float(record["availability"]))
+    combined = 1 - product
+    if all(record.get("modeled") for record in positives):
+        combined = min(combined, 0.56)  # nearby-reach / landscape evidence ceiling
+    if absents:
+        # Direct absence evidence pulls the estimate down toward the contradiction.
+        combined *= max(0.2, 1 - 0.5 * len(absents))
+    return round(clamp(combined), 4)
+
+
+def combine_quality(records: Iterable[dict]) -> float | None:
+    """Confidence-weighted mean of the non-null fishery-quality signals."""
+    weighted = 0.0
+    weight_total = 0.0
+    for record in records:
+        quality = record.get("quality")
+        if quality is None:
+            continue
+        weight = float(record.get("evidence_confidence", 0.5)) or 0.01
+        weighted += float(quality) * weight
+        weight_total += weight
+    if weight_total == 0:
+        return None
+    return round(clamp(weighted / weight_total), 4)
+
+
 def quality_score(metrics: Iterable[dict]) -> float | None:
     weighted_total = 0.0
     weight_total = 0.0

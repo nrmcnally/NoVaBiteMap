@@ -237,6 +237,113 @@ const lakeBrittleEvidence: SpeciesEvidence[] = [
   },
 ];
 
+const rappUpperSource = "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/";
+const rappTidalSource = "https://dwr.virginia.gov/waterbody/rappahannock-river-tidal/";
+const rappReviewed = "DWR Rappahannock River waterbody page reviewed 2026-07-14";
+
+const rappUpperSmallmouth = (): SpeciesEvidence => ({
+  speciesId: "smallmouth-bass",
+  availability: 0.85,
+  quality: null,
+  evidenceConfidence: 0.82,
+  evidenceType: "official listing",
+  evidenceSummary:
+    "Virginia DWR describes the non-tidal upper Rappahannock as a smallmouth bass fishery; this uses the shared waterbody listing, not an angler report at this access point.",
+  lastEvidence: rappReviewed,
+  technique: "3–4 in. natural paddletail or craw tube along current breaks and ledges",
+  depth: "Lower third of the water column; slide shallower in low light",
+  positive: ["Virginia DWR documents smallmouth bass in the non-tidal Rappahannock", "Rocky current habitat matches the species profile"],
+  negative: ["Hourly activity is a seasonal estimate until live providers refresh", "Evidence is the shared river listing, not this individual access point"],
+  sourceName: "Virginia Department of Wildlife Resources",
+  sourceUrl: rappUpperSource,
+});
+
+const rappUpperRedbreast = (): SpeciesEvidence => ({
+  speciesId: "redbreast-sunfish",
+  availability: 0.72,
+  quality: null,
+  evidenceConfidence: 0.74,
+  evidenceType: "official listing",
+  evidenceSummary: "Virginia DWR lists redbreast sunfish in the non-tidal Rappahannock alongside smallmouth bass.",
+  lastEvidence: rappReviewed,
+  technique: "Small inline spinner, popper, or worm along shaded banks and current seams",
+  depth: "Shallow cover and undercut banks",
+  positive: ["Virginia DWR documents redbreast sunfish in the non-tidal Rappahannock"],
+  negative: ["Evidence is the shared river listing, not this individual access point"],
+  sourceName: "Virginia Department of Wildlife Resources",
+  sourceUrl: rappUpperSource,
+});
+
+const rappTidalLargemouth = (): SpeciesEvidence => ({
+  speciesId: "largemouth-bass",
+  availability: 0.72,
+  quality: null,
+  evidenceConfidence: 0.74,
+  evidenceType: "official listing",
+  evidenceSummary: "Virginia DWR lists largemouth bass in the tidal Rappahannock below the fall line.",
+  lastEvidence: rappReviewed,
+  technique: "Texas-rigged worm or compact jig around tidal grass, wood, and creek mouths",
+  depth: "Shallow cover on the appropriate tide stage",
+  positive: ["Virginia DWR documents largemouth bass in the tidal Rappahannock"],
+  negative: ["Tidal stage strongly affects access-point conditions", "Evidence is the shared river listing, not this individual access point"],
+  sourceName: "Virginia Department of Wildlife Resources",
+  sourceUrl: rappTidalSource,
+});
+
+const rappTidalCatfish = (): SpeciesEvidence => ({
+  speciesId: "channel-catfish",
+  availability: 0.7,
+  quality: null,
+  evidenceConfidence: 0.72,
+  evidenceType: "official listing",
+  evidenceSummary: "Virginia DWR lists channel catfish in the tidal Rappahannock.",
+  lastEvidence: rappReviewed,
+  technique: "Cut bait or nightcrawler on the bottom near channel edges and holes",
+  depth: "Bottom, deeper holes and channel edges",
+  positive: ["Virginia DWR documents channel catfish in the tidal Rappahannock"],
+  negative: ["Evidence is the shared river listing, not this individual access point"],
+  sourceName: "Virginia Department of Wildlife Resources",
+  sourceUrl: rappTidalSource,
+});
+
+// Verified against the live DWR "DWR Maintained Boating Access Locations" ArcGIS
+// layer (real coordinates) 2026-07-14. Closes the previously-absent Rappahannock
+// watershed. Access-method mix reflects hand-launch vs. ramp sites.
+const rappahannockLocations: Array<Omit<FishingLocationSeed, "accessAuthority" | "accessSourceUrl" | "sourceReviewed">> = [
+  {
+    id: "kellys-ford", name: "Kelly's Ford", waterbody: "Rappahannock River", waterbodyType: "river", county: "Culpeper",
+    lat: 38.477044, lng: -77.780688, distanceMiles: 33, travelMinutes: 52, publicAccess: true,
+    access: ["shore", "wade", "kayak", "boat"], aliases: ["Kellys Ford", "Rappahannock Kellys Ford"],
+    notice: "Popular non-tidal upper-Rappahannock smallmouth float and wade access. Verify river level, weather alerts, and posted conditions before wading or launching.",
+    flowStatus: "USGS association review pending", activityEstimate: 0.6, accessFit: 0.84, bestWindow: "6:20–9:10 AM",
+    evidence: [rappUpperSmallmouth(), rappUpperRedbreast()],
+  },
+  {
+    id: "motts-landing", name: "Motts", waterbody: "Rappahannock River", waterbodyType: "river", county: "Spotsylvania",
+    lat: 38.313621, lng: -77.540637, distanceMiles: 38, travelMinutes: 58, publicAccess: true,
+    access: ["shore", "kayak", "boat"], aliases: ["Motts Landing", "Motts Run access"],
+    notice: "DWR boating access on the Rappahannock above Fredericksburg. Verify river level and posted conditions before launching.",
+    flowStatus: "USGS association review pending", activityEstimate: 0.58, accessFit: 0.83, bestWindow: "6:20–9:10 AM",
+    evidence: [rappUpperSmallmouth()],
+  },
+  {
+    id: "fredericksburg-city-docks", name: "Fredericksburg City Docks", waterbody: "Rappahannock River", waterbodyType: "river", county: "Fredericksburg",
+    lat: 38.296527, lng: -77.453134, distanceMiles: 40, travelMinutes: 58, publicAccess: true,
+    access: ["shore", "kayak", "boat"], aliases: ["City Docks", "Fredericksburg Rappahannock"],
+    notice: "Access at the fall line in Fredericksburg. Verify river level, tide influence near the fall line, and posted conditions.",
+    flowStatus: "USGS association review pending", activityEstimate: 0.56, accessFit: 0.82, bestWindow: "6:20–9:10 AM",
+    evidence: [rappUpperSmallmouth()],
+  },
+  {
+    id: "hopyard-landing", name: "Hopyard Landing", waterbody: "Rappahannock River", waterbodyType: "river", county: "King George",
+    lat: 38.244263, lng: -77.225825, distanceMiles: 44, travelMinutes: 64, publicAccess: true,
+    access: ["shore", "kayak", "boat"], aliases: ["Hopyard"],
+    notice: "Tidal Rappahannock DWR boating access below Fredericksburg. Tide stage strongly affects conditions; verify before launching.",
+    flowStatus: "Tidal river · gage association pending", activityEstimate: 0.52, accessFit: 0.81, bestWindow: "Tide-dependent",
+    evidence: [rappTidalLargemouth(), rappTidalCatfish()],
+  },
+];
+
 const accessOnlyNotice =
   "Public access is verified by Virginia DWR. Species evidence has not yet cleared the Phase 1 evidence gate.";
 
@@ -396,6 +503,7 @@ const dwrLocations: Array<Omit<FishingLocationSeed, "accessAuthority" | "accessS
       evidence: [shenandoahSmallmouth("DWR source reviewed 2026-07-13"), ...(mainStem ? [shenandoahWalleye("DWR source reviewed 2026-07-13")] : [])],
     };
   }),
+  ...rappahannockLocations,
 ];
 
 const sourcedLocations: FishingLocationSeed[] = [

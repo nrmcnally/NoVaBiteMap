@@ -43,6 +43,9 @@ next-env.d.ts
 /.pip-cache/
 /.venv/
 /bitemap.db
+# local/dev/preview SQLite databases (never commit)
+*.db
+apps/api/*.db
 __pycache__/
 *.py[cod]
 !/.env.example

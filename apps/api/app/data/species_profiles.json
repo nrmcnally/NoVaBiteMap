@@ -1,0 +1,1259 @@
+{
+  "meta": {
+    "version": "1.1",
+    "generated": "2026-07-14",
+    "description": "Per-species activity profiles for BiteMap NOVA. Facts (temperature bands in F, spawn months, diel pattern, waterbody preference, seasonal activity) are researched and cited; app tuning weights are applied separately in activity.py.",
+    "provenance": "Researched via authoritative sources (primarily Virginia DWR species pages) 2026-07-14.",
+    "enriched": "2026-07-14: added size ranges, VA DWR citation sizes, identification, and baits (VA DWR Trophy Fish size chart + species pages)."
+  },
+  "profiles": [
+    {
+      "speciesId": "smallmouth-bass",
+      "preferredMinF": 60,
+      "preferredMaxF": 74,
+      "toleranceMinF": 40,
+      "toleranceMaxF": 82,
+      "spawnMonths": [
+        4,
+        5,
+        6
+      ],
+      "spawnTempF": 60,
+      "dielPattern": "crepuscular",
+      "waterbodyPreference": {
+        "river": 1,
+        "stream": 0.8,
+        "reservoir": 0.6,
+        "lake": 0.4,
+        "pond": -0.4,
+        "bay": -0.6
+      },
+      "seasonalActivityByMonth": [
+        0.2,
+        0.25,
+        0.4,
+        0.65,
+        0.85,
+        0.9,
+        0.85,
+        0.85,
+        0.9,
+        0.7,
+        0.45,
+        0.25
+      ],
+      "primaryTechniquesBySeason": {
+        "cold": "Slow presentations in deeper pools/winter holding water: hair jigs, tubes, blade baits, suspending jerkbaits worked slowly along rock ledges.",
+        "cool": "Pre-spawn/fall aggression: crankbaits, jerkbaits, swimbaits, and craw-imitating soft plastics on gravel runs and current seams.",
+        "warm": "Summer river fishing near riffles, current breaks, and boulder cover: topwater at dawn/dusk, tubes, Ned rigs, crayfish/hellgrammite imitations."
+      },
+      "confidence": "high",
+      "sourceUrls": [
+        "https://dwr.virginia.gov/wildlife/information/smallmouth-bass/",
+        "https://dwr.virginia.gov/blog/spring-smallmouth-bass-fishing/",
+        "https://dwr.virginia.gov/fishing/trophy-fish/size-chart/"
+      ],
+      "notes": "Virginia DWR describes smallmouth as a coolwater species intolerant of elevated stream temperatures, favoring oxygenated coolwater gravel-bottom rivers/reservoirs (Potomac, Shenandoah, James, Rappahannock, New). Spawn in spring once water surpasses ~60F; males build gravel nests in 2-4 ft. Preferred active-feeding band centered in the 60s-low70s; feeding slows sharply in cold winter water and stressed by summer highs. Crepuscular/flexible: strong dawn-dusk and current-driven feeding, active midday in cooler seasons. Tolerance edges are approximate (widened) since DWR gives no explicit survival numbers.",
+      "typicalMinInches": 8,
+      "typicalMaxInches": 18,
+      "citationLengthInches": 20,
+      "citationWeightLb": 5,
+      "identification": "Bronze-green sides with dark vertical bars, red eye, and an upper jaw that does not extend past the eye; body is more torpedo-shaped than largemouth. The dorsal fin is continuous with only a shallow notch.",
+      "baits": [
+        "tube jigs",
+        "soft plastic craws",
+        "crankbaits",
+        "inline spinners",
+        "live crayfish",
+        "hellgrammites",
+        "Ned rigs",
+        "topwater poppers"
+      ]
+    },
+    {
+      "speciesId": "largemouth-bass",
+      "preferredMinF": 62,
+      "preferredMaxF": 78,
+      "toleranceMinF": 40,
+      "toleranceMaxF": 90,
+      "spawnMonths": [
+        3,
+        4,
+        5
+      ],
+      "spawnTempF": 62,
+      "dielPattern": "crepuscular",
+      "waterbodyPreference": {
+        "river": 0.4,
+        "stream": -0.2,
+        "reservoir": 0.9,
+        "lake": 1,
+        "pond": 1,
+        "bay": 0.3
+      },
+      "seasonalActivityByMonth": [
+        0.25,
+        0.3,
+        0.5,
+        0.75,
+        0.9,
+        0.9,
+        0.8,
+        0.8,
+        0.85,
+        0.7,
+        0.45,
+        0.3
+      ],
+      "primaryTechniquesBySeason": {
+        "cold": "Deep, slow winter presentations: jigs, blade baits, and soft plastics worked on structure and drop-offs; suspending jerkbaits on warmer afternoons.",
+        "cool": "Pre-spawn/fall feed: spinnerbaits, squarebill/lipless crankbaits, jerkbaits, and Texas-rigged plastics around emerging vegetation and wood.",
+        "warm": "Post-spawn/summer around cover and grass: topwater and frogs early/late, Texas rigs, jigs, and swim jigs through logs, laydowns, and submerged vegetation."
+      },
+      "confidence": "high",
+      "sourceUrls": [
+        "https://dwr.virginia.gov/wildlife/information/largemouth-bass/",
+        "https://dwr.virginia.gov/fishing/private-pond-management/fish-stocking/",
+        "https://dwr.virginia.gov/fishing/trophy-fish/size-chart/"
+      ],
+      "notes": "Virginia DWR: largemouth prefer slow-moving calm, clear waters with soft substrate and heavy cover (logs, rootwads, submerged aquatic vegetation); found statewide including tidal rivers. Spawn March-May in VA when water reaches ~60-65F (pond-management guidance). Preferred feeding band ~62-78F (VA populations); warmwater-tolerant, survives into upper 80s-low 90s but feeds less efficiently at extremes and slows in cold winter water. Crepuscular ambush predator, most active at dawn/dusk and warm overcast periods. Best fit for ponds, lakes, and reservoirs (Occoquan, Burke, tidal Potomac backwaters); present but less dominant in flowing river/stream mainstems. Tolerance ends widened as DWR page gives no explicit survival numbers.",
+      "typicalMinInches": 10,
+      "typicalMaxInches": 20,
+      "citationLengthInches": 22,
+      "citationWeightLb": 8,
+      "identification": "Deep green body with a broad dark horizontal stripe along the midline; the upper jaw extends well behind the rear edge of the eye, and a deep notch nearly separates the spiny and soft dorsal fins.",
+      "baits": [
+        "plastic worms (Texas-rigged)",
+        "soft plastic craws",
+        "spinnerbaits",
+        "chatterbaits",
+        "topwater frogs",
+        "crankbaits",
+        "live shiners",
+        "jig and pig"
+      ]
+    },
+    {
+      "speciesId": "spotted-bass",
+      "preferredMinF": 65,
+      "preferredMaxF": 80,
+      "toleranceMinF": 45,
+      "toleranceMaxF": 88,
+      "spawnMonths": [
+        4,
+        5,
+        6
+      ],
+      "spawnTempF": 65,
+      "dielPattern": "crepuscular",
+      "waterbodyPreference": {
+        "river": 0.8,
+        "stream": 0.5,
+        "reservoir": 0.9,
+        "lake": 0.5,
+        "pond": -0.4,
+        "bay": -0.3
+      },
+      "seasonalActivityByMonth": [
+        0.2,
+        0.25,
+        0.4,
+        0.65,
+        0.85,
+        0.9,
+        0.85,
+        0.85,
+        0.8,
+        0.6,
+        0.4,
+        0.25
+      ],
+      "primaryTechniquesBySeason": {
+        "cold": "Vertical and slow tactics on deep structure: spoons, blade baits, drop-shot and Ned rigs along bluff walls and channel ledges.",
+        "cool": "Pre-spawn/fall: jerkbaits, crankbaits, and finesse plastics on rocky points, ledges, and main-lake structure.",
+        "warm": "Summer over rock: drop-shot, shaky head, tubes, and topwater early/late on gravelly runs, points, and current seams."
+      },
+      "confidence": "medium",
+      "sourceUrls": [
+        "https://dwr.virginia.gov/wildlife/information/spotted-bass/",
+        "https://tpwd.texas.gov/huntwild/wild/species/spb/",
+        "https://dwr.virginia.gov/fishing/trophy-fish/size-chart/"
+      ],
+      "notes": "Spotted bass favor clear, gravelly flowing pools/runs of creeks and small-medium rivers and rocky reservoir structure (points, ledges, bluff walls), tolerating slower/warmer/more turbid water than smallmouth. Preferred ~65-80F; spawn spring at ~63-68F on rocky/gravel bottom in 2-8 ft. In the Virginia/Chesapeake region they are localized (occur below the Fall Line at head of tide in James and Pamunkey drainages) and are not a dominant species across most NoVa waters, so presence in Potomac/Occoquan/Rappahannock is limited-to-marginal. Confidence medium: temp/spawn numbers come from TPWD and general sources rather than a numeric VA DWR statement. Tolerance ends widened accordingly.",
+      "typicalMinInches": 8,
+      "typicalMaxInches": 15,
+      "citationLengthInches": null,
+      "citationWeightLb": null,
+      "identification": "Resembles a smallmouth in coloring but has rows of small dark spots below the lateral line forming horizontal streaks, a diamond-shaped lateral blotch pattern, and a small tooth patch on the tongue; jaw extends to about mid-eye, intermediate between largemouth and smallmouth.",
+      "baits": [
+        "tube jigs",
+        "drop-shot soft plastics",
+        "small crankbaits",
+        "Ned rigs",
+        "grubs",
+        "live minnows",
+        "spinnerbaits",
+        "jerkbaits"
+      ]
+    },
+    {
+      "speciesId": "bluegill",
+      "preferredMinF": 65,
+      "preferredMaxF": 80,
+      "toleranceMinF": 35,
+      "toleranceMaxF": 95,
+      "spawnMonths": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "spawnTempF": 72,
+      "dielPattern": "crepuscular",
+      "waterbodyPreference": {
+        "river": 0.4,
+        "stream": 0.2,
+        "reservoir": 0.8,
+        "lake": 0.9,
+        "pond": 1,
+        "bay": -0.5
+      },
+      "seasonalActivityByMonth": [
+        0.15,
+        0.2,
+        0.35,
+        0.55,
+        0.85,
+        1,
+        0.95,
+        0.9,
+        0.75,
+        0.5,
+        0.3,
+        0.15
+      ],
+      "primaryTechniquesBySeason": {
+        "cold": "Slow small jigs/live bait deep near structure; sluggish, tight to cover in winter",
+        "cool": "Small nymphs, worms, crickets in shallows as water warms toward pre-spawn",
+        "warm": "Peak: fly poppers, small jigs, crickets/worms over spawning beds and shoreline structure"
+      },
+      "confidence": "high",
+      "sourceUrls": [
+        "https://dwr.virginia.gov/wildlife/information/bluegill/",
+        "https://dwr.virginia.gov/fishing/trophy-fish/size-chart/",
+        "https://www.eregulations.com/virginia/fishing/online-recognition-program"
+      ],
+      "notes": "Virginia DWR: spawns early summer at 70-75F, prolific multi-spawner. Generalist warmwater fish thriving in nearly any VA water, favoring wood/vegetation structure; strongest in ponds/lakes/reservoirs, secondary in slow rivers. Preferred active-feeding band ~65-80F; upper lethal near 95F, survives cold under ice. Feeds most actively in low-light morning/evening (crepuscular) but active through daylight in season.",
+      "typicalMinInches": 4,
+      "typicalMaxInches": 9,
+      "citationLengthInches": 11,
+      "citationWeightLb": 1,
+      "identification": "Deep, laterally compressed sunfish with a small mouth, a solid dark (blue-black) ear flap with no red/orange margin, and a dark blotch at the rear base of the soft dorsal fin. Breeding males show a coppery-orange breast and vertical bars.",
+      "baits": [
+        "live nightcrawlers/red worms",
+        "crickets",
+        "mealworms",
+        "small foam/rubber spiders & poppers (fly)",
+        "1/32-1/64 oz jigs (tube/marabou)",
+        "tiny inline spinners (Beetle Spin)",
+        "wax worms under a bobber"
+      ]
+    },
+    {
+      "speciesId": "redbreast-sunfish",
+      "preferredMinF": 65,
+      "preferredMaxF": 78,
+      "toleranceMinF": 35,
+      "toleranceMaxF": 92,
+      "spawnMonths": [
+        5,
+        6,
+        7
+      ],
+      "spawnTempF": 70,
+      "dielPattern": "crepuscular",
+      "waterbodyPreference": {
+        "river": 1,
+        "stream": 0.9,
+        "reservoir": 0.5,
+        "lake": 0.3,
+        "pond": 0.2,
+        "bay": -0.4
+      },
+      "seasonalActivityByMonth": [
+        0.15,
+        0.2,
+        0.35,
+        0.55,
+        0.8,
+        1,
+        0.95,
+        0.9,
+        0.7,
+        0.45,
+        0.25,
+        0.15
+      ],
+      "primaryTechniquesBySeason": {
+        "cold": "Slow small jigs/bait in deeper river pools near cover; limited winter activity",
+        "cool": "Small nymphs, spinners, worms along undercut banks and current seams pre-spawn",
+        "warm": "Peak: small poppers, in-line spinners, crickets/worms near submerged wood and shoreline banks in flowing water"
+      },
+      "confidence": "high",
+      "sourceUrls": [
+        "https://dwr.virginia.gov/wildlife/information/redbreast-sunfish/",
+        "https://dwr.virginia.gov/fishing/trophy-fish/size-chart/",
+        "https://www.eregulations.com/virginia/fishing/online-recognition-program"
+      ],
+      "notes": "River/stream sunfish adapted to flowing sandy-bottomed coastal-plain rivers (Potomac, Rappahannock, Shenandoah); tolerates faster current than other sunfish. Spawns late May-July at 65-75F on sand/gravel nests; preferred temp ~65-78F. Opportunistic feeder on benthic macroinvertebrates, mollusks, crustaceans, small fish, terrestrial insects. Low-light feeding bias.",
+      "typicalMinInches": 4,
+      "typicalMaxInches": 8,
+      "citationLengthInches": 10,
+      "citationWeightLb": 1,
+      "identification": "Slender, elongated sunfish of streams and rivers with a long, narrow all-black ear flap (no pale margin) and a bright orange-red breast on males. Wavy blue lines radiate across the cheek; body has a bronze-olive cast.",
+      "baits": [
+        "small nightcrawler/worm pieces",
+        "crickets",
+        "small streamers & poppers (fly)",
+        "wet flies / nymphs",
+        "1/32 oz jigs",
+        "tiny inline spinners",
+        "grasshoppers"
+      ]
+    },
+    {
+      "speciesId": "black-crappie",
+      "preferredMinF": 58,
+      "preferredMaxF": 75,
+      "toleranceMinF": 33,
+      "toleranceMaxF": 90,
+      "spawnMonths": [
+        4,
+        5
+      ],
+      "spawnTempF": 65,
+      "dielPattern": "crepuscular",
+      "waterbodyPreference": {
+        "river": 0.4,
+        "stream": 0.1,
+        "reservoir": 1,
+        "lake": 0.9,
+        "pond": 0.6,
+        "bay": -0.4
+      },
+      "seasonalActivityByMonth": [
+        0.35,
+        0.4,
+        0.6,
+        0.9,
+        1,
+        0.75,
+        0.6,
+        0.55,
+        0.65,
+        0.7,
+        0.5,
+        0.4
+      ],
+      "primaryTechniquesBySeason": {
+        "cold": "Small jigs/minnows suspended over deep brush and creek channels; winter schools catchable",
+        "cool": "Peak pre-spawn: minnows and 1/16-1/32oz jigs around brush/timber as fish stage shallow",
+        "warm": "Post-spawn move deeper: jigs/minnows on brush piles and standing timber, best at dawn/dusk/night"
+      },
+      "confidence": "medium",
+      "sourceUrls": [
+        "https://dwr.virginia.gov/wildlife/information/black-crappie/",
+        "https://www.dnr.state.mn.us/fish/crappie/biology.html",
+        "https://dwr.virginia.gov/fishing/trophy-fish/size-chart/",
+        "https://www.eregulations.com/virginia/fishing/online-recognition-program"
+      ],
+      "notes": "Virginia DWR: prefers cooler, deeper, clear water with little current; spawns spring/early summer in colonies near submerged stumps/brush/vegetation. Spawn trigger commonly cited 62-68F (late March-April in much of range, ~April-May in VA reservoirs). Favors reservoirs/lakes/clear ponds over turbid or fast water. Adults feed most actively early morning and after dark (crepuscular/nocturnal lean). DWR page gives no explicit temp numbers, so temp band widened; confidence medium.",
+      "typicalMinInches": 7,
+      "typicalMaxInches": 13,
+      "citationLengthInches": 15,
+      "citationWeightLb": 2,
+      "identification": "Silvery, deep-bodied panfish with irregular scattered black speckling (no vertical bars) and 7-8 dorsal spines. The dorsal fin base is about as long as the distance from the dorsal origin to the eye, distinguishing it from white crappie.",
+      "baits": [
+        "live minnows (fathead/small shiners)",
+        "1/16-1/32 oz marabou/tube jigs",
+        "curly-tail grubs",
+        "small soft-plastic minnow baits",
+        "jig-and-bobber setups",
+        "small inline spinners",
+        "crappie 'nibbles'"
+      ]
+    },
+    {
+      "speciesId": "white-crappie",
+      "preferredMinF": 60,
+      "preferredMaxF": 76,
+      "toleranceMinF": 33,
+      "toleranceMaxF": 90,
+      "spawnMonths": [
+        4,
+        5,
+        6
+      ],
+      "spawnTempF": 64,
+      "dielPattern": "crepuscular",
+      "waterbodyPreference": {
+        "river": 0.7,
+        "stream": 0.2,
+        "reservoir": 1,
+        "lake": 0.8,
+        "pond": 0.5,
+        "bay": -0.4
+      },
+      "seasonalActivityByMonth": [
+        0.3,
+        0.35,
+        0.55,
+        0.85,
+        1,
+        0.8,
+        0.6,
+        0.55,
+        0.6,
+        0.65,
+        0.5,
+        0.35
+      ],
+      "primaryTechniquesBySeason": {
+        "cold": "Minnows/small jigs deep over structure and channel edges; slow presentations",
+        "cool": "Peak pre-spawn: minnows and small jigs around brush/timber in shallow coves, even in stained water",
+        "warm": "Post-spawn deeper on brush and river backwaters; low-light and night best"
+      },
+      "confidence": "medium",
+      "sourceUrls": [
+        "https://dwr.virginia.gov/wildlife/fish/white-crappie/",
+        "https://wvdnr.gov/plants-animals/sportfish/white-crappie/",
+        "https://dwr.virginia.gov/fishing/trophy-fish/size-chart/",
+        "https://www.eregulations.com/virginia/fishing/online-recognition-program"
+      ],
+      "notes": "Native to Upper Tennessee drainage in SW Virginia, introduced elsewhere. More tolerant of warm, turbid lakes, reservoirs, and slow river backwaters than black crappie and outnumbers it in murky water; prefers low-velocity areas in rivers. Spawning begins ~64F (reported 62-68F), spring; preferred ~65-76F. Feeds heavily on small fish plus invertebrates, most active dawn/dusk/night. Confidence medium (DWR temp numbers sparse; ranges from multi-source).",
+      "typicalMinInches": 7,
+      "typicalMaxInches": 13,
+      "citationLengthInches": 15,
+      "citationWeightLb": 2,
+      "identification": "Silvery crappie whose dark markings form distinct vertical bars along the flanks (rather than random speckles), with only 5-6 dorsal spines. Body is generally more elongated than the black crappie.",
+      "baits": [
+        "live minnows",
+        "1/16-1/32 oz jigs (tube/marabou)",
+        "curly-tail grubs",
+        "small soft-plastic swimbaits",
+        "jig under a slip bobber",
+        "small spinners",
+        "crappie 'nibbles'"
+      ]
+    },
+    {
+      "speciesId": "channel-catfish",
+      "preferredMinF": 70,
+      "preferredMaxF": 85,
+      "toleranceMinF": 35,
+      "toleranceMaxF": 95,
+      "spawnMonths": [
+        4,
+        5,
+        6
+      ],
+      "spawnTempF": 75,
+      "dielPattern": "nocturnal",
+      "waterbodyPreference": {
+        "river": 0.9,
+        "stream": 0.4,
+        "reservoir": 0.9,
+        "lake": 0.9,
+        "pond": 0.8,
+        "bay": 0.1
+      },
+      "seasonalActivityByMonth": [
+        0.15,
+        0.2,
+        0.35,
+        0.6,
+        0.85,
+        0.95,
+        1,
+        1,
+        0.85,
+        0.6,
+        0.35,
+        0.2
+      ],
+      "primaryTechniquesBySeason": {
+        "cold": "Slow-fished cut bait or nightcrawlers in deeper winter holes; bites sparse and light",
+        "cool": "Live/cut bait and prepared 'stink' baits as water warms into 60s; fish move shallow pre-spawn",
+        "warm": "Peak season - cut bait, chicken liver, dip baits fished on bottom near cover, best low-light/night"
+      },
+      "confidence": "high",
+      "sourceUrls": [
+        "https://dwr.virginia.gov/wildlife/fish/channel-catfish/",
+        "https://www.fws.gov/sites/default/files/documents/channel-catfish.pdf",
+        "https://dwr.virginia.gov/fishing/trophy-fish/size-chart/",
+        "https://dwr.virginia.gov/fishing/trophy-fish/citations/"
+      ],
+      "notes": "VA DWR: spawn April-June in Virginia; nest-builders in concealed cover. Warm-water fish, optimal growth near 85F; broader catfish spawn window 70-84F, best ~80F. Most active dusk-into-night but readily feed by day in stained water. Thrives in pools/runs of moderate current, reservoirs, ponds; silty substrate with overhanging cover. Tolerance range widened to reflect winter survival and summer highs (numbers not on DWR page, hence borrowed from FWS/general references).",
+      "typicalMinInches": 12,
+      "typicalMaxInches": 26,
+      "citationLengthInches": 30,
+      "citationWeightLb": 12,
+      "identification": "Slender catfish with a deeply forked tail and a rounded/overhanging upper jaw; olive-gray to bluish body usually scattered with small dark spots (fading in large adults). The anal fin is rounded with 24-29 rays, distinguishing it from the flat-margined blue catfish.",
+      "baits": [
+        "nightcrawlers",
+        "chicken liver",
+        "cut shad or herring",
+        "prepared/dip stinkbait",
+        "shrimp",
+        "hot dog chunks",
+        "crayfish",
+        "jug/soft plastic craw"
+      ]
+    },
+    {
+      "speciesId": "blue-catfish",
+      "preferredMinF": 75,
+      "preferredMaxF": 86,
+      "toleranceMinF": 35,
+      "toleranceMaxF": 95,
+      "spawnMonths": [
+        5,
+        6
+      ],
+      "spawnTempF": 72,
+      "dielPattern": "nocturnal",
+      "waterbodyPreference": {
+        "river": 1,
+        "stream": 0.3,
+        "reservoir": 0.8,
+        "lake": 0.6,
+        "pond": -0.3,
+        "bay": 0.7
+      },
+      "seasonalActivityByMonth": [
+        0.3,
+        0.35,
+        0.45,
+        0.6,
+        0.8,
+        0.9,
+        1,
+        1,
+        0.9,
+        0.7,
+        0.5,
+        0.35
+      ],
+      "primaryTechniquesBySeason": {
+        "cold": "Fresh cut bait (gizzard shad/herring) anchored in deep river holes/channel edges; winter is prime trophy time on the tidal Potomac",
+        "cool": "Drift or anchor cut bait on flats and channel edges as fish stage pre-spawn",
+        "warm": "Cut/live bait on bottom near current seams and holes; heavy feeding, best at night"
+      },
+      "confidence": "high",
+      "sourceUrls": [
+        "https://dwr.virginia.gov/wildlife/information/blue-catfish/",
+        "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0244392",
+        "https://dwr.virginia.gov/fishing/trophy-fish/size-chart/",
+        "https://dwr.virginia.gov/fishing/trophy-fish/citations/"
+      ],
+      "notes": "VA DWR: migrate to spawn at 70-75F, late spring/early summer; established (invasive) in tidal Chesapeake tributaries incl. Potomac, James, Rappahannock, York, plus reservoirs. Nocturnal - hold in deep holes by day, move to shallower moving water at low light. Preferred temp ~82-86F; highly cold-tolerant (winter survival to ~42F in farm data) and salinity-tolerant, hence strong in tidal river/bay. Big fish are predatory (cut bait). Remains catchable through winter in deep river holes.",
+      "typicalMinInches": 15,
+      "typicalMaxInches": 40,
+      "citationLengthInches": 38,
+      "citationWeightLb": 30,
+      "identification": "Largest North American catfish; slate-blue to silvery-gray body with no spots, a deeply forked tail, and a distinctly straight-edged (flat-margined) anal fin with 30-36 rays. The straight anal fin margin separates it from the rounded-fin channel catfish.",
+      "baits": [
+        "fresh cut gizzard shad",
+        "cut herring/menhaden",
+        "cut white perch",
+        "whole live shad",
+        "chicken breast/liver",
+        "cut bluegill (where legal)"
+      ]
+    },
+    {
+      "speciesId": "flathead-catfish",
+      "preferredMinF": 66,
+      "preferredMaxF": 85,
+      "toleranceMinF": 40,
+      "toleranceMaxF": 92,
+      "spawnMonths": [
+        5,
+        6,
+        7
+      ],
+      "spawnTempF": 75,
+      "dielPattern": "nocturnal",
+      "waterbodyPreference": {
+        "river": 1,
+        "stream": 0.4,
+        "reservoir": 0.7,
+        "lake": 0.6,
+        "pond": 0.1,
+        "bay": 0
+      },
+      "seasonalActivityByMonth": [
+        0.1,
+        0.12,
+        0.25,
+        0.5,
+        0.8,
+        0.95,
+        1,
+        1,
+        0.8,
+        0.5,
+        0.25,
+        0.12
+      ],
+      "primaryTechniquesBySeason": {
+        "cold": "Very tough - nearly dormant below 50F; occasional live bait dead-slow in deepest cover",
+        "cool": "Live bait (sunfish/bullheads) near heavy cover as water climbs through 60s; activity building",
+        "warm": "Prime - large live baitfish fished tight to logjams, undercut banks and deep structure after dark"
+      },
+      "confidence": "high",
+      "sourceUrls": [
+        "https://dwr.virginia.gov/wildlife/information/flathead-catfish/",
+        "https://en.wikipedia.org/wiki/Flathead_catfish",
+        "https://dwr.virginia.gov/fishing/trophy-fish/size-chart/",
+        "https://dwr.virginia.gov/fishing/trophy-fish/citations/"
+      ],
+      "notes": "VA DWR: spawn May-July, nesting under overhanging ledges/logs/undercut banks; thrive in Virginia rivers and lakes. Feeding ramps up sharply near 66F and stays high to ~90F; largely inactive below ~50F (10C). Strongly nocturnal ambush predator preferring LIVE fish - very cover-oriented (logjams, undercut banks, submerged structure). River-dominant species; less common in ponds/tidal bay.",
+      "typicalMinInches": 15,
+      "typicalMaxInches": 36,
+      "citationLengthInches": 40,
+      "citationWeightLb": 25,
+      "identification": "Mottled yellow-brown ('mud cat') body with a flattened, broad head, a squared/slightly notched tail (not deeply forked), and a protruding lower jaw. The flat head, projecting lower jaw, and near-flat tail readily separate it from blue and channel catfish.",
+      "baits": [
+        "live bluegill/sunfish (where legal)",
+        "live shad",
+        "large live shiners",
+        "live bullheads",
+        "large nightcrawler gobs",
+        "cut sunfish"
+      ]
+    },
+    {
+      "speciesId": "rainbow-trout",
+      "preferredMinF": 44,
+      "preferredMaxF": 65,
+      "toleranceMinF": 33,
+      "toleranceMaxF": 75,
+      "spawnMonths": [
+        2,
+        3
+      ],
+      "spawnTempF": 52,
+      "dielPattern": "crepuscular",
+      "waterbodyPreference": {
+        "river": 0.8,
+        "stream": 0.9,
+        "reservoir": 0.5,
+        "lake": 0.4,
+        "pond": 0.6,
+        "bay": -1
+      },
+      "seasonalActivityByMonth": [
+        0.7,
+        0.85,
+        0.95,
+        0.9,
+        0.6,
+        0.25,
+        0.1,
+        0.1,
+        0.25,
+        0.75,
+        0.85,
+        0.75
+      ],
+      "primaryTechniquesBySeason": {
+        "cold": "Peak stocked-trout season in NoVa (DWR stocks Oct-May). Drift small nymphs, egg patterns, PowerBait/salmon eggs, and inline spinners slow near bottom; fish are lethargic so downsize and slow presentation.",
+        "cool": "Best growth/feeding window. Dry-dropper rigs, small spinners, and midge/mayfly hatches on Rappahannock/Shenandoah tributaries; active midday and low-light.",
+        "warm": "Most put-and-take rainbows die off or hold only in the coldest spring-fed/tailwater sections once water exceeds ~70F. Fish dawn/dusk in oxygenated riffles; avoid catch-and-release when water tops 68F (thermal stress)."
+      },
+      "confidence": "medium",
+      "sourceUrls": [
+        "https://dwr.virginia.gov/wildlife/information/rainbow-trout/",
+        "https://uwotf.com/blog/optimal-trout-water-temps/",
+        "https://dwr.virginia.gov/fishing/trophy-fish/size-chart/"
+      ],
+      "notes": "In NoVa/mid-Atlantic almost entirely a stocked put-and-take fishery (Virginia DWR stocks fall through spring); wild spawning populations exist only in a few mountain streams, spawning Feb-Mar per DWR. Preferred feeding 44-65F, growth stops ~73F, lethal ~75-77F sustained. DWR: 'require pristine water that is both cold and highly oxygenated.' Summer activity in the region is low because most stocked reservoirs/streams exceed thermal limits.",
+      "typicalMinInches": 8,
+      "typicalMaxInches": 16,
+      "citationLengthInches": 22,
+      "citationWeightLb": 4,
+      "identification": "Silvery body with a broad pinkish-red horizontal stripe along the flank and small black spots scattered over the back, sides, and tail. Lacks the red/orange lower-fin margins of brook trout.",
+      "baits": [
+        "nightcrawlers",
+        "Powerbait / dough bait",
+        "small Mepps/rooster tail spinners",
+        "salmon eggs",
+        "wooly bugger fly",
+        "bead-head nymphs",
+        "corn kernels"
+      ]
+    },
+    {
+      "speciesId": "brown-trout",
+      "preferredMinF": 44,
+      "preferredMaxF": 67,
+      "toleranceMinF": 33,
+      "toleranceMaxF": 77,
+      "spawnMonths": [
+        11,
+        12
+      ],
+      "spawnTempF": 46,
+      "dielPattern": "nocturnal",
+      "waterbodyPreference": {
+        "river": 0.9,
+        "stream": 0.8,
+        "reservoir": 0.5,
+        "lake": 0.5,
+        "pond": 0.3,
+        "bay": -1
+      },
+      "seasonalActivityByMonth": [
+        0.65,
+        0.75,
+        0.85,
+        0.9,
+        0.7,
+        0.4,
+        0.25,
+        0.25,
+        0.5,
+        0.85,
+        0.9,
+        0.7
+      ],
+      "primaryTechniquesBySeason": {
+        "cold": "Deep, slow nymphing and streamers along undercut banks and woody cover; larger browns are structure-oriented and hold in deeper lower-gradient runs. Low-light and night produce best.",
+        "cool": "Aggressive feeding; strip streamers, swing wet flies, throw jerkbaits/spinners. Fall pre-spawn (Oct-Nov) browns get territorial and hammer large streamers.",
+        "warm": "Most heat-tolerant of the three - can hold in marginal water other trout abandon. Concentrate on dawn, dusk, and after dark in oxygenated larger streams/tailwaters; back off C&R above ~70F."
+      },
+      "confidence": "medium",
+      "sourceUrls": [
+        "https://dwr.virginia.gov/fishing/trout/",
+        "https://uwotf.com/blog/optimal-trout-water-temps/",
+        "https://dwr.virginia.gov/fishing/trophy-fish/size-chart/"
+      ],
+      "notes": "DWR: Brown Trout tolerate warmer water than Brook or Rainbow and prefer larger, lower-gradient streams; spawn Nov-Dec in Virginia, triggered by falling temps/shortening days (~44-48F). Preferred feeding 44-67F, lethal ~75-77F sustained. Notably more nocturnal/low-light than the other two species, especially larger fish, hence night and dawn/dusk bias. In NoVa found as stocked fish and localized holdover/wild fish in cooler streams and tailwaters.",
+      "typicalMinInches": 9,
+      "typicalMaxInches": 20,
+      "citationLengthInches": 25,
+      "citationWeightLb": 5,
+      "identification": "Golden-brown to buttery flanks with large black AND rust-red spots, the red spots often ringed with pale halos; square-ish tail with few or no spots. More olive/brown overall than rainbow.",
+      "baits": [
+        "nightcrawlers",
+        "minnows / shiners",
+        "brown or olive wooly bugger",
+        "Rapala / minnow-imitating crankbaits",
+        "Mepps/rooster tail spinners",
+        "streamers (sculpin patterns)",
+        "Powerbait"
+      ]
+    },
+    {
+      "speciesId": "brook-trout",
+      "preferredMinF": 44,
+      "preferredMaxF": 63,
+      "toleranceMinF": 32,
+      "toleranceMaxF": 72,
+      "spawnMonths": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "spawnTempF": 48,
+      "dielPattern": "crepuscular",
+      "waterbodyPreference": {
+        "river": 0.5,
+        "stream": 1,
+        "reservoir": 0.1,
+        "lake": 0.2,
+        "pond": 0.2,
+        "bay": -1
+      },
+      "seasonalActivityByMonth": [
+        0.45,
+        0.5,
+        0.65,
+        0.85,
+        0.9,
+        0.75,
+        0.55,
+        0.5,
+        0.7,
+        0.75,
+        0.55,
+        0.45
+      ],
+      "primaryTechniquesBySeason": {
+        "cold": "Native brookies in headwater streams slow down but still feed in the warmest part of the day; drift small nymphs and tiny spinners in plunge pools. Winter is the low point.",
+        "cool": "Prime season. Small dry flies (Adams, elk-hair caddis), dry-dropper, and short small-stream casts to pocket water; brookies are opportunistic and eager in 50-60F water. Best growth window.",
+        "warm": "Restricted to the coldest, most shaded, spring-fed mountain headwaters (upper James/Potomac/Rappahannock/Shenandoah systems). Fish early morning in canopy-shaded plunge pools; stressed above 65F, in serious trouble above 70F, so limit handling."
+      },
+      "confidence": "high",
+      "sourceUrls": [
+        "https://dwr.virginia.gov/wildlife/information/brook-trout/",
+        "https://uwotf.com/blog/optimal-trout-water-temps/",
+        "https://dwr.virginia.gov/fishing/trophy-fish/size-chart/"
+      ],
+      "notes": "Virginia's only native trout and most cold/oxygen-dependent (DWR: 'require pristine water that is both cold and highly oxygenated'; do not tolerate warm water as well as rainbow or brown). Native to upper reaches of James, New, Potomac, Rappahannock, and Tennessee systems - almost exclusively small mountain streams, not lakes/reservoirs, so stream +1.0. Spawn late Sept through Dec (peak Oct-Nov), triggered by falling temps/shortening days (~48-52F); eggs hatch mid-Jan-Feb. Optimal feeding 50-60F, stressed at 65F, critical above 70F. Because they live in cool spring-fed headwaters, they stay more fishable through NoVa summers than stocked rainbows in warm reservoirs.",
+      "typicalMinInches": 5,
+      "typicalMaxInches": 11,
+      "citationLengthInches": 16,
+      "citationWeightLb": 2,
+      "identification": "Dark olive-green back with pale worm-like (vermiculate) markings, red spots with blue halos on the sides, and white leading edges on the orange lower fins. Virginia's only native trout.",
+      "baits": [
+        "small dry flies (Adams, elk hair caddis)",
+        "bead-head nymphs",
+        "nightcrawlers / red worms",
+        "tiny inline spinners",
+        "wooly bugger",
+        "salmon eggs",
+        "small spoons"
+      ]
+    },
+    {
+      "speciesId": "common-carp",
+      "preferredMinF": 68,
+      "preferredMaxF": 82,
+      "toleranceMinF": 34,
+      "toleranceMaxF": 96,
+      "spawnMonths": [
+        4,
+        5,
+        6
+      ],
+      "spawnTempF": 64,
+      "dielPattern": "crepuscular",
+      "waterbodyPreference": {
+        "river": 0.8,
+        "stream": 0.4,
+        "reservoir": 0.9,
+        "lake": 0.9,
+        "pond": 0.9,
+        "bay": 0.3
+      },
+      "seasonalActivityByMonth": [
+        0.2,
+        0.25,
+        0.45,
+        0.7,
+        0.9,
+        1,
+        1,
+        0.95,
+        0.85,
+        0.65,
+        0.4,
+        0.25
+      ],
+      "primaryTechniquesBySeason": {
+        "cold": "Sluggish - small baits (corn/dough) fished slow in the warmest, deepest water; sparse bites",
+        "cool": "Feeding resumes in low 60s; pre-spawn fish move onto shallow flats - bread, corn, boilies",
+        "warm": "Peak - bottom baits (corn, boilies, pack bait) on flats; strong feeding, best dawn/dusk"
+      },
+      "confidence": "medium",
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Common_carp",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11576824/",
+        "https://dwr.virginia.gov/fishing/trophy-fish/size-chart/",
+        "https://dwr.virginia.gov/fishing/trophy-fish/citations/"
+      ],
+      "notes": "Spawning begins ~63-64F (17-18C), main spawn 64-77F, in shallow vegetated margins April-June in the mid-Atlantic. Optimal growth/feeding 24-28C (~75-82F); very hardy generalist tolerating wide temp and low oxygen. Feeds most actively dawn and dusk in shallow flats, rooting bottom, but active through the day in warm months. Thrives in warm lakes, ponds, reservoirs and slow river reaches (Potomac, Occoquan). Temp numbers are from general/aquaculture literature rather than a VA agency page, hence medium confidence.",
+      "typicalMinInches": 15,
+      "typicalMaxInches": 32,
+      "citationLengthInches": 34,
+      "citationWeightLb": 20,
+      "identification": "Heavy-bodied golden-bronze minnow with large scales, a long dorsal fin, and two pairs of barbels at the corners of the mouth (a key trait vs. buffalo/suckers, which lack barbels). Mouth is downturned and rubbery for bottom feeding.",
+      "baits": [
+        "sweet corn",
+        "boilies",
+        "doughbait/bread",
+        "packbait",
+        "cooked field corn",
+        "worms/nightcrawlers",
+        "flavored dough bait"
+      ]
+    },
+    {
+      "speciesId": "northern-snakehead",
+      "preferredMinF": 70,
+      "preferredMaxF": 85,
+      "toleranceMinF": 32,
+      "toleranceMaxF": 90,
+      "spawnMonths": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "spawnTempF": 64,
+      "dielPattern": "flexible",
+      "waterbodyPreference": {
+        "river": 1,
+        "stream": 0.4,
+        "reservoir": 0.4,
+        "lake": 0.5,
+        "pond": 0.9,
+        "bay": 0.3
+      },
+      "seasonalActivityByMonth": [
+        0.1,
+        0.12,
+        0.22,
+        0.42,
+        0.72,
+        0.92,
+        1,
+        1,
+        0.85,
+        0.55,
+        0.28,
+        0.14
+      ],
+      "primaryTechniquesBySeason": {
+        "cold": "Very tough in cold water; fish go dormant/hold near bottom in vegetation and mud. Slow bottom presentations at best; largely inactive below ~50F.",
+        "cool": "Spring warm-up brings fish shallow into vegetated backwaters and tidal creeks; slow-moving soft plastics, chatterbaits, and weedless swimbaits near cover.",
+        "warm": "Peak season: topwater frogs and buzzbaits over pads/grass in tidal Potomac creeks (Little Hunting Creek, Occoquan/Pohick backwaters), plus weedless plastics and swim jigs; aggressive strikes, especially near spawning/guarding fish."
+      },
+      "confidence": "medium",
+      "sourceUrls": [
+        "https://dnr.maryland.gov/fisheries/pages/snakehead.aspx",
+        "https://invasions.si.edu/nemesis/species_summary/166680",
+        "https://dwr.virginia.gov/fishing/trophy-fish/size-chart/",
+        "https://dwr.virginia.gov/wildlife/invasive-species/snakeheads/"
+      ],
+      "notes": "Invasive obligate air-breather established in the tidal Potomac (discovered 2004; breeding female documented in Little Hunting Creek, VA). Maryland DNR: tolerates 32-85F; most cold-tolerant channid, can survive under ice, so tolerance floor set to freezing and ceiling ~90F. Prefers stagnant/slow shallow water with mud substrate and dense aquatic vegetation, and tolerates brackish water (up to ~15-18 ppt), hence positive fit for tidal river, ponds, and some bay/estuary habitat. Spawns multiple times per year in warm months (roughly late spring through summer, ~64-77F trigger); spawnTempF ~64F is a literature estimate, not an agency-confirmed VA figure, so temp/spawn confidence is medium. Warmwater fish: activity peaks Jun-Aug and collapses in winter.",
+      "typicalMinInches": 18,
+      "typicalMaxInches": 33,
+      "citationLengthInches": null,
+      "citationWeightLb": null,
+      "identification": "Elongated, cylindrical body with a long single dorsal fin running most of the back, a flattened snake-like head, large mouth with sharp teeth, and a blotchy brown-and-black camouflage pattern. Long anal fin and rounded tail; can breathe air.",
+      "baits": [
+        "frog topwater lures (weedless)",
+        "chatterbaits / bladed jigs",
+        "soft-plastic swimbaits",
+        "live minnows / killifish",
+        "spinnerbaits",
+        "buzzbaits",
+        "weedless soft plastics (flukes/creature baits)"
+      ]
+    },
+    {
+      "speciesId": "walleye",
+      "preferredMinF": 55,
+      "preferredMaxF": 72,
+      "toleranceMinF": 32,
+      "toleranceMaxF": 82,
+      "spawnMonths": [
+        2,
+        3
+      ],
+      "spawnTempF": 48,
+      "dielPattern": "crepuscular",
+      "waterbodyPreference": {
+        "river": 0.6,
+        "stream": -0.2,
+        "reservoir": 1,
+        "lake": 0.9,
+        "pond": -0.6,
+        "bay": -0.8
+      },
+      "seasonalActivityByMonth": [
+        0.45,
+        0.6,
+        0.78,
+        0.8,
+        0.68,
+        0.55,
+        0.45,
+        0.45,
+        0.6,
+        0.72,
+        0.62,
+        0.48
+      ],
+      "primaryTechniquesBySeason": {
+        "cold": "Slow vertical jigging with blade baits, jigs tipped with minnows, and jerkbaits worked near rocky points/ledges; pre-spawn fish stage near tributary mouths in late winter.",
+        "cool": "Trolling crankbaits and worm harnesses along drop-offs and points; live-bait rigs; best at dawn/dusk and after dark when fish move shallow.",
+        "warm": "Night fishing is key in summer heat; deep trolling or bottom-bouncing over structure by day as fish hold in cooler, deeper water in reservoirs (Smith Mountain Lake, New/James River)."
+      },
+      "confidence": "high",
+      "sourceUrls": [
+        "https://dwr.virginia.gov/wildlife/information/walleye/",
+        "https://smarttechsavvy.com/do-walleye-like-cold-water-or-warm-water/",
+        "https://dwr.virginia.gov/fishing/trophy-fish/size-chart/"
+      ],
+      "notes": "Virginia DWR: walleye favor larger, cooler waterbodies, become more active in low light/night, and spawn in late winter when water reaches upper-40s to low-50s F over clean rocky substrate. Preferred active-feeding band ~55-72F (optimal growth cited 60-75F); stress above ~80F pushes fish deep. Light-sensitive eye (tapetum lucidum) drives strong crepuscular/nocturnal bite. Highly piscivorous. In NoVa most relevant in reservoirs and the New/James/Potomac mainstems rather than small ponds or brackish bays.",
+      "typicalMinInches": 14,
+      "typicalMaxInches": 25,
+      "citationLengthInches": 25,
+      "citationWeightLb": 5,
+      "identification": "Olive-gold, elongate body with a large reflective (marble-like) eye, a white tip on the lower lobe of the tail, and a dark blotch at the rear base of the spiny dorsal fin; teeth are prominent. Distinguished from sauger by the tail spot and lack of distinct dorsal-fin rows of spots.",
+      "baits": [
+        "jig and minnow",
+        "nightcrawler harnesses/crawler rigs",
+        "live minnows",
+        "jerkbaits",
+        "deep-diving crankbaits",
+        "blade baits",
+        "soft plastic swimbaits"
+      ]
+    },
+    {
+      "speciesId": "yellow-perch",
+      "preferredMinF": 63,
+      "preferredMaxF": 77,
+      "toleranceMinF": 32,
+      "toleranceMaxF": 86,
+      "spawnMonths": [
+        2,
+        3
+      ],
+      "spawnTempF": 48,
+      "dielPattern": "diurnal",
+      "waterbodyPreference": {
+        "river": 0.6,
+        "stream": 0.2,
+        "reservoir": 0.9,
+        "lake": 1,
+        "pond": 0.5,
+        "bay": 0.5
+      },
+      "seasonalActivityByMonth": [
+        0.55,
+        0.75,
+        0.85,
+        0.7,
+        0.6,
+        0.5,
+        0.4,
+        0.4,
+        0.55,
+        0.7,
+        0.7,
+        0.6
+      ],
+      "primaryTechniquesBySeason": {
+        "cold": "Very productive: minnows and small jigs/spoons near bottom over gravel/sand; active in cold water and pre-spawn runs",
+        "cool": "Spawn/post-spawn: minnows, jigs, spinners near structure and vegetation in moderate depths",
+        "warm": "Slower/deeper in summer heat; small jigs and bait near bottom structure, best in cooler mornings"
+      },
+      "confidence": "medium",
+      "sourceUrls": [
+        "https://dwr.virginia.gov/wildlife/information/yellow-perch/",
+        "https://en.wikipedia.org/wiki/Yellow_perch",
+        "https://dwr.virginia.gov/fishing/trophy-fish/size-chart/",
+        "https://www.eregulations.com/virginia/fishing/online-recognition-program"
+      ],
+      "notes": "Cool-water species; VA DWR notes coastal-plain migratory populations reproduce Jan-March, spawning at low temps (~45-50F, late Feb-early March). Preferred active range 63-77F, optimum ~70-75F; a strong cold-water/early-spring feeder that slows in summer heat. Favors gravel/sand substrates and structure in lakes/reservoirs, tidal rivers, and lower Chesapeake tributaries. Distinctly diurnal - feeds by day, generally not at night. Confidence medium (DWR gives spawn timing but no explicit temp numbers).",
+      "typicalMinInches": 6,
+      "typicalMaxInches": 12,
+      "citationLengthInches": 12,
+      "citationWeightLb": 1.25,
+      "identification": "Elongated yellow-gold body crossed by 6-8 dark vertical bars (tiger-striping) and orange-tinted lower fins. A true perch (not a sunfish) with two separate dorsal fins.",
+      "baits": [
+        "live minnows",
+        "nightcrawlers/worms",
+        "small jigs tipped with minnow",
+        "Beetle Spin / small inline spinners",
+        "small soft-plastic grubs",
+        "spoons (ice/jigging)",
+        "bloodworms"
+      ]
+    },
+    {
+      "speciesId": "white-perch",
+      "preferredMinF": 58,
+      "preferredMaxF": 77,
+      "toleranceMinF": 36,
+      "toleranceMaxF": 86,
+      "spawnMonths": [
+        4,
+        5,
+        6
+      ],
+      "spawnTempF": 55,
+      "dielPattern": "crepuscular",
+      "waterbodyPreference": {
+        "river": 0.8,
+        "stream": 0.1,
+        "reservoir": 0.7,
+        "lake": 0.6,
+        "pond": 0.2,
+        "bay": 1
+      },
+      "seasonalActivityByMonth": [
+        0.35,
+        0.4,
+        0.6,
+        0.85,
+        1,
+        0.9,
+        0.75,
+        0.7,
+        0.7,
+        0.6,
+        0.45,
+        0.35
+      ],
+      "primaryTechniquesBySeason": {
+        "cold": "Deep schools in tidal rivers; small jigs, bloodworms, grass shrimp near bottom, slow",
+        "cool": "Spring spawning run peak: bottom rigs with bloodworms/grass shrimp and small jigs/spinners in tidal freshwater reaches",
+        "warm": "Schooling in open water and around structure; small jigs, spinners, bait, jig under popping cork at dawn/dusk"
+      },
+      "confidence": "medium",
+      "sourceUrls": [
+        "https://www.chesapeakebay.net/discover/field-guide/entry/white-perch",
+        "https://dep.nj.gov/njfw/wp-content/uploads/njfw/White-Perch.pdf",
+        "https://dwr.virginia.gov/fishing/trophy-fish/size-chart/",
+        "https://www.eregulations.com/virginia/fishing/online-recognition-program"
+      ],
+      "notes": "Estuarine/semi-anadromous; euryhaline, thrives across salinities and abundant in tidal Potomac and Chesapeake tributaries, plus freshwater impoundments. Spawns April-June (runs start late March) when water reaches ~50-60F, moving up into fresh/slightly brackish rivers. Broad thermal tolerance ~43-79F; preferred active feeding warmer than the cited winter preferendum. Schooling active feeder on small fish, invertebrates, eggs/larvae; low-light bias. Bay/tidal-river dominant, minimal in isolated ponds/streams. Confidence medium.",
+      "typicalMinInches": 6,
+      "typicalMaxInches": 11,
+      "citationLengthInches": 13,
+      "citationWeightLb": 1.25,
+      "identification": "Silvery, deep-bodied temperate bass (not a true perch) with no vertical bars and a slightly humped back behind the head. Fins often tinged; common in tidal/brackish Potomac and NoVa tidal tributaries.",
+      "baits": [
+        "bloodworms",
+        "grass shrimp",
+        "small minnows",
+        "nightcrawler pieces",
+        "small jigs & shad darts",
+        "small spoons/spinners",
+        "Beetle Spin"
+      ]
+    },
+    {
+      "speciesId": "striped-bass",
+      "preferredMinF": 55,
+      "preferredMaxF": 68,
+      "toleranceMinF": 40,
+      "toleranceMaxF": 77,
+      "spawnMonths": [
+        4,
+        5
+      ],
+      "spawnTempF": 62,
+      "dielPattern": "crepuscular",
+      "waterbodyPreference": {
+        "river": 0.9,
+        "stream": -0.4,
+        "reservoir": 0.8,
+        "lake": 0.7,
+        "pond": -0.8,
+        "bay": 1
+      },
+      "seasonalActivityByMonth": [
+        0.35,
+        0.4,
+        0.6,
+        0.85,
+        0.8,
+        0.55,
+        0.4,
+        0.4,
+        0.6,
+        0.75,
+        0.6,
+        0.4
+      ],
+      "primaryTechniquesBySeason": {
+        "cold": "Follow bait schools: live/cut bait, jigging spoons, and slow-trolled swimbaits near thermally comfortable holding water; tidal-river bait presentations.",
+        "cool": "Spring run peak: bucktails, swimbaits, live herring/gizzard shad, and trolling in tidal freshwater reaches and reservoir feeder arms during the spawning migration.",
+        "warm": "Summer they hold deep just above the thermocline in reservoirs: down-lined live bait, deep trolling, and low-light topwater at dawn/dusk and after dark over main-lake structure."
+      },
+      "confidence": "high",
+      "sourceUrls": [
+        "https://dwr.virginia.gov/wildlife/information/striped-bass/",
+        "https://dwr.virginia.gov/blog/spawnin-and-stockin-stripers/",
+        "https://dwr.virginia.gov/fishing/trophy-fish/size-chart/"
+      ],
+      "notes": "Virginia DWR: anadromous striped bass migrate each spring from the Atlantic into the freshwater/tidal reaches of Virginia's rivers to spawn as broadcast spawners once water reaches ~55F; peak spawning ~60-65F (regional literature). They thrive in cooler, highly oxygenated water; in summer reservoir populations (Smith Mountain, Buggs Island, Lake Anna) suspend just above the thermocline seeking cool water with adequate dissolved oxygen. Preferred active band ~55-68F; freshwater stress rises above ~75F, so the tolerance upper end is set conservatively at ~77F. Seasonal curve peaks in the spring run (Apr-May) in tidal Potomac/Rappahannock and again in fall; a warm-water summer lull reflects thermal stress. Crepuscular/nocturnal feeding tendency, especially in warm months. Best fit tidal bay/river and large reservoirs; effectively absent from ponds and small streams.",
+      "typicalMinInches": 18,
+      "typicalMaxInches": 34,
+      "citationLengthInches": 37,
+      "citationWeightLb": 20,
+      "identification": "Silvery, streamlined body with 7-8 continuous dark horizontal stripes running along the sides; distinctly more elongate than the deeper-bodied hybrid striped bass, whose stripes are usually broken/offset.",
+      "baits": [
+        "live gizzard shad",
+        "live herring",
+        "bucktail jigs",
+        "swimbaits",
+        "topwater plugs",
+        "deep-diving crankbaits",
+        "cut bait",
+        "spoons"
+      ]
+    },
+    {
+      "speciesId": "muskellunge",
+      "preferredMinF": 62,
+      "preferredMaxF": 75,
+      "toleranceMinF": 32,
+      "toleranceMaxF": 89,
+      "spawnMonths": [
+        3,
+        4
+      ],
+      "spawnTempF": 55,
+      "dielPattern": "crepuscular",
+      "waterbodyPreference": {
+        "river": 0.7,
+        "stream": -0.1,
+        "reservoir": 0.85,
+        "lake": 1,
+        "pond": -0.4,
+        "bay": -0.8
+      },
+      "seasonalActivityByMonth": [
+        0.35,
+        0.4,
+        0.5,
+        0.62,
+        0.7,
+        0.6,
+        0.45,
+        0.4,
+        0.65,
+        0.82,
+        0.75,
+        0.5
+      ],
+      "primaryTechniquesBySeason": {
+        "cold": "Slow-rolled large soft plastics, suckers/live bait, and slow jerkbaits near deep structure; cold-water muskie are lethargic but takeable on a slow presentation.",
+        "cool": "Peak season, spring and especially fall: large bucktails, crankbaits, glide baits, and topwater over weed edges, points, and river pools; figure-8 boatside.",
+        "warm": "Fish early/late and low-light in summer; muskie stop feeding near 84F and are heat-stressed above 89F, so avoid handling in warm water (high catch-and-release mortality). Target thermally comfortable pools/deeper water."
+      },
+      "confidence": "high",
+      "sourceUrls": [
+        "https://dwr.virginia.gov/wildlife/information/muskellunge/",
+        "https://wvdnr.gov/plants-animals/sportfish/muskellunge/",
+        "https://dwr.virginia.gov/fishing/trophy-fish/size-chart/",
+        "https://dwr.virginia.gov/fishing/regulations/general/"
+      ],
+      "notes": "Virginia DWR: muskellunge prefer 62-75F, tolerate up to 89F but stop feeding at 84F; spawn late March through April at 50-60F in shallow vegetated areas. A coolwater apex ambush predator found in VA in the James, New, Shenandoah, and Upper Tennessee basins (lakes and long river pools with cover). Best bite in spring and fall; summer heat suppresses feeding and elevates C&R mortality. Not a pond/brackish species. Diel behavior is a low-light-biased ambush pattern (treated as crepuscular).",
+      "typicalMinInches": 30,
+      "typicalMaxInches": 44,
+      "citationLengthInches": 40,
+      "citationWeightLb": 15,
+      "identification": "Long, torpedo-shaped body with a broad duck-bill snout; olive-to-silver flanks bearing dark vertical bars or spots (bars on light background). Distinguished from northern pike by 6+ sensory pores under each side of the jaw and pointed tail lobes.",
+      "baits": [
+        "large bucktail spinners",
+        "big glide baits / jerkbaits",
+        "large soft-plastic swimbaits",
+        "live suckers/chubs",
+        "oversized crankbaits",
+        "topwater walkers",
+        "bladed spinnerbaits"
+      ]
+    }
+  ]
+}

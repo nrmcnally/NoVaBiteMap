@@ -6,6 +6,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY apps/api/app ./app
 COPY apps/api/alembic ./alembic
 COPY apps/api/alembic.ini ./alembic.ini
+COPY apps/api/entrypoint.sh ./entrypoint.sh
+RUN chmod +x ./entrypoint.sh
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
-
+# Run Alembic migrations (and seed once) before serving so the Postgres stack
+# comes up with a fully-provisioned schema and canonical data.
+CMD ["./entrypoint.sh"]
