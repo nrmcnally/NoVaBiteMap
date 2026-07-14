@@ -225,6 +225,16 @@ export function ExploreDashboard() {
     };
   }, [loadFavorites]);
 
+  // Preselect a species from the URL (?species=id), e.g. the fish guide's
+  // "See on map" link.
+  useEffect(() => {
+    const requested = new URLSearchParams(window.location.search).get("species");
+    if (requested && speciesById(requested)) {
+      setSpeciesIds([requested]);
+      setResultsOpen(true);
+    }
+  }, []);
+
   // Close any open top-of-page filter dropdown when clicking/pressing outside it
   // or pressing Escape. Selections inside a menu keep it open (multi-select).
   useEffect(() => {

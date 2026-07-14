@@ -8,19 +8,15 @@
  */
 export function apiBaseUrl(): string | null {
   const explicit =
-    (typeof process !== "undefined" && process.env && (process.env.API_BASE_URL || process.env.NEXT_PUBLIC_API_BASE_URL)) ||
-    null;
+    typeof process !== "undefined" && process.env
+      ? process.env.API_BASE_URL ?? process.env.NEXT_PUBLIC_API_BASE_URL
+      : undefined;
+  // An explicit empty string disables the API (instant evidence-only fallback).
+  if (explicit === "") return null;
   if (explicit) return explicit;
-  // Only fall back to the local API in dev. In production an unconfigured backend
-  // must NOT trigger a doomed localhost fetch that stalls every navigation — return
-  // null so the UI degrades instantly to the bundled evidence facts.
-  let isDev = false;
-  try {
-    isDev = Boolean((import.meta as unknown as { env?: { DEV?: boolean } })?.env?.DEV);
-  } catch {
-    isDev = false;
-  }
-  return isDev ? "http://localhost:8000" : null;
+  // Default to the local API. A doomed fetch (e.g. no backend deployed) fails fast
+  // via the short timeout below, so this never stalls navigation.
+  return "http://localhost:8000";
 }
 
 export async function fetchApi<T>(path: string, init?: RequestInit): Promise<T | null> {
@@ -56,9 +52,17 @@ export type FishFacts = {
   spawnWindow: string;
   spawnTempF: number | null;
   seasonalPeak: string;
+  seasonalActivityByMonth: number[];
   habitat: string | null;
   techniquesBySeason: { cold?: string; cool?: string; warm?: string };
   waterbodyPreference: Record<string, number>;
+  family: string | null;
+  nativeStatus: "native" | "introduced" | "invasive" | null;
+  statusNote: string | null;
+  handlingNote: string | null;
+  diet: string | null;
+  confusedWith: { speciesId: string; tell: string }[];
+  stateRecordLb: number | null;
   confidence: string | null;
   sources: string[];
   notes: string | null;
@@ -99,7 +103,13 @@ export type SpeciesLocation = {
   waterbodyType: string;
   county: string;
   watershed: string | null;
+  travelMinutes: number | null;
+  accessStatus: "verified" | "listed" | "unverified";
   availability: number;
+  opportunityScore: number;
+  confidenceScore: number;
+  confidenceLabel: "High" | "Moderate" | "Low";
+  state: "strong" | "fair" | "low";
   evidenceType: string;
   modeled: boolean;
   evidenceSummary: string | null;

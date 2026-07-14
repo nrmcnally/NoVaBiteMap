@@ -70,11 +70,19 @@ def test_species_search_alias(client):
     assert any(item["id"] == "smallmouth-bass" for item in results)
 
 
-def test_species_detail_lists_locations_with_evidence(client):
+def test_species_detail_ranks_waters_by_opportunity(client):
     detail = client.get("/api/species/largemouth-bass").json()
     assert detail["id"] == "largemouth-bass"
     assert len(detail["locations"]) > 0
-    assert detail["locations"] == sorted(detail["locations"], key=lambda i: i["availability"], reverse=True)
+    # Each water carries an opportunity score + confidence; documented waters rank
+    # ahead of basin-inferred, then by opportunity.
+    for loc in detail["locations"]:
+        assert "opportunityScore" in loc and "confidenceLabel" in loc
+    keys = [(not loc["modeled"], loc["opportunityScore"]) for loc in detail["locations"]]
+    assert keys == sorted(keys, reverse=True)
+    # Reference content is present on the facts.
+    assert detail["facts"]["family"]
+    assert detail["facts"]["nativeStatus"] in {"native", "introduced", "invasive"}
 
 
 def test_data_source_status_is_derived_from_real_counts_and_runs(client):

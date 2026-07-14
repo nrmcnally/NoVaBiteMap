@@ -133,35 +133,62 @@ def search_species(q: str = Query(min_length=1, max_length=100), session: Sessio
 
 @router.get("/species/{species_id}")
 def species_detail(species_id: str, session: Session = Depends(get_session)) -> dict:
+    from collections import defaultdict
+
     record = get_species(session, species_id)
     profiles = opp.load_active_profiles(session)
     profile = profiles.get(species_id)
     evidence = session.scalars(
         select(SpeciesEvidenceRecord).where(SpeciesEvidenceRecord.species_id == species_id)
     ).all()
-    locations = []
+    by_location: dict[str, list[SpeciesEvidenceRecord]] = defaultdict(list)
     for ev in evidence:
-        loc = session.get(FishingLocationRecord, ev.location_id)
-        if loc:
-            locations.append(
-                {
-                    "id": loc.id,
-                    "name": loc.name,
-                    "waterbody": loc.waterbody,
-                    "waterbodyType": loc.waterbody_type,
-                    "county": loc.county,
-                    "watershed": loc.watershed,
-                    "availability": ev.availability,
-                    "evidenceType": ev.evidence_type,
-                    "modeled": ev.modeled,
-                    "evidenceSummary": ev.evidence_summary,
-                }
-            )
-    locations.sort(key=lambda item: item["availability"], reverse=True)
+        by_location[ev.location_id].append(ev)
+
+    locations = []
+    for location_id, records in by_location.items():
+        loc = session.get(FishingLocationRecord, location_id)
+        if not loc:
+            continue
+        association = opp.get_association(session, location_id)
+        scored = score_species_at_location(
+            records,
+            activity=loc.activity_estimate,
+            activity_available=False,
+            access_fit=loc.access_fit,
+            has_hydrology=association is not None,
+            association_factor=association.association_factor if association else 1.0,
+        )
+        if scored is None:
+            continue
+        opportunity = scored["opportunity_score"]
+        primary = max(records, key=lambda r: r.availability)
+        locations.append(
+            {
+                "id": loc.id,
+                "name": loc.name,
+                "waterbody": loc.waterbody,
+                "waterbodyType": loc.waterbody_type,
+                "county": loc.county,
+                "watershed": loc.watershed,
+                "travelMinutes": loc.travel_minutes,
+                "accessStatus": loc.access_status,
+                "availability": scored["availability_score"],
+                "opportunityScore": opportunity,
+                "confidenceScore": scored["confidence_score"],
+                "confidenceLabel": scored["confidence_label"],
+                "state": "strong" if opportunity >= 70 else "fair" if opportunity >= 55 else "low",
+                "evidenceType": primary.evidence_type,
+                "modeled": primary.modeled,
+                "evidenceSummary": primary.evidence_summary,
+            }
+        )
+    # Documented waters first (not basin-inferred), then by opportunity.
+    locations.sort(key=lambda item: (not item["modeled"], item["opportunityScore"]), reverse=True)
     return {
         **serializers.species_out(record),
         "facts": serializers.fish_facts(profile, record),
-        "profileVersion": "1.1" if profile else None,
+        "profileVersion": "1.2" if profile else None,
         "locations": locations,
         "disclaimer": "Species facts are researched reference content, not a guarantee of presence or catch at any specific water.",
     }

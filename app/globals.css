@@ -408,6 +408,60 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .fish-disclaimer-card p { display: flex; align-items: flex-start; gap: 7px; font-size: 9.5px; line-height: 1.5; color: #587064; }
 .fish-disclaimer-card svg { flex: 0 0 auto; margin-top: 1px; color: var(--water); }
 
+/* Fish page — reference content + visuals + ranked waters */
+.native-badge { padding: 4px 8px; border-radius: 999px; font-size: 8px; font-weight: 900; text-transform: uppercase; letter-spacing: .5px; }
+.native-native { background: #dcece1; color: #2f6b49; }
+.native-introduced { background: #eae3d3; color: #6f5c30; }
+.native-invasive { background: #f2ddd5; color: #99432c; }
+.fish-status-note { margin: 8px 0 0; font-size: 11px; line-height: 1.5; color: var(--ink-soft); }
+.invasive-banner { display: flex; align-items: center; gap: 9px; margin: 16px 0 0; padding: 12px 15px; background: #f4dcd3; border-left: 3px solid #a8492f; color: #7f3f2b; font-size: 11px; line-height: 1.45; font-weight: 700; }
+.invasive-banner svg { flex: 0 0 auto; }
+
+.fish-viz-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 18px 0 20px; }
+.fish-viz { padding: 13px; background: var(--paper); border: 1px solid var(--line); border-radius: 5px; }
+.fish-viz h4 { margin: 0 0 10px; font-size: 9px; text-transform: uppercase; letter-spacing: .6px; color: var(--water); }
+.fish-viz small { display: block; margin-top: 9px; font-size: 8px; line-height: 1.4; color: #85908d; }
+.season-bars { display: grid; grid-template-columns: repeat(12, 1fr); gap: 3px; height: 74px; align-items: end; }
+.season-bar { display: flex; flex-direction: column; align-items: center; gap: 4px; height: 100%; }
+.season-track { width: 100%; height: 100%; display: flex; align-items: flex-end; }
+.season-track i { width: 100%; background: #bcd0cb; border-radius: 2px 2px 0 0; }
+.season-track i.peak { background: var(--orange); }
+.season-bar span { font-size: 7px; color: #8a958f; font-weight: 800; }
+.waterfit-rows { display: flex; flex-direction: column; gap: 6px; }
+.waterfit-row { display: grid; grid-template-columns: 58px 1fr; align-items: center; gap: 8px; }
+.waterfit-label { font-size: 9px; font-weight: 750; color: var(--ink-soft); }
+.waterfit-track { height: 8px; background: #e6e1d3; border-radius: 999px; overflow: hidden; }
+.waterfit-track i { display: block; height: 100%; border-radius: 999px; }
+.waterfit-good { background: #3c8055; } .waterfit-ok { background: #8fb59b; } .waterfit-poor { background: #cdbfa6; }
+.temp-gauge { margin-top: 4px; }
+.temp-track { position: relative; height: 12px; background: linear-gradient(90deg, #7fb0d8, #edae49, #d65e36); border-radius: 999px; opacity: .35; }
+.temp-track i { position: absolute; top: -2px; height: 16px; border: 2px solid var(--white); border-radius: 999px; background: rgba(38,122,130,.28); box-shadow: 0 0 0 1px var(--water) inset; }
+.temp-labels { display: flex; justify-content: space-between; align-items: baseline; margin-top: 7px; font-size: 8px; color: #85908d; }
+.temp-labels strong { font-size: 10px; color: var(--ink); }
+
+.confused-with { margin-top: 13px; padding-top: 11px; border-top: 1px solid var(--line); }
+.confused-with h4 { margin: 0 0 6px; font-size: 9px; text-transform: uppercase; letter-spacing: .5px; color: #7a6a3f; }
+.confused-with p { margin: 0 0 6px; font-size: 10px; line-height: 1.5; color: var(--ink-soft); }
+.confused-with a { color: var(--water); font-weight: 800; }
+.fish-diet { display: flex; align-items: flex-start; gap: 7px; margin: 12px 0 0; font-size: 11px; line-height: 1.5; color: var(--ink); }
+.fish-diet svg { color: var(--water); flex: 0 0 auto; margin-top: 2px; }
+.fish-handling-card { display: flex; align-items: center; gap: 16px; }
+.fish-handling-card p { margin: 5px 0 0; font-size: 11px; line-height: 1.55; color: var(--ink-soft); }
+
+.fish-where-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+.see-on-map { display: inline-flex; align-items: center; gap: 5px; padding: 6px 9px; background: var(--pine); color: white; border-radius: 4px; font-size: 9px; font-weight: 850; white-space: nowrap; }
+.fish-location-list.ranked { margin-top: 13px; }
+.fish-rank-row { display: grid; grid-template-columns: 34px 1fr auto; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--line); }
+.fish-rank-orb { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; font-family: Georgia, serif; font-size: 13px; font-weight: 700; color: white; }
+.orb-strong { background: var(--orange); } .orb-fair { background: var(--amber); color: #4a3a12; } .orb-low { background: var(--water); }
+.fish-rank-row .fish-loc-name { display: flex; flex-direction: column; font-size: 11px; font-weight: 800; color: var(--ink); }
+.fish-rank-row .fish-loc-name small { font-weight: 500; color: #7a8986; font-size: 8px; margin-top: 1px; }
+.fish-rank-conf { font-size: 8px; font-weight: 850; text-transform: uppercase; letter-spacing: .4px; color: #7a8986; }
+.fish-where-note { display: block; margin-top: 11px; font-size: 8px; line-height: 1.45; color: #85908d; }
+.fish-record-card { display: flex; align-items: center; gap: 12px; }
+.fish-record-card svg { color: var(--amber); }
+.fish-record-card strong { display: block; font-family: Georgia, serif; font-size: 22px; color: var(--ink); margin-top: 3px; }
+
 /* Instant route loading state */
 .route-loading { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; min-height: 340px; color: var(--ink-soft); }
 .route-loading p { font-size: 12px; font-weight: 700; }
@@ -441,7 +495,19 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .fish-guide-thumb-placeholder { color: #9bb0aa; }
 .fish-guide-card-body { min-width: 0; display: flex; flex-direction: column; }
 .fish-guide-card-body h3 { font-size: 14px; margin: 0; color: var(--ink); }
+.fish-guide-title { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+.fish-guide-title .native-badge { padding: 2px 6px; font-size: 7px; }
 .fish-guide-sci { margin: 2px 0 0; font-size: 10px; color: #7a8986; }
+.fish-guide-signature { margin: 5px 0 0; font-size: 9.5px; color: #5f7168; font-weight: 700; }
+.fish-glossary-controls { display: flex; gap: 12px; align-items: center; margin-bottom: 20px; flex-wrap: wrap; }
+.fish-search { flex: 1; min-width: 220px; height: 44px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 10px; padding: 0 13px; background: var(--white); border: 1px solid var(--line); border-radius: 5px; color: var(--water); }
+.fish-search:focus-within { border-color: var(--water); box-shadow: 0 0 0 3px rgba(38,122,130,.12); }
+.fish-search input { border: 0; outline: 0; background: transparent; color: var(--ink); font-weight: 600; font-size: 13px; }
+.fish-search input::placeholder { color: #808f8c; font-weight: 500; }
+.fish-search > button { display: grid; place-items: center; border: 0; background: transparent; color: #718481; cursor: pointer; }
+.fish-group-toggle { display: flex; border: 1px solid var(--line); border-radius: 5px; overflow: hidden; }
+.fish-group-toggle button { padding: 11px 15px; border: 0; background: var(--white); color: var(--ink-soft); font-size: 11px; font-weight: 800; cursor: pointer; }
+.fish-group-toggle button.active { background: var(--pine); color: white; }
 .fish-guide-habitat { margin: 6px 0 0; font-size: 10px; line-height: 1.45; color: var(--ink-soft); overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
 .fish-guide-evidence { display: inline-flex; align-items: center; gap: 5px; margin-top: auto; padding-top: 8px; font-size: 9px; font-weight: 850; color: var(--water); }
 
@@ -467,7 +533,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .content-shell, .detail-shell { padding: 38px 16px 60px; }.method-steps { grid-template-columns: 1fr; }.method-steps article { min-height: 250px; }.formula-panel, .method-grid, .detail-grid { grid-template-columns: 1fr; }.formula-panel { gap: 25px; padding: 26px; }.content-hero h1 { font-size: 44px; }
   .health-header, .spots-header, .detail-hero { align-items: flex-start; flex-direction: column; }.health-stats { grid-template-columns: 1fr 1fr; }.provider-row { grid-template-columns: 30px 1fr auto; }.provider-row > span:not(.provider-icon), .provider-row small { display: none; }.provider-row > svg { display: none; }.favorite-grid { grid-template-columns: 1fr; }
   .detail-grid { display: flex; flex-direction: column; }.detail-aside { order: -1; }.outlook-summary { grid-template-columns: 1fr; }.factor-columns { grid-template-columns: 1fr; }.multi-day-grid { grid-template-columns: repeat(2,1fr); }.forecast-basis { grid-template-columns: 1fr; }.hydrology-metrics { grid-template-columns: 1fr 1fr; }
-  .fish-facts-page .fish-fact-grid { grid-template-columns: 1fr 1fr; }.fish-season-columns { grid-template-columns: 1fr; }
+  .fish-facts-page .fish-fact-grid { grid-template-columns: 1fr 1fr; }.fish-season-columns { grid-template-columns: 1fr; }.fish-viz-row { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px) {

@@ -6,7 +6,7 @@
  * making the database the runtime authority. Regenerate after editing app/lib:
  *   npx tsx scripts/export-seed.mts
  */
-import { writeFileSync, mkdirSync } from "node:fs";
+import { writeFileSync, mkdirSync, copyFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -42,6 +42,12 @@ const payload = {
 
 mkdirSync(dirname(outPath), { recursive: true });
 writeFileSync(outPath, JSON.stringify(payload, null, 2), "utf-8");
+
+// Publish the researched species profiles to the frontend bundle so the fish
+// guide/glossary can render reference content without an API round-trip.
+const profilesSrc = resolve(here, "../apps/api/app/data/species_profiles.json");
+const profilesDest = resolve(here, "../app/lib/generated/species-profiles.json");
+copyFileSync(profilesSrc, profilesDest);
 
 console.log(
   `Exported ${locations.length} locations, ${species.length} species, ` +
