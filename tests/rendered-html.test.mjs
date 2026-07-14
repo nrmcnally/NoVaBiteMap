@@ -71,3 +71,26 @@ test("source code preserves the species gate, provenance, and precise advisory l
   assert.match(coverage, /accessAuthority/);
   assert.equal((coverage.match(/verifiedLocation\(\{ id:/g) ?? []).length, 34);
 });
+
+test("live public-data spine includes hydrology, multi-day weather, trout, and Aquatic GAP", async () => {
+  const [hydrology, conditions, detail, publicEvidence, importer, gap, trout] = await Promise.all([
+    readFile(new URL("../app/api/hydrology/route.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/api/conditions/route.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/components/LocationIntelligence.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/lib/public-evidence.ts", import.meta.url), "utf8"),
+    readFile(new URL("../apps/api/app/ingestion/public_data.py", import.meta.url), "utf8"),
+    readFile(new URL("../app/lib/generated/aquatic-gap-nova.json", import.meta.url), "utf8"),
+    readFile(new URL("../app/lib/generated/dwr-trout-nova.json", import.meta.url), "utf8"),
+  ]);
+  assert.match(hydrology, /manually verified USGS association/i);
+  assert.match(hydrology, /stale-while-revalidate=1800/);
+  assert.match(conditions, /periods: .*slice\(0, 120\)/);
+  assert.match(conditions, /alerts:/);
+  assert.match(detail, /Today through day five/);
+  assert.match(detail, /air temperature is shown but is not treated as water temperature/i);
+  assert.match(publicEvidence, /nearby historic stream evidence, not proof at the access point/i);
+  assert.match(publicEvidence, /designated stocked-water layer/);
+  assert.match(importer, /dataset_md5/);
+  assert.match(gap, /"sampleCount": 94/);
+  assert.match(trout, /"waterCount": 13/);
+});

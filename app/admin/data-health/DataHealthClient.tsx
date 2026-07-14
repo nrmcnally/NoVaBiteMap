@@ -4,6 +4,8 @@ import { AlertTriangle, CheckCircle2, Clock3, DatabaseZap, ExternalLink, Fish, M
 import { TopNav } from "../../components/TopNav";
 import { advisorySegments } from "../../lib/advisories";
 import { locations, sourceLinks, species } from "../../lib/data";
+import { hydrologyAssociations } from "../../lib/hydrology";
+import { publicDataStats } from "../../lib/public-evidence";
 
 const countByAuthority = (authority: string) => locations.filter((location) => location.accessAuthority === authority).length;
 
@@ -15,9 +17,10 @@ const providers = [
   { name: "Virginia and Prince William parks", status: "Healthy", detail: `${countByAuthority("Virginia State Parks") + countByAuthority("Prince William County Parks")} verified locations`, updated: "Reviewed Jul 13", href: sourceLinks.pwcFishing },
   { name: "Virginia DWR fisheries", status: "Healthy", detail: "Curated species evidence with source dates", updated: "Reviewed Jul 13", href: sourceLinks.shenandoah },
   { name: "VDH fish consumption advisories", status: "Healthy", detail: `${advisorySegments.length} versioned NOVA segment mappings with species rules`, updated: "2025 / 2026 basin sheets", href: sourceLinks.vdhFishAdvisories },
+  { name: "Virginia DWR stocked trout waters", status: "Imported", detail: `${publicDataStats.troutWaters} designated stocked reaches with species and schedule categories`, updated: "Reviewed Jul 14", href: "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Stocked_Trout_Waters/FeatureServer/0" },
   { name: "National Weather Service", status: "Live request", detail: "Selected-location hourly forecast", updated: "On demand", href: sourceLinks.nws },
-  { name: "USGS Water Data", status: "Needs review", detail: "No automatic nearest-gage fallback", updated: "Association queue", href: "https://waterdata.usgs.gov/" },
-  { name: "USGS Aquatic GAP", status: "Pipeline ready", detail: "Version-pinned modeled evidence import", updated: "Release v2.0", href: sourceLinks.aquaticGap },
+  { name: "USGS Water Data", status: "Live request", detail: `${Object.keys(hydrologyAssociations).length} manually reviewed location-to-gage associations`, updated: "15-minute cache", href: "https://waterdata.usgs.gov/" },
+  { name: "USGS Aquatic GAP", status: "Imported", detail: `${publicDataStats.aquaticGapSamples} regional presence/absence samples across ${publicDataStats.aquaticGapSpecies} configured species`, updated: "Release v2.0", href: sourceLinks.aquaticGapPresence },
 ];
 
 export function DataHealthClient({ adminName }: { adminName: string }) {

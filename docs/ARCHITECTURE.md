@@ -355,22 +355,22 @@ queries and spatial ML holdouts run in integration CI with the Compose stack.
 
 ## 18. Phase 1 implementation checklist
 
-- [ ] Replace starter with responsive map-first product.
-- [ ] Add verified 16-location DWR seed snapshot and source metadata.
-- [ ] Add configured 20-species catalog and evidence-gated rankings.
-- [ ] Add unified search, species filter, access filter, date and radius controls.
-- [ ] Add interactive map markers synchronized with ranked results.
-- [ ] Add location detail, hourly window, multi-day trend, factors, safety.
-- [ ] Add methodology and data-health routes.
-- [ ] Add identity-aware favorites and D1 migration.
-- [ ] Add FastAPI endpoints, SQLAlchemy/PostGIS models, and Alembic baseline.
-- [ ] Add NWS, USGS Water, DWR ArcGIS, and Aquatic GAP provider boundaries.
-- [ ] Add availability, quality, activity, final score, and confidence functions.
-- [ ] Add ingestion audit, caching/retry policy, freshness, and graceful fallback.
-- [ ] Add unit/API/rendered contract tests.
-- [ ] Add Docker Compose, `.env.example`, PowerShell-first setup, API/source/license docs.
-- [ ] Validate production build and critical user workflows.
-- [ ] Publish the validated web experience.
+- [x] Replace starter with responsive map-first product.
+- [x] Add 50 verified access seeds plus 13 official stocked-trout waters and source metadata.
+- [x] Add configured species catalog and evidence-gated rankings.
+- [x] Add unified search, species, water/access, date, and travel controls.
+- [x] Add interactive map markers synchronized with ranked results.
+- [x] Add location detail, live hourly and five-day outlooks, factors, and safety caps.
+- [x] Add public methodology and administrator-only data-health routes.
+- [x] Add identity-aware favorites and D1 migration.
+- [x] Add FastAPI endpoints, SQLAlchemy/PostGIS models, and Alembic baseline.
+- [x] Add NWS, verified USGS Water associations, DWR trout, and Aquatic GAP boundaries.
+- [x] Add availability, quality, activity, final score, and confidence functions.
+- [ ] Finish canonical scheduled ingestion, persistence, audit history, and retry operations.
+- [x] Add unit/API/rendered contract tests.
+- [x] Add Docker Compose, `.env.example`, PowerShell-first setup, API/source/license docs.
+- [x] Validate the production build and critical user workflows.
+- [x] Publish the validated web experience.
 
 ## 19. Explicitly deferred
 

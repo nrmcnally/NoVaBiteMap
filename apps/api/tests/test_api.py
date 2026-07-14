@@ -39,20 +39,41 @@ class ApiTests(unittest.TestCase):
         self.assertTrue(all(item["location"]["species_evidence"].get("smallmouth-bass") for item in results))
         self.assertTrue(any(item["location"]["id"] == "riverbend-park" for item in results))
 
-    def test_coverage_pass_has_fifty_provenance_backed_locations(self):
+    def test_coverage_pass_has_sixty_three_provenance_backed_locations(self):
         response = self.client.get("/api/locations", params={"limit": 200})
         self.assertEqual(response.status_code, 200)
         locations = response.json()
-        self.assertEqual(len(locations), 50)
+        self.assertEqual(len(locations), 63)
         self.assertTrue(all(item.get("source") and item.get("source_name") for item in locations))
         self.assertTrue(all(item.get("consumption_advisory", {}).get("source_url") for item in locations))
         ids = {item["id"] for item in locations}
-        self.assertTrue({"lake-fairfax", "gravelly-point", "beaverdam-reservoir"}.issubset(ids))
+        self.assertTrue({"lake-fairfax", "gravelly-point", "beaverdam-reservoir", "dwr-trout-312"}.issubset(ids))
         fountainhead = next(item for item in locations if item["id"] == "fountainhead")
         self.assertEqual(fountainhead["consumption_advisory"]["status"], "active")
         fountainhead_rules = fountainhead["consumption_advisory"]["matching_restrictions"]
         self.assertTrue(any(rule["species_ids"] == ["largemouth-bass"] and rule["severity"] == "do-not-eat" for rule in fountainhead_rules))
         self.assertTrue(any(rule["species_ids"] == ["bluegill"] and rule["severity"] == "two-meals-per-month" for rule in fountainhead_rules))
+
+    def test_public_data_spine_is_loaded_conservatively(self):
+        locations = self.client.get("/api/locations", params={"limit": 200}).json()
+        self.assertEqual(sum(bool(item.get("stocking")) for item in locations), 13)
+        self.assertEqual(sum(bool(item.get("hydrology")) for item in locations), 19)
+        gap_links = [
+            evidence
+            for item in locations
+            for evidence in item["species_evidence"].values()
+            if evidence.get("source") == "https://doi.org/10.5066/P9FZ6J6R"
+        ]
+        self.assertGreaterEqual(len(gap_links), 10)
+        self.assertTrue(all(evidence["availability"] <= 0.56 for evidence in gap_links))
+        trout = next(item for item in locations if item["id"] == "dwr-trout-312")
+        self.assertEqual(trout["stocking"]["category"], "DH")
+        self.assertIn("rainbow-trout", trout["species_evidence"])
+
+        status = self.client.get("/api/data-sources/status").json()
+        by_provider = {item["provider"]: item for item in status}
+        self.assertEqual(by_provider["USGS Aquatic GAP"]["status"], "imported")
+        self.assertEqual(by_provider["Virginia DWR stocked trout waters"]["records"], 13)
 
     def test_advisory_segments_do_not_overgeneralize_whole_rivers(self):
         locations = self.client.get("/api/locations", params={"limit": 200}).json()

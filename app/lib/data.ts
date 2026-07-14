@@ -1,5 +1,7 @@
 import { coverageLocations } from "./coverage-data";
 import { advisoryForLocation, vdhAdvisoryIndexUrl, type ConsumptionAdvisory } from "./advisories";
+import { hydrologyForLocation, type HydrologyAssociation } from "./hydrology";
+import { aquaticGapEvidenceForLocation, troutLocations } from "./public-evidence";
 
 export type AccessMethod = "shore" | "wade" | "kayak" | "boat";
 export type WaterbodyType = "river" | "reservoir" | "lake" | "pond" | "bay" | "stream";
@@ -51,6 +53,14 @@ export type FishingLocation = {
   accessAuthority: string;
   accessSourceUrl: string;
   sourceReviewed: string;
+  hydrology?: HydrologyAssociation;
+  stocking?: {
+    category: string;
+    designation: string;
+    speciesIds: string[];
+    sourceUrl: string;
+    planUrl: string;
+  };
   consumptionAdvisory: ConsumptionAdvisory;
 };
 
@@ -65,6 +75,7 @@ export const sourceLinks = {
     "https://dwr.virginia.gov/wp-content/uploads/media/Walleye-Fishing-Forecast-2026.pdf",
   aquaticGap:
     "https://www.usgs.gov/data/aquatic-gap-analysis-project-aquatic-gap-aquatic-species-distribution-modeling-national",
+  aquaticGapPresence: "https://doi.org/10.5066/P9FZ6J6R",
   nws: "https://www.weather.gov/documentation/services-web-api",
   fairfaxFishing: "https://www.fairfaxcounty.gov/parks/fishing",
   fairfaxSmallLakes: "https://www.fairfaxcounty.gov/parks/small-lakes",
@@ -395,12 +406,22 @@ const sourcedLocations: FishingLocationSeed[] = [
     sourceReviewed: "2026-07-13",
   })),
   ...coverageLocations,
+  ...troutLocations,
 ];
 
-export const locations: FishingLocation[] = sourcedLocations.map((location) => ({
-  ...location,
-  consumptionAdvisory: advisoryForLocation(location),
-}));
+export const locations: FishingLocation[] = sourcedLocations.map((location) => {
+  const aquaticGapEvidence = aquaticGapEvidenceForLocation(location).filter(
+    (candidate) => !location.evidence.some((existing) => existing.speciesId === candidate.speciesId),
+  );
+  const hydrology = hydrologyForLocation(location.id);
+  return {
+    ...location,
+    flowStatus: hydrology ? `USGS ${hydrology.stationId} linked · live reading on details` : location.flowStatus,
+    evidence: [...location.evidence, ...aquaticGapEvidence],
+    hydrology,
+    consumptionAdvisory: advisoryForLocation(location),
+  };
+});
 
 export const locationById = (id: string) => locations.find((location) => location.id === id);
 export const speciesById = (id: string) => species.find((item) => item.id === id);

@@ -18,6 +18,7 @@ import {
   Waves,
 } from "../../components/ClientIcons";
 import { TopNav } from "../../components/TopNav";
+import { LocationIntelligence } from "../../components/LocationIntelligence";
 import { consumptionAdviceFor } from "../../lib/advisories";
 import { locationById, sourceLinks, speciesById } from "../../lib/data";
 import { estimatedHourlyScores, opportunityFor } from "../../lib/scoring";
@@ -35,7 +36,9 @@ export default async function LocationPage({ params, searchParams }: LocationPag
   const consumptionAdvisory = consumptionAdviceFor(location.consumptionAdvisory, advisorySpeciesIds);
   const advisorySpeciesNames = advisorySpeciesIds.map((speciesId) => speciesById(speciesId)?.name).filter(Boolean);
 
-  const primaryEvidence = location.evidence[0];
+  const primaryEvidence = advisorySpeciesIds
+    .map((speciesId) => location.evidence.find((evidence) => evidence.speciesId === speciesId))
+    .find(Boolean) ?? location.evidence[0];
   const opportunity = primaryEvidence ? opportunityFor(location, primaryEvidence.speciesId) : null;
   const target = primaryEvidence ? speciesById(primaryEvidence.speciesId) : null;
   const hourly = opportunity ? estimatedHourlyScores(opportunity.score) : [];
@@ -77,7 +80,7 @@ export default async function LocationPage({ params, searchParams }: LocationPag
               <article className="outlook-card">
                 <div className="outlook-topline">
                   <div>
-                    <span className="eyebrow">Today · evidence + seasonal estimate</span>
+                    <span className="eyebrow">Evidence baseline · live outlook below</span>
                     <h2>{target.name} outlook</h2>
                   </div>
                   <div className="large-score"><strong>{opportunity.score}</strong><span>/100<br />opportunity</span></div>
@@ -96,23 +99,21 @@ export default async function LocationPage({ params, searchParams }: LocationPag
               </article>
             )}
 
-            {opportunity && (
-              <article className="chart-card">
-                <div className="section-heading">
-                  <div><span className="eyebrow">Hour by hour</span><h2>When the profile is strongest</h2></div>
-                  <span className="estimated-badge">Estimated</span>
-                </div>
-                <div className="hour-chart" aria-label="Estimated hourly opportunity chart">
-                  {hourly.map((hour) => (
-                    <div className="hour-column" key={hour.label}>
-                      <span>{hour.score}</span>
-                      <div><i style={{ height: `${Math.max(12, hour.score)}%` }} /></div>
-                      <strong>{hour.label}</strong>
-                    </div>
-                  ))}
-                </div>
-                <div className="chart-caption"><span /> Strongest modeled window <small>Profile v1.0 · local time (America/New_York)</small></div>
-              </article>
+            {opportunity && target && (
+              <LocationIntelligence
+                locationId={location.id}
+                latitude={location.lat}
+                longitude={location.lng}
+                speciesName={target.name}
+                availability={opportunity.availability}
+                quality={opportunity.quality}
+                accessFit={opportunity.accessFit}
+                baseConfidence={opportunity.confidence}
+                associationFactor={location.hydrology?.associationFactor ?? 1}
+                hydrologyRelevant={location.waterbodyType === "river" || location.waterbodyType === "stream"}
+                wadingAvailable={location.access.includes("wade")}
+                fallbackHourly={hourly}
+              />
             )}
 
             {primaryEvidence && (
@@ -207,9 +208,19 @@ export default async function LocationPage({ params, searchParams }: LocationPag
               <small>Access source reviewed {location.sourceReviewed}. Always verify current regulations with the official authority.</small>
             </section>
             <section className="condition-mini">
-              <div><Waves size={18} /><span>Hydrology<strong>Association pending</strong></span></div>
-              <div><Droplets size={18} /><span>Water temperature<strong>Unavailable</strong></span></div>
+              <div><Waves size={18} /><span>Hydrology<strong>{location.hydrology ? `USGS ${location.hydrology.stationId} linked` : "No verified association"}</strong></span></div>
+              <div><Droplets size={18} /><span>Water temperature<strong>{location.hydrology ? "Shown when station reports it" : "No verified station"}</strong></span></div>
             </section>
+            {location.stocking && (
+              <section>
+                <span className="eyebrow">Official stocking record</span>
+                <h2>DWR category {location.stocking.category}</h2>
+                <p>{location.stocking.speciesIds.map((speciesId) => speciesById(speciesId)?.name).filter(Boolean).join(", ")} are identified in the designated stocked-water layer.</p>
+                <a href={location.stocking.sourceUrl} target="_blank" rel="noreferrer">Open the DWR trout map <ExternalLink size={14} /></a>
+                <a href={location.stocking.planUrl} target="_blank" rel="noreferrer">Read the 2026 stocking plan <ExternalLink size={14} /></a>
+                <small>Designation does not confirm the latest stocking date or that stocked fish remain. Posted signs control boundaries.</small>
+              </section>
+            )}
           </aside>
         </section>
       </main>

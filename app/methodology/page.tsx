@@ -18,7 +18,7 @@ export default function MethodologyPage() {
         <section className="method-steps">
           <article><span>01</span><Fish size={25} /><h2>Species availability</h2><p>Is the target reasonably supported here? Agency observations, official listings, stocking, barriers, recency, and source precision are weighed separately.</p><strong>No evidence = no ranking</strong></article>
           <article><span>02</span><Database size={25} /><h2>Fishery quality</h2><p>Comparable DWR survey metrics and dated agency ratings describe long-term strength. Electrofishing CPUE is never labeled as angler catch rate.</p><strong>Missing quality lowers confidence</strong></article>
-          <article><span>03</span><Waves size={25} /><h2>Hourly activity</h2><p>Species-specific temperature, flow, light, wind, cloud, precipitation, and season curves estimate condition suitability for each hour.</p><strong>Estimated inputs stay labeled</strong></article>
+          <article><span>03</span><Waves size={25} /><h2>Hourly activity</h2><p>The live Phase 1 profile uses forecast time of day, wind, and precipitation. Air temperature is shown for trip planning but is never substituted for measured water temperature.</p><strong>Estimated inputs stay labeled</strong></article>
           <article><span>04</span><Gauge size={25} /><h2>Access & confidence</h2><p>Access fit, provider coverage, recency, authority, agreement, forecast horizon, and station association are reported independently.</p><strong>Confidence is not the score</strong></article>
         </section>
 
@@ -46,7 +46,7 @@ export default function MethodologyPage() {
           <div>
             <span className="eyebrow">Safety gates</span>
             <h2>Some conditions cap the score.</h2>
-            <p>Rapidly rising rivers, heavy forecast rain, severe weather, closed access, or unsafe wading can cap or suppress an opportunity regardless of the biological score.</p>
+            <p>Official flood or severe-weather warnings and a rapid rise at a verified representative gage can cap an opportunity regardless of the biological score. A gage association never declares water safe.</p>
             <p>Always verify current regulations, access hours, property boundaries, and hazards with the official authority.</p>
           </div>
         </section>

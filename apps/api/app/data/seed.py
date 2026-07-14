@@ -1,6 +1,11 @@
 from __future__ import annotations
 
+import json
+import math
+from pathlib import Path
+
 from .coverage_seed import COVERAGE_LOCATIONS
+from .hydrology import HYDROLOGY_ASSOCIATIONS
 
 ACCESS_SOURCE = "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0"
 SHENANDOAH_SOURCE = "https://dwr.virginia.gov/blog/five-great-places-in-the-northern-shenandoah-valley-to-fish-after-work/"
@@ -115,6 +120,103 @@ LOCATIONS = [
     location("riverton", "Riverton", "North Fork Shenandoah River", "Warren", 38.949632, -78.198084, 58, ["shore", "kayak", "boat"], river_evidence(), activity_estimate=0.74),
     location("simpsons", "Simpson's", "South Fork Shenandoah River", "Warren", 38.878751, -78.261977, 64, ["shore", "wade", "kayak", "boat"], river_evidence(), activity_estimate=0.77),
 ] + COVERAGE_LOCATIONS
+
+
+GENERATED_DIR = Path(__file__).with_name("generated")
+with (GENERATED_DIR / "aquatic-gap-nova.json").open(encoding="utf-8") as source:
+    AQUATIC_GAP = json.load(source)
+with (GENERATED_DIR / "dwr-trout-nova.json").open(encoding="utf-8") as source:
+    DWR_TROUT = json.load(source)
+
+
+def distance_miles(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+    dlat = math.radians(lat2 - lat1)
+    dlon = math.radians(lon2 - lon1)
+    value = math.sin(dlat / 2) ** 2 + math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) * math.sin(dlon / 2) ** 2
+    return 3958.8 * 2 * math.asin(math.sqrt(value))
+
+
+def aquatic_gap_evidence(location_record: dict) -> dict:
+    waterbody = location_record["waterbody"].lower()
+    if not any(token in waterbody for token in ("river", "creek", "run", "stream")):
+        return {}
+    nearby = []
+    for sample in AQUATIC_GAP["samples"]:
+        distance = distance_miles(location_record["latitude"], location_record["longitude"], sample["latitude"], sample["longitude"])
+        if distance <= 1.75:
+            nearby.append((distance, sample))
+    result = {}
+    species_ids = {species_id for _, sample in nearby for species_id in sample["presentSpeciesIds"]}
+    for species_id in species_ids:
+        if species_id in location_record["species_evidence"]:
+            continue
+        present = [(distance, sample) for distance, sample in nearby if species_id in sample["presentSpeciesIds"]]
+        absent = [(distance, sample) for distance, sample in nearby if species_id in sample["absentSpeciesIds"]]
+        ratio = len(present) / max(1, len(present) + len(absent))
+        latest = max(sample["sampleDate"] for _, sample in present)
+        result[species_id] = {
+            "availability": min(0.56, 0.4 + ratio * 0.1 + min(3, len(present)) * 0.02),
+            "quality": None,
+            "evidence_confidence": min(0.62, 0.44 + min(3, len(present)) * 0.04),
+            "evidence_type": "agency survey",
+            "source": "https://doi.org/10.5066/P9FZ6J6R",
+            "source_name": "USGS Aquatic GAP presence/absence database",
+            "summary": f"USGS Aquatic GAP v2.0 contains {len(present)} presence record(s) on sampled NHDPlus reaches within 1.75 miles; this is nearby historic stream evidence, not proof at the access point.",
+            "last_evidence": f"Latest nearby sample {latest}; release v2.0 (December 2024)",
+            "nearest_miles": round(min(distance for distance, _ in present), 1),
+            "absence_records": len(absent),
+        }
+    return result
+
+
+def trout_locations() -> list[dict]:
+    records = []
+    for water in DWR_TROUT["waters"]:
+        evidence = {
+            species_id: {
+                "availability": 0.84,
+                "quality": None,
+                "evidence_confidence": 0.9,
+                "evidence_type": "stocking",
+                "source": water["sourceUrl"],
+                "source_name": "Virginia Department of Wildlife Resources",
+                "summary": f"Virginia DWR designates this reach for {species_id.replace('-', ' ')} stocking under category {water['stockingCategory']}.",
+            }
+            for species_id in water["speciesIds"]
+        }
+        miles = distance_miles(38.8462, -77.3064, water["latitude"], water["longitude"])
+        records.append({
+            "id": water["id"],
+            "name": f"{water['name']} stocked reach",
+            "waterbody": water["name"],
+            "waterbody_type": "stream",
+            "county": water["county"],
+            "latitude": water["latitude"],
+            "longitude": water["longitude"],
+            "travel_minutes": max(10, round(10 + miles * 1.35)),
+            "access": ["shore"],
+            "public_access": True,
+            "source": water["sourceUrl"],
+            "source_name": "Virginia Department of Wildlife Resources",
+            "source_reviewed": DWR_TROUT["release"]["reviewed"],
+            "aliases": [water["name"], f"{water['name']} trout", "stocked trout"],
+            "activity_estimate": 0.55,
+            "species_evidence": evidence,
+            "stocking": {
+                "category": water["stockingCategory"],
+                "designation": water["designation"],
+                "species_ids": water["speciesIds"],
+                "plan_url": DWR_TROUT["release"]["planUrl"],
+            },
+        })
+    return records
+
+
+for location_record in LOCATIONS:
+    location_record["species_evidence"].update(aquatic_gap_evidence(location_record))
+LOCATIONS.extend(trout_locations())
+for location_record in LOCATIONS:
+    location_record["hydrology"] = HYDROLOGY_ASSOCIATIONS.get(location_record["id"])
 
 
 SHENANDOAH_PCB_IDS = {"front-royal", "riverton", "morgans-ford", "berrys", "castlemans-ferry", "lockes"}

@@ -1,0 +1,274 @@
+{
+  "release": {
+    "dataset": "Virginia DWR Designated Stocked Trout Waters",
+    "service": "VAFWIS/Stocked_Trout_Waters",
+    "reviewed": "2026-07-14",
+    "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Stocked_Trout_Waters/FeatureServer/0",
+    "planUrl": "https://dwr.virginia.gov/wp-content/uploads/media/catchable-trout-stocking-plan.pdf"
+  },
+  "scope": {
+    "counties": [
+      "Fairfax",
+      "Fauquier",
+      "Frederick",
+      "Loudoun",
+      "Page",
+      "Prince William",
+      "Rappahannock",
+      "Shenandoah",
+      "Warren"
+    ],
+    "waterCount": 13
+  },
+  "waters": [
+    {
+      "id": "dwr-trout-312",
+      "objectId": 312,
+      "name": "Accotink Creek",
+      "county": "Fairfax",
+      "latitude": 38.8344212,
+      "longitude": -77.2185816,
+      "stockingCategory": "DH",
+      "designation": "DH",
+      "speciesIds": [
+        "rainbow-trout",
+        "brown-trout"
+      ],
+      "notes": "On Fairfax County Park Authority land",
+      "heritageDay": false,
+      "nationalForest": false,
+      "noFallStock": false,
+      "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Accotink%20Creek%27%20AND%20Designation=%27DH%27%20AND%20StockSched=%27DH%27"
+    },
+    {
+      "id": "dwr-trout-257",
+      "objectId": 257,
+      "name": "Holmes Run",
+      "county": "Fairfax",
+      "latitude": 38.8397805,
+      "longitude": -77.1385654,
+      "stockingCategory": "DH",
+      "designation": "DH",
+      "speciesIds": [
+        "rainbow-trout",
+        "brown-trout"
+      ],
+      "notes": null,
+      "heritageDay": false,
+      "nationalForest": false,
+      "noFallStock": false,
+      "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Holmes%20Run%27%20AND%20Designation=%27DH%27%20AND%20StockSched=%27DH%27"
+    },
+    {
+      "id": "dwr-trout-64",
+      "objectId": 64,
+      "name": "Hogue Creek",
+      "county": "Frederick",
+      "latitude": 39.2479174,
+      "longitude": -78.2572945,
+      "stockingCategory": "B",
+      "designation": "PNT",
+      "speciesIds": [
+        "rainbow-trout"
+      ],
+      "notes": "One parking area off Indian Hollow road.",
+      "heritageDay": false,
+      "nationalForest": false,
+      "noFallStock": false,
+      "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Hogue%20Creek%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27B%27"
+    },
+    {
+      "id": "dwr-trout-36",
+      "objectId": 36,
+      "name": "Paddy Run",
+      "county": "Frederick",
+      "latitude": 39.0522036,
+      "longitude": -78.5013151,
+      "stockingCategory": "B",
+      "designation": "PNT",
+      "speciesIds": [
+        "rainbow-trout",
+        "brown-trout",
+        "brook-trout"
+      ],
+      "notes": null,
+      "heritageDay": false,
+      "nationalForest": true,
+      "noFallStock": false,
+      "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Paddy%20Run%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27B%27"
+    },
+    {
+      "id": "dwr-trout-295",
+      "objectId": 295,
+      "name": "Cub Run",
+      "county": "Page",
+      "latitude": 38.5496813,
+      "longitude": -78.641944,
+      "stockingCategory": "B",
+      "designation": "PNT",
+      "speciesIds": [
+        "brook-trout"
+      ],
+      "notes": null,
+      "heritageDay": false,
+      "nationalForest": true,
+      "noFallStock": false,
+      "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Cub%20Run%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27B%27"
+    },
+    {
+      "id": "dwr-trout-207",
+      "objectId": 207,
+      "name": "Hawksbill Creek",
+      "county": "Page",
+      "latitude": 38.6734298,
+      "longitude": -78.4576636,
+      "stockingCategory": "A",
+      "designation": "PNT",
+      "speciesIds": [
+        "rainbow-trout"
+      ],
+      "notes": null,
+      "heritageDay": true,
+      "nationalForest": false,
+      "noFallStock": false,
+      "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Hawksbill%20Creek%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27A%27"
+    },
+    {
+      "id": "dwr-trout-130",
+      "objectId": 130,
+      "name": "Upper Passage Creek",
+      "county": "Page",
+      "latitude": 38.7171684,
+      "longitude": -78.5489767,
+      "stockingCategory": "C",
+      "designation": "PNT",
+      "speciesIds": [
+        "rainbow-trout",
+        "brook-trout"
+      ],
+      "notes": null,
+      "heritageDay": false,
+      "nationalForest": true,
+      "noFallStock": false,
+      "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Upper%20Passage%20Creek%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27C%27"
+    },
+    {
+      "id": "dwr-trout-71",
+      "objectId": 71,
+      "name": "Mill Creek",
+      "county": "Shenandoah",
+      "latitude": 38.7576212,
+      "longitude": -78.6737922,
+      "stockingCategory": "B",
+      "designation": "PNT",
+      "speciesIds": [
+        "rainbow-trout",
+        "brown-trout",
+        "brook-trout"
+      ],
+      "notes": "Not contiguous.",
+      "heritageDay": false,
+      "nationalForest": false,
+      "noFallStock": false,
+      "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Mill%20Creek%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27B%27"
+    },
+    {
+      "id": "dwr-trout-50",
+      "objectId": 50,
+      "name": "Passage Creek",
+      "county": "Shenandoah",
+      "latitude": 38.9287815,
+      "longitude": -78.3246613,
+      "stockingCategory": "A",
+      "designation": "PNT",
+      "speciesIds": [
+        "rainbow-trout",
+        "brown-trout",
+        "brook-trout"
+      ],
+      "notes": null,
+      "heritageDay": true,
+      "nationalForest": true,
+      "noFallStock": false,
+      "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Passage%20Creek%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27A%27"
+    },
+    {
+      "id": "dwr-trout-10",
+      "objectId": 10,
+      "name": "Peters Mill Run",
+      "county": "Shenandoah",
+      "latitude": 38.864537,
+      "longitude": -78.4411478,
+      "stockingCategory": "C",
+      "designation": "PNT",
+      "speciesIds": [
+        "brook-trout"
+      ],
+      "notes": null,
+      "heritageDay": false,
+      "nationalForest": true,
+      "noFallStock": false,
+      "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Peters%20Mill%20Run%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27C%27"
+    },
+    {
+      "id": "dwr-trout-177",
+      "objectId": 177,
+      "name": "Stony Creek",
+      "county": "Shenandoah",
+      "latitude": 38.8777776,
+      "longitude": -78.6266507,
+      "stockingCategory": "A",
+      "designation": "PNT",
+      "speciesIds": [
+        "rainbow-trout",
+        "brown-trout",
+        "brook-trout"
+      ],
+      "notes": "Not contiguous.",
+      "heritageDay": false,
+      "nationalForest": false,
+      "noFallStock": false,
+      "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Stony%20Creek%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27A%27"
+    },
+    {
+      "id": "dwr-trout-55",
+      "objectId": 55,
+      "name": "Happy Creek",
+      "county": "Warren",
+      "latitude": 38.9356691,
+      "longitude": -78.1877118,
+      "stockingCategory": "B",
+      "designation": "PNT",
+      "speciesIds": [
+        "rainbow-trout",
+        "brown-trout",
+        "brook-trout"
+      ],
+      "notes": null,
+      "heritageDay": false,
+      "nationalForest": false,
+      "noFallStock": false,
+      "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Happy%20Creek%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27B%27"
+    },
+    {
+      "id": "dwr-trout-174",
+      "objectId": 174,
+      "name": "Passage Creek",
+      "county": "Warren",
+      "latitude": 38.9491813,
+      "longitude": -78.2964662,
+      "stockingCategory": "DH",
+      "designation": "DH",
+      "speciesIds": [
+        "rainbow-trout",
+        "brown-trout",
+        "brook-trout"
+      ],
+      "notes": "Adjacent to DGIF property.",
+      "heritageDay": false,
+      "nationalForest": false,
+      "noFallStock": false,
+      "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Passage%20Creek%27%20AND%20Designation=%27DH%27%20AND%20StockSched=%27DH%27"
+    }
+  ]
+}

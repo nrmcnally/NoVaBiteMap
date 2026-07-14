@@ -175,6 +175,19 @@ async def location_conditions(location_id: str) -> dict:
         raise HTTPException(status_code=503, detail=f"{error}. No fallback observation was fabricated.") from error
 
 
+@router.get("/locations/{location_id}/hydrology")
+async def location_hydrology(location_id: str) -> dict:
+    location = get_location(location_id)
+    association = location.get("hydrology")
+    if not association:
+        raise HTTPException(status_code=404, detail="No manually verified USGS association for this location")
+    try:
+        observations = await UsgsWaterProvider().get_latest_observations(association["station_id"])
+        return {**observations, "association": association, "provisional": True}
+    except ProviderError as error:
+        raise HTTPException(status_code=503, detail=str(error)) from error
+
+
 @router.get("/hydrology/{station_id}")
 async def hydrology(station_id: str) -> dict:
     if not station_id.isdigit() or not 8 <= len(station_id) <= 15:
@@ -348,8 +361,9 @@ def data_source_status() -> list[dict]:
         {"provider": "NOVA Parks", "status": "healthy", "records": records_for("NOVA Parks"), "freshness": "reviewed 2026-07-13"},
         {"provider": "Virginia and Prince William parks", "status": "healthy", "records": records_for("Virginia State Parks") + records_for("Prince William County Parks"), "freshness": "reviewed 2026-07-13"},
         {"provider": "National Weather Service", "status": "on_demand", "freshness": "live request per selected location"},
-        {"provider": "USGS Water Services", "status": "association_required", "freshness": "no automatic nearest-gage fallback"},
-        {"provider": "USGS Aquatic GAP", "status": "pipeline_ready", "dataset_version": "2.0 (December 2024)"},
+        {"provider": "USGS Water Services", "status": "on_demand", "records": sum(1 for item in LOCATIONS if item.get("hydrology")), "freshness": "live request for manually verified associations"},
+        {"provider": "USGS Aquatic GAP", "status": "imported", "records": 94, "dataset_version": "2.0 (December 2024)"},
+        {"provider": "Virginia DWR stocked trout waters", "status": "healthy", "records": sum(1 for item in LOCATIONS if item.get("stocking")), "freshness": "layer reviewed 2026-07-14"},
     ]
 
 

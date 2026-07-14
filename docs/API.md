@@ -1,8 +1,9 @@
 # API design
 
 FastAPI serves OpenAPI at `/docs` and `/openapi.json`. The edge site also
-exposes `/api/conditions` for a selected NWS forecast and authenticated D1
-favorite routes used by the deployed web surface.
+exposes `/api/conditions` for up to 120 NWS hourly periods plus active alerts,
+`/api/hydrology?locationId=...` for normalized verified USGS observations, and
+authenticated D1 favorite routes used by the deployed web surface.
 
 Core FastAPI routes:
 
@@ -17,6 +18,7 @@ GET    /api/locations/nearby?latitude=...&longitude=...&radius_miles=...
 GET    /api/locations/{location_id}
 GET    /api/locations/{location_id}/species
 GET    /api/locations/{location_id}/conditions
+GET    /api/locations/{location_id}/hydrology
 GET    /api/hydrology/{usgs_station_id}
 GET    /api/opportunities/ranked?species_id=smallmouth-bass
 POST   /api/opportunities/score
@@ -39,4 +41,3 @@ first and uses a conservative similarity gate for fuzzy matches.
 Authenticated FastAPI routes accept `Authorization: Bearer <token>`. Passwords
 use salted PBKDF2-HMAC-SHA256 with 600,000 iterations. Random session tokens are
 stored only as SHA-256 hashes and expire.
-

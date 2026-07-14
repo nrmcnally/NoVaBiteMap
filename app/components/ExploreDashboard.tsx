@@ -110,6 +110,7 @@ export function ExploreDashboard() {
   const [access, setAccess] = useState<AccessMethod | "any">("any");
   const [timeFilter, setTimeFilter] = useState<TimeFilter>("any");
   const [waterbodyTypes, setWaterbodyTypes] = useState<WaterbodyType[]>([]);
+  const [stockedOnly, setStockedOnly] = useState(false);
   const [harvestFilter, setHarvestFilter] = useState<HarvestFilter>("any");
   const [selectedId, setSelectedId] = useState<string>();
   const [resultsOpen, setResultsOpen] = useState(false);
@@ -128,6 +129,7 @@ export function ExploreDashboard() {
       .filter(({ location, travel, advisory }) => {
         if (access !== "any" && !location.access.includes(access)) return false;
         if (waterbodyTypes.length > 0 && !waterbodyTypes.includes(location.waterbodyType)) return false;
+        if (stockedOnly && !location.stocking) return false;
         if (harvestFilter === "hide-active" && advisory.status === "active") return false;
         if (harvestFilter === "keep-and-eat" && !["no-advisory-found", "no-selected-species-match"].includes(advisory.status)) return false;
         if (timeFilter === "walkable" && (!origin || travel.walkMinutes > 30)) return false;
@@ -142,7 +144,7 @@ export function ExploreDashboard() {
         ].join(" ").toLowerCase();
         return haystack.includes(normalized);
       });
-  }, [access, harvestFilter, origin, query, speciesIds, timeFilter, waterbodyTypes]);
+  }, [access, harvestFilter, origin, query, speciesIds, stockedOnly, timeFilter, waterbodyTypes]);
 
   const ranked = useMemo(() => {
     if (speciesIds.length === 0) return [];
@@ -191,9 +193,9 @@ export function ExploreDashboard() {
       : `${selectedSpecies.length} species selected`;
   const travelLabel = timeOptions.find((option) => option.value === timeFilter)?.label ?? "Any travel time";
   const waterLabel = waterbodyTypes.length === 0
-    ? "Any water type"
+    ? stockedOnly ? "Stocked trout waters" : "Any water type"
     : waterbodyTypes.length === 1
-      ? waterTypeOptions.find((option) => option.value === waterbodyTypes[0])?.label ?? "1 type"
+      ? `${waterTypeOptions.find((option) => option.value === waterbodyTypes[0])?.label ?? "1 type"}${stockedOnly ? " · stocked" : ""}`
       : `${waterbodyTypes.length} water types`;
   const harvestLabel = harvestOptions.find((option) => option.value === harvestFilter)?.label ?? "Show every water";
 
@@ -417,7 +419,7 @@ export function ExploreDashboard() {
               </div>
             </FilterMenu>
 
-            <FilterMenu label="Water type" value={waterLabel} icon={<Waves size={17} />} highlighted={waterbodyTypes.length > 0}>
+            <FilterMenu label="Water type" value={waterLabel} icon={<Waves size={17} />} highlighted={waterbodyTypes.length > 0 || stockedOnly}>
               <div className="compact-option-list">
                 {waterTypeOptions.map((option) => {
                   const count = waterTypeCounts.get(option.value) ?? 0;
@@ -430,7 +432,11 @@ export function ExploreDashboard() {
                   );
                 })}
               </div>
-              {waterbodyTypes.length > 0 && <button type="button" className="menu-clear" onClick={() => setWaterbodyTypes([])}>Show all water types</button>}
+              <button type="button" className={`filter-option compact-option stocked-option ${stockedOnly ? "active" : ""}`} onClick={() => setStockedOnly((current) => !current)} aria-pressed={stockedOnly}>
+                <span className="option-check">{stockedOnly && <Check size={13} />}</span>
+                <strong>Official stocked trout waters</strong><small>{locations.filter((location) => location.stocking).length}</small>
+              </button>
+              {(waterbodyTypes.length > 0 || stockedOnly) && <button type="button" className="menu-clear" onClick={() => { setWaterbodyTypes([]); setStockedOnly(false); }}>Clear water filters</button>}
             </FilterMenu>
 
             <FilterMenu label="Harvest guidance" value={harvestLabel} icon={<ShieldCheck size={17} />} className="harvest-filter-menu" highlighted={harvestFilter !== "any"}>

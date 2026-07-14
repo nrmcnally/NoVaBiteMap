@@ -41,6 +41,8 @@ size and validation quality.
 
 Agency surveys do not equal angler catch rates. Broad waterbody evidence can
 miss reach variation. Forecasts change. Water temperature may be estimated.
-Gages may not be representative. Aquatic GAP is landscape-scale modeled
-evidence and is intentionally capped without direct support.
-
+Gages may not be representative. The imported Aquatic GAP v2.0 records are
+historical presence/absence samples associated through nearby NHDPlus reach
+midpoints. They are capped at 0.56 availability and never described as a current
+or exact access-point survey. Modeled Aquatic GAP distributions remain separate
+and are not yet included in the public score.

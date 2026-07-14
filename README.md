@@ -5,11 +5,13 @@ Northern Virginia and nearby Potomac and Shenandoah waters. It answers a
 practical question: where should I fish, what should I target, and when should I
 go—without pretending a score guarantees a catch.
 
-The current Phase 1 slice includes a polished map-first web app, 16 Virginia DWR
-verified public access locations, species and alias search, evidence-gated
-rankings, address- or ZIP-based travel estimates, Google Maps directions, live
-NWS selected-location forecasts, location details, methodology, an authenticated
-administrator data-health screen, identity-aware favorites, an independent FastAPI service,
+The current Phase 1 slice includes a polished map-first web app, 50 verified
+public fishing access locations plus 13 Virginia DWR designated stocked-trout
+reaches, species and alias search, evidence-gated rankings, address- or ZIP-based
+travel estimates, Google Maps directions, live NWS five-day outlooks, 19 manually
+reviewed USGS location-to-gage associations, 94 normalized regional USGS Aquatic
+GAP samples, location details, methodology, an authenticated administrator
+data-health screen, identity-aware favorites, an independent FastAPI service,
 PostGIS/Redis Compose services, migrations, and tests.
 
 ## Requirements on Windows
@@ -92,6 +94,14 @@ docker compose run --rm api alembic upgrade head
 - Access-only records remain searchable but do not rank for a species.
 - Missing live observations remain unavailable; the app does not invent a fallback.
 - Activity values in the seed snapshot are labeled seasonal estimates.
+- Live detail outlooks use NWS time of day, wind, precipitation, and official
+  alerts. Air temperature is never presented as water temperature.
+- USGS gage data are provisional; connected-reach associations reduce confidence
+  and never establish boating or wading safety.
+- Aquatic GAP presence records are historical nearby-reach evidence and are
+  capped; they are not treated as exact access-point surveys.
+- A DWR stocked-water designation does not confirm the latest stocking date or
+  that stocked fish remain.
 - Address-based drive and walking times are clearly labeled approximations; Google Maps provides the final route.
 - The opportunity index is not a catch probability or guarantee.
 - Always verify regulations, closures, weather, and water safety with the official authority.
