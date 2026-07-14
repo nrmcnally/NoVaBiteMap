@@ -7,8 +7,9 @@ go—without pretending a score guarantees a catch.
 
 The current Phase 1 slice includes a polished map-first web app, 16 Virginia DWR
 verified public access locations, species and alias search, evidence-gated
-rankings, live NWS selected-location forecasts, location details, methodology,
-provider health, identity-aware favorites, an independent FastAPI service,
+rankings, address- or ZIP-based travel estimates, Google Maps directions, live
+NWS selected-location forecasts, location details, methodology, an authenticated
+administrator data-health screen, identity-aware favorites, an independent FastAPI service,
 PostGIS/Redis Compose services, migrations, and tests.
 
 ## Requirements on Windows
@@ -91,6 +92,7 @@ docker compose run --rm api alembic upgrade head
 - Access-only records remain searchable but do not rank for a species.
 - Missing live observations remain unavailable; the app does not invent a fallback.
 - Activity values in the seed snapshot are labeled seasonal estimates.
+- Address-based drive and walking times are clearly labeled approximations; Google Maps provides the final route.
 - The opportunity index is not a catch probability or guarantee.
 - Always verify regulations, closures, weather, and water safety with the official authority.
 
@@ -102,4 +104,3 @@ docker compose run --rm api alembic upgrade head
 - [Data licensing](docs/DATA_LICENSES.md)
 - [Model card](docs/MODEL_CARD.md)
 - [Roadmap](docs/ROADMAP.md)
-

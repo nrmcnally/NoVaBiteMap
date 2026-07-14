@@ -20,6 +20,7 @@ import {
 import { TopNav } from "../../components/TopNav";
 import { locationById, sourceLinks, speciesById } from "../../lib/data";
 import { estimatedHourlyScores, opportunityFor } from "../../lib/scoring";
+import { googleDirectionsUrl } from "../../lib/travel";
 
 type LocationPageProps = { params: Promise<{ id: string }> };
 
@@ -57,8 +58,8 @@ export default async function LocationPage({ params }: LocationPageProps) {
             </div>
           </div>
           <div className="hero-actions">
-            <a href={`https://www.openstreetmap.org/?mlat=${location.lat}&mlon=${location.lng}#map=13/${location.lat}/${location.lng}`} target="_blank" rel="noreferrer">
-              <Navigation size={17} /> Directions
+            <a href={googleDirectionsUrl(location)} target="_blank" rel="noreferrer">
+              <Navigation size={17} /> Google Maps directions
             </a>
             <a href="/my-spots"><Heart size={17} /> Save spot</a>
           </div>

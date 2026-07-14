@@ -1,11 +1,10 @@
-import { Heart, LockKeyhole, MapPin, ShieldCheck, Sparkles } from "../components/ClientIcons";
+import { LockKeyhole, MapPin, ShieldCheck, Sparkles } from "../components/ClientIcons";
 import { eq } from "drizzle-orm";
 import { TopNav } from "../components/TopNav";
 import { chatGPTSignInPath, getChatGPTUser } from "../chatgpt-auth";
 import { getDb } from "../../db";
 import { savedLocations } from "../../db/schema";
-import { locationById, speciesById } from "../lib/data";
-import { opportunityFor } from "../lib/scoring";
+import { MySpotsClient } from "./MySpotsClient";
 
 export const dynamic = "force-dynamic";
 
@@ -31,7 +30,7 @@ export default async function MySpotsPage() {
         </header>
         {!user ? (
           <section className="signin-panel">
-            <div className="signin-illustration"><MapPin size={34} /><Heart size={24} fill="currentColor" /></div>
+            <div className="signin-illustration"><MapPin size={34} /></div>
             <span className="eyebrow">Private by default</span>
             <h2>Sign in to keep your spots.</h2>
             <p>Browsing and forecasts stay public. An account is only needed to sync favorites, nicknames, notes, and preferred species.</p>
@@ -40,24 +39,13 @@ export default async function MySpotsPage() {
           </section>
         ) : !databaseReady ? (
           <section className="signin-panel"><Sparkles size={30} /><h2>Favorite storage is warming up.</h2><p>The signed-in dashboard is ready, but its database migration has not been applied in this environment yet.</p></section>
-        ) : favorites.length === 0 ? (
-          <section className="signin-panel"><Heart size={30} /><h2>No saved spots yet.</h2><p>Choose a heart on the opportunity map to start your private shortlist.</p><a href="/">Explore the map</a></section>
         ) : (
-          <section className="favorite-grid">
-            {favorites.map((favorite) => {
-              const location = locationById(favorite.locationId);
-              if (!location) return null;
-              const evidence = favorite.preferredSpecies ? opportunityFor(location, favorite.preferredSpecies) : null;
-              return (
-                <a className="favorite-card" href={`/locations/${location.id}`} key={favorite.id}>
-                  <span className="eyebrow">{favorite.nickname || location.county}</span>
-                  <h2>{location.name}</h2>
-                  <p>{location.waterbody}</p>
-                  <div><strong>{evidence?.score ?? "—"}</strong><span>{favorite.preferredSpecies ? speciesById(favorite.preferredSpecies)?.name : "Choose a target"}<br />{location.bestWindow}</span></div>
-                </a>
-              );
-            })}
-          </section>
+          <MySpotsClient initialFavorites={favorites.map((favorite) => ({
+            id: favorite.id,
+            locationId: favorite.locationId,
+            nickname: favorite.nickname,
+            preferredSpecies: favorite.preferredSpecies,
+          }))} />
         )}
       </main>
     </div>

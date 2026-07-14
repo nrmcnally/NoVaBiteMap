@@ -12,12 +12,29 @@ test("build contains the BiteMap opportunity board product contract", async () =
   await access(new URL("../dist/server/index.js", import.meta.url));
   assert.match(page, /ExploreDashboard/);
   assert.match(dashboard, /Find your next/);
-  assert.match(dashboard, /Species evidence first/);
-  assert.match(dashboard, /smallmouth-bass/);
+  assert.match(dashboard, /useState\(""\)/);
+  assert.match(dashboard, /useState\(false\)/);
+  assert.match(dashboard, /Choose a fish species/);
+  assert.match(dashboard, /Starting address or ZIP/);
+  assert.match(dashboard, /Google Maps directions/);
   assert.match(data, /Smallmouth bass/);
   assert.match(dashboard, /Access verified by Virginia DWR/);
   assert.match(layout, /BiteMap NOVA/);
   assert.doesNotMatch(`${page}${dashboard}${layout}`, /codex-preview|react-loading-skeleton|Your site is taking shape/i);
+});
+
+test("favorites refresh live and data health is removed from public navigation", async () => {
+  const [spots, nav, publicHealth, adminHealth] = await Promise.all([
+    readFile(new URL("../app/my-spots/MySpotsClient.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/components/TopNav.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/data-health/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/admin/data-health/page.tsx", import.meta.url), "utf8"),
+  ]);
+  assert.match(spots, /cache: "no-store"/);
+  assert.match(spots, /bitemap:favorites-changed/);
+  assert.doesNotMatch(nav, /Data health/);
+  assert.match(publicHealth, /notFound/);
+  assert.match(adminHealth, /requireChatGPTUser/);
 });
 
 test("methodology explains the score without calling it a probability", async () => {
