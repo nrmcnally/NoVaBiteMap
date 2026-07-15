@@ -1,0 +1,491 @@
+{
+  "meta": {
+    "generated": "promoted from approved agency candidates (fish-community-verdicts.json)",
+    "reviewed": "2026-07-14",
+    "wildTroutReachesApproved": 20,
+    "wildTroutClaims": 22,
+    "locations": 20
+  },
+  "byLocation": {
+    "nhd-stream-brokenback-run": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.74,
+        "quality": null,
+        "evidenceConfidence": 0.85,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Virginia DWR classifies Brokenback Run as a Class I wild trout stream with a documented brook trout population.",
+        "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+        "technique": "Small inline spinner, dry fly, or nymph drifted through pockets and pool heads",
+        "depth": "Plunge pools, undercut banks, and cool current seams",
+        "positive": [
+          "Official DWR wild-trout designation (Class I)",
+          "brook trout documented in the DWR Wild Trout Streams layer"
+        ],
+        "negative": [
+          "Small wild-trout water — a fragile fishery; confirm special regulations and legal access before fishing"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      }
+    ],
+    "nhd-stream-cedar-run": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.74,
+        "quality": null,
+        "evidenceConfidence": 0.85,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Virginia DWR classifies Cedar Run as a Class I wild trout stream with a documented brook trout population.",
+        "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+        "technique": "Small inline spinner, dry fly, or nymph drifted through pockets and pool heads",
+        "depth": "Plunge pools, undercut banks, and cool current seams",
+        "positive": [
+          "Official DWR wild-trout designation (Class I)",
+          "brook trout documented in the DWR Wild Trout Streams layer"
+        ],
+        "negative": [
+          "Small wild-trout water — a fragile fishery; confirm special regulations and legal access before fishing"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      }
+    ],
+    "nhd-stream-gooney-run": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.66,
+        "quality": null,
+        "evidenceConfidence": 0.85,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Virginia DWR classifies Gooney Run as a Class II wild trout stream with a documented brook trout population.",
+        "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+        "technique": "Small inline spinner, dry fly, or nymph drifted through pockets and pool heads",
+        "depth": "Plunge pools, undercut banks, and cool current seams",
+        "positive": [
+          "Official DWR wild-trout designation (Class II)",
+          "brook trout documented in the DWR Wild Trout Streams layer"
+        ],
+        "negative": [
+          "Small wild-trout water — a fragile fishery; confirm special regulations and legal access before fishing"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      }
+    ],
+    "nhd-stream-hannah-run": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.66,
+        "quality": null,
+        "evidenceConfidence": 0.85,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Virginia DWR classifies Hannah Run as a Class II wild trout stream with a documented brook trout population.",
+        "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+        "technique": "Small inline spinner, dry fly, or nymph drifted through pockets and pool heads",
+        "depth": "Plunge pools, undercut banks, and cool current seams",
+        "positive": [
+          "Official DWR wild-trout designation (Class II)",
+          "brook trout documented in the DWR Wild Trout Streams layer"
+        ],
+        "negative": [
+          "Small wild-trout water — a fragile fishery; confirm special regulations and legal access before fishing"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      }
+    ],
+    "nhd-stream-hughes-river": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.74,
+        "quality": null,
+        "evidenceConfidence": 0.85,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Virginia DWR classifies Hughes River as a Class I wild trout stream with a documented brook trout population.",
+        "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+        "technique": "Small inline spinner, dry fly, or nymph drifted through pockets and pool heads",
+        "depth": "Plunge pools, undercut banks, and cool current seams",
+        "positive": [
+          "Official DWR wild-trout designation (Class I)",
+          "brook trout documented in the DWR Wild Trout Streams layer"
+        ],
+        "negative": [
+          "Small wild-trout water — a fragile fishery; confirm special regulations and legal access before fishing"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      },
+      {
+        "speciesId": "brown-trout",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.85,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Virginia DWR classifies Hughes River as a Class I wild trout stream with a documented brown trout population.",
+        "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+        "technique": "Small inline spinner, dry fly, or nymph drifted through pockets and pool heads",
+        "depth": "Plunge pools, undercut banks, and cool current seams",
+        "positive": [
+          "Official DWR wild-trout designation (Class I)",
+          "brown trout documented in the DWR Wild Trout Streams layer"
+        ],
+        "negative": [
+          "Small wild-trout water — a fragile fishery; confirm special regulations and legal access before fishing"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      }
+    ],
+    "nhd-stream-jeremys-run": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.66,
+        "quality": null,
+        "evidenceConfidence": 0.85,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Virginia DWR classifies Jeremys Run as a Class II wild trout stream with a documented brook trout population.",
+        "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+        "technique": "Small inline spinner, dry fly, or nymph drifted through pockets and pool heads",
+        "depth": "Plunge pools, undercut banks, and cool current seams",
+        "positive": [
+          "Official DWR wild-trout designation (Class II)",
+          "brook trout documented in the DWR Wild Trout Streams layer"
+        ],
+        "negative": [
+          "Small wild-trout water — a fragile fishery; confirm special regulations and legal access before fishing"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      }
+    ],
+    "nhd-stream-jordan-river": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.66,
+        "quality": null,
+        "evidenceConfidence": 0.85,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Virginia DWR classifies Jordan River as a Class II wild trout stream with a documented brook trout population.",
+        "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+        "technique": "Small inline spinner, dry fly, or nymph drifted through pockets and pool heads",
+        "depth": "Plunge pools, undercut banks, and cool current seams",
+        "positive": [
+          "Official DWR wild-trout designation (Class II)",
+          "brook trout documented in the DWR Wild Trout Streams layer"
+        ],
+        "negative": [
+          "Small wild-trout water — a fragile fishery; confirm special regulations and legal access before fishing"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      }
+    ],
+    "nhd-stream-kinsey-run": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.58,
+        "quality": null,
+        "evidenceConfidence": 0.85,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Virginia DWR classifies Kinsey Run as a Class III wild trout stream with a documented brook trout population.",
+        "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+        "technique": "Small inline spinner, dry fly, or nymph drifted through pockets and pool heads",
+        "depth": "Plunge pools, undercut banks, and cool current seams",
+        "positive": [
+          "Official DWR wild-trout designation (Class III)",
+          "brook trout documented in the DWR Wild Trout Streams layer"
+        ],
+        "negative": [
+          "Small wild-trout water — a fragile fishery; confirm special regulations and legal access before fishing"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      }
+    ],
+    "nhd-stream-lands-run": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.66,
+        "quality": null,
+        "evidenceConfidence": 0.85,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Virginia DWR classifies Lands Run as a Class II wild trout stream with a documented brook trout population.",
+        "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+        "technique": "Small inline spinner, dry fly, or nymph drifted through pockets and pool heads",
+        "depth": "Plunge pools, undercut banks, and cool current seams",
+        "positive": [
+          "Official DWR wild-trout designation (Class II)",
+          "brook trout documented in the DWR Wild Trout Streams layer"
+        ],
+        "negative": [
+          "Small wild-trout water — a fragile fishery; confirm special regulations and legal access before fishing"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      }
+    ],
+    "nhd-stream-little-passage-creek": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.58,
+        "quality": null,
+        "evidenceConfidence": 0.85,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Virginia DWR classifies Little Passage Creek as a Class III wild trout stream with a documented brook trout population.",
+        "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+        "technique": "Small inline spinner, dry fly, or nymph drifted through pockets and pool heads",
+        "depth": "Plunge pools, undercut banks, and cool current seams",
+        "positive": [
+          "Official DWR wild-trout designation (Class III)",
+          "brook trout documented in the DWR Wild Trout Streams layer"
+        ],
+        "negative": [
+          "Small wild-trout water — a fragile fishery; confirm special regulations and legal access before fishing"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      }
+    ],
+    "nhd-stream-mill-run": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.66,
+        "quality": null,
+        "evidenceConfidence": 0.85,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Virginia DWR classifies Mill Run as a Class II wild trout stream with a documented brook trout population.",
+        "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+        "technique": "Small inline spinner, dry fly, or nymph drifted through pockets and pool heads",
+        "depth": "Plunge pools, undercut banks, and cool current seams",
+        "positive": [
+          "Official DWR wild-trout designation (Class II)",
+          "brook trout documented in the DWR Wild Trout Streams layer"
+        ],
+        "negative": [
+          "Small wild-trout water — a fragile fishery; confirm special regulations and legal access before fishing"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      }
+    ],
+    "nhd-stream-mine-run": [
+      {
+        "speciesId": "rainbow-trout",
+        "availability": 0.44,
+        "quality": null,
+        "evidenceConfidence": 0.85,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Virginia DWR classifies Mine Run as a Class III wild trout stream with a documented rainbow trout population.",
+        "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+        "technique": "Small inline spinner, dry fly, or nymph drifted through pockets and pool heads",
+        "depth": "Plunge pools, undercut banks, and cool current seams",
+        "positive": [
+          "Official DWR wild-trout designation (Class III)",
+          "rainbow trout documented in the DWR Wild Trout Streams layer"
+        ],
+        "negative": [
+          "Small wild-trout water — a fragile fishery; confirm special regulations and legal access before fishing"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      }
+    ],
+    "nhd-stream-overall-run": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.66,
+        "quality": null,
+        "evidenceConfidence": 0.85,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Virginia DWR classifies Overall Run as a Class II wild trout stream with a documented brook trout population.",
+        "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+        "technique": "Small inline spinner, dry fly, or nymph drifted through pockets and pool heads",
+        "depth": "Plunge pools, undercut banks, and cool current seams",
+        "positive": [
+          "Official DWR wild-trout designation (Class II)",
+          "brook trout documented in the DWR Wild Trout Streams layer"
+        ],
+        "negative": [
+          "Small wild-trout water — a fragile fishery; confirm special regulations and legal access before fishing"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      }
+    ],
+    "nhd-stream-pass-run": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.66,
+        "quality": null,
+        "evidenceConfidence": 0.85,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Virginia DWR classifies Pass Run as a Class II wild trout stream with a documented brook trout population.",
+        "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+        "technique": "Small inline spinner, dry fly, or nymph drifted through pockets and pool heads",
+        "depth": "Plunge pools, undercut banks, and cool current seams",
+        "positive": [
+          "Official DWR wild-trout designation (Class II)",
+          "brook trout documented in the DWR Wild Trout Streams layer"
+        ],
+        "negative": [
+          "Small wild-trout water — a fragile fishery; confirm special regulations and legal access before fishing"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      },
+      {
+        "speciesId": "rainbow-trout",
+        "availability": 0.52,
+        "quality": null,
+        "evidenceConfidence": 0.85,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Virginia DWR classifies Pass Run as a Class II wild trout stream with a documented rainbow trout population.",
+        "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+        "technique": "Small inline spinner, dry fly, or nymph drifted through pockets and pool heads",
+        "depth": "Plunge pools, undercut banks, and cool current seams",
+        "positive": [
+          "Official DWR wild-trout designation (Class II)",
+          "rainbow trout documented in the DWR Wild Trout Streams layer"
+        ],
+        "negative": [
+          "Small wild-trout water — a fragile fishery; confirm special regulations and legal access before fishing"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      }
+    ],
+    "nhd-stream-piney-river": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.66,
+        "quality": null,
+        "evidenceConfidence": 0.85,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Virginia DWR classifies Piney River as a Class II wild trout stream with a documented brook trout population.",
+        "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+        "technique": "Small inline spinner, dry fly, or nymph drifted through pockets and pool heads",
+        "depth": "Plunge pools, undercut banks, and cool current seams",
+        "positive": [
+          "Official DWR wild-trout designation (Class II)",
+          "brook trout documented in the DWR Wild Trout Streams layer"
+        ],
+        "negative": [
+          "Small wild-trout water — a fragile fishery; confirm special regulations and legal access before fishing"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      }
+    ],
+    "nhd-stream-ragged-run": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.66,
+        "quality": null,
+        "evidenceConfidence": 0.85,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Virginia DWR classifies Ragged Run as a Class II wild trout stream with a documented brook trout population.",
+        "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+        "technique": "Small inline spinner, dry fly, or nymph drifted through pockets and pool heads",
+        "depth": "Plunge pools, undercut banks, and cool current seams",
+        "positive": [
+          "Official DWR wild-trout designation (Class II)",
+          "brook trout documented in the DWR Wild Trout Streams layer"
+        ],
+        "negative": [
+          "Small wild-trout water — a fragile fishery; confirm special regulations and legal access before fishing"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      }
+    ],
+    "nhd-stream-rapidan-river": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.74,
+        "quality": null,
+        "evidenceConfidence": 0.85,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Virginia DWR classifies Rapidan River as a Class I wild trout stream with a documented brook trout population.",
+        "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+        "technique": "Small inline spinner, dry fly, or nymph drifted through pockets and pool heads",
+        "depth": "Plunge pools, undercut banks, and cool current seams",
+        "positive": [
+          "Official DWR wild-trout designation (Class I)",
+          "brook trout documented in the DWR Wild Trout Streams layer"
+        ],
+        "negative": [
+          "Small wild-trout water — a fragile fishery; confirm special regulations and legal access before fishing"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      }
+    ],
+    "nhd-stream-rush-river": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.66,
+        "quality": null,
+        "evidenceConfidence": 0.85,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Virginia DWR classifies Rush River as a Class IV wild trout stream with a documented brook trout population.",
+        "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+        "technique": "Small inline spinner, dry fly, or nymph drifted through pockets and pool heads",
+        "depth": "Plunge pools, undercut banks, and cool current seams",
+        "positive": [
+          "Official DWR wild-trout designation (Class IV)",
+          "brook trout documented in the DWR Wild Trout Streams layer"
+        ],
+        "negative": [
+          "Small wild-trout water — a fragile fishery; confirm special regulations and legal access before fishing"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      }
+    ],
+    "nhd-stream-sams-run": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.66,
+        "quality": null,
+        "evidenceConfidence": 0.85,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Virginia DWR classifies Sams Run as a Class II wild trout stream with a documented brook trout population.",
+        "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+        "technique": "Small inline spinner, dry fly, or nymph drifted through pockets and pool heads",
+        "depth": "Plunge pools, undercut banks, and cool current seams",
+        "positive": [
+          "Official DWR wild-trout designation (Class II)",
+          "brook trout documented in the DWR Wild Trout Streams layer"
+        ],
+        "negative": [
+          "Small wild-trout water — a fragile fishery; confirm special regulations and legal access before fishing"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      }
+    ],
+    "nhd-stream-staunton-river": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.74,
+        "quality": null,
+        "evidenceConfidence": 0.85,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Virginia DWR classifies Staunton River as a Class I wild trout stream with a documented brook trout population.",
+        "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+        "technique": "Small inline spinner, dry fly, or nymph drifted through pockets and pool heads",
+        "depth": "Plunge pools, undercut banks, and cool current seams",
+        "positive": [
+          "Official DWR wild-trout designation (Class I)",
+          "brook trout documented in the DWR Wild Trout Streams layer"
+        ],
+        "negative": [
+          "Small wild-trout water — a fragile fishery; confirm special regulations and legal access before fishing"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      }
+    ]
+  }
+}

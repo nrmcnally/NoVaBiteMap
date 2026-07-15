@@ -2,7 +2,7 @@
   "meta": {
     "generated": "2026-07-15",
     "locationCount": 196,
-    "guessReliantLocationCount": 132,
+    "guessReliantLocationCount": 112,
     "policy": "Candidates never affect rankings until finalVerdict is approved after exact-water, species, date, provenance, contradiction, and access review.",
     "priorAgentWork": "All existing seed evidence is retained under priorAgentClaims and explicitly queued for re-verification or quarantine.",
     "vafwisSource": {
@@ -22,19 +22,19 @@
       "privacyNote": "Source geometries are used transiently for matching, then deliberately discarded; only distance-to-catalog-water is retained."
     },
     "queueCounts": {
-      "existing-direct-claims-reviewed": 64,
+      "existing-direct-claims-reviewed": 84,
       "no-direct-candidate-found": 42,
-      "direct-agency-candidate-found": 78,
+      "direct-agency-candidate-found": 58,
       "non-target-fish-candidate-found": 10,
       "manual-primary-source-claim-approved": 2
     },
     "reviewProgress": {
-      "targetCandidateLocationCount": 79,
+      "targetCandidateLocationCount": 59,
       "nonTargetOnlyLocationCount": 10,
       "noCandidateLocationCount": 42,
       "approvedClaimCount": 60,
       "approvedClaimLocationCount": 39,
-      "verifiedRuntimeClaimCount": 245,
+      "verifiedRuntimeClaimCount": 267,
       "removedOrRejectedPriorClaimCount": 105,
       "unverifiedRuntimeDirectClaimCount": 0,
       "missingSourceRuntimeDirectClaimCount": 0,
@@ -34390,9 +34390,21 @@
         "reviewStatus": "separate-access-review-required",
         "decision": null
       },
-      "evidenceQueue": "direct-agency-candidate-found",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
-      "priorAgentClaims": [],
+      "priorAgentClaims": [
+        {
+          "speciesId": "brook-trout",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "Virginia DWR classifies Brokenback Run as a Class I wild trout stream with a documented brook trout population.",
+          "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        }
+      ],
       "agencyObservationCandidates": [
         {
           "speciesId": "brook-trout",
@@ -36876,9 +36888,21 @@
         "reviewStatus": "separate-access-review-required",
         "decision": null
       },
-      "evidenceQueue": "direct-agency-candidate-found",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
-      "priorAgentClaims": [],
+      "priorAgentClaims": [
+        {
+          "speciesId": "brook-trout",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "Virginia DWR classifies Cedar Run as a Class I wild trout stream with a documented brook trout population.",
+          "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        }
+      ],
       "agencyObservationCandidates": [
         {
           "speciesId": "brook-trout",
@@ -44718,9 +44742,21 @@
         "reviewStatus": "separate-access-review-required",
         "decision": null
       },
-      "evidenceQueue": "direct-agency-candidate-found",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
-      "priorAgentClaims": [],
+      "priorAgentClaims": [
+        {
+          "speciesId": "brook-trout",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "Virginia DWR classifies Gooney Run as a Class II wild trout stream with a documented brook trout population.",
+          "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        }
+      ],
       "agencyObservationCandidates": [
         {
           "speciesId": "brook-trout",
@@ -44965,9 +45001,21 @@
         "reviewStatus": "separate-access-review-required",
         "decision": null
       },
-      "evidenceQueue": "direct-agency-candidate-found",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
-      "priorAgentClaims": [],
+      "priorAgentClaims": [
+        {
+          "speciesId": "brook-trout",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "Virginia DWR classifies Hannah Run as a Class II wild trout stream with a documented brook trout population.",
+          "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        }
+      ],
       "agencyObservationCandidates": [
         {
           "speciesId": "brook-trout",
@@ -46507,9 +46555,32 @@
         "reviewStatus": "separate-access-review-required",
         "decision": null
       },
-      "evidenceQueue": "direct-agency-candidate-found",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
-      "priorAgentClaims": [],
+      "priorAgentClaims": [
+        {
+          "speciesId": "brook-trout",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "Virginia DWR classifies Hughes River as a Class I wild trout stream with a documented brook trout population.",
+          "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        },
+        {
+          "speciesId": "brown-trout",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "Virginia DWR classifies Hughes River as a Class I wild trout stream with a documented brown trout population.",
+          "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        }
+      ],
       "agencyObservationCandidates": [
         {
           "speciesId": "brook-trout",
@@ -48423,9 +48494,21 @@
         "reviewStatus": "separate-access-review-required",
         "decision": null
       },
-      "evidenceQueue": "direct-agency-candidate-found",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
-      "priorAgentClaims": [],
+      "priorAgentClaims": [
+        {
+          "speciesId": "brook-trout",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "Virginia DWR classifies Jeremys Run as a Class II wild trout stream with a documented brook trout population.",
+          "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        }
+      ],
       "agencyObservationCandidates": [
         {
           "speciesId": "brook-trout",
@@ -48766,9 +48849,21 @@
         "reviewStatus": "separate-access-review-required",
         "decision": null
       },
-      "evidenceQueue": "direct-agency-candidate-found",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
-      "priorAgentClaims": [],
+      "priorAgentClaims": [
+        {
+          "speciesId": "brook-trout",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "Virginia DWR classifies Jordan River as a Class II wild trout stream with a documented brook trout population.",
+          "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        }
+      ],
       "agencyObservationCandidates": [
         {
           "speciesId": "bluegill",
@@ -50631,9 +50726,21 @@
         "reviewStatus": "separate-access-review-required",
         "decision": null
       },
-      "evidenceQueue": "direct-agency-candidate-found",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
-      "priorAgentClaims": [],
+      "priorAgentClaims": [
+        {
+          "speciesId": "brook-trout",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "Virginia DWR classifies Kinsey Run as a Class III wild trout stream with a documented brook trout population.",
+          "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        }
+      ],
       "agencyObservationCandidates": [],
       "agencyHabitatCandidates": [
         {
@@ -50673,18 +50780,18 @@
         "reviewStatus": "separate-access-review-required",
         "decision": null
       },
-      "evidenceQueue": "direct-agency-candidate-found",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
       "priorAgentClaims": [
         {
-          "speciesId": "smallmouth-bass",
-          "evidenceType": "modeled",
-          "modeled": true,
-          "summary": "Likely present — smallmouth bass is documented 4.9 mi downstream in the connected Karo.",
-          "lastEvidence": "Likely-present model (USGS NLDI river network + USGS Aquatic GAP)",
+          "speciesId": "brook-trout",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "Virginia DWR classifies Lands Run as a Class II wild trout stream with a documented brook trout population.",
+          "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
           "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-south-fork/",
-          "reviewStatus": "modeled-do-not-promote",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0",
+          "reviewStatus": "corroborated-by-approved-agency-record",
           "review": null
         }
       ],
@@ -52749,9 +52856,20 @@
         "reviewStatus": "separate-access-review-required",
         "decision": null
       },
-      "evidenceQueue": "direct-agency-candidate-found",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
       "priorAgentClaims": [
+        {
+          "speciesId": "brook-trout",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "Virginia DWR classifies Little Passage Creek as a Class III wild trout stream with a documented brook trout population.",
+          "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        },
         {
           "speciesId": "creek-chub",
           "evidenceType": "modeled",
@@ -54476,9 +54594,20 @@
         "reviewStatus": "separate-access-review-required",
         "decision": null
       },
-      "evidenceQueue": "direct-agency-candidate-found",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
       "priorAgentClaims": [
+        {
+          "speciesId": "brook-trout",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "Virginia DWR classifies Mill Run as a Class II wild trout stream with a documented brook trout population.",
+          "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        },
         {
           "speciesId": "creek-chub",
           "evidenceType": "modeled",
@@ -54575,9 +54704,20 @@
         "reviewStatus": "separate-access-review-required",
         "decision": null
       },
-      "evidenceQueue": "direct-agency-candidate-found",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
       "priorAgentClaims": [
+        {
+          "speciesId": "rainbow-trout",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "Virginia DWR classifies Mine Run as a Class III wild trout stream with a documented rainbow trout population.",
+          "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        },
         {
           "speciesId": "creek-chub",
           "evidenceType": "modeled",
@@ -56779,62 +56919,18 @@
         "reviewStatus": "separate-access-review-required",
         "decision": null
       },
-      "evidenceQueue": "direct-agency-candidate-found",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
       "priorAgentClaims": [
         {
-          "speciesId": "smallmouth-bass",
-          "evidenceType": "modeled",
-          "modeled": true,
-          "summary": "Likely present — smallmouth bass is documented 4.9 mi downstream in the connected Bentonville.",
-          "lastEvidence": "Likely-present model (USGS NLDI river network + USGS Aquatic GAP)",
+          "speciesId": "brook-trout",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "Virginia DWR classifies Overall Run as a Class II wild trout stream with a documented brook trout population.",
+          "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
           "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-south-fork/",
-          "reviewStatus": "modeled-do-not-promote",
-          "review": null
-        },
-        {
-          "speciesId": "blacknose-dace",
-          "evidenceType": "modeled",
-          "modeled": true,
-          "summary": "Recorded at 1 surveyed reach in this subwatershed (USGS Aquatic GAP).",
-          "lastEvidence": "Likely-present model (USGS NLDI river network + USGS Aquatic GAP)",
-          "sourceName": "USGS Aquatic GAP presence/absence database",
-          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R",
-          "reviewStatus": "modeled-do-not-promote",
-          "review": null
-        },
-        {
-          "speciesId": "creek-chub",
-          "evidenceType": "modeled",
-          "modeled": true,
-          "summary": "Recorded at 1 surveyed reach in this subwatershed (USGS Aquatic GAP).",
-          "lastEvidence": "Likely-present model (USGS NLDI river network + USGS Aquatic GAP)",
-          "sourceName": "USGS Aquatic GAP presence/absence database",
-          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R",
-          "reviewStatus": "modeled-do-not-promote",
-          "review": null
-        },
-        {
-          "speciesId": "longnose-dace",
-          "evidenceType": "modeled",
-          "modeled": true,
-          "summary": "Recorded at 1 surveyed reach in this subwatershed (USGS Aquatic GAP).",
-          "lastEvidence": "Likely-present model (USGS NLDI river network + USGS Aquatic GAP)",
-          "sourceName": "USGS Aquatic GAP presence/absence database",
-          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R",
-          "reviewStatus": "modeled-do-not-promote",
-          "review": null
-        },
-        {
-          "speciesId": "white-sucker",
-          "evidenceType": "modeled",
-          "modeled": true,
-          "summary": "Recorded at 1 surveyed reach in this subwatershed (USGS Aquatic GAP).",
-          "lastEvidence": "Likely-present model (USGS NLDI river network + USGS Aquatic GAP)",
-          "sourceName": "USGS Aquatic GAP presence/absence database",
-          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R",
-          "reviewStatus": "modeled-do-not-promote",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0",
+          "reviewStatus": "corroborated-by-approved-agency-record",
           "review": null
         }
       ],
@@ -57114,9 +57210,32 @@
         "reviewStatus": "separate-access-review-required",
         "decision": null
       },
-      "evidenceQueue": "direct-agency-candidate-found",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
-      "priorAgentClaims": [],
+      "priorAgentClaims": [
+        {
+          "speciesId": "brook-trout",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "Virginia DWR classifies Pass Run as a Class II wild trout stream with a documented brook trout population.",
+          "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        },
+        {
+          "speciesId": "rainbow-trout",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "Virginia DWR classifies Pass Run as a Class II wild trout stream with a documented rainbow trout population.",
+          "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        }
+      ],
       "agencyObservationCandidates": [
         {
           "speciesId": "brook-trout",
@@ -58442,9 +58561,21 @@
         "reviewStatus": "separate-access-review-required",
         "decision": null
       },
-      "evidenceQueue": "direct-agency-candidate-found",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
-      "priorAgentClaims": [],
+      "priorAgentClaims": [
+        {
+          "speciesId": "brook-trout",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "Virginia DWR classifies Piney River as a Class II wild trout stream with a documented brook trout population.",
+          "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        }
+      ],
       "agencyObservationCandidates": [
         {
           "speciesId": "brook-trout",
@@ -60692,9 +60823,21 @@
         "reviewStatus": "separate-access-review-required",
         "decision": null
       },
-      "evidenceQueue": "direct-agency-candidate-found",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
-      "priorAgentClaims": [],
+      "priorAgentClaims": [
+        {
+          "speciesId": "brook-trout",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "Virginia DWR classifies Ragged Run as a Class II wild trout stream with a documented brook trout population.",
+          "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        }
+      ],
       "agencyObservationCandidates": [
         {
           "speciesId": "brook-trout",
@@ -60913,9 +61056,21 @@
         "reviewStatus": "separate-access-review-required",
         "decision": null
       },
-      "evidenceQueue": "direct-agency-candidate-found",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
-      "priorAgentClaims": [],
+      "priorAgentClaims": [
+        {
+          "speciesId": "brook-trout",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "Virginia DWR classifies Rapidan River as a Class I wild trout stream with a documented brook trout population.",
+          "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        }
+      ],
       "agencyObservationCandidates": [
         {
           "speciesId": "brook-trout",
@@ -62092,9 +62247,21 @@
         "reviewStatus": "separate-access-review-required",
         "decision": null
       },
-      "evidenceQueue": "direct-agency-candidate-found",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
-      "priorAgentClaims": [],
+      "priorAgentClaims": [
+        {
+          "speciesId": "brook-trout",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "Virginia DWR classifies Rush River as a Class IV wild trout stream with a documented brook trout population.",
+          "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        }
+      ],
       "agencyObservationCandidates": [
         {
           "speciesId": "brook-trout",
@@ -62307,18 +62474,18 @@
         "reviewStatus": "separate-access-review-required",
         "decision": null
       },
-      "evidenceQueue": "direct-agency-candidate-found",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
       "priorAgentClaims": [
         {
-          "speciesId": "smallmouth-bass",
-          "evidenceType": "modeled",
-          "modeled": true,
-          "summary": "Likely present — smallmouth bass is documented 2.2 mi downstream in the connected Hazel River.",
-          "lastEvidence": "Likely-present model (USGS NLDI river network + USGS Aquatic GAP)",
+          "speciesId": "brook-trout",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "Virginia DWR classifies Sams Run as a Class II wild trout stream with a documented brook trout population.",
+          "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
           "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/",
-          "reviewStatus": "modeled-do-not-promote",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0",
+          "reviewStatus": "corroborated-by-approved-agency-record",
           "review": null
         }
       ],
@@ -66525,9 +66692,21 @@
         "reviewStatus": "separate-access-review-required",
         "decision": null
       },
-      "evidenceQueue": "direct-agency-candidate-found",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
-      "priorAgentClaims": [],
+      "priorAgentClaims": [
+        {
+          "speciesId": "brook-trout",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "Virginia DWR classifies Staunton River as a Class I wild trout stream with a documented brook trout population.",
+          "lastEvidence": "DWR Wild Trout Streams (VAFWIS) reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        }
+      ],
       "agencyObservationCandidates": [
         {
           "speciesId": "brook-trout",

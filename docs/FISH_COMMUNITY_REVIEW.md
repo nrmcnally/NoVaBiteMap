@@ -3,13 +3,13 @@
 Generated 2026-07-15. This is a review queue, not runtime evidence.
 
 - 196 total catalog locations retained for adversarial review
-- 132 locations currently rely only on modeled/nearby evidence
-- 79 guess-reliant locations now have exact-named-water agency target-fish candidates
+- 112 locations currently rely only on modeled/nearby evidence
+- 59 guess-reliant locations now have exact-named-water agency target-fish candidates
 - 10 have exact-water agency records only for community fish without a reviewed target profile
 - 42 have no exact-water primary-source candidate and still require another source
 
 - 60 exact-water claims across 39 locations have passed the first adversarial source review
-- 245 prior-agent claims already present in runtime are now independently verified or corroborated
+- 267 prior-agent claims already present in runtime are now independently verified or corroborated
 - 105 unsupported prior-agent claims have been removed or rejected
 - 0 live direct claims still need adversarial re-verification
 - 0 live direct claims are missing a source URL

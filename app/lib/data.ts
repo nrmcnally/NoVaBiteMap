@@ -2,7 +2,7 @@ import { coverageLocations } from "./coverage-data";
 import { advisoryForLocation, vdhAdvisoryIndexUrl, type ConsumptionAdvisory } from "./advisories";
 import { hydrologyForLocation, type HydrologyAssociation } from "./hydrology";
 import { aquaticGapEvidenceForLocation, troutLocations } from "./public-evidence";
-import { dwrAccessLocations, likelyPresentFor, nhdParkWaterLocations, nhdStreamLocations, waterbodySpeciesFor } from "./expanded-coverage";
+import { dwrAccessLocations, likelyPresentFor, nhdParkWaterLocations, nhdStreamLocations, promotedEvidenceFor, waterbodySpeciesFor } from "./expanded-coverage";
 import evidenceRejections from "./generated/evidence-rejections.json";
 
 export type AccessMethod = "shore" | "wade" | "kayak" | "boat";
@@ -668,11 +668,15 @@ const advisoryEvidenceForLocation = (location: FishingLocationSeed): SpeciesEvid
 export const locations: FishingLocation[] = sourcedLocations.map((location) => {
   const has = (list: SpeciesEvidence[], speciesId: string) => list.some((item) => item.speciesId === speciesId);
   const curatedEvidence = location.evidence.filter((candidate) => evidenceAllowed(location.id, candidate));
+  // Approved agency candidates promoted from the review pipeline (e.g. DWR wild
+  // trout reaches). Adversarially approved in fish-community-verdicts.json.
+  const promotedEvidence = promotedEvidenceFor(location.id)
+    .filter((candidate) => !has(curatedEvidence, candidate.speciesId));
   // Documented-waterbody agency listings layer under curated evidence.
   const waterbodyEvidence = waterbodySpeciesFor(location)
     .filter((candidate) => evidenceAllowed(location.id, candidate))
-    .filter((candidate) => !has(curatedEvidence, candidate.speciesId));
-  const withWaterbody = [...curatedEvidence, ...waterbodyEvidence];
+    .filter((candidate) => !has(curatedEvidence, candidate.speciesId) && !has(promotedEvidence, candidate.speciesId));
+  const withWaterbody = [...curatedEvidence, ...promotedEvidence, ...waterbodyEvidence];
   // A current VDH species-specific restriction supports occurrence in its
   // precisely mapped waterbody segment. Generic groups (for example "sunfish")
   // and "all species" rules are deliberately excluded from presence evidence.

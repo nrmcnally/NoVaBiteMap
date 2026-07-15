@@ -3,6 +3,7 @@ import nhdWatersPayload from "./generated/nhd-waters-nova.json";
 import nhdStreamsPayload from "./generated/nhd-streams-nova.json";
 import waterbodySpeciesPayload from "./generated/waterbody-species-nova.json";
 import likelyPresentPayload from "./generated/likely-present-nova.json";
+import promotedEvidencePayload from "./generated/promoted-evidence-nova.json";
 import type { AccessMethod, FishingLocationSeed, SpeciesEvidence, WaterbodyType } from "./data";
 
 type DwrAccessSite = {
@@ -385,6 +386,19 @@ export function likelyPresentFor(location: Pick<FishingLocationSeed, "id">): Spe
     }
   }
   return [...bySpecies.values()];
+}
+
+// ---------------------------------------------------------------------------
+// Promoted agency evidence — approved candidates from the fish-community review
+// pipeline (e.g. DWR Wild Trout Streams reaches), emitted by
+// scripts/build-promoted-evidence.mjs only for objectIds the verdict file has
+// approved. Real documented evidence: gives the region's native brook-trout
+// tributaries a cited fishery. The review --check treats these as corroborated.
+// ---------------------------------------------------------------------------
+const promotedByLocation = (promotedEvidencePayload as { byLocation: Record<string, SpeciesEvidence[]> }).byLocation;
+
+export function promotedEvidenceFor(locationId: string): SpeciesEvidence[] {
+  return (promotedByLocation[locationId] ?? []) as SpeciesEvidence[];
 }
 
 export const expandedCoverageStats = {
