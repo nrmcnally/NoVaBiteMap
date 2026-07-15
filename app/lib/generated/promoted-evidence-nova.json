@@ -5,7 +5,7 @@
     "wildTroutReachesApproved": 20,
     "wildTroutClaims": 22,
     "manualClaims": 3,
-    "vafwisClaims": 734,
+    "vafwisClaims": 860,
     "locations": 88
   },
   "byLocation": {
@@ -6477,6 +6477,46 @@
     ],
     "nhd-stream-brokenback-run": [
       {
+        "speciesId": "american-eel",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document american eel in Brokenback Run - 16 records (professional biologists, could include pesonnel from several organizations including DGIF), 1987-07-10-2010-07-28.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-07-28",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "16 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "blacknose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document blacknose dace in Brokenback Run - 22 records (professional biologists, could include pesonnel from several organizations including DGIF), 1987-07-10-2010-07-28.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-07-28",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "22 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
         "speciesId": "brook-trout",
         "availability": 0.74,
         "quality": null,
@@ -6495,6 +6535,26 @@
         ],
         "sourceName": "Virginia Department of Wildlife Resources",
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      },
+      {
+        "speciesId": "brown-trout",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document brown trout in Brokenback Run - 3 records (professional biologists, could include pesonnel from several organizations including DGIF), 1989-07-27-2006-08-03.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2006-08-03",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "3 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
       }
     ],
     "nhd-stream-bullneck-run": [
@@ -7185,6 +7245,26 @@
     ],
     "nhd-stream-cedar-run": [
       {
+        "speciesId": "blacknose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document blacknose dace in Cedar Run - 18 records (professional biologists, could include pesonnel from several organizations including DGIF), 1987-07-22-2008-07-09.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2008-07-09",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "18 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
         "speciesId": "brook-trout",
         "availability": 0.74,
         "quality": null,
@@ -7203,6 +7283,26 @@
         ],
         "sourceName": "Virginia Department of Wildlife Resources",
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      },
+      {
+        "speciesId": "longnose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document longnose dace in Cedar Run - 1 record (professional biologists, could include pesonnel from several organizations including DGIF), 1987-07-22.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 1987-07-22",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "1 DWR VAFWIS collection record - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
       }
     ],
     "nhd-stream-colvin-run": [
@@ -9389,6 +9489,26 @@
     ],
     "nhd-stream-gooney-run": [
       {
+        "speciesId": "blacknose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document blacknose dace in Gooney Run - 1 record (professional biologists, could include pesonnel from several organizations including DGIF), 2005-04-21.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2005-04-21",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "1 DWR VAFWIS collection record - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
         "speciesId": "brook-trout",
         "availability": 0.66,
         "quality": null,
@@ -9453,6 +9573,46 @@
     ],
     "nhd-stream-hannah-run": [
       {
+        "speciesId": "american-eel",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document american eel in Hannah Run - 12 records (professional biologists, could include pesonnel from several organizations including DGIF), 1987-08-11-2010-07-06.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-07-06",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "12 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "blacknose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document blacknose dace in Hannah Run - 23 records (professional biologists, could include pesonnel from several organizations including DGIF), 1987-08-11-2010-07-06.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-07-06",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "23 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
         "speciesId": "brook-trout",
         "availability": 0.66,
         "quality": null,
@@ -9471,6 +9631,26 @@
         ],
         "sourceName": "Virginia Department of Wildlife Resources",
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      },
+      {
+        "speciesId": "longnose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document longnose dace in Hannah Run - 1 record (professional biologists, could include pesonnel from several organizations including DGIF), 1987-08-11.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 1987-08-11",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "1 DWR VAFWIS collection record - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
       }
     ],
     "nhd-stream-happy-creek": [
@@ -9839,6 +10019,46 @@
     ],
     "nhd-stream-hughes-river": [
       {
+        "speciesId": "american-eel",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document american eel in Hughes River - 55 records (professional biologists, could include pesonnel from several organizations including DGIF), 1987-08-12-2010-07-07.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-07-07",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "55 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "blacknose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document blacknose dace in Hughes River - 122 records (DGIF collection or salvage permit holder), 1987-08-12-2010-07-07.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-07-07",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "122 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
         "speciesId": "brook-trout",
         "availability": 0.74,
         "quality": null,
@@ -9877,6 +10097,186 @@
         ],
         "sourceName": "Virginia Department of Wildlife Resources",
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      },
+      {
+        "speciesId": "creek-chub",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document creek chub in Hughes River - 3 records (professional biologists, could include pesonnel from several organizations including DGIF), 1989-08-01-1996-07-30.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 1996-07-30",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "3 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "fallfish",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document fallfish in Hughes River - 3 records (DGIF collection or salvage permit holder), 2004-09-13-2010-07-07.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-07-07",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "3 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "longnose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document longnose dace in Hughes River - 115 records (DGIF collection or salvage permit holder), 1987-08-12-2010-07-07.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-07-07",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "115 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "mottled-sculpin",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document mottled sculpin in Hughes River - 39 records (DGIF collection or salvage permit holder), 1989-08-01-2010-07-07.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-07-07",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "39 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "rainbow-trout",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document rainbow trout in Hughes River - 2 records (professional biologists, could include pesonnel from several organizations including DGIF), 2002-07-16-2008-07-08.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2008-07-08",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "2 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "rock-bass",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document rock bass in Hughes River - 4 records (DGIF collection or salvage permit holder), 1991-08-06-2004-09-13.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2004-09-13",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "4 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "smallmouth-bass",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document smallmouth bass in Hughes River - 3 records (DGIF collection or salvage permit holder), 1991-08-06-2004-09-13.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2004-09-13",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "3 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "tessellated-darter",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document tessellated darter in Hughes River - 28 records (professional biologists, could include pesonnel from several organizations including DGIF), 1996-07-30-2010-07-07.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-07-07",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "28 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "white-sucker",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document white sucker in Hughes River - 15 records (professional biologists, could include pesonnel from several organizations including DGIF), 1987-08-12-2008-07-08.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2008-07-08",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "15 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
       }
     ],
     "nhd-stream-hungry-run": [
@@ -10265,6 +10665,26 @@
     ],
     "nhd-stream-jeremys-run": [
       {
+        "speciesId": "blacknose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document blacknose dace in Jeremys Run - 136 records (professional biologists, could include pesonnel from several organizations including DGIF), 1986-06-30-2010-07-29.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-07-29",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "136 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
         "speciesId": "brook-trout",
         "availability": 0.66,
         "quality": null,
@@ -10283,9 +10703,129 @@
         ],
         "sourceName": "Virginia Department of Wildlife Resources",
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      },
+      {
+        "speciesId": "creek-chub",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document creek chub in Jeremys Run - 1 record (professional biologists, could include pesonnel from several organizations including DGIF), 1986-06-30.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 1986-06-30",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "1 DWR VAFWIS collection record - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "longnose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document longnose dace in Jeremys Run - 41 records (professional biologists, could include pesonnel from several organizations including DGIF), 1988-06-13-2010-07-27.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-07-27",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "41 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "mottled-sculpin",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document mottled sculpin in Jeremys Run - 124 records (professional biologists, could include pesonnel from several organizations including DGIF), 1988-06-13-2010-07-29.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-07-29",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "124 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
       }
     ],
     "nhd-stream-jordan-river": [
+      {
+        "speciesId": "american-eel",
+        "availability": 0.54,
+        "quality": null,
+        "evidenceConfidence": 0.74,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document american eel in Jordan River - 1 record (DGIF collection or salvage permit holder), 2017-10-04.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2017-10-04",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "1 DWR VAFWIS collection record - exact water + exact taxon",
+          "Observation aging (5-10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "blacknose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document blacknose dace in Jordan River - 2 records (DGIF collection or salvage permit holder), 2000-07-17-2004-09-27.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2004-09-27",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "2 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "bluegill",
+        "availability": 0.54,
+        "quality": null,
+        "evidenceConfidence": 0.74,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document bluegill in Jordan River - 2 records (DGIF collection or salvage permit holder), 2000-07-17-2017-10-04.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2017-10-04",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "2 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation aging (5-10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
       {
         "speciesId": "brook-trout",
         "availability": 0.66,
@@ -10305,6 +10845,266 @@
         ],
         "sourceName": "Virginia Department of Wildlife Resources",
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      },
+      {
+        "speciesId": "creek-chub",
+        "availability": 0.54,
+        "quality": null,
+        "evidenceConfidence": 0.74,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document creek chub in Jordan River - 3 records (DGIF collection or salvage permit holder), 2000-07-17-2017-10-04.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2017-10-04",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "3 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation aging (5-10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "fallfish",
+        "availability": 0.54,
+        "quality": null,
+        "evidenceConfidence": 0.74,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document fallfish in Jordan River - 3 records (DGIF collection or salvage permit holder), 2000-07-17-2017-10-04.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2017-10-04",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "3 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation aging (5-10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "green-sunfish",
+        "availability": 0.54,
+        "quality": null,
+        "evidenceConfidence": 0.74,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document green sunfish in Jordan River - 2 records (DGIF collection or salvage permit holder), 2000-07-17-2017-10-04.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2017-10-04",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "2 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation aging (5-10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.54,
+        "quality": null,
+        "evidenceConfidence": 0.74,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document largemouth bass in Jordan River - 2 records (DGIF collection or salvage permit holder), 2017-10-04.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2017-10-04",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "2 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation aging (5-10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "longnose-dace",
+        "availability": 0.54,
+        "quality": null,
+        "evidenceConfidence": 0.74,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document longnose dace in Jordan River - 2 records (DGIF collection or salvage permit holder), 2017-10-04.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2017-10-04",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "2 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation aging (5-10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "mottled-sculpin",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document mottled sculpin in Jordan River - 1 record (DGIF collection or salvage permit holder), 2000-07-17.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2000-07-17",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "1 DWR VAFWIS collection record - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "pumpkinseed",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document pumpkinseed in Jordan River - 1 record (DGIF collection or salvage permit holder), 2000-07-17.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2000-07-17",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "1 DWR VAFWIS collection record - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "redbreast-sunfish",
+        "availability": 0.54,
+        "quality": null,
+        "evidenceConfidence": 0.74,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document redbreast sunfish in Jordan River - 2 records (DGIF collection or salvage permit holder), 2017-10-04.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2017-10-04",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "2 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation aging (5-10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "rock-bass",
+        "availability": 0.54,
+        "quality": null,
+        "evidenceConfidence": 0.74,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document rock bass in Jordan River - 2 records (DGIF collection or salvage permit holder), 2000-07-17-2017-10-04.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2017-10-04",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "2 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation aging (5-10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "smallmouth-bass",
+        "availability": 0.54,
+        "quality": null,
+        "evidenceConfidence": 0.74,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document smallmouth bass in Jordan River - 2 records (DGIF collection or salvage permit holder), 2017-10-04.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2017-10-04",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "2 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation aging (5-10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "tessellated-darter",
+        "availability": 0.54,
+        "quality": null,
+        "evidenceConfidence": 0.74,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document tessellated darter in Jordan River - 3 records (DGIF collection or salvage permit holder), 2000-07-17-2017-10-04.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2017-10-04",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "3 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation aging (5-10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "white-sucker",
+        "availability": 0.54,
+        "quality": null,
+        "evidenceConfidence": 0.74,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document white sucker in Jordan River - 2 records (DGIF collection or salvage permit holder), 2000-07-17-2017-10-04.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2017-10-04",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "2 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation aging (5-10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "yellow-bullhead",
+        "availability": 0.54,
+        "quality": null,
+        "evidenceConfidence": 0.74,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document yellow bullhead in Jordan River - 1 record (DGIF collection or salvage permit holder), 2017-10-04.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2017-10-04",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "1 DWR VAFWIS collection record - exact water + exact taxon",
+          "Observation aging (5-10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
       }
     ],
     "nhd-stream-kanes-creek": [
@@ -10593,6 +11393,46 @@
     ],
     "nhd-stream-lands-run": [
       {
+        "speciesId": "american-eel",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document american eel in Lands Run - 1 record (professional biologists, could include pesonnel from several organizations including DGIF), 1995-08-16.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 1995-08-16",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "1 DWR VAFWIS collection record - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "blacknose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document blacknose dace in Lands Run - 32 records (professional biologists, could include pesonnel from several organizations including DGIF), 1986-06-19-2008-07-29.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2008-07-29",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "32 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
         "speciesId": "brook-trout",
         "availability": 0.66,
         "quality": null,
@@ -10611,6 +11451,66 @@
         ],
         "sourceName": "Virginia Department of Wildlife Resources",
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      },
+      {
+        "speciesId": "creek-chub",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document creek chub in Lands Run - 5 records (professional biologists, could include pesonnel from several organizations including DGIF), 1986-06-19-1991-08-19.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 1991-08-19",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "5 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "longnose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document longnose dace in Lands Run - 2 records (professional biologists, could include pesonnel from several organizations including DGIF), 1989-08-22-1992-07-21.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 1992-07-21",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "2 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "white-sucker",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document white sucker in Lands Run - 1 record (professional biologists, could include pesonnel from several organizations including DGIF), 1986-06-19.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 1986-06-19",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "1 DWR VAFWIS collection record - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
       }
     ],
     "nhd-stream-licking-run": [
@@ -11707,9 +12607,49 @@
         ],
         "sourceName": "Virginia Department of Wildlife Resources",
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      },
+      {
+        "speciesId": "creek-chub",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document creek chub in Mill Run - 1 record (professional biologists, could include pesonnel from several organizations including DGIF), 1993-05-25.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 1993-05-25",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "1 DWR VAFWIS collection record - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
       }
     ],
     "nhd-stream-mine-run": [
+      {
+        "speciesId": "blacknose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document blacknose dace in Mine Run - 1 record (professional biologists, could include pesonnel from several organizations including DGIF), 2007-04-24.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2007-04-24",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "1 DWR VAFWIS collection record - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
       {
         "speciesId": "rainbow-trout",
         "availability": 0.44,
@@ -12117,6 +13057,46 @@
     ],
     "nhd-stream-north-fork-thornton-river": [
       {
+        "speciesId": "american-eel",
+        "availability": 0.54,
+        "quality": null,
+        "evidenceConfidence": 0.74,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document american eel in North Fork Thornton River - 1 record (DGIF collection or salvage permit holder), 2016-07-26.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2016-07-26",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "1 DWR VAFWIS collection record - exact water + exact taxon",
+          "Observation aging (5-10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "blacknose-dace",
+        "availability": 0.54,
+        "quality": null,
+        "evidenceConfidence": 0.74,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document blacknose dace in North Fork Thornton River - 2 records (DGIF collection or salvage permit holder), 2016-07-26.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2016-07-26",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "2 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation aging (5-10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
         "speciesId": "brook-trout",
         "availability": 0.6,
         "quality": null,
@@ -12134,6 +13114,66 @@
         ],
         "sourceName": "Virginia Department of Wildlife Resources - North Fork Thornton River",
         "sourceUrl": "https://dwr.virginia.gov/waterbody/north-fork-thorton-river/"
+      },
+      {
+        "speciesId": "longnose-dace",
+        "availability": 0.54,
+        "quality": null,
+        "evidenceConfidence": 0.74,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document longnose dace in North Fork Thornton River - 2 records (DGIF collection or salvage permit holder), 2016-07-26.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2016-07-26",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "2 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation aging (5-10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "mottled-sculpin",
+        "availability": 0.54,
+        "quality": null,
+        "evidenceConfidence": 0.74,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document mottled sculpin in North Fork Thornton River - 2 records (DGIF collection or salvage permit holder), 2016-07-26.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2016-07-26",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "2 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation aging (5-10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "tessellated-darter",
+        "availability": 0.54,
+        "quality": null,
+        "evidenceConfidence": 0.74,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document tessellated darter in North Fork Thornton River - 2 records (DGIF collection or salvage permit holder), 2016-07-26.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2016-07-26",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "2 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation aging (5-10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
       }
     ],
     "nhd-stream-north-wilderness-run": [
@@ -12200,6 +13240,26 @@
     ],
     "nhd-stream-overall-run": [
       {
+        "speciesId": "blacknose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document blacknose dace in Overall Run - 41 records (professional biologists, could include pesonnel from several organizations including DGIF), 1987-08-27-2010-07-12.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-07-12",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "41 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
         "speciesId": "brook-trout",
         "availability": 0.66,
         "quality": null,
@@ -12218,9 +13278,69 @@
         ],
         "sourceName": "Virginia Department of Wildlife Resources",
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      },
+      {
+        "speciesId": "creek-chub",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document creek chub in Overall Run - 11 records (professional biologists, could include pesonnel from several organizations including DGIF), 1989-08-17-2001-07-19.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2001-07-19",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "11 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "longnose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document longnose dace in Overall Run - 1 record (professional biologists, could include pesonnel from several organizations including DGIF), 1987-08-27.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 1987-08-27",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "1 DWR VAFWIS collection record - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
       }
     ],
     "nhd-stream-pass-run": [
+      {
+        "speciesId": "blacknose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document blacknose dace in Pass Run - 51 records (professional biologists, could include pesonnel from several organizations including DGIF), 1986-07-09-2010-06-02.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-06-02",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "51 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
       {
         "speciesId": "brook-trout",
         "availability": 0.66,
@@ -12242,6 +13362,106 @@
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
       },
       {
+        "speciesId": "creek-chub",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document creek chub in Pass Run - 22 records (professional biologists, could include pesonnel from several organizations including DGIF), 1988-06-20-2010-06-02.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-06-02",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "22 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document largemouth bass in Pass Run - 2 records (professional biologists, could include pesonnel from several organizations including DGIF), 1994-07-27.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 1994-07-27",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "2 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "longnose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document longnose dace in Pass Run - 39 records (professional biologists, could include pesonnel from several organizations including DGIF), 1990-08-13-2010-06-02.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-06-02",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "39 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "mottled-sculpin",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document mottled sculpin in Pass Run - 49 records (professional biologists, could include pesonnel from several organizations including DGIF), 1988-06-20-2010-06-02.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-06-02",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "49 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "northern-hogsucker",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document northern hogsucker in Pass Run - 5 records (professional biologists, could include pesonnel from several organizations including DGIF), 1988-06-20-1994-07-26.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 1994-07-26",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "5 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
         "speciesId": "rainbow-trout",
         "availability": 0.52,
         "quality": null,
@@ -12260,6 +13480,26 @@
         ],
         "sourceName": "Virginia Department of Wildlife Resources",
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      },
+      {
+        "speciesId": "white-sucker",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document white sucker in Pass Run - 17 records (professional biologists, could include pesonnel from several organizations including DGIF), 1986-07-09-2010-06-02.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-06-02",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "17 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
       }
     ],
     "nhd-stream-peyton-run": [
@@ -12488,6 +13728,46 @@
     ],
     "nhd-stream-piney-river": [
       {
+        "speciesId": "american-eel",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document american eel in Piney River - 45 records (DGIF collection or salvage permit holder), 1987-08-21-2016-06-27.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2016-06-27",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "45 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "blacknose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document blacknose dace in Piney River - 85 records (DGIF collection or salvage permit holder), 1987-08-21-2016-06-27.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2016-06-27",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "85 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
         "speciesId": "brook-trout",
         "availability": 0.66,
         "quality": null,
@@ -12506,6 +13786,126 @@
         ],
         "sourceName": "Virginia Department of Wildlife Resources",
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      },
+      {
+        "speciesId": "creek-chub",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document creek chub in Piney River - 9 records (professional biologists, could include pesonnel from several organizations including DGIF), 1987-08-21-2001-06-28.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2001-06-28",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "9 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "longnose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document longnose dace in Piney River - 81 records (DGIF collection or salvage permit holder), 1987-08-18-2016-06-27.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2016-06-27",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "81 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "mottled-sculpin",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document mottled sculpin in Piney River - 81 records (DGIF collection or salvage permit holder), 1989-08-15-2016-06-27.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2016-06-27",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "81 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "pumpkinseed",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document pumpkinseed in Piney River - 1 record (professional biologists, could include pesonnel from several organizations including DGIF), 1998-07-28.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 1998-07-28",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "1 DWR VAFWIS collection record - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "tessellated-darter",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document tessellated darter in Piney River - 3 records (DGIF collection or salvage permit holder), 2004-08-19-2016-06-27.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2016-06-27",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "3 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "white-sucker",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document white sucker in Piney River - 3 records (DGIF collection or salvage permit holder), 1989-08-15-2004-08-19.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2004-08-19",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "3 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
       }
     ],
     "nhd-stream-popes-head-creek": [
@@ -12934,6 +14334,26 @@
     ],
     "nhd-stream-ragged-run": [
       {
+        "speciesId": "blacknose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document blacknose dace in Ragged Run - 16 records (DGIF collection or salvage permit holder), 1987-07-09-2010-07-19.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-07-19",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "16 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
         "speciesId": "brook-trout",
         "availability": 0.66,
         "quality": null,
@@ -12952,9 +14372,69 @@
         ],
         "sourceName": "Virginia Department of Wildlife Resources",
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      },
+      {
+        "speciesId": "redbreast-sunfish",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document redbreast sunfish in Ragged Run - 1 record (professional biologists, could include pesonnel from several organizations including DGIF), 1993-05-27.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 1993-05-27",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "1 DWR VAFWIS collection record - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
       }
     ],
     "nhd-stream-rapidan-river": [
+      {
+        "speciesId": "american-eel",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document american eel in Rapidan River - 80 records (DGIF collection or salvage permit holder), 1987-07-27-2010-06-30.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-06-30",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "80 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "blacknose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document blacknose dace in Rapidan River - 172 records (DGIF collection or salvage permit holder), 1987-07-27-2010-06-30.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-06-30",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "172 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
       {
         "speciesId": "brook-trout",
         "availability": 0.74,
@@ -12974,9 +14454,289 @@
         ],
         "sourceName": "Virginia Department of Wildlife Resources",
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      },
+      {
+        "speciesId": "brown-bullhead",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document brown bullhead in Rapidan River - 1 record (professional biologists, could include pesonnel from several organizations including DGIF), 2006-07-10.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2006-07-10",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "1 DWR VAFWIS collection record - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "creek-chub",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document creek chub in Rapidan River - 8 records (professional biologists, could include pesonnel from several organizations including DGIF), 1987-08-07-2003-07-08.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2003-07-08",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "8 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "fallfish",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document fallfish in Rapidan River - 38 records (DGIF collection or salvage permit holder), 1996-07-08-2010-06-30.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-06-30",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "38 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "green-sunfish",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document green sunfish in Rapidan River - 2 records (DGIF collection or salvage permit holder), 2000-08-17.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2000-08-17",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "2 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "longnose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document longnose dace in Rapidan River - 149 records (DGIF collection or salvage permit holder), 1987-07-31-2010-06-30.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-06-30",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "149 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "mottled-sculpin",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document mottled sculpin in Rapidan River - 55 records (DGIF collection or salvage permit holder), 1989-08-01-2010-06-30.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-06-30",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "55 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "northern-hogsucker",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document northern hogsucker in Rapidan River - 1 record (DGIF collection or salvage permit holder), 2000-08-17.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2000-08-17",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "1 DWR VAFWIS collection record - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "pumpkinseed",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document pumpkinseed in Rapidan River - 1 record (professional biologists, could include pesonnel from several organizations including DGIF), 1998-07-06.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 1998-07-06",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "1 DWR VAFWIS collection record - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "redbreast-sunfish",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document redbreast sunfish in Rapidan River - 3 records (DGIF collection or salvage permit holder), 2000-08-17-2004-09-24.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2004-09-24",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "3 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "rock-bass",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document rock bass in Rapidan River - 1 record (professional biologists, could include pesonnel from several organizations including DGIF), 1989-08-01.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 1989-08-01",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "1 DWR VAFWIS collection record - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "smallmouth-bass",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document smallmouth bass in Rapidan River - 11 records (DGIF collection or salvage permit holder), 1987-08-07-2004-07-06.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2004-07-06",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "11 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "tessellated-darter",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document tessellated darter in Rapidan River - 41 records (DGIF collection or salvage permit holder), 1993-07-15-2010-06-30.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-06-30",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "41 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "white-sucker",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document white sucker in Rapidan River - 13 records (DGIF collection or salvage permit holder), 1987-07-27-2003-07-08.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2003-07-08",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "13 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
       }
     ],
     "nhd-stream-rush-river": [
+      {
+        "speciesId": "blacknose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document blacknose dace in Rush River - 4 records (professional biologists, could include pesonnel from several organizations including DGIF), 2006-05-24-2009-08-31.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2009-08-31",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "4 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
       {
         "speciesId": "brook-trout",
         "availability": 0.66,
@@ -12996,6 +14756,26 @@
         ],
         "sourceName": "Virginia Department of Wildlife Resources",
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      },
+      {
+        "speciesId": "mottled-sculpin",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document mottled sculpin in Rush River - 4 records (professional biologists, could include pesonnel from several organizations including DGIF), 2006-05-24-2009-08-31.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2009-08-31",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "4 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
       }
     ],
     "nhd-stream-sams-run": [
@@ -13708,6 +15488,46 @@
     ],
     "nhd-stream-south-fork-quantico-creek": [
       {
+        "speciesId": "american-eel",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document american eel in South Fork Quantico Creek - 13 records (DGIF collection or salvage permit holder), 1998-07-01-2014-06-08.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2014-06-08",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "13 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "blacknose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document blacknose dace in South Fork Quantico Creek - 14 records (DGIF collection or salvage permit holder), 1998-07-01-2014-06-08.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2014-06-08",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "14 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
         "speciesId": "bluegill",
         "availability": 0.6,
         "quality": null,
@@ -13727,6 +15547,126 @@
         "sourceUrl": "https://www.nps.gov/articles/000/prwi-stream-biota-monitoring-2021.htm"
       },
       {
+        "speciesId": "brown-bullhead",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document brown bullhead in South Fork Quantico Creek - 2 records (DGIF collection or salvage permit holder), 1999-07-22-2008-08-22.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2008-08-22",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "2 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "creek-chub",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document creek chub in South Fork Quantico Creek - 11 records (DGIF collection or salvage permit holder), 1998-07-01-2011-09-16.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2011-09-16",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "11 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "fallfish",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document fallfish in South Fork Quantico Creek - 14 records (DGIF collection or salvage permit holder), 1998-07-01-2014-06-08.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2014-06-08",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "14 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "green-sunfish",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document green sunfish in South Fork Quantico Creek - 13 records (DGIF collection or salvage permit holder), 1998-07-01-2014-06-08.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2014-06-08",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "13 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document largemouth bass in South Fork Quantico Creek - 8 records (DGIF collection or salvage permit holder), 1999-07-08-2011-09-16.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2011-09-16",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "8 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "pumpkinseed",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document pumpkinseed in South Fork Quantico Creek - 5 records (DGIF collection or salvage permit holder), 1998-07-01-2011-09-16.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2011-09-16",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "5 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
         "speciesId": "redbreast-sunfish",
         "availability": 0.6,
         "quality": null,
@@ -13744,6 +15684,86 @@
         ],
         "sourceName": "National Park Service - Stream Life at Prince William Forest Park",
         "sourceUrl": "https://www.nps.gov/articles/000/prwi-stream-biota-monitoring-2021.htm"
+      },
+      {
+        "speciesId": "smallmouth-bass",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document smallmouth bass in South Fork Quantico Creek - 1 record (professional biologists, could include pesonnel from several organizations including DGIF), 1999-10-26.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 1999-10-26",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "1 DWR VAFWIS collection record - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "tessellated-darter",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document tessellated darter in South Fork Quantico Creek - 12 records (DGIF collection or salvage permit holder), 1998-07-01-2014-06-08.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2014-06-08",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "12 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "white-sucker",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document white sucker in South Fork Quantico Creek - 13 records (DGIF collection or salvage permit holder), 1998-07-01-2014-06-08.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2014-06-08",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "13 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "yellow-bullhead",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document yellow bullhead in South Fork Quantico Creek - 1 record (DGIF collection or salvage permit holder), 2008-08-22.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2008-08-22",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "1 DWR VAFWIS collection record - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
       }
     ],
     "nhd-stream-south-run": [
@@ -14010,6 +16030,46 @@
     ],
     "nhd-stream-staunton-river": [
       {
+        "speciesId": "american-eel",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document american eel in Staunton River - 5 records (professional biologists, could include pesonnel from several organizations including DGIF), 1987-07-28-1993-07-13.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 1993-07-13",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "5 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
+        "speciesId": "blacknose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document blacknose dace in Staunton River - 51 records (professional biologists, could include pesonnel from several organizations including DGIF), 1987-07-28-2010-06-24.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 2010-06-24",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "51 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      },
+      {
         "speciesId": "brook-trout",
         "availability": 0.74,
         "quality": null,
@@ -14028,6 +16088,26 @@
         ],
         "sourceName": "Virginia Department of Wildlife Resources",
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      },
+      {
+        "speciesId": "longnose-dace",
+        "availability": 0.46,
+        "quality": null,
+        "evidenceConfidence": 0.64,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Virginia DWR VAFWIS records document longnose dace in Staunton River - 4 records (professional biologists, could include pesonnel from several organizations including DGIF), 1987-07-28-1991-07-10.",
+        "lastEvidence": "DWR VAFWIS collection records; last observed 1991-07-10",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "4 DWR VAFWIS collection records - exact water + exact taxon",
+          "Observation historical (over 10 years old)"
+        ],
+        "negative": [
+          "Documents presence as of the observation date(s), not current abundance"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
       }
     ],
     "nhd-stream-sugarland-run": [

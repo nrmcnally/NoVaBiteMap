@@ -1307,6 +1307,20 @@
     {
       "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
       "locationIds": [
+        "nhd-stream-brokenback-run"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "brook-trout",
+        "brown-trout"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
         "nhd-stream-bullneck-run"
       ],
       "approvedSpeciesIds": [
@@ -1364,6 +1378,19 @@
         "tessellated-darter",
         "white-sucker",
         "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-cedar-run"
+      ],
+      "approvedSpeciesIds": [
+        "blacknose-dace",
+        "brook-trout",
+        "longnose-dace"
       ],
       "verdict": "approved-exact-agency-observation",
       "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
@@ -1592,11 +1619,37 @@
     {
       "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
       "locationIds": [
+        "nhd-stream-gooney-run"
+      ],
+      "approvedSpeciesIds": [
+        "blacknose-dace",
+        "brook-trout"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
         "nhd-stream-greasy-run"
       ],
       "approvedSpeciesIds": [
         "blacknose-dace",
         "creek-chub"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-hannah-run"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "brook-trout",
+        "longnose-dace"
       ],
       "verdict": "approved-exact-agency-observation",
       "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
@@ -1643,6 +1696,29 @@
     {
       "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
       "locationIds": [
+        "nhd-stream-hughes-river"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "brook-trout",
+        "brown-trout",
+        "creek-chub",
+        "fallfish",
+        "longnose-dace",
+        "mottled-sculpin",
+        "rainbow-trout",
+        "rock-bass",
+        "smallmouth-bass",
+        "tessellated-darter",
+        "white-sucker"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
         "nhd-stream-hungry-run"
       ],
       "approvedSpeciesIds": [
@@ -1682,6 +1758,49 @@
     {
       "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
       "locationIds": [
+        "nhd-stream-jeremys-run"
+      ],
+      "approvedSpeciesIds": [
+        "blacknose-dace",
+        "brook-trout",
+        "creek-chub",
+        "longnose-dace",
+        "mottled-sculpin"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-jordan-river"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "blue-ridge-sculpin",
+        "bluegill",
+        "brook-trout",
+        "creek-chub",
+        "fallfish",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "mottled-sculpin",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "rock-bass",
+        "smallmouth-bass",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
         "nhd-stream-kanes-creek"
       ],
       "approvedSpeciesIds": [
@@ -1698,6 +1817,22 @@
         "tessellated-darter",
         "white-perch",
         "yellow-perch"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-lands-run"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "brook-trout",
+        "creek-chub",
+        "longnose-dace",
+        "white-sucker"
       ],
       "verdict": "approved-exact-agency-observation",
       "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
@@ -1817,6 +1952,28 @@
     {
       "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
       "locationIds": [
+        "nhd-stream-mill-run"
+      ],
+      "approvedSpeciesIds": [
+        "creek-chub"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-mine-run"
+      ],
+      "approvedSpeciesIds": [
+        "blacknose-dace"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
         "nhd-stream-nichols-run"
       ],
       "approvedSpeciesIds": [
@@ -1856,11 +2013,60 @@
     {
       "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
       "locationIds": [
+        "nhd-stream-north-fork-thornton-river"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "brook-trout",
+        "longnose-dace",
+        "mottled-sculpin",
+        "tessellated-darter"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
         "nhd-stream-north-wilderness-run"
       ],
       "approvedSpeciesIds": [
         "blacknose-dace",
         "creek-chub",
+        "white-sucker"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-overall-run"
+      ],
+      "approvedSpeciesIds": [
+        "blacknose-dace",
+        "brook-trout",
+        "creek-chub",
+        "longnose-dace"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-pass-run"
+      ],
+      "approvedSpeciesIds": [
+        "blacknose-dace",
+        "brook-trout",
+        "creek-chub",
+        "largemouth-bass",
+        "longnose-dace",
+        "mottled-sculpin",
+        "northern-hogsucker",
+        "rainbow-trout",
         "white-sucker"
       ],
       "verdict": "approved-exact-agency-observation",
@@ -1892,6 +2098,26 @@
         "fallfish",
         "longnose-dace",
         "redbreast-sunfish",
+        "white-sucker"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-piney-river"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "blue-ridge-sculpin",
+        "brook-trout",
+        "creek-chub",
+        "longnose-dace",
+        "mottled-sculpin",
+        "pumpkinseed",
+        "tessellated-darter",
         "white-sucker"
       ],
       "verdict": "approved-exact-agency-observation",
@@ -1934,6 +2160,58 @@
         "rock-bass",
         "smallmouth-bass",
         "tessellated-darter"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-ragged-run"
+      ],
+      "approvedSpeciesIds": [
+        "blacknose-dace",
+        "brook-trout",
+        "redbreast-sunfish"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-rapidan-river"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "brook-trout",
+        "brown-bullhead",
+        "creek-chub",
+        "fallfish",
+        "green-sunfish",
+        "longnose-dace",
+        "mottled-sculpin",
+        "northern-hogsucker",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "rock-bass",
+        "smallmouth-bass",
+        "tessellated-darter",
+        "white-sucker"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-rush-river"
+      ],
+      "approvedSpeciesIds": [
+        "blacknose-dace",
+        "brook-trout",
+        "mottled-sculpin"
       ],
       "verdict": "approved-exact-agency-observation",
       "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
@@ -2005,6 +2283,30 @@
     {
       "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
       "locationIds": [
+        "nhd-stream-south-fork-quantico-creek"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "bluegill",
+        "brown-bullhead",
+        "creek-chub",
+        "fallfish",
+        "green-sunfish",
+        "largemouth-bass",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "smallmouth-bass",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
         "nhd-stream-south-run"
       ],
       "approvedSpeciesIds": [
@@ -2021,6 +2323,20 @@
         "tessellated-darter",
         "white-sucker",
         "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-staunton-river"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "brook-trout",
+        "longnose-dace"
       ],
       "verdict": "approved-exact-agency-observation",
       "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."

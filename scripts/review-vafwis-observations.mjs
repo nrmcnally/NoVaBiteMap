@@ -19,8 +19,11 @@ const verdicts = JSON.parse(readFileSync(verdictsPath, 'utf8'));
 const VAFWIS_URL = 'https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0';
 
 const locations = review.locations || review;
-// Only review the guess-reliant / empty waters (those without existing direct evidence).
-const guessReliant = locations.filter((L) => !(L.priorAgentClaims || []).some((c) => !c.modeled));
+// Review EVERY water (priority: no species overlooked). Waters that already have
+// some evidence can still be missing species VAFWIS documents (e.g. a wild-trout
+// stream that also holds smallmouth + forage). Promotion dedups against existing
+// evidence, so this only ever adds missing exact-water records, never duplicates.
+const toReview = locations;
 
 const VERDICT = 'approved-exact-agency-observation';
 const existingKeys = new Set(
@@ -31,7 +34,7 @@ const existingKeys = new Set(
 
 let added = 0;
 let speciesApproved = 0;
-for (const L of guessReliant) {
+for (const L of toReview) {
   if (existingKeys.has(L.locationId)) continue; // idempotent
   const approved = (L.agencyObservationCandidates || [])
     .filter((c) => c.exactNamedWaterMatch && c.exactTaxonMatch && c.speciesId)
@@ -57,4 +60,4 @@ verdicts.sourceClaimReviews.sort((a, b) =>
   (a.sourceUrl + a.locationIds.join(',')).localeCompare(b.sourceUrl + b.locationIds.join(',')));
 
 writeFileSync(verdictsPath, JSON.stringify(verdicts, null, 2) + '\n');
-console.log(`Reviewed VAFWIS queue: approved ${speciesApproved} species across ${added} new waters (${guessReliant.length} guess-reliant reviewed).`);
+console.log(`Reviewed VAFWIS queue: approved ${speciesApproved} species across ${added} new waters (${toReview.length} waters reviewed).`);
