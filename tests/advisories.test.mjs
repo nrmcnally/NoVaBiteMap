@@ -40,6 +40,9 @@ test("Shenandoah access points use distinct official boundaries", () => {
   assert.deepEqual(bentonville.segments.map((segment) => segment.id), ["shenandoah-mercury"]);
   assert.deepEqual(morgans.segments.map((segment) => segment.id), ["shenandoah-pcb-lower-reaches"]);
   assert.equal(advisories.consumptionAdviceFor(morgans, ["walleye"]).status, "no-selected-species-match");
+  assert.equal(advisories.consumptionAdviceFor(morgans, ["white-sucker"]).status, "active");
+  assert.equal(advisories.consumptionAdviceFor(morgans, ["rock-bass"]).status, "active");
+  assert.equal(advisories.consumptionAdviceFor(morgans, ["green-sunfish"]).status, "active");
   assert.equal(catletts.status, "no-advisory-found");
 });
 

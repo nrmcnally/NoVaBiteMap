@@ -24,6 +24,22 @@ const INFRA = /sewage|treatment|waste|storm|retention|detention|settling|tailing
 
 type Ring = number[][];
 type PolyFeature = { name: string; rings: Ring[] };
+type ArcFeature = {
+  attributes?: Record<string, string | number | null | undefined>;
+  geometry?: { rings?: Ring[] };
+  centroid?: { x?: number; y?: number };
+};
+type ArcQueryResponse = { features?: ArcFeature[]; error?: unknown };
+type WaterRecord = {
+  permanentId: string;
+  name: string;
+  waterbodyType: string;
+  county: string;
+  latitude: number;
+  longitude: number;
+  areaAcres: number;
+  park: string;
+};
 
 function envParam(sr = 4326) {
   return {
@@ -37,13 +53,13 @@ function envParam(sr = 4326) {
 async function fetchJson(url: string, params: Record<string, string>) {
   const response = await fetch(`${url}?${new URLSearchParams(params)}`);
   if (!response.ok) throw new Error(`HTTP ${response.status} for ${url}`);
-  const data = await response.json();
+  const data = await response.json() as ArcQueryResponse;
   if (data.error) throw new Error(`ArcGIS error: ${JSON.stringify(data.error).slice(0, 160)}`);
   return data;
 }
 
 async function fetchPaged(url: string, where: string, outFields: string, opts: Record<string, string> = {}) {
-  const all: any[] = [];
+  const all: ArcFeature[] = [];
   let offset = 0;
   const page = 1000;
   for (let guard = 0; guard < 40; guard += 1) {
@@ -85,7 +101,7 @@ function pointInPolys(x: number, y: number, polys: PolyFeature[]): PolyFeature |
   return null;
 }
 
-function centroidOf(feature: any): [number, number] | null {
+function centroidOf(feature: ArcFeature): [number, number] | null {
   if (feature.centroid && Number.isFinite(feature.centroid.x)) return [feature.centroid.x, feature.centroid.y];
   const rings = feature.geometry?.rings;
   if (!rings?.length) return null;
@@ -122,7 +138,7 @@ async function main() {
   );
   console.log(`  ${waterFeats.length} named waterbodies (>= ~2 acres)`);
 
-  const waters: any[] = [];
+  const waters: WaterRecord[] = [];
   const seenNames = new Set<string>();
   for (const feature of waterFeats) {
     const name = (feature.attributes?.GNIS_NAME || "").trim();
@@ -138,7 +154,7 @@ async function main() {
     if (seenNames.has(key)) continue;
     seenNames.add(key);
     waters.push({
-      permanentId: feature.attributes.PERMANENT_IDENTIFIER,
+      permanentId: String(feature.attributes?.PERMANENT_IDENTIFIER ?? ""),
       name,
       waterbodyType: inferType(feature.attributes.FTYPE),
       county,

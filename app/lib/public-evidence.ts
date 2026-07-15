@@ -78,12 +78,6 @@ function stockingEvidence(water: TroutWater, speciesId: string): SpeciesEvidence
 
 export const troutLocations: FishingLocationSeed[] = troutWaters.map((water) => {
   const travel = defaultTravel(water.latitude, water.longitude);
-  const scheduleNotes = [
-    `DWR stocking category ${water.stockingCategory}`,
-    water.heritageDay ? "Heritage Day water" : null,
-    water.nationalForest ? "National Forest requirements may apply" : null,
-    water.noFallStock ? "Not stocked in fall or early winter" : null,
-  ].filter(Boolean).join(" · ");
   return {
     id: water.id,
     name: `${water.name} stocked reach`,
@@ -136,7 +130,8 @@ export function aquaticGapEvidenceForLocation(location: Pick<FishingLocationSeed
       availability: Math.min(0.56, 0.4 + ratio * 0.1 + Math.min(3, present.length) * 0.02),
       quality: null,
       evidenceConfidence: Math.min(0.62, 0.44 + Math.min(3, present.length) * 0.04),
-      evidenceType: "agency survey",
+      evidenceType: "modeled",
+      modeled: true,
       evidenceSummary: `USGS Aquatic GAP v2.0 contains ${present.length} presence record${present.length === 1 ? "" : "s"} on sampled NHDPlus reaches within 1.75 miles. BiteMap treats this as nearby historic stream evidence, not proof at the access point.`,
       lastEvidence: `Latest nearby sample ${latest} · USGS release v2.0 (December 2024)`,
       technique: "Match the species to visible current, cover, and depth; begin with a compact natural presentation",

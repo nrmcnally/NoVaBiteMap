@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   AlertTriangle,
@@ -60,7 +61,7 @@ export default async function LocationPage({ params, searchParams }: LocationPag
     <div className="app-frame detail-page">
       <TopNav active="explore" />
       <main className="detail-shell">
-        <a href="/" className="back-link"><ArrowLeft size={16} /> Back to opportunity map</a>
+        <Link href="/" className="back-link"><ArrowLeft size={16} /> Back to opportunity map</Link>
 
         <header className="detail-hero">
           <div>
@@ -89,7 +90,7 @@ export default async function LocationPage({ params, searchParams }: LocationPag
             <a href={googleDirectionsUrl(location)} target="_blank" rel="noreferrer">
               <Navigation size={17} /> Google Maps directions
             </a>
-            <a href="/my-spots"><Heart size={17} /> Save spot</a>
+            <Link href="/my-spots"><Heart size={17} /> Save spot</Link>
           </div>
         </header>
 
@@ -225,7 +226,7 @@ export default async function LocationPage({ params, searchParams }: LocationPag
               {primaryEvidence?.sourceUrl && <a href={primaryEvidence.sourceUrl} target="_blank" rel="noreferrer">{primaryEvidence.sourceName ?? "Official species evidence"} <ExternalLink size={14} /></a>}
               {location.waterbody.includes("Shenandoah") && <a href={sourceLinks.shenandoah} target="_blank" rel="noreferrer">DWR regional fishery feature <ExternalLink size={14} /></a>}
               {location.id === "lake-brittle" && <a href={sourceLinks.walleye2026} target="_blank" rel="noreferrer">2026 DWR Walleye Forecast <ExternalLink size={14} /></a>}
-              <a href="/methodology">Read the scoring methodology <ExternalLink size={14} /></a>
+              <Link href="/methodology">Read the scoring methodology <ExternalLink size={14} /></Link>
               <small>Access source reviewed {location.sourceReviewed}. Always verify current regulations with the official authority.</small>
             </section>
             <section className="condition-mini">

@@ -4,6 +4,52 @@ This backlog is ordered by product dependency. Phase 1 reliability comes before
 new surface area; the spot and fish-detail work follows once the data pipeline is
 operationally dependable.
 
+## Phase 1 audit checkpoint (2026-07-14)
+
+Working completion estimate: **about 60-65% overall**. The visible product and
+core scoring architecture are substantially built; release readiness is being
+held back by access verification, direct-evidence coverage, operational
+ingestion, auth integration, and end-to-end QA.
+
+Current audited baseline:
+
+- **196 catalog entries:** 88 authority-verified access points and 108 `listed`
+  public-land waters whose exact fishing access/waypoint still needs review.
+- **64 locations have live direct species evidence; 132 remain modeled-only.**
+- **245 live direct claims independently verified/corroborated; 105 unsupported
+  source/location/species triples rejected; 0 live direct claims left unchecked.**
+- Of the modeled-only locations, 79 have a target-fish agency candidate awaiting
+  record-level promotion review, 10 have only community-fish records without a
+  reviewed target profile, and 42
+  still have no exact-water candidate in the current source set.
+- **391 modeled records** remain available as visibly qualified fallback context;
+  135 come from historic Aquatic GAP samples near, not at, the catalog water.
+- The checked-in frontend assembly and FastAPI seed now have an automated parity
+  gate, and rejected claims are blocked on both surfaces.
+- The initial prompt's exact named-water list is still missing **Bull Run proper,
+  Goose Creek, Broad Run, Hunting Run Reservoir, and Motts Run Reservoir**.
+  Cedar Run is present only as a listed water and still needs waypoint review.
+  The current VDH advisory now supplies exact segment-level species evidence for
+  Bull Run and Broad Run/South Run, but it does not prove a legal public access
+  point; those locations still need an authoritative access coordinate.
+
+### P0 execution order from this audit
+
+1. Review the 79 exact-water agency candidate queues record by record; promote
+   only claims that pass exact water/segment, exact species, recency, provenance,
+   contradiction, and access checks.
+2. Verify or quarantine the 108 `listed` entries. A park-boundary/NHD match is
+   not by itself a fishing access point. Add the five missing prompt waters only
+   from an authoritative access coordinate and permission source.
+3. Move DWR/VAFWIS, trout, Aquatic GAP, USGS, and NWS refreshes into scheduled,
+   idempotent database jobs with last-known-good protection and admin-only
+   controls.
+4. Unify the frontend with the FastAPI email-auth/favorites implementation; the
+   current web UI still uses ChatGPT-host identity and separate SQLite/D1-style
+   favorites storage.
+5. Complete browser/mobile/accessibility journeys for search, filters, travel,
+   directions, favorites, alerts/advisories, and empty/stale states.
+
 ## Sprint 1 status (2026-07-14) — intelligence core on a real database
 
 Decision: FastAPI + PostgreSQL/PostGIS is the canonical backend; the site becomes a
@@ -62,17 +108,11 @@ sources, with an **access-status model** so honesty scales with breadth:
   (Barcroft, Montclair, Manassas, the Reston lakes never appear) and unnamed
   stormwater/infrastructure ponds.
 
-**Evidence coverage (2026-07-14):** the authoritative per-water species source is
-Virginia DWR waterbody pages + Fisheries Management Reports. Researched for every
-named lake/reservoir/river → `waterbody-species-nova.json` (byKey + byWaterbody),
-attached by waterbody/display-name. For waters DWR does not document per-water
-(small streams, small park ponds) BiteMap adds **clearly-labeled basin inference**
-(`inferredEvidenceFor` in expanded-coverage.ts): a tributary of a documented
-smallmouth river gets low-confidence "inferred" smallmouth/redbreast; a park pond
-gets largemouth/bluegill — flagged modeled, "not a survey", shown as an "Inferred
-(basin)" badge, and only used when a water has no documented evidence. Every water
-now shows fish (71 documented, rest inferred); only spotted bass has zero evidence
-region-wide (correctly — not documented here).
+**Evidence coverage (superseded by the audit above):** authoritative per-water
+pages and reports are retained in `waterbody-species-nova.json`. Waters without
+direct documentation may receive a low-confidence Aquatic GAP or basin-inference
+fallback, but those records are modeled and are never counted as verified
+exact-water communities.
 
 **Honest finding on the ceiling:** NOVA's genuinely-public, named, fishable water
 universe is bounded — most named ponds are private HOA/community lakes the app
@@ -84,9 +124,10 @@ these should relax the private-property exclusion.
 
 ## Sprint 2.1 — UX fixes + fish glossary (2026-07-14)
 
-- **Fish glossary** at `/fish` (new top-nav "Fish guide" tab): all 20 species A–Z,
-  each linking to its guide. Image registry (`app/lib/fish-images.ts`) ready for
-  verified photos; shows a tasteful placeholder until then.
+- **Fish glossary** at `/fish` (new top-nav "Fish guide" tab): all 37 species
+  currently represented in runtime evidence A–Z. Twenty reviewed target species
+  retain bite-scoring profiles; 17 additional fish-community records have
+  searchable reference pages but are not given invented activity forecasts.
 - **Navigation delay fixed**: the server-rendered spot/fish pages no longer stall
   on a doomed API fetch. The API client fast-fails (no localhost fetch in prod, 2.5s
   cap) and `loading.tsx` gives instant nav feedback.
@@ -106,11 +147,11 @@ these should relax the private-property exclusion.
   curated batch once approved.
 - [ ] **Real last-stock dates.** Ingest the DWR recently-stocked-trout feed so the
   drawer can show actual dates instead of the designation only.
-- [ ] **Remaining coverage waters.** Bull Run (stream), Four Mile Run, Difficult
-  Run, Goose Creek, Broad Run, Cedar Run, Hunting Run Reservoir, and Motts Run
-  Reservoir have NO DWR boating-access record (no state ramp). Adding them needs a
-  different authoritative source with a verifiable coordinate (county park pages,
-  DWR stocked-trout layer) — do not fabricate coordinates.
+- [ ] **Remaining prompt waters.** Bull Run proper, Goose Creek, Broad Run,
+  Hunting Run Reservoir, and Motts Run Reservoir still need an authoritative
+  public-access coordinate and permission source. Cedar Run exists only as a
+  listed candidate. Do not fabricate coordinates or equate a waterbody geometry
+  with a legal access point.
 - [ ] Link species names in the Explore results/filters to `/fish/[id]`.
 
 Still open: scheduled ingestion + admin UI rewire, email auth UI + favorites
@@ -153,26 +194,26 @@ single-species outlook; full migration to the API is in progress.
 
 ### Fish present at this spot
 
-- [ ] Add a “Fish at this water” section listing every supported species with
+- [x] Add a “Fish at this water” section listing every supported species with
   evidence for the selected location.
-- [ ] Distinguish direct observations, official stocking records, nearby historic
+- [x] Distinguish direct observations, official stocking records, nearby historic
   reach evidence, and modeled evidence; never present them as equivalent.
-- [ ] Show evidence date, source, distance/association where relevant, and
+- [x] Show evidence date, source, distance/association where relevant, and
   confidence for each species.
-- [ ] Use “not confirmed here” when evidence is missing; never turn missing data
+- [x] Use “not confirmed here” when evidence is missing; never turn missing data
   into a claim that a fish is absent.
 - [ ] Allow a species row to become the active detail-page species and preserve
   that selection in the URL.
 
 ### What is and is not biting
 
-- [ ] Show a current opportunity state for each evidenced species: strong, fair,
+- [x] Show a current opportunity state for each evidenced species: strong, fair,
   low, or insufficient evidence.
-- [ ] Include the current score, confidence, best upcoming window, five-day
+- [x] Include the current score, confidence, best upcoming window, five-day
   direction, and the top positive and negative factors.
-- [ ] Sort confirmed species by current opportunity while keeping insufficient-
+- [x] Sort confirmed species by current opportunity while keeping insufficient-
   evidence species visibly separate.
-- [ ] Explain that “low opportunity” is a conditions-based estimate, not proof
+- [x] Explain that “low opportunity” is a conditions-based estimate, not proof
   that the species will not bite.
 - [ ] Apply official weather/water safety caps before displaying any bite label.
 - [ ] Keep consumption advisories and regulations species-specific and tied to
@@ -180,12 +221,13 @@ single-species outlook; full migration to the API is in progress.
 
 ### Spot-detail acceptance criteria
 
-- [ ] A user can answer “what lives here?”, “what is worth targeting now?”, and
+- [x] A user can answer “what lives here?”, “what is worth targeting now?”, and
   “why?” without leaving the page.
-- [ ] No species receives a bite ranking without passing the existing evidence
-  gate.
-- [ ] Stale, nearby, or low-confidence evidence is unmistakably labeled.
-- [ ] The layout remains useful when a spot has one species, many species, or no
+- [x] Rejected exact source/location/species triples cannot receive a direct bite
+  ranking on either runtime surface. Newly added direct claims still require an
+  explicit review entry before release.
+- [x] Stale, nearby, or low-confidence evidence is unmistakably labeled.
+- [x] The layout remains useful when a spot has one species, many species, or no
   qualifying species evidence.
 
 ## P1 — fish detail pages
@@ -195,19 +237,19 @@ search results.
 
 ### Fish profile content
 
-- [ ] Common and scientific names, family, identification traits, typical size,
+- [x] Common and scientific names, family, identification traits, typical size,
   native/introduced status, and regional range.
-- [ ] Preferred habitat, depth, structure, current, clarity, and spawning period.
-- [ ] Bite-pattern factors: season, time of day, light, precipitation, flow,
+- [x] Preferred habitat, depth, structure, current, clarity, and spawning period.
+- [x] Bite-pattern factors: season, time of day, light, precipitation, flow,
   measured water temperature when available, and major weather changes.
-- [ ] Productive natural baits, artificial lures/flies, presentations, retrieve
+- [x] Productive natural baits, artificial lures/flies, presentations, retrieve
   styles, tackle guidance, and shore/wade/boat considerations.
-- [ ] Conservation, handling, invasive-species, and ethical-release notes.
+- [x] Conservation, handling, invasive-species, and ethical-release notes.
 - [ ] Official Virginia regulation links with a reminder that rules vary by
   water, season, size, and harvest method.
-- [ ] A map/list of locations where BiteMap has qualifying evidence for the fish,
+- [x] A map/list of locations where BiteMap has qualifying evidence for the fish,
   plus current top opportunities with confidence shown.
-- [ ] Sources and a “last reviewed” date for factual profile content.
+- [x] Sources and a dataset-level “last reviewed” date for factual profile content.
 
 ### Fish imagery and licensing
 
@@ -226,18 +268,19 @@ search results.
 
 ### Fish-page data model
 
-- [ ] Add a structured species-profile record rather than embedding long prose in
+- [x] Add a structured species-profile record rather than embedding long prose in
   page components.
-- [ ] Model seasonal bite factors separately from live observations so air
+- [x] Model seasonal bite factors separately from live observations so air
   temperature is never mislabeled as water temperature.
-- [ ] Add structured techniques, baits, habitats, citations, and licensed media.
+- [x] Add structured techniques, baits, habitats, and citations.
+- [ ] Add licensed media records after individual image-license review.
 - [ ] Add content-review status and reviewed-at fields for safe editorial updates.
 - [ ] Add API and rendered-contract tests for missing profiles, missing images,
   attribution, citations, and species-to-location links.
 
 ## P2 — follow-on improvements
 
-- [ ] Compare multiple target species at a spot without combining them into one
+- [x] Compare multiple target species at a spot without combining them into one
   misleading score.
 - [ ] Let users save preferred species and default tackle/access styles.
 - [ ] Add private trip notes and zero-catch reporting to improve later validation.
@@ -246,9 +289,9 @@ search results.
 
 ## Recommended sequence
 
-1. Finish scheduled ingestion, persistence, audit history, and fallbacks.
-2. Build the spot-level species evidence and “what is biting” panel.
-3. Launch fish pages for the most common regional species with sourced text but
-   placeholder-free imagery only where licensing is complete.
-4. Expand fish profiles and licensed photography species by species.
-
+1. Finish access verification and the exact-water candidate review queue.
+2. Finish scheduled ingestion, persistence, audit history, and fallbacks.
+3. Unify standalone auth/favorites and move the remaining frontend reads to the
+   canonical API.
+4. Complete end-to-end release QA, then add licensed photography species by
+   species.

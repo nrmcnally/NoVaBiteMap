@@ -10,9 +10,11 @@
     "build": "vinext build",
     "start": "vinext start",
     "audit:evidence": "tsx scripts/apply-evidence-verdicts.mts --check",
-    "test": "npm run audit:evidence && npm run build && node --test tests/rendered-html.test.mjs tests/advisories.test.mjs",
-    "test:api": "python -m unittest discover -s apps/api/tests -v",
-    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "audit:seed": "tsx scripts/check-seed-parity.mts",
+    "audit:review": "tsx scripts/build-fish-community-review.mts --check",
+    "test": "npm run audit:evidence && npm run audit:seed && npm run audit:review && npm run build && node --test tests/rendered-html.test.mjs tests/advisories.test.mjs",
+    "test:api": "python -m pytest apps/api/tests -q",
+    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern .pytest_cache --ignore-pattern apps/api/.pytest_cache",
     "db:generate": "drizzle-kit generate"
   },
   "dependencies": {

@@ -5,14 +5,22 @@ Northern Virginia and nearby Potomac and Shenandoah waters. It answers a
 practical question: where should I fish, what should I target, and when should I
 go—without pretending a score guarantees a catch.
 
-The current Phase 1 slice includes a polished map-first web app, 50 verified
-public fishing access locations plus 13 Virginia DWR designated stocked-trout
-reaches, species and alias search, evidence-gated rankings, address- or ZIP-based
-travel estimates, Google Maps directions, live NWS five-day outlooks, 19 manually
-reviewed USGS location-to-gage associations, 94 normalized regional USGS Aquatic
-GAP samples, location details, methodology, an authenticated administrator
-data-health screen, identity-aware favorites, an independent FastAPI service,
-PostGIS/Redis Compose services, migrations, and tests.
+The current Phase 1 work in progress includes a polished map-first web app and a
+196-entry research catalog. Of those entries, 88 have authority-verified public
+access and 108 are only *listed* waters whose exact fishing waypoint or access
+still requires review. The runtime currently contains 245 independently reviewed
+direct species claims at 64 locations plus 391 clearly modeled/nearby-reach
+records; modeled records are not equivalent to exact-water observations.
+
+The product also includes species and alias search, evidence-gated rankings,
+address- or ZIP-based travel estimates, Google Maps directions, live NWS
+five-day outlooks, 19 manually reviewed USGS location-to-gage associations, 225
+normalized regional USGS Aquatic GAP samples, 13 Virginia DWR designated
+stocked-trout reaches, location and fish details, methodology, an administrator
+data-health screen, favorites, an independent FastAPI service, PostGIS/Redis
+Compose services, migrations, and tests. Phase 1 is not release-complete: access
+verification, scheduled ingestion, frontend/backend auth unification, and full
+end-to-end QA remain open.
 
 ## Requirements on Windows
 
@@ -67,7 +75,7 @@ Run API tests:
 
 ```powershell
 $env:PYTHONPATH = "apps\api"
-py -3 -m unittest discover -s apps\api\tests -v
+py -3 -m pytest apps\api\tests -q
 ```
 
 ## Full stack with Docker Desktop
@@ -89,9 +97,12 @@ docker compose run --rm api alembic upgrade head
 
 ## Data honesty
 
-- Access records are seeded from Virginia DWR’s public boating-access service.
-- Species evidence is attached only when a separate official DWR source supports it.
-- Access-only records remain searchable but do not rank for a species.
+- Verified access records come from the responsible public authority; `listed`
+  entries are discovery candidates and must not be described as verified access.
+- Every live direct species claim has an explicit independent source verdict.
+  Rejected source/location/species triples are blocked on both runtime surfaces.
+- Nearby Aquatic GAP and drainage-inferred records are labeled modeled, capped,
+  and kept separate from direct exact-water evidence.
 - Missing live observations remain unavailable; the app does not invent a fallback.
 - Activity values in the seed snapshot are labeled seasonal estimates.
 - Live detail outlooks use NWS time of day, wind, precipitation, and official

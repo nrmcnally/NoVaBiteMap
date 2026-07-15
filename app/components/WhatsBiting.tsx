@@ -119,6 +119,19 @@ export async function WhatsBiting({ locationId, known }: Props) {
               </li>
             ))}
           </ul>
+          {scored.community.length > 0 && (
+            <div className="biting-community">
+              <h3>Community records · not bite-scored</h3>
+              <p>These fish have occurrence evidence here, but no reviewed activity profile yet.</p>
+              <div>
+                {scored.community.map((item) => (
+                  <a key={item.speciesId} href={`/fish/${item.speciesId}`}>
+                    {item.name}<span>{item.modeled ? "Nearby / modeled" : "Documented segment"}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
           {scored.insufficient.length > 0 && (
             <div className="biting-insufficient">
               <h3>Reported but not confirmed here</h3>

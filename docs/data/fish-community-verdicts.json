@@ -231,6 +231,41 @@
       "rejectedSpeciesIds": ["smallmouth-bass"],
       "verdict": "removed-wrong-river-segment",
       "note": "DWR places City Dock in tidal water below the fall line and identifies smallmouth habitat above Fredericksburg. The page does not support an exact City Dock smallmouth claim."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "locationIds": ["vernon-view", "riverside-park-potomac", "dyke-marsh", "belle-haven", "jones-point", "daingerfield-island", "gravelly-point", "theodore-roosevelt-island", "leesylvania"],
+      "rejectedSpeciesIds": ["blue-catfish", "white-perch", "yellow-perch"],
+      "verdict": "removed-multi-river-generalization-not-potomac-specific",
+      "note": "The DWR feature discusses a salinity-dependent range of species across Virginia tidal rivers from the Potomac to the James. It does not assign blue catfish, white perch, or yellow perch specifically to the Potomac, much less to nine access points. These remain research leads rather than direct rankings evidence."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "locationIds": ["vernon-view", "riverside-park-potomac", "dyke-marsh", "belle-haven", "jones-point", "daingerfield-island", "gravelly-point", "theodore-roosevelt-island", "leesylvania"],
+      "rejectedSpeciesIds": ["largemouth-bass", "northern-snakehead", "channel-catfish"],
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem",
+      "note": "The 2026 Potomac section supports excellent largemouth fishing in Virginia tidal Potomac tributaries south of Washington and discusses snakehead broadly in northern creeks. It does not support access-level main-stem claims, and its Potomac section does not document channel catfish. Leesylvania largemouth is supported separately by DCR."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/blog/10-top-virginia-fishing-waters-rivers/",
+      "locationIds": ["vernon-view", "riverside-park-potomac", "dyke-marsh", "belle-haven", "jones-point", "daingerfield-island", "gravelly-point", "theodore-roosevelt-island", "leesylvania"],
+      "rejectedSpeciesIds": ["common-carp"],
+      "verdict": "removed-insufficient-taxon-specificity",
+      "note": "The DWR-hosted feature says only carp for the coastal Potomac. It does not identify common carp by species, so it cannot support an exact common-carp ranking claim."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/catchable-trout-stocking-plan.pdf",
+      "locationIds": ["nhd-stream-robinson-river", "nhd-stream-rose-river"],
+      "rejectedSpeciesIds": ["rainbow-trout", "brook-trout"],
+      "verdict": "removed-designation-does-not-identify-species",
+      "note": "The rendered 2026 stocking-plan table identifies Robinson and Rose as Category A Heritage waters but does not identify any trout species. It cannot support rainbow- or brook-trout claims without a separate exact-species agency record."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/fairfax-lake/",
+      "locationIds": ["lake-fairfax"],
+      "rejectedSpeciesIds": ["black-crappie"],
+      "verdict": "removed-insufficient-taxon-specificity",
+      "note": "The exact DWR page says crappies rather than black crappie. Exact black-crappie evidence remains unverified."
     }
   ],
   "sourceClaimReviews": [
@@ -387,6 +422,83 @@
       "approvedSpeciesIds": ["smallmouth-bass", "redbreast-sunfish"],
       "verdict": "approved-exact-agency-upper-river-reaches",
       "limitations": "DWR explicitly documents Kelly's Ford and Motts Landing in the upper smallmouth/redbreast fishery and identifies Hazel River as a good smallmouth stream. Fredericksburg City Dock is excluded because it lies in the tidal reach below the fall line."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-tidal/",
+      "locationIds": ["hopyard-landing"],
+      "approvedSpeciesIds": ["largemouth-bass", "channel-catfish"],
+      "verdict": "approved-exact-agency-tidal-river-access",
+      "limitations": "DWR explicitly identifies Hopyard Landing as public access on the tidal Rappahannock and documents both species in that connected tidal reach. This supports presence, not equal abundance at the landing."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/fairfax-lake/",
+      "locationIds": ["lake-fairfax"],
+      "approvedSpeciesIds": ["largemouth-bass", "channel-catfish", "bluegill"],
+      "verdict": "approved-exact-agency-waterbody-page",
+      "limitations": "The current notice says channel-catfish stocking is discontinued; the existing population remains and catch rates may decline. Generic crappies are intentionally excluded from exact-species approval."
+    },
+    {
+      "sourceUrl": "https://www.novaparks.com/parks/reservoir-park/things-to-do/fishing",
+      "locationIds": ["beaverdam-reservoir"],
+      "approvedSpeciesIds": ["largemouth-bass", "common-carp"],
+      "verdict": "approved-exact-public-park-waterbody-page",
+      "limitations": "NOVA Parks explicitly names Beaverdam Reservoir and these species. Its generic catfish and panfish terms are not narrowed to exact species."
+    },
+    {
+      "sourceUrl": "https://www.novaparks.com/parks/fountainhead-regional-park/things-to-do/fishing",
+      "locationIds": ["fountainhead"],
+      "approvedSpeciesIds": ["bluegill"],
+      "verdict": "approved-exact-public-park-waterbody-page",
+      "limitations": "The exact Fountainhead page identifies bluegill in the reservoir. Generic bass, catfish, and crappie terms on that page are not narrowed by this review."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/silver-lake-regional-park/",
+      "locationIds": ["silver-lake"],
+      "approvedSpeciesIds": ["largemouth-bass", "channel-catfish", "bluegill", "black-crappie"],
+      "verdict": "approved-exact-agency-waterbody-page",
+      "limitations": "The current notice says channel-catfish stocking is discontinued; the existing population remains and catch rates may decline."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Beaverdam-Creek-Reservoir-Fisheries-Management-Report-2023.pdf",
+      "locationIds": ["beaverdam-reservoir"],
+      "approvedSpeciesIds": ["largemouth-bass", "bluegill", "black-crappie", "common-carp", "white-perch", "channel-catfish"],
+      "verdict": "approved-exact-dated-agency-survey-report",
+      "limitations": "Rendered pages identify the current fishery and 2022 survey context. No black crappie were collected in 2022; twelve small fish were collected in 2020 and DWR says limited numbers likely remained after drawdown. Presence must not be represented as strong current abundance."
+    },
+    {
+      "sourceUrl": "https://www.dcr.virginia.gov/state-parks/fishing",
+      "locationIds": ["leesylvania", "mason-neck"],
+      "approvedSpeciesIds": ["largemouth-bass"],
+      "verdict": "approved-exact-state-park-river-access",
+      "limitations": "Virginia DCR explicitly names both parks as Potomac River access to a strong largemouth fishery. This supports shared river-segment presence, not equal abundance at each shoreline."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/blog/10-top-virginia-fishing-waters-rivers/",
+      "locationIds": ["vernon-view", "riverside-park-potomac", "dyke-marsh", "belle-haven", "jones-point", "daingerfield-island", "gravelly-point", "theodore-roosevelt-island", "leesylvania"],
+      "approvedSpeciesIds": ["striped-bass"],
+      "verdict": "approved-shared-dwr-hosted-coastal-potomac-feature",
+      "limitations": "The feature explicitly identifies stripers among coastal Potomac target species. Approval is limited to shared river-segment presence; it is not an access-level survey, abundance estimate, or proof of shore catchability. Generic carp is rejected separately."
+    },
+    {
+      "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+      "locationIds": ["front-royal", "riverton", "morgans-ford", "berrys", "castlemans-ferry", "lockes"],
+      "approvedSpeciesIds": ["common-carp", "channel-catfish", "white-sucker", "rock-bass", "smallmouth-bass", "largemouth-bass"],
+      "verdict": "approved-current-official-consumption-advisory-segment",
+      "limitations": "The visually reviewed VDH table explicitly names these exact species for the approximately 41-mile lower-forks/main-stem segment and says its recommendations concern fish caught from specified waterbodies. This supports segment-level occurrence, not access-point sampling, abundance, or fishery quality. Generic Sunfish is retained for consumption matching but is not promoted to any exact species."
+    },
+    {
+      "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/PotomacRiver_2026-1.pdf",
+      "locationIds": ["pohick-bay", "occoquan-regional"],
+      "approvedSpeciesIds": ["common-carp", "american-eel", "channel-catfish", "largemouth-bass", "striped-bass", "smallmouth-bass", "white-catfish", "white-perch", "gizzard-shad", "yellow-perch"],
+      "verdict": "approved-current-official-consumption-advisory-segment",
+      "limitations": "The visually reviewed VDH table explicitly names these exact species for the mapped tidal Potomac tributaries and embayments, including Pohick Creek and the Occoquan River system. This supports segment-level occurrence only. Generic Bullhead Catfish and Sunfish Species rules are retained for consumption matching but are not promoted to exact species."
+    },
+    {
+      "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/PotomacRiver_2026-1.pdf",
+      "locationIds": ["fountainhead", "bull-run-marina", "lake-ridge-marina", "occoquan-regional", "mason-neck"],
+      "approvedSpeciesIds": ["largemouth-bass", "bluegill"],
+      "verdict": "approved-current-official-consumption-advisory-segment",
+      "limitations": "The visually reviewed VDH table explicitly names largemouth bass and bluegill sunfish for the mapped Occoquan River/Reservoir PFOS segment. This supports segment-level occurrence, not abundance or equal conditions across every access point."
     }
   ],
   "manualClaims": [

@@ -31,11 +31,12 @@ export function MySpotsClient({ initialFavorites }: { initialFavorites: Favorite
   }, []);
 
   useEffect(() => {
-    void refresh();
+    const timer = window.setTimeout(() => void refresh(), 0);
     const reload = () => void refresh();
     window.addEventListener("focus", reload);
     window.addEventListener("bitemap:favorites-changed", reload);
     return () => {
+      window.clearTimeout(timer);
       window.removeEventListener("focus", reload);
       window.removeEventListener("bitemap:favorites-changed", reload);
     };

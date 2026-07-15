@@ -51,6 +51,24 @@ def test_location_detail_exposes_all_evidenced_species(client):
     assert detail["consumptionAdvisory"] is not None
 
 
+def test_vdh_segment_species_reconcile_with_morgans_ford(client):
+    detail = client.get("/api/locations/morgans-ford").json()
+    species_ids = set(detail["evidenceSpeciesIds"])
+    assert {
+        "smallmouth-bass",
+        "walleye",
+        "common-carp",
+        "channel-catfish",
+        "white-sucker",
+        "rock-bass",
+        "largemouth-bass",
+    }.issubset(species_ids)
+
+    white_sucker = client.get("/api/species/white-sucker")
+    assert white_sucker.status_code == 200
+    assert any(location["id"] == "morgans-ford" for location in white_sucker.json()["locations"])
+
+
 def test_ranked_opportunities_gate_species_evidence(client):
     results = client.get(
         "/api/opportunities/ranked", params={"species_id": "smallmouth-bass", "max_minutes": 240}
@@ -89,10 +107,10 @@ def test_data_source_status_is_derived_from_real_counts_and_runs(client):
     status = client.get("/api/data-sources/status").json()
     counts = status["counts"]
     assert counts["locations"] == 196
-    assert counts["species"] == 20
+    assert counts["species"] == 37
     assert counts["hydrologyAssociations"] == 19
     assert counts["stockingRecords"] == 13
-    assert counts["modeledEvidence"] == 285
+    assert counts["modeledEvidence"] == 391
     assert counts["locationsWithEvidence"] == 196
     assert status["lastSuccessfulIngestion"] is not None
     assert status["lastSuccessfulIngestion"]["status"] == "success"
@@ -125,6 +143,16 @@ def test_multispecies_panel_ranks_and_separates_insufficient(client):
     assert scores == sorted(scores, reverse=True)
     assert all(s["state"] in {"strong", "fair", "low"} for s in species)
     assert all("factors" in s and "positive" in s["factors"] for s in species)
+
+
+def test_community_species_are_visible_but_not_bite_scored(client):
+    payload = client.get("/api/locations/front-royal/species", params={"live": "false"}).json()
+    scored_ids = {item["speciesId"] for item in payload["species"]}
+    community_ids = {item["speciesId"] for item in payload["community"]}
+    assert "white-sucker" in community_ids
+    assert "rock-bass" in community_ids
+    assert "white-sucker" not in scored_ids
+    assert all("reviewed bite-scoring profile" in item["reason"] for item in payload["community"])
 
 
 def test_basin_inference_is_flagged_not_presented_as_survey(client):

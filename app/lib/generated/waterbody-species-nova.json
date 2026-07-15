@@ -643,7 +643,7 @@
         "evidenceConfidence": 0.8,
         "summary": "Virginia DWR describes largemouth bass as providing good fishing at Mountain Run Lake.",
         "strengthNote": "Good fishing",
-        "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Mountain-Run-Reservoir-Fisheries-Management-Report-2023.pdf"
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/mountain-run/"
       },
       {
         "speciesId": "black-crappie",
@@ -652,7 +652,7 @@
         "evidenceConfidence": 0.68,
         "summary": "Virginia DWR's 2023 fisheries report documents an exact-water Black Crappie fishery at Mountain Run Reservoir, including April 2022 electrofishing results.",
         "strengthNote": "Adequate fishery; exact species documented in the 2022 sample.",
-        "sourceUrl": "https://dwr.virginia.gov/waterbody/mountain-run/"
+        "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Mountain-Run-Reservoir-Fisheries-Management-Report-2023.pdf"
       },
       {
         "speciesId": "bluegill",

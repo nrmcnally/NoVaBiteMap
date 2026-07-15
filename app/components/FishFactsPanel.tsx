@@ -1,4 +1,4 @@
-import { Award, Clock3, ExternalLink, Info, Ruler, Sparkles, Thermometer, Waves } from "./ClientIcons";
+import { Clock3, ExternalLink, Info, Ruler, Sparkles, Thermometer, Waves } from "./ClientIcons";
 import type { FishFacts } from "../lib/api";
 
 function tempRange(range: [number | null, number | null]) {

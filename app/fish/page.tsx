@@ -1,7 +1,7 @@
 import { Fish, Info } from "../components/ClientIcons";
 import { TopNav } from "../components/TopNav";
 import { FishGlossaryClient, type GlossaryFish } from "../components/FishGlossaryClient";
-import { locations, species } from "../lib/data";
+import { locations, species, targetSpecies } from "../lib/data";
 import { fishImageFor } from "../lib/fish-images";
 import { profileFor, topWaterTypes } from "../lib/species-profiles";
 
@@ -39,6 +39,7 @@ export default function FishGuidePage() {
       topWater: topWaterTypes(profile),
       evidenceCount: evidenceCount(item.id),
       image: fishImageFor(item.id)?.src ?? null,
+      targetable: item.targetable,
     };
   });
 
@@ -49,11 +50,11 @@ export default function FishGuidePage() {
         <header className="content-hero">
           <span className="eyebrow"><Fish size={14} /> Species field guide</span>
           <h1>Northern Virginia fish guide</h1>
-          <p>Every freshwater species BiteMap tracks in the region. Search or browse, then tap any fish for identification, preferred conditions, size, baits, and the waters where it has evidence.</p>
+          <p>Target species and fish-community records supported by BiteMap&apos;s regional evidence. Search or browse, then open a fish to see its habitat and the waters where evidence supports it.</p>
         </header>
 
         <div className="fish-guide-note">
-          <Info size={15} /> {species.length} species. Facts are researched reference content (primarily Virginia DWR), not a guarantee of presence or catch at any specific water.
+          <Info size={15} /> {species.length} species tracked: {targetSpecies.length} have dedicated bite-scoring profiles and {species.length - targetSpecies.length} are evidence-backed community records. A nearby historic record is not proof at an access point.
         </div>
 
         <FishGlossaryClient fish={fish} />

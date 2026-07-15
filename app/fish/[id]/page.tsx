@@ -1,5 +1,6 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
-import { AlertTriangle, ArrowLeft, ArrowRight, Award, ExternalLink, Fish, Info, MapPin, ShieldAlert, Waves } from "../../components/ClientIcons";
+import { AlertTriangle, ArrowLeft, ArrowRight, Award, ExternalLink, Fish, Info, ShieldAlert, Waves } from "../../components/ClientIcons";
 import { TopNav } from "../../components/TopNav";
 import { FishFactsPanel } from "../../components/FishFactsPanel";
 import { SeasonalChart, TempGauge, WaterTypeFit } from "../../components/FishVisuals";
@@ -19,7 +20,9 @@ export default async function FishPage({ params }: FishPageProps) {
   // Rendered entirely from bundled data so the guide works without the backend.
   const facts = localFishFacts(id);
   const locations = localSpeciesWaters(id);
-  const disclaimer = "Species facts are researched reference content, not a guarantee of presence or catch at any specific water.";
+  const disclaimer = local.targetable
+    ? "Species facts are researched reference content, not a guarantee of presence or catch at any specific water."
+    : "Community records describe agency-supported or nearby historic occurrence evidence. They are not access-point surveys, abundance estimates, or bite forecasts.";
 
   const name = local.name;
   const scientificName = local.scientificName;
@@ -31,16 +34,17 @@ export default async function FishPage({ params }: FishPageProps) {
     <div className="app-frame detail-page">
       <TopNav active="fish" />
       <main className="detail-shell">
-        <a href="/fish" className="back-link"><ArrowLeft size={16} /> Back to fish guide</a>
+        <Link href="/fish" className="back-link"><ArrowLeft size={16} /> Back to fish guide</Link>
 
         <header className="detail-hero fish-hero">
           <div>
             <div className="hero-tags">
               <span><Fish size={14} /> Species guide</span>
+              {!local.targetable && <span className="community-badge">Community record · not bite-scored</span>}
               {facts?.nativeStatus && (
                 <span className={`native-badge native-${facts.nativeStatus}`}>{NATIVE_LABEL[facts.nativeStatus]}</span>
               )}
-              {facts?.family && <span className="verified-pill">{facts.family}</span>}
+              {(facts?.family ?? local.family) && <span className="verified-pill">{facts?.family ?? local.family}</span>}
             </div>
             <h1>{name}</h1>
             <p><em>{scientificName}</em></p>
@@ -72,7 +76,7 @@ export default async function FishPage({ params }: FishPageProps) {
                       const other = speciesById(c.speciesId);
                       return (
                         <p key={c.speciesId}>
-                          {other ? <a href={`/fish/${other.id}`}>{other.name}</a> : <strong>{c.speciesId}</strong>} — {c.tell}
+                          {other ? <Link href={`/fish/${other.id}`}>{other.name}</Link> : <strong>{c.speciesId}</strong>} — {c.tell}
                         </p>
                       );
                     })}
@@ -94,8 +98,8 @@ export default async function FishPage({ params }: FishPageProps) {
               </article>
             ) : (
               <article className="fish-id-card">
-                <span className="eyebrow">Field guide</span>
-                <p>Detailed species facts are temporarily unavailable. Basic identification and the waters where BiteMap has evidence are shown below.</p>
+                <span className="eyebrow">Fish-community reference</span>
+                <p>This species is tracked because it appears in the regional evidence, but it does not yet have a reviewed bite-scoring profile. BiteMap shows its verified taxonomy, broad habitat, and supporting waters without inventing activity, size, or lure guidance.</p>
               </article>
             )}
 
@@ -122,26 +126,26 @@ export default async function FishPage({ params }: FishPageProps) {
             <section>
               <div className="fish-where-heading">
                 <div><span className="eyebrow">Where to fish for it</span><h2>{locations.length > 0 ? `${locations.length} evidenced water${locations.length === 1 ? "" : "s"}` : "No evidenced waters yet"}</h2></div>
-                {locations.length > 0 && <a className="see-on-map" href={`/?species=${id}`}>See on map <ArrowRight size={13} /></a>}
+                {locations.length > 0 && local.targetable && <Link className="see-on-map" href={`/?species=${id}`}>See on map <ArrowRight size={13} /></Link>}
               </div>
               {topWaters.length > 0 ? (
                 <div className="fish-location-scroll">
                   <div className="fish-location-list ranked">
                     {topWaters.map((loc) => (
-                      <a key={loc.id} href={`/locations/${loc.id}?species=${id}`} className={`fish-rank-row rank-${loc.state}`}>
+                      <Link key={loc.id} href={`/locations/${loc.id}?species=${id}`} className={`fish-rank-row rank-${loc.state}`}>
                         <span className={`fish-rank-orb orb-${loc.state}`}>{loc.opportunityScore}</span>
                         <span className="fish-loc-name">{loc.name}
                           <small>{loc.waterbody} · {loc.county}{loc.modeled ? " · inferred" : ""}</small>
                         </span>
                         <span className="fish-rank-conf">{loc.confidenceLabel}</span>
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
               ) : (
                 <p className="fish-empty">BiteMap has no location that clears the evidence gate for this species yet. That is not evidence the fish is absent from the region.</p>
               )}
-              {locations.length > 0 && <small className="fish-where-note">Ranked by estimated opportunity (documented waters first). Scroll for more; live conditions refine each score on the spot page.</small>}
+              {locations.length > 0 && <small className="fish-where-note">{local.targetable ? "Ranked by estimated opportunity (documented waters first). Live conditions refine each score on the spot page." : "Ordered by evidence strength, with documented waters before nearby modeled records. Scores here describe presence support, not bite quality."} Scroll for more.</small>}
             </section>
 
             {facts?.stateRecordLb && (
@@ -155,7 +159,7 @@ export default async function FishPage({ params }: FishPageProps) {
               <h3><ShieldAlert size={19} /> Regulations &amp; harvest</h3>
               <p>Size, creel, and season limits vary by water, season, and method. Always confirm the current rules before keeping fish.</p>
               <a href="https://dwr.virginia.gov/fishing/regulations/" target="_blank" rel="noreferrer">Virginia fishing regulations <ExternalLink size={13} /></a>
-              <a href="https://dwr.virginia.gov/fishing/trophy-fish/" target="_blank" rel="noreferrer">DWR Trophy Fish / citation program <ExternalLink size={13} /></a>
+              {local.targetable && <a href="https://dwr.virginia.gov/fishing/trophy-fish/" target="_blank" rel="noreferrer">DWR Trophy Fish / citation program <ExternalLink size={13} /></a>}
             </section>
 
             <section className="fish-disclaimer-card">

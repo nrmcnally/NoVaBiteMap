@@ -150,6 +150,7 @@ def score_location_species(
 
     offered: list[dict] = []
     insufficient: list[dict] = []
+    community: list[dict] = []
     live = False
 
     for species_id, records in grouped.items():
@@ -169,6 +170,20 @@ def score_location_species(
                     "availabilityScore": availability_preview,
                     "reason": "Evidence does not clear the availability gate; not confirmed here.",
                     "evidenceType": records[0].evidence_type,
+                }
+            )
+            continue
+
+        if not profile:
+            community.append(
+                {
+                    "speciesId": species_id,
+                    "name": species.common_name if species else species_id,
+                    "scientificName": species.scientific_name if species else None,
+                    "availabilityScore": availability_preview,
+                    "reason": "Occurrence evidence is available, but this species does not yet have a reviewed bite-scoring profile.",
+                    "evidenceType": records[0].evidence_type,
+                    "modeled": all(record.modeled for record in records),
                 }
             )
             continue
@@ -215,6 +230,7 @@ def score_location_species(
         "liveConditions": live,
         "hydrologyAvailable": bool(hydro_state and hydro_state.get("available")),
         "species": offered,
+        "community": sorted(community, key=lambda item: item["name"]),
         "insufficient": insufficient,
         "disclaimer": "Relative fishing-opportunity estimates, not catch guarantees. Low opportunity is a conditions estimate, not proof a species will not bite.",
     }

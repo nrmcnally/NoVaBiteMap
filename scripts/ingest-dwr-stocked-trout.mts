@@ -158,7 +158,7 @@ async function main() {
       recordCount: records.length,
       useNote: "Exact-water stocking candidates. DWR catalog records must match source object ID; other locations require exact name and <=1.25 miles to the official section. Species flags must equal numeric 1. Access and current posted restrictions require separate review.",
       sourceCaveat: "DWR states that some stocked sections are on private land and that this guide does not supersede physical signage.",
-      privacyNote: "Source geometry is discarded after exact-name and within-five-mile matching.",
+      privacyNote: "Source geometry is discarded after source-object or exact-name/within-1.25-mile matching.",
     },
     records,
   };

@@ -350,6 +350,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .biting-meta { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 8px; }.biting-meta span { display: inline-flex; align-items: center; gap: 5px; font-size: 9px; color: #6f807c; font-weight: 700; }.biting-meta svg { color: var(--water); }.biting-evidence { text-transform: uppercase; letter-spacing: .4px; font-size: 8px !important; color: #859089 !important; }
 .biting-summary { margin: 8px 0 0; font-size: 9.5px; line-height: 1.5; color: var(--ink-soft); }.biting-caveat { margin: 6px 0 0; display: flex; align-items: flex-start; gap: 5px; font-size: 9px; line-height: 1.45; color: #94694a; }.biting-caveat svg { flex: 0 0 auto; margin-top: 2px; }
 .biting-insufficient { margin-top: 16px; padding: 12px 14px; background: #f1efe8; border: 1px dashed #c9c2ac; }.biting-insufficient h3 { margin: 0 0 5px; font-size: 10px; text-transform: uppercase; letter-spacing: .6px; color: #7a6a3f; }.biting-insufficient p { margin: 0; font-size: 9.5px; line-height: 1.5; color: var(--ink-soft); }
+.biting-community { margin-top: 16px; padding: 12px 14px; background: #edf3f1; border: 1px solid #cbdad6; }.biting-community h3 { margin: 0 0 4px; font-size: 10px; text-transform: uppercase; letter-spacing: .6px; color: #466d65; }.biting-community > p { margin: 0 0 9px; font-size: 9.5px; line-height: 1.5; color: var(--ink-soft); }.biting-community > div { display: flex; flex-wrap: wrap; gap: 6px; }.biting-community a { display: inline-flex; flex-direction: column; gap: 1px; padding: 5px 7px; border: 1px solid #c4d5d0; background: rgba(255,255,255,.7); color: var(--pine); font-size: 9px; font-weight: 850; }.biting-community a span { color: #6d827d; font-size: 7px; font-weight: 700; }
 .biting-disclaimer, .biting-offline-note { display: flex; align-items: flex-start; gap: 7px; margin: 14px 0 0; padding: 10px; background: #edf1e6; color: #587064; font-size: 9px; line-height: 1.5; }.biting-offline-note { margin: 14px 0; background: #f2e8cd; color: #75552f; }.biting-disclaimer svg, .biting-offline-note svg { flex: 0 0 auto; margin-top: 1px; }
 .biting-empty { margin: 16px 0 0; padding: 12px; background: var(--paper); font-size: 10px; line-height: 1.55; color: var(--ink-soft); }
 
@@ -501,6 +502,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .fish-guide-card-body h3 { font-size: 14px; margin: 0; color: var(--ink); }
 .fish-guide-title { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
 .fish-guide-title .native-badge { padding: 2px 6px; font-size: 7px; }
+.community-badge { display: inline-flex; align-items: center; padding: 3px 7px; border: 1px solid #c8d7d3; border-radius: 999px; background: #edf3f1; color: #4f716a; font-size: 7px; font-weight: 900; letter-spacing: .45px; text-transform: uppercase; }
 .fish-guide-sci { margin: 2px 0 0; font-size: 10px; color: #7a8986; }
 .fish-guide-signature { margin: 5px 0 0; font-size: 9.5px; color: #5f7168; font-weight: 700; }
 .fish-glossary-controls { display: flex; gap: 12px; align-items: center; margin-bottom: 20px; flex-wrap: wrap; }

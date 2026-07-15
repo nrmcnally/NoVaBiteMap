@@ -91,6 +91,6 @@ test("live public-data spine includes hydrology, multi-day weather, trout, and A
   assert.match(publicEvidence, /nearby historic stream evidence, not proof at the access point/i);
   assert.match(publicEvidence, /designated stocked-water layer/);
   assert.match(importer, /dataset_md5/);
-  assert.match(gap, /"sampleCount": 94/);
+  assert.match(gap, /"sampleCount": 225/);
   assert.match(trout, /"waterCount": 13/);
 });

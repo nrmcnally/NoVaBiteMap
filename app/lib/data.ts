@@ -20,6 +20,8 @@ export type Species = {
   scientificName: string;
   short: string;
   habitat: string;
+  family?: string;
+  targetable: boolean;
 };
 
 export type SpeciesEvidence = {
@@ -36,6 +38,7 @@ export type SpeciesEvidence = {
   negative: string[];
   sourceName?: string;
   sourceUrl?: string;
+  modeled?: boolean;
 };
 
 export type FishingLocation = {
@@ -111,27 +114,50 @@ export const sourceLinks = {
 };
 
 export const species: Species[] = [
-  { id: "smallmouth-bass", name: "Smallmouth bass", scientificName: "Micropterus dolomieu", short: "SMB", habitat: "Rocky rivers, current seams, ledges" },
-  { id: "largemouth-bass", name: "Largemouth bass", scientificName: "Micropterus salmoides", short: "LMB", habitat: "Vegetated lakes, reservoirs, woody cover" },
-  { id: "spotted-bass", name: "Spotted bass", scientificName: "Micropterus punctulatus", short: "SPB", habitat: "Reservoirs and flowing water where supported" },
-  { id: "bluegill", name: "Bluegill", scientificName: "Lepomis macrochirus", short: "BG", habitat: "Shallow cover, docks, vegetation" },
-  { id: "redbreast-sunfish", name: "Redbreast sunfish", scientificName: "Lepomis auritus", short: "RBS", habitat: "Warm, rocky rivers and creeks" },
-  { id: "black-crappie", name: "Black crappie", scientificName: "Pomoxis nigromaculatus", short: "BCP", habitat: "Brush, docks, suspended schools" },
-  { id: "white-crappie", name: "White crappie", scientificName: "Pomoxis annularis", short: "WCP", habitat: "Turbid reservoirs and woody cover" },
-  { id: "channel-catfish", name: "Channel catfish", scientificName: "Ictalurus punctatus", short: "CCF", habitat: "Pools, channels, reservoirs" },
-  { id: "blue-catfish", name: "Blue catfish", scientificName: "Ictalurus furcatus", short: "BCF", habitat: "Large tidal rivers and channels" },
-  { id: "flathead-catfish", name: "Flathead catfish", scientificName: "Pylodictis olivaris", short: "FCF", habitat: "Deep river holes and wood" },
-  { id: "rainbow-trout", name: "Rainbow trout", scientificName: "Oncorhynchus mykiss", short: "RBT", habitat: "Cool stocked and coldwater streams" },
-  { id: "brown-trout", name: "Brown trout", scientificName: "Salmo trutta", short: "BNT", habitat: "Cool streams with cover" },
-  { id: "brook-trout", name: "Brook trout", scientificName: "Salvelinus fontinalis", short: "BKT", habitat: "Cold headwater streams" },
-  { id: "common-carp", name: "Common carp", scientificName: "Cyprinus carpio", short: "CARP", habitat: "Slow rivers, reservoirs, flats" },
-  { id: "northern-snakehead", name: "Northern snakehead", scientificName: "Channa argus", short: "NSH", habitat: "Tidal vegetation and backwaters" },
-  { id: "walleye", name: "Walleye", scientificName: "Sander vitreus", short: "WAE", habitat: "Rivers and reservoirs where supported" },
-  { id: "yellow-perch", name: "Yellow perch", scientificName: "Perca flavescens", short: "YEP", habitat: "Reservoir edges and tidal tributaries" },
-  { id: "white-perch", name: "White perch", scientificName: "Morone americana", short: "WHP", habitat: "Tidal fresh and brackish water" },
-  { id: "striped-bass", name: "Striped bass", scientificName: "Morone saxatilis", short: "STB", habitat: "Large reservoirs and tidal rivers" },
-  { id: "muskellunge", name: "Muskellunge", scientificName: "Esox masquinongy", short: "MUS", habitat: "Large rivers where agency evidence supports them" },
+  { id: "smallmouth-bass", name: "Smallmouth bass", scientificName: "Micropterus dolomieu", short: "SMB", habitat: "Rocky rivers, current seams, ledges", targetable: true },
+  { id: "largemouth-bass", name: "Largemouth bass", scientificName: "Micropterus salmoides", short: "LMB", habitat: "Vegetated lakes, reservoirs, woody cover", targetable: true },
+  { id: "spotted-bass", name: "Spotted bass", scientificName: "Micropterus punctulatus", short: "SPB", habitat: "Reservoirs and flowing water where supported", targetable: true },
+  { id: "bluegill", name: "Bluegill", scientificName: "Lepomis macrochirus", short: "BG", habitat: "Shallow cover, docks, vegetation", targetable: true },
+  { id: "redbreast-sunfish", name: "Redbreast sunfish", scientificName: "Lepomis auritus", short: "RBS", habitat: "Warm, rocky rivers and creeks", targetable: true },
+  { id: "black-crappie", name: "Black crappie", scientificName: "Pomoxis nigromaculatus", short: "BCP", habitat: "Brush, docks, suspended schools", targetable: true },
+  { id: "white-crappie", name: "White crappie", scientificName: "Pomoxis annularis", short: "WCP", habitat: "Turbid reservoirs and woody cover", targetable: true },
+  { id: "channel-catfish", name: "Channel catfish", scientificName: "Ictalurus punctatus", short: "CCF", habitat: "Pools, channels, reservoirs", targetable: true },
+  { id: "blue-catfish", name: "Blue catfish", scientificName: "Ictalurus furcatus", short: "BCF", habitat: "Large tidal rivers and channels", targetable: true },
+  { id: "flathead-catfish", name: "Flathead catfish", scientificName: "Pylodictis olivaris", short: "FCF", habitat: "Deep river holes and wood", targetable: true },
+  { id: "rainbow-trout", name: "Rainbow trout", scientificName: "Oncorhynchus mykiss", short: "RBT", habitat: "Cool stocked and coldwater streams", targetable: true },
+  { id: "brown-trout", name: "Brown trout", scientificName: "Salmo trutta", short: "BNT", habitat: "Cool streams with cover", targetable: true },
+  { id: "brook-trout", name: "Brook trout", scientificName: "Salvelinus fontinalis", short: "BKT", habitat: "Cold headwater streams", targetable: true },
+  { id: "common-carp", name: "Common carp", scientificName: "Cyprinus carpio", short: "CARP", habitat: "Slow rivers, reservoirs, flats", targetable: true },
+  { id: "northern-snakehead", name: "Northern snakehead", scientificName: "Channa argus", short: "NSH", habitat: "Tidal vegetation and backwaters", targetable: true },
+  { id: "walleye", name: "Walleye", scientificName: "Sander vitreus", short: "WAE", habitat: "Rivers and reservoirs where supported", targetable: true },
+  { id: "yellow-perch", name: "Yellow perch", scientificName: "Perca flavescens", short: "YEP", habitat: "Reservoir edges and tidal tributaries", targetable: true },
+  { id: "white-perch", name: "White perch", scientificName: "Morone americana", short: "WHP", habitat: "Tidal fresh and brackish water", targetable: true },
+  { id: "striped-bass", name: "Striped bass", scientificName: "Morone saxatilis", short: "STB", habitat: "Large reservoirs and tidal rivers", targetable: true },
+  { id: "muskellunge", name: "Muskellunge", scientificName: "Esox masquinongy", short: "MUS", habitat: "Large rivers where agency evidence supports them", targetable: true },
+
+  // Fish-community records observed in the regional USGS Aquatic GAP import.
+  // These are searchable reference pages, but are not offered as bite-scoring
+  // targets until a species-specific activity profile has been reviewed.
+  { id: "american-eel", name: "American eel", scientificName: "Anguilla rostrata", short: "AEL", habitat: "Migratory rivers, connected streams, and tidal headwaters", family: "Freshwater eels", targetable: false },
+  { id: "blacknose-dace", name: "Blacknose dace", scientificName: "Rhinichthys atratulus", short: "BND", habitat: "Rocky headwater streams, riffles, and runs", family: "Minnows and chubs", targetable: false },
+  { id: "brown-bullhead", name: "Brown bullhead", scientificName: "Ameiurus nebulosus", short: "BBH", habitat: "Ponds, lakes, and slow vegetated water", family: "Bullhead catfishes", targetable: false },
+  { id: "creek-chub", name: "Creek chub", scientificName: "Semotilus atromaculatus", short: "CKC", habitat: "Small streams, pools, and undercut banks", family: "Minnows and chubs", targetable: false },
+  { id: "fallfish", name: "Fallfish", scientificName: "Semotilus corporalis", short: "FAL", habitat: "Clear rivers and larger streams with pools", family: "Minnows and chubs", targetable: false },
+  { id: "green-sunfish", name: "Green sunfish", scientificName: "Lepomis cyanellus", short: "GSF", habitat: "Warm ponds, creeks, and shoreline cover", family: "Sunfishes", targetable: false },
+  { id: "longnose-dace", name: "Longnose dace", scientificName: "Rhinichthys cataractae", short: "LND", habitat: "Fast rocky riffles in cool streams", family: "Minnows and chubs", targetable: false },
+  { id: "mottled-sculpin", name: "Mottled sculpin", scientificName: "Cottus bairdii", short: "MSC", habitat: "Cold, clean rocky streams", family: "Sculpins", targetable: false },
+  { id: "northern-hogsucker", name: "Northern hog sucker", scientificName: "Hypentelium nigricans", short: "NHS", habitat: "Clear rocky riffles and runs", family: "Suckers and redhorses", targetable: false },
+  { id: "pumpkinseed", name: "Pumpkinseed", scientificName: "Lepomis gibbosus", short: "PKS", habitat: "Vegetated ponds, lakes, and slow water", family: "Sunfishes", targetable: false },
+  { id: "rock-bass", name: "Rock bass", scientificName: "Ambloplites rupestris", short: "RKB", habitat: "Rocky rivers, streams, and lake shorelines", family: "Sunfishes", targetable: false },
+  { id: "shorthead-redhorse", name: "Shorthead redhorse", scientificName: "Moxostoma macrolepidotum", short: "SHR", habitat: "Medium and large rivers with clean gravel", family: "Suckers and redhorses", targetable: false },
+  { id: "tessellated-darter", name: "Tessellated darter", scientificName: "Etheostoma olmstedi", short: "TSD", habitat: "Streams with slow to moderate current over sand and gravel", family: "Perches and darters", targetable: false },
+  { id: "white-sucker", name: "White sucker", scientificName: "Catostomus commersonii", short: "WSK", habitat: "Cool streams, rivers, and lake shallows", family: "Suckers and redhorses", targetable: false },
+  { id: "yellow-bullhead", name: "Yellow bullhead", scientificName: "Ameiurus natalis", short: "YBH", habitat: "Warm ponds and slow vegetated water", family: "Bullhead catfishes", targetable: false },
+  { id: "white-catfish", name: "White catfish", scientificName: "Ameiurus catus", short: "WCF", habitat: "Tidal rivers, estuaries, and slow lower rivers", family: "Bullhead catfishes", targetable: false },
+  { id: "gizzard-shad", name: "Gizzard shad", scientificName: "Dorosoma cepedianum", short: "GZS", habitat: "Reservoirs and large rivers; open-water forage schools", family: "Herrings and shads", targetable: false },
 ];
+
+export const targetSpecies = species.filter((item) => item.targetable);
 
 const shenandoahSmallmouth = (
   freshness: string,
@@ -581,9 +607,48 @@ const rejectedEvidenceClaimKeys = new Set(
   ),
 );
 const evidenceAllowed = (locationId: string, evidence: SpeciesEvidence) =>
-  evidence.evidenceType === "modeled" || !rejectedEvidenceClaimKeys.has(
+  evidence.evidenceType === "modeled" || evidence.modeled || !rejectedEvidenceClaimKeys.has(
     `${locationId}\u0000${evidence.speciesId}\u0000${evidence.sourceUrl ?? ""}`,
   );
+
+const advisoryEvidenceForLocation = (location: FishingLocationSeed): SpeciesEvidence[] => {
+  const advisory = advisoryForLocation(location);
+  const bySpecies = new Map<string, { labels: Set<string>; waterbodies: Set<string>; versions: Set<string>; sourceUrl: string }>();
+  for (const segment of advisory.segments) {
+    for (const restriction of segment.restrictions) {
+      for (const speciesId of restriction.evidenceSpeciesIds) {
+        const claim = bySpecies.get(speciesId) ?? {
+          labels: new Set<string>(),
+          waterbodies: new Set<string>(),
+          versions: new Set<string>(),
+          sourceUrl: segment.sourceUrl,
+        };
+        claim.labels.add(restriction.speciesLabel);
+        claim.waterbodies.add(segment.waterbody);
+        claim.versions.add(segment.sourceVersion);
+        bySpecies.set(speciesId, claim);
+      }
+    }
+  }
+  return [...bySpecies.entries()].map(([speciesId, claim]) => ({
+    speciesId,
+    availability: 0.7,
+    quality: null,
+    evidenceConfidence: 0.74,
+    evidenceType: "official listing",
+    evidenceSummary: `Virginia VDH's current fish-consumption advisory names ${[...claim.labels].join(" / ")} for ${[...claim.waterbodies].join(" and ")}. This supports occurrence in the mapped river segment, not a survey at this individual access point.`,
+    lastEvidence: [...claim.versions].join("; "),
+    technique: "Match presentation to the species, season, current, and visible habitat",
+    depth: "Begin around accessible cover and current breaks; adjust to actual conditions",
+    positive: ["Current, official species-specific restriction for the mapped waterbody segment"],
+    negative: [
+      "A consumption advisory is not an abundance or fishery-quality survey",
+      "The named segment is broader than this individual access point",
+    ],
+    sourceName: "Virginia Department of Health",
+    sourceUrl: claim.sourceUrl,
+  }));
+};
 
 export const locations: FishingLocation[] = sourcedLocations.map((location) => {
   const has = (list: SpeciesEvidence[], speciesId: string) => list.some((item) => item.speciesId === speciesId);
@@ -593,11 +658,18 @@ export const locations: FishingLocation[] = sourcedLocations.map((location) => {
     .filter((candidate) => evidenceAllowed(location.id, candidate))
     .filter((candidate) => !has(curatedEvidence, candidate.speciesId));
   const withWaterbody = [...curatedEvidence, ...waterbodyEvidence];
+  // A current VDH species-specific restriction supports occurrence in its
+  // precisely mapped waterbody segment. Generic groups (for example "sunfish")
+  // and "all species" rules are deliberately excluded from presence evidence.
+  const advisoryEvidence = advisoryEvidenceForLocation(location)
+    .filter((candidate) => evidenceAllowed(location.id, candidate))
+    .filter((candidate) => !has(withWaterbody, candidate.speciesId));
+  const withAdvisory = [...withWaterbody, ...advisoryEvidence];
   // Modeled nearby-reach (Aquatic GAP) evidence fills any remaining gaps.
   const aquaticGapEvidence = aquaticGapEvidenceForLocation(location)
     .filter((candidate) => evidenceAllowed(location.id, candidate))
-    .filter((candidate) => !has(withWaterbody, candidate.speciesId));
-  const documented = [...withWaterbody, ...aquaticGapEvidence];
+    .filter((candidate) => !has(withAdvisory, candidate.speciesId));
+  const documented = [...withAdvisory, ...aquaticGapEvidence];
   // Only when a water has no documented evidence at all, add clearly-labeled
   // basin-inferred species so public waters aren't left blank.
   const inferred = documented.length === 0 ? inferredEvidenceFor(location) : [];

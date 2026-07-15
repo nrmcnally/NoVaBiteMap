@@ -68,8 +68,6 @@ export type ForecastInput = {
   wadingSelected?: boolean;
 };
 
-const clamp = (value: number, low = 0, high = 1) => Math.max(low, Math.min(high, value));
-
 function maxWindMph(value: string) {
   const matches = value.match(/\d+(?:\.\d+)?/g)?.map(Number) ?? [];
   return Math.max(0, ...matches);

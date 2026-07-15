@@ -3,7 +3,7 @@
 import { AlertTriangle, CheckCircle2, Clock3, DatabaseZap, ExternalLink, Fish, MapPin, ServerCog, ShieldCheck } from "lucide-react";
 import { TopNav } from "../../components/TopNav";
 import { advisorySegments } from "../../lib/advisories";
-import { locations, sourceLinks, species } from "../../lib/data";
+import { locations, sourceLinks, species, targetSpecies } from "../../lib/data";
 import { hydrologyAssociations } from "../../lib/hydrology";
 import { publicDataStats } from "../../lib/public-evidence";
 
@@ -36,7 +36,7 @@ export function DataHealthClient({ adminName }: { adminName: string }) {
         </header>
         <section className="health-stats">
           <article><MapPin size={21} /><strong>{locations.length}</strong><span>Verified locations</span><small>Multi-agency access catalog</small></article>
-          <article><Fish size={21} /><strong>{species.length}</strong><span>Species profiles</span><small>Configuration catalog</small></article>
+          <article><Fish size={21} /><strong>{species.length}</strong><span>Species tracked</span><small>{targetSpecies.length} bite-scoring profiles</small></article>
           <article><DatabaseZap size={21} /><strong>{evidenceCount}</strong><span>Evidence links</span><small>Source-attributed</small></article>
           <article className="warning-stat"><AlertTriangle size={21} /><strong>{missingEvidence}</strong><span>Access-only records</span><small>Excluded from species ranking</small></article>
         </section>

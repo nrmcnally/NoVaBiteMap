@@ -139,11 +139,17 @@ export type InsufficientSpecies = {
   evidenceType: string;
 };
 
+export type CommunitySpecies = InsufficientSpecies & {
+  scientificName: string | null;
+  modeled: boolean;
+};
+
 export type WhatsBitingResponse = {
   location: { id: string; name: string; waterbody: string; waterbodyType: string; county: string };
   liveConditions: boolean;
   hydrologyAvailable: boolean;
   species: ScoredSpecies[];
+  community: CommunitySpecies[];
   insufficient: InsufficientSpecies[];
   disclaimer: string;
 };

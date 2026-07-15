@@ -7,6 +7,8 @@ export type AdvisoryRestriction = {
   label: string;
   speciesLabel: string;
   speciesIds: string[];
+  /** Exact species this rule can support as segment-level occurrence evidence. */
+  evidenceSpeciesIds: string[];
   appliesToAllSpecies?: boolean;
   contaminant: string;
   sizeQualifier?: string;
@@ -48,6 +50,7 @@ const twoMeals = (id: string, speciesLabel: string, speciesIds: string[], contam
   label: "No more than 2 meals/month",
   speciesLabel,
   speciesIds,
+  evidenceSpeciesIds: speciesIds,
   contaminant,
   sizeQualifier,
 });
@@ -58,6 +61,7 @@ const doNotEat = (id: string, speciesLabel: string, speciesIds: string[], contam
   label: "Do not eat",
   speciesLabel,
   speciesIds,
+  evidenceSpeciesIds: speciesIds,
   contaminant,
   sizeQualifier,
 });
@@ -78,9 +82,12 @@ export const advisorySegments: AdvisorySegment[] = [
     restrictions: [
       doNotEat("shen-pcb-carp", "Carp", ["common-carp"], "PCBs"),
       doNotEat("shen-pcb-channel-cat", "Channel Catfish", ["channel-catfish"], "PCBs"),
-      doNotEat("shen-pcb-white-sucker", "White Sucker", [], "PCBs"),
-      twoMeals("shen-pcb-rock-bass", "Rock Bass", [], "PCBs"),
-      twoMeals("shen-pcb-sunfish", "Sunfish", ["bluegill", "redbreast-sunfish"], "PCBs"),
+      doNotEat("shen-pcb-white-sucker", "White Sucker", ["white-sucker"], "PCBs"),
+      twoMeals("shen-pcb-rock-bass", "Rock Bass", ["rock-bass"], "PCBs"),
+      {
+        ...twoMeals("shen-pcb-sunfish", "Sunfish", ["bluegill", "redbreast-sunfish", "green-sunfish", "pumpkinseed"], "PCBs"),
+        evidenceSpeciesIds: [],
+      },
       twoMeals("shen-pcb-smallmouth", "Smallmouth Bass", ["smallmouth-bass"], "PCBs"),
       twoMeals("shen-pcb-largemouth", "Largemouth Bass", ["largemouth-bass"], "PCBs"),
     ],
@@ -98,6 +105,7 @@ export const advisorySegments: AdvisorySegment[] = [
     restrictions: [{
       ...twoMeals("shen-mercury-all", "All species", [], "Mercury"),
       appliesToAllSpecies: true,
+      evidenceSpeciesIds: [],
     }],
     locationIds: shenandoahMercuryLocations,
     sourceUrl: vdhShenandoah2025Url,
@@ -112,17 +120,23 @@ export const advisorySegments: AdvisorySegment[] = [
     contaminants: ["PCBs"],
     restrictions: [
       doNotEat("potomac-pcb-carp", "Carp", ["common-carp"], "PCBs"),
-      doNotEat("potomac-pcb-eel", "American Eel", [], "PCBs"),
+      doNotEat("potomac-pcb-eel", "American Eel", ["american-eel"], "PCBs"),
       doNotEat("potomac-pcb-channel-large", "Channel Catfish", ["channel-catfish"], "PCBs", "18 inches or longer"),
       twoMeals("potomac-pcb-channel-small", "Channel Catfish", ["channel-catfish"], "PCBs", "shorter than 18 inches"),
-      twoMeals("potomac-pcb-bullhead", "Bullhead Catfish", [], "PCBs"),
+      {
+        ...twoMeals("potomac-pcb-bullhead", "Bullhead Catfish", ["brown-bullhead", "yellow-bullhead"], "PCBs"),
+        evidenceSpeciesIds: [],
+      },
       twoMeals("potomac-pcb-largemouth", "Largemouth Bass", ["largemouth-bass"], "PCBs"),
       twoMeals("potomac-pcb-striped", "Anadromous Striped Bass", ["striped-bass"], "PCBs"),
-      twoMeals("potomac-pcb-sunfish", "Sunfish species", ["bluegill", "redbreast-sunfish"], "PCBs"),
+      {
+        ...twoMeals("potomac-pcb-sunfish", "Sunfish species", ["bluegill", "redbreast-sunfish", "green-sunfish", "pumpkinseed"], "PCBs"),
+        evidenceSpeciesIds: [],
+      },
       twoMeals("potomac-pcb-smallmouth", "Smallmouth Bass", ["smallmouth-bass"], "PCBs"),
-      twoMeals("potomac-pcb-white-cat", "White Catfish", [], "PCBs"),
+      twoMeals("potomac-pcb-white-cat", "White Catfish", ["white-catfish"], "PCBs"),
       twoMeals("potomac-pcb-white-perch", "White Perch", ["white-perch"], "PCBs"),
-      twoMeals("potomac-pcb-gizzard", "Gizzard Shad", [], "PCBs"),
+      twoMeals("potomac-pcb-gizzard", "Gizzard Shad", ["gizzard-shad"], "PCBs"),
       twoMeals("potomac-pcb-yellow-perch", "Yellow Perch", ["yellow-perch"], "PCBs"),
     ],
     locationIds: tidalPotomacTributaryLocations,

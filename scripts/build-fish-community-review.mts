@@ -183,7 +183,7 @@ const recency = (value: string | null) => {
 function main() {
   const here = dirname(fileURLToPath(import.meta.url));
   const seed = JSON.parse(readFileSync(resolve(here, "../apps/api/app/data/seed_export.json"), "utf8")) as {
-    species: Array<{ id: string; name: string }>;
+    species: Array<{ id: string; name: string; targetable?: boolean }>;
     locations: Location[];
   };
   const vafwis = JSON.parse(
@@ -198,7 +198,7 @@ function main() {
   const verdicts = JSON.parse(
     readFileSync(resolve(here, "../docs/data/fish-community-verdicts.json"), "utf8"),
   ) as ReviewVerdicts;
-  const targetSpeciesIds = new Set(seed.species.map((species) => species.id));
+  const targetSpeciesIds = new Set(seed.species.filter((species) => species.targetable !== false).map((species) => species.id));
   const approvedWildTroutIds = new Set(verdicts.recordReviews.dwrWildTrout.approvedObjectIds);
   const approvedAnadromousIds = new Set(verdicts.recordReviews.dwrAnadromous.approvedObjectIds);
   const rejectedPotentialAnadromousIds = new Set(verdicts.recordReviews.dwrAnadromous.potentialDoNotPromoteObjectIds);
@@ -455,6 +455,9 @@ function main() {
   const unverifiedRuntimeDirectClaimCount = locations.reduce((count, location) => count +
     location.priorAgentClaims.filter((claim) => claim.reviewStatus === "needs-adversarial-reverification").length,
   0);
+  const missingSourceRuntimeDirectClaimCount = locations.reduce((count, location) => count +
+    location.priorAgentClaims.filter((claim) => !claim.modeled && !claim.sourceUrl).length,
+  0);
   const rejectedClaimCount = verdicts.priorClaimReviews.filter((review) =>
     review.verdict.startsWith("removed-") || review.verdict.startsWith("rejected-")
   ).length + verdicts.sourceClaimRejections.reduce(
@@ -479,6 +482,7 @@ function main() {
         verifiedRuntimeClaimCount,
         removedOrRejectedPriorClaimCount: rejectedClaimCount,
         unverifiedRuntimeDirectClaimCount,
+        missingSourceRuntimeDirectClaimCount,
         newlyPromotedClaimCount: 0,
       },
     },
@@ -526,12 +530,13 @@ function main() {
     `- ${locations.length} total catalog locations retained for adversarial review\n` +
     `- ${guessReliant.length} locations currently rely only on modeled/nearby evidence\n` +
     `- ${targetCandidateCount} guess-reliant locations now have exact-named-water agency target-fish candidates\n` +
-    `- ${nonTargetOnlyCount} have exact-water agency records only for non-target fish currently outside the guide\n` +
+    `- ${nonTargetOnlyCount} have exact-water agency records only for community fish without a reviewed target profile\n` +
     `- ${noCandidateCount} have no exact-water primary-source candidate and still require another source\n\n` +
     `- ${approvedClaimCount} exact-water claims across ${approvedClaimLocationCount} locations have passed the first adversarial source review\n` +
     `- ${verifiedRuntimeClaimCount} prior-agent claims already present in runtime are now independently verified or corroborated\n` +
     `- ${rejectedClaimCount} unsupported prior-agent claims have been removed or rejected\n` +
     `- ${unverifiedRuntimeDirectClaimCount} live direct claims still need adversarial re-verification\n` +
+    `- ${missingSourceRuntimeDirectClaimCount} live direct claims are missing a source URL\n` +
     `- 0 newly researched candidate claims have been promoted into live rankings\n\n` +
     `## Promotion gate\n\n` +
     `A claim can be approved only after exact-water/segment, exact species, observation date, source provenance, contradictory evidence, and public-access status are reviewed. Automated candidates are never promoted by this script.\n`;
@@ -540,6 +545,12 @@ function main() {
     `Built review ledger: ${guessReliant.length} guess-reliant; ${targetCandidateCount} target candidates; ` +
     `${nonTargetOnlyCount} non-target-only; ${noCandidateCount} unresolved.`,
   );
+  if (process.argv.includes("--check") && (unverifiedRuntimeDirectClaimCount || missingSourceRuntimeDirectClaimCount)) {
+    throw new Error(
+      `Direct evidence review incomplete: ${unverifiedRuntimeDirectClaimCount} unverified and ` +
+      `${missingSourceRuntimeDirectClaimCount} missing source URLs.`,
+    );
+  }
 }
 
 main();

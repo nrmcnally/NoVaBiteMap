@@ -25,6 +25,11 @@ const isTinyBranch = (name: string) => SKIP_BRANCHES && /\bbranch\b/i.test(name)
 
 type Ring = number[][];
 type PolyFeature = { name: string; rings: Ring[] };
+type ArcFeature = {
+  attributes?: Record<string, string | number | null | undefined>;
+  geometry?: { rings?: Ring[]; paths?: number[][][] };
+};
+type ArcQueryResponse = { features?: ArcFeature[]; error?: unknown };
 
 function envParam(sr = 4326) {
   return {
@@ -38,13 +43,13 @@ function envParam(sr = 4326) {
 async function fetchJson(url: string, params: Record<string, string>) {
   const response = await fetch(`${url}?${new URLSearchParams(params)}`);
   if (!response.ok) throw new Error(`HTTP ${response.status} for ${url}`);
-  const data = await response.json();
+  const data = await response.json() as ArcQueryResponse;
   if (data.error) throw new Error(`ArcGIS error: ${JSON.stringify(data.error).slice(0, 160)}`);
   return data;
 }
 
 async function fetchPaged(url: string, where: string, outFields: string, opts: Record<string, string> = {}, page = 800) {
-  const all: any[] = [];
+  const all: ArcFeature[] = [];
   let offset = 0;
   for (let guard = 0; guard < 60; guard += 1) {
     const data = await fetchJson(url, {

@@ -81,12 +81,13 @@ function isInferred(evidence: { evidenceType: string; evidenceSummary?: string; 
 
 export function localSpeciesWaters(speciesId: string): SpeciesLocation[] {
   const rows: SpeciesLocation[] = [];
+  const targetable = speciesById(speciesId)?.targetable ?? false;
   for (const loc of locations) {
     const evidence = loc.evidence.find((e) => e.speciesId === speciesId);
     if (!evidence) continue;
     const opp = opportunityFor(loc, speciesId);
     if (!opp) continue;
-    const score = opp.score;
+    const score = targetable ? opp.score : Math.round(opp.availability * 100);
     rows.push({
       id: loc.id,
       name: loc.name,

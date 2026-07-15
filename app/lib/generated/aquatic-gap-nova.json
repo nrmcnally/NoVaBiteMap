@@ -83,9 +83,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700080102",
-      "huc12Name": "Middle Catoctin Creek"
+      ]
     },
     {
       "comid": 4505210,
@@ -132,9 +130,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700080102",
-      "huc12Name": "Middle Catoctin Creek"
+      ]
     },
     {
       "comid": 4505244,
@@ -181,9 +177,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700080102",
-      "huc12Name": "Middle Catoctin Creek"
+      ]
     },
     {
       "comid": 4505302,
@@ -230,9 +224,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700080103",
-      "huc12Name": "Lower Catoctin Creek"
+      ]
     },
     {
       "comid": 4505334,
@@ -279,9 +271,7 @@
         "white-perch",
         "white-sucker",
         "yellow-perch"
-      ],
-      "huc12": "020700080103",
-      "huc12Name": "Lower Catoctin Creek"
+      ]
     },
     {
       "comid": 4505384,
@@ -327,9 +317,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700080201",
-      "huc12Name": "Israel Creek"
+      ]
     },
     {
       "comid": 4505612,
@@ -376,9 +364,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700080302",
-      "huc12Name": "Catoctin Creek"
+      ]
     },
     {
       "comid": 4505722,
@@ -425,9 +411,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700080402",
-      "huc12Name": "Little Monocacy River"
+      ]
     },
     {
       "comid": 4505756,
@@ -474,9 +458,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700080802",
-      "huc12Name": "Great Seneca Creek"
+      ]
     },
     {
       "comid": 4505812,
@@ -523,9 +505,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700080802",
-      "huc12Name": "Great Seneca Creek"
+      ]
     },
     {
       "comid": 4506148,
@@ -572,9 +552,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700080801",
-      "huc12Name": "Little Seneca Creek"
+      ]
     },
     {
       "comid": 4506380,
@@ -620,9 +598,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700081001",
-      "huc12Name": "Muddy Branch"
+      ]
     },
     {
       "comid": 4506526,
@@ -669,9 +645,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700080904",
-      "huc12Name": "Selden Island-Potomac River"
+      ]
     },
     {
       "comid": 4506772,
@@ -718,9 +692,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700081002",
-      "huc12Name": "Watts Branch"
+      ]
     },
     {
       "comid": 4506940,
@@ -767,9 +739,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700080505",
-      "huc12Name": "Wancopin Creek-Goose Creek"
+      ]
     },
     {
       "comid": 4506982,
@@ -816,9 +786,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700081003",
-      "huc12Name": "Cabin John Creek"
+      ]
     },
     {
       "comid": 4507068,
@@ -865,9 +833,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700081003",
-      "huc12Name": "Cabin John Creek"
+      ]
     },
     {
       "comid": 4507070,
@@ -914,9 +880,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700081003",
-      "huc12Name": "Cabin John Creek"
+      ]
     },
     {
       "comid": 4507406,
@@ -963,9 +927,7 @@
         "white-perch",
         "white-sucker",
         "yellow-perch"
-      ],
-      "huc12": "020700080403",
-      "huc12Name": "Limestone Branch-Potomac River"
+      ]
     },
     {
       "comid": 4507412,
@@ -1012,9 +974,7 @@
         "white-perch",
         "white-sucker",
         "yellow-perch"
-      ],
-      "huc12": "020700080403",
-      "huc12Name": "Limestone Branch-Potomac River"
+      ]
     },
     {
       "comid": 4507500,
@@ -1061,9 +1021,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700080904",
-      "huc12Name": "Selden Island-Potomac River"
+      ]
     },
     {
       "comid": 4512668,
@@ -1110,9 +1068,7 @@
         "white-crappie",
         "white-perch",
         "yellow-bullhead"
-      ],
-      "huc12": "020700080401",
-      "huc12Name": "Tuscarora Creek-Potomac River"
+      ]
     },
     {
       "comid": 4528133,
@@ -1159,9 +1115,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110101",
-      "huc12Name": "Piney Branch-Mattawoman Creek"
+      ]
     },
     {
       "comid": 4528147,
@@ -1208,9 +1162,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700110101",
-      "huc12Name": "Piney Branch-Mattawoman Creek"
+      ]
     },
     {
       "comid": 4528153,
@@ -1257,9 +1209,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110401",
-      "huc12Name": "Jordan Swamp-Zekiah Swamp Run"
+      ]
     },
     {
       "comid": 4528167,
@@ -1306,9 +1256,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110401",
-      "huc12Name": "Jordan Swamp-Zekiah Swamp Run"
+      ]
     },
     {
       "comid": 4528199,
@@ -1355,9 +1303,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110401",
-      "huc12Name": "Jordan Swamp-Zekiah Swamp Run"
+      ]
     },
     {
       "comid": 4528213,
@@ -1404,9 +1350,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110401",
-      "huc12Name": "Jordan Swamp-Zekiah Swamp Run"
+      ]
     },
     {
       "comid": 4528249,
@@ -1453,9 +1397,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110304",
-      "huc12Name": "Port Tobacco River"
+      ]
     },
     {
       "comid": 4528255,
@@ -1502,9 +1444,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110304",
-      "huc12Name": "Port Tobacco River"
+      ]
     },
     {
       "comid": 4528275,
@@ -1551,9 +1491,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110501",
-      "huc12Name": "Newport Run"
+      ]
     },
     {
       "comid": 4528303,
@@ -1600,9 +1538,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110501",
-      "huc12Name": "Newport Run"
+      ]
     },
     {
       "comid": 4528403,
@@ -1649,9 +1585,7 @@
         "white-perch",
         "white-sucker",
         "yellow-perch"
-      ],
-      "huc12": "020700110101",
-      "huc12Name": "Piney Branch-Mattawoman Creek"
+      ]
     },
     {
       "comid": 4528993,
@@ -1698,9 +1632,7 @@
         "white-perch",
         "white-sucker",
         "yellow-perch"
-      ],
-      "huc12": "020700110101",
-      "huc12Name": "Piney Branch-Mattawoman Creek"
+      ]
     },
     {
       "comid": 4529035,
@@ -1747,9 +1679,7 @@
         "white-perch",
         "white-sucker",
         "yellow-perch"
-      ],
-      "huc12": "020700110101",
-      "huc12Name": "Piney Branch-Mattawoman Creek"
+      ]
     },
     {
       "comid": 4529057,
@@ -1796,9 +1726,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110101",
-      "huc12Name": "Piney Branch-Mattawoman Creek"
+      ]
     },
     {
       "comid": 4529081,
@@ -1845,9 +1773,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110101",
-      "huc12Name": "Piney Branch-Mattawoman Creek"
+      ]
     },
     {
       "comid": 4529083,
@@ -1894,9 +1820,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110101",
-      "huc12Name": "Piney Branch-Mattawoman Creek"
+      ]
     },
     {
       "comid": 4529155,
@@ -1943,9 +1867,7 @@
         "white-perch",
         "white-sucker",
         "yellow-perch"
-      ],
-      "huc12": "020700110102",
-      "huc12Name": "Marbury Run-Mattawoman Creek"
+      ]
     },
     {
       "comid": 4529289,
@@ -1992,9 +1914,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110304",
-      "huc12Name": "Port Tobacco River"
+      ]
     },
     {
       "comid": 4529451,
@@ -2040,9 +1960,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110302",
-      "huc12Name": "Burgess Creek-Nanjemoy Creek"
+      ]
     },
     {
       "comid": 4529485,
@@ -2089,9 +2007,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110302",
-      "huc12Name": "Burgess Creek-Nanjemoy Creek"
+      ]
     },
     {
       "comid": 4529597,
@@ -2137,9 +2053,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110106",
-      "huc12Name": "Tank Creek-Potomac River"
+      ]
     },
     {
       "comid": 4529605,
@@ -2186,9 +2100,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700110105",
-      "huc12Name": "Chopawamsic Creek"
+      ]
     },
     {
       "comid": 4529609,
@@ -2234,9 +2146,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110106",
-      "huc12Name": "Tank Creek-Potomac River"
+      ]
     },
     {
       "comid": 4529611,
@@ -2283,9 +2193,7 @@
         "walleye",
         "white-crappie",
         "yellow-bullhead"
-      ],
-      "huc12": "020700110304",
-      "huc12Name": "Port Tobacco River"
+      ]
     },
     {
       "comid": 4529617,
@@ -2332,9 +2240,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110304",
-      "huc12Name": "Port Tobacco River"
+      ]
     },
     {
       "comid": 4529635,
@@ -2380,9 +2286,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110102",
-      "huc12Name": "Marbury Run-Mattawoman Creek"
+      ]
     },
     {
       "comid": 4529669,
@@ -2428,9 +2332,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110102",
-      "huc12Name": "Marbury Run-Mattawoman Creek"
+      ]
     },
     {
       "comid": 4529695,
@@ -2476,9 +2378,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110106",
-      "huc12Name": "Tank Creek-Potomac River"
+      ]
     },
     {
       "comid": 4529697,
@@ -2524,9 +2424,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110106",
-      "huc12Name": "Tank Creek-Potomac River"
+      ]
     },
     {
       "comid": 4530525,
@@ -2573,9 +2471,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110403",
-      "huc12Name": "Clark Run-Zekiah Swamp Run"
+      ]
     },
     {
       "comid": 4530627,
@@ -2621,9 +2517,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110501",
-      "huc12Name": "Newport Run"
+      ]
     },
     {
       "comid": 4530669,
@@ -2670,9 +2564,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110305",
-      "huc12Name": "Gambo Creek-Potomac River"
+      ]
     },
     {
       "comid": 4530687,
@@ -2719,9 +2611,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110501",
-      "huc12Name": "Newport Run"
+      ]
     },
     {
       "comid": 4530851,
@@ -2768,9 +2658,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110701",
-      "huc12Name": "Saint Clements Creek-Frontal Potomac RIver"
+      ]
     },
     {
       "comid": 4530891,
@@ -2817,9 +2705,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110306",
-      "huc12Name": "Piccowaxen Creek-Frontal Potomac River"
+      ]
     },
     {
       "comid": 4530915,
@@ -2866,9 +2752,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110701",
-      "huc12Name": "Saint Clements Creek-Frontal Potomac RIver"
+      ]
     },
     {
       "comid": 4530987,
@@ -2915,9 +2799,7 @@
         "white-perch",
         "white-sucker",
         "yellow-perch"
-      ],
-      "huc12": "020700110702",
-      "huc12Name": "McIntosh Run"
+      ]
     },
     {
       "comid": 4531081,
@@ -2964,9 +2846,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110505",
-      "huc12Name": "Whites Neck Creek-Frontal Potomac RIver"
+      ]
     },
     {
       "comid": 4531091,
@@ -3013,9 +2893,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110901",
-      "huc12Name": "Western Branch Saint Marys River-Saint Marys River"
+      ]
     },
     {
       "comid": 4531103,
@@ -3062,9 +2940,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110901",
-      "huc12Name": "Western Branch Saint Marys River-Saint Marys River"
+      ]
     },
     {
       "comid": 4531133,
@@ -3111,9 +2987,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110901",
-      "huc12Name": "Western Branch Saint Marys River-Saint Marys River"
+      ]
     },
     {
       "comid": 4531785,
@@ -3160,9 +3034,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110503",
-      "huc12Name": "Chaptico Creek"
+      ]
     },
     {
       "comid": 4531825,
@@ -3209,9 +3081,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110901",
-      "huc12Name": "Western Branch Saint Marys River-Saint Marys River"
+      ]
     },
     {
       "comid": 4531851,
@@ -3258,9 +3128,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110902",
-      "huc12Name": "Eastern Branch-Saint Marys River"
+      ]
     },
     {
       "comid": 4533709,
@@ -3307,9 +3175,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700110302",
-      "huc12Name": "Burgess Creek-Nanjemoy Creek"
+      ]
     },
     {
       "comid": 4533855,
@@ -3356,9 +3222,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110301",
-      "huc12Name": "Hancock Run-Nanjemoy Creek"
+      ]
     },
     {
       "comid": 4533927,
@@ -3405,9 +3269,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700110206",
-      "huc12Name": "Beaverdam Run-Potomac Creek"
+      ]
     },
     {
       "comid": 4534313,
@@ -3454,9 +3316,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110302",
-      "huc12Name": "Burgess Creek-Nanjemoy Creek"
+      ]
     },
     {
       "comid": 4534347,
@@ -3502,9 +3362,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110301",
-      "huc12Name": "Hancock Run-Nanjemoy Creek"
+      ]
     },
     {
       "comid": 4534349,
@@ -3550,9 +3408,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110301",
-      "huc12Name": "Hancock Run-Nanjemoy Creek"
+      ]
     },
     {
       "comid": 4534351,
@@ -3598,9 +3454,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110301",
-      "huc12Name": "Hancock Run-Nanjemoy Creek"
+      ]
     },
     {
       "comid": 4534521,
@@ -3646,9 +3500,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110301",
-      "huc12Name": "Hancock Run-Nanjemoy Creek"
+      ]
     },
     {
       "comid": 4534539,
@@ -3694,9 +3546,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110301",
-      "huc12Name": "Hancock Run-Nanjemoy Creek"
+      ]
     },
     {
       "comid": 4534777,
@@ -3742,9 +3592,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110106",
-      "huc12Name": "Tank Creek-Potomac River"
+      ]
     },
     {
       "comid": 4539957,
@@ -3790,9 +3638,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110102",
-      "huc12Name": "Marbury Run-Mattawoman Creek"
+      ]
     },
     {
       "comid": 4539963,
@@ -3838,9 +3684,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110106",
-      "huc12Name": "Tank Creek-Potomac River"
+      ]
     },
     {
       "comid": 5890244,
@@ -3887,9 +3731,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700040702",
-      "huc12Name": "Dennis Creek-Back Creek"
+      ]
     },
     {
       "comid": 5890498,
@@ -3936,9 +3778,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700040802",
-      "huc12Name": "Headwaters Conococheague Creek"
+      ]
     },
     {
       "comid": 5891228,
@@ -3985,9 +3825,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700041102",
-      "huc12Name": "Little Conococheague Creek"
+      ]
     },
     {
       "comid": 5891232,
@@ -4034,9 +3872,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700040806",
-      "huc12Name": "Rockdale Run-Conococheague Creek"
+      ]
     },
     {
       "comid": 5891256,
@@ -4083,9 +3919,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700041006",
-      "huc12Name": "Antietam Creek"
+      ]
     },
     {
       "comid": 5891290,
@@ -4131,9 +3965,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700040305",
-      "huc12Name": "Lanes Run-Licking Creek"
+      ]
     },
     {
       "comid": 5891312,
@@ -4180,9 +4012,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700041004",
-      "huc12Name": "Little Antietam Creek"
+      ]
     },
     {
       "comid": 5891326,
@@ -4228,9 +4058,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700040807",
-      "huc12Name": "Meadow Brook-Conococheague Creek"
+      ]
     },
     {
       "comid": 5891362,
@@ -4276,9 +4104,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700041004",
-      "huc12Name": "Little Antietam Creek"
+      ]
     },
     {
       "comid": 5891402,
@@ -4324,9 +4150,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700041004",
-      "huc12Name": "Little Antietam Creek"
+      ]
     },
     {
       "comid": 5891410,
@@ -4373,9 +4197,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700040807",
-      "huc12Name": "Meadow Brook-Conococheague Creek"
+      ]
     },
     {
       "comid": 5891422,
@@ -4422,9 +4244,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700040807",
-      "huc12Name": "Meadow Brook-Conococheague Creek"
+      ]
     },
     {
       "comid": 5891468,
@@ -4471,9 +4291,7 @@
         "white-perch",
         "white-sucker",
         "yellow-perch"
-      ],
-      "huc12": "020700040505",
-      "huc12Name": "Cherry Run-Potomac River"
+      ]
     },
     {
       "comid": 5891556,
@@ -4519,9 +4337,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700041007",
-      "huc12Name": "Beaver Creek"
+      ]
     },
     {
       "comid": 5891562,
@@ -4567,9 +4383,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700041007",
-      "huc12Name": "Beaver Creek"
+      ]
     },
     {
       "comid": 5891622,
@@ -4615,9 +4429,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700041007",
-      "huc12Name": "Beaver Creek"
+      ]
     },
     {
       "comid": 5891648,
@@ -4663,9 +4475,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700041007",
-      "huc12Name": "Beaver Creek"
+      ]
     },
     {
       "comid": 5891828,
@@ -4712,9 +4522,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700041102",
-      "huc12Name": "Little Conococheague Creek"
+      ]
     },
     {
       "comid": 5891916,
@@ -4761,9 +4569,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700041103",
-      "huc12Name": "Camp Spring Run-Potomac River"
+      ]
     },
     {
       "comid": 5891948,
@@ -4810,9 +4616,7 @@
         "warmouth",
         "white-crappie",
         "white-perch"
-      ],
-      "huc12": "020700041103",
-      "huc12Name": "Camp Spring Run-Potomac River"
+      ]
     },
     {
       "comid": 5892854,
@@ -4859,9 +4663,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700040305",
-      "huc12Name": "Lanes Run-Licking Creek"
+      ]
     },
     {
       "comid": 5892858,
@@ -4908,9 +4710,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700040305",
-      "huc12Name": "Lanes Run-Licking Creek"
+      ]
     },
     {
       "comid": 5892896,
@@ -4956,9 +4756,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700040305",
-      "huc12Name": "Lanes Run-Licking Creek"
+      ]
     },
     {
       "comid": 5892934,
@@ -5005,9 +4803,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700040503",
-      "huc12Name": "Warm Spring Run"
+      ]
     },
     {
       "comid": 5893140,
@@ -5054,9 +4850,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700040203",
-      "huc12Name": "Middle Sleepy Creek"
+      ]
     },
     {
       "comid": 5893274,
@@ -5102,9 +4896,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700040501",
-      "huc12Name": "Minnow Run-Little Tonoloway Creek"
+      ]
     },
     {
       "comid": 5893282,
@@ -5151,9 +4943,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700040501",
-      "huc12Name": "Minnow Run-Little Tonoloway Creek"
+      ]
     },
     {
       "comid": 5893446,
@@ -5200,9 +4990,7 @@
         "white-perch",
         "white-sucker",
         "yellow-bullhead"
-      ],
-      "huc12": "020700040502",
-      "huc12Name": "Sir Johns Run-Potomac River"
+      ]
     },
     {
       "comid": 5894344,
@@ -5249,9 +5037,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700041008",
-      "huc12Name": "Dog Creek-Little Antietam Creek"
+      ]
     },
     {
       "comid": 5894376,
@@ -5298,9 +5084,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700040908",
-      "huc12Name": "Evans Run-Opequon Creek"
+      ]
     },
     {
       "comid": 5894518,
@@ -5347,9 +5131,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700041107",
-      "huc12Name": "Elks Run"
+      ]
     },
     {
       "comid": 5894728,
@@ -5396,9 +5178,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700041105",
-      "huc12Name": "Rockymarsh Run"
+      ]
     },
     {
       "comid": 5894770,
@@ -5445,9 +5225,7 @@
         "white-crappie",
         "white-perch",
         "yellow-bullhead"
-      ],
-      "huc12": "020700041106",
-      "huc12Name": "Rattlesnake Run-Potomac River"
+      ]
     },
     {
       "comid": 5894772,
@@ -5493,9 +5271,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700041106",
-      "huc12Name": "Rattlesnake Run-Potomac River"
+      ]
     },
     {
       "comid": 5894782,
@@ -5542,9 +5318,7 @@
         "white-perch",
         "white-sucker",
         "yellow-perch"
-      ],
-      "huc12": "020700041106",
-      "huc12Name": "Rattlesnake Run-Potomac River"
+      ]
     },
     {
       "comid": 5895422,
@@ -5591,9 +5365,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700040404",
-      "huc12Name": "Brush Creek-Back Creek"
+      ]
     },
     {
       "comid": 5895446,
@@ -5640,9 +5412,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700040404",
-      "huc12Name": "Brush Creek-Back Creek"
+      ]
     },
     {
       "comid": 5895792,
@@ -5689,9 +5459,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700040403",
-      "huc12Name": "Hogue Creek"
+      ]
     },
     {
       "comid": 5895820,
@@ -5738,9 +5506,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700040903",
-      "huc12Name": "Redbud Run-Opequon Creek"
+      ]
     },
     {
       "comid": 5895834,
@@ -5787,9 +5553,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700040903",
-      "huc12Name": "Redbud Run-Opequon Creek"
+      ]
     },
     {
       "comid": 5895952,
@@ -5836,9 +5600,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700040902",
-      "huc12Name": "Abrams Creek"
+      ]
     },
     {
       "comid": 5896150,
@@ -5885,9 +5647,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700040904",
-      "huc12Name": "Turkey Run-Opequon Creek"
+      ]
     },
     {
       "comid": 5906809,
@@ -5934,9 +5694,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700051002",
-      "huc12Name": "Flint Run-South Fork Shenandoah River"
+      ]
     },
     {
       "comid": 5907177,
@@ -5983,9 +5741,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700050903",
-      "huc12Name": "Stony Run-South Fork Shenandoah River"
+      ]
     },
     {
       "comid": 5907191,
@@ -6032,9 +5788,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700050901",
-      "huc12Name": "Fultz Run-South Fork Shenandoah River"
+      ]
     },
     {
       "comid": 5908085,
@@ -6081,9 +5835,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700050503",
-      "huc12Name": "Muddy Creek"
+      ]
     },
     {
       "comid": 5908235,
@@ -6130,9 +5882,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700050603",
-      "huc12Name": "Cooks Creek"
+      ]
     },
     {
       "comid": 5908237,
@@ -6178,9 +5928,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700050605",
-      "huc12Name": "Pleasant Run-North River"
+      ]
     },
     {
       "comid": 5908303,
@@ -6227,9 +5975,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700050605",
-      "huc12Name": "Pleasant Run-North River"
+      ]
     },
     {
       "comid": 5908375,
@@ -6276,9 +6022,7 @@
         "white-perch",
         "white-sucker",
         "yellow-perch"
-      ],
-      "huc12": "020700050705",
-      "huc12Name": "Paine Run-South River"
+      ]
     },
     {
       "comid": 5908407,
@@ -6325,9 +6069,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700050302",
-      "huc12Name": "Falling Spring Run-Middle River"
+      ]
     },
     {
       "comid": 5908437,
@@ -6374,9 +6116,7 @@
         "white-perch",
         "white-sucker",
         "yellow-perch"
-      ],
-      "huc12": "020700050203",
-      "huc12Name": "Barterbrook Branch-Christians Creek"
+      ]
     },
     {
       "comid": 5908461,
@@ -6423,9 +6163,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700050704",
-      "huc12Name": "Porterfield Run-South River"
+      ]
     },
     {
       "comid": 5908585,
@@ -6472,9 +6210,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700050802",
-      "huc12Name": "Town of Keezletown-Cub Run"
+      ]
     },
     {
       "comid": 5908759,
@@ -6521,9 +6257,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700050606",
-      "huc12Name": "Mill Creek-North River"
+      ]
     },
     {
       "comid": 5908933,
@@ -6570,9 +6304,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700050401",
-      "huc12Name": "Skidmore Fork-North River"
+      ]
     },
     {
       "comid": 5909157,
@@ -6619,9 +6351,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700050401",
-      "huc12Name": "Skidmore Fork-North River"
+      ]
     },
     {
       "comid": 5909159,
@@ -6668,9 +6398,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700050105",
-      "huc12Name": "Moffett Creek"
+      ]
     },
     {
       "comid": 5910077,
@@ -6717,9 +6445,7 @@
         "white-perch",
         "white-sucker",
         "yellow-perch"
-      ],
-      "huc12": "020700050703",
-      "huc12Name": "Inch Branch-Back Creek"
+      ]
     },
     {
       "comid": 8440853,
@@ -6766,9 +6492,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700060702",
-      "huc12Name": "Lower Passage Creek"
+      ]
     },
     {
       "comid": 8440951,
@@ -6815,9 +6539,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700060102",
-      "huc12Name": "Crab Run"
+      ]
     },
     {
       "comid": 8440983,
@@ -6864,9 +6586,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700060305",
-      "huc12Name": "Crooked Run-Mill Creek"
+      ]
     },
     {
       "comid": 8441259,
@@ -6913,9 +6633,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700060501",
-      "huc12Name": "Narrow Passage Creek-North Fork Shenandoah River"
+      ]
     },
     {
       "comid": 8441293,
@@ -6962,9 +6680,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700060103",
-      "huc12Name": "Capon Run-North Fork Shenandoah River"
+      ]
     },
     {
       "comid": 8441303,
@@ -7011,9 +6727,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700060204",
-      "huc12Name": "Gap Creek-Smith Creek"
+      ]
     },
     {
       "comid": 8441315,
@@ -7060,9 +6774,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700060303",
-      "huc12Name": "Long Meadow-North Fork Shenandoah River"
+      ]
     },
     {
       "comid": 8444774,
@@ -7109,9 +6821,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700070303",
-      "huc12Name": "Furnace Run-Shenandoah River"
+      ]
     },
     {
       "comid": 8444800,
@@ -7158,9 +6868,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700070202",
-      "huc12Name": "Dog Run-Shenandoah River"
+      ]
     },
     {
       "comid": 8445006,
@@ -7207,9 +6915,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700070301",
-      "huc12Name": "Bullskin Run"
+      ]
     },
     {
       "comid": 8445016,
@@ -7256,9 +6962,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700070304",
-      "huc12Name": "Flowing Springs Run-Shenandoah River"
+      ]
     },
     {
       "comid": 8464881,
@@ -7305,9 +7009,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020801030202",
-      "huc12Name": "Carter Run"
+      ]
     },
     {
       "comid": 8465095,
@@ -7354,9 +7056,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020801030405",
-      "huc12Name": "Indian Run-Hazel River"
+      ]
     },
     {
       "comid": 8465411,
@@ -7403,9 +7103,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020801030202",
-      "huc12Name": "Carter Run"
+      ]
     },
     {
       "comid": 8465759,
@@ -7452,9 +7150,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020801030101",
-      "huc12Name": "Buck Run-Rappahannock River"
+      ]
     },
     {
       "comid": 8466745,
@@ -7501,9 +7197,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020801030501",
-      "huc12Name": "Hidens Branch-Mountain Run"
+      ]
     },
     {
       "comid": 8467027,
@@ -7550,9 +7244,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020801031003",
-      "huc12Name": "Potato Run-Rapidan River"
+      ]
     },
     {
       "comid": 8467041,
@@ -7599,9 +7291,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020801031003",
-      "huc12Name": "Potato Run-Rapidan River"
+      ]
     },
     {
       "comid": 8467067,
@@ -7648,9 +7338,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020801031003",
-      "huc12Name": "Potato Run-Rapidan River"
+      ]
     },
     {
       "comid": 8467197,
@@ -7697,9 +7385,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020801031003",
-      "huc12Name": "Potato Run-Rapidan River"
+      ]
     },
     {
       "comid": 8468425,
@@ -7746,9 +7432,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020801030703",
-      "huc12Name": "South River-Rapidan River"
+      ]
     },
     {
       "comid": 8468503,
@@ -7795,9 +7479,7 @@
         "white-perch",
         "white-sucker",
         "yellow-perch"
-      ],
-      "huc12": "020801030906",
-      "huc12Name": "Great Run-Robinson River"
+      ]
     },
     {
       "comid": 8476100,
@@ -7844,9 +7526,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020801040102",
-      "huc12Name": "Hazel Run-Rappahannock River"
+      ]
     },
     {
       "comid": 8476204,
@@ -7893,9 +7573,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020801040201",
-      "huc12Name": "Mount Creek-Rappahannock River"
+      ]
     },
     {
       "comid": 8476388,
@@ -7942,9 +7620,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020801040303",
-      "huc12Name": "Peedee Creek-Rappahannock River"
+      ]
     },
     {
       "comid": 8476924,
@@ -7991,9 +7667,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020801040101",
-      "huc12Name": "Motts Run Reservoir-Rappahannock River"
+      ]
     },
     {
       "comid": 8477070,
@@ -8040,9 +7714,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020801040303",
-      "huc12Name": "Peedee Creek-Rappahannock River"
+      ]
     },
     {
       "comid": 8479202,
@@ -8088,9 +7760,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020801040504",
-      "huc12Name": "Cedar Creek-Rappahannock River"
+      ]
     },
     {
       "comid": 8501378,
@@ -8137,9 +7807,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020801060502",
-      "huc12Name": "Terrys Run"
+      ]
     },
     {
       "comid": 8501918,
@@ -8186,9 +7854,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020801060602",
-      "huc12Name": "Pigeon Run-Lake Anna"
+      ]
     },
     {
       "comid": 8502642,
@@ -8235,9 +7901,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020801060101",
-      "huc12Name": "Dove Fork-South Anna River"
+      ]
     },
     {
       "comid": 8505348,
@@ -8284,9 +7948,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020801060803",
-      "huc12Name": "Long Creek-North Anna River"
+      ]
     },
     {
       "comid": 8505354,
@@ -8333,9 +7995,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020801060803",
-      "huc12Name": "Long Creek-North Anna River"
+      ]
     },
     {
       "comid": 8505494,
@@ -8382,9 +8042,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020801060202",
-      "huc12Name": "Fork Creek-South Anna River"
+      ]
     },
     {
       "comid": 8505860,
@@ -8431,9 +8089,7 @@
         "white-perch",
         "white-sucker",
         "yellow-perch"
-      ],
-      "huc12": "020801060803",
-      "huc12Name": "Long Creek-North Anna River"
+      ]
     },
     {
       "comid": 8506290,
@@ -8480,9 +8136,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020801060901",
-      "huc12Name": "Mechumps Creek-Pamunkey River"
+      ]
     },
     {
       "comid": 8506300,
@@ -8529,9 +8183,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020801060304",
-      "huc12Name": "Cedar Creek-South Anna River"
+      ]
     },
     {
       "comid": 8506470,
@@ -8578,9 +8230,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020801060304",
-      "huc12Name": "Cedar Creek-South Anna River"
+      ]
     },
     {
       "comid": 8507208,
@@ -8627,9 +8277,7 @@
         "white-perch",
         "white-sucker",
         "yellow-perch"
-      ],
-      "huc12": "020801061003",
-      "huc12Name": "Black Creek"
+      ]
     },
     {
       "comid": 8507256,
@@ -8676,9 +8324,7 @@
         "white-perch",
         "white-sucker",
         "yellow-perch"
-      ],
-      "huc12": "020801061003",
-      "huc12Name": "Black Creek"
+      ]
     },
     {
       "comid": 8507606,
@@ -8725,9 +8371,7 @@
         "white-perch",
         "white-sucker",
         "yellow-perch"
-      ],
-      "huc12": "020801060903",
-      "huc12Name": "Judy Swamp-Pamunkey River"
+      ]
     },
     {
       "comid": 8508794,
@@ -8774,9 +8418,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020801060103",
-      "huc12Name": "Roundabout Creek-South Anna River"
+      ]
     },
     {
       "comid": 8508804,
@@ -8823,9 +8465,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020801060103",
-      "huc12Name": "Roundabout Creek-South Anna River"
+      ]
     },
     {
       "comid": 22336303,
@@ -8871,9 +8511,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100202",
-      "huc12Name": "Paint Branch"
+      ]
     },
     {
       "comid": 22336397,
@@ -8920,9 +8558,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100203",
-      "huc12Name": "Northeast Branch Anacostia River"
+      ]
     },
     {
       "comid": 22337313,
@@ -8969,9 +8605,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100101",
-      "huc12Name": "Upper Rock Creek"
+      ]
     },
     {
       "comid": 22337321,
@@ -9018,9 +8652,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700100101",
-      "huc12Name": "Upper Rock Creek"
+      ]
     },
     {
       "comid": 22337445,
@@ -9067,9 +8699,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100102",
-      "huc12Name": "Lower Rock Creek"
+      ]
     },
     {
       "comid": 22337737,
@@ -9116,9 +8746,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100203",
-      "huc12Name": "Northeast Branch Anacostia River"
+      ]
     },
     {
       "comid": 22337753,
@@ -9165,9 +8793,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700100201",
-      "huc12Name": "Northwest Branch Anacostia River"
+      ]
     },
     {
       "comid": 22337779,
@@ -9214,9 +8840,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100204",
-      "huc12Name": "Lower Anacostia River"
+      ]
     },
     {
       "comid": 22337799,
@@ -9263,9 +8887,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100303",
-      "huc12Name": "Henson Creek"
+      ]
     },
     {
       "comid": 22337801,
@@ -9312,9 +8934,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100301",
-      "huc12Name": "Fourmile Run-Potomac River"
+      ]
     },
     {
       "comid": 22337815,
@@ -9361,9 +8981,7 @@
         "white-perch",
         "white-sucker",
         "yellow-perch"
-      ],
-      "huc12": "020700100303",
-      "huc12Name": "Henson Creek"
+      ]
     },
     {
       "comid": 22337867,
@@ -9409,9 +9027,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100307",
-      "huc12Name": "Little Hunting Creek-Potomac River"
+      ]
     },
     {
       "comid": 22337981,
@@ -9458,9 +9074,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700100303",
-      "huc12Name": "Henson Creek"
+      ]
     },
     {
       "comid": 22337985,
@@ -9507,9 +9121,7 @@
         "white-perch",
         "white-sucker",
         "yellow-perch"
-      ],
-      "huc12": "020700100304",
-      "huc12Name": "Tinkers Creek"
+      ]
     },
     {
       "comid": 22337997,
@@ -9556,9 +9168,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700100305",
-      "huc12Name": "Piscataway Creek"
+      ]
     },
     {
       "comid": 22338561,
@@ -9605,9 +9215,7 @@
         "white-perch",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100102",
-      "huc12Name": "Lower Rock Creek"
+      ]
     },
     {
       "comid": 22338873,
@@ -9654,9 +9262,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700100704",
-      "huc12Name": "Cub Run"
+      ]
     },
     {
       "comid": 22338961,
@@ -9703,9 +9309,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100502",
-      "huc12Name": "Catletts Branch-Broad Run"
+      ]
     },
     {
       "comid": 22339207,
@@ -9752,9 +9356,7 @@
         "white-perch",
         "white-sucker",
         "yellow-perch"
-      ],
-      "huc12": "020700100705",
-      "huc12Name": "Lower Bull Run"
+      ]
     },
     {
       "comid": 22339359,
@@ -9800,9 +9402,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100307",
-      "huc12Name": "Little Hunting Creek-Potomac River"
+      ]
     },
     {
       "comid": 22339747,
@@ -9848,9 +9448,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100305",
-      "huc12Name": "Piscataway Creek"
+      ]
     },
     {
       "comid": 22339793,
@@ -9896,9 +9494,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100805",
-      "huc12Name": "Occoquan Bay-Potomac River"
+      ]
     },
     {
       "comid": 22340331,
@@ -9945,9 +9541,7 @@
         "white-crappie",
         "white-perch",
         "yellow-perch"
-      ],
-      "huc12": "020700100402",
-      "huc12Name": "Accotink Creek"
+      ]
     },
     {
       "comid": 22340603,
@@ -9993,9 +9587,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100307",
-      "huc12Name": "Little Hunting Creek-Potomac River"
+      ]
     },
     {
       "comid": 22340617,
@@ -10041,9 +9633,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100307",
-      "huc12Name": "Little Hunting Creek-Potomac River"
+      ]
     },
     {
       "comid": 22340625,
@@ -10089,9 +9679,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100307",
-      "huc12Name": "Little Hunting Creek-Potomac River"
+      ]
     },
     {
       "comid": 22340633,
@@ -10137,9 +9725,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100307",
-      "huc12Name": "Little Hunting Creek-Potomac River"
+      ]
     },
     {
       "comid": 22340661,
@@ -10185,9 +9771,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100307",
-      "huc12Name": "Little Hunting Creek-Potomac River"
+      ]
     },
     {
       "comid": 22340665,
@@ -10233,9 +9817,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100305",
-      "huc12Name": "Piscataway Creek"
+      ]
     },
     {
       "comid": 22340667,
@@ -10281,9 +9863,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100307",
-      "huc12Name": "Little Hunting Creek-Potomac River"
+      ]
     },
     {
       "comid": 22340669,
@@ -10329,9 +9909,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100305",
-      "huc12Name": "Piscataway Creek"
+      ]
     },
     {
       "comid": 22340685,
@@ -10377,9 +9955,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100307",
-      "huc12Name": "Little Hunting Creek-Potomac River"
+      ]
     },
     {
       "comid": 22340739,
@@ -10425,9 +10001,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100307",
-      "huc12Name": "Little Hunting Creek-Potomac River"
+      ]
     },
     {
       "comid": 22340825,
@@ -10473,9 +10047,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100307",
-      "huc12Name": "Little Hunting Creek-Potomac River"
+      ]
     },
     {
       "comid": 22340885,
@@ -10521,9 +10093,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100805",
-      "huc12Name": "Occoquan Bay-Potomac River"
+      ]
     },
     {
       "comid": 22340887,
@@ -10569,9 +10139,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100805",
-      "huc12Name": "Occoquan Bay-Potomac River"
+      ]
     },
     {
       "comid": 22341033,
@@ -10617,9 +10185,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100305",
-      "huc12Name": "Piscataway Creek"
+      ]
     },
     {
       "comid": 22341043,
@@ -10665,9 +10231,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100805",
-      "huc12Name": "Occoquan Bay-Potomac River"
+      ]
     },
     {
       "comid": 22341047,
@@ -10713,9 +10277,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100805",
-      "huc12Name": "Occoquan Bay-Potomac River"
+      ]
     },
     {
       "comid": 22343515,
@@ -10761,9 +10323,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100301",
-      "huc12Name": "Fourmile Run-Potomac River"
+      ]
     },
     {
       "comid": 22343521,
@@ -10809,9 +10369,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100307",
-      "huc12Name": "Little Hunting Creek-Potomac River"
+      ]
     },
     {
       "comid": 22343523,
@@ -10857,9 +10415,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100305",
-      "huc12Name": "Piscataway Creek"
+      ]
     },
     {
       "comid": 22343529,
@@ -10905,9 +10461,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100307",
-      "huc12Name": "Little Hunting Creek-Potomac River"
+      ]
     },
     {
       "comid": 22343543,
@@ -10953,9 +10507,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700100805",
-      "huc12Name": "Occoquan Bay-Potomac River"
+      ]
     },
     {
       "comid": 932070056,
@@ -11002,9 +10554,7 @@
         "white-sucker",
         "yellow-bullhead",
         "yellow-perch"
-      ],
-      "huc12": "020700110304",
-      "huc12Name": "Port Tobacco River"
+      ]
     }
   ]
 }

@@ -31,7 +31,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import type { FormEvent, ReactNode } from "react";
 import { FishingMap } from "./FishingMap";
 import { consumptionAdviceFor } from "../lib/advisories";
-import { locations, species, speciesById, type AccessMethod, type WaterbodyType } from "../lib/data";
+import { locations, targetSpecies as species, speciesById, type AccessMethod, type WaterbodyType } from "../lib/data";
 import { opportunityFor } from "../lib/scoring";
 import { estimateTravel, googleDirectionsUrl, type TravelOrigin } from "../lib/travel";
 
@@ -169,7 +169,8 @@ export function ExploreDashboard() {
     if (speciesIds.length === 0) return;
     const selectedIsVisible = visibleRows.some(({ location }) => location.id === selectedId);
     if (ranked.length && (!selectedId || !selectedIsVisible)) {
-      setSelectedId(ranked[0].location.id);
+      const timer = window.setTimeout(() => setSelectedId(ranked[0].location.id), 0);
+      return () => window.clearTimeout(timer);
     }
   }, [ranked, selectedId, speciesIds, visibleRows]);
 
@@ -215,11 +216,12 @@ export function ExploreDashboard() {
   }, []);
 
   useEffect(() => {
-    void loadFavorites();
+    const timer = window.setTimeout(() => void loadFavorites(), 0);
     const refresh = () => void loadFavorites();
     window.addEventListener("focus", refresh);
     window.addEventListener("bitemap:favorites-changed", refresh);
     return () => {
+      window.clearTimeout(timer);
       window.removeEventListener("focus", refresh);
       window.removeEventListener("bitemap:favorites-changed", refresh);
     };
@@ -228,11 +230,14 @@ export function ExploreDashboard() {
   // Preselect a species from the URL (?species=id), e.g. the fish guide's
   // "See on map" link.
   useEffect(() => {
-    const requested = new URLSearchParams(window.location.search).get("species");
-    if (requested && speciesById(requested)) {
-      setSpeciesIds([requested]);
-      setResultsOpen(true);
-    }
+    const timer = window.setTimeout(() => {
+      const requested = new URLSearchParams(window.location.search).get("species");
+      if (requested && speciesById(requested)) {
+        setSpeciesIds([requested]);
+        setResultsOpen(true);
+      }
+    }, 0);
+    return () => window.clearTimeout(timer);
   }, []);
 
   // Close any open top-of-page filter dropdown when clicking/pressing outside it
@@ -285,7 +290,9 @@ export function ExploreDashboard() {
   }, [selectedLocation]);
 
   useEffect(() => {
-    if (selectedLocation) void refreshConditions();
+    if (!selectedLocation) return;
+    const timer = window.setTimeout(() => void refreshConditions(), 0);
+    return () => window.clearTimeout(timer);
   }, [refreshConditions, selectedLocation]);
 
   async function toggleSaved(id: string) {

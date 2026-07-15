@@ -226,6 +226,414 @@
       "speciesId": "smallmouth-bass",
       "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/",
       "verdict": "removed-wrong-river-segment"
+    },
+    {
+      "locationId": "vernon-view",
+      "speciesId": "blue-catfish",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "vernon-view",
+      "speciesId": "white-perch",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "vernon-view",
+      "speciesId": "yellow-perch",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "riverside-park-potomac",
+      "speciesId": "blue-catfish",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "riverside-park-potomac",
+      "speciesId": "white-perch",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "riverside-park-potomac",
+      "speciesId": "yellow-perch",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "dyke-marsh",
+      "speciesId": "blue-catfish",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "dyke-marsh",
+      "speciesId": "white-perch",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "dyke-marsh",
+      "speciesId": "yellow-perch",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "belle-haven",
+      "speciesId": "blue-catfish",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "belle-haven",
+      "speciesId": "white-perch",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "belle-haven",
+      "speciesId": "yellow-perch",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "jones-point",
+      "speciesId": "blue-catfish",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "jones-point",
+      "speciesId": "white-perch",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "jones-point",
+      "speciesId": "yellow-perch",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "daingerfield-island",
+      "speciesId": "blue-catfish",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "daingerfield-island",
+      "speciesId": "white-perch",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "daingerfield-island",
+      "speciesId": "yellow-perch",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "gravelly-point",
+      "speciesId": "blue-catfish",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "gravelly-point",
+      "speciesId": "white-perch",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "gravelly-point",
+      "speciesId": "yellow-perch",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "theodore-roosevelt-island",
+      "speciesId": "blue-catfish",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "theodore-roosevelt-island",
+      "speciesId": "white-perch",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "theodore-roosevelt-island",
+      "speciesId": "yellow-perch",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "leesylvania",
+      "speciesId": "blue-catfish",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "leesylvania",
+      "speciesId": "white-perch",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "leesylvania",
+      "speciesId": "yellow-perch",
+      "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
+      "verdict": "removed-multi-river-generalization-not-potomac-specific"
+    },
+    {
+      "locationId": "vernon-view",
+      "speciesId": "largemouth-bass",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "vernon-view",
+      "speciesId": "northern-snakehead",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "vernon-view",
+      "speciesId": "channel-catfish",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "riverside-park-potomac",
+      "speciesId": "largemouth-bass",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "riverside-park-potomac",
+      "speciesId": "northern-snakehead",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "riverside-park-potomac",
+      "speciesId": "channel-catfish",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "dyke-marsh",
+      "speciesId": "largemouth-bass",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "dyke-marsh",
+      "speciesId": "northern-snakehead",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "dyke-marsh",
+      "speciesId": "channel-catfish",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "belle-haven",
+      "speciesId": "largemouth-bass",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "belle-haven",
+      "speciesId": "northern-snakehead",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "belle-haven",
+      "speciesId": "channel-catfish",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "jones-point",
+      "speciesId": "largemouth-bass",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "jones-point",
+      "speciesId": "northern-snakehead",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "jones-point",
+      "speciesId": "channel-catfish",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "daingerfield-island",
+      "speciesId": "largemouth-bass",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "daingerfield-island",
+      "speciesId": "northern-snakehead",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "daingerfield-island",
+      "speciesId": "channel-catfish",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "gravelly-point",
+      "speciesId": "largemouth-bass",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "gravelly-point",
+      "speciesId": "northern-snakehead",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "gravelly-point",
+      "speciesId": "channel-catfish",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "theodore-roosevelt-island",
+      "speciesId": "largemouth-bass",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "theodore-roosevelt-island",
+      "speciesId": "northern-snakehead",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "theodore-roosevelt-island",
+      "speciesId": "channel-catfish",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "leesylvania",
+      "speciesId": "largemouth-bass",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "leesylvania",
+      "speciesId": "northern-snakehead",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "leesylvania",
+      "speciesId": "channel-catfish",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-tributary-forecast-misapplied-to-main-stem"
+    },
+    {
+      "locationId": "vernon-view",
+      "speciesId": "common-carp",
+      "sourceUrl": "https://dwr.virginia.gov/blog/10-top-virginia-fishing-waters-rivers/",
+      "verdict": "removed-insufficient-taxon-specificity"
+    },
+    {
+      "locationId": "riverside-park-potomac",
+      "speciesId": "common-carp",
+      "sourceUrl": "https://dwr.virginia.gov/blog/10-top-virginia-fishing-waters-rivers/",
+      "verdict": "removed-insufficient-taxon-specificity"
+    },
+    {
+      "locationId": "dyke-marsh",
+      "speciesId": "common-carp",
+      "sourceUrl": "https://dwr.virginia.gov/blog/10-top-virginia-fishing-waters-rivers/",
+      "verdict": "removed-insufficient-taxon-specificity"
+    },
+    {
+      "locationId": "belle-haven",
+      "speciesId": "common-carp",
+      "sourceUrl": "https://dwr.virginia.gov/blog/10-top-virginia-fishing-waters-rivers/",
+      "verdict": "removed-insufficient-taxon-specificity"
+    },
+    {
+      "locationId": "jones-point",
+      "speciesId": "common-carp",
+      "sourceUrl": "https://dwr.virginia.gov/blog/10-top-virginia-fishing-waters-rivers/",
+      "verdict": "removed-insufficient-taxon-specificity"
+    },
+    {
+      "locationId": "daingerfield-island",
+      "speciesId": "common-carp",
+      "sourceUrl": "https://dwr.virginia.gov/blog/10-top-virginia-fishing-waters-rivers/",
+      "verdict": "removed-insufficient-taxon-specificity"
+    },
+    {
+      "locationId": "gravelly-point",
+      "speciesId": "common-carp",
+      "sourceUrl": "https://dwr.virginia.gov/blog/10-top-virginia-fishing-waters-rivers/",
+      "verdict": "removed-insufficient-taxon-specificity"
+    },
+    {
+      "locationId": "theodore-roosevelt-island",
+      "speciesId": "common-carp",
+      "sourceUrl": "https://dwr.virginia.gov/blog/10-top-virginia-fishing-waters-rivers/",
+      "verdict": "removed-insufficient-taxon-specificity"
+    },
+    {
+      "locationId": "leesylvania",
+      "speciesId": "common-carp",
+      "sourceUrl": "https://dwr.virginia.gov/blog/10-top-virginia-fishing-waters-rivers/",
+      "verdict": "removed-insufficient-taxon-specificity"
+    },
+    {
+      "locationId": "nhd-stream-robinson-river",
+      "speciesId": "rainbow-trout",
+      "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/catchable-trout-stocking-plan.pdf",
+      "verdict": "removed-designation-does-not-identify-species"
+    },
+    {
+      "locationId": "nhd-stream-robinson-river",
+      "speciesId": "brook-trout",
+      "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/catchable-trout-stocking-plan.pdf",
+      "verdict": "removed-designation-does-not-identify-species"
+    },
+    {
+      "locationId": "nhd-stream-rose-river",
+      "speciesId": "rainbow-trout",
+      "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/catchable-trout-stocking-plan.pdf",
+      "verdict": "removed-designation-does-not-identify-species"
+    },
+    {
+      "locationId": "nhd-stream-rose-river",
+      "speciesId": "brook-trout",
+      "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/catchable-trout-stocking-plan.pdf",
+      "verdict": "removed-designation-does-not-identify-species"
+    },
+    {
+      "locationId": "lake-fairfax",
+      "speciesId": "black-crappie",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/fairfax-lake/",
+      "verdict": "removed-insufficient-taxon-specificity"
     }
   ]
 }

@@ -16,6 +16,7 @@ export type GlossaryFish = {
   topWater: string;
   evidenceCount: number;
   image: string | null;
+  targetable: boolean;
 };
 
 const NATIVE_LABEL: Record<string, string> = { native: "Native", introduced: "Introduced", invasive: "Invasive" };
@@ -72,11 +73,12 @@ export function FishGlossaryClient({ fish }: { fish: GlossaryFish[] }) {
                   <div className="fish-guide-card-body">
                     <div className="fish-guide-title">
                       <h3>{item.name}</h3>
+                      {!item.targetable && <span className="community-badge">Community record</span>}
                       {item.nativeStatus && <span className={`native-badge native-${item.nativeStatus}`}>{NATIVE_LABEL[item.nativeStatus]}</span>}
                     </div>
                     <p className="fish-guide-sci"><em>{item.scientificName}</em></p>
                     <p className="fish-guide-signature">
-                      {[item.typicalSize, item.topWater && `favors ${item.topWater}`].filter(Boolean).join(" · ")}
+                      {[item.typicalSize, item.topWater ? `favors ${item.topWater}` : item.habitat].filter(Boolean).join(" · ")}
                     </p>
                     <span className="fish-guide-evidence">
                       {item.evidenceCount > 0 ? `${item.evidenceCount} water${item.evidenceCount === 1 ? "" : "s"}` : "No evidenced waters"}

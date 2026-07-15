@@ -51,3 +51,6 @@ __pycache__/
 !/.env.example
 /outputs/
 /work/
+/tmp/
+/.pytest_cache/
+/apps/api/.pytest_cache/
