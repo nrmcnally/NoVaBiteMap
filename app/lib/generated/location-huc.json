@@ -1,0 +1,982 @@
+{
+  "lake-curtis": {
+    "huc12": "020700110205",
+    "huc12Name": "Long Branch-Potomac Creek",
+    "huc8": "02070011"
+  },
+  "rocky-pen-park": {
+    "huc12": "020801040101",
+    "huc12Name": "Motts Run Reservoir-Rappahannock River",
+    "huc8": "02080104"
+  },
+  "lake-frederick": {
+    "huc12": "020700070101",
+    "huc12Name": "Crooked Run",
+    "huc8": "02070007"
+  },
+  "lake-brittle": {
+    "huc12": "020700100502",
+    "huc12Name": "Catletts Branch-Broad Run",
+    "huc8": "02070010"
+  },
+  "lake-burke": {
+    "huc12": "020700100401",
+    "huc12Name": "Pohick Creek",
+    "huc8": "02070010"
+  },
+  "berrys": {
+    "huc12": "020700070104",
+    "huc12Name": "Long Branch-Shenandoah River",
+    "huc8": "02070007"
+  },
+  "point-of-rocks": {
+    "huc12": "020700080401",
+    "huc12Name": "Tuscarora Creek-Potomac River",
+    "huc8": "02070008"
+  },
+  "castlemans-ferry": {
+    "huc12": "020700070202",
+    "huc12Name": "Dog Run-Shenandoah River",
+    "huc8": "02070007"
+  },
+  "morgans-ford": {
+    "huc12": "020700070102",
+    "huc12Name": "Manassas Run-Shenandoah River",
+    "huc8": "02070007"
+  },
+  "bentonville": {
+    "huc12": "020700051002",
+    "huc12Name": "Flint Run-South Fork Shenandoah River",
+    "huc8": "02070005"
+  },
+  "karo": {
+    "huc12": "020700051003",
+    "huc12Name": "Gooney Run",
+    "huc8": "02070005"
+  },
+  "front-royal": {
+    "huc12": "020700051004",
+    "huc12Name": "Punches Run-South Fork Shenandoah River",
+    "huc8": "02070005"
+  },
+  "simpsons": {
+    "huc12": "020700051004",
+    "huc12Name": "Punches Run-South Fork Shenandoah River",
+    "huc8": "02070005"
+  },
+  "catletts-ford": {
+    "huc12": "020700060703",
+    "huc12Name": "Molly Booth Run-North Fork Shenandoah River",
+    "huc8": "02070006"
+  },
+  "lockes": {
+    "huc12": "020700070202",
+    "huc12Name": "Dog Run-Shenandoah River",
+    "huc8": "02070007"
+  },
+  "riverton": {
+    "huc12": "020700060703",
+    "huc12Name": "Molly Booth Run-North Fork Shenandoah River",
+    "huc8": "02070006"
+  },
+  "kellys-ford": {
+    "huc12": "020801030602",
+    "huc12Name": "Ruffans Run-Rappahannock River",
+    "huc8": "02080103"
+  },
+  "hopyard-landing": {
+    "huc12": "020801040201",
+    "huc12Name": "Mount Creek-Rappahannock River",
+    "huc8": "02080104"
+  },
+  "fredericksburg-city-docks": {
+    "huc12": "020801040102",
+    "huc12Name": "Hazel Run-Rappahannock River",
+    "huc8": "02080104"
+  },
+  "motts-landing": {
+    "huc12": "020801040101",
+    "huc12Name": "Motts Run Reservoir-Rappahannock River",
+    "huc8": "02080104"
+  },
+  "lake-fairfax": {
+    "huc12": "020700081004",
+    "huc12Name": "Difficult Run",
+    "huc8": "02070008"
+  },
+  "lake-accotink": {
+    "huc12": "020700100402",
+    "huc12Name": "Accotink Creek",
+    "huc8": "02070010"
+  },
+  "riverbend-park": {
+    "huc12": "020700081005",
+    "huc12Name": "Nichols Run-Potomac River",
+    "huc8": "02070008"
+  },
+  "huntsman-lake": {
+    "huc12": "020700100401",
+    "huc12Name": "Pohick Creek",
+    "huc8": "02070010"
+  },
+  "royal-lake": {
+    "huc12": "020700100401",
+    "huc12Name": "Pohick Creek",
+    "huc8": "02070010"
+  },
+  "walney-pond": {
+    "huc12": "020700100704",
+    "huc12Name": "Cub Run",
+    "huc8": "02070010"
+  },
+  "hidden-pond": {
+    "huc12": "020700100401",
+    "huc12Name": "Pohick Creek",
+    "huc8": "02070010"
+  },
+  "lake-mercer": {
+    "huc12": "020700100401",
+    "huc12Name": "Pohick Creek",
+    "huc8": "02070010"
+  },
+  "riverside-park-potomac": {
+    "huc12": "020700100307",
+    "huc12Name": "Little Hunting Creek-Potomac River",
+    "huc8": "02070010"
+  },
+  "vernon-view": {
+    "huc12": "020700100307",
+    "huc12Name": "Little Hunting Creek-Potomac River",
+    "huc8": "02070010"
+  },
+  "dyke-marsh": {
+    "huc12": "020700100307",
+    "huc12Name": "Little Hunting Creek-Potomac River",
+    "huc8": "02070010"
+  },
+  "woodglen-lake": {
+    "huc12": "020700100401",
+    "huc12Name": "Pohick Creek",
+    "huc8": "02070010"
+  },
+  "belle-haven": {
+    "huc12": "020700100307",
+    "huc12Name": "Little Hunting Creek-Potomac River",
+    "huc8": "02070010"
+  },
+  "jones-point": {
+    "huc12": "020700100307",
+    "huc12Name": "Little Hunting Creek-Potomac River",
+    "huc8": "02070010"
+  },
+  "daingerfield-island": {
+    "huc12": "020700100301",
+    "huc12Name": "Fourmile Run-Potomac River",
+    "huc8": "02070010"
+  },
+  "roaches-run": {
+    "huc12": "020700100103",
+    "huc12Name": "Pimmit Run-Potomac River",
+    "huc8": "02070010"
+  },
+  "gravelly-point": {
+    "huc12": "020700100103",
+    "huc12Name": "Pimmit Run-Potomac River",
+    "huc8": "02070010"
+  },
+  "pohick-bay": {
+    "huc12": "020700100401",
+    "huc12Name": "Pohick Creek",
+    "huc8": "02070010"
+  },
+  "fountainhead": {
+    "huc12": "020700100802",
+    "huc12Name": "Occoquan Reservoir-Occoquan River",
+    "huc8": "02070010"
+  },
+  "bull-run-marina": {
+    "huc12": "020700100705",
+    "huc12Name": "Lower Bull Run",
+    "huc8": "02070010"
+  },
+  "theodore-roosevelt-island": {
+    "huc12": "020700100103",
+    "huc12Name": "Pimmit Run-Potomac River",
+    "huc8": "02070010"
+  },
+  "piscataway-crossing": {
+    "huc12": "020700080403",
+    "huc12Name": "Limestone Branch-Potomac River",
+    "huc8": "02070008"
+  },
+  "algonkian": {
+    "huc12": "020700080905",
+    "huc12Name": "Sugarland Run",
+    "huc8": "02070008"
+  },
+  "occoquan-regional": {
+    "huc12": "020700100803",
+    "huc12Name": "Belmont Bay-Occoquan River",
+    "huc8": "02070010"
+  },
+  "mason-neck": {
+    "huc12": "020700100803",
+    "huc12Name": "Belmont Bay-Occoquan River",
+    "huc8": "02070010"
+  },
+  "lake-ridge-marina": {
+    "huc12": "020700100802",
+    "huc12Name": "Occoquan Reservoir-Occoquan River",
+    "huc8": "02070010"
+  },
+  "seneca-regional": {
+    "huc12": "020700081005",
+    "huc12Name": "Nichols Run-Potomac River",
+    "huc8": "02070008"
+  },
+  "beaverdam-reservoir": {
+    "huc12": "020700080702",
+    "huc12Name": "Big Branch-Goose Creek",
+    "huc8": "02070008"
+  },
+  "leesylvania": {
+    "huc12": "020700110106",
+    "huc12Name": "Tank Creek-Potomac River",
+    "huc8": "02070011"
+  },
+  "silver-lake": {
+    "huc12": "020700100702",
+    "huc12Name": "Little Bull Run",
+    "huc8": "02070010"
+  },
+  "locust-shade": {
+    "huc12": "020700110105",
+    "huc12Name": "Chopawamsic Creek",
+    "huc8": "02070011"
+  },
+  "marumsco-acre-lake": {
+    "huc12": "020700100805",
+    "huc12Name": "Occoquan Bay-Potomac River",
+    "huc8": "02070010"
+  },
+  "occoquan-hand-carry": {
+    "huc12": "020700100801",
+    "huc12Name": "Lake Jackson-Occoquan River",
+    "huc8": "02070010"
+  },
+  "dwr-trout-312": {
+    "huc12": "020700100402",
+    "huc12Name": "Accotink Creek",
+    "huc8": "02070010"
+  },
+  "dwr-trout-257": {
+    "huc12": "020700100302",
+    "huc12Name": "Cameron Run",
+    "huc8": "02070010"
+  },
+  "dwr-trout-64": {
+    "huc12": "020700040403",
+    "huc12Name": "Hogue Creek",
+    "huc8": "02070004"
+  },
+  "great-falls": {
+    "huc12": "020700081005",
+    "huc12Name": "Nichols Run-Potomac River",
+    "huc8": "02070008"
+  },
+  "dwr-trout-36": {
+    "huc12": "020700060601",
+    "huc12Name": "Paddy Run-Cedar Creek",
+    "huc8": "02070006"
+  },
+  "dwr-trout-295": {
+    "huc12": "020700050902",
+    "huc12Name": "Pitt Spring Run-Cub Run",
+    "huc8": "02070005"
+  },
+  "dwr-trout-207": {
+    "huc12": "020700050907",
+    "huc12Name": "Pass Run-Hawksbill Creek",
+    "huc8": "02070005"
+  },
+  "dwr-trout-130": {
+    "huc12": "020700060701",
+    "huc12Name": "Upper Passage Creek",
+    "huc8": "02070006"
+  },
+  "dwr-trout-71": {
+    "huc12": "020700060305",
+    "huc12Name": "Crooked Run-Mill Creek",
+    "huc8": "02070006"
+  },
+  "dwr-trout-177": {
+    "huc12": "020700060403",
+    "huc12Name": "Painter Run-Stony Creek",
+    "huc8": "02070006"
+  },
+  "dwr-trout-50": {
+    "huc12": "020700060702",
+    "huc12Name": "Lower Passage Creek",
+    "huc8": "02070006"
+  },
+  "dwr-trout-10": {
+    "huc12": "020700060701",
+    "huc12Name": "Upper Passage Creek",
+    "huc8": "02070006"
+  },
+  "dwr-trout-55": {
+    "huc12": "020700051005",
+    "huc12Name": "Happy Creek",
+    "huc8": "02070005"
+  },
+  "dwr-trout-174": {
+    "huc12": "020700060702",
+    "huc12Name": "Lower Passage Creek",
+    "huc8": "02070006"
+  },
+  "dwr-boat-11": {
+    "huc12": "020700050606",
+    "huc12Name": "Mill Creek-North River",
+    "huc8": "02070005"
+  },
+  "dwr-boat-15": {
+    "huc12": "020700050705",
+    "huc12Name": "Paine Run-South River",
+    "huc8": "02070005"
+  },
+  "dwr-boat-30": {
+    "huc12": "020801030501",
+    "huc12Name": "Hidens Branch-Mountain Run",
+    "huc8": "02080103"
+  },
+  "dwr-boat-61": {
+    "huc12": "020700051001",
+    "huc12Name": "Jeremys Run-South Fork Shenandoah River",
+    "huc8": "02070005"
+  },
+  "dwr-boat-36": {
+    "huc12": "020700050903",
+    "huc12Name": "Stony Run-South Fork Shenandoah River",
+    "huc8": "02070005"
+  },
+  "dwr-boat-33": {
+    "huc12": "020700050901",
+    "huc12Name": "Fultz Run-South Fork Shenandoah River",
+    "huc8": "02070005"
+  },
+  "dwr-boat-99": {
+    "huc12": "020700060304",
+    "huc12Name": "Holmans Creek-North Fork Shenandoah River",
+    "huc8": "02070006"
+  },
+  "dwr-boat-79": {
+    "huc12": "020801060501",
+    "huc12Name": "Clear Creek-Pamunkey Creek",
+    "huc8": "02080106"
+  },
+  "dwr-boat-102": {
+    "huc12": "020700050705",
+    "huc12Name": "Paine Run-South River",
+    "huc8": "02070005"
+  },
+  "dwr-boat-114": {
+    "huc12": "020700060503",
+    "huc12Name": "Tumbling Run-North Fork Shenandoah River",
+    "huc8": "02070006"
+  },
+  "dwr-boat-122": {
+    "huc12": "020700060501",
+    "huc12Name": "Narrow Passage Creek-North Fork Shenandoah River",
+    "huc8": "02070006"
+  },
+  "dwr-boat-150": {
+    "huc12": "020700050803",
+    "huc12Name": "Hawksbill Creek-South Fork Shenandoah River",
+    "huc8": "02070005"
+  },
+  "dwr-boat-177": {
+    "huc12": "020700050903",
+    "huc12Name": "Stony Run-South Fork Shenandoah River",
+    "huc8": "02070005"
+  },
+  "dwr-boat-173": {
+    "huc12": "020801031105",
+    "huc12Name": "Hazel Run-Rapidan River",
+    "huc8": "02080103"
+  },
+  "dwr-boat-182": {
+    "huc12": "020801031105",
+    "huc12Name": "Hazel Run-Rapidan River",
+    "huc8": "02080103"
+  },
+  "dwr-boat-191": {
+    "huc12": "020700060503",
+    "huc12Name": "Tumbling Run-North Fork Shenandoah River",
+    "huc8": "02070006"
+  },
+  "dwr-boat-202": {
+    "huc12": "020700050905",
+    "huc12Name": "Mill Creek-South Fork Shenandoah River",
+    "huc8": "02070005"
+  },
+  "dwr-boat-216": {
+    "huc12": "020700050901",
+    "huc12Name": "Fultz Run-South Fork Shenandoah River",
+    "huc8": "02070005"
+  },
+  "dwr-boat-218": {
+    "huc12": "020700050905",
+    "huc12Name": "Mill Creek-South Fork Shenandoah River",
+    "huc8": "02070005"
+  },
+  "dwr-boat-234": {
+    "huc12": "020700050905",
+    "huc12Name": "Mill Creek-South Fork Shenandoah River",
+    "huc8": "02070005"
+  },
+  "dwr-boat-224": {
+    "huc12": "020700050804",
+    "huc12Name": "Boone Run-South Fork Shenandoah River",
+    "huc8": "02070005"
+  },
+  "nhd-wilderness-run-lake": {
+    "huc12": "020801031104",
+    "huc12Name": "Wilderness Run",
+    "huc8": "02080103"
+  },
+  "nhd-grant-lake": {
+    "huc12": "020801031104",
+    "huc12Name": "Wilderness Run",
+    "huc8": "02080103"
+  },
+  "nhd-seven-fountains-lake": {
+    "huc12": "020700060702",
+    "huc12Name": "Lower Passage Creek",
+    "huc8": "02070006"
+  },
+  "nhd-lee-lake": {
+    "huc12": "020801031104",
+    "huc12Name": "Wilderness Run",
+    "huc8": "02080103"
+  },
+  "nhd-happyland-camp-five-lake": {
+    "huc12": "020700110104",
+    "huc12Name": "Quantico Creek",
+    "huc8": "02070011"
+  },
+  "nhd-strasburg-reservoir": {
+    "huc12": "020700060702",
+    "huc12Name": "Lower Passage Creek",
+    "huc8": "02070006"
+  },
+  "nhd-woodstock-reservoir": {
+    "huc12": "020700060402",
+    "huc12Name": "Yellow Spring Run-Stony Creek",
+    "huc8": "02070006"
+  },
+  "nhd-stream-accokeek-creek": {
+    "huc12": "020700110204",
+    "huc12Name": "Accokeek Creek",
+    "huc8": "02070011"
+  },
+  "nhd-stream-backlick-run": {
+    "huc12": "020700100302",
+    "huc12Name": "Cameron Run",
+    "huc8": "02070010"
+  },
+  "nhd-stream-big-rocky-run": {
+    "huc12": "020700100704",
+    "huc12Name": "Cub Run",
+    "huc8": "02070010"
+  },
+  "nhd-stream-barnyard-run": {
+    "huc12": "020700100306",
+    "huc12Name": "Dogue Creek",
+    "huc8": "02070010"
+  },
+  "nhd-stream-brokenback-run": {
+    "huc12": "020801030401",
+    "huc12Name": "Hughes River",
+    "huc8": "02080103"
+  },
+  "nhd-stream-bullneck-run": {
+    "huc12": "020700081005",
+    "huc12Name": "Nichols Run-Potomac River",
+    "huc8": "02070008"
+  },
+  "nhd-stream-cabin-run": {
+    "huc12": "020700051004",
+    "huc12Name": "Punches Run-South Fork Shenandoah River",
+    "huc8": "02070005"
+  },
+  "nhd-stream-cameron-run": {
+    "huc12": "020700100302",
+    "huc12Name": "Cameron Run",
+    "huc8": "02070010"
+  },
+  "nhd-stream-cherry-run": {
+    "huc12": "020700100401",
+    "huc12Name": "Pohick Creek",
+    "huc8": "02070010"
+  },
+  "nhd-stream-cedar-run": {
+    "huc12": "020801030901",
+    "huc12Name": "Rose River-Robinson River",
+    "huc8": "02080103"
+  },
+  "nhd-stream-catharpin-creek": {
+    "huc12": "020700100702",
+    "huc12Name": "Little Bull Run",
+    "huc8": "02070010"
+  },
+  "nhd-stream-chotank-creek": {
+    "huc12": "020700110303",
+    "huc12Name": "Chotank Creek-Potomac River",
+    "huc8": "02070011"
+  },
+  "nhd-stream-colvin-run": {
+    "huc12": "020700081004",
+    "huc12Name": "Difficult Run",
+    "huc8": "02070008"
+  },
+  "nhd-stream-cub-run": {
+    "huc12": "020700100704",
+    "huc12Name": "Cub Run",
+    "huc8": "02070010"
+  },
+  "nhd-stream-daniels-run": {
+    "huc12": "020700100402",
+    "huc12Name": "Accotink Creek",
+    "huc8": "02070010"
+  },
+  "nhd-stream-dead-run": {
+    "huc12": "020700081005",
+    "huc12Name": "Nichols Run-Potomac River",
+    "huc8": "02070008"
+  },
+  "nhd-stream-dogue-creek": {
+    "huc12": "020700100306",
+    "huc12Name": "Dogue Creek",
+    "huc8": "02070010"
+  },
+  "nhd-stream-difficult-run": {
+    "huc12": "020700081004",
+    "huc12Name": "Difficult Run",
+    "huc8": "02070008"
+  },
+  "nhd-stream-dry-run": {
+    "huc12": "020700051002",
+    "huc12Name": "Flint Run-South Fork Shenandoah River",
+    "huc8": "02070005"
+  },
+  "nhd-stream-east-fork-dry-run": {
+    "huc12": "020700051002",
+    "huc12Name": "Flint Run-South Fork Shenandoah River",
+    "huc8": "02070005"
+  },
+  "nhd-stream-donaldson-run": {
+    "huc12": "020700100103",
+    "huc12Name": "Pimmit Run-Potomac River",
+    "huc8": "02070010"
+  },
+  "nhd-stream-doctors-run": {
+    "huc12": "020700100301",
+    "huc12Name": "Fourmile Run-Potomac River",
+    "huc8": "02070010"
+  },
+  "nhd-stream-east-hawksbill-creek": {
+    "huc12": "020700050906",
+    "huc12Name": "East Hawksbill Creek-Hawksbill Creek",
+    "huc8": "02070005"
+  },
+  "nhd-stream-flag-run": {
+    "huc12": "020700100402",
+    "huc12Name": "Accotink Creek",
+    "huc8": "02070010"
+  },
+  "nhd-stream-farm-creek": {
+    "huc12": "020700100805",
+    "huc12Name": "Occoquan Bay-Potomac River",
+    "huc8": "02070010"
+  },
+  "nhd-stream-flint-run": {
+    "huc12": "020700051002",
+    "huc12Name": "Flint Run-South Fork Shenandoah River",
+    "huc8": "02070005"
+  },
+  "nhd-stream-gap-run": {
+    "huc12": "020700080502",
+    "huc12Name": "Crooked Run-Goose Creek",
+    "huc8": "02070008"
+  },
+  "nhd-stream-gooney-run": {
+    "huc12": "020700051003",
+    "huc12Name": "Gooney Run",
+    "huc8": "02070005"
+  },
+  "nhd-stream-greasy-run": {
+    "huc12": "020700051003",
+    "huc12Name": "Gooney Run",
+    "huc8": "02070005"
+  },
+  "nhd-stream-four-mile-run": {
+    "huc12": "020700100301",
+    "huc12Name": "Fourmile Run-Potomac River",
+    "huc8": "02070010"
+  },
+  "nhd-stream-hannah-run": {
+    "huc12": "020801030401",
+    "huc12Name": "Hughes River",
+    "huc8": "02080103"
+  },
+  "nhd-stream-happy-creek": {
+    "huc12": "020700051005",
+    "huc12Name": "Happy Creek",
+    "huc8": "02070005"
+  },
+  "nhd-stream-horsepen-run": {
+    "huc12": "020700080902",
+    "huc12Name": "Horsepen Run",
+    "huc8": "02070008"
+  },
+  "nhd-stream-hazel-river": {
+    "huc12": "020801030402",
+    "huc12Name": "Sams Run-Hazel River",
+    "huc8": "02080103"
+  },
+  "nhd-stream-hughes-river": {
+    "huc12": "020801030401",
+    "huc12Name": "Hughes River",
+    "huc8": "02080103"
+  },
+  "nhd-stream-hungry-run": {
+    "huc12": "020700080701",
+    "huc12Name": "Little River",
+    "huc8": "02070008"
+  },
+  "nhd-stream-jeremys-run": {
+    "huc12": "020700051001",
+    "huc12Name": "Jeremys Run-South Fork Shenandoah River",
+    "huc8": "02070005"
+  },
+  "nhd-stream-jordan-river": {
+    "huc12": "020801030102",
+    "huc12Name": "Jordan River",
+    "huc8": "02080103"
+  },
+  "nhd-stream-indian-run": {
+    "huc12": "020700100302",
+    "huc12Name": "Cameron Run",
+    "huc8": "02070010"
+  },
+  "nhd-stream-kanes-creek": {
+    "huc12": "020700100803",
+    "huc12Name": "Belmont Bay-Occoquan River",
+    "huc8": "02070010"
+  },
+  "nhd-stream-keyser-run": {
+    "huc12": "020801030302",
+    "huc12Name": "Covington River",
+    "huc8": "02080103"
+  },
+  "nhd-stream-kinsey-run": {
+    "huc12": "020801030701",
+    "huc12Name": "Garth Run-Rapidan River",
+    "huc8": "02080103"
+  },
+  "nhd-stream-lands-run": {
+    "huc12": "020700051003",
+    "huc12Name": "Gooney Run",
+    "huc8": "02070005"
+  },
+  "nhd-stream-licking-run": {
+    "huc12": "020700100603",
+    "huc12Name": "Licking Run",
+    "huc8": "02070010"
+  },
+  "nhd-stream-little-bull-run": {
+    "huc12": "020700100702",
+    "huc12Name": "Little Bull Run",
+    "huc8": "02070010"
+  },
+  "nhd-stream-little-creek": {
+    "huc12": "020700110104",
+    "huc12Name": "Quantico Creek",
+    "huc8": "02070011"
+  },
+  "nhd-stream-little-difficult-run": {
+    "huc12": "020700081004",
+    "huc12Name": "Difficult Run",
+    "huc8": "02070008"
+  },
+  "nhd-stream-little-passage-creek": {
+    "huc12": "020700060702",
+    "huc12Name": "Lower Passage Creek",
+    "huc8": "02070006"
+  },
+  "nhd-stream-little-hunting-run": {
+    "huc12": "020801031105",
+    "huc12Name": "Hazel Run-Rapidan River",
+    "huc8": "02080103"
+  },
+  "nhd-stream-little-rocky-run": {
+    "huc12": "020700100705",
+    "huc12Name": "Lower Bull Run",
+    "huc8": "02070010"
+  },
+  "nhd-stream-lucky-run": {
+    "huc12": "020700100301",
+    "huc12Name": "Fourmile Run-Potomac River",
+    "huc8": "02070010"
+  },
+  "nhd-stream-lubber-run": {
+    "huc12": "020700100301",
+    "huc12Name": "Fourmile Run-Potomac River",
+    "huc8": "02070010"
+  },
+  "nhd-stream-marumsco-creek": {
+    "huc12": "020700100805",
+    "huc12Name": "Occoquan Bay-Potomac River",
+    "huc8": "02070010"
+  },
+  "nhd-stream-mill-run": {
+    "huc12": "020700060702",
+    "huc12Name": "Lower Passage Creek",
+    "huc8": "02070006"
+  },
+  "nhd-stream-mine-run": {
+    "huc12": "020700060702",
+    "huc12Name": "Lower Passage Creek",
+    "huc8": "02070006"
+  },
+  "nhd-stream-neabsco-creek": {
+    "huc12": "020700100804",
+    "huc12Name": "Neabsco Creek",
+    "huc8": "02070010"
+  },
+  "nhd-stream-moody-creek": {
+    "huc12": "020700051001",
+    "huc12Name": "Jeremys Run-South Fork Shenandoah River",
+    "huc8": "02070005"
+  },
+  "nhd-stream-north-fork-dry-run": {
+    "huc12": "020700050907",
+    "huc12Name": "Pass Run-Hawksbill Creek",
+    "huc8": "02070005"
+  },
+  "nhd-stream-ninemile-run": {
+    "huc12": "020801040101",
+    "huc12Name": "Motts Run Reservoir-Rappahannock River",
+    "huc8": "02080104"
+  },
+  "nhd-stream-nichols-run": {
+    "huc12": "020700081005",
+    "huc12Name": "Nichols Run-Potomac River",
+    "huc8": "02070008"
+  },
+  "nhd-stream-north-fork-thornton-river": {
+    "huc12": "020801030301",
+    "huc12Name": "Piney River-Thornton River",
+    "huc8": "02080103"
+  },
+  "nhd-stream-north-wilderness-run": {
+    "huc12": "020801031104",
+    "huc12Name": "Wilderness Run",
+    "huc8": "02080103"
+  },
+  "nhd-stream-overall-run": {
+    "huc12": "020700051002",
+    "huc12Name": "Flint Run-South Fork Shenandoah River",
+    "huc8": "02070005"
+  },
+  "nhd-stream-old-sugarland-run": {
+    "huc12": "020700080905",
+    "huc12Name": "Sugarland Run",
+    "huc8": "02070008"
+  },
+  "nhd-stream-peyton-run": {
+    "huc12": "020700100401",
+    "huc12Name": "Pohick Creek",
+    "huc8": "02070010"
+  },
+  "nhd-stream-pass-run": {
+    "huc12": "020700050907",
+    "huc12Name": "Pass Run-Hawksbill Creek",
+    "huc8": "02070005"
+  },
+  "nhd-stream-phils-arm-run": {
+    "huc12": "020700051003",
+    "huc12Name": "Gooney Run",
+    "huc8": "02070005"
+  },
+  "nhd-stream-pimmit-run": {
+    "huc12": "020700100103",
+    "huc12Name": "Pimmit Run-Potomac River",
+    "huc8": "02070010"
+  },
+  "nhd-stream-keatons-run": {
+    "huc12": "020801031104",
+    "huc12Name": "Wilderness Run",
+    "huc8": "02080103"
+  },
+  "nhd-stream-piney-river": {
+    "huc12": "020801030301",
+    "huc12Name": "Piney River-Thornton River",
+    "huc8": "02080103"
+  },
+  "nhd-stream-popes-head-creek": {
+    "huc12": "020700100705",
+    "huc12Name": "Lower Bull Run",
+    "huc8": "02070010"
+  },
+  "nhd-stream-popham-run": {
+    "huc12": "020801030401",
+    "huc12Name": "Hughes River",
+    "huc8": "02080103"
+  },
+  "nhd-stream-quander-brook": {
+    "huc12": "020700100302",
+    "huc12Name": "Cameron Run",
+    "huc8": "02070010"
+  },
+  "nhd-stream-quantico-creek": {
+    "huc12": "020700110104",
+    "huc12Name": "Quantico Creek",
+    "huc8": "02070011"
+  },
+  "nhd-stream-ragged-run": {
+    "huc12": "020801030401",
+    "huc12Name": "Hughes River",
+    "huc8": "02080103"
+  },
+  "nhd-stream-rapidan-river": {
+    "huc12": "020801030701",
+    "huc12Name": "Garth Run-Rapidan River",
+    "huc8": "02080103"
+  },
+  "nhd-stream-robinson-river": {
+    "huc12": "020801030901",
+    "huc12Name": "Rose River-Robinson River",
+    "huc8": "02080103"
+  },
+  "nhd-stream-rocky-run": {
+    "huc12": "020801030401",
+    "huc12Name": "Hughes River",
+    "huc8": "02080103"
+  },
+  "nhd-stream-rose-river": {
+    "huc12": "020801030901",
+    "huc12Name": "Rose River-Robinson River",
+    "huc8": "02080103"
+  },
+  "nhd-stream-runyons-run": {
+    "huc12": "020801030402",
+    "huc12Name": "Sams Run-Hazel River",
+    "huc8": "02080103"
+  },
+  "nhd-stream-rush-river": {
+    "huc12": "020801030302",
+    "huc12Name": "Covington River",
+    "huc8": "02080103"
+  },
+  "nhd-stream-sams-run": {
+    "huc12": "020801030402",
+    "huc12Name": "Sams Run-Hazel River",
+    "huc8": "02080103"
+  },
+  "nhd-stream-sandy-run": {
+    "huc12": "020700100802",
+    "huc12Name": "Occoquan Reservoir-Occoquan River",
+    "huc8": "02070010"
+  },
+  "nhd-stream-slate-run": {
+    "huc12": "020700100606",
+    "huc12Name": "Slate Run-Cedar Run",
+    "huc8": "02070010"
+  },
+  "nhd-stream-sloan-creek": {
+    "huc12": "020700051005",
+    "huc12Name": "Happy Creek",
+    "huc8": "02070005"
+  },
+  "nhd-stream-scott-run": {
+    "huc12": "020700081005",
+    "huc12Name": "Nichols Run-Potomac River",
+    "huc8": "02070008"
+  },
+  "nhd-stream-south-fork-dry-run": {
+    "huc12": "020700050907",
+    "huc12Name": "Pass Run-Hawksbill Creek",
+    "huc8": "02070005"
+  },
+  "nhd-stream-south-fork-quantico-creek": {
+    "huc12": "020700110104",
+    "huc12Name": "Quantico Creek",
+    "huc8": "02070011"
+  },
+  "nhd-stream-south-run": {
+    "huc12": "020700100401",
+    "huc12Name": "Pohick Creek",
+    "huc8": "02070010"
+  },
+  "nhd-stream-south-wilderness-run": {
+    "huc12": "020801031104",
+    "huc12Name": "Wilderness Run",
+    "huc8": "02080103"
+  },
+  "nhd-stream-staunton-river": {
+    "huc12": "020801030701",
+    "huc12Name": "Garth Run-Rapidan River",
+    "huc8": "02080103"
+  },
+  "nhd-stream-stillwell-run": {
+    "huc12": "020700100802",
+    "huc12Name": "Occoquan Reservoir-Occoquan River",
+    "huc8": "02070010"
+  },
+  "nhd-stream-sugarland-run": {
+    "huc12": "020700080905",
+    "huc12Name": "Sugarland Run",
+    "huc8": "02070008"
+  },
+  "nhd-stream-thornton-river": {
+    "huc12": "020801030301",
+    "huc12Name": "Piney River-Thornton River",
+    "huc8": "02080103"
+  },
+  "nhd-stream-tims-river": {
+    "huc12": "020801030901",
+    "huc12Name": "Rose River-Robinson River",
+    "huc8": "02080103"
+  },
+  "nhd-stream-taylor-run": {
+    "huc12": "020700100302",
+    "huc12Name": "Cameron Run",
+    "huc8": "02070010"
+  },
+  "nhd-stream-wilson-run": {
+    "huc12": "020801030701",
+    "huc12Name": "Garth Run-Rapidan River",
+    "huc8": "02080103"
+  },
+  "nhd-stream-turkeycock-run": {
+    "huc12": "020700100302",
+    "huc12Name": "Cameron Run",
+    "huc8": "02070010"
+  },
+  "nhd-stream-turkey-run": {
+    "huc12": "020700081005",
+    "huc12Name": "Nichols Run-Potomac River",
+    "huc8": "02070008"
+  },
+  "nhd-stream-wolftrap-creek": {
+    "huc12": "020700081004",
+    "huc12Name": "Difficult Run",
+    "huc8": "02070008"
+  },
+  "nhd-stream-windy-run": {
+    "huc12": "020700100103",
+    "huc12Name": "Pimmit Run-Potomac River",
+    "huc8": "02070010"
+  }
+}

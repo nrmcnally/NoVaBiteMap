@@ -129,8 +129,8 @@ def test_data_source_status_is_derived_from_real_counts_and_runs(client):
     assert counts["species"] == 37
     assert counts["hydrologyAssociations"] == 19
     assert counts["stockingRecords"] == 13
-    assert counts["modeledEvidence"] == 391
-    assert counts["locationsWithEvidence"] == 196
+    assert counts["modeledEvidence"] == 353
+    assert counts["locationsWithEvidence"] == 112
     assert status["lastSuccessfulIngestion"] is not None
     assert status["lastSuccessfulIngestion"]["status"] == "success"
 
@@ -174,14 +174,18 @@ def test_community_species_are_visible_but_not_bite_scored(client):
     assert all("reviewed bite-scoring profile" in item["reason"] for item in payload["community"])
 
 
-def test_basin_inference_is_flagged_not_presented_as_survey(client):
-    # Huntsman Lake has no agency documentation, so it shows clearly-labeled basin
-    # inference (largemouth/bluegill typical of regional park impoundments).
-    payload = client.get("/api/locations/huntsman-lake/species", params={"live": "false"}).json()
+def test_likely_present_is_flagged_modeled_not_a_survey(client):
+    # Walney Pond has no direct documentation, so its species are honest
+    # "likely present" inference (subwatershed survey records / downstream
+    # connectivity / same-waterbody), clearly flagged modeled with the basis in
+    # the summary — never presented as a survey of this exact water.
+    payload = client.get("/api/locations/walney-pond/species", params={"live": "false"}).json()
     assert len(payload["species"]) >= 1
+    markers = ("subwatershed", "downstream", "same water", "likely present")
     for s in payload["species"]:
         assert s["modeled"] is True
-        assert "inferred" in (s["evidence_summary"] or "").lower()
-    # Documented waters are NOT inferred.
+        summary = (s["evidence_summary"] or "").lower()
+        assert any(m in summary for m in markers)
+    # Documented waters are NOT modeled.
     burke = client.get("/api/locations/lake-burke/species", params={"live": "false"}).json()
     assert any(not s["modeled"] for s in burke["species"])

@@ -2,7 +2,7 @@ import { coverageLocations } from "./coverage-data";
 import { advisoryForLocation, vdhAdvisoryIndexUrl, type ConsumptionAdvisory } from "./advisories";
 import { hydrologyForLocation, type HydrologyAssociation } from "./hydrology";
 import { aquaticGapEvidenceForLocation, troutLocations } from "./public-evidence";
-import { dwrAccessLocations, inferredEvidenceFor, nhdParkWaterLocations, nhdStreamLocations, waterbodySpeciesFor } from "./expanded-coverage";
+import { dwrAccessLocations, likelyPresentFor, nhdParkWaterLocations, nhdStreamLocations, waterbodySpeciesFor } from "./expanded-coverage";
 import evidenceRejections from "./generated/evidence-rejections.json";
 
 export type AccessMethod = "shore" | "wade" | "kayak" | "boat";
@@ -685,9 +685,10 @@ export const locations: FishingLocation[] = sourcedLocations.map((location) => {
     .filter((candidate) => evidenceAllowed(location.id, candidate))
     .filter((candidate) => !has(withAdvisory, candidate.speciesId));
   const documented = [...withAdvisory, ...aquaticGapEvidence];
-  // Only when a water has no documented evidence at all, add clearly-labeled
-  // basin-inferred species so public waters aren't left blank.
-  const inferred = documented.length === 0 ? inferredEvidenceFor(location) : [];
+  // Only when a water has no documented evidence at all, add honest, cited
+  // "likely present" species (same-waterbody / downstream connectivity /
+  // subwatershed survey records). Waters with no real basis stay empty.
+  const inferred = documented.length === 0 ? likelyPresentFor(location) : [];
   const hydrology = hydrologyForLocation(location.id);
   return {
     ...location,

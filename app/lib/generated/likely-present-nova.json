@@ -1,0 +1,2460 @@
+{
+  "meta": {
+    "generated": "reproducible from USGS NLDI (connectivity) + USGS Aquatic GAP (subwatershed)",
+    "method": "downstream NLDI trace matched (<=0.4mi) to documented warmwater waters within 5mi; HUC12 GAP survey rollup",
+    "documentedWatersConsidered": 42,
+    "targetsProcessed": 132,
+    "withSameWaterbody": 18,
+    "withConnectivity": 15,
+    "withSubwatershed": 29
+  },
+  "waters": {
+    "walney-pond": {
+      "name": "Walney Pond",
+      "county": "Fairfax",
+      "waterbodyType": "pond",
+      "sameWaterbody": null,
+      "connectivity": [],
+      "subwatershed": {
+        "huc12": "020700100704",
+        "sampleCount": 1,
+        "sources": [
+          "Southeast Aquatic Resources Partnership (SARP)"
+        ],
+        "species": [
+          {
+            "id": "bluegill",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "fallfish",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "gizzard-shad",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "green-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "largemouth-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "longnose-dace",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "northern-hogsucker",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "redbreast-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "tessellated-darter",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "white-sucker",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "yellow-bullhead",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "fredericksburg-city-docks": {
+      "name": "Fredericksburg City Docks",
+      "county": "Fredericksburg",
+      "waterbodyType": "river",
+      "sameWaterbody": {
+        "waterbody": "Rappahannock River",
+        "species": [
+          {
+            "id": "smallmouth-bass",
+            "sourceName": "Virginia Department of Wildlife Resources",
+            "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/"
+          },
+          {
+            "id": "redbreast-sunfish",
+            "sourceName": "Virginia Department of Wildlife Resources",
+            "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/"
+          },
+          {
+            "id": "largemouth-bass",
+            "sourceName": "Virginia Department of Wildlife Resources",
+            "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-tidal/"
+          },
+          {
+            "id": "channel-catfish",
+            "sourceName": "Virginia Department of Wildlife Resources",
+            "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-tidal/"
+          }
+        ]
+      },
+      "connectivity": [],
+      "subwatershed": {
+        "huc12": "020801040102",
+        "sampleCount": 1,
+        "sources": [
+          "Southeast Aquatic Resources Partnership (SARP)"
+        ],
+        "species": [
+          {
+            "id": "american-eel",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "blacknose-dace",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "bluegill",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "brown-bullhead",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "creek-chub",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "fallfish",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "green-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "largemouth-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "longnose-dace",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "redbreast-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "tessellated-darter",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "white-sucker",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "yellow-bullhead",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "dwr-boat-99": {
+      "name": "Meems Bottom",
+      "county": "Shenandoah",
+      "waterbodyType": "river",
+      "sameWaterbody": {
+        "waterbody": "North Fork Shenandoah River",
+        "species": [
+          {
+            "id": "smallmouth-bass",
+            "sourceName": "Virginia Department of Wildlife Resources",
+            "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-north-fork/"
+          },
+          {
+            "id": "common-carp",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "channel-catfish",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "white-sucker",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "rock-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "largemouth-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          }
+        ]
+      },
+      "connectivity": [],
+      "subwatershed": null
+    },
+    "dwr-boat-33": {
+      "name": "Grove Hill",
+      "county": "Page",
+      "waterbodyType": "river",
+      "sameWaterbody": {
+        "waterbody": "South Fork Shenandoah River",
+        "species": [
+          {
+            "id": "smallmouth-bass",
+            "sourceName": "Virginia Department of Wildlife Resources",
+            "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-south-fork/"
+          },
+          {
+            "id": "common-carp",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "channel-catfish",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "white-sucker",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "rock-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "largemouth-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          }
+        ]
+      },
+      "connectivity": [],
+      "subwatershed": {
+        "huc12": "020700050901",
+        "sampleCount": 1,
+        "sources": [
+          "Southeast Aquatic Resources Partnership (SARP)"
+        ],
+        "species": [
+          {
+            "id": "bluegill",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "green-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "largemouth-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "longnose-dace",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "northern-hogsucker",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "redbreast-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "rock-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "smallmouth-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "white-sucker",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "yellow-bullhead",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "dwr-boat-15": {
+      "name": "Port Republic",
+      "county": "Rockingham",
+      "waterbodyType": "river",
+      "sameWaterbody": {
+        "waterbody": "South Fork Shenandoah River",
+        "species": [
+          {
+            "id": "smallmouth-bass",
+            "sourceName": "Virginia Department of Wildlife Resources",
+            "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-south-fork/"
+          },
+          {
+            "id": "common-carp",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "channel-catfish",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "white-sucker",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "rock-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "largemouth-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          }
+        ]
+      },
+      "connectivity": [],
+      "subwatershed": {
+        "huc12": "020700050705",
+        "sampleCount": 1,
+        "sources": [
+          "Southeast Aquatic Resources Partnership (SARP)"
+        ],
+        "species": [
+          {
+            "id": "fallfish",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "green-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "largemouth-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "longnose-dace",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "northern-hogsucker",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "redbreast-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "rock-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "smallmouth-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "yellow-bullhead",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "dwr-boat-61": {
+      "name": "Fosters",
+      "county": "Page",
+      "waterbodyType": "river",
+      "sameWaterbody": {
+        "waterbody": "South Fork Shenandoah River",
+        "species": [
+          {
+            "id": "smallmouth-bass",
+            "sourceName": "Virginia Department of Wildlife Resources",
+            "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-south-fork/"
+          },
+          {
+            "id": "common-carp",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "channel-catfish",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "white-sucker",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "rock-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "largemouth-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          }
+        ]
+      },
+      "connectivity": [],
+      "subwatershed": null
+    },
+    "dwr-boat-36": {
+      "name": "Newport",
+      "county": "Page",
+      "waterbodyType": "river",
+      "sameWaterbody": {
+        "waterbody": "South Fork Shenandoah River",
+        "species": [
+          {
+            "id": "smallmouth-bass",
+            "sourceName": "Virginia Department of Wildlife Resources",
+            "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-south-fork/"
+          },
+          {
+            "id": "common-carp",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "channel-catfish",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "white-sucker",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "rock-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "largemouth-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          }
+        ]
+      },
+      "connectivity": [],
+      "subwatershed": {
+        "huc12": "020700050903",
+        "sampleCount": 1,
+        "sources": [
+          "EPA EMAP Mid-Atlantic Region"
+        ],
+        "species": [
+          {
+            "id": "bluegill",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "largemouth-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "northern-hogsucker",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "pumpkinseed",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "redbreast-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "rock-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "shorthead-redhorse",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "smallmouth-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "white-sucker",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "yellow-bullhead",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "dwr-boat-114": {
+      "name": "Deer Rapids",
+      "county": "Shenandoah",
+      "waterbodyType": "river",
+      "sameWaterbody": {
+        "waterbody": "North Fork Shenandoah River",
+        "species": [
+          {
+            "id": "smallmouth-bass",
+            "sourceName": "Virginia Department of Wildlife Resources",
+            "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-north-fork/"
+          },
+          {
+            "id": "common-carp",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "channel-catfish",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "white-sucker",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "rock-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "largemouth-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          }
+        ]
+      },
+      "connectivity": [],
+      "subwatershed": null
+    },
+    "dwr-boat-122": {
+      "name": "Chapmans",
+      "county": "Shenandoah",
+      "waterbodyType": "river",
+      "sameWaterbody": {
+        "waterbody": "North Fork Shenandoah River",
+        "species": [
+          {
+            "id": "smallmouth-bass",
+            "sourceName": "Virginia Department of Wildlife Resources",
+            "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-north-fork/"
+          },
+          {
+            "id": "common-carp",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "channel-catfish",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "white-sucker",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "rock-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "largemouth-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          }
+        ]
+      },
+      "connectivity": [],
+      "subwatershed": {
+        "huc12": "020700060501",
+        "sampleCount": 1,
+        "sources": [
+          "Southeast Aquatic Resources Partnership (SARP)"
+        ],
+        "species": [
+          {
+            "id": "blacknose-dace",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "bluegill",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "largemouth-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "longnose-dace",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "white-sucker",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "dwr-boat-150": {
+      "name": "Island Ford",
+      "county": "Rockingham",
+      "waterbodyType": "river",
+      "sameWaterbody": {
+        "waterbody": "South Fork Shenandoah River",
+        "species": [
+          {
+            "id": "smallmouth-bass",
+            "sourceName": "Virginia Department of Wildlife Resources",
+            "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-south-fork/"
+          },
+          {
+            "id": "common-carp",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "channel-catfish",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "white-sucker",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "rock-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "largemouth-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          }
+        ]
+      },
+      "connectivity": [],
+      "subwatershed": null
+    },
+    "dwr-boat-102": {
+      "name": "Grottoes Park",
+      "county": "Rockingham",
+      "waterbodyType": "river",
+      "sameWaterbody": null,
+      "connectivity": [],
+      "subwatershed": {
+        "huc12": "020700050705",
+        "sampleCount": 1,
+        "sources": [
+          "Southeast Aquatic Resources Partnership (SARP)"
+        ],
+        "species": [
+          {
+            "id": "fallfish",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "green-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "largemouth-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "longnose-dace",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "northern-hogsucker",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "redbreast-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "rock-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "smallmouth-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "yellow-bullhead",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "dwr-boat-191": {
+      "name": "Strasburg",
+      "county": "Shenandoah",
+      "waterbodyType": "river",
+      "sameWaterbody": {
+        "waterbody": "North Fork Shenandoah River",
+        "species": [
+          {
+            "id": "smallmouth-bass",
+            "sourceName": "Virginia Department of Wildlife Resources",
+            "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-north-fork/"
+          },
+          {
+            "id": "common-carp",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "channel-catfish",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "white-sucker",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "rock-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "largemouth-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          }
+        ]
+      },
+      "connectivity": [
+        {
+          "water": "Catletts Ford Landing",
+          "downstreamMi": 5,
+          "species": [
+            {
+              "id": "smallmouth-bass",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-north-fork/"
+            }
+          ]
+        }
+      ],
+      "subwatershed": null
+    },
+    "dwr-boat-202": {
+      "name": "Massanutten",
+      "county": "Page",
+      "waterbodyType": "river",
+      "sameWaterbody": {
+        "waterbody": "South Fork Shenandoah River",
+        "species": [
+          {
+            "id": "smallmouth-bass",
+            "sourceName": "Virginia Department of Wildlife Resources",
+            "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-south-fork/"
+          },
+          {
+            "id": "common-carp",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "channel-catfish",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "white-sucker",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "rock-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "largemouth-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          }
+        ]
+      },
+      "connectivity": [],
+      "subwatershed": null
+    },
+    "dwr-boat-177": {
+      "name": "Alma",
+      "county": "Page",
+      "waterbodyType": "river",
+      "sameWaterbody": {
+        "waterbody": "South Fork Shenandoah River",
+        "species": [
+          {
+            "id": "smallmouth-bass",
+            "sourceName": "Virginia Department of Wildlife Resources",
+            "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-south-fork/"
+          },
+          {
+            "id": "common-carp",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "channel-catfish",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "white-sucker",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "rock-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "largemouth-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          }
+        ]
+      },
+      "connectivity": [],
+      "subwatershed": {
+        "huc12": "020700050903",
+        "sampleCount": 1,
+        "sources": [
+          "EPA EMAP Mid-Atlantic Region"
+        ],
+        "species": [
+          {
+            "id": "bluegill",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "largemouth-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "northern-hogsucker",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "pumpkinseed",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "redbreast-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "rock-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "shorthead-redhorse",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "smallmouth-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "white-sucker",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "yellow-bullhead",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "dwr-boat-216": {
+      "name": "Shenandoah Riverside",
+      "county": "Page",
+      "waterbodyType": "river",
+      "sameWaterbody": {
+        "waterbody": "South Fork Shenandoah River",
+        "species": [
+          {
+            "id": "smallmouth-bass",
+            "sourceName": "Virginia Department of Wildlife Resources",
+            "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-south-fork/"
+          },
+          {
+            "id": "common-carp",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "channel-catfish",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "white-sucker",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "rock-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "largemouth-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          }
+        ]
+      },
+      "connectivity": [],
+      "subwatershed": {
+        "huc12": "020700050901",
+        "sampleCount": 1,
+        "sources": [
+          "Southeast Aquatic Resources Partnership (SARP)"
+        ],
+        "species": [
+          {
+            "id": "bluegill",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "green-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "largemouth-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "longnose-dace",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "northern-hogsucker",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "redbreast-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "rock-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "smallmouth-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "white-sucker",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "yellow-bullhead",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "dwr-boat-218": {
+      "name": "White House",
+      "county": "Page",
+      "waterbodyType": "river",
+      "sameWaterbody": {
+        "waterbody": "South Fork Shenandoah River",
+        "species": [
+          {
+            "id": "smallmouth-bass",
+            "sourceName": "Virginia Department of Wildlife Resources",
+            "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-south-fork/"
+          },
+          {
+            "id": "common-carp",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "channel-catfish",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "white-sucker",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "rock-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "largemouth-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          }
+        ]
+      },
+      "connectivity": [],
+      "subwatershed": null
+    },
+    "dwr-boat-224": {
+      "name": "Elkton",
+      "county": "Rockingham",
+      "waterbodyType": "river",
+      "sameWaterbody": {
+        "waterbody": "South Fork Shenandoah River",
+        "species": [
+          {
+            "id": "smallmouth-bass",
+            "sourceName": "Virginia Department of Wildlife Resources",
+            "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-south-fork/"
+          },
+          {
+            "id": "common-carp",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "channel-catfish",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "white-sucker",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "rock-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "largemouth-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          }
+        ]
+      },
+      "connectivity": [],
+      "subwatershed": null
+    },
+    "dwr-boat-234": {
+      "name": "Inskeep",
+      "county": "Page",
+      "waterbodyType": "river",
+      "sameWaterbody": {
+        "waterbody": "South Fork Shenandoah River",
+        "species": [
+          {
+            "id": "smallmouth-bass",
+            "sourceName": "Virginia Department of Wildlife Resources",
+            "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-south-fork/"
+          },
+          {
+            "id": "common-carp",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "channel-catfish",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "white-sucker",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "rock-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          },
+          {
+            "id": "largemouth-bass",
+            "sourceName": "Virginia Department of Health",
+            "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+          }
+        ]
+      },
+      "connectivity": [],
+      "subwatershed": null
+    },
+    "nhd-seven-fountains-lake": {
+      "name": "Seven Fountains Lake",
+      "county": "Shenandoah",
+      "waterbodyType": "lake",
+      "sameWaterbody": null,
+      "connectivity": [],
+      "subwatershed": {
+        "huc12": "020700060702",
+        "sampleCount": 1,
+        "sources": [
+          "Southeast Aquatic Resources Partnership (SARP)"
+        ],
+        "species": [
+          {
+            "id": "creek-chub",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "nhd-strasburg-reservoir": {
+      "name": "Strasburg Reservoir",
+      "county": "Shenandoah",
+      "waterbodyType": "reservoir",
+      "sameWaterbody": null,
+      "connectivity": [],
+      "subwatershed": {
+        "huc12": "020700060702",
+        "sampleCount": 1,
+        "sources": [
+          "Southeast Aquatic Resources Partnership (SARP)"
+        ],
+        "species": [
+          {
+            "id": "creek-chub",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "nhd-stream-big-rocky-run": {
+      "name": "Big Rocky Run",
+      "county": "Fairfax",
+      "waterbodyType": "stream",
+      "sameWaterbody": null,
+      "connectivity": [],
+      "subwatershed": {
+        "huc12": "020700100704",
+        "sampleCount": 1,
+        "sources": [
+          "Southeast Aquatic Resources Partnership (SARP)"
+        ],
+        "species": [
+          {
+            "id": "bluegill",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "fallfish",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "gizzard-shad",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "green-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "largemouth-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "longnose-dace",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "northern-hogsucker",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "redbreast-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "tessellated-darter",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "white-sucker",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "yellow-bullhead",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "nhd-stream-colvin-run": {
+      "name": "Colvin Run",
+      "county": "Fairfax",
+      "waterbodyType": "stream",
+      "sameWaterbody": null,
+      "connectivity": [
+        {
+          "water": "Lake Fairfax Park",
+          "downstreamMi": 0.4,
+          "species": [
+            {
+              "id": "bluegill",
+              "sourceName": "Fairfax County Park Authority",
+              "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing"
+            },
+            {
+              "id": "largemouth-bass",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/fairfax-lake/"
+            },
+            {
+              "id": "channel-catfish",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/fairfax-lake/"
+            }
+          ]
+        }
+      ],
+      "subwatershed": null
+    },
+    "nhd-stream-daniels-run": {
+      "name": "Daniels Run",
+      "county": "Fairfax",
+      "waterbodyType": "stream",
+      "sameWaterbody": null,
+      "connectivity": [
+        {
+          "water": "Lake Accotink Park",
+          "downstreamMi": 4.7,
+          "species": [
+            {
+              "id": "bluegill",
+              "sourceName": "Fairfax County Park Authority",
+              "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing"
+            }
+          ]
+        }
+      ],
+      "subwatershed": {
+        "huc12": "020700100402",
+        "sampleCount": 1,
+        "sources": [
+          "USGS BioData"
+        ],
+        "species": [
+          {
+            "id": "american-eel",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "blacknose-dace",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "bluegill",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "brown-bullhead",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "creek-chub",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "green-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "largemouth-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "pumpkinseed",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "redbreast-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "tessellated-darter",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "white-sucker",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "yellow-bullhead",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "nhd-stream-cub-run": {
+      "name": "Cub Run",
+      "county": "Fairfax",
+      "waterbodyType": "stream",
+      "sameWaterbody": {
+        "waterbody": "Cub Run",
+        "species": [
+          {
+            "id": "brook-trout",
+            "sourceName": "Virginia Department of Wildlife Resources",
+            "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Cub%20Run%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27B%27"
+          }
+        ]
+      },
+      "connectivity": [],
+      "subwatershed": {
+        "huc12": "020700100704",
+        "sampleCount": 1,
+        "sources": [
+          "Southeast Aquatic Resources Partnership (SARP)"
+        ],
+        "species": [
+          {
+            "id": "bluegill",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "fallfish",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "gizzard-shad",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "green-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "largemouth-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "longnose-dace",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "northern-hogsucker",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "redbreast-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "tessellated-darter",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "white-sucker",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "yellow-bullhead",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "nhd-stream-doctors-run": {
+      "name": "Doctors Run",
+      "county": "Arlington",
+      "waterbodyType": "stream",
+      "sameWaterbody": null,
+      "connectivity": [],
+      "subwatershed": {
+        "huc12": "020700100301",
+        "sampleCount": 2,
+        "sources": [
+          "EPA National River and Streams Assessment (NRSA)",
+          "Maryland Department of Natural Resources"
+        ],
+        "species": [
+          {
+            "id": "blacknose-dace",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "nhd-stream-dry-run": {
+      "name": "Dry Run",
+      "county": "Page",
+      "waterbodyType": "stream",
+      "sameWaterbody": null,
+      "connectivity": [],
+      "subwatershed": {
+        "huc12": "020700051002",
+        "sampleCount": 1,
+        "sources": [
+          "Southeast Aquatic Resources Partnership (SARP)"
+        ],
+        "species": [
+          {
+            "id": "blacknose-dace",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "creek-chub",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "longnose-dace",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "white-sucker",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "nhd-stream-east-fork-dry-run": {
+      "name": "East Fork Dry Run",
+      "county": "Page",
+      "waterbodyType": "stream",
+      "sameWaterbody": null,
+      "connectivity": [],
+      "subwatershed": {
+        "huc12": "020700051002",
+        "sampleCount": 1,
+        "sources": [
+          "Southeast Aquatic Resources Partnership (SARP)"
+        ],
+        "species": [
+          {
+            "id": "blacknose-dace",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "creek-chub",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "longnose-dace",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "white-sucker",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "nhd-stream-flint-run": {
+      "name": "Flint Run",
+      "county": "Warren",
+      "waterbodyType": "stream",
+      "sameWaterbody": null,
+      "connectivity": [],
+      "subwatershed": {
+        "huc12": "020700051002",
+        "sampleCount": 1,
+        "sources": [
+          "Southeast Aquatic Resources Partnership (SARP)"
+        ],
+        "species": [
+          {
+            "id": "blacknose-dace",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "creek-chub",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "longnose-dace",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "white-sucker",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "nhd-stream-four-mile-run": {
+      "name": "Four Mile Run",
+      "county": "Arlington",
+      "waterbodyType": "stream",
+      "sameWaterbody": null,
+      "connectivity": [],
+      "subwatershed": {
+        "huc12": "020700100301",
+        "sampleCount": 2,
+        "sources": [
+          "EPA National River and Streams Assessment (NRSA)",
+          "Maryland Department of Natural Resources"
+        ],
+        "species": [
+          {
+            "id": "blacknose-dace",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "nhd-stream-flag-run": {
+      "name": "Flag Run",
+      "county": "Fairfax",
+      "waterbodyType": "stream",
+      "sameWaterbody": null,
+      "connectivity": [],
+      "subwatershed": {
+        "huc12": "020700100402",
+        "sampleCount": 1,
+        "sources": [
+          "USGS BioData"
+        ],
+        "species": [
+          {
+            "id": "american-eel",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "blacknose-dace",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "bluegill",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "brown-bullhead",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "creek-chub",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "green-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "largemouth-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "pumpkinseed",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "redbreast-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "tessellated-darter",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "white-sucker",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "yellow-bullhead",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "nhd-stream-happy-creek": {
+      "name": "Happy Creek",
+      "county": "Warren",
+      "waterbodyType": "stream",
+      "sameWaterbody": {
+        "waterbody": "Happy Creek",
+        "species": [
+          {
+            "id": "rainbow-trout",
+            "sourceName": "Virginia Department of Wildlife Resources",
+            "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Happy%20Creek%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27B%27"
+          },
+          {
+            "id": "brown-trout",
+            "sourceName": "Virginia Department of Wildlife Resources",
+            "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Happy%20Creek%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27B%27"
+          },
+          {
+            "id": "brook-trout",
+            "sourceName": "Virginia Department of Wildlife Resources",
+            "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Happy%20Creek%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27B%27"
+          }
+        ]
+      },
+      "connectivity": [],
+      "subwatershed": null
+    },
+    "nhd-stream-kanes-creek": {
+      "name": "Kanes Creek",
+      "county": "Fairfax",
+      "waterbodyType": "stream",
+      "sameWaterbody": null,
+      "connectivity": [
+        {
+          "water": "Mason Neck State Park",
+          "downstreamMi": 0.7,
+          "species": [
+            {
+              "id": "largemouth-bass",
+              "sourceName": "Virginia State Parks",
+              "sourceUrl": "https://www.dcr.virginia.gov/state-parks/fishing"
+            },
+            {
+              "id": "bluegill",
+              "sourceName": "Virginia Department of Health",
+              "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/PotomacRiver_2026-1.pdf"
+            }
+          ]
+        }
+      ],
+      "subwatershed": null
+    },
+    "nhd-stream-lands-run": {
+      "name": "Lands Run",
+      "county": "Warren",
+      "waterbodyType": "stream",
+      "sameWaterbody": null,
+      "connectivity": [
+        {
+          "water": "Karo",
+          "downstreamMi": 4.9,
+          "species": [
+            {
+              "id": "smallmouth-bass",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-south-fork/"
+            }
+          ]
+        }
+      ],
+      "subwatershed": null
+    },
+    "nhd-stream-little-bull-run": {
+      "name": "Little Bull Run",
+      "county": "Prince William",
+      "waterbodyType": "stream",
+      "sameWaterbody": null,
+      "connectivity": [
+        {
+          "water": "Silver Lake Regional Park",
+          "downstreamMi": 4.4,
+          "species": [
+            {
+              "id": "largemouth-bass",
+              "sourceName": "Prince William County Parks",
+              "sourceUrl": "https://www.pwcva.gov/department/parks-recreation/fishing/"
+            },
+            {
+              "id": "channel-catfish",
+              "sourceName": "Prince William County Parks",
+              "sourceUrl": "https://www.pwcva.gov/department/parks-recreation/fishing/"
+            },
+            {
+              "id": "bluegill",
+              "sourceName": "Prince William County Parks",
+              "sourceUrl": "https://www.pwcva.gov/department/parks-recreation/fishing/"
+            },
+            {
+              "id": "black-crappie",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/silver-lake-regional-park/"
+            }
+          ]
+        }
+      ],
+      "subwatershed": null
+    },
+    "nhd-stream-lubber-run": {
+      "name": "Lubber Run",
+      "county": "Arlington",
+      "waterbodyType": "stream",
+      "sameWaterbody": null,
+      "connectivity": [],
+      "subwatershed": {
+        "huc12": "020700100301",
+        "sampleCount": 2,
+        "sources": [
+          "EPA National River and Streams Assessment (NRSA)",
+          "Maryland Department of Natural Resources"
+        ],
+        "species": [
+          {
+            "id": "blacknose-dace",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "nhd-stream-little-passage-creek": {
+      "name": "Little Passage Creek",
+      "county": "Shenandoah",
+      "waterbodyType": "stream",
+      "sameWaterbody": null,
+      "connectivity": [],
+      "subwatershed": {
+        "huc12": "020700060702",
+        "sampleCount": 1,
+        "sources": [
+          "Southeast Aquatic Resources Partnership (SARP)"
+        ],
+        "species": [
+          {
+            "id": "creek-chub",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "nhd-stream-lucky-run": {
+      "name": "Lucky Run",
+      "county": "Arlington",
+      "waterbodyType": "stream",
+      "sameWaterbody": null,
+      "connectivity": [],
+      "subwatershed": {
+        "huc12": "020700100301",
+        "sampleCount": 2,
+        "sources": [
+          "EPA National River and Streams Assessment (NRSA)",
+          "Maryland Department of Natural Resources"
+        ],
+        "species": [
+          {
+            "id": "blacknose-dace",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "nhd-stream-little-rocky-run": {
+      "name": "Little Rocky Run",
+      "county": "Fairfax",
+      "waterbodyType": "stream",
+      "sameWaterbody": null,
+      "connectivity": [
+        {
+          "water": "Bull Run Marina",
+          "downstreamMi": 4.5,
+          "species": [
+            {
+              "id": "largemouth-bass",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+            },
+            {
+              "id": "bluegill",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+            },
+            {
+              "id": "black-crappie",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+            },
+            {
+              "id": "white-crappie",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+            },
+            {
+              "id": "channel-catfish",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+            },
+            {
+              "id": "flathead-catfish",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+            },
+            {
+              "id": "yellow-perch",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Occoquan-Reservoir-Fisheries-Management-Report-2022.pdf"
+            }
+          ]
+        }
+      ],
+      "subwatershed": {
+        "huc12": "020700100705",
+        "sampleCount": 1,
+        "sources": [
+          "EPA EMAP Mid-Atlantic Region"
+        ],
+        "species": [
+          {
+            "id": "bluegill",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "green-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "longnose-dace",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "redbreast-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "tessellated-darter",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "yellow-bullhead",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "nhd-stream-mill-run": {
+      "name": "Mill Run",
+      "county": "Shenandoah",
+      "waterbodyType": "stream",
+      "sameWaterbody": null,
+      "connectivity": [],
+      "subwatershed": {
+        "huc12": "020700060702",
+        "sampleCount": 1,
+        "sources": [
+          "Southeast Aquatic Resources Partnership (SARP)"
+        ],
+        "species": [
+          {
+            "id": "creek-chub",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "nhd-stream-mine-run": {
+      "name": "Mine Run",
+      "county": "Shenandoah",
+      "waterbodyType": "stream",
+      "sameWaterbody": null,
+      "connectivity": [],
+      "subwatershed": {
+        "huc12": "020700060702",
+        "sampleCount": 1,
+        "sources": [
+          "Southeast Aquatic Resources Partnership (SARP)"
+        ],
+        "species": [
+          {
+            "id": "creek-chub",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "nhd-stream-nichols-run": {
+      "name": "Nichols Run",
+      "county": "Fairfax",
+      "waterbodyType": "stream",
+      "sameWaterbody": null,
+      "connectivity": [
+        {
+          "water": "Great Falls Park",
+          "downstreamMi": 3.9,
+          "species": [
+            {
+              "id": "smallmouth-bass",
+              "sourceName": "Maryland Department of Natural Resources",
+              "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
+            },
+            {
+              "id": "walleye",
+              "sourceName": "Maryland Department of Natural Resources",
+              "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
+            },
+            {
+              "id": "muskellunge",
+              "sourceName": "Maryland Department of Natural Resources",
+              "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
+            },
+            {
+              "id": "channel-catfish",
+              "sourceName": "Maryland Department of Natural Resources",
+              "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
+            },
+            {
+              "id": "largemouth-bass",
+              "sourceName": "Maryland Department of Natural Resources",
+              "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
+            },
+            {
+              "id": "flathead-catfish",
+              "sourceName": "Maryland Department of Natural Resources",
+              "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
+            }
+          ]
+        }
+      ],
+      "subwatershed": null
+    },
+    "nhd-stream-ninemile-run": {
+      "name": "Ninemile Run",
+      "county": "Spotsylvania",
+      "waterbodyType": "stream",
+      "sameWaterbody": null,
+      "connectivity": [
+        {
+          "water": "Motts",
+          "downstreamMi": 4.7,
+          "species": [
+            {
+              "id": "smallmouth-bass",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/"
+            }
+          ]
+        }
+      ],
+      "subwatershed": {
+        "huc12": "020801040101",
+        "sampleCount": 1,
+        "sources": [
+          "EPA National River and Streams Assessment (NRSA)"
+        ],
+        "species": [
+          {
+            "id": "american-eel",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "bluegill",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "channel-catfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "northern-hogsucker",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "redbreast-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "rock-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "shorthead-redhorse",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "smallmouth-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "striped-bass",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "tessellated-darter",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "white-perch",
+            "count": 1,
+            "nonGame": false
+          }
+        ]
+      }
+    },
+    "nhd-stream-old-sugarland-run": {
+      "name": "Old Sugarland Run",
+      "county": "Loudoun",
+      "waterbodyType": "stream",
+      "sameWaterbody": null,
+      "connectivity": [
+        {
+          "water": "Seneca Regional Park",
+          "downstreamMi": 0.8,
+          "species": [
+            {
+              "id": "smallmouth-bass",
+              "sourceName": "Maryland Department of Natural Resources",
+              "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
+            },
+            {
+              "id": "walleye",
+              "sourceName": "Maryland Department of Natural Resources",
+              "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
+            },
+            {
+              "id": "muskellunge",
+              "sourceName": "Maryland Department of Natural Resources",
+              "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
+            },
+            {
+              "id": "channel-catfish",
+              "sourceName": "Maryland Department of Natural Resources",
+              "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
+            },
+            {
+              "id": "largemouth-bass",
+              "sourceName": "Maryland Department of Natural Resources",
+              "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
+            },
+            {
+              "id": "flathead-catfish",
+              "sourceName": "Maryland Department of Natural Resources",
+              "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
+            }
+          ]
+        }
+      ],
+      "subwatershed": null
+    },
+    "nhd-stream-overall-run": {
+      "name": "Overall Run",
+      "county": "Page",
+      "waterbodyType": "stream",
+      "sameWaterbody": null,
+      "connectivity": [
+        {
+          "water": "Bentonville",
+          "downstreamMi": 4.9,
+          "species": [
+            {
+              "id": "smallmouth-bass",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-south-fork/"
+            }
+          ]
+        }
+      ],
+      "subwatershed": {
+        "huc12": "020700051002",
+        "sampleCount": 1,
+        "sources": [
+          "Southeast Aquatic Resources Partnership (SARP)"
+        ],
+        "species": [
+          {
+            "id": "blacknose-dace",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "creek-chub",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "longnose-dace",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "white-sucker",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "nhd-stream-popes-head-creek": {
+      "name": "Popes Head Creek",
+      "county": "Fairfax",
+      "waterbodyType": "stream",
+      "sameWaterbody": null,
+      "connectivity": [
+        {
+          "water": "Bull Run Marina",
+          "downstreamMi": 2.8,
+          "species": [
+            {
+              "id": "largemouth-bass",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+            },
+            {
+              "id": "bluegill",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+            },
+            {
+              "id": "black-crappie",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+            },
+            {
+              "id": "white-crappie",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+            },
+            {
+              "id": "channel-catfish",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+            },
+            {
+              "id": "flathead-catfish",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+            },
+            {
+              "id": "yellow-perch",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Occoquan-Reservoir-Fisheries-Management-Report-2022.pdf"
+            }
+          ]
+        }
+      ],
+      "subwatershed": {
+        "huc12": "020700100705",
+        "sampleCount": 1,
+        "sources": [
+          "EPA EMAP Mid-Atlantic Region"
+        ],
+        "species": [
+          {
+            "id": "bluegill",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "green-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "longnose-dace",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "redbreast-sunfish",
+            "count": 1,
+            "nonGame": false
+          },
+          {
+            "id": "tessellated-darter",
+            "count": 1,
+            "nonGame": true
+          },
+          {
+            "id": "yellow-bullhead",
+            "count": 1,
+            "nonGame": true
+          }
+        ]
+      }
+    },
+    "nhd-stream-runyons-run": {
+      "name": "Runyons Run",
+      "county": "Rappahannock",
+      "waterbodyType": "stream",
+      "sameWaterbody": null,
+      "connectivity": [
+        {
+          "water": "Hazel River",
+          "downstreamMi": 1,
+          "species": [
+            {
+              "id": "smallmouth-bass",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/"
+            }
+          ]
+        }
+      ],
+      "subwatershed": null
+    },
+    "nhd-stream-sams-run": {
+      "name": "Sams Run",
+      "county": "Rappahannock",
+      "waterbodyType": "stream",
+      "sameWaterbody": null,
+      "connectivity": [
+        {
+          "water": "Hazel River",
+          "downstreamMi": 2.2,
+          "species": [
+            {
+              "id": "smallmouth-bass",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/"
+            }
+          ]
+        }
+      ],
+      "subwatershed": null
+    },
+    "nhd-stream-south-run": {
+      "name": "South Run",
+      "county": "Fairfax",
+      "waterbodyType": "stream",
+      "sameWaterbody": null,
+      "connectivity": [
+        {
+          "water": "Lake Burke",
+          "downstreamMi": 1.2,
+          "species": [
+            {
+              "id": "largemouth-bass",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-burke/"
+            },
+            {
+              "id": "black-crappie",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-burke/"
+            },
+            {
+              "id": "yellow-perch",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-burke/"
+            },
+            {
+              "id": "muskellunge",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-burke/"
+            },
+            {
+              "id": "walleye",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-burke/"
+            },
+            {
+              "id": "channel-catfish",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-burke/"
+            },
+            {
+              "id": "bluegill",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-burke/"
+            },
+            {
+              "id": "blue-catfish",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-burke/"
+            },
+            {
+              "id": "northern-snakehead",
+              "sourceName": "Virginia Department of Wildlife Resources",
+              "sourceUrl": "https://dwr.virginia.gov/blog/let-out-some-line-at-burke-lake/"
+            }
+          ]
+        }
+      ],
+      "subwatershed": null
+    }
+  }
+}

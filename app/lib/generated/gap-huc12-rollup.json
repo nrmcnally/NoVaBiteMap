@@ -1,0 +1,1891 @@
+{
+  "020700080102": {
+    "sampleCount": 3,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "blacknose-dace": 3,
+      "creek-chub": 2,
+      "green-sunfish": 1,
+      "longnose-dace": 1,
+      "redbreast-sunfish": 1,
+      "white-sucker": 2,
+      "bluegill": 1
+    }
+  },
+  "020700080103": {
+    "sampleCount": 2,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "blacknose-dace": 2,
+      "creek-chub": 2,
+      "longnose-dace": 2,
+      "american-eel": 1,
+      "fallfish": 1,
+      "northern-hogsucker": 1,
+      "redbreast-sunfish": 1,
+      "rock-bass": 1,
+      "smallmouth-bass": 1,
+      "tessellated-darter": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700080201": {
+    "sampleCount": 1,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {}
+  },
+  "020700080302": {
+    "sampleCount": 1,
+    "sources": [
+      "USGS NAQWA"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "creek-chub": 1,
+      "green-sunfish": 1,
+      "longnose-dace": 1,
+      "northern-hogsucker": 1,
+      "redbreast-sunfish": 1,
+      "rock-bass": 1,
+      "smallmouth-bass": 1,
+      "tessellated-darter": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700080402": {
+    "sampleCount": 1,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "creek-chub": 1,
+      "green-sunfish": 1
+    }
+  },
+  "020700080802": {
+    "sampleCount": 2,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "blacknose-dace": 2,
+      "creek-chub": 2,
+      "green-sunfish": 2,
+      "longnose-dace": 2,
+      "white-sucker": 1
+    }
+  },
+  "020700080801": {
+    "sampleCount": 1,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "largemouth-bass": 1,
+      "longnose-dace": 1,
+      "white-sucker": 1
+    }
+  },
+  "020700081001": {
+    "sampleCount": 1,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {}
+  },
+  "020700080904": {
+    "sampleCount": 2,
+    "sources": [
+      "Maryland Department of Natural Resources",
+      "EPA National River and Streams Assessment (NRSA)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "channel-catfish": 1,
+      "green-sunfish": 1,
+      "largemouth-bass": 1,
+      "pumpkinseed": 1,
+      "redbreast-sunfish": 1,
+      "smallmouth-bass": 1
+    }
+  },
+  "020700081002": {
+    "sampleCount": 1,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "creek-chub": 1,
+      "green-sunfish": 1,
+      "longnose-dace": 1,
+      "redbreast-sunfish": 1,
+      "tessellated-darter": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700080505": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "fallfish": 1,
+      "longnose-dace": 1,
+      "northern-hogsucker": 1,
+      "redbreast-sunfish": 1,
+      "rock-bass": 1,
+      "smallmouth-bass": 1,
+      "tessellated-darter": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700081003": {
+    "sampleCount": 3,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "american-eel": 3,
+      "blacknose-dace": 3,
+      "creek-chub": 3,
+      "green-sunfish": 3,
+      "largemouth-bass": 1,
+      "longnose-dace": 3,
+      "pumpkinseed": 1,
+      "redbreast-sunfish": 3,
+      "smallmouth-bass": 1,
+      "tessellated-darter": 3,
+      "white-sucker": 3,
+      "yellow-bullhead": 1,
+      "bluegill": 1
+    }
+  },
+  "020700080403": {
+    "sampleCount": 2,
+    "sources": [
+      "EPA National River and Streams Assessment (NRSA)"
+    ],
+    "present": {
+      "american-eel": 2,
+      "bluegill": 2,
+      "channel-catfish": 2,
+      "green-sunfish": 2,
+      "largemouth-bass": 2,
+      "pumpkinseed": 1,
+      "redbreast-sunfish": 2,
+      "rock-bass": 2,
+      "shorthead-redhorse": 1,
+      "smallmouth-bass": 2,
+      "yellow-bullhead": 2,
+      "black-crappie": 1
+    }
+  },
+  "020700080401": {
+    "sampleCount": 1,
+    "sources": [
+      "EPA EMAP Mid-Atlantic Region"
+    ],
+    "present": {
+      "american-eel": 1,
+      "brown-bullhead": 1,
+      "channel-catfish": 1,
+      "largemouth-bass": 1,
+      "northern-hogsucker": 1,
+      "redbreast-sunfish": 1,
+      "rock-bass": 1,
+      "shorthead-redhorse": 1,
+      "smallmouth-bass": 1,
+      "white-sucker": 1,
+      "yellow-perch": 1
+    }
+  },
+  "020700110101": {
+    "sampleCount": 8,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "american-eel": 5,
+      "bluegill": 5,
+      "pumpkinseed": 3,
+      "tessellated-darter": 6,
+      "green-sunfish": 6,
+      "redbreast-sunfish": 2,
+      "warmouth": 1,
+      "white-sucker": 3,
+      "yellow-bullhead": 4,
+      "largemouth-bass": 2,
+      "blacknose-dace": 4,
+      "creek-chub": 3
+    }
+  },
+  "020700110401": {
+    "sampleCount": 4,
+    "sources": [
+      "Maryland Department of Natural Resources",
+      "EPA EMAP Mid-Atlantic Region"
+    ],
+    "present": {
+      "american-eel": 4,
+      "bluegill": 4,
+      "fallfish": 2,
+      "pumpkinseed": 3,
+      "tessellated-darter": 4,
+      "warmouth": 3,
+      "largemouth-bass": 1,
+      "blacknose-dace": 1
+    }
+  },
+  "020700110304": {
+    "sampleCount": 6,
+    "sources": [
+      "Maryland Department of Natural Resources",
+      "EPA National River and Streams Assessment (NRSA)"
+    ],
+    "present": {
+      "blacknose-dace": 5,
+      "american-eel": 3,
+      "bluegill": 2,
+      "creek-chub": 3,
+      "fallfish": 2,
+      "tessellated-darter": 3,
+      "white-sucker": 2,
+      "brown-bullhead": 1,
+      "channel-catfish": 1,
+      "gizzard-shad": 1,
+      "green-sunfish": 1,
+      "largemouth-bass": 1,
+      "pumpkinseed": 1,
+      "redbreast-sunfish": 1,
+      "striped-bass": 1,
+      "warmouth": 1,
+      "white-perch": 1,
+      "yellow-perch": 1
+    }
+  },
+  "020700110501": {
+    "sampleCount": 4,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "blacknose-dace": 3,
+      "bluegill": 3,
+      "tessellated-darter": 3,
+      "american-eel": 2,
+      "fallfish": 1,
+      "pumpkinseed": 2,
+      "redbreast-sunfish": 1,
+      "white-sucker": 1,
+      "largemouth-bass": 1
+    }
+  },
+  "020700110102": {
+    "sampleCount": 4,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "american-eel": 1,
+      "bluegill": 1,
+      "gizzard-shad": 1,
+      "green-sunfish": 1,
+      "pumpkinseed": 1,
+      "tessellated-darter": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700110302": {
+    "sampleCount": 4,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "blacknose-dace": 3,
+      "fallfish": 2,
+      "american-eel": 2,
+      "bluegill": 2,
+      "creek-chub": 1,
+      "largemouth-bass": 1,
+      "pumpkinseed": 2,
+      "redbreast-sunfish": 2,
+      "tessellated-darter": 2,
+      "white-sucker": 2,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700110106": {
+    "sampleCount": 6,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {}
+  },
+  "020700110105": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "american-eel": 1,
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "fallfish": 1,
+      "largemouth-bass": 1,
+      "pumpkinseed": 1,
+      "redbreast-sunfish": 1,
+      "tessellated-darter": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700110403": {
+    "sampleCount": 1,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "american-eel": 1,
+      "blacknose-dace": 1
+    }
+  },
+  "020700110305": {
+    "sampleCount": 1,
+    "sources": [
+      "EPA EMAP Mid-Atlantic Region"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "creek-chub": 1
+    }
+  },
+  "020700110701": {
+    "sampleCount": 2,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "blacknose-dace": 2,
+      "fallfish": 1,
+      "tessellated-darter": 1,
+      "american-eel": 1,
+      "bluegill": 1
+    }
+  },
+  "020700110306": {
+    "sampleCount": 1,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "american-eel": 1,
+      "blacknose-dace": 1,
+      "creek-chub": 1,
+      "green-sunfish": 1
+    }
+  },
+  "020700110702": {
+    "sampleCount": 1,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "american-eel": 1,
+      "bluegill": 1,
+      "green-sunfish": 1,
+      "largemouth-bass": 1,
+      "redbreast-sunfish": 1,
+      "tessellated-darter": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700110505": {
+    "sampleCount": 1,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "american-eel": 1,
+      "bluegill": 1,
+      "largemouth-bass": 1
+    }
+  },
+  "020700110901": {
+    "sampleCount": 4,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "american-eel": 4,
+      "blacknose-dace": 3,
+      "bluegill": 3,
+      "pumpkinseed": 4,
+      "redbreast-sunfish": 4,
+      "tessellated-darter": 4,
+      "largemouth-bass": 2,
+      "brown-bullhead": 1
+    }
+  },
+  "020700110503": {
+    "sampleCount": 1,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "american-eel": 1,
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "fallfish": 1,
+      "largemouth-bass": 1,
+      "pumpkinseed": 1,
+      "tessellated-darter": 1,
+      "white-sucker": 1
+    }
+  },
+  "020700110902": {
+    "sampleCount": 1,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "american-eel": 1,
+      "bluegill": 1,
+      "brown-bullhead": 1,
+      "redbreast-sunfish": 1,
+      "tessellated-darter": 1
+    }
+  },
+  "020700110301": {
+    "sampleCount": 6,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "american-eel": 1,
+      "bluegill": 1,
+      "brown-bullhead": 1,
+      "pumpkinseed": 1,
+      "redbreast-sunfish": 1,
+      "tessellated-darter": 1,
+      "warmouth": 1
+    }
+  },
+  "020700110206": {
+    "sampleCount": 1,
+    "sources": [
+      "EPA EMAP Mid-Atlantic Region"
+    ],
+    "present": {
+      "american-eel": 1,
+      "black-crappie": 1,
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "brown-bullhead": 1,
+      "fallfish": 1,
+      "northern-hogsucker": 1,
+      "pumpkinseed": 1,
+      "redbreast-sunfish": 1,
+      "spotted-bass": 1,
+      "tessellated-darter": 1,
+      "warmouth": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700040702": {
+    "sampleCount": 1,
+    "sources": [
+      "EPA EMAP Mid-Atlantic Region"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "brown-bullhead": 1,
+      "creek-chub": 1,
+      "fallfish": 1,
+      "green-sunfish": 1,
+      "longnose-dace": 1,
+      "northern-hogsucker": 1,
+      "warmouth": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700040802": {
+    "sampleCount": 1,
+    "sources": [
+      "Pennsylvania Fish & Boat Commission"
+    ],
+    "present": {
+      "brook-trout": 1
+    }
+  },
+  "020700041102": {
+    "sampleCount": 2,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "blacknose-dace": 2,
+      "bluegill": 1,
+      "creek-chub": 1,
+      "green-sunfish": 1,
+      "pumpkinseed": 1,
+      "white-sucker": 1
+    }
+  },
+  "020700040806": {
+    "sampleCount": 1,
+    "sources": [
+      "USGS NAQWA"
+    ],
+    "present": {
+      "green-sunfish": 1,
+      "largemouth-bass": 1,
+      "longnose-dace": 1,
+      "pumpkinseed": 1,
+      "redbreast-sunfish": 1,
+      "rock-bass": 1,
+      "smallmouth-bass": 1,
+      "tessellated-darter": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700041006": {
+    "sampleCount": 1,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "brown-trout": 1,
+      "creek-chub": 1,
+      "longnose-dace": 1,
+      "northern-hogsucker": 1,
+      "rainbow-trout": 1,
+      "white-sucker": 1
+    }
+  },
+  "020700040305": {
+    "sampleCount": 4,
+    "sources": [
+      "Maryland Department of Natural Resources",
+      "EPA EMAP Mid-Atlantic Region"
+    ],
+    "present": {
+      "blacknose-dace": 2,
+      "creek-chub": 2,
+      "american-eel": 1,
+      "bluegill": 1,
+      "brown-trout": 1,
+      "fallfish": 1,
+      "green-sunfish": 1,
+      "longnose-dace": 1,
+      "mottled-sculpin": 1,
+      "northern-hogsucker": 1,
+      "redbreast-sunfish": 1,
+      "rock-bass": 1,
+      "smallmouth-bass": 1,
+      "tessellated-darter": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700041004": {
+    "sampleCount": 3,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "longnose-dace": 1,
+      "northern-hogsucker": 1,
+      "rainbow-trout": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700040807": {
+    "sampleCount": 3,
+    "sources": [
+      "Maryland Department of Natural Resources",
+      "EPA National River and Streams Assessment (NRSA)"
+    ],
+    "present": {
+      "bluegill": 1,
+      "green-sunfish": 2,
+      "largemouth-bass": 1,
+      "redbreast-sunfish": 1,
+      "rock-bass": 2,
+      "smallmouth-bass": 2,
+      "white-sucker": 2,
+      "blacknose-dace": 1,
+      "creek-chub": 1,
+      "longnose-dace": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700040505": {
+    "sampleCount": 1,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "creek-chub": 1,
+      "green-sunfish": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700041007": {
+    "sampleCount": 4,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {}
+  },
+  "020700041103": {
+    "sampleCount": 2,
+    "sources": [
+      "EPA National River and Streams Assessment (NRSA)",
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "american-eel": 2,
+      "bluegill": 2,
+      "channel-catfish": 2,
+      "fallfish": 2,
+      "green-sunfish": 1,
+      "largemouth-bass": 2,
+      "pumpkinseed": 2,
+      "redbreast-sunfish": 2,
+      "rock-bass": 2,
+      "smallmouth-bass": 2,
+      "white-sucker": 2,
+      "yellow-bullhead": 2,
+      "black-crappie": 1,
+      "northern-hogsucker": 1,
+      "yellow-perch": 1
+    }
+  },
+  "020700040503": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "creek-chub": 1,
+      "green-sunfish": 1,
+      "longnose-dace": 1,
+      "white-sucker": 1
+    }
+  },
+  "020700040203": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "creek-chub": 1,
+      "green-sunfish": 1,
+      "redbreast-sunfish": 1,
+      "white-sucker": 1
+    }
+  },
+  "020700040501": {
+    "sampleCount": 2,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "brown-bullhead": 1,
+      "creek-chub": 1,
+      "green-sunfish": 1,
+      "pumpkinseed": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700040502": {
+    "sampleCount": 1,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "black-crappie": 1,
+      "bluegill": 1,
+      "channel-catfish": 1,
+      "fallfish": 1,
+      "largemouth-bass": 1,
+      "northern-hogsucker": 1,
+      "rock-bass": 1,
+      "yellow-perch": 1
+    }
+  },
+  "020700041008": {
+    "sampleCount": 1,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "creek-chub": 1,
+      "longnose-dace": 1,
+      "white-sucker": 1
+    }
+  },
+  "020700040908": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "longnose-dace": 1,
+      "white-sucker": 1
+    }
+  },
+  "020700041107": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "creek-chub": 1,
+      "spotted-bass": 1,
+      "white-sucker": 1
+    }
+  },
+  "020700041105": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "green-sunfish": 1,
+      "largemouth-bass": 1
+    }
+  },
+  "020700041106": {
+    "sampleCount": 3,
+    "sources": [
+      "EPA EMAP Mid-Atlantic Region",
+      "Maryland Department of Natural Resources",
+      "EPA National River and Streams Assessment (NRSA)"
+    ],
+    "present": {
+      "american-eel": 2,
+      "black-crappie": 1,
+      "bluegill": 2,
+      "channel-catfish": 2,
+      "fallfish": 1,
+      "green-sunfish": 2,
+      "largemouth-bass": 1,
+      "pumpkinseed": 1,
+      "redbreast-sunfish": 2,
+      "shorthead-redhorse": 2,
+      "smallmouth-bass": 2,
+      "white-sucker": 1,
+      "yellow-perch": 1,
+      "northern-hogsucker": 1,
+      "rock-bass": 1,
+      "walleye": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700040404": {
+    "sampleCount": 2,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 2,
+      "creek-chub": 1,
+      "white-sucker": 2,
+      "northern-hogsucker": 1,
+      "rock-bass": 1,
+      "smallmouth-bass": 1
+    }
+  },
+  "020700040403": {
+    "sampleCount": 1,
+    "sources": [
+      "EPA EMAP Mid-Atlantic Region"
+    ],
+    "present": {
+      "american-eel": 1,
+      "blacknose-dace": 1,
+      "creek-chub": 1,
+      "fallfish": 1,
+      "green-sunfish": 1,
+      "longnose-dace": 1,
+      "mottled-sculpin": 1,
+      "northern-hogsucker": 1,
+      "redbreast-sunfish": 1,
+      "rock-bass": 1,
+      "smallmouth-bass": 1,
+      "spotted-bass": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700040903": {
+    "sampleCount": 2,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 2,
+      "green-sunfish": 1,
+      "longnose-dace": 1,
+      "redbreast-sunfish": 1,
+      "tessellated-darter": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700040902": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "american-eel": 1
+    }
+  },
+  "020700040904": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "creek-chub": 1,
+      "green-sunfish": 1,
+      "pumpkinseed": 1,
+      "white-sucker": 1
+    }
+  },
+  "020700051002": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "creek-chub": 1,
+      "longnose-dace": 1,
+      "white-sucker": 1
+    }
+  },
+  "020700050903": {
+    "sampleCount": 1,
+    "sources": [
+      "EPA EMAP Mid-Atlantic Region"
+    ],
+    "present": {
+      "bluegill": 1,
+      "largemouth-bass": 1,
+      "northern-hogsucker": 1,
+      "pumpkinseed": 1,
+      "redbreast-sunfish": 1,
+      "rock-bass": 1,
+      "shorthead-redhorse": 1,
+      "smallmouth-bass": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700050901": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "bluegill": 1,
+      "green-sunfish": 1,
+      "largemouth-bass": 1,
+      "longnose-dace": 1,
+      "northern-hogsucker": 1,
+      "redbreast-sunfish": 1,
+      "rock-bass": 1,
+      "smallmouth-bass": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700050503": {
+    "sampleCount": 1,
+    "sources": [
+      "USGS BioData"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "fallfish": 1,
+      "green-sunfish": 1,
+      "largemouth-bass": 1,
+      "longnose-dace": 1,
+      "pumpkinseed": 1,
+      "redbreast-sunfish": 1,
+      "smallmouth-bass": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700050603": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "fallfish": 1,
+      "green-sunfish": 1,
+      "largemouth-bass": 1,
+      "pumpkinseed": 1,
+      "redbreast-sunfish": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700050605": {
+    "sampleCount": 2,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)",
+      "EPA National River and Streams Assessment (NRSA)"
+    ],
+    "present": {
+      "american-eel": 1,
+      "bluegill": 1,
+      "green-sunfish": 1,
+      "largemouth-bass": 1,
+      "longnose-dace": 1,
+      "northern-hogsucker": 1,
+      "redbreast-sunfish": 1,
+      "rock-bass": 1,
+      "smallmouth-bass": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700050705": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "fallfish": 1,
+      "green-sunfish": 1,
+      "largemouth-bass": 1,
+      "longnose-dace": 1,
+      "northern-hogsucker": 1,
+      "redbreast-sunfish": 1,
+      "rock-bass": 1,
+      "smallmouth-bass": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700050302": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "northern-hogsucker": 1,
+      "redbreast-sunfish": 1,
+      "rock-bass": 1,
+      "smallmouth-bass": 1
+    }
+  },
+  "020700050203": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "green-sunfish": 1,
+      "longnose-dace": 1,
+      "redbreast-sunfish": 1,
+      "smallmouth-bass": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700050704": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "fallfish": 1,
+      "green-sunfish": 1,
+      "largemouth-bass": 1,
+      "pumpkinseed": 1,
+      "rock-bass": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700050802": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "creek-chub": 1,
+      "redbreast-sunfish": 1,
+      "white-sucker": 1
+    }
+  },
+  "020700050606": {
+    "sampleCount": 1,
+    "sources": [
+      "EPA EMAP Mid-Atlantic Region"
+    ],
+    "present": {
+      "american-eel": 1,
+      "bluegill": 1,
+      "channel-catfish": 1,
+      "largemouth-bass": 1,
+      "longnose-dace": 1,
+      "northern-hogsucker": 1,
+      "pumpkinseed": 1,
+      "rainbow-trout": 1,
+      "redbreast-sunfish": 1,
+      "rock-bass": 1,
+      "smallmouth-bass": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700050401": {
+    "sampleCount": 2,
+    "sources": [
+      "EPA EMAP Mid-Atlantic Region",
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "brook-trout": 1,
+      "mottled-sculpin": 1,
+      "blacknose-dace": 1,
+      "creek-chub": 1,
+      "longnose-dace": 1
+    }
+  },
+  "020700050105": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "creek-chub": 1,
+      "longnose-dace": 1,
+      "northern-hogsucker": 1,
+      "redbreast-sunfish": 1,
+      "rock-bass": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700050703": {
+    "sampleCount": 1,
+    "sources": [
+      "EPA EMAP Mid-Atlantic Region"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "green-sunfish": 1,
+      "largemouth-bass": 1,
+      "longnose-dace": 1,
+      "mottled-sculpin": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700060702": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "creek-chub": 1
+    }
+  },
+  "020700060102": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "creek-chub": 1,
+      "longnose-dace": 1,
+      "white-sucker": 1
+    }
+  },
+  "020700060305": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "green-sunfish": 1,
+      "largemouth-bass": 1,
+      "longnose-dace": 1,
+      "mottled-sculpin": 1,
+      "northern-hogsucker": 1,
+      "rock-bass": 1,
+      "white-sucker": 1
+    }
+  },
+  "020700060501": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "largemouth-bass": 1,
+      "longnose-dace": 1,
+      "white-sucker": 1
+    }
+  },
+  "020700060103": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "creek-chub": 1,
+      "longnose-dace": 1,
+      "northern-hogsucker": 1,
+      "rainbow-trout": 1,
+      "rock-bass": 1,
+      "smallmouth-bass": 1,
+      "white-sucker": 1
+    }
+  },
+  "020700060204": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "creek-chub": 1,
+      "green-sunfish": 1,
+      "longnose-dace": 1,
+      "northern-hogsucker": 1,
+      "redbreast-sunfish": 1,
+      "smallmouth-bass": 1,
+      "white-sucker": 1
+    }
+  },
+  "020700060303": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "fallfish": 1,
+      "longnose-dace": 1,
+      "redbreast-sunfish": 1,
+      "smallmouth-bass": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700070303": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "creek-chub": 1,
+      "green-sunfish": 1,
+      "longnose-dace": 1,
+      "rock-bass": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700070202": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "creek-chub": 1
+    }
+  },
+  "020700070301": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "creek-chub": 1,
+      "green-sunfish": 1,
+      "rainbow-trout": 1,
+      "white-sucker": 1
+    }
+  },
+  "020700070304": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "creek-chub": 1,
+      "green-sunfish": 1,
+      "smallmouth-bass": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020801030202": {
+    "sampleCount": 2,
+    "sources": [
+      "EPA EMAP Mid-Atlantic Region"
+    ],
+    "present": {
+      "american-eel": 2,
+      "blacknose-dace": 2,
+      "bluegill": 1,
+      "creek-chub": 2,
+      "fallfish": 2,
+      "green-sunfish": 2,
+      "largemouth-bass": 1,
+      "longnose-dace": 2,
+      "mottled-sculpin": 1,
+      "northern-hogsucker": 2,
+      "pumpkinseed": 1,
+      "redbreast-sunfish": 2,
+      "rock-bass": 2,
+      "smallmouth-bass": 1,
+      "tessellated-darter": 1,
+      "white-sucker": 2,
+      "spotted-bass": 1
+    }
+  },
+  "020801030405": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "bluegill": 1,
+      "creek-chub": 1,
+      "fallfish": 1,
+      "northern-hogsucker": 1,
+      "redbreast-sunfish": 1,
+      "shorthead-redhorse": 1,
+      "smallmouth-bass": 1,
+      "tessellated-darter": 1
+    }
+  },
+  "020801030101": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "fallfish": 1,
+      "largemouth-bass": 1,
+      "longnose-dace": 1,
+      "tessellated-darter": 1,
+      "white-sucker": 1
+    }
+  },
+  "020801030501": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "american-eel": 1,
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "fallfish": 1,
+      "longnose-dace": 1,
+      "redbreast-sunfish": 1,
+      "tessellated-darter": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020801031003": {
+    "sampleCount": 4,
+    "sources": [
+      "EPA EMAP Mid-Atlantic Region",
+      "EPA National River and Streams Assessment (NRSA)",
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "bluegill": 4,
+      "creek-chub": 1,
+      "green-sunfish": 4,
+      "pumpkinseed": 3,
+      "tessellated-darter": 4,
+      "american-eel": 2,
+      "largemouth-bass": 2,
+      "redbreast-sunfish": 3,
+      "white-sucker": 2,
+      "yellow-bullhead": 2,
+      "brown-bullhead": 1,
+      "fallfish": 1,
+      "northern-hogsucker": 1,
+      "rock-bass": 1,
+      "smallmouth-bass": 1
+    }
+  },
+  "020801030703": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 1
+    }
+  },
+  "020801030906": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "american-eel": 1,
+      "fallfish": 1,
+      "green-sunfish": 1,
+      "longnose-dace": 1,
+      "northern-hogsucker": 1,
+      "redbreast-sunfish": 1,
+      "rock-bass": 1,
+      "smallmouth-bass": 1,
+      "tessellated-darter": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020801040102": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "american-eel": 1,
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "brown-bullhead": 1,
+      "creek-chub": 1,
+      "fallfish": 1,
+      "green-sunfish": 1,
+      "largemouth-bass": 1,
+      "longnose-dace": 1,
+      "redbreast-sunfish": 1,
+      "tessellated-darter": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020801040201": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "american-eel": 1,
+      "blacknose-dace": 1,
+      "creek-chub": 1,
+      "green-sunfish": 1,
+      "tessellated-darter": 1
+    }
+  },
+  "020801040303": {
+    "sampleCount": 2,
+    "sources": [
+      "EPA National River and Streams Assessment (NRSA)",
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 2,
+      "largemouth-bass": 2
+    }
+  },
+  "020801040101": {
+    "sampleCount": 1,
+    "sources": [
+      "EPA National River and Streams Assessment (NRSA)"
+    ],
+    "present": {
+      "american-eel": 1,
+      "bluegill": 1,
+      "channel-catfish": 1,
+      "northern-hogsucker": 1,
+      "redbreast-sunfish": 1,
+      "rock-bass": 1,
+      "shorthead-redhorse": 1,
+      "smallmouth-bass": 1,
+      "striped-bass": 1,
+      "tessellated-darter": 1,
+      "white-perch": 1
+    }
+  },
+  "020801040504": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {}
+  },
+  "020801060502": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "green-sunfish": 1,
+      "pumpkinseed": 1,
+      "redbreast-sunfish": 1,
+      "tessellated-darter": 1,
+      "white-sucker": 1
+    }
+  },
+  "020801060602": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "bluegill": 1,
+      "brown-bullhead": 1,
+      "creek-chub": 1,
+      "fallfish": 1,
+      "green-sunfish": 1,
+      "redbreast-sunfish": 1,
+      "tessellated-darter": 1,
+      "warmouth": 1
+    }
+  },
+  "020801060101": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "american-eel": 1,
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "creek-chub": 1,
+      "fallfish": 1,
+      "largemouth-bass": 1,
+      "northern-hogsucker": 1,
+      "redbreast-sunfish": 1,
+      "tessellated-darter": 1,
+      "white-sucker": 1
+    }
+  },
+  "020801060803": {
+    "sampleCount": 3,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)",
+      "EPA EMAP Mid-Atlantic Region"
+    ],
+    "present": {
+      "bluegill": 3,
+      "pumpkinseed": 1,
+      "redbreast-sunfish": 2,
+      "warmouth": 1,
+      "american-eel": 1,
+      "channel-catfish": 1,
+      "smallmouth-bass": 1,
+      "tessellated-darter": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020801060202": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "american-eel": 1,
+      "bluegill": 1,
+      "northern-hogsucker": 1,
+      "pumpkinseed": 1,
+      "redbreast-sunfish": 1,
+      "shorthead-redhorse": 1,
+      "spotted-bass": 1,
+      "tessellated-darter": 1
+    }
+  },
+  "020801060901": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "american-eel": 1,
+      "bluegill": 1,
+      "redbreast-sunfish": 1,
+      "spotted-bass": 1,
+      "tessellated-darter": 1
+    }
+  },
+  "020801060304": {
+    "sampleCount": 2,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "american-eel": 1,
+      "bluegill": 1,
+      "green-sunfish": 2,
+      "largemouth-bass": 1,
+      "redbreast-sunfish": 2,
+      "tessellated-darter": 2,
+      "white-sucker": 2,
+      "blacknose-dace": 1,
+      "creek-chub": 1,
+      "fallfish": 1
+    }
+  },
+  "020801061003": {
+    "sampleCount": 2,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "american-eel": 2,
+      "black-crappie": 1,
+      "bluegill": 2,
+      "largemouth-bass": 1,
+      "pumpkinseed": 1,
+      "redbreast-sunfish": 2,
+      "tessellated-darter": 2,
+      "warmouth": 2,
+      "yellow-bullhead": 2,
+      "fallfish": 1
+    }
+  },
+  "020801060903": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "american-eel": 1,
+      "bluegill": 1,
+      "fallfish": 1,
+      "pumpkinseed": 1,
+      "redbreast-sunfish": 1,
+      "tessellated-darter": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020801060103": {
+    "sampleCount": 2,
+    "sources": [
+      "EPA EMAP Mid-Atlantic Region",
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "creek-chub": 2,
+      "american-eel": 1,
+      "bluegill": 1,
+      "fallfish": 1,
+      "green-sunfish": 1,
+      "redbreast-sunfish": 1,
+      "tessellated-darter": 1,
+      "white-sucker": 1
+    }
+  },
+  "020700100202": {
+    "sampleCount": 1,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {}
+  },
+  "020700100203": {
+    "sampleCount": 2,
+    "sources": [
+      "EPA EMAP Mid-Atlantic Region",
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "american-eel": 2,
+      "blacknose-dace": 2,
+      "bluegill": 2,
+      "fallfish": 1,
+      "pumpkinseed": 1,
+      "redbreast-sunfish": 1,
+      "tessellated-darter": 1,
+      "white-sucker": 1,
+      "longnose-dace": 1
+    }
+  },
+  "020700100101": {
+    "sampleCount": 2,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "blacknose-dace": 2,
+      "creek-chub": 2,
+      "green-sunfish": 1,
+      "longnose-dace": 2,
+      "tessellated-darter": 2,
+      "white-sucker": 2,
+      "bluegill": 1,
+      "brown-bullhead": 1,
+      "largemouth-bass": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700100102": {
+    "sampleCount": 2,
+    "sources": [
+      "Maryland Department of Natural Resources",
+      "EPA National River and Streams Assessment (NRSA)"
+    ],
+    "present": {
+      "blacknose-dace": 1,
+      "creek-chub": 1,
+      "green-sunfish": 1,
+      "pumpkinseed": 2,
+      "american-eel": 1,
+      "bluegill": 1,
+      "gizzard-shad": 1,
+      "largemouth-bass": 1,
+      "longnose-dace": 1,
+      "redbreast-sunfish": 1,
+      "smallmouth-bass": 1,
+      "striped-bass": 1,
+      "white-sucker": 1
+    }
+  },
+  "020700100201": {
+    "sampleCount": 1,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "american-eel": 1,
+      "bluegill": 1,
+      "creek-chub": 1,
+      "fallfish": 1,
+      "green-sunfish": 1,
+      "largemouth-bass": 1,
+      "pumpkinseed": 1,
+      "redbreast-sunfish": 1,
+      "smallmouth-bass": 1,
+      "tessellated-darter": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700100204": {
+    "sampleCount": 1,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "american-eel": 1,
+      "blacknose-dace": 1,
+      "green-sunfish": 1
+    }
+  },
+  "020700100303": {
+    "sampleCount": 3,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "blacknose-dace": 3,
+      "creek-chub": 3,
+      "american-eel": 2,
+      "bluegill": 2,
+      "longnose-dace": 2,
+      "pumpkinseed": 2,
+      "redbreast-sunfish": 2,
+      "tessellated-darter": 2,
+      "yellow-bullhead": 2,
+      "black-crappie": 1,
+      "largemouth-bass": 1,
+      "white-sucker": 1
+    }
+  },
+  "020700100301": {
+    "sampleCount": 2,
+    "sources": [
+      "EPA National River and Streams Assessment (NRSA)",
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "blacknose-dace": 1
+    }
+  },
+  "020700100307": {
+    "sampleCount": 13,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {}
+  },
+  "020700100304": {
+    "sampleCount": 1,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "american-eel": 1,
+      "blacknose-dace": 1,
+      "creek-chub": 1,
+      "fallfish": 1,
+      "green-sunfish": 1,
+      "largemouth-bass": 1,
+      "longnose-dace": 1,
+      "redbreast-sunfish": 1,
+      "tessellated-darter": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700100305": {
+    "sampleCount": 6,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {
+      "american-eel": 1,
+      "bluegill": 1,
+      "creek-chub": 1,
+      "fallfish": 1,
+      "green-sunfish": 1,
+      "pumpkinseed": 1,
+      "redbreast-sunfish": 1,
+      "tessellated-darter": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700100704": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "bluegill": 1,
+      "fallfish": 1,
+      "gizzard-shad": 1,
+      "green-sunfish": 1,
+      "largemouth-bass": 1,
+      "longnose-dace": 1,
+      "northern-hogsucker": 1,
+      "redbreast-sunfish": 1,
+      "tessellated-darter": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700100502": {
+    "sampleCount": 1,
+    "sources": [
+      "Southeast Aquatic Resources Partnership (SARP)"
+    ],
+    "present": {
+      "bluegill": 1,
+      "green-sunfish": 1
+    }
+  },
+  "020700100705": {
+    "sampleCount": 1,
+    "sources": [
+      "EPA EMAP Mid-Atlantic Region"
+    ],
+    "present": {
+      "bluegill": 1,
+      "green-sunfish": 1,
+      "longnose-dace": 1,
+      "redbreast-sunfish": 1,
+      "tessellated-darter": 1,
+      "yellow-bullhead": 1
+    }
+  },
+  "020700100805": {
+    "sampleCount": 6,
+    "sources": [
+      "Maryland Department of Natural Resources"
+    ],
+    "present": {}
+  },
+  "020700100402": {
+    "sampleCount": 1,
+    "sources": [
+      "USGS BioData"
+    ],
+    "present": {
+      "american-eel": 1,
+      "blacknose-dace": 1,
+      "bluegill": 1,
+      "brown-bullhead": 1,
+      "creek-chub": 1,
+      "green-sunfish": 1,
+      "largemouth-bass": 1,
+      "pumpkinseed": 1,
+      "redbreast-sunfish": 1,
+      "tessellated-darter": 1,
+      "white-sucker": 1,
+      "yellow-bullhead": 1
+    }
+  }
+}

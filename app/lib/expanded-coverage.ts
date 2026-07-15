@@ -2,6 +2,7 @@ import dwrAccessPayload from "./generated/dwr-access-nova.json";
 import nhdWatersPayload from "./generated/nhd-waters-nova.json";
 import nhdStreamsPayload from "./generated/nhd-streams-nova.json";
 import waterbodySpeciesPayload from "./generated/waterbody-species-nova.json";
+import likelyPresentPayload from "./generated/likely-present-nova.json";
 import type { AccessMethod, FishingLocationSeed, SpeciesEvidence, WaterbodyType } from "./data";
 
 type DwrAccessSite = {
@@ -314,67 +315,76 @@ export function waterbodySpeciesFor(location: Pick<FishingLocationSeed, "waterbo
 }
 
 // ---------------------------------------------------------------------------
-// Basin inference — last-resort, clearly-labeled evidence for waters with no
-// agency documentation (small streams, small park ponds). A tributary of a
-// documented smallmouth river very likely holds smallmouth + redbreast; a public
-// park pond very likely holds largemouth + bluegill. These are INFERENCES, not
-// surveys: flagged modeled, low availability/confidence, and only applied when a
-// water has no documented evidence at all.
+// Likely-present evidence — replaces the retired county/basin stereotype with
+// honest, cited inference for waters that have no direct documentation. Three
+// real mechanisms, generated deterministically (scripts/generate-likely-present.mjs)
+// from USGS data — never a "typical for the region" guess:
+//   1. same-waterbody  — this access point sits ON a documented river/water.
+//   2. connectivity    — a warmwater sportfish is documented <=5 mi downstream in
+//                        a connected water (USGS NLDI river network trace).
+//   3. subwatershed    — recorded at surveyed reaches in the same HUC12 (Aquatic GAP).
+// All flagged modeled, lower availability/confidence, and each carries its basis.
 // ---------------------------------------------------------------------------
-const SHENANDOAH_COUNTIES = new Set(["Page", "Warren", "Shenandoah", "Clarke", "Frederick", "Rockingham"]);
-const RAPPAHANNOCK_COUNTIES = new Set(["Culpeper", "Madison", "Rappahannock", "Orange", "Spotsylvania", "King George", "Fredericksburg", "Fauquier"]);
-const SHEN_URL = "https://dwr.virginia.gov/blog/five-great-places-in-the-northern-shenandoah-valley-to-fish-after-work/";
-const RAPP_URL = "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/";
-const POTOMAC_SMB_URL = "https://dwr.virginia.gov/blog/10-top-virginia-fishing-waters-rivers/";
-const TIDAL_URL = "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/";
-const POND_URL = "https://www.fairfaxcounty.gov/parks/fishing";
+type LikelySpecies = { id: string; sourceName: string; sourceUrl: string | null };
+type LikelyWater = {
+  sameWaterbody: { waterbody: string; species: LikelySpecies[] } | null;
+  connectivity: { water: string; downstreamMi: number; species: LikelySpecies[] }[];
+  subwatershed: { huc12: string; sampleCount: number; sources: string[]; species: { id: string; count: number; nonGame: boolean }[] } | null;
+};
+const likelyByLocation = (likelyPresentPayload as { waters: Record<string, LikelyWater> }).waters;
+const niceName = (id: string) => id.replace(/-/g, " ");
 
-function inferredRecord(speciesId: string, basinLabel: string, waterName: string, sourceUrl: string): SpeciesEvidence {
+function likelyRecord(
+  speciesId: string, availability: number, confidence: number,
+  summary: string, positive: string, sourceName: string, sourceUrl: string | null,
+): SpeciesEvidence {
   return {
     speciesId,
-    availability: 0.44,
+    availability,
     quality: null,
-    evidenceConfidence: 0.5,
+    evidenceConfidence: confidence,
     evidenceType: "modeled",
-    evidenceSummary: `Inferred from the documented ${basinLabel}; BiteMap has no survey of ${waterName} specifically.`,
-    lastEvidence: "Basin inference (connected drainage), 2026-07-14",
+    evidenceSummary: summary,
+    lastEvidence: "Likely-present model (USGS NLDI river network + USGS Aquatic GAP)",
     technique: "Match a compact natural presentation to the visible current, cover, and depth",
     depth: "Work accessible current breaks, pools, and cover first",
-    positive: [`${speciesId.replace(/-/g, " ")} is documented in the connected ${basinLabel}`],
-    negative: [
-      "This is a basin inference, not a survey of this specific water",
-      "Small headwater streams and ponds may not hold every basin species",
-    ],
-    sourceName: "Virginia Department of Wildlife Resources",
-    sourceUrl,
+    positive: [positive],
+    negative: ["Modeled inference for this specific water, not a survey of it"],
+    sourceName,
+    sourceUrl: sourceUrl ?? undefined,
     modeled: true,
   } as SpeciesEvidence;
 }
 
-export function inferredEvidenceFor(
-  location: Pick<FishingLocationSeed, "waterbody" | "waterbodyType" | "county" | "lng" | "name">,
-): SpeciesEvidence[] {
-  const name = location.name;
-  if (location.waterbodyType === "stream" || location.waterbodyType === "river") {
-    let label = "Occoquan/Piedmont tributary fishery";
-    let species = ["smallmouth-bass", "redbreast-sunfish"];
-    let url = POTOMAC_SMB_URL;
-    if (SHENANDOAH_COUNTIES.has(location.county)) {
-      label = "Shenandoah River smallmouth fishery"; url = SHEN_URL;
-    } else if (RAPPAHANNOCK_COUNTIES.has(location.county)) {
-      label = "Rappahannock River smallmouth fishery"; url = RAPP_URL;
-    } else if (location.lng > -77.15) {
-      // Eastern/tidal NOVA creeks are warmwater, not smallmouth.
-      label = "tidal Potomac tributary fishery"; species = ["largemouth-bass", "bluegill", "redbreast-sunfish"]; url = TIDAL_URL;
+export function likelyPresentFor(location: Pick<FishingLocationSeed, "id">): SpeciesEvidence[] {
+  const w = likelyByLocation[location.id];
+  if (!w) return [];
+  const bySpecies = new Map<string, SpeciesEvidence>();
+  // Strongest first: same-waterbody wins over connectivity wins over subwatershed.
+  if (w.sameWaterbody) {
+    for (const s of w.sameWaterbody.species) {
+      if (!bySpecies.has(s.id)) bySpecies.set(s.id, likelyRecord(s.id, 0.55, 0.6,
+        `Documented in ${w.sameWaterbody.waterbody} — the same water this access point sits on.`,
+        `${niceName(s.id)} is documented in ${w.sameWaterbody.waterbody}`, s.sourceName, s.sourceUrl));
     }
-    return species.map((s) => inferredRecord(s, label, name, url));
   }
-  if (["lake", "pond", "reservoir", "bay"].includes(location.waterbodyType)) {
-    return ["largemouth-bass", "bluegill"].map((s) =>
-      inferredRecord(s, "warmwater fishery typical of the region's public impoundments and embayments", name, POND_URL),
-    );
+  for (const c of w.connectivity) {
+    for (const s of c.species) {
+      if (!bySpecies.has(s.id)) bySpecies.set(s.id, likelyRecord(s.id, 0.45, 0.5,
+        `Likely present — ${niceName(s.id)} is documented ${c.downstreamMi} mi downstream in the connected ${c.water}.`,
+        `${niceName(s.id)} documented ${c.downstreamMi} mi downstream in the connected ${c.water}`, s.sourceName, s.sourceUrl));
+    }
   }
-  return [];
+  if (w.subwatershed) {
+    const src = w.subwatershed.sources.join(", ") || "public fisheries surveys";
+    for (const s of w.subwatershed.species) {
+      if (!bySpecies.has(s.id)) bySpecies.set(s.id, likelyRecord(s.id, s.nonGame ? 0.4 : 0.42, 0.48,
+        `Recorded at ${w.subwatershed.sampleCount} surveyed reach${w.subwatershed.sampleCount === 1 ? "" : "es"} in this subwatershed (USGS Aquatic GAP).`,
+        `${niceName(s.id)} recorded in this subwatershed by ${src}`,
+        "USGS Aquatic GAP presence/absence database", "https://doi.org/10.5066/P9FZ6J6R"));
+    }
+  }
+  return [...bySpecies.values()];
 }
 
 export const expandedCoverageStats = {
