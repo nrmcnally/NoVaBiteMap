@@ -4,10 +4,10 @@
     "reviewed": "2026-07-14",
     "wildTroutReachesApproved": 20,
     "wildTroutClaims": 22,
-    "manualClaims": 3,
+    "manualClaims": 15,
     "vafwisClaims": 860,
     "anadromousClaims": 3,
-    "locations": 88
+    "locations": 93
   },
   "byLocation": {
     "dwr-boat-102": [
@@ -5806,6 +5806,65 @@
         ],
         "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      }
+    ],
+    "huntsman-lake": [
+      {
+        "speciesId": "bluegill",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Bluegill documented at this water: \"all the panfish you could handle including Bluegill, Sunfish, and Warmouth\" (https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf).",
+        "lastEvidence": "Fairfax County Park Authority — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "Bluegill documented at this water: \"all the panfish you could handle including Bluegill, Sunfish, and Warmouth\" (https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Fairfax County Park Authority",
+        "sourceUrl": "https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf"
+      },
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Channel Catfish documented at this water: \"produced an exciting catch of an albino Channel Catfish\" (https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf).",
+        "lastEvidence": "Fairfax County Park Authority — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "Channel Catfish documented at this water: \"produced an exciting catch of an albino Channel Catfish\" (https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Fairfax County Park Authority",
+        "sourceUrl": "https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf"
+      },
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Largemouth Bass documented at this water: \"seemed to do the trick for the Largemouth Bass\" (https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf).",
+        "lastEvidence": "Fairfax County Park Authority — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "Largemouth Bass documented at this water: \"seemed to do the trick for the Largemouth Bass\" (https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Fairfax County Park Authority",
+        "sourceUrl": "https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf"
       }
     ],
     "nhd-stream-accokeek-creek": [
@@ -14380,6 +14439,27 @@
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
       }
     ],
+    "nhd-stream-quantico-creek": [
+      {
+        "speciesId": "green-sunfish",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Green sunfish documented at this water: \"North Fork Quantico Creek (QUAN-201-N) ... 2 green sunfish (Lepomis cyanellus)\" (https://irma.nps.gov/DataStore/DownloadFile/485353).",
+        "lastEvidence": "National Park Service — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "Green sunfish documented at this water: \"North Fork Quantico Creek (QUAN-201-N) ... 2 green sunfish (Lepomis cyanellus)\" (https://irma.nps.gov/DataStore/DownloadFile/485353)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "National Park Service",
+        "sourceUrl": "https://irma.nps.gov/DataStore/DownloadFile/485353"
+      }
+    ],
     "nhd-stream-ragged-run": [
       {
         "speciesId": "blacknose-dace",
@@ -14762,6 +14842,86 @@
         ],
         "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      }
+    ],
+    "nhd-stream-robinson-river": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Brook Trout documented at this water: \"\"Waterbody\":\"Robinson River\",\"Designation\":\"WT\" ... \"BrookTrout\":1 on the downstream \"Designation\":\"PNT\" reach\" (https://services.dwr.virginia.gov/arcgis/rest/services/HUB_Layers/DWR_Stocked_Trout_Reaches/FeatureServer/0/query?where=Waterbody+LIKE+%27%25Robinson%25%27&outFields=*&f=json).",
+        "lastEvidence": "Virginia Department of Wildlife Resources — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "Brook Trout documented at this water: \"\"Waterbody\":\"Robinson River\",\"Designation\":\"WT\" ... \"BrookTrout\":1 on the downstream \"Designation\":\"PNT\" reach\" (https://services.dwr.virginia.gov/arcgis/rest/services/HUB_Layers/DWR_Stocked_Trout_Reaches/FeatureServer/0/query?where=Waterbody+LIKE+%27%25Robinson%25%27&outFields=*&f=json)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/HUB_Layers/DWR_Stocked_Trout_Reaches/FeatureServer/0/query?where=Waterbody+LIKE+%27%25Robinson%25%27&outFields=*&f=json"
+      },
+      {
+        "speciesId": "rainbow-trout",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Rainbow Trout documented at this water: \"\"Waterbody\":\"Robinson River\",\"County\":\"Madison\",\"StockSched\":\"A\",\"RainbowTrout\":1,\"BrownTrout\":0,\"BrookTrout\":1\" (https://services.dwr.virginia.gov/arcgis/rest/services/HUB_Layers/DWR_Stocked_Trout_Reaches/FeatureServer/0/query?where=Waterbody+LIKE+%27%25Robinson%25%27&outFields=*&f=json).",
+        "lastEvidence": "Virginia Department of Wildlife Resources — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "Rainbow Trout documented at this water: \"\"Waterbody\":\"Robinson River\",\"County\":\"Madison\",\"StockSched\":\"A\",\"RainbowTrout\":1,\"BrownTrout\":0,\"BrookTrout\":1\" (https://services.dwr.virginia.gov/arcgis/rest/services/HUB_Layers/DWR_Stocked_Trout_Reaches/FeatureServer/0/query?where=Waterbody+LIKE+%27%25Robinson%25%27&outFields=*&f=json)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/HUB_Layers/DWR_Stocked_Trout_Reaches/FeatureServer/0/query?where=Waterbody+LIKE+%27%25Robinson%25%27&outFields=*&f=json"
+      }
+    ],
+    "nhd-stream-rose-river": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Brook trout documented at this water: \"Brook trout are the native species and studies indicate populations are declining.\" (https://www.nps.gov/shen/planyourvisit/fishing.htm).",
+        "lastEvidence": "National Park Service — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "Brook trout documented at this water: \"Brook trout are the native species and studies indicate populations are declining.\" (https://www.nps.gov/shen/planyourvisit/fishing.htm)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "National Park Service",
+        "sourceUrl": "https://www.nps.gov/shen/planyourvisit/fishing.htm"
+      },
+      {
+        "speciesId": "brown-trout",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "Brown trout documented at this water: \"While conducting brown trout removals within Rose River in 2006, the fish crew observed a large water snake\" (https://www.nps.gov/shen/planyourvisit/fishing.htm).",
+        "lastEvidence": "National Park Service — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "Brown trout documented at this water: \"While conducting brown trout removals within Rose River in 2006, the fish crew observed a large water snake\" (https://www.nps.gov/shen/planyourvisit/fishing.htm)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "National Park Service",
+        "sourceUrl": "https://www.nps.gov/shen/learn/nature/brown-trout.htm"
       }
     ],
     "nhd-stream-rush-river": [
@@ -16418,6 +16578,27 @@
         ],
         "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      }
+    ],
+    "nhd-stream-thornton-river": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Brook Trout documented at this water: \"Thornton River, South Fork, Rappahannock County\" (https://www.nps.gov/shen/planyourvisit/fishing.htm).",
+        "lastEvidence": "National Park Service — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "Brook Trout documented at this water: \"Thornton River, South Fork, Rappahannock County\" (https://www.nps.gov/shen/planyourvisit/fishing.htm)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "National Park Service",
+        "sourceUrl": "https://www.nps.gov/shen/planyourvisit/fishing.htm"
       }
     ],
     "nhd-stream-turkey-run": [

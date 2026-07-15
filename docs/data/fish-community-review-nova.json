@@ -2,7 +2,7 @@
   "meta": {
     "generated": "2026-07-15",
     "locationCount": 196,
-    "guessReliantLocationCount": 45,
+    "guessReliantLocationCount": 40,
     "policy": "Candidates never affect rankings until finalVerdict is approved after exact-water, species, date, provenance, contradiction, and access review.",
     "priorAgentWork": "All existing seed evidence is retained under priorAgentClaims and explicitly queued for re-verification or quarantine.",
     "vafwisSource": {
@@ -22,18 +22,18 @@
       "privacyNote": "Source geometries are used transiently for matching, then deliberately discarded; only distance-to-catalog-water is retained."
     },
     "queueCounts": {
-      "existing-direct-claims-reviewed": 151,
-      "no-direct-candidate-found": 42,
-      "non-target-fish-candidate-found": 2,
-      "manual-primary-source-claim-approved": 1
+      "existing-direct-claims-reviewed": 156,
+      "no-direct-candidate-found": 37,
+      "manual-primary-source-claim-approved": 2,
+      "non-target-fish-candidate-found": 1
     },
     "reviewProgress": {
       "targetCandidateLocationCount": 0,
-      "nonTargetOnlyLocationCount": 2,
-      "noCandidateLocationCount": 42,
-      "approvedClaimCount": 60,
-      "approvedClaimLocationCount": 39,
-      "verifiedRuntimeClaimCount": 1093,
+      "nonTargetOnlyLocationCount": 1,
+      "noCandidateLocationCount": 37,
+      "approvedClaimCount": 72,
+      "approvedClaimLocationCount": 45,
+      "verifiedRuntimeClaimCount": 1102,
       "removedOrRejectedPriorClaimCount": 105,
       "unverifiedRuntimeDirectClaimCount": 0,
       "missingSourceRuntimeDirectClaimCount": 0,
@@ -4267,16 +4267,105 @@
           "note": "The county brochure explicitly lists Huntsman Lake as a place to fish. The county lake page confirms limited street parking and carry-in craft only. It does not identify the stocked fingerling species."
         }
       },
-      "evidenceQueue": "no-direct-candidate-found",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
-      "priorAgentClaims": [],
+      "priorAgentClaims": [
+        {
+          "speciesId": "bluegill",
+          "evidenceType": "agency survey",
+          "modeled": false,
+          "summary": "Bluegill documented at this water: \"all the panfish you could handle including Bluegill, Sunfish, and Warmouth\" (https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf).",
+          "lastEvidence": "Fairfax County Park Authority — reviewed 2026-07-14",
+          "sourceName": "Fairfax County Park Authority",
+          "sourceUrl": "https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        },
+        {
+          "speciesId": "channel-catfish",
+          "evidenceType": "agency survey",
+          "modeled": false,
+          "summary": "Channel Catfish documented at this water: \"produced an exciting catch of an albino Channel Catfish\" (https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf).",
+          "lastEvidence": "Fairfax County Park Authority — reviewed 2026-07-14",
+          "sourceName": "Fairfax County Park Authority",
+          "sourceUrl": "https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "evidenceType": "agency survey",
+          "modeled": false,
+          "summary": "Largemouth Bass documented at this water: \"seemed to do the trick for the Largemouth Bass\" (https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf).",
+          "lastEvidence": "Fairfax County Park Authority — reviewed 2026-07-14",
+          "sourceName": "Fairfax County Park Authority",
+          "sourceUrl": "https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        }
+      ],
       "agencyObservationCandidates": [],
       "agencyHabitatCandidates": [],
       "agencyStockingCandidates": [],
       "priorClaimReviews": [],
       "sourceClaimRejections": [],
       "sourceClaimReviews": [],
-      "manualClaimReviews": [],
+      "manualClaimReviews": [
+        {
+          "claimId": "empties-research-huntsman-lake-bluegill",
+          "locationId": "huntsman-lake",
+          "speciesId": "bluegill",
+          "verdict": "approved-direct-observation",
+          "evidenceDate": null,
+          "publicationYear": null,
+          "sourceName": "Fairfax County Park Authority",
+          "sourceUrl": "https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf",
+          "summary": "Bluegill documented at this water: \"all the panfish you could handle including Bluegill, Sunfish, and Warmouth\" (https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf).",
+          "checks": {
+            "exactNamedWater": true,
+            "exactSpecies": true,
+            "primarySource": true,
+            "currentPresenceClaimed": true,
+            "accessSeparatelyReviewed": true
+          }
+        },
+        {
+          "claimId": "empties-research-huntsman-lake-channel-catfish",
+          "locationId": "huntsman-lake",
+          "speciesId": "channel-catfish",
+          "verdict": "approved-direct-observation",
+          "evidenceDate": null,
+          "publicationYear": null,
+          "sourceName": "Fairfax County Park Authority",
+          "sourceUrl": "https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf",
+          "summary": "Channel Catfish documented at this water: \"produced an exciting catch of an albino Channel Catfish\" (https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf).",
+          "checks": {
+            "exactNamedWater": true,
+            "exactSpecies": true,
+            "primarySource": true,
+            "currentPresenceClaimed": true,
+            "accessSeparatelyReviewed": true
+          }
+        },
+        {
+          "claimId": "empties-research-huntsman-lake-largemouth-bass",
+          "locationId": "huntsman-lake",
+          "speciesId": "largemouth-bass",
+          "verdict": "approved-direct-observation",
+          "evidenceDate": null,
+          "publicationYear": null,
+          "sourceName": "Fairfax County Park Authority",
+          "sourceUrl": "https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf",
+          "summary": "Largemouth Bass documented at this water: \"seemed to do the trick for the Largemouth Bass\" (https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf).",
+          "checks": {
+            "exactNamedWater": true,
+            "exactSpecies": true,
+            "primarySource": true,
+            "currentPresenceClaimed": true,
+            "accessSeparatelyReviewed": true
+          }
+        }
+      ],
       "contradictionReviews": [],
       "finalVerdict": "pending",
       "reviewerNotes": []
@@ -4294,7 +4383,7 @@
         "reviewStatus": "separate-access-review-required",
         "decision": null
       },
-      "evidenceQueue": "no-direct-candidate-found",
+      "evidenceQueue": "manual-primary-source-claim-approved",
       "releaseEligible": false,
       "priorAgentClaims": [],
       "agencyObservationCandidates": [],
@@ -4325,7 +4414,62 @@
       ],
       "sourceClaimRejections": [],
       "sourceClaimReviews": [],
-      "manualClaimReviews": [],
+      "manualClaimReviews": [
+        {
+          "claimId": "empties-research-royal-lake-black-crappie",
+          "locationId": "royal-lake",
+          "speciesId": "black-crappie",
+          "verdict": "approved-direct-observation",
+          "evidenceDate": null,
+          "publicationYear": null,
+          "sourceName": "Fairfax County Park Authority",
+          "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
+          "summary": "Black crappie documented at this water: \"Staff relocated juvenile bass and crappie to Brookfield Pond along with a large number of bluegill and redear sunfish.\" (https://www.fairfaxcounty.gov/parks/small-lakes).",
+          "checks": {
+            "exactNamedWater": true,
+            "exactSpecies": true,
+            "primarySource": true,
+            "currentPresenceClaimed": true,
+            "accessSeparatelyReviewed": true
+          }
+        },
+        {
+          "claimId": "empties-research-royal-lake-bluegill",
+          "locationId": "royal-lake",
+          "speciesId": "bluegill",
+          "verdict": "approved-direct-observation",
+          "evidenceDate": null,
+          "publicationYear": null,
+          "sourceName": "Fairfax County Park Authority",
+          "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
+          "summary": "Bluegill documented at this water: \"Staff relocated juvenile bass and crappie to Brookfield Pond along with a large number of bluegill and redear sunfish.\" (https://www.fairfaxcounty.gov/parks/small-lakes).",
+          "checks": {
+            "exactNamedWater": true,
+            "exactSpecies": true,
+            "primarySource": true,
+            "currentPresenceClaimed": true,
+            "accessSeparatelyReviewed": true
+          }
+        },
+        {
+          "claimId": "empties-research-royal-lake-largemouth-bass",
+          "locationId": "royal-lake",
+          "speciesId": "largemouth-bass",
+          "verdict": "approved-direct-observation",
+          "evidenceDate": null,
+          "publicationYear": null,
+          "sourceName": "Fairfax County Park Authority",
+          "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
+          "summary": "Largemouth bass documented at this water: \"Staff relocated juvenile bass and crappie to Brookfield Pond along with a large number of bluegill and redear sunfish.\" (https://www.fairfaxcounty.gov/parks/small-lakes).",
+          "checks": {
+            "exactNamedWater": true,
+            "exactSpecies": true,
+            "primarySource": true,
+            "currentPresenceClaimed": true,
+            "accessSeparatelyReviewed": true
+          }
+        }
+      ],
       "contradictionReviews": [],
       "finalVerdict": "pending",
       "reviewerNotes": []
@@ -83428,9 +83572,21 @@
         "reviewStatus": "separate-access-review-required",
         "decision": null
       },
-      "evidenceQueue": "no-direct-candidate-found",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
-      "priorAgentClaims": [],
+      "priorAgentClaims": [
+        {
+          "speciesId": "green-sunfish",
+          "evidenceType": "agency survey",
+          "modeled": false,
+          "summary": "Green sunfish documented at this water: \"North Fork Quantico Creek (QUAN-201-N) ... 2 green sunfish (Lepomis cyanellus)\" (https://irma.nps.gov/DataStore/DownloadFile/485353).",
+          "lastEvidence": "National Park Service — reviewed 2026-07-14",
+          "sourceName": "National Park Service",
+          "sourceUrl": "https://irma.nps.gov/DataStore/DownloadFile/485353",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        }
+      ],
       "agencyObservationCandidates": [],
       "agencyHabitatCandidates": [],
       "agencyStockingCandidates": [],
@@ -83452,7 +83608,26 @@
         }
       ],
       "sourceClaimReviews": [],
-      "manualClaimReviews": [],
+      "manualClaimReviews": [
+        {
+          "claimId": "empties-research-nhd-stream-quantico-creek-green-sunfish",
+          "locationId": "nhd-stream-quantico-creek",
+          "speciesId": "green-sunfish",
+          "verdict": "approved-direct-observation",
+          "evidenceDate": null,
+          "publicationYear": null,
+          "sourceName": "National Park Service",
+          "sourceUrl": "https://irma.nps.gov/DataStore/DownloadFile/485353",
+          "summary": "Green sunfish documented at this water: \"North Fork Quantico Creek (QUAN-201-N) ... 2 green sunfish (Lepomis cyanellus)\" (https://irma.nps.gov/DataStore/DownloadFile/485353).",
+          "checks": {
+            "exactNamedWater": true,
+            "exactSpecies": true,
+            "primarySource": true,
+            "currentPresenceClaimed": true,
+            "accessSeparatelyReviewed": true
+          }
+        }
+      ],
       "contradictionReviews": [],
       "finalVerdict": "pending",
       "reviewerNotes": []
@@ -85373,9 +85548,32 @@
         "reviewStatus": "separate-access-review-required",
         "decision": null
       },
-      "evidenceQueue": "no-direct-candidate-found",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
-      "priorAgentClaims": [],
+      "priorAgentClaims": [
+        {
+          "speciesId": "brook-trout",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "Brook Trout documented at this water: \"\"Waterbody\":\"Robinson River\",\"Designation\":\"WT\" ... \"BrookTrout\":1 on the downstream \"Designation\":\"PNT\" reach\" (https://services.dwr.virginia.gov/arcgis/rest/services/HUB_Layers/DWR_Stocked_Trout_Reaches/FeatureServer/0/query?where=Waterbody+LIKE+%27%25Robinson%25%27&outFields=*&f=json).",
+          "lastEvidence": "Virginia Department of Wildlife Resources — reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/HUB_Layers/DWR_Stocked_Trout_Reaches/FeatureServer/0/query?where=Waterbody+LIKE+%27%25Robinson%25%27&outFields=*&f=json",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        },
+        {
+          "speciesId": "rainbow-trout",
+          "evidenceType": "agency survey",
+          "modeled": false,
+          "summary": "Rainbow Trout documented at this water: \"\"Waterbody\":\"Robinson River\",\"County\":\"Madison\",\"StockSched\":\"A\",\"RainbowTrout\":1,\"BrownTrout\":0,\"BrookTrout\":1\" (https://services.dwr.virginia.gov/arcgis/rest/services/HUB_Layers/DWR_Stocked_Trout_Reaches/FeatureServer/0/query?where=Waterbody+LIKE+%27%25Robinson%25%27&outFields=*&f=json).",
+          "lastEvidence": "Virginia Department of Wildlife Resources — reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/HUB_Layers/DWR_Stocked_Trout_Reaches/FeatureServer/0/query?where=Waterbody+LIKE+%27%25Robinson%25%27&outFields=*&f=json",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        }
+      ],
       "agencyObservationCandidates": [],
       "agencyHabitatCandidates": [],
       "agencyStockingCandidates": [],
@@ -85396,7 +85594,44 @@
         }
       ],
       "sourceClaimReviews": [],
-      "manualClaimReviews": [],
+      "manualClaimReviews": [
+        {
+          "claimId": "empties-research-nhd-stream-robinson-river-brook-trout",
+          "locationId": "nhd-stream-robinson-river",
+          "speciesId": "brook-trout",
+          "verdict": "approved-official-waterbody-listing",
+          "evidenceDate": null,
+          "publicationYear": null,
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/HUB_Layers/DWR_Stocked_Trout_Reaches/FeatureServer/0/query?where=Waterbody+LIKE+%27%25Robinson%25%27&outFields=*&f=json",
+          "summary": "Brook Trout documented at this water: \"\"Waterbody\":\"Robinson River\",\"Designation\":\"WT\" ... \"BrookTrout\":1 on the downstream \"Designation\":\"PNT\" reach\" (https://services.dwr.virginia.gov/arcgis/rest/services/HUB_Layers/DWR_Stocked_Trout_Reaches/FeatureServer/0/query?where=Waterbody+LIKE+%27%25Robinson%25%27&outFields=*&f=json).",
+          "checks": {
+            "exactNamedWater": true,
+            "exactSpecies": true,
+            "primarySource": true,
+            "currentPresenceClaimed": true,
+            "accessSeparatelyReviewed": true
+          }
+        },
+        {
+          "claimId": "empties-research-nhd-stream-robinson-river-rainbow-trout",
+          "locationId": "nhd-stream-robinson-river",
+          "speciesId": "rainbow-trout",
+          "verdict": "approved-direct-observation",
+          "evidenceDate": null,
+          "publicationYear": null,
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/HUB_Layers/DWR_Stocked_Trout_Reaches/FeatureServer/0/query?where=Waterbody+LIKE+%27%25Robinson%25%27&outFields=*&f=json",
+          "summary": "Rainbow Trout documented at this water: \"\"Waterbody\":\"Robinson River\",\"County\":\"Madison\",\"StockSched\":\"A\",\"RainbowTrout\":1,\"BrownTrout\":0,\"BrookTrout\":1\" (https://services.dwr.virginia.gov/arcgis/rest/services/HUB_Layers/DWR_Stocked_Trout_Reaches/FeatureServer/0/query?where=Waterbody+LIKE+%27%25Robinson%25%27&outFields=*&f=json).",
+          "checks": {
+            "exactNamedWater": true,
+            "exactSpecies": true,
+            "primarySource": true,
+            "currentPresenceClaimed": true,
+            "accessSeparatelyReviewed": true
+          }
+        }
+      ],
       "contradictionReviews": [],
       "finalVerdict": "pending",
       "reviewerNotes": []
@@ -85441,9 +85676,32 @@
         "reviewStatus": "separate-access-review-required",
         "decision": null
       },
-      "evidenceQueue": "no-direct-candidate-found",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
-      "priorAgentClaims": [],
+      "priorAgentClaims": [
+        {
+          "speciesId": "brook-trout",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "Brook trout documented at this water: \"Brook trout are the native species and studies indicate populations are declining.\" (https://www.nps.gov/shen/planyourvisit/fishing.htm).",
+          "lastEvidence": "National Park Service — reviewed 2026-07-14",
+          "sourceName": "National Park Service",
+          "sourceUrl": "https://www.nps.gov/shen/planyourvisit/fishing.htm",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        },
+        {
+          "speciesId": "brown-trout",
+          "evidenceType": "agency survey",
+          "modeled": false,
+          "summary": "Brown trout documented at this water: \"While conducting brown trout removals within Rose River in 2006, the fish crew observed a large water snake\" (https://www.nps.gov/shen/planyourvisit/fishing.htm).",
+          "lastEvidence": "National Park Service — reviewed 2026-07-14",
+          "sourceName": "National Park Service",
+          "sourceUrl": "https://www.nps.gov/shen/learn/nature/brown-trout.htm",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        }
+      ],
       "agencyObservationCandidates": [],
       "agencyHabitatCandidates": [],
       "agencyStockingCandidates": [],
@@ -85464,7 +85722,44 @@
         }
       ],
       "sourceClaimReviews": [],
-      "manualClaimReviews": [],
+      "manualClaimReviews": [
+        {
+          "claimId": "empties-research-nhd-stream-rose-river-brook-trout",
+          "locationId": "nhd-stream-rose-river",
+          "speciesId": "brook-trout",
+          "verdict": "approved-official-waterbody-listing",
+          "evidenceDate": null,
+          "publicationYear": null,
+          "sourceName": "National Park Service",
+          "sourceUrl": "https://www.nps.gov/shen/planyourvisit/fishing.htm",
+          "summary": "Brook trout documented at this water: \"Brook trout are the native species and studies indicate populations are declining.\" (https://www.nps.gov/shen/planyourvisit/fishing.htm).",
+          "checks": {
+            "exactNamedWater": true,
+            "exactSpecies": true,
+            "primarySource": true,
+            "currentPresenceClaimed": true,
+            "accessSeparatelyReviewed": true
+          }
+        },
+        {
+          "claimId": "empties-research-nhd-stream-rose-river-brown-trout",
+          "locationId": "nhd-stream-rose-river",
+          "speciesId": "brown-trout",
+          "verdict": "approved-direct-observation",
+          "evidenceDate": null,
+          "publicationYear": null,
+          "sourceName": "National Park Service",
+          "sourceUrl": "https://www.nps.gov/shen/learn/nature/brown-trout.htm",
+          "summary": "Brown trout documented at this water: \"While conducting brown trout removals within Rose River in 2006, the fish crew observed a large water snake\" (https://www.nps.gov/shen/planyourvisit/fishing.htm).",
+          "checks": {
+            "exactNamedWater": true,
+            "exactSpecies": true,
+            "primarySource": true,
+            "currentPresenceClaimed": true,
+            "accessSeparatelyReviewed": true
+          }
+        }
+      ],
       "contradictionReviews": [],
       "finalVerdict": "pending",
       "reviewerNotes": []
@@ -93749,9 +94044,21 @@
         "reviewStatus": "separate-access-review-required",
         "decision": null
       },
-      "evidenceQueue": "non-target-fish-candidate-found",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
-      "priorAgentClaims": [],
+      "priorAgentClaims": [
+        {
+          "speciesId": "brook-trout",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "Brook Trout documented at this water: \"Thornton River, South Fork, Rappahannock County\" (https://www.nps.gov/shen/planyourvisit/fishing.htm).",
+          "lastEvidence": "National Park Service — reviewed 2026-07-14",
+          "sourceName": "National Park Service",
+          "sourceUrl": "https://www.nps.gov/shen/planyourvisit/fishing.htm",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        }
+      ],
       "agencyObservationCandidates": [],
       "agencyHabitatCandidates": [
         {
@@ -93773,7 +94080,26 @@
       "priorClaimReviews": [],
       "sourceClaimRejections": [],
       "sourceClaimReviews": [],
-      "manualClaimReviews": [],
+      "manualClaimReviews": [
+        {
+          "claimId": "empties-research-nhd-stream-thornton-river-brook-trout",
+          "locationId": "nhd-stream-thornton-river",
+          "speciesId": "brook-trout",
+          "verdict": "approved-official-waterbody-listing",
+          "evidenceDate": null,
+          "publicationYear": null,
+          "sourceName": "National Park Service",
+          "sourceUrl": "https://www.nps.gov/shen/planyourvisit/fishing.htm",
+          "summary": "Brook Trout documented at this water: \"Thornton River, South Fork, Rappahannock County\" (https://www.nps.gov/shen/planyourvisit/fishing.htm).",
+          "checks": {
+            "exactNamedWater": true,
+            "exactSpecies": true,
+            "primarySource": true,
+            "currentPresenceClaimed": true,
+            "accessSeparatelyReviewed": true
+          }
+        }
+      ],
       "contradictionReviews": [],
       "finalVerdict": "pending",
       "reviewerNotes": []

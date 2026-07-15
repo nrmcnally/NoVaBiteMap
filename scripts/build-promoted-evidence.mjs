@@ -19,6 +19,11 @@ const review = JSON.parse(readFileSync(`${ROOT}/docs/data/fish-community-review-
 const seedForRegistry = JSON.parse(readFileSync(`${ROOT}/apps/api/app/data/seed_export.json`, 'utf8'));
 const REGISTRY = new Set((seedForRegistry.species || []).map((s) => s.id));
 
+// Honor the evidence-rejection ledger: never promote an exact (location, species,
+// source) triple a reviewer removed (e.g. Royal Lake's relocated fish-save fish).
+const rejections = JSON.parse(readFileSync(`${ROOT}/app/lib/generated/evidence-rejections.json`, 'utf8'));
+const REJECTED = new Set((rejections.claims || []).map((c) => `${c.locationId}|${c.speciesId}|${c.sourceUrl}`));
+
 const approvedWildTrout = new Set(verdicts.recordReviews.dwrWildTrout.approvedObjectIds);
 const wtSourceUrl = habitats.meta.sourceUrls.wildTrout;
 const reviewed = habitats.meta.retrieved || '2026-07-15';
@@ -32,6 +37,7 @@ const nice = (id) => id.replace(/-/g, ' ');
 const byLocation = {};
 function add(locationId, evidence) {
   if (!REGISTRY.has(evidence.speciesId)) return; // skip species the app can't display
+  if (REJECTED.has(`${locationId}|${evidence.speciesId}|${evidence.sourceUrl}`)) return; // honor the rejection ledger
   const list = (byLocation[locationId] = byLocation[locationId] || []);
   const existing = list.find((e) => e.speciesId === evidence.speciesId);
   if (!existing) { list.push(evidence); return; }

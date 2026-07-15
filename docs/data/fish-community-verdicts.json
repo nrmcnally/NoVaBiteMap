@@ -2607,20 +2607,235 @@
   ],
   "manualClaims": [
     {
-      "claimId": "nps-shen-dry-run-brook-trout-historical",
-      "locationId": "nhd-stream-dry-run",
+      "claimId": "dwr-north-fork-thornton-brook-trout",
+      "locationId": "nhd-stream-north-fork-thornton-river",
       "speciesId": "brook-trout",
-      "verdict": "approved-historical-only",
+      "verdict": "approved-official-waterbody-listing",
       "evidenceDate": null,
-      "publicationYear": 2006,
-      "sourceName": "National Park Service - Shenandoah National Park Natural Resource Assessment",
-      "sourceUrl": "https://irma.nps.gov/DataStore/DownloadFile/423188",
-      "summary": "The NPS assessment identifies Dry Run as one of the park's brook-trout monitoring streams. This supports historical presence only; current presence still needs a dated survey.",
+      "sourceName": "Virginia Department of Wildlife Resources - North Fork Thornton River",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/north-fork-thorton-river/",
+      "summary": "The exact North Fork Thornton River page documents an excellent brook trout population, typically 6-9 inch adults.",
       "checks": {
         "exactNamedWater": true,
         "exactSpecies": true,
         "primarySource": true,
-        "currentPresenceClaimed": false,
+        "parentRiverNotSubstituted": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "empties-research-huntsman-lake-bluegill",
+      "locationId": "huntsman-lake",
+      "speciesId": "bluegill",
+      "verdict": "approved-direct-observation",
+      "evidenceDate": null,
+      "publicationYear": null,
+      "sourceName": "Fairfax County Park Authority",
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf",
+      "summary": "Bluegill documented at this water: \"all the panfish you could handle including Bluegill, Sunfish, and Warmouth\" (https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "empties-research-huntsman-lake-channel-catfish",
+      "locationId": "huntsman-lake",
+      "speciesId": "channel-catfish",
+      "verdict": "approved-direct-observation",
+      "evidenceDate": null,
+      "publicationYear": null,
+      "sourceName": "Fairfax County Park Authority",
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf",
+      "summary": "Channel Catfish documented at this water: \"produced an exciting catch of an albino Channel Catfish\" (https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "empties-research-huntsman-lake-largemouth-bass",
+      "locationId": "huntsman-lake",
+      "speciesId": "largemouth-bass",
+      "verdict": "approved-direct-observation",
+      "evidenceDate": null,
+      "publicationYear": null,
+      "sourceName": "Fairfax County Park Authority",
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf",
+      "summary": "Largemouth Bass documented at this water: \"seemed to do the trick for the Largemouth Bass\" (https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "empties-research-nhd-stream-quantico-creek-green-sunfish",
+      "locationId": "nhd-stream-quantico-creek",
+      "speciesId": "green-sunfish",
+      "verdict": "approved-direct-observation",
+      "evidenceDate": null,
+      "publicationYear": null,
+      "sourceName": "National Park Service",
+      "sourceUrl": "https://irma.nps.gov/DataStore/DownloadFile/485353",
+      "summary": "Green sunfish documented at this water: \"North Fork Quantico Creek (QUAN-201-N) ... 2 green sunfish (Lepomis cyanellus)\" (https://irma.nps.gov/DataStore/DownloadFile/485353).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "empties-research-nhd-stream-robinson-river-brook-trout",
+      "locationId": "nhd-stream-robinson-river",
+      "speciesId": "brook-trout",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "publicationYear": null,
+      "sourceName": "Virginia Department of Wildlife Resources",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/HUB_Layers/DWR_Stocked_Trout_Reaches/FeatureServer/0/query?where=Waterbody+LIKE+%27%25Robinson%25%27&outFields=*&f=json",
+      "summary": "Brook Trout documented at this water: \"\"Waterbody\":\"Robinson River\",\"Designation\":\"WT\" ... \"BrookTrout\":1 on the downstream \"Designation\":\"PNT\" reach\" (https://services.dwr.virginia.gov/arcgis/rest/services/HUB_Layers/DWR_Stocked_Trout_Reaches/FeatureServer/0/query?where=Waterbody+LIKE+%27%25Robinson%25%27&outFields=*&f=json).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "empties-research-nhd-stream-robinson-river-rainbow-trout",
+      "locationId": "nhd-stream-robinson-river",
+      "speciesId": "rainbow-trout",
+      "verdict": "approved-direct-observation",
+      "evidenceDate": null,
+      "publicationYear": null,
+      "sourceName": "Virginia Department of Wildlife Resources",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/HUB_Layers/DWR_Stocked_Trout_Reaches/FeatureServer/0/query?where=Waterbody+LIKE+%27%25Robinson%25%27&outFields=*&f=json",
+      "summary": "Rainbow Trout documented at this water: \"\"Waterbody\":\"Robinson River\",\"County\":\"Madison\",\"StockSched\":\"A\",\"RainbowTrout\":1,\"BrownTrout\":0,\"BrookTrout\":1\" (https://services.dwr.virginia.gov/arcgis/rest/services/HUB_Layers/DWR_Stocked_Trout_Reaches/FeatureServer/0/query?where=Waterbody+LIKE+%27%25Robinson%25%27&outFields=*&f=json).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "empties-research-nhd-stream-rose-river-brook-trout",
+      "locationId": "nhd-stream-rose-river",
+      "speciesId": "brook-trout",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "publicationYear": null,
+      "sourceName": "National Park Service",
+      "sourceUrl": "https://www.nps.gov/shen/planyourvisit/fishing.htm",
+      "summary": "Brook trout documented at this water: \"Brook trout are the native species and studies indicate populations are declining.\" (https://www.nps.gov/shen/planyourvisit/fishing.htm).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "empties-research-nhd-stream-rose-river-brown-trout",
+      "locationId": "nhd-stream-rose-river",
+      "speciesId": "brown-trout",
+      "verdict": "approved-direct-observation",
+      "evidenceDate": null,
+      "publicationYear": null,
+      "sourceName": "National Park Service",
+      "sourceUrl": "https://www.nps.gov/shen/learn/nature/brown-trout.htm",
+      "summary": "Brown trout documented at this water: \"While conducting brown trout removals within Rose River in 2006, the fish crew observed a large water snake\" (https://www.nps.gov/shen/planyourvisit/fishing.htm).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "empties-research-nhd-stream-thornton-river-brook-trout",
+      "locationId": "nhd-stream-thornton-river",
+      "speciesId": "brook-trout",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "publicationYear": null,
+      "sourceName": "National Park Service",
+      "sourceUrl": "https://www.nps.gov/shen/planyourvisit/fishing.htm",
+      "summary": "Brook Trout documented at this water: \"Thornton River, South Fork, Rappahannock County\" (https://www.nps.gov/shen/planyourvisit/fishing.htm).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "empties-research-royal-lake-black-crappie",
+      "locationId": "royal-lake",
+      "speciesId": "black-crappie",
+      "verdict": "approved-direct-observation",
+      "evidenceDate": null,
+      "publicationYear": null,
+      "sourceName": "Fairfax County Park Authority",
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
+      "summary": "Black crappie documented at this water: \"Staff relocated juvenile bass and crappie to Brookfield Pond along with a large number of bluegill and redear sunfish.\" (https://www.fairfaxcounty.gov/parks/small-lakes).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "empties-research-royal-lake-bluegill",
+      "locationId": "royal-lake",
+      "speciesId": "bluegill",
+      "verdict": "approved-direct-observation",
+      "evidenceDate": null,
+      "publicationYear": null,
+      "sourceName": "Fairfax County Park Authority",
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
+      "summary": "Bluegill documented at this water: \"Staff relocated juvenile bass and crappie to Brookfield Pond along with a large number of bluegill and redear sunfish.\" (https://www.fairfaxcounty.gov/parks/small-lakes).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "empties-research-royal-lake-largemouth-bass",
+      "locationId": "royal-lake",
+      "speciesId": "largemouth-bass",
+      "verdict": "approved-direct-observation",
+      "evidenceDate": null,
+      "publicationYear": null,
+      "sourceName": "Fairfax County Park Authority",
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
+      "summary": "Largemouth bass documented at this water: \"Staff relocated juvenile bass and crappie to Brookfield Pond along with a large number of bluegill and redear sunfish.\" (https://www.fairfaxcounty.gov/parks/small-lakes).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
         "accessSeparatelyReviewed": true
       }
     },
@@ -2661,19 +2876,20 @@
       }
     },
     {
-      "claimId": "dwr-north-fork-thornton-brook-trout",
-      "locationId": "nhd-stream-north-fork-thornton-river",
+      "claimId": "nps-shen-dry-run-brook-trout-historical",
+      "locationId": "nhd-stream-dry-run",
       "speciesId": "brook-trout",
-      "verdict": "approved-official-waterbody-listing",
+      "verdict": "approved-historical-only",
       "evidenceDate": null,
-      "sourceName": "Virginia Department of Wildlife Resources - North Fork Thornton River",
-      "sourceUrl": "https://dwr.virginia.gov/waterbody/north-fork-thorton-river/",
-      "summary": "The exact North Fork Thornton River page documents an excellent brook trout population, typically 6-9 inch adults.",
+      "publicationYear": 2006,
+      "sourceName": "National Park Service - Shenandoah National Park Natural Resource Assessment",
+      "sourceUrl": "https://irma.nps.gov/DataStore/DownloadFile/423188",
+      "summary": "The NPS assessment identifies Dry Run as one of the park's brook-trout monitoring streams. This supports historical presence only; current presence still needs a dated survey.",
       "checks": {
         "exactNamedWater": true,
         "exactSpecies": true,
         "primarySource": true,
-        "parentRiverNotSubstituted": true,
+        "currentPresenceClaimed": false,
         "accessSeparatelyReviewed": true
       }
     }
