@@ -381,6 +381,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .biting-badge { padding: 3px 6px; border-radius: 2px; font-size: 7px; font-weight: 900; text-transform: uppercase; letter-spacing: .5px; }.biting-badge-strong { background: #cfe6d6; color: #2c6b45; }.biting-badge-fair { background: #efe1b6; color: #7c611f; }.biting-badge-low { background: #e6d6c6; color: #85583a; }.biting-badge-neutral { background: #dbe6e4; color: #47635f; }
 .biting-score { display: flex; align-items: baseline; gap: 3px; }.biting-score strong { font-family: Georgia, serif; font-size: 26px; line-height: 1; color: var(--pine); }.biting-score span { font-size: 8px; color: #7c8986; font-weight: 800; }.biting-score-muted strong { color: var(--water); font-size: 20px; }
 .biting-meta { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 8px; }.biting-meta span { display: inline-flex; align-items: center; gap: 5px; font-size: 9px; color: #6f807c; font-weight: 700; }.biting-meta svg { color: var(--water); }.biting-evidence { text-transform: uppercase; letter-spacing: .4px; font-size: 8px !important; color: #859089 !important; }
+.biting-seasonal { margin: 7px 0 0; display: flex; align-items: center; gap: 6px; font-size: 9px; font-weight: 600; padding: 4px 8px; border-radius: 6px; letter-spacing: 0.02em; }
+.biting-seasonal svg { flex: 0 0 auto; }
+.biting-seasonal strong { margin-left: auto; text-transform: uppercase; font-size: 8.5px; letter-spacing: 0.04em; }
+.biting-seasonal.in-season { background: rgba(37, 140, 92, 0.14); color: #1c7a4e; }
+.biting-seasonal.off-season { background: rgba(148, 105, 74, 0.12); color: #94694a; }
+.fish-rank-seasonal { display: inline-flex; align-items: center; gap: 4px; margin-left: 6px; font-size: 8.5px; font-weight: 600; padding: 2px 6px; border-radius: 5px; background: rgba(37, 140, 92, 0.14); color: #1c7a4e; }
+.fish-rank-seasonal.off-season { background: rgba(148, 105, 74, 0.12); color: #94694a; }
 .biting-summary { margin: 8px 0 0; font-size: 9.5px; line-height: 1.5; color: var(--ink-soft); }.biting-caveat { margin: 6px 0 0; display: flex; align-items: flex-start; gap: 5px; font-size: 9px; line-height: 1.45; color: #94694a; }.biting-caveat svg { flex: 0 0 auto; margin-top: 2px; }
 .biting-row-links { display: flex; flex-wrap: wrap; gap: 7px 14px; margin-top: 9px; }.biting-row-links a { display: inline-flex; align-items: center; gap: 4px; color: var(--water); font-size: 8.5px; font-weight: 850; }.biting-row-links a:hover { text-decoration: underline; text-underline-offset: 2px; }
 .biting-evidence-section { margin-top: 18px; padding-top: 1px; }

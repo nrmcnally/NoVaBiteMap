@@ -21,6 +21,7 @@ from ..models.entities import (
     StockingRecord,
 )
 from ..scoring.activity import build_species_forecast
+from datetime import datetime
 from ..scoring.service import AVAILABILITY_GATE, score_species_at_location
 
 FLOWING = ("river", "stream")
@@ -199,6 +200,7 @@ def score_location_species(
             access_fit=location.access_fit,
             has_hydrology=has_hydrology,
             association_factor=association_factor,
+            current_month=datetime.now().month,
         )
         if scored is None:
             continue

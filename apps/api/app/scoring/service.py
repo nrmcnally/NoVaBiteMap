@@ -68,9 +68,13 @@ def score_species_at_location(
     horizon_factor: float = 1.0,
     association_factor: float = 1.0,
     safety_cap: int | None = None,
+    current_month: int | None = None,
 ) -> dict | None:
     """Score one species at one location from its evidence records. Returns None
-    when evidence does not clear the availability gate (species not offered)."""
+    when evidence does not clear the availability gate (species not offered).
+
+    current_month (1-12) gates seasonal-run species: an anadromous spawner is
+    near-absent outside its run window, so its opportunity collapses off-season."""
     if not records:
         return None
 
@@ -78,6 +82,14 @@ def score_species_at_location(
     if availability < AVAILABILITY_GATE:
         return None
     quality = combine_quality(evidence_dict(r) for r in records)
+
+    primary = max(records, key=lambda r: r.availability)
+    seasonal = primary.seasonal
+    in_season = True
+    if seasonal and current_month is not None:
+        in_season = current_month in (seasonal.get("months") or [])
+        if not in_season:
+            availability = round(availability * 0.2, 4)  # out of the run window
 
     opportunity = final_opportunity_score(
         availability,
@@ -113,7 +125,6 @@ def score_species_at_location(
     )
 
     factors = _factors(records, availability, quality, activity, activity_available, has_hydrology)
-    primary = max(records, key=lambda r: r.availability)
 
     return {
         "availability_score": availability,
@@ -130,6 +141,8 @@ def score_species_at_location(
         "source_name": primary.source_name,
         "source_url": primary.source_url,
         "modeled": bool(primary.modeled),
+        "seasonal": seasonal,
+        "inSeason": in_season,
         "factors": factors,
         "model_version": MODEL_VERSION,
         "scoring_profile_version": SCORING_PROFILE_VERSION,

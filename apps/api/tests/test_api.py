@@ -122,6 +122,18 @@ def test_species_detail_ranks_waters_by_opportunity(client):
     assert detail["facts"]["nativeStatus"] in {"native", "introduced", "invasive"}
 
 
+def test_seasonal_run_species_carry_run_window(client):
+    # Dogue Creek is a confirmed DWR anadromous spawning run for striped bass:
+    # the species carries a seasonal run window + an in/out-of-season flag, and is
+    # still offered (with a collapsed score) rather than hidden off-season.
+    payload = client.get("/api/locations/nhd-stream-dogue-creek/species", params={"live": "false"}).json()
+    striper = next((s for s in payload["species"] if s["speciesId"] == "striped-bass"), None)
+    assert striper is not None, "seasonal striped bass should still be offered"
+    assert striper["seasonal"] is not None
+    assert striper["seasonal"]["months"], "run months should be present"
+    assert isinstance(striper["inSeason"], bool)
+
+
 def test_data_source_status_is_derived_from_real_counts_and_runs(client):
     status = client.get("/api/data-sources/status").json()
     counts = status["counts"]

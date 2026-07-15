@@ -109,6 +109,7 @@ def evidence_out(record: SpeciesEvidenceRecord) -> dict:
         "depth": record.depth,
         "positive": record.positive or [],
         "negative": record.negative or [],
+        "seasonal": record.seasonal,
         "sourceName": record.source_name,
         "sourceUrl": record.source_url,
     }

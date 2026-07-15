@@ -28,7 +28,12 @@ from ..providers.usgs import UsgsWaterProvider
 from ..schemas.contracts import FavoriteCreate, FavoriteUpdate, LoginRequest, RegisterRequest, ScoreRequest
 from ..scoring.activity import build_species_forecast
 from ..scoring.engine import score_opportunity
+from datetime import datetime
 from ..scoring.service import score_species_at_location
+
+
+def _current_month() -> int:
+    return datetime.now().month
 from ..services import conditions as conditions_service
 from ..services import opportunities as opp
 from . import serializers
@@ -243,6 +248,7 @@ def species_detail(species_id: str, session: Session = Depends(get_session)) -> 
             access_fit=loc.access_fit,
             has_hydrology=association is not None,
             association_factor=association.association_factor if association else 1.0,
+            current_month=_current_month(),
         )
         if scored is None:
             continue
@@ -266,6 +272,8 @@ def species_detail(species_id: str, session: Session = Depends(get_session)) -> 
                 "evidenceType": primary.evidence_type,
                 "modeled": primary.modeled,
                 "evidenceSummary": primary.evidence_summary,
+                "seasonal": scored["seasonal"],
+                "inSeason": scored["inSeason"],
             }
         )
     # Documented waters first (not basin-inferred), then by opportunity.

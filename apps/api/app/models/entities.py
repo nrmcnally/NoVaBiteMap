@@ -212,6 +212,8 @@ class SpeciesEvidenceRecord(Base):
     depth: Mapped[str | None] = mapped_column(Text)
     positive: Mapped[list] = mapped_column(JSON, default=list)
     negative: Mapped[list] = mapped_column(JSON, default=list)
+    # Present for seasonal-run species (anadromous spawning runs): {months:[...], label}.
+    seasonal: Mapped[dict | None] = mapped_column(JSON)
     sampling_method: Mapped[str | None] = mapped_column(String(160))
     source_name: Mapped[str | None] = mapped_column(String(200))
     source_url: Mapped[str | None] = mapped_column(Text)

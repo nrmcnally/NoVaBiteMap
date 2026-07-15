@@ -233,6 +233,12 @@ export async function WhatsBiting({ locationId, known }: Props) {
                       {species.bestWindow && <span><Clock3 size={13} /> Best window {species.bestWindow}</span>}
                       <span className="biting-evidence">{evidenceBadge(species.evidence_type, species.modeled, species.evidence_summary)}</span>
                     </div>
+                    {species.seasonal && (
+                      <p className={`biting-seasonal${species.inSeason ? " in-season" : " off-season"}`}>
+                        <Clock3 size={12} /> Seasonal run · {species.seasonal.label}
+                        <strong>{species.inSeason ? "In season now" : "Out of season now"}</strong>
+                      </p>
+                    )}
                     {species.evidence_summary && <p className="biting-summary">{species.evidence_summary}</p>}
                     {species.factors?.negative?.length > 0 && (
                       <p className="biting-caveat"><AlertTriangle size={12} /> {species.factors.negative[0]}</p>

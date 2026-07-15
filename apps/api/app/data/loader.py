@@ -365,6 +365,7 @@ def _upsert_all(session: Session, payload: dict, profiles_payload: dict) -> tupl
                     depth=ev.get("depth"),
                     positive=ev.get("positive", []),
                     negative=ev.get("negative", []),
+                    seasonal=ev.get("seasonal"),
                     sampling_method=ev.get("evidenceType"),
                     source_name=source_name,
                     source_url=ev.get("sourceUrl"),

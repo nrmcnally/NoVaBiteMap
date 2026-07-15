@@ -87,6 +87,8 @@ export type ScoredSpecies = {
   technique: string | null;
   depth: string | null;
   modeled: boolean;
+  seasonal?: { months: number[]; label: string } | null;
+  inSeason?: boolean;
   bestWindow: string | null;
   activityLive: boolean;
   source_name: string | null;
@@ -115,6 +117,8 @@ export type SpeciesLocation = {
   evidenceType: string;
   modeled: boolean;
   evidenceSummary: string | null;
+  seasonal?: { months: number[]; label: string } | null;
+  inSeason?: boolean;
 };
 
 export type SpeciesDetail = {
