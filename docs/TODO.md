@@ -9,7 +9,7 @@ operationally dependable.
 Working completion estimate: **about 60-65% overall**. The visible product and
 core scoring architecture are substantially built; release readiness is being
 held back by access verification, direct-evidence coverage, operational
-ingestion, auth integration, and end-to-end QA.
+ingestion and end-to-end QA. Email/password account integration is now in place.
 
 Current audited baseline:
 
@@ -44,9 +44,9 @@ Current audited baseline:
 3. Move DWR/VAFWIS, trout, Aquatic GAP, USGS, and NWS refreshes into scheduled,
    idempotent database jobs with last-known-good protection and admin-only
    controls.
-4. Unify the frontend with the FastAPI email-auth/favorites implementation; the
-   current web UI still uses ChatGPT-host identity and separate SQLite/D1-style
-   favorites storage.
+4. **Completed:** unify the email/password account and favorites UI. Hosted Sites
+   now uses D1-backed password hashes/sessions; Docker uses the equivalent
+   FastAPI/PostgreSQL backend behind the same HTTP-only cookie contract.
 5. Complete browser/mobile/accessibility journeys for search, filters, travel,
    directions, favorites, alerts/advisories, and empty/stale states.
 
@@ -154,8 +154,8 @@ these should relax the private-property exclusion.
   with a legal access point.
 - [ ] Link species names in the Explore results/filters to `/fish/[id]`.
 
-Still open: scheduled ingestion + admin UI rewire, email auth UI + favorites
-migration off D1, search/map depth. Frontend still reads `data.ts` for the
+Still open: scheduled ingestion + admin UI rewire, account recovery/email
+verification for a wider beta, and search/map depth. Frontend still reads `data.ts` for the
 single-species outlook; full migration to the API is in progress.
 
 ## P0 — close Phase 1
@@ -291,7 +291,7 @@ search results.
 
 1. Finish access verification and the exact-water candidate review queue.
 2. Finish scheduled ingestion, persistence, audit history, and fallbacks.
-3. Unify standalone auth/favorites and move the remaining frontend reads to the
-   canonical API.
+3. Move the remaining frontend data reads to the canonical API; the standalone
+   email/password and favorites journey is now unified.
 4. Complete end-to-end release QA, then add licensed photography species by
    species.

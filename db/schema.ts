@@ -1,5 +1,34 @@
 import { sql } from "drizzle-orm";
-import { integer, sqliteTable, text, uniqueIndex } from "drizzle-orm/sqlite-core";
+import { index, integer, sqliteTable, text, uniqueIndex } from "drizzle-orm/sqlite-core";
+
+export const accountUsers = sqliteTable(
+  "account_users",
+  {
+    id: integer("id").primaryKey({ autoIncrement: true }),
+    email: text("email").notNull(),
+    passwordHash: text("password_hash").notNull(),
+    displayName: text("display_name"),
+    createdAt: text("created_at").notNull().default(sql`CURRENT_TIMESTAMP`),
+    updatedAt: text("updated_at").notNull().default(sql`CURRENT_TIMESTAMP`),
+  },
+  (table) => [uniqueIndex("account_users_email_idx").on(table.email)],
+);
+
+export const accountSessions = sqliteTable(
+  "account_sessions",
+  {
+    id: integer("id").primaryKey({ autoIncrement: true }),
+    userId: integer("user_id").notNull().references(() => accountUsers.id, { onDelete: "cascade" }),
+    tokenHash: text("token_hash").notNull(),
+    expiresAt: text("expires_at").notNull(),
+    createdAt: text("created_at").notNull().default(sql`CURRENT_TIMESTAMP`),
+  },
+  (table) => [
+    uniqueIndex("account_sessions_token_idx").on(table.tokenHash),
+    index("account_sessions_user_idx").on(table.userId),
+    index("account_sessions_expires_idx").on(table.expiresAt),
+  ],
+);
 
 export const savedLocations = sqliteTable(
   "saved_locations",
@@ -28,4 +57,3 @@ export const userPreferences = sqliteTable("user_preferences", {
   units: text("units").notNull().default("imperial"),
   updatedAt: text("updated_at").notNull().default(sql`CURRENT_TIMESTAMP`),
 });
-

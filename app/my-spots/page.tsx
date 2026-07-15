@@ -1,20 +1,17 @@
 import { LockKeyhole, MapPin, ShieldCheck, Sparkles } from "../components/ClientIcons";
-import { eq } from "drizzle-orm";
 import { TopNav } from "../components/TopNav";
-import { chatGPTSignInPath, getChatGPTUser } from "../chatgpt-auth";
-import { getDb } from "../../db";
-import { savedLocations } from "../../db/schema";
+import { accountSignInPath, getAccountUser, listAccountFavorites } from "../lib/account-server";
 import { MySpotsClient } from "./MySpotsClient";
 
 export const dynamic = "force-dynamic";
 
 export default async function MySpotsPage() {
-  const user = await getChatGPTUser();
-  let favorites: (typeof savedLocations.$inferSelect)[] = [];
+  const user = await getAccountUser();
+  let favorites: Awaited<ReturnType<typeof listAccountFavorites>> = [];
   let databaseReady = true;
   if (user) {
     try {
-      favorites = await getDb().select().from(savedLocations).where(eq(savedLocations.userEmail, user.email));
+      favorites = await listAccountFavorites();
     } catch {
       databaseReady = false;
     }
@@ -34,18 +31,13 @@ export default async function MySpotsPage() {
             <span className="eyebrow">Private by default</span>
             <h2>Sign in to keep your spots.</h2>
             <p>Browsing and forecasts stay public. An account is only needed to sync favorites, nicknames, notes, and preferred species.</p>
-            <a href={chatGPTSignInPath("/my-spots")}><LockKeyhole size={17} /> Sign in with ChatGPT</a>
+            <a href={accountSignInPath("/my-spots")}><LockKeyhole size={17} /> Sign in to BiteMap</a>
             <small>Favorites belong to your authenticated account and are not shared publicly.</small>
           </section>
         ) : !databaseReady ? (
           <section className="signin-panel"><Sparkles size={30} /><h2>Favorite storage is warming up.</h2><p>The signed-in dashboard is ready, but its database migration has not been applied in this environment yet.</p></section>
         ) : (
-          <MySpotsClient initialFavorites={favorites.map((favorite) => ({
-            id: favorite.id,
-            locationId: favorite.locationId,
-            nickname: favorite.nickname,
-            preferredSpecies: favorite.preferredSpecies,
-          }))} />
+          <MySpotsClient initialFavorites={favorites} />
         )}
       </main>
     </div>

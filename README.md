@@ -17,10 +17,10 @@ address- or ZIP-based travel estimates, Google Maps directions, live NWS
 five-day outlooks, 19 manually reviewed USGS location-to-gage associations, 225
 normalized regional USGS Aquatic GAP samples, 13 Virginia DWR designated
 stocked-trout reaches, location and fish details, methodology, an administrator
-data-health screen, favorites, an independent FastAPI service, PostGIS/Redis
-Compose services, migrations, and tests. Phase 1 is not release-complete: access
-verification, scheduled ingestion, frontend/backend auth unification, and full
-end-to-end QA remain open.
+data-health screen, account-backed favorites, an independent FastAPI service,
+PostGIS/Redis Compose services, migrations, and tests. Phase 1 is not
+release-complete: access verification, scheduled ingestion, and broader alpha
+QA remain open.
 
 ## Requirements on Windows
 
@@ -82,14 +82,17 @@ py -3 -m pytest apps\api\tests -q
 
 ```powershell
 Copy-Item .env.example .env
+# Replace POSTGRES_PASSWORD in .env before sharing the server.
 docker compose up --build
 ```
 
-The web app listens on `http://localhost:3000`, FastAPI on
-`http://localhost:8000`, PostgreSQL/PostGIS on port 5432, and Redis on port
-6379.
+The production-built web app listens on `http://localhost:3000`. FastAPI,
+PostgreSQL/PostGIS, and Redis remain on the private Compose network rather than
+being exposed to the host. Create an email/password account from the Account
+page; sessions use HTTP-only cookies and favorites are owned by that account.
 
-Apply the production-style database migration:
+The API container applies migrations and loads the canonical seed automatically
+when it starts. To run the migration manually:
 
 ```powershell
 docker compose run --rm api alembic upgrade head

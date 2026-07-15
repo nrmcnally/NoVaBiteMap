@@ -37,7 +37,25 @@ test("favorites refresh live and data health is removed from public navigation",
   assert.match(spots, /bitemap:favorites-changed/);
   assert.doesNotMatch(nav, /Data health/);
   assert.match(publicHealth, /notFound/);
-  assert.match(adminHealth, /requireChatGPTUser/);
+  assert.match(adminHealth, /getAccountUser/);
+});
+
+test("alpha accounts use email and password with private cookie sessions", async () => {
+  const [accountPage, register, login, logout, passwordAuth, dockerfile] = await Promise.all([
+    readFile(new URL("../app/account/AccountClient.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/api/account/register/route.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/api/account/login/route.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/api/account/logout/route.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/lib/password-auth.ts", import.meta.url), "utf8"),
+    readFile(new URL("../Dockerfile", import.meta.url), "utf8"),
+  ]);
+  assert.match(accountPage, /Create account/);
+  assert.match(accountPage, /type="email"/);
+  assert.match(`${register}${login}${logout}`, /httpOnly: true/);
+  assert.match(`${register}${login}${logout}`, /sameSite: "lax"/);
+  assert.match(passwordAuth, /PBKDF2_ITERATIONS = 600_000/);
+  assert.match(passwordAuth, /SHA-256/);
+  assert.match(dockerfile, /vinext\/dist\/cli\.js", "start"/);
 });
 
 test("methodology explains the score without exposing provider health", async () => {

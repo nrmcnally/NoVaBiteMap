@@ -312,9 +312,12 @@ filtering; map-area search passes the viewport bounds explicitly.
 ## 15. Favorites architecture
 
 Public data is readable anonymously. Favorite writes require server-verified
-identity. Hosted Sites uses the authenticated user header/SIWC boundary and D1;
-the FastAPI target uses a user/session boundary and PostgreSQL. The browser
-never supplies a trusted owner id. `SavedLocation` supports nickname, notes,
+identity. Hosted Sites uses email/password accounts and hashed sessions in D1;
+the FastAPI target uses the equivalent user/session boundary and PostgreSQL.
+The browser never supplies a trusted owner id. A server-side account adapter
+preserves one frontend contract across both deployments; Docker exchanges the
+FastAPI bearer token for an HTTP-only, same-site web cookie. `SavedLocation`
+supports nickname, notes,
 preferred species, default access method, sort order, and group. Dashboard
 cards join saved locations to the latest prediction snapshot. Delete is scoped
 to both favorite id and authenticated user id.

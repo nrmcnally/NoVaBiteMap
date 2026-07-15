@@ -2,10 +2,9 @@
 
 import Link from "next/link";
 import { BookOpen, Fish, Heart, Map } from "lucide-react";
+import { AccountNav } from "./AccountNav";
 
-type TopNavProps = {
-  active?: "explore" | "spots" | "methodology" | "fish";
-};
+type TopNavProps = { active?: "explore" | "spots" | "methodology" | "fish" | "account" };
 
 export function TopNav({ active = "explore" }: TopNavProps) {
   return (
@@ -31,8 +30,11 @@ export function TopNav({ active = "explore" }: TopNavProps) {
           How it works
         </Link>
       </nav>
-      <div className="nav-status" title="Recommendations never guarantee a catch">
-        <span className="status-dot" /> Evidence-led
+      <div className="nav-actions">
+        <div className="nav-status" title="Recommendations never guarantee a catch">
+          <span className="status-dot" /> Evidence-led
+        </div>
+        <AccountNav />
       </div>
     </header>
   );
