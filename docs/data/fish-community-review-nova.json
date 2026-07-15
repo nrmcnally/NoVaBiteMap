@@ -33,7 +33,7 @@
       "noCandidateLocationCount": 42,
       "approvedClaimCount": 60,
       "approvedClaimLocationCount": 39,
-      "verifiedRuntimeClaimCount": 1092,
+      "verifiedRuntimeClaimCount": 1093,
       "removedOrRejectedPriorClaimCount": 105,
       "unverifiedRuntimeDirectClaimCount": 0,
       "missingSourceRuntimeDirectClaimCount": 0,
@@ -42252,6 +42252,17 @@
             "verdict": "approved-exact-agency-observation",
             "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
           }
+        },
+        {
+          "speciesId": "yellow-perch",
+          "evidenceType": "agency survey",
+          "modeled": false,
+          "summary": "DWR documents Accokeek creek as a confirmed anadromous spawning run for yellow perch - a SEASONAL visitor (late-winter to spring spawning run (Feb-Apr)) at the tidal reach, not a year-round resident.",
+          "lastEvidence": "DWR Anadromous Fish Use Waters (confirmed use) reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Anadromous_Fish_Use_Waters/FeatureServer/0",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [
@@ -55819,44 +55830,12 @@
           "speciesId": "striped-bass",
           "evidenceType": "agency survey",
           "modeled": false,
-          "summary": "Virginia DWR VAFWIS records document striped bass in Dogue Creek - 1 record (DGIF collection or salvage permit holder), 2000-03-01.",
-          "lastEvidence": "DWR VAFWIS collection records; last observed 2000-03-01",
-          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
-          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
-          "reviewStatus": "approved-exact-agency-observation",
-          "review": {
-            "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
-            "locationIds": [
-              "nhd-stream-dogue-creek"
-            ],
-            "approvedSpeciesIds": [
-              "american-eel",
-              "black-crappie",
-              "blacknose-dace",
-              "bluegill",
-              "brown-bullhead",
-              "channel-catfish",
-              "creek-chub",
-              "gizzard-shad",
-              "green-sunfish",
-              "largemouth-bass",
-              "northern-snakehead",
-              "pumpkinseed",
-              "redbreast-sunfish",
-              "shorthead-redhorse",
-              "smallmouth-bass",
-              "striped-bass",
-              "tessellated-darter",
-              "warmouth",
-              "white-crappie",
-              "white-perch",
-              "white-sucker",
-              "yellow-bullhead",
-              "yellow-perch"
-            ],
-            "verdict": "approved-exact-agency-observation",
-            "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
-          }
+          "summary": "DWR documents Dogue creek as a confirmed anadromous spawning run for striped bass - a SEASONAL visitor (spring spawning run (Apr-Jun)) at the tidal reach, not a year-round resident.",
+          "lastEvidence": "DWR Anadromous Fish Use Waters (confirmed use) reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Anadromous_Fish_Use_Waters/FeatureServer/0",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
         },
         {
           "speciesId": "tessellated-darter",
@@ -56077,44 +56056,12 @@
           "speciesId": "yellow-perch",
           "evidenceType": "agency survey",
           "modeled": false,
-          "summary": "Virginia DWR VAFWIS records document yellow perch in Dogue Creek - 10 records (DGIF collection or salvage permit holder), 1998-06-01-2005-04-28.",
-          "lastEvidence": "DWR VAFWIS collection records; last observed 2005-04-28",
-          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
-          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
-          "reviewStatus": "approved-exact-agency-observation",
-          "review": {
-            "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
-            "locationIds": [
-              "nhd-stream-dogue-creek"
-            ],
-            "approvedSpeciesIds": [
-              "american-eel",
-              "black-crappie",
-              "blacknose-dace",
-              "bluegill",
-              "brown-bullhead",
-              "channel-catfish",
-              "creek-chub",
-              "gizzard-shad",
-              "green-sunfish",
-              "largemouth-bass",
-              "northern-snakehead",
-              "pumpkinseed",
-              "redbreast-sunfish",
-              "shorthead-redhorse",
-              "smallmouth-bass",
-              "striped-bass",
-              "tessellated-darter",
-              "warmouth",
-              "white-crappie",
-              "white-perch",
-              "white-sucker",
-              "yellow-bullhead",
-              "yellow-perch"
-            ],
-            "verdict": "approved-exact-agency-observation",
-            "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
-          }
+          "summary": "DWR documents Dogue creek as a confirmed anadromous spawning run for yellow perch - a SEASONAL visitor (late-winter to spring spawning run (Feb-Apr)) at the tidal reach, not a year-round resident.",
+          "lastEvidence": "DWR Anadromous Fish Use Waters (confirmed use) reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Anadromous_Fish_Use_Waters/FeatureServer/0",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [

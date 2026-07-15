@@ -34,8 +34,12 @@ function add(locationId, evidence) {
   if (!REGISTRY.has(evidence.speciesId)) return; // skip species the app can't display
   const list = (byLocation[locationId] = byLocation[locationId] || []);
   const existing = list.find((e) => e.speciesId === evidence.speciesId);
-  if (!existing) list.push(evidence);
-  else if (evidence.availability > existing.availability) Object.assign(existing, evidence);
+  if (!existing) { list.push(evidence); return; }
+  // A seasonal-run designation always wins over a year-round record for the same
+  // species/water: a tidal-creek striper is seasonal even if a survey also caught it.
+  if (existing.seasonal && !evidence.seasonal) return;
+  if (evidence.seasonal && !existing.seasonal) { Object.assign(existing, evidence); return; }
+  if (evidence.availability > existing.availability) Object.assign(existing, evidence);
 }
 
 let wildTroutClaims = 0;
@@ -134,6 +138,44 @@ for (const [locId, speciesSet] of Object.entries(vafwisApproved)) {
   }
 }
 
+// Approved DWR anadromous-use reaches -> seasonal spawning-run evidence. These
+// species (striped bass, yellow perch, herring, shad) run up tidal tributaries to
+// spawn and are NOT year-round residents, so each carries a run-month window and is
+// clearly labeled seasonal.
+const ANAD_SPECIES = {
+  'Morone saxatilis': { id: 'striped-bass', months: [4, 5, 6], label: 'spring spawning run (Apr-Jun)' },
+  'Perca flavescens': { id: 'yellow-perch', months: [2, 3, 4], label: 'late-winter to spring spawning run (Feb-Apr)' },
+  'Alosa sapidissima': { id: 'american-shad', months: [4, 5], label: 'spring spawning run (Apr-May)' },
+  'Morone americana': { id: 'white-perch', months: [3, 4, 5], label: 'spring spawning run (Mar-May)' },
+};
+const approvedAnad = new Set(verdicts.recordReviews.dwrAnadromous.approvedObjectIds);
+const anadUrl = habitats.meta.sourceUrls.anadromous;
+let anadromousClaims = 0;
+for (const reach of habitats.anadromous) {
+  if (!approvedAnad.has(reach.objectId)) continue;
+  const sp = ANAD_SPECIES[reach.scientificName];
+  if (!sp) continue;
+  for (const match of reach.locationMatches || []) {
+    add(match.locationId, {
+      speciesId: sp.id,
+      availability: 0.4,
+      quality: null,
+      evidenceConfidence: 0.78,
+      evidenceType: 'agency survey',
+      evidenceSummary: `DWR documents ${reach.name} as a confirmed anadromous spawning run for ${nice(sp.id)} - a SEASONAL visitor (${sp.label}) at the tidal reach, not a year-round resident.`,
+      lastEvidence: `DWR Anadromous Fish Use Waters (confirmed use) reviewed ${reviewed}`,
+      technique: 'Target the lower/tidal reach and creek mouth during the run; match bait to the spawning migration',
+      depth: 'Deeper holding water and current seams near the mouth on the appropriate tide',
+      positive: [`Official DWR confirmed anadromous spawning-run designation`, `Best during the ${sp.label}`],
+      negative: ['Seasonal run only - absent outside the spawning window', 'Concentrated in the lower/tidal reach, not the headwaters'],
+      sourceName: 'Virginia Department of Wildlife Resources',
+      sourceUrl: anadUrl,
+      seasonal: { months: sp.months, label: sp.label },
+    });
+    anadromousClaims++;
+  }
+}
+
 // Deterministic ordering.
 const ordered = {};
 for (const id of Object.keys(byLocation).sort()) ordered[id] = byLocation[id].sort((a, b) => a.speciesId.localeCompare(b.speciesId));
@@ -146,9 +188,10 @@ const payload = {
     wildTroutClaims,
     manualClaims,
     vafwisClaims,
+    anadromousClaims,
     locations: Object.keys(ordered).length,
   },
   byLocation: ordered,
 };
 writeFileSync(`${ROOT}/app/lib/generated/promoted-evidence-nova.json`, JSON.stringify(payload, null, 2) + '\n');
-console.log(`Wrote promoted-evidence-nova.json: ${wildTroutClaims} wild-trout + ${manualClaims} manual + ${vafwisClaims} VAFWIS claims across ${Object.keys(ordered).length} locations`);
+console.log(`Wrote promoted-evidence-nova.json: ${wildTroutClaims} wild-trout + ${manualClaims} manual + ${vafwisClaims} VAFWIS + ${anadromousClaims} anadromous claims across ${Object.keys(ordered).length} locations`);

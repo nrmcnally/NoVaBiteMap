@@ -4,7 +4,7 @@
     "schemaVersion": "1.0",
     "locationCount": 196,
     "speciesCount": 37,
-    "evidenceCount": 1227,
+    "evidenceCount": 1228,
     "stationCount": 7
   },
   "species": [
@@ -20111,6 +20111,35 @@
           ],
           "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
           "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "yellow-perch",
+          "availability": 0.4,
+          "quality": null,
+          "evidenceConfidence": 0.78,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "DWR documents Accokeek creek as a confirmed anadromous spawning run for yellow perch - a SEASONAL visitor (late-winter to spring spawning run (Feb-Apr)) at the tidal reach, not a year-round resident.",
+          "lastEvidence": "DWR Anadromous Fish Use Waters (confirmed use) reviewed 2026-07-14",
+          "technique": "Target the lower/tidal reach and creek mouth during the run; match bait to the spawning migration",
+          "depth": "Deeper holding water and current seams near the mouth on the appropriate tide",
+          "positive": [
+            "Official DWR confirmed anadromous spawning-run designation",
+            "Best during the late-winter to spring spawning run (Feb-Apr)"
+          ],
+          "negative": [
+            "Seasonal run only - absent outside the spawning window",
+            "Concentrated in the lower/tidal reach, not the headwaters"
+          ],
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Anadromous_Fish_Use_Waters/FeatureServer/0",
+          "seasonal": {
+            "months": [
+              2,
+              3,
+              4
+            ],
+            "label": "late-winter to spring spawning run (Feb-Apr)"
+          }
         }
       ],
       "accessAuthority": "Crows Nest State Natural Area Preserve",
@@ -23607,23 +23636,32 @@
         },
         {
           "speciesId": "striped-bass",
-          "availability": 0.46,
+          "availability": 0.4,
           "quality": null,
-          "evidenceConfidence": 0.64,
+          "evidenceConfidence": 0.78,
           "evidenceType": "agency survey",
-          "evidenceSummary": "Virginia DWR VAFWIS records document striped bass in Dogue Creek - 1 record (DGIF collection or salvage permit holder), 2000-03-01.",
-          "lastEvidence": "DWR VAFWIS collection records; last observed 2000-03-01",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
+          "evidenceSummary": "DWR documents Dogue creek as a confirmed anadromous spawning run for striped bass - a SEASONAL visitor (spring spawning run (Apr-Jun)) at the tidal reach, not a year-round resident.",
+          "lastEvidence": "DWR Anadromous Fish Use Waters (confirmed use) reviewed 2026-07-14",
+          "technique": "Target the lower/tidal reach and creek mouth during the run; match bait to the spawning migration",
+          "depth": "Deeper holding water and current seams near the mouth on the appropriate tide",
           "positive": [
-            "1 DWR VAFWIS collection record - exact water + exact taxon",
-            "Observation historical (over 10 years old)"
+            "Official DWR confirmed anadromous spawning-run designation",
+            "Best during the spring spawning run (Apr-Jun)"
           ],
           "negative": [
-            "Documents presence as of the observation date(s), not current abundance"
+            "Seasonal run only - absent outside the spawning window",
+            "Concentrated in the lower/tidal reach, not the headwaters"
           ],
-          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
-          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Anadromous_Fish_Use_Waters/FeatureServer/0",
+          "seasonal": {
+            "months": [
+              4,
+              5,
+              6
+            ],
+            "label": "spring spawning run (Apr-Jun)"
+          }
         },
         {
           "speciesId": "tessellated-darter",
@@ -23727,23 +23765,32 @@
         },
         {
           "speciesId": "yellow-perch",
-          "availability": 0.46,
+          "availability": 0.4,
           "quality": null,
-          "evidenceConfidence": 0.64,
+          "evidenceConfidence": 0.78,
           "evidenceType": "agency survey",
-          "evidenceSummary": "Virginia DWR VAFWIS records document yellow perch in Dogue Creek - 10 records (DGIF collection or salvage permit holder), 1998-06-01-2005-04-28.",
-          "lastEvidence": "DWR VAFWIS collection records; last observed 2005-04-28",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
+          "evidenceSummary": "DWR documents Dogue creek as a confirmed anadromous spawning run for yellow perch - a SEASONAL visitor (late-winter to spring spawning run (Feb-Apr)) at the tidal reach, not a year-round resident.",
+          "lastEvidence": "DWR Anadromous Fish Use Waters (confirmed use) reviewed 2026-07-14",
+          "technique": "Target the lower/tidal reach and creek mouth during the run; match bait to the spawning migration",
+          "depth": "Deeper holding water and current seams near the mouth on the appropriate tide",
           "positive": [
-            "10 DWR VAFWIS collection records - exact water + exact taxon",
-            "Observation historical (over 10 years old)"
+            "Official DWR confirmed anadromous spawning-run designation",
+            "Best during the late-winter to spring spawning run (Feb-Apr)"
           ],
           "negative": [
-            "Documents presence as of the observation date(s), not current abundance"
+            "Seasonal run only - absent outside the spawning window",
+            "Concentrated in the lower/tidal reach, not the headwaters"
           ],
-          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
-          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Anadromous_Fish_Use_Waters/FeatureServer/0",
+          "seasonal": {
+            "months": [
+              2,
+              3,
+              4
+            ],
+            "label": "late-winter to spring spawning run (Feb-Apr)"
+          }
         }
       ],
       "accessAuthority": "Huntley Meadows Park",

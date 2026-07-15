@@ -39,6 +39,10 @@ export type SpeciesEvidence = {
   sourceName?: string;
   sourceUrl?: string;
   modeled?: boolean;
+  /** Present for seasonal-run species (anadromous spawning runs): the months they
+   * are actually present and a human label, so the UI can badge it distinctly and
+   * gate availability by month rather than implying year-round residence. */
+  seasonal?: { months: number[]; label: string };
 };
 
 export type CanonicalOpportunity = {
