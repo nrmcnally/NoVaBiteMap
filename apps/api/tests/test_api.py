@@ -130,7 +130,7 @@ def test_data_source_status_is_derived_from_real_counts_and_runs(client):
     assert counts["hydrologyAssociations"] == 19
     assert counts["stockingRecords"] == 13
     assert counts["modeledEvidence"] == 346
-    assert counts["locationsWithEvidence"] == 126
+    assert counts["locationsWithEvidence"] == 127
     assert status["lastSuccessfulIngestion"] is not None
     assert status["lastSuccessfulIngestion"]["status"] == "success"
 

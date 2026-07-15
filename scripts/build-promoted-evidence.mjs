@@ -59,6 +59,32 @@ for (const reach of habitats.wildTrout) {
   }
 }
 
+// Approved manual / primary-source claims (current-presence verdicts only;
+// historical-only is excluded so we never present a stale record as current).
+// This is also the path for reviewed local/angler-reported observations.
+const CURRENT_MANUAL = new Set(['approved-direct-observation', 'approved-official-waterbody-listing', 'approved-exact-agency-report']);
+let manualClaims = 0;
+for (const m of verdicts.manualClaims) {
+  if (!CURRENT_MANUAL.has(m.verdict)) continue;
+  const year = m.publicationYear || (m.evidenceDate ? String(m.evidenceDate).slice(0, 4) : null);
+  add(m.locationId, {
+    speciesId: m.speciesId,
+    availability: 0.6,
+    quality: null,
+    evidenceConfidence: 0.8,
+    evidenceType: m.verdict.includes('observation') ? 'agency survey' : 'official listing',
+    evidenceSummary: m.summary,
+    lastEvidence: `${m.sourceName}${year ? ` (${year})` : ''} — reviewed ${reviewed}`,
+    technique: 'Match presentation to the species, season, and current conditions',
+    depth: 'Work accessible cover and structure first, then probe the first depth change',
+    positive: [m.summary],
+    negative: ['Reviewed primary-source record; conditions and access can change'],
+    sourceName: m.sourceName,
+    sourceUrl: m.sourceUrl,
+  });
+  manualClaims++;
+}
+
 // Deterministic ordering.
 const ordered = {};
 for (const id of Object.keys(byLocation).sort()) ordered[id] = byLocation[id].sort((a, b) => a.speciesId.localeCompare(b.speciesId));
@@ -69,9 +95,10 @@ const payload = {
     reviewed,
     wildTroutReachesApproved: [...approvedWildTrout].length,
     wildTroutClaims,
+    manualClaims,
     locations: Object.keys(ordered).length,
   },
   byLocation: ordered,
 };
 writeFileSync(`${ROOT}/app/lib/generated/promoted-evidence-nova.json`, JSON.stringify(payload, null, 2) + '\n');
-console.log(`Wrote promoted-evidence-nova.json: ${wildTroutClaims} wild-trout claims across ${Object.keys(ordered).length} locations`);
+console.log(`Wrote promoted-evidence-nova.json: ${wildTroutClaims} wild-trout + ${manualClaims} manual claims across ${Object.keys(ordered).length} locations`);

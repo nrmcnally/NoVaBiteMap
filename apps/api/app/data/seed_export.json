@@ -4,7 +4,7 @@
     "schemaVersion": "1.0",
     "locationCount": 196,
     "speciesCount": 37,
-    "evidenceCount": 613,
+    "evidenceCount": 615,
     "stationCount": 7
   },
   "species": [
@@ -21543,22 +21543,21 @@
       "evidence": [
         {
           "speciesId": "brook-trout",
-          "availability": 0.85,
-          "quality": 0.8,
+          "availability": 0.6,
+          "quality": null,
           "evidenceConfidence": 0.8,
           "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR's North Fork Thornton River waterbody page documents an excellent native brook trout population within Shenandoah National Park near Sperryville.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
+          "evidenceSummary": "The exact North Fork Thornton River page documents an excellent brook trout population, typically 6-9 inch adults.",
+          "lastEvidence": "Virginia Department of Wildlife Resources - North Fork Thornton River — reviewed 2026-07-14",
           "technique": "Match presentation to the species, season, and current conditions",
           "depth": "Work accessible cover and structure first, then probe the first depth change",
           "positive": [
-            "Virginia DWR's North Fork Thornton River waterbody page documents an excellent native brook trout population within Shenandoah National Park near Sperryville.",
-            "Excellent population; most adults 6-9 inches"
+            "The exact North Fork Thornton River page documents an excellent brook trout population, typically 6-9 inch adults."
           ],
           "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
+            "Reviewed primary-source record; conditions and access can change"
           ],
-          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceName": "Virginia Department of Wildlife Resources - North Fork Thornton River",
           "sourceUrl": "https://dwr.virginia.gov/waterbody/north-fork-thorton-river/"
         }
       ],
@@ -23177,7 +23176,46 @@
       "activityEstimate": 0.5,
       "accessFit": 0.66,
       "bestWindow": "Unavailable",
-      "evidence": [],
+      "evidence": [
+        {
+          "speciesId": "bluegill",
+          "availability": 0.6,
+          "quality": null,
+          "evidenceConfidence": 0.8,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "The exact South Fork Quantico Creek 2021 survey table reports one bluegill.",
+          "lastEvidence": "National Park Service - Stream Life at Prince William Forest Park (2021) — reviewed 2026-07-14",
+          "technique": "Match presentation to the species, season, and current conditions",
+          "depth": "Work accessible cover and structure first, then probe the first depth change",
+          "positive": [
+            "The exact South Fork Quantico Creek 2021 survey table reports one bluegill."
+          ],
+          "negative": [
+            "Reviewed primary-source record; conditions and access can change"
+          ],
+          "sourceName": "National Park Service - Stream Life at Prince William Forest Park",
+          "sourceUrl": "https://www.nps.gov/articles/000/prwi-stream-biota-monitoring-2021.htm"
+        },
+        {
+          "speciesId": "redbreast-sunfish",
+          "availability": 0.6,
+          "quality": null,
+          "evidenceConfidence": 0.8,
+          "evidenceType": "agency survey",
+          "evidenceSummary": "The exact South Fork Quantico Creek 2021 survey table reports three redbreast sunfish.",
+          "lastEvidence": "National Park Service - Stream Life at Prince William Forest Park (2021) — reviewed 2026-07-14",
+          "technique": "Match presentation to the species, season, and current conditions",
+          "depth": "Work accessible cover and structure first, then probe the first depth change",
+          "positive": [
+            "The exact South Fork Quantico Creek 2021 survey table reports three redbreast sunfish."
+          ],
+          "negative": [
+            "Reviewed primary-source record; conditions and access can change"
+          ],
+          "sourceName": "National Park Service - Stream Life at Prince William Forest Park",
+          "sourceUrl": "https://www.nps.gov/articles/000/prwi-stream-biota-monitoring-2021.htm"
+        }
+      ],
       "accessAuthority": "Prince William Forest Park",
       "accessSourceUrl": "https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer/6",
       "sourceReviewed": "2026-07-14",

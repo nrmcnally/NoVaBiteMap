@@ -4,7 +4,8 @@
     "reviewed": "2026-07-14",
     "wildTroutReachesApproved": 20,
     "wildTroutClaims": 22,
-    "locations": 20
+    "manualClaims": 3,
+    "locations": 22
   },
   "byLocation": {
     "nhd-stream-brokenback-run": [
@@ -291,6 +292,27 @@
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
       }
     ],
+    "nhd-stream-north-fork-thornton-river": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "The exact North Fork Thornton River page documents an excellent brook trout population, typically 6-9 inch adults.",
+        "lastEvidence": "Virginia Department of Wildlife Resources - North Fork Thornton River — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "The exact North Fork Thornton River page documents an excellent brook trout population, typically 6-9 inch adults."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources - North Fork Thornton River",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/north-fork-thorton-river/"
+      }
+    ],
     "nhd-stream-overall-run": [
       {
         "speciesId": "brook-trout",
@@ -463,6 +485,46 @@
         ],
         "sourceName": "Virginia Department of Wildlife Resources",
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+      }
+    ],
+    "nhd-stream-south-fork-quantico-creek": [
+      {
+        "speciesId": "bluegill",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "The exact South Fork Quantico Creek 2021 survey table reports one bluegill.",
+        "lastEvidence": "National Park Service - Stream Life at Prince William Forest Park (2021) — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "The exact South Fork Quantico Creek 2021 survey table reports one bluegill."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "National Park Service - Stream Life at Prince William Forest Park",
+        "sourceUrl": "https://www.nps.gov/articles/000/prwi-stream-biota-monitoring-2021.htm"
+      },
+      {
+        "speciesId": "redbreast-sunfish",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "agency survey",
+        "evidenceSummary": "The exact South Fork Quantico Creek 2021 survey table reports three redbreast sunfish.",
+        "lastEvidence": "National Park Service - Stream Life at Prince William Forest Park (2021) — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "The exact South Fork Quantico Creek 2021 survey table reports three redbreast sunfish."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "National Park Service - Stream Life at Prince William Forest Park",
+        "sourceUrl": "https://www.nps.gov/articles/000/prwi-stream-biota-monitoring-2021.htm"
       }
     ],
     "nhd-stream-staunton-river": [

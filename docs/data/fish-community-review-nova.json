@@ -2,7 +2,7 @@
   "meta": {
     "generated": "2026-07-15",
     "locationCount": 196,
-    "guessReliantLocationCount": 112,
+    "guessReliantLocationCount": 111,
     "policy": "Candidates never affect rankings until finalVerdict is approved after exact-water, species, date, provenance, contradiction, and access review.",
     "priorAgentWork": "All existing seed evidence is retained under priorAgentClaims and explicitly queued for re-verification or quarantine.",
     "vafwisSource": {
@@ -22,19 +22,19 @@
       "privacyNote": "Source geometries are used transiently for matching, then deliberately discarded; only distance-to-catalog-water is retained."
     },
     "queueCounts": {
-      "existing-direct-claims-reviewed": 84,
+      "existing-direct-claims-reviewed": 85,
       "no-direct-candidate-found": 42,
       "direct-agency-candidate-found": 58,
       "non-target-fish-candidate-found": 10,
-      "manual-primary-source-claim-approved": 2
+      "manual-primary-source-claim-approved": 1
     },
     "reviewProgress": {
-      "targetCandidateLocationCount": 59,
+      "targetCandidateLocationCount": 58,
       "nonTargetOnlyLocationCount": 10,
       "noCandidateLocationCount": 42,
       "approvedClaimCount": 60,
       "approvedClaimLocationCount": 39,
-      "verifiedRuntimeClaimCount": 267,
+      "verifiedRuntimeClaimCount": 269,
       "removedOrRejectedPriorClaimCount": 105,
       "unverifiedRuntimeDirectClaimCount": 0,
       "missingSourceRuntimeDirectClaimCount": 0,
@@ -56310,9 +56310,9 @@
           "speciesId": "brook-trout",
           "evidenceType": "official listing",
           "modeled": false,
-          "summary": "Virginia DWR's North Fork Thornton River waterbody page documents an excellent native brook trout population within Shenandoah National Park near Sperryville.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "sourceName": "Virginia Department of Wildlife Resources",
+          "summary": "The exact North Fork Thornton River page documents an excellent brook trout population, typically 6-9 inch adults.",
+          "lastEvidence": "Virginia Department of Wildlife Resources - North Fork Thornton River — reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Wildlife Resources - North Fork Thornton River",
           "sourceUrl": "https://dwr.virginia.gov/waterbody/north-fork-thorton-river/",
           "reviewStatus": "corroborated-by-approved-agency-record",
           "review": null
@@ -64758,9 +64758,32 @@
           "note": "NPS explicitly permits fishing anywhere along South Fork Quantico Creek, subject to park and Virginia rules. The generated NHD coordinate is not itself a verified parking or shore-access point."
         }
       },
-      "evidenceQueue": "manual-primary-source-claim-approved",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
-      "priorAgentClaims": [],
+      "priorAgentClaims": [
+        {
+          "speciesId": "bluegill",
+          "evidenceType": "agency survey",
+          "modeled": false,
+          "summary": "The exact South Fork Quantico Creek 2021 survey table reports one bluegill.",
+          "lastEvidence": "National Park Service - Stream Life at Prince William Forest Park (2021) — reviewed 2026-07-14",
+          "sourceName": "National Park Service - Stream Life at Prince William Forest Park",
+          "sourceUrl": "https://www.nps.gov/articles/000/prwi-stream-biota-monitoring-2021.htm",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        },
+        {
+          "speciesId": "redbreast-sunfish",
+          "evidenceType": "agency survey",
+          "modeled": false,
+          "summary": "The exact South Fork Quantico Creek 2021 survey table reports three redbreast sunfish.",
+          "lastEvidence": "National Park Service - Stream Life at Prince William Forest Park (2021) — reviewed 2026-07-14",
+          "sourceName": "National Park Service - Stream Life at Prince William Forest Park",
+          "sourceUrl": "https://www.nps.gov/articles/000/prwi-stream-biota-monitoring-2021.htm",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        }
+      ],
       "agencyObservationCandidates": [
         {
           "speciesId": "bluegill",
