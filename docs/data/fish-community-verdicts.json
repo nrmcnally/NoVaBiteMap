@@ -41,8 +41,19 @@
       "limitations": "The public layer has no per-record observation date. Treat this as an official reach species listing retrieved on the snapshot date, not a recent abundance survey."
     },
     "dwrAnadromous": {
-      "approvedObjectIds": [132, 143, 412],
-      "potentialDoNotPromoteObjectIds": [161, 261, 346, 360, 371, 409],
+      "approvedObjectIds": [
+        132,
+        143,
+        412
+      ],
+      "potentialDoNotPromoteObjectIds": [
+        161,
+        261,
+        346,
+        360,
+        371,
+        409
+      ],
       "checks": {
         "officialAgencyLayer": true,
         "exactNamedWater": true,
@@ -55,7 +66,23 @@
       "limitations": "Only confirmed, target-guide species records are approved. Potential-use records remain quarantined and records outside the current species guide are retained without promotion."
     },
     "dwrStockedTrout": {
-      "approvedObjectIds": [10, 19, 36, 50, 55, 64, 71, 107, 130, 174, 177, 207, 257, 295, 312],
+      "approvedObjectIds": [
+        10,
+        19,
+        36,
+        50,
+        55,
+        64,
+        71,
+        107,
+        130,
+        174,
+        177,
+        207,
+        257,
+        295,
+        312
+      ],
       "checks": {
         "officialAgencyLayer": true,
         "exactNamedWater": true,
@@ -171,334 +198,2095 @@
   "sourceClaimRejections": [
     {
       "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/",
-      "locationIds": ["pohick-bay"],
-      "rejectedSpeciesIds": ["white-perch", "yellow-perch", "channel-catfish", "flathead-catfish", "black-crappie"],
+      "locationIds": [
+        "pohick-bay"
+      ],
+      "rejectedSpeciesIds": [
+        "white-perch",
+        "yellow-perch",
+        "channel-catfish",
+        "flathead-catfish",
+        "black-crappie"
+      ],
       "verdict": "removed-wrong-waterbody-and-inferred-taxon",
       "note": "The source documents the tidal Occoquan River, not Pohick Bay. It also says only generic crappie, so black crappie was an unsupported taxonomic inference."
     },
     {
       "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/",
-      "locationIds": ["mason-neck"],
-      "rejectedSpeciesIds": ["white-perch", "striped-bass", "yellow-perch", "channel-catfish", "flathead-catfish", "black-crappie"],
+      "locationIds": [
+        "mason-neck"
+      ],
+      "rejectedSpeciesIds": [
+        "white-perch",
+        "striped-bass",
+        "yellow-perch",
+        "channel-catfish",
+        "flathead-catfish",
+        "black-crappie"
+      ],
       "verdict": "removed-wrong-waterbody-and-inferred-taxon",
       "note": "Mason Neck fronts Belmont Bay/Potomac waters, not the Occoquan River. The source also says only generic crappie, so black crappie was an unsupported taxonomic inference."
     },
     {
       "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/",
-      "locationIds": ["occoquan-regional", "occoquan-hand-carry"],
-      "rejectedSpeciesIds": ["black-crappie"],
+      "locationIds": [
+        "occoquan-regional",
+        "occoquan-hand-carry"
+      ],
+      "rejectedSpeciesIds": [
+        "black-crappie"
+      ],
       "verdict": "removed-insufficient-taxon-specificity",
       "note": "The exact Occoquan River source lists generic crappie and does not identify black crappie. The other exact species remain separately reviewable."
     },
     {
       "sourceUrl": "https://www.nps.gov/prwi/planyourvisit/fishing.htm",
-      "locationIds": ["nhd-stream-quantico-creek"],
-      "rejectedSpeciesIds": ["largemouth-bass", "channel-catfish", "bluegill", "northern-snakehead"],
+      "locationIds": [
+        "nhd-stream-quantico-creek"
+      ],
+      "rejectedSpeciesIds": [
+        "largemouth-bass",
+        "channel-catfish",
+        "bluegill",
+        "northern-snakehead"
+      ],
       "verdict": "removed-park-wide-list-not-exact-water-survey",
       "note": "NPS gives a park-wide list covering roughly eighteen stream miles and two impoundments; it does not assign these species specifically to Quantico Creek. The snakehead passage is a possession rule, not a presence statement."
     },
     {
       "sourceUrl": "https://www.nps.gov/choh/planyourvisit/fishing.htm",
-      "locationIds": ["point-of-rocks", "riverbend-park", "algonkian", "piscataway-crossing", "seneca-regional", "great-falls"],
-      "rejectedSpeciesIds": ["northern-snakehead"],
+      "locationIds": [
+        "point-of-rocks",
+        "riverbend-park",
+        "algonkian",
+        "piscataway-crossing",
+        "seneca-regional",
+        "great-falls"
+      ],
+      "rejectedSpeciesIds": [
+        "northern-snakehead"
+      ],
       "verdict": "removed-broad-river-statement-not-access-segment-evidence",
       "note": "The NPS page says snakehead have appeared in the Potomac River but supplies no reach, date, or access-level location. It cannot support six specific nontidal access-point rankings."
     },
     {
       "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
-      "locationIds": ["pohick-bay", "mason-neck"],
-      "rejectedSpeciesIds": ["northern-snakehead"],
+      "locationIds": [
+        "pohick-bay",
+        "mason-neck"
+      ],
+      "rejectedSpeciesIds": [
+        "northern-snakehead"
+      ],
       "verdict": "removed-broad-tidal-region-statement-not-exact-water-evidence",
       "note": "The 2026 forecast discusses many northern Potomac creeks below Washington, D.C., but does not identify Pohick Bay or Belmont Bay for snakehead. It is a regional lead, not exact-water evidence."
     },
     {
       "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing",
-      "locationIds": ["riverbend-park"],
-      "rejectedSpeciesIds": ["channel-catfish"],
+      "locationIds": [
+        "riverbend-park"
+      ],
+      "rejectedSpeciesIds": [
+        "channel-catfish"
+      ],
       "verdict": "removed-insufficient-taxon-specificity",
       "note": "The exact Riverbend section says catfish but does not identify channel catfish."
     },
     {
       "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing",
-      "locationIds": ["lake-fairfax"],
-      "rejectedSpeciesIds": ["black-crappie"],
+      "locationIds": [
+        "lake-fairfax"
+      ],
+      "rejectedSpeciesIds": [
+        "black-crappie"
+      ],
       "verdict": "removed-insufficient-taxon-specificity",
       "note": "The exact Lake Fairfax section says crappie but does not identify black crappie."
     },
     {
       "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/",
-      "locationIds": ["fredericksburg-city-docks"],
-      "rejectedSpeciesIds": ["smallmouth-bass"],
+      "locationIds": [
+        "fredericksburg-city-docks"
+      ],
+      "rejectedSpeciesIds": [
+        "smallmouth-bass"
+      ],
       "verdict": "removed-wrong-river-segment",
       "note": "DWR places City Dock in tidal water below the fall line and identifies smallmouth habitat above Fredericksburg. The page does not support an exact City Dock smallmouth claim."
     },
     {
       "sourceUrl": "https://dwr.virginia.gov/blog/tidal-river-curious-focus-on-these-four-habitats/",
-      "locationIds": ["vernon-view", "riverside-park-potomac", "dyke-marsh", "belle-haven", "jones-point", "daingerfield-island", "gravelly-point", "theodore-roosevelt-island", "leesylvania"],
-      "rejectedSpeciesIds": ["blue-catfish", "white-perch", "yellow-perch"],
+      "locationIds": [
+        "vernon-view",
+        "riverside-park-potomac",
+        "dyke-marsh",
+        "belle-haven",
+        "jones-point",
+        "daingerfield-island",
+        "gravelly-point",
+        "theodore-roosevelt-island",
+        "leesylvania"
+      ],
+      "rejectedSpeciesIds": [
+        "blue-catfish",
+        "white-perch",
+        "yellow-perch"
+      ],
       "verdict": "removed-multi-river-generalization-not-potomac-specific",
       "note": "The DWR feature discusses a salinity-dependent range of species across Virginia tidal rivers from the Potomac to the James. It does not assign blue catfish, white perch, or yellow perch specifically to the Potomac, much less to nine access points. These remain research leads rather than direct rankings evidence."
     },
     {
       "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
-      "locationIds": ["vernon-view", "riverside-park-potomac", "dyke-marsh", "belle-haven", "jones-point", "daingerfield-island", "gravelly-point", "theodore-roosevelt-island", "leesylvania"],
-      "rejectedSpeciesIds": ["largemouth-bass", "northern-snakehead", "channel-catfish"],
+      "locationIds": [
+        "vernon-view",
+        "riverside-park-potomac",
+        "dyke-marsh",
+        "belle-haven",
+        "jones-point",
+        "daingerfield-island",
+        "gravelly-point",
+        "theodore-roosevelt-island",
+        "leesylvania"
+      ],
+      "rejectedSpeciesIds": [
+        "largemouth-bass",
+        "northern-snakehead",
+        "channel-catfish"
+      ],
       "verdict": "removed-tributary-forecast-misapplied-to-main-stem",
       "note": "The 2026 Potomac section supports excellent largemouth fishing in Virginia tidal Potomac tributaries south of Washington and discusses snakehead broadly in northern creeks. It does not support access-level main-stem claims, and its Potomac section does not document channel catfish. Leesylvania largemouth is supported separately by DCR."
     },
     {
       "sourceUrl": "https://dwr.virginia.gov/blog/10-top-virginia-fishing-waters-rivers/",
-      "locationIds": ["vernon-view", "riverside-park-potomac", "dyke-marsh", "belle-haven", "jones-point", "daingerfield-island", "gravelly-point", "theodore-roosevelt-island", "leesylvania"],
-      "rejectedSpeciesIds": ["common-carp"],
+      "locationIds": [
+        "vernon-view",
+        "riverside-park-potomac",
+        "dyke-marsh",
+        "belle-haven",
+        "jones-point",
+        "daingerfield-island",
+        "gravelly-point",
+        "theodore-roosevelt-island",
+        "leesylvania"
+      ],
+      "rejectedSpeciesIds": [
+        "common-carp"
+      ],
       "verdict": "removed-insufficient-taxon-specificity",
       "note": "The DWR-hosted feature says only carp for the coastal Potomac. It does not identify common carp by species, so it cannot support an exact common-carp ranking claim."
     },
     {
       "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/catchable-trout-stocking-plan.pdf",
-      "locationIds": ["nhd-stream-robinson-river", "nhd-stream-rose-river"],
-      "rejectedSpeciesIds": ["rainbow-trout", "brook-trout"],
+      "locationIds": [
+        "nhd-stream-robinson-river",
+        "nhd-stream-rose-river"
+      ],
+      "rejectedSpeciesIds": [
+        "rainbow-trout",
+        "brook-trout"
+      ],
       "verdict": "removed-designation-does-not-identify-species",
       "note": "The rendered 2026 stocking-plan table identifies Robinson and Rose as Category A Heritage waters but does not identify any trout species. It cannot support rainbow- or brook-trout claims without a separate exact-species agency record."
     },
     {
       "sourceUrl": "https://dwr.virginia.gov/waterbody/fairfax-lake/",
-      "locationIds": ["lake-fairfax"],
-      "rejectedSpeciesIds": ["black-crappie"],
+      "locationIds": [
+        "lake-fairfax"
+      ],
+      "rejectedSpeciesIds": [
+        "black-crappie"
+      ],
       "verdict": "removed-insufficient-taxon-specificity",
       "note": "The exact DWR page says crappies rather than black crappie. Exact black-crappie evidence remains unverified."
     }
   ],
   "sourceClaimReviews": [
     {
+      "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+      "locationIds": [
+        "point-of-rocks",
+        "riverbend-park",
+        "algonkian",
+        "piscataway-crossing",
+        "seneca-regional",
+        "great-falls"
+      ],
+      "approvedSpeciesIds": [
+        "smallmouth-bass",
+        "walleye",
+        "muskellunge",
+        "channel-catfish",
+        "largemouth-bass",
+        "flathead-catfish"
+      ],
+      "verdict": "approved-shared-official-nontidal-river-page",
+      "limitations": "Maryland DNR defines the Upper Potomac as the warmwater nontidal river from Cumberland to Washington, D.C. Presence is approved at the connected river level; densities vary by reach, and Maryland-side regulations must not be presented as universally applicable to Virginia access."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/blog/10-top-virginia-fishing-waters-rivers/",
+      "locationIds": [
+        "vernon-view",
+        "riverside-park-potomac",
+        "dyke-marsh",
+        "belle-haven",
+        "jones-point",
+        "daingerfield-island",
+        "gravelly-point",
+        "theodore-roosevelt-island",
+        "leesylvania"
+      ],
+      "approvedSpeciesIds": [
+        "striped-bass"
+      ],
+      "verdict": "approved-shared-dwr-hosted-coastal-potomac-feature",
+      "limitations": "The feature explicitly identifies stripers among coastal Potomac target species. Approval is limited to shared river-segment presence; it is not an access-level survey, abundance estimate, or proof of shore catchability. Generic carp is rejected separately."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/blog/let-out-some-line-at-burke-lake/",
+      "locationIds": [
+        "lake-burke"
+      ],
+      "approvedSpeciesIds": [
+        "northern-snakehead"
+      ],
+      "verdict": "approved-exact-dated-agency-feature",
+      "limitations": "The 2021 DWR feature explicitly states that Burke Lake has northern snakehead. It supports presence, not a current abundance estimate."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/fairfax-lake/",
+      "locationIds": [
+        "lake-fairfax"
+      ],
+      "approvedSpeciesIds": [
+        "largemouth-bass",
+        "channel-catfish",
+        "bluegill"
+      ],
+      "verdict": "approved-exact-agency-waterbody-page",
+      "limitations": "The current notice says channel-catfish stocking is discontinued; the existing population remains and catch rates may decline. Generic crappies are intentionally excluded from exact-species approval."
+    },
+    {
       "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-brittle/",
-      "locationIds": ["lake-brittle"],
-      "approvedSpeciesIds": ["largemouth-bass", "bluegill", "black-crappie", "channel-catfish", "flathead-catfish", "northern-snakehead"],
+      "locationIds": [
+        "lake-brittle"
+      ],
+      "approvedSpeciesIds": [
+        "largemouth-bass",
+        "bluegill",
+        "black-crappie",
+        "channel-catfish",
+        "flathead-catfish",
+        "northern-snakehead"
+      ],
       "verdict": "approved-exact-agency-waterbody-page",
       "limitations": "The current notice supersedes stale body text about annual channel-catfish stocking: stocking is discontinued, the existing population remains, and catch rates may decline."
     },
     {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-burke/",
+      "locationIds": [
+        "lake-burke"
+      ],
+      "approvedSpeciesIds": [
+        "largemouth-bass",
+        "black-crappie",
+        "yellow-perch",
+        "muskellunge",
+        "walleye",
+        "channel-catfish",
+        "bluegill",
+        "white-perch",
+        "blue-catfish"
+      ],
+      "verdict": "approved-exact-agency-waterbody-page",
+      "limitations": "The current notice supersedes stale body text about annual channel-catfish stocking: stocking is discontinued, the existing population remains, and catch rates may decline. Blue catfish are described as occasional."
+    },
+    {
       "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-curtis/",
-      "locationIds": ["lake-curtis"],
-      "approvedSpeciesIds": ["largemouth-bass", "bluegill", "channel-catfish"],
+      "locationIds": [
+        "lake-curtis"
+      ],
+      "approvedSpeciesIds": [
+        "largemouth-bass",
+        "bluegill",
+        "channel-catfish"
+      ],
       "verdict": "approved-exact-agency-waterbody-page",
       "limitations": "The current notice says channel-catfish stocking is discontinued; the existing population remains."
     },
     {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-frederick/",
+      "locationIds": [
+        "lake-frederick"
+      ],
+      "approvedSpeciesIds": [
+        "largemouth-bass",
+        "black-crappie",
+        "bluegill",
+        "channel-catfish"
+      ],
+      "verdict": "approved-exact-agency-waterbody-page",
+      "limitations": "DWR's access records identify Wheatlands Lake as the body of water and Lake Frederick as the access/fishery name. The current notice supersedes stale stocking text: channel-catfish stocking is discontinued, but the existing population remains."
+    },
+    {
       "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-mooney/",
-      "locationIds": ["rocky-pen-park"],
-      "approvedSpeciesIds": ["largemouth-bass", "black-crappie", "bluegill", "channel-catfish"],
+      "locationIds": [
+        "rocky-pen-park"
+      ],
+      "approvedSpeciesIds": [
+        "largemouth-bass",
+        "black-crappie",
+        "bluegill",
+        "channel-catfish"
+      ],
       "verdict": "approved-exact-agency-waterbody-page-and-alias",
       "limitations": "DWR explicitly states that Lake Mooney was originally named Rocky Pen Reservoir for the impounded stream. Older stocking statements prove introduction and the page describes the current fish community; they are not recent abundance estimates."
     },
     {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-orange/",
+      "locationIds": [
+        "dwr-boat-79"
+      ],
+      "approvedSpeciesIds": [
+        "largemouth-bass",
+        "black-crappie",
+        "walleye",
+        "channel-catfish",
+        "bluegill",
+        "yellow-perch",
+        "white-perch",
+        "common-carp"
+      ],
+      "verdict": "approved-exact-agency-waterbody-page",
+      "limitations": "The current notice supersedes stale body text about regular channel-catfish stocking: stocking is discontinued, the existing population remains, and catch rates may decline."
+    },
+    {
       "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-shenandoah/",
-      "locationIds": ["dwr-boat-11"],
-      "approvedSpeciesIds": ["largemouth-bass", "black-crappie", "bluegill", "channel-catfish", "common-carp", "muskellunge"],
+      "locationIds": [
+        "dwr-boat-11"
+      ],
+      "approvedSpeciesIds": [
+        "largemouth-bass",
+        "black-crappie",
+        "bluegill",
+        "channel-catfish",
+        "common-carp",
+        "muskellunge"
+      ],
       "verdict": "approved-exact-agency-waterbody-page",
       "limitations": "The lake is being held about five feet below full pool pending dam work currently estimated for 2027. Channel-catfish stocking is discontinued; the existing population remains."
     },
     {
       "sourceUrl": "https://dwr.virginia.gov/waterbody/mountain-run/",
-      "locationIds": ["dwr-boat-30"],
-      "approvedSpeciesIds": ["largemouth-bass", "bluegill", "channel-catfish"],
+      "locationIds": [
+        "dwr-boat-30"
+      ],
+      "approvedSpeciesIds": [
+        "largemouth-bass",
+        "bluegill",
+        "channel-catfish"
+      ],
       "verdict": "approved-exact-agency-waterbody-page",
       "limitations": "The page says only generic crappie, so the live black-crappie claim is not approved by this source review."
     },
     {
-      "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Mountain-Run-Reservoir-Fisheries-Management-Report-2023.pdf",
-      "locationIds": ["dwr-boat-30"],
-      "approvedSpeciesIds": ["black-crappie"],
-      "verdict": "approved-exact-dated-agency-survey-report",
-      "limitations": "The report identifies Black Crappie by species and discusses the April 2022 electrofishing sample. The live citation was corrected from the generic waterbody page to this report."
-    },
-    {
-      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-orange/",
-      "locationIds": ["dwr-boat-79"],
-      "approvedSpeciesIds": ["largemouth-bass", "black-crappie", "walleye", "channel-catfish", "bluegill", "yellow-perch", "white-perch", "common-carp"],
-      "verdict": "approved-exact-agency-waterbody-page",
-      "limitations": "The current notice supersedes stale body text about regular channel-catfish stocking: stocking is discontinued, the existing population remains, and catch rates may decline."
-    },
-    {
       "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/",
-      "locationIds": ["fountainhead", "bull-run-marina", "lake-ridge-marina"],
-      "approvedSpeciesIds": ["largemouth-bass", "bluegill", "black-crappie", "white-crappie", "channel-catfish", "flathead-catfish", "white-perch"],
+      "locationIds": [
+        "fountainhead",
+        "bull-run-marina",
+        "lake-ridge-marina"
+      ],
+      "approvedSpeciesIds": [
+        "largemouth-bass",
+        "bluegill",
+        "black-crappie",
+        "white-crappie",
+        "channel-catfish",
+        "flathead-catfish",
+        "white-perch"
+      ],
       "verdict": "approved-shared-exact-waterbody-page",
       "limitations": "Approval is for species presence in the shared Occoquan Reservoir, not equal abundance or access conditions at every marina. Yellow perch is reviewed separately against the exact 2022 management report."
     },
     {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/",
+      "locationIds": [
+        "occoquan-hand-carry"
+      ],
+      "approvedSpeciesIds": [
+        "white-perch",
+        "striped-bass",
+        "largemouth-bass",
+        "yellow-perch",
+        "flathead-catfish",
+        "channel-catfish"
+      ],
+      "verdict": "approved-exact-agency-river-page",
+      "limitations": "The catalog point is an official access on the named tidal Occoquan River. DWR's generic crappie listing is intentionally excluded from exact-species approval."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-tidal/",
+      "locationIds": [
+        "hopyard-landing"
+      ],
+      "approvedSpeciesIds": [
+        "largemouth-bass",
+        "channel-catfish"
+      ],
+      "verdict": "approved-exact-agency-tidal-river-access",
+      "limitations": "DWR explicitly identifies Hopyard Landing as public access on the tidal Rappahannock and documents both species in that connected tidal reach. This supports presence, not equal abundance at the landing."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/",
+      "locationIds": [
+        "kellys-ford",
+        "motts-landing",
+        "nhd-stream-hazel-river"
+      ],
+      "approvedSpeciesIds": [
+        "smallmouth-bass",
+        "redbreast-sunfish"
+      ],
+      "verdict": "approved-exact-agency-upper-river-reaches",
+      "limitations": "DWR explicitly documents Kelly's Ford and Motts Landing in the upper smallmouth/redbreast fishery and identifies Hazel River as a good smallmouth stream. Fredericksburg City Dock is excluded because it lies in the tidal reach below the fall line."
+    },
+    {
       "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-main-stem/",
-      "locationIds": ["berrys", "castlemans-ferry", "lockes", "morgans-ford"],
-      "approvedSpeciesIds": ["smallmouth-bass", "walleye"],
+      "locationIds": [
+        "berrys",
+        "castlemans-ferry",
+        "lockes",
+        "morgans-ford"
+      ],
+      "approvedSpeciesIds": [
+        "smallmouth-bass",
+        "walleye"
+      ],
       "verdict": "approved-exact-agency-river-segment-page",
       "limitations": "DWR identifies the Main Stem fishery and the named public access reaches. Species presence is approved at the connected river segment level, not as equal abundance at every ramp."
     },
     {
       "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-north-fork/",
-      "locationIds": ["catletts-ford", "riverton"],
-      "approvedSpeciesIds": ["smallmouth-bass"],
+      "locationIds": [
+        "catletts-ford",
+        "riverton"
+      ],
+      "approvedSpeciesIds": [
+        "smallmouth-bass"
+      ],
       "verdict": "approved-exact-agency-river-segment-page",
       "limitations": "DWR explicitly documents Catletts Ford, Riverton, and North Fork smallmouth bass. The current harmful-algal-growth notice must remain separate from species presence and should be shown to users."
     },
     {
       "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-south-fork/",
-      "locationIds": ["bentonville", "front-royal", "karo", "simpsons"],
-      "approvedSpeciesIds": ["smallmouth-bass"],
+      "locationIds": [
+        "bentonville",
+        "front-royal",
+        "karo",
+        "simpsons"
+      ],
+      "approvedSpeciesIds": [
+        "smallmouth-bass"
+      ],
       "verdict": "approved-exact-agency-river-segment-page",
       "limitations": "DWR explicitly documents each named access reach and smallmouth habitat on the South Fork. This approves connected-reach presence, not equal abundance at each ramp."
     },
     {
-      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-burke/",
-      "locationIds": ["lake-burke"],
-      "approvedSpeciesIds": ["largemouth-bass", "black-crappie", "yellow-perch", "muskellunge", "walleye", "channel-catfish", "bluegill", "white-perch", "blue-catfish"],
-      "verdict": "approved-exact-agency-waterbody-page",
-      "limitations": "The current notice supersedes stale body text about annual channel-catfish stocking: stocking is discontinued, the existing population remains, and catch rates may decline. Blue catfish are described as occasional."
-    },
-    {
-      "sourceUrl": "https://dwr.virginia.gov/blog/let-out-some-line-at-burke-lake/",
-      "locationIds": ["lake-burke"],
-      "approvedSpeciesIds": ["northern-snakehead"],
-      "verdict": "approved-exact-dated-agency-feature",
-      "limitations": "The 2021 DWR feature explicitly states that Burke Lake has northern snakehead. It supports presence, not a current abundance estimate."
-    },
-    {
-      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-frederick/",
-      "locationIds": ["lake-frederick"],
-      "approvedSpeciesIds": ["largemouth-bass", "black-crappie", "bluegill", "channel-catfish"],
-      "verdict": "approved-exact-agency-waterbody-page",
-      "limitations": "DWR's access records identify Wheatlands Lake as the body of water and Lake Frederick as the access/fishery name. The current notice supersedes stale stocking text: channel-catfish stocking is discontinued, but the existing population remains."
-    },
-    {
-      "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Walleye-Fishing-Forecast-2026.pdf",
-      "locationIds": ["lake-brittle"],
-      "approvedSpeciesIds": ["walleye"],
-      "verdict": "approved-exact-dated-agency-survey-with-negative-evidence",
-      "limitations": "The 2025 electrofishing survey collected no walleye; DWR says some likely remain, while the current stocking program targets saugeye. The live claim must remain low-confidence and must not present walleye as a primary target."
-    },
-    {
-      "sourceUrl": "https://www.novaparks.com/parks/pohick-bay-regional-park/things-to-do/fishing",
-      "locationIds": ["pohick-bay"],
-      "approvedSpeciesIds": ["largemouth-bass", "bluegill", "common-carp", "striped-bass"],
-      "verdict": "approved-exact-public-park-waterbody-page",
-      "limitations": "NOVA Parks explicitly names Pohick Bay and these species. Generic catfish, crappie, and perch are not narrowed to a species by this approval."
-    },
-    {
-      "sourceUrl": "https://www.novaparks.com/parks/occoquan-regional-park/things-to-do/fishing",
-      "locationIds": ["occoquan-regional"],
-      "approvedSpeciesIds": ["largemouth-bass", "white-perch", "striped-bass", "yellow-perch", "flathead-catfish", "channel-catfish"],
-      "verdict": "approved-exact-public-park-waterbody-page",
-      "limitations": "NOVA Parks explicitly identifies Occoquan Regional Park's shoreline on the Occoquan River and these species. Generic crappie is not narrowed to black crappie."
-    },
-    {
-      "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/",
-      "locationIds": ["occoquan-hand-carry"],
-      "approvedSpeciesIds": ["white-perch", "striped-bass", "largemouth-bass", "yellow-perch", "flathead-catfish", "channel-catfish"],
-      "verdict": "approved-exact-agency-river-page",
-      "limitations": "The catalog point is an official access on the named tidal Occoquan River. DWR's generic crappie listing is intentionally excluded from exact-species approval."
-    },
-    {
-      "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
-      "locationIds": ["point-of-rocks", "riverbend-park", "algonkian", "piscataway-crossing", "seneca-regional", "great-falls"],
-      "approvedSpeciesIds": ["smallmouth-bass", "walleye", "muskellunge", "channel-catfish", "largemouth-bass", "flathead-catfish"],
-      "verdict": "approved-shared-official-nontidal-river-page",
-      "limitations": "Maryland DNR defines the Upper Potomac as the warmwater nontidal river from Cumberland to Washington, D.C. Presence is approved at the connected river level; densities vary by reach, and Maryland-side regulations must not be presented as universally applicable to Virginia access."
-    },
-    {
-      "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing",
-      "locationIds": ["lake-fairfax", "riverbend-park", "lake-accotink"],
-      "approvedSpeciesIds": ["bluegill", "smallmouth-bass"],
-      "verdict": "approved-exact-county-park-sections",
-      "limitations": "Approval is limited to bluegill at Lake Fairfax and Lake Accotink and smallmouth bass at Riverbend. Generic bass, catfish, sunfish, and crappie terms are not narrowed to species. Lake Accotink is explicitly described as shallow and generally poor fishing water."
-    },
-    {
-      "sourceUrl": "https://www.pwcva.gov/department/parks-recreation/fishing/",
-      "locationIds": ["lake-ridge-marina", "locust-shade", "silver-lake"],
-      "approvedSpeciesIds": ["largemouth-bass", "channel-catfish", "bluegill"],
-      "verdict": "approved-exact-county-park-list",
-      "limitations": "The county page introduces exactly three named fishing locations and lists these species for that set. The claim supports presence, not equal abundance or a recent survey at each water."
-    },
-    {
-      "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/",
-      "locationIds": ["kellys-ford", "motts-landing", "nhd-stream-hazel-river"],
-      "approvedSpeciesIds": ["smallmouth-bass", "redbreast-sunfish"],
-      "verdict": "approved-exact-agency-upper-river-reaches",
-      "limitations": "DWR explicitly documents Kelly's Ford and Motts Landing in the upper smallmouth/redbreast fishery and identifies Hazel River as a good smallmouth stream. Fredericksburg City Dock is excluded because it lies in the tidal reach below the fall line."
-    },
-    {
-      "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-tidal/",
-      "locationIds": ["hopyard-landing"],
-      "approvedSpeciesIds": ["largemouth-bass", "channel-catfish"],
-      "verdict": "approved-exact-agency-tidal-river-access",
-      "limitations": "DWR explicitly identifies Hopyard Landing as public access on the tidal Rappahannock and documents both species in that connected tidal reach. This supports presence, not equal abundance at the landing."
-    },
-    {
-      "sourceUrl": "https://dwr.virginia.gov/waterbody/fairfax-lake/",
-      "locationIds": ["lake-fairfax"],
-      "approvedSpeciesIds": ["largemouth-bass", "channel-catfish", "bluegill"],
-      "verdict": "approved-exact-agency-waterbody-page",
-      "limitations": "The current notice says channel-catfish stocking is discontinued; the existing population remains and catch rates may decline. Generic crappies are intentionally excluded from exact-species approval."
-    },
-    {
-      "sourceUrl": "https://www.novaparks.com/parks/reservoir-park/things-to-do/fishing",
-      "locationIds": ["beaverdam-reservoir"],
-      "approvedSpeciesIds": ["largemouth-bass", "common-carp"],
-      "verdict": "approved-exact-public-park-waterbody-page",
-      "limitations": "NOVA Parks explicitly names Beaverdam Reservoir and these species. Its generic catfish and panfish terms are not narrowed to exact species."
-    },
-    {
-      "sourceUrl": "https://www.novaparks.com/parks/fountainhead-regional-park/things-to-do/fishing",
-      "locationIds": ["fountainhead"],
-      "approvedSpeciesIds": ["bluegill"],
-      "verdict": "approved-exact-public-park-waterbody-page",
-      "limitations": "The exact Fountainhead page identifies bluegill in the reservoir. Generic bass, catfish, and crappie terms on that page are not narrowed by this review."
-    },
-    {
       "sourceUrl": "https://dwr.virginia.gov/waterbody/silver-lake-regional-park/",
-      "locationIds": ["silver-lake"],
-      "approvedSpeciesIds": ["largemouth-bass", "channel-catfish", "bluegill", "black-crappie"],
+      "locationIds": [
+        "silver-lake"
+      ],
+      "approvedSpeciesIds": [
+        "largemouth-bass",
+        "channel-catfish",
+        "bluegill",
+        "black-crappie"
+      ],
       "verdict": "approved-exact-agency-waterbody-page",
       "limitations": "The current notice says channel-catfish stocking is discontinued; the existing population remains and catch rates may decline."
     },
     {
       "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Beaverdam-Creek-Reservoir-Fisheries-Management-Report-2023.pdf",
-      "locationIds": ["beaverdam-reservoir"],
-      "approvedSpeciesIds": ["largemouth-bass", "bluegill", "black-crappie", "common-carp", "white-perch", "channel-catfish"],
+      "locationIds": [
+        "beaverdam-reservoir"
+      ],
+      "approvedSpeciesIds": [
+        "largemouth-bass",
+        "bluegill",
+        "black-crappie",
+        "common-carp",
+        "white-perch",
+        "channel-catfish"
+      ],
       "verdict": "approved-exact-dated-agency-survey-report",
       "limitations": "Rendered pages identify the current fishery and 2022 survey context. No black crappie were collected in 2022; twelve small fish were collected in 2020 and DWR says limited numbers likely remained after drawdown. Presence must not be represented as strong current abundance."
     },
     {
+      "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Mountain-Run-Reservoir-Fisheries-Management-Report-2023.pdf",
+      "locationIds": [
+        "dwr-boat-30"
+      ],
+      "approvedSpeciesIds": [
+        "black-crappie"
+      ],
+      "verdict": "approved-exact-dated-agency-survey-report",
+      "limitations": "The report identifies Black Crappie by species and discusses the April 2022 electrofishing sample. The live citation was corrected from the generic waterbody page to this report."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Walleye-Fishing-Forecast-2026.pdf",
+      "locationIds": [
+        "lake-brittle"
+      ],
+      "approvedSpeciesIds": [
+        "walleye"
+      ],
+      "verdict": "approved-exact-dated-agency-survey-with-negative-evidence",
+      "limitations": "The 2025 electrofishing survey collected no walleye; DWR says some likely remain, while the current stocking program targets saugeye. The live claim must remain low-confidence and must not present walleye as a primary target."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "dwr-boat-102"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "bluegill",
+        "brook-trout",
+        "fallfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "mottled-sculpin",
+        "northern-hogsucker",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "rock-bass",
+        "smallmouth-bass",
+        "tessellated-darter",
+        "white-sucker"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "dwr-boat-114"
+      ],
+      "approvedSpeciesIds": [
+        "black-crappie",
+        "blacknose-dace",
+        "bluegill",
+        "channel-catfish",
+        "largemouth-bass",
+        "northern-hogsucker",
+        "redbreast-sunfish",
+        "rock-bass",
+        "smallmouth-bass",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "dwr-boat-122"
+      ],
+      "approvedSpeciesIds": [
+        "black-crappie",
+        "blacknose-dace",
+        "bluegill",
+        "channel-catfish",
+        "largemouth-bass",
+        "northern-hogsucker",
+        "redbreast-sunfish",
+        "rock-bass",
+        "smallmouth-bass",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "dwr-boat-15"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blue-ridge-sculpin",
+        "bluegill",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "mottled-sculpin",
+        "northern-hogsucker",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "rock-bass",
+        "smallmouth-bass",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "dwr-boat-150"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blue-ridge-sculpin",
+        "bluegill",
+        "channel-catfish",
+        "fallfish",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "mottled-sculpin",
+        "northern-hogsucker",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "rock-bass",
+        "smallmouth-bass",
+        "spotted-bass",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "dwr-boat-173"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "bluegill",
+        "fallfish",
+        "gizzard-shad",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "mottled-sculpin",
+        "northern-hogsucker",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "rock-bass",
+        "smallmouth-bass",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "dwr-boat-177"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "black-crappie",
+        "blue-ridge-sculpin",
+        "bluegill",
+        "channel-catfish",
+        "fallfish",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "mottled-sculpin",
+        "northern-hogsucker",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "rock-bass",
+        "smallmouth-bass",
+        "spotted-bass",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "dwr-boat-182"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "bluegill",
+        "fallfish",
+        "gizzard-shad",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "northern-hogsucker",
+        "redbreast-sunfish",
+        "rock-bass",
+        "smallmouth-bass",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "dwr-boat-191"
+      ],
+      "approvedSpeciesIds": [
+        "black-crappie",
+        "blacknose-dace",
+        "bluegill",
+        "channel-catfish",
+        "largemouth-bass",
+        "northern-hogsucker",
+        "redbreast-sunfish",
+        "rock-bass",
+        "smallmouth-bass",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "dwr-boat-202"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "black-crappie",
+        "blue-ridge-sculpin",
+        "bluegill",
+        "channel-catfish",
+        "fallfish",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "mottled-sculpin",
+        "northern-hogsucker",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "rock-bass",
+        "smallmouth-bass",
+        "spotted-bass",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "dwr-boat-216"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blue-ridge-sculpin",
+        "bluegill",
+        "channel-catfish",
+        "fallfish",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "mottled-sculpin",
+        "northern-hogsucker",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "rock-bass",
+        "smallmouth-bass",
+        "spotted-bass",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "dwr-boat-218"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "black-crappie",
+        "blue-ridge-sculpin",
+        "bluegill",
+        "channel-catfish",
+        "fallfish",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "mottled-sculpin",
+        "northern-hogsucker",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "rock-bass",
+        "smallmouth-bass",
+        "spotted-bass",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "dwr-boat-224"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blue-ridge-sculpin",
+        "bluegill",
+        "channel-catfish",
+        "fallfish",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "mottled-sculpin",
+        "northern-hogsucker",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "rock-bass",
+        "smallmouth-bass",
+        "spotted-bass",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "dwr-boat-234"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "black-crappie",
+        "blue-ridge-sculpin",
+        "bluegill",
+        "channel-catfish",
+        "fallfish",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "mottled-sculpin",
+        "northern-hogsucker",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "rock-bass",
+        "smallmouth-bass",
+        "spotted-bass",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "dwr-boat-33"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blue-ridge-sculpin",
+        "bluegill",
+        "channel-catfish",
+        "fallfish",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "mottled-sculpin",
+        "northern-hogsucker",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "rock-bass",
+        "smallmouth-bass",
+        "spotted-bass",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "dwr-boat-36"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "black-crappie",
+        "blue-ridge-sculpin",
+        "bluegill",
+        "channel-catfish",
+        "fallfish",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "mottled-sculpin",
+        "northern-hogsucker",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "rock-bass",
+        "smallmouth-bass",
+        "spotted-bass",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "dwr-boat-61"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "black-crappie",
+        "blue-ridge-sculpin",
+        "bluegill",
+        "channel-catfish",
+        "fallfish",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "mottled-sculpin",
+        "northern-hogsucker",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "rock-bass",
+        "smallmouth-bass",
+        "spotted-bass",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "dwr-boat-99"
+      ],
+      "approvedSpeciesIds": [
+        "black-crappie",
+        "blacknose-dace",
+        "bluegill",
+        "channel-catfish",
+        "largemouth-bass",
+        "northern-hogsucker",
+        "redbreast-sunfish",
+        "rock-bass",
+        "smallmouth-bass",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "hidden-pond"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "bluegill",
+        "brown-bullhead",
+        "creek-chub",
+        "green-sunfish",
+        "longnose-dace",
+        "northern-hogsucker",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "tessellated-darter",
+        "white-sucker"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-accokeek-creek"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "bluegill",
+        "brown-bullhead",
+        "fallfish",
+        "largemouth-bass",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-backlick-run"
+      ],
+      "approvedSpeciesIds": [
+        "blacknose-dace",
+        "bluegill",
+        "creek-chub",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-barnyard-run"
+      ],
+      "approvedSpeciesIds": [
+        "redbreast-sunfish"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-big-rocky-run"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "bluegill",
+        "creek-chub",
+        "fallfish",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "northern-hogsucker",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "smallmouth-bass",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-bullneck-run"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "bluegill",
+        "creek-chub",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-cameron-run"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "black-crappie",
+        "blacknose-dace",
+        "bluegill",
+        "brown-bullhead",
+        "creek-chub",
+        "gizzard-shad",
+        "green-sunfish",
+        "largemouth-bass",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-catharpin-creek"
+      ],
+      "approvedSpeciesIds": [
+        "blacknose-dace",
+        "bluegill",
+        "fallfish",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "northern-hogsucker",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "smallmouth-bass",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-colvin-run"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "bluegill",
+        "channel-catfish",
+        "creek-chub",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "northern-hogsucker",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "tessellated-darter",
+        "warmouth",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-cub-run"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "bluegill",
+        "brown-bullhead",
+        "channel-catfish",
+        "creek-chub",
+        "fallfish",
+        "flathead-catfish",
+        "gizzard-shad",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "northern-hogsucker",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "smallmouth-bass",
+        "tessellated-darter",
+        "white-crappie",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-daniels-run"
+      ],
+      "approvedSpeciesIds": [
+        "blacknose-dace",
+        "creek-chub",
+        "green-sunfish",
+        "white-sucker"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-dead-run"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "bluegill",
+        "creek-chub",
+        "green-sunfish",
+        "white-sucker"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-difficult-run"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "bluegill",
+        "brown-bullhead",
+        "creek-chub",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "northern-hogsucker",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "tessellated-darter",
+        "warmouth",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-dogue-creek"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "black-crappie",
+        "blacknose-dace",
+        "bluegill",
+        "brown-bullhead",
+        "channel-catfish",
+        "creek-chub",
+        "gizzard-shad",
+        "green-sunfish",
+        "largemouth-bass",
+        "northern-snakehead",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "shorthead-redhorse",
+        "smallmouth-bass",
+        "striped-bass",
+        "tessellated-darter",
+        "warmouth",
+        "white-crappie",
+        "white-perch",
+        "white-sucker",
+        "yellow-bullhead",
+        "yellow-perch"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-donaldson-run"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-east-hawksbill-creek"
+      ],
+      "approvedSpeciesIds": [
+        "brook-trout"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-flint-run"
+      ],
+      "approvedSpeciesIds": [
+        "blacknose-dace",
+        "creek-chub"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-four-mile-run"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "bluegill",
+        "brown-bullhead",
+        "channel-catfish",
+        "gizzard-shad",
+        "green-sunfish",
+        "largemouth-bass",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "smallmouth-bass",
+        "tessellated-darter",
+        "white-sucker"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-gap-run"
+      ],
+      "approvedSpeciesIds": [
+        "blacknose-dace",
+        "bluegill",
+        "creek-chub",
+        "fallfish",
+        "longnose-dace",
+        "northern-hogsucker",
+        "redbreast-sunfish",
+        "smallmouth-bass",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-greasy-run"
+      ],
+      "approvedSpeciesIds": [
+        "blacknose-dace",
+        "creek-chub"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-happy-creek"
+      ],
+      "approvedSpeciesIds": [
+        "blacknose-dace",
+        "blue-ridge-sculpin",
+        "bluegill",
+        "brown-trout",
+        "creek-chub",
+        "longnose-dace",
+        "northern-hogsucker",
+        "rainbow-trout",
+        "rock-bass",
+        "white-sucker"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-horsepen-run"
+      ],
+      "approvedSpeciesIds": [
+        "blacknose-dace",
+        "bluegill",
+        "creek-chub",
+        "green-sunfish",
+        "largemouth-bass",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-hungry-run"
+      ],
+      "approvedSpeciesIds": [
+        "blacknose-dace",
+        "bluegill",
+        "creek-chub",
+        "green-sunfish",
+        "longnose-dace",
+        "redbreast-sunfish",
+        "tessellated-darter",
+        "white-sucker"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-indian-run"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "bluegill",
+        "brown-bullhead",
+        "creek-chub",
+        "green-sunfish",
+        "largemouth-bass",
+        "redbreast-sunfish",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-kanes-creek"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "black-crappie",
+        "bluegill",
+        "brown-bullhead",
+        "channel-catfish",
+        "gizzard-shad",
+        "largemouth-bass",
+        "northern-snakehead",
+        "pumpkinseed",
+        "striped-bass",
+        "tessellated-darter",
+        "white-perch",
+        "yellow-perch"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-licking-run"
+      ],
+      "approvedSpeciesIds": [
+        "blacknose-dace",
+        "bluegill",
+        "brown-bullhead",
+        "green-sunfish",
+        "largemouth-bass",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-little-bull-run"
+      ],
+      "approvedSpeciesIds": [
+        "bluegill",
+        "fallfish",
+        "green-sunfish",
+        "redbreast-sunfish",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-little-difficult-run"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "bluegill",
+        "creek-chub",
+        "largemouth-bass",
+        "longnose-dace",
+        "redbreast-sunfish",
+        "tessellated-darter",
+        "white-sucker"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-little-rocky-run"
+      ],
+      "approvedSpeciesIds": [
+        "blacknose-dace",
+        "bluegill",
+        "brown-bullhead",
+        "creek-chub",
+        "fallfish",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "northern-hogsucker",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "smallmouth-bass",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-lubber-run"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-marumsco-creek"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "bluegill",
+        "brown-bullhead",
+        "creek-chub",
+        "green-sunfish",
+        "pumpkinseed",
+        "tessellated-darter",
+        "white-sucker"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-nichols-run"
+      ],
+      "approvedSpeciesIds": [
+        "black-crappie",
+        "blacknose-dace",
+        "bluegill",
+        "creek-chub",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "smallmouth-bass",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-north-fork-dry-run"
+      ],
+      "approvedSpeciesIds": [
+        "blacknose-dace",
+        "brook-trout",
+        "creek-chub",
+        "largemouth-bass",
+        "longnose-dace",
+        "white-sucker"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-north-wilderness-run"
+      ],
+      "approvedSpeciesIds": [
+        "blacknose-dace",
+        "creek-chub",
+        "white-sucker"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-peyton-run"
+      ],
+      "approvedSpeciesIds": [
+        "blacknose-dace",
+        "creek-chub",
+        "green-sunfish"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-pimmit-run"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "bluegill",
+        "creek-chub",
+        "fallfish",
+        "longnose-dace",
+        "redbreast-sunfish",
+        "white-sucker"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-popes-head-creek"
+      ],
+      "approvedSpeciesIds": [
+        "blacknose-dace",
+        "bluegill",
+        "creek-chub",
+        "fallfish",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "northern-hogsucker",
+        "redbreast-sunfish",
+        "smallmouth-bass",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-popham-run"
+      ],
+      "approvedSpeciesIds": [
+        "blacknose-dace",
+        "creek-chub",
+        "fallfish",
+        "longnose-dace",
+        "redbreast-sunfish",
+        "rock-bass",
+        "smallmouth-bass",
+        "tessellated-darter"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-sandy-run"
+      ],
+      "approvedSpeciesIds": [
+        "blacknose-dace",
+        "bluegill",
+        "creek-chub",
+        "fallfish",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "northern-hogsucker",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "smallmouth-bass",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-scott-run"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "bluegill",
+        "creek-chub",
+        "largemouth-bass",
+        "pumpkinseed",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-slate-run"
+      ],
+      "approvedSpeciesIds": [
+        "black-crappie",
+        "bluegill",
+        "brown-bullhead",
+        "creek-chub",
+        "fallfish",
+        "green-sunfish",
+        "largemouth-bass",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-south-run"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "bluegill",
+        "channel-catfish",
+        "creek-chub",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-sugarland-run"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "bluegill",
+        "creek-chub",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "smallmouth-bass",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-turkey-run"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "bluegill",
+        "creek-chub",
+        "green-sunfish",
+        "longnose-dace",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "smallmouth-bass",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-turkeycock-run"
+      ],
+      "approvedSpeciesIds": [
+        "blacknose-dace",
+        "bluegill",
+        "brown-bullhead",
+        "creek-chub",
+        "green-sunfish",
+        "largemouth-bass",
+        "redbreast-sunfish",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-windy-run"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "nhd-stream-wolftrap-creek"
+      ],
+      "approvedSpeciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "bluegill",
+        "creek-chub",
+        "green-sunfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "northern-hogsucker",
+        "pumpkinseed",
+        "tessellated-darter",
+        "white-sucker",
+        "yellow-bullhead"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+      "locationIds": [
+        "roaches-run"
+      ],
+      "approvedSpeciesIds": [
+        "bluegill",
+        "pumpkinseed",
+        "tessellated-darter"
+      ],
+      "verdict": "approved-exact-agency-observation",
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+    },
+    {
       "sourceUrl": "https://www.dcr.virginia.gov/state-parks/fishing",
-      "locationIds": ["leesylvania", "mason-neck"],
-      "approvedSpeciesIds": ["largemouth-bass"],
+      "locationIds": [
+        "leesylvania",
+        "mason-neck"
+      ],
+      "approvedSpeciesIds": [
+        "largemouth-bass"
+      ],
       "verdict": "approved-exact-state-park-river-access",
       "limitations": "Virginia DCR explicitly names both parks as Potomac River access to a strong largemouth fishery. This supports shared river-segment presence, not equal abundance at each shoreline."
     },
     {
-      "sourceUrl": "https://dwr.virginia.gov/blog/10-top-virginia-fishing-waters-rivers/",
-      "locationIds": ["vernon-view", "riverside-park-potomac", "dyke-marsh", "belle-haven", "jones-point", "daingerfield-island", "gravelly-point", "theodore-roosevelt-island", "leesylvania"],
-      "approvedSpeciesIds": ["striped-bass"],
-      "verdict": "approved-shared-dwr-hosted-coastal-potomac-feature",
-      "limitations": "The feature explicitly identifies stripers among coastal Potomac target species. Approval is limited to shared river-segment presence; it is not an access-level survey, abundance estimate, or proof of shore catchability. Generic carp is rejected separately."
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing",
+      "locationIds": [
+        "lake-fairfax",
+        "riverbend-park",
+        "lake-accotink"
+      ],
+      "approvedSpeciesIds": [
+        "bluegill",
+        "smallmouth-bass"
+      ],
+      "verdict": "approved-exact-county-park-sections",
+      "limitations": "Approval is limited to bluegill at Lake Fairfax and Lake Accotink and smallmouth bass at Riverbend. Generic bass, catfish, sunfish, and crappie terms are not narrowed to species. Lake Accotink is explicitly described as shallow and generally poor fishing water."
+    },
+    {
+      "sourceUrl": "https://www.novaparks.com/parks/fountainhead-regional-park/things-to-do/fishing",
+      "locationIds": [
+        "fountainhead"
+      ],
+      "approvedSpeciesIds": [
+        "bluegill"
+      ],
+      "verdict": "approved-exact-public-park-waterbody-page",
+      "limitations": "The exact Fountainhead page identifies bluegill in the reservoir. Generic bass, catfish, and crappie terms on that page are not narrowed by this review."
+    },
+    {
+      "sourceUrl": "https://www.novaparks.com/parks/occoquan-regional-park/things-to-do/fishing",
+      "locationIds": [
+        "occoquan-regional"
+      ],
+      "approvedSpeciesIds": [
+        "largemouth-bass",
+        "white-perch",
+        "striped-bass",
+        "yellow-perch",
+        "flathead-catfish",
+        "channel-catfish"
+      ],
+      "verdict": "approved-exact-public-park-waterbody-page",
+      "limitations": "NOVA Parks explicitly identifies Occoquan Regional Park's shoreline on the Occoquan River and these species. Generic crappie is not narrowed to black crappie."
+    },
+    {
+      "sourceUrl": "https://www.novaparks.com/parks/pohick-bay-regional-park/things-to-do/fishing",
+      "locationIds": [
+        "pohick-bay"
+      ],
+      "approvedSpeciesIds": [
+        "largemouth-bass",
+        "bluegill",
+        "common-carp",
+        "striped-bass"
+      ],
+      "verdict": "approved-exact-public-park-waterbody-page",
+      "limitations": "NOVA Parks explicitly names Pohick Bay and these species. Generic catfish, crappie, and perch are not narrowed to a species by this approval."
+    },
+    {
+      "sourceUrl": "https://www.novaparks.com/parks/reservoir-park/things-to-do/fishing",
+      "locationIds": [
+        "beaverdam-reservoir"
+      ],
+      "approvedSpeciesIds": [
+        "largemouth-bass",
+        "common-carp"
+      ],
+      "verdict": "approved-exact-public-park-waterbody-page",
+      "limitations": "NOVA Parks explicitly names Beaverdam Reservoir and these species. Its generic catfish and panfish terms are not narrowed to exact species."
+    },
+    {
+      "sourceUrl": "https://www.pwcva.gov/department/parks-recreation/fishing/",
+      "locationIds": [
+        "lake-ridge-marina",
+        "locust-shade",
+        "silver-lake"
+      ],
+      "approvedSpeciesIds": [
+        "largemouth-bass",
+        "channel-catfish",
+        "bluegill"
+      ],
+      "verdict": "approved-exact-county-park-list",
+      "limitations": "The county page introduces exactly three named fishing locations and lists these species for that set. The claim supports presence, not equal abundance or a recent survey at each water."
     },
     {
       "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
-      "locationIds": ["front-royal", "riverton", "morgans-ford", "berrys", "castlemans-ferry", "lockes"],
-      "approvedSpeciesIds": ["common-carp", "channel-catfish", "white-sucker", "rock-bass", "smallmouth-bass", "largemouth-bass"],
+      "locationIds": [
+        "front-royal",
+        "riverton",
+        "morgans-ford",
+        "berrys",
+        "castlemans-ferry",
+        "lockes"
+      ],
+      "approvedSpeciesIds": [
+        "common-carp",
+        "channel-catfish",
+        "white-sucker",
+        "rock-bass",
+        "smallmouth-bass",
+        "largemouth-bass"
+      ],
       "verdict": "approved-current-official-consumption-advisory-segment",
       "limitations": "The visually reviewed VDH table explicitly names these exact species for the approximately 41-mile lower-forks/main-stem segment and says its recommendations concern fish caught from specified waterbodies. This supports segment-level occurrence, not access-point sampling, abundance, or fishery quality. Generic Sunfish is retained for consumption matching but is not promoted to any exact species."
     },
     {
       "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/PotomacRiver_2026-1.pdf",
-      "locationIds": ["pohick-bay", "occoquan-regional"],
-      "approvedSpeciesIds": ["common-carp", "american-eel", "channel-catfish", "largemouth-bass", "striped-bass", "smallmouth-bass", "white-catfish", "white-perch", "gizzard-shad", "yellow-perch"],
+      "locationIds": [
+        "fountainhead",
+        "bull-run-marina",
+        "lake-ridge-marina",
+        "occoquan-regional",
+        "mason-neck"
+      ],
+      "approvedSpeciesIds": [
+        "largemouth-bass",
+        "bluegill"
+      ],
       "verdict": "approved-current-official-consumption-advisory-segment",
-      "limitations": "The visually reviewed VDH table explicitly names these exact species for the mapped tidal Potomac tributaries and embayments, including Pohick Creek and the Occoquan River system. This supports segment-level occurrence only. Generic Bullhead Catfish and Sunfish Species rules are retained for consumption matching but are not promoted to exact species."
+      "limitations": "The visually reviewed VDH table explicitly names largemouth bass and bluegill sunfish for the mapped Occoquan River/Reservoir PFOS segment. This supports segment-level occurrence, not abundance or equal conditions across every access point."
     },
     {
       "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/PotomacRiver_2026-1.pdf",
-      "locationIds": ["fountainhead", "bull-run-marina", "lake-ridge-marina", "occoquan-regional", "mason-neck"],
-      "approvedSpeciesIds": ["largemouth-bass", "bluegill"],
+      "locationIds": [
+        "pohick-bay",
+        "occoquan-regional"
+      ],
+      "approvedSpeciesIds": [
+        "common-carp",
+        "american-eel",
+        "channel-catfish",
+        "largemouth-bass",
+        "striped-bass",
+        "smallmouth-bass",
+        "white-catfish",
+        "white-perch",
+        "gizzard-shad",
+        "yellow-perch"
+      ],
       "verdict": "approved-current-official-consumption-advisory-segment",
-      "limitations": "The visually reviewed VDH table explicitly names largemouth bass and bluegill sunfish for the mapped Occoquan River/Reservoir PFOS segment. This supports segment-level occurrence, not abundance or equal conditions across every access point."
+      "limitations": "The visually reviewed VDH table explicitly names these exact species for the mapped tidal Potomac tributaries and embayments, including Pohick Creek and the Occoquan River system. This supports segment-level occurrence only. Generic Bullhead Catfish and Sunfish Species rules are retained for consumption matching but are not promoted to exact species."
     }
   ],
   "manualClaims": [
