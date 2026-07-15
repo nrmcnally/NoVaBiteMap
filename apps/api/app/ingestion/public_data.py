@@ -17,7 +17,14 @@ AQUATIC_GAP_RELEASE = {
     "species_md5": "4d16c6c3ef657bda84d8035a44ada262",
 }
 
-TARGET_HUCS = {"2070005", "2070006", "2070007", "2070008", "2070010"}
+# HUC8 subbasins our locations actually fall in (verified via USGS WBD point lookup).
+# Beyond the original Potomac/Shenandoah set, this now includes the Rappahannock/
+# Rapidan (2080103/04), Monocacy (2070011), and adjacent subbasins so waters in
+# those drainages get real presence/absence records instead of a county guess.
+TARGET_HUCS = {
+    "2070004", "2070005", "2070006", "2070007", "2070008", "2070010", "2070011",
+    "2080103", "2080104", "2080106",
+}
 TARGET_COUNTIES = {
     "Fairfax",
     "Fauquier",
@@ -30,12 +37,17 @@ TARGET_COUNTIES = {
     "Warren",
 }
 
+# Target gamefish/panfish (people fish for these).
 SPECIES_BY_SCIENTIFIC_NAME = {
     "Micropterus dolomieu": "smallmouth-bass",
     "Micropterus salmoides": "largemouth-bass",
     "Micropterus punctulatus": "spotted-bass",
+    "Ambloplites rupestris": "rock-bass",
     "Lepomis macrochirus": "bluegill",
     "Lepomis auritus": "redbreast-sunfish",
+    "Lepomis gibbosus": "pumpkinseed",
+    "Lepomis cyanellus": "green-sunfish",
+    "Lepomis gulosus": "warmouth",
     "Pomoxis nigromaculatus": "black-crappie",
     "Pomoxis annularis": "white-crappie",
     "Ictalurus punctatus": "channel-catfish",
@@ -49,6 +61,29 @@ SPECIES_BY_SCIENTIFIC_NAME = {
     "Morone americana": "white-perch",
     "Morone saxatilis": "striped-bass",
     "Esox masquinongy": "muskellunge",
+    # Non-game / forage species. Recorded by the same surveys; surfaced as cited
+    # presence-only context (never scored as targets). Honest breadth for small
+    # streams whose only documented fish are forage species.
+    "Semotilus atromaculatus": "creek-chub",
+    "Semotilus corporalis": "fallfish",
+    "Rhinichthys atratulus": "blacknose-dace",
+    "Rhinichthys cataractae": "longnose-dace",
+    "Catostomus commersonii": "white-sucker",
+    "Hypentelium nigricans": "northern-hogsucker",
+    "Etheostoma olmstedi": "tessellated-darter",
+    "Anguilla rostrata": "american-eel",
+    "Cottus bairdii": "mottled-sculpin",
+    "Moxostoma macrolepidotum": "shorthead-redhorse",
+    "Ameiurus natalis": "yellow-bullhead",
+    "Ameiurus nebulosus": "brown-bullhead",
+    "Dorosoma cepedianum": "gizzard-shad",
+}
+
+# Which of the above are non-game/forage (presence-only downstream).
+NON_GAME_SPECIES_IDS = {
+    "creek-chub", "fallfish", "blacknose-dace", "longnose-dace", "white-sucker",
+    "northern-hogsucker", "tessellated-darter", "american-eel", "mottled-sculpin",
+    "shorthead-redhorse", "yellow-bullhead", "brown-bullhead", "gizzard-shad",
 }
 
 
@@ -103,6 +138,7 @@ def import_aquatic_gap(dataset_path: Path, species_path: Path) -> dict[str, Any]
             "huc8": sorted(huc.zfill(8) for huc in TARGET_HUCS),
             "speciesCount": len(tsn_to_species),
             "sampleCount": len(samples),
+            "nonGameSpeciesIds": sorted(NON_GAME_SPECIES_IDS),
         },
         "samples": samples,
     }

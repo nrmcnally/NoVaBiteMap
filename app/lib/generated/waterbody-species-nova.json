@@ -216,7 +216,7 @@
         "evidenceConfidence": 0.68,
         "summary": "Virginia DWR's 2022 fisheries management report documents yellow perch among Occoquan Reservoir's supported populations.",
         "strengthNote": null,
-        "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+        "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Occoquan-Reservoir-Fisheries-Management-Report-2022.pdf"
       }
     ],
     "pohick-belmont-bay": [
@@ -404,8 +404,8 @@
         "availability": 0.85,
         "quality": 0.6,
         "evidenceConfidence": 0.8,
-        "summary": "Virginia DWR stocks channel catfish annually in Lake Brittle to support angling opportunity.",
-        "strengthNote": "Stocked annually at 25/acre; average about 2 pounds.",
+        "summary": "Virginia DWR confirms an existing channel catfish population remains in Lake Brittle, but stocking is discontinued until further notice and catch rates may decline over time.",
+        "strengthNote": "Existing population remains; stocking discontinued; DWR warns catch rates may decline.",
         "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-brittle/"
       },
       {
@@ -501,64 +501,6 @@
         "summary": "Virginia DWR stocked channel catfish into this reservoir (Lake Mooney) during its 2014-2016 fill.",
         "strengthNote": "Stocked 2014-2016.",
         "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-mooney/"
-      }
-    ],
-    "Royal Lake": [
-      {
-        "speciesId": "largemouth-bass",
-        "availability": 0.7,
-        "quality": null,
-        "evidenceConfidence": 0.68,
-        "summary": "Fairfax County Park Authority documents largemouth bass in Royal Lake, relocated during a 2015 pre-dredging fish save.",
-        "strengthNote": "Juvenile bass documented in 2015 fish save; large game fish relocated to nearby lakes.",
-        "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes"
-      },
-      {
-        "speciesId": "black-crappie",
-        "availability": 0.7,
-        "quality": null,
-        "evidenceConfidence": 0.68,
-        "summary": "Fairfax County Park Authority documents crappie in Royal Lake, relocated during a 2015 pre-dredging fish save.",
-        "strengthNote": "Juvenile crappie documented in 2015 fish save.",
-        "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes"
-      },
-      {
-        "speciesId": "bluegill",
-        "availability": 0.7,
-        "quality": null,
-        "evidenceConfidence": 0.68,
-        "summary": "Fairfax County Park Authority documents bluegill in Royal Lake, with large numbers handled during a 2015 fish save.",
-        "strengthNote": "Large numbers of bluegill relocated in 2015 fish save.",
-        "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes"
-      }
-    ],
-    "Walney Pond": [
-      {
-        "speciesId": "largemouth-bass",
-        "availability": 0.65,
-        "quality": null,
-        "evidenceConfidence": 0.68,
-        "summary": "Fairfax County Park Authority documents Walney Pond at Ellanor C. Lawrence Park as containing bass.",
-        "strengthNote": null,
-        "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing"
-      },
-      {
-        "speciesId": "bluegill",
-        "availability": 0.65,
-        "quality": null,
-        "evidenceConfidence": 0.68,
-        "summary": "Fairfax County Park Authority documents Walney Pond at Ellanor C. Lawrence Park as containing sunfish.",
-        "strengthNote": null,
-        "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing"
-      },
-      {
-        "speciesId": "channel-catfish",
-        "availability": 0.65,
-        "quality": null,
-        "evidenceConfidence": 0.68,
-        "summary": "Fairfax County Park Authority documents Walney Pond at Ellanor C. Lawrence Park as containing catfish.",
-        "strengthNote": null,
-        "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing"
       }
     ],
     "Silver Lake": [
@@ -701,15 +643,15 @@
         "evidenceConfidence": 0.8,
         "summary": "Virginia DWR describes largemouth bass as providing good fishing at Mountain Run Lake.",
         "strengthNote": "Good fishing",
-        "sourceUrl": "https://dwr.virginia.gov/waterbody/mountain-run/"
+        "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Mountain-Run-Reservoir-Fisheries-Management-Report-2023.pdf"
       },
       {
         "speciesId": "black-crappie",
         "availability": 0.75,
         "quality": null,
         "evidenceConfidence": 0.68,
-        "summary": "Virginia DWR lists crappie among the species at Mountain Run Lake.",
-        "strengthNote": null,
+        "summary": "Virginia DWR's 2023 fisheries report documents an exact-water Black Crappie fishery at Mountain Run Reservoir, including April 2022 electrofishing results.",
+        "strengthNote": "Adequate fishery; exact species documented in the 2022 sample.",
         "sourceUrl": "https://dwr.virginia.gov/waterbody/mountain-run/"
       },
       {
@@ -905,7 +847,7 @@
         "availability": 0.8,
         "quality": 0.85,
         "evidenceConfidence": 0.8,
-        "summary": "Virginia DWR stocks walleye (saugeye) annually in Burke Lake and documents a strong fishery.",
+        "summary": "Virginia DWR documents walleye in Burke Lake and describes annual stocking on the current waterbody page.",
         "strengthNote": "Stocked 100/acre; anglers catch 4-7 lb fish, some over 9 lb",
         "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-burke/"
       },
@@ -1165,35 +1107,6 @@
         "sourceUrl": "https://dwr.virginia.gov/fishing/snakehead/"
       }
     ],
-    "Cameron Run": [
-      {
-        "speciesId": "largemouth-bass",
-        "availability": 0.8,
-        "quality": null,
-        "evidenceConfidence": 0.8,
-        "summary": "Virginia DWR documents largemouth bass in Cook Lake at Cameron Run Regional Park.",
-        "strengthNote": null,
-        "sourceUrl": "https://dwr.virginia.gov/blog/five-great-places-in-northern-virginia-to-fish-after-work/"
-      },
-      {
-        "speciesId": "channel-catfish",
-        "availability": 0.8,
-        "quality": null,
-        "evidenceConfidence": 0.8,
-        "summary": "Virginia DWR documents channel catfish in Cook Lake at Cameron Run Regional Park.",
-        "strengthNote": null,
-        "sourceUrl": "https://dwr.virginia.gov/blog/five-great-places-in-northern-virginia-to-fish-after-work/"
-      },
-      {
-        "speciesId": "rainbow-trout",
-        "availability": 0.65,
-        "quality": null,
-        "evidenceConfidence": 0.68,
-        "summary": "Virginia DWR notes it stocks trout in the cooler months at Cook Lake, Cameron Run Regional Park (DWR urban stockings are rainbow trout).",
-        "strengthNote": "Seasonally stocked in cooler months",
-        "sourceUrl": "https://dwr.virginia.gov/blog/five-great-places-in-northern-virginia-to-fish-after-work/"
-      }
-    ],
     "Hazel River": [
       {
         "speciesId": "smallmouth-bass",
@@ -1205,7 +1118,7 @@
         "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/"
       }
     ],
-    "Thornton River": [
+    "North Fork Thornton River": [
       {
         "speciesId": "brook-trout",
         "availability": 0.85,

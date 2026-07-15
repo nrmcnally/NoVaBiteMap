@@ -4,7 +4,7 @@
     "schemaVersion": "1.0",
     "locationCount": 196,
     "speciesCount": 20,
-    "evidenceCount": 587,
+    "evidenceCount": 549,
     "stationCount": 7
   },
   "species": [
@@ -229,7 +229,9 @@
           ],
           "negative": [
             "No live water-temperature observation in the current snapshot"
-          ]
+          ],
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-burke/"
         },
         {
           "speciesId": "black-crappie",
@@ -246,7 +248,9 @@
           ],
           "negative": [
             "Fishery-quality metric is a coarse agency classification"
-          ]
+          ],
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-burke/"
         },
         {
           "speciesId": "yellow-perch",
@@ -263,7 +267,9 @@
           ],
           "negative": [
             "Comparable long-term quality data unavailable"
-          ]
+          ],
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-burke/"
         },
         {
           "speciesId": "muskellunge",
@@ -291,12 +297,12 @@
           "quality": 0.85,
           "evidenceConfidence": 0.8,
           "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR stocks walleye (saugeye) annually in Burke Lake and documents a strong fishery.",
+          "evidenceSummary": "Virginia DWR documents walleye in Burke Lake and describes annual stocking on the current waterbody page.",
           "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
           "technique": "Match presentation to the species, season, and current conditions",
           "depth": "Work accessible cover and structure first, then probe the first depth change",
           "positive": [
-            "Virginia DWR stocks walleye (saugeye) annually in Burke Lake and documents a strong fishery.",
+            "Virginia DWR documents walleye in Burke Lake and describes annual stocking on the current waterbody page.",
             "Stocked 100/acre; anglers catch 4-7 lb fish, some over 9 lb"
           ],
           "negative": [
@@ -464,7 +470,9 @@
           "negative": [
             "No walleye collected in the 2025 survey",
             "Current stocking targets saugeye, not walleye"
-          ]
+          ],
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Walleye-Fishing-Forecast-2026.pdf"
         },
         {
           "speciesId": "largemouth-bass",
@@ -532,13 +540,13 @@
           "quality": 0.6,
           "evidenceConfidence": 0.8,
           "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR stocks channel catfish annually in Lake Brittle to support angling opportunity.",
+          "evidenceSummary": "Virginia DWR confirms an existing channel catfish population remains in Lake Brittle, but stocking is discontinued until further notice and catch rates may decline over time.",
           "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
           "technique": "Match presentation to the species, season, and current conditions",
           "depth": "Work accessible cover and structure first, then probe the first depth change",
           "positive": [
-            "Virginia DWR stocks channel catfish annually in Lake Brittle to support angling opportunity.",
-            "Stocked annually at 25/acre; average about 2 pounds."
+            "Virginia DWR confirms an existing channel catfish population remains in Lake Brittle, but stocking is discontinued until further notice and catch rates may decline over time.",
+            "Existing population remains; stocking discontinued; DWR warns catch rates may decline."
           ],
           "negative": [
             "Evidence is the documented waterbody listing, not an angler report at this specific access point"
@@ -645,7 +653,9 @@
           ],
           "negative": [
             "Current water temperature unavailable"
-          ]
+          ],
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-frederick/"
         },
         {
           "speciesId": "black-crappie",
@@ -662,7 +672,9 @@
           ],
           "negative": [
             "Long-term quality metric unavailable"
-          ]
+          ],
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-frederick/"
         },
         {
           "speciesId": "bluegill",
@@ -866,26 +878,6 @@
           ],
           "sourceName": "Maryland Department of Natural Resources",
           "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
-        },
-        {
-          "speciesId": "northern-snakehead",
-          "availability": 0.7,
-          "quality": null,
-          "evidenceConfidence": 0.68,
-          "evidenceType": "official listing",
-          "evidenceSummary": "The National Park Service documents invasive northern snakehead as established in the Potomac River along the C&O Canal / Great Falls corridor.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "The National Park Service documents invasive northern snakehead as established in the Potomac River along the C&O Canal / Great Falls corridor.",
-            "Invasive; NPS instructs anglers not to release and to report catches."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "National Park Service",
-          "sourceUrl": "https://www.nps.gov/choh/planyourvisit/fishing.htm"
         },
         {
           "speciesId": "bluegill",
@@ -1213,8 +1205,8 @@
           "quality": 0.78,
           "evidenceConfidence": 0.88,
           "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR identifies the Shenandoah as a smallmouth fishery; this score uses the shared waterbody listing, not an angler report.",
-          "lastEvidence": "DWR source reviewed 2026-07-13",
+          "evidenceSummary": "Virginia DWR documents smallmouth bass throughout the Main Stem Shenandoah River.",
+          "lastEvidence": "DWR source reviewed 2026-07-14",
           "technique": "3–4 in. natural paddletail or craw tube along current breaks",
           "depth": "Lower third of the water column; slide shallower in low light",
           "positive": [
@@ -1224,7 +1216,9 @@
           "negative": [
             "Hourly activity is a seasonal estimate until live providers refresh",
             "Access-point conditions can differ along the river"
-          ]
+          ],
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-main-stem/"
         },
         {
           "speciesId": "walleye",
@@ -1232,8 +1226,8 @@
           "quality": 0.63,
           "evidenceConfidence": 0.74,
           "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR describes walleye in the main-stem Shenandoah; connected-fork access points receive lower directness.",
-          "lastEvidence": "DWR source reviewed 2026-07-13",
+          "evidenceSummary": "Virginia DWR describes walleye throughout the Main Stem Shenandoah River.",
+          "lastEvidence": "DWR source reviewed 2026-07-14",
           "technique": "Small minnow-profile jig worked slowly near deeper seams",
           "depth": "Deep current edge, especially near dawn and dusk",
           "positive": [
@@ -1241,7 +1235,9 @@
           ],
           "negative": [
             "Evidence is broader than this individual access point"
-          ]
+          ],
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-main-stem/"
         }
       ],
       "accessAuthority": "Virginia Department of Wildlife Resources",
@@ -1461,8 +1457,8 @@
           "quality": 0.78,
           "evidenceConfidence": 0.88,
           "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR identifies the Shenandoah as a smallmouth fishery; this score uses the shared waterbody listing, not an angler report.",
-          "lastEvidence": "DWR source reviewed 2026-07-13",
+          "evidenceSummary": "Virginia DWR documents smallmouth bass throughout the Main Stem Shenandoah River.",
+          "lastEvidence": "DWR source reviewed 2026-07-14",
           "technique": "3–4 in. natural paddletail or craw tube along current breaks",
           "depth": "Lower third of the water column; slide shallower in low light",
           "positive": [
@@ -1472,7 +1468,9 @@
           "negative": [
             "Hourly activity is a seasonal estimate until live providers refresh",
             "Access-point conditions can differ along the river"
-          ]
+          ],
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-main-stem/"
         },
         {
           "speciesId": "walleye",
@@ -1480,8 +1478,8 @@
           "quality": 0.63,
           "evidenceConfidence": 0.74,
           "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR describes walleye in the main-stem Shenandoah; connected-fork access points receive lower directness.",
-          "lastEvidence": "DWR source reviewed 2026-07-13",
+          "evidenceSummary": "Virginia DWR describes walleye throughout the Main Stem Shenandoah River.",
+          "lastEvidence": "DWR source reviewed 2026-07-14",
           "technique": "Small minnow-profile jig worked slowly near deeper seams",
           "depth": "Deep current edge, especially near dawn and dusk",
           "positive": [
@@ -1489,7 +1487,9 @@
           ],
           "negative": [
             "Evidence is broader than this individual access point"
-          ]
+          ],
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-main-stem/"
         }
       ],
       "accessAuthority": "Virginia Department of Wildlife Resources",
@@ -1709,8 +1709,8 @@
           "quality": 0.78,
           "evidenceConfidence": 0.88,
           "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR identifies the Shenandoah as a smallmouth fishery; this score uses the shared waterbody listing, not an angler report.",
-          "lastEvidence": "DWR source reviewed 2026-07-13",
+          "evidenceSummary": "Virginia DWR documents smallmouth bass throughout the Main Stem Shenandoah River.",
+          "lastEvidence": "DWR source reviewed 2026-07-14",
           "technique": "3–4 in. natural paddletail or craw tube along current breaks",
           "depth": "Lower third of the water column; slide shallower in low light",
           "positive": [
@@ -1720,7 +1720,9 @@
           "negative": [
             "Hourly activity is a seasonal estimate until live providers refresh",
             "Access-point conditions can differ along the river"
-          ]
+          ],
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-main-stem/"
         },
         {
           "speciesId": "walleye",
@@ -1728,8 +1730,8 @@
           "quality": 0.63,
           "evidenceConfidence": 0.74,
           "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR describes walleye in the main-stem Shenandoah; connected-fork access points receive lower directness.",
-          "lastEvidence": "DWR source reviewed 2026-07-13",
+          "evidenceSummary": "Virginia DWR describes walleye throughout the Main Stem Shenandoah River.",
+          "lastEvidence": "DWR source reviewed 2026-07-14",
           "technique": "Small minnow-profile jig worked slowly near deeper seams",
           "depth": "Deep current edge, especially near dawn and dusk",
           "positive": [
@@ -1737,7 +1739,9 @@
           ],
           "negative": [
             "Evidence is broader than this individual access point"
-          ]
+          ],
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-main-stem/"
         }
       ],
       "accessAuthority": "Virginia Department of Wildlife Resources",
@@ -1958,8 +1962,8 @@
           "quality": 0.78,
           "evidenceConfidence": 0.88,
           "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR identifies the Shenandoah as a smallmouth fishery; this score uses the shared waterbody listing, not an angler report.",
-          "lastEvidence": "DWR source reviewed 2026-07-13",
+          "evidenceSummary": "Virginia DWR documents smallmouth bass throughout the South Fork Shenandoah River.",
+          "lastEvidence": "DWR source reviewed 2026-07-14",
           "technique": "3–4 in. natural paddletail or craw tube along current breaks",
           "depth": "Lower third of the water column; slide shallower in low light",
           "positive": [
@@ -1969,7 +1973,9 @@
           "negative": [
             "Hourly activity is a seasonal estimate until live providers refresh",
             "Access-point conditions can differ along the river"
-          ]
+          ],
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-south-fork/"
         }
       ],
       "accessAuthority": "Virginia Department of Wildlife Resources",
@@ -2073,8 +2079,8 @@
           "quality": 0.78,
           "evidenceConfidence": 0.88,
           "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR identifies the Shenandoah as a smallmouth fishery; this score uses the shared waterbody listing, not an angler report.",
-          "lastEvidence": "DWR source reviewed 2026-07-13",
+          "evidenceSummary": "Virginia DWR documents smallmouth bass throughout the North Fork Shenandoah River.",
+          "lastEvidence": "DWR source reviewed 2026-07-14",
           "technique": "3–4 in. natural paddletail or craw tube along current breaks",
           "depth": "Lower third of the water column; slide shallower in low light",
           "positive": [
@@ -2084,7 +2090,9 @@
           "negative": [
             "Hourly activity is a seasonal estimate until live providers refresh",
             "Access-point conditions can differ along the river"
-          ]
+          ],
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-north-fork/"
         }
       ],
       "accessAuthority": "Virginia Department of Wildlife Resources",
@@ -2144,8 +2152,8 @@
           "quality": 0.78,
           "evidenceConfidence": 0.88,
           "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR identifies the Shenandoah as a smallmouth fishery; this score uses the shared waterbody listing, not an angler report.",
-          "lastEvidence": "DWR source reviewed 2026-07-13",
+          "evidenceSummary": "Virginia DWR documents smallmouth bass throughout the South Fork Shenandoah River.",
+          "lastEvidence": "DWR source reviewed 2026-07-14",
           "technique": "3–4 in. natural paddletail or craw tube along current breaks",
           "depth": "Lower third of the water column; slide shallower in low light",
           "positive": [
@@ -2155,7 +2163,9 @@
           "negative": [
             "Hourly activity is a seasonal estimate until live providers refresh",
             "Access-point conditions can differ along the river"
-          ]
+          ],
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-south-fork/"
         }
       ],
       "accessAuthority": "Virginia Department of Wildlife Resources",
@@ -2416,8 +2426,8 @@
           "quality": 0.78,
           "evidenceConfidence": 0.88,
           "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR identifies the Shenandoah as a smallmouth fishery; this score uses the shared waterbody listing, not an angler report.",
-          "lastEvidence": "DWR source reviewed 2026-07-13",
+          "evidenceSummary": "Virginia DWR documents smallmouth bass throughout the South Fork Shenandoah River.",
+          "lastEvidence": "DWR source reviewed 2026-07-14",
           "technique": "3–4 in. natural paddletail or craw tube along current breaks",
           "depth": "Lower third of the water column; slide shallower in low light",
           "positive": [
@@ -2427,7 +2437,9 @@
           "negative": [
             "Hourly activity is a seasonal estimate until live providers refresh",
             "Access-point conditions can differ along the river"
-          ]
+          ],
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-south-fork/"
         }
       ],
       "accessAuthority": "Virginia Department of Wildlife Resources",
@@ -2531,8 +2543,8 @@
           "quality": 0.78,
           "evidenceConfidence": 0.88,
           "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR identifies the Shenandoah as a smallmouth fishery; this score uses the shared waterbody listing, not an angler report.",
-          "lastEvidence": "DWR source reviewed 2026-07-13",
+          "evidenceSummary": "Virginia DWR documents smallmouth bass throughout the Main Stem Shenandoah River.",
+          "lastEvidence": "DWR source reviewed 2026-07-14",
           "technique": "3–4 in. natural paddletail or craw tube along current breaks",
           "depth": "Lower third of the water column; slide shallower in low light",
           "positive": [
@@ -2542,7 +2554,9 @@
           "negative": [
             "Hourly activity is a seasonal estimate until live providers refresh",
             "Access-point conditions can differ along the river"
-          ]
+          ],
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-main-stem/"
         },
         {
           "speciesId": "walleye",
@@ -2550,8 +2564,8 @@
           "quality": 0.63,
           "evidenceConfidence": 0.74,
           "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR describes walleye in the main-stem Shenandoah; connected-fork access points receive lower directness.",
-          "lastEvidence": "DWR source reviewed 2026-07-13",
+          "evidenceSummary": "Virginia DWR describes walleye throughout the Main Stem Shenandoah River.",
+          "lastEvidence": "DWR source reviewed 2026-07-14",
           "technique": "Small minnow-profile jig worked slowly near deeper seams",
           "depth": "Deep current edge, especially near dawn and dusk",
           "positive": [
@@ -2559,7 +2573,9 @@
           ],
           "negative": [
             "Evidence is broader than this individual access point"
-          ]
+          ],
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-main-stem/"
         }
       ],
       "accessAuthority": "Virginia Department of Wildlife Resources",
@@ -2779,8 +2795,8 @@
           "quality": 0.78,
           "evidenceConfidence": 0.88,
           "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR identifies the Shenandoah as a smallmouth fishery; this score uses the shared waterbody listing, not an angler report.",
-          "lastEvidence": "DWR source reviewed 2026-07-13",
+          "evidenceSummary": "Virginia DWR documents smallmouth bass throughout the North Fork Shenandoah River.",
+          "lastEvidence": "DWR source reviewed 2026-07-14",
           "technique": "3–4 in. natural paddletail or craw tube along current breaks",
           "depth": "Lower third of the water column; slide shallower in low light",
           "positive": [
@@ -2790,7 +2806,9 @@
           "negative": [
             "Hourly activity is a seasonal estimate until live providers refresh",
             "Access-point conditions can differ along the river"
-          ]
+          ],
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-north-fork/"
         }
       ],
       "accessAuthority": "Virginia Department of Wildlife Resources",
@@ -3051,8 +3069,8 @@
           "quality": 0.78,
           "evidenceConfidence": 0.88,
           "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR identifies the Shenandoah as a smallmouth fishery; this score uses the shared waterbody listing, not an angler report.",
-          "lastEvidence": "DWR source reviewed 2026-07-13",
+          "evidenceSummary": "Virginia DWR documents smallmouth bass throughout the South Fork Shenandoah River.",
+          "lastEvidence": "DWR source reviewed 2026-07-14",
           "technique": "3–4 in. natural paddletail or craw tube along current breaks",
           "depth": "Lower third of the water column; slide shallower in low light",
           "positive": [
@@ -3062,7 +3080,9 @@
           "negative": [
             "Hourly activity is a seasonal estimate until live providers refresh",
             "Access-point conditions can differ along the river"
-          ]
+          ],
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-south-fork/"
         }
       ],
       "accessAuthority": "Virginia Department of Wildlife Resources",
@@ -3309,29 +3329,7 @@
       "activityEstimate": 0.56,
       "accessFit": 0.82,
       "bestWindow": "6:20–9:10 AM",
-      "evidence": [
-        {
-          "speciesId": "smallmouth-bass",
-          "availability": 0.85,
-          "quality": null,
-          "evidenceConfidence": 0.82,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR describes the non-tidal upper Rappahannock as a smallmouth bass fishery; this uses the shared waterbody listing, not an angler report at this access point.",
-          "lastEvidence": "DWR Rappahannock River waterbody page reviewed 2026-07-14",
-          "technique": "3–4 in. natural paddletail or craw tube along current breaks and ledges",
-          "depth": "Lower third of the water column; slide shallower in low light",
-          "positive": [
-            "Virginia DWR documents smallmouth bass in the non-tidal Rappahannock",
-            "Rocky current habitat matches the species profile"
-          ],
-          "negative": [
-            "Hourly activity is a seasonal estimate until live providers refresh",
-            "Evidence is the shared river listing, not this individual access point"
-          ],
-          "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/"
-        }
-      ],
+      "evidence": [],
       "accessAuthority": "Virginia Department of Wildlife Resources",
       "accessSourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
       "sourceReviewed": "2026-07-13",
@@ -3475,25 +3473,6 @@
           "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing"
         },
         {
-          "speciesId": "black-crappie",
-          "availability": 0.7,
-          "quality": null,
-          "evidenceConfidence": 0.76,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Fairfax County specifically lists black crappie at Lake Fairfax.",
-          "lastEvidence": "Official source reviewed 2026-07-13",
-          "technique": "Start with a compact presentation near visible cover and adjust to the actual water",
-          "depth": "Work the most accessible cover first, then probe the first depth change",
-          "positive": [
-            "Named by Fairfax County Park Authority for this waterbody or park"
-          ],
-          "negative": [
-            "No current site-specific population survey is attached yet"
-          ],
-          "sourceName": "Fairfax County Park Authority",
-          "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing"
-        },
-        {
           "speciesId": "largemouth-bass",
           "availability": 0.75,
           "quality": null,
@@ -3593,25 +3572,6 @@
           "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing"
         },
         {
-          "speciesId": "channel-catfish",
-          "availability": 0.72,
-          "quality": null,
-          "evidenceConfidence": 0.82,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Fairfax County specifically says Riverbend's Potomac reach holds channel catfish.",
-          "lastEvidence": "Official source reviewed 2026-07-13",
-          "technique": "Start with a compact presentation near visible cover and adjust to the actual water",
-          "depth": "Work the most accessible cover first, then probe the first depth change",
-          "positive": [
-            "Named by Fairfax County Park Authority for this waterbody or park"
-          ],
-          "negative": [
-            "No current site-specific population survey is attached yet"
-          ],
-          "sourceName": "Fairfax County Park Authority",
-          "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing"
-        },
-        {
           "speciesId": "walleye",
           "availability": 0.85,
           "quality": 0.75,
@@ -3689,26 +3649,6 @@
           ],
           "sourceName": "Maryland Department of Natural Resources",
           "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
-        },
-        {
-          "speciesId": "northern-snakehead",
-          "availability": 0.7,
-          "quality": null,
-          "evidenceConfidence": 0.68,
-          "evidenceType": "official listing",
-          "evidenceSummary": "The National Park Service documents invasive northern snakehead as established in the Potomac River along the C&O Canal / Great Falls corridor.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "The National Park Service documents invasive northern snakehead as established in the Potomac River along the C&O Canal / Great Falls corridor.",
-            "Invasive; NPS instructs anglers not to release and to report catches."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "National Park Service",
-          "sourceUrl": "https://www.nps.gov/choh/planyourvisit/fishing.htm"
         }
       ],
       "accessAuthority": "Fairfax County Park Authority",
@@ -3903,68 +3843,7 @@
       "activityEstimate": 0.5,
       "accessFit": 0.84,
       "bestWindow": "Unavailable",
-      "evidence": [
-        {
-          "speciesId": "largemouth-bass",
-          "availability": 0.7,
-          "quality": null,
-          "evidenceConfidence": 0.68,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Fairfax County Park Authority documents largemouth bass in Royal Lake, relocated during a 2015 pre-dredging fish save.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "Fairfax County Park Authority documents largemouth bass in Royal Lake, relocated during a 2015 pre-dredging fish save.",
-            "Juvenile bass documented in 2015 fish save; large game fish relocated to nearby lakes."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "State fisheries agency",
-          "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes"
-        },
-        {
-          "speciesId": "black-crappie",
-          "availability": 0.7,
-          "quality": null,
-          "evidenceConfidence": 0.68,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Fairfax County Park Authority documents crappie in Royal Lake, relocated during a 2015 pre-dredging fish save.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "Fairfax County Park Authority documents crappie in Royal Lake, relocated during a 2015 pre-dredging fish save.",
-            "Juvenile crappie documented in 2015 fish save."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "State fisheries agency",
-          "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes"
-        },
-        {
-          "speciesId": "bluegill",
-          "availability": 0.7,
-          "quality": null,
-          "evidenceConfidence": 0.68,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Fairfax County Park Authority documents bluegill in Royal Lake, with large numbers handled during a 2015 fish save.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "Fairfax County Park Authority documents bluegill in Royal Lake, with large numbers handled during a 2015 fish save.",
-            "Large numbers of bluegill relocated in 2015 fish save."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "State fisheries agency",
-          "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes"
-        }
-      ],
+      "evidence": [],
       "accessAuthority": "Fairfax County Park Authority",
       "accessSourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
       "sourceReviewed": "2026-07-13",
@@ -4005,65 +3884,7 @@
       "activityEstimate": 0.5,
       "accessFit": 0.84,
       "bestWindow": "Unavailable",
-      "evidence": [
-        {
-          "speciesId": "largemouth-bass",
-          "availability": 0.65,
-          "quality": null,
-          "evidenceConfidence": 0.68,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Fairfax County Park Authority documents Walney Pond at Ellanor C. Lawrence Park as containing bass.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "Fairfax County Park Authority documents Walney Pond at Ellanor C. Lawrence Park as containing bass."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "State fisheries agency",
-          "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing"
-        },
-        {
-          "speciesId": "bluegill",
-          "availability": 0.65,
-          "quality": null,
-          "evidenceConfidence": 0.68,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Fairfax County Park Authority documents Walney Pond at Ellanor C. Lawrence Park as containing sunfish.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "Fairfax County Park Authority documents Walney Pond at Ellanor C. Lawrence Park as containing sunfish."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "State fisheries agency",
-          "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing"
-        },
-        {
-          "speciesId": "channel-catfish",
-          "availability": 0.65,
-          "quality": null,
-          "evidenceConfidence": 0.68,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Fairfax County Park Authority documents Walney Pond at Ellanor C. Lawrence Park as containing catfish.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "Fairfax County Park Authority documents Walney Pond at Ellanor C. Lawrence Park as containing catfish."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "State fisheries agency",
-          "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing"
-        }
-      ],
+      "evidence": [],
       "accessAuthority": "Fairfax County Park Authority",
       "accessSourceUrl": "https://www.fairfaxcounty.gov/parks/fishing",
       "sourceReviewed": "2026-07-13",
@@ -6157,7 +5978,7 @@
             "Evidence is the documented waterbody listing, not an angler report at this specific access point"
           ],
           "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+          "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Occoquan-Reservoir-Fisheries-Management-Report-2022.pdf"
         }
       ],
       "accessAuthority": "NOVA Parks",
@@ -6430,7 +6251,7 @@
             "Evidence is the documented waterbody listing, not an angler report at this specific access point"
           ],
           "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+          "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Occoquan-Reservoir-Fisheries-Management-Report-2022.pdf"
         }
       ],
       "accessAuthority": "NOVA Parks",
@@ -6622,122 +6443,6 @@
           ],
           "sourceName": "NOVA Parks",
           "sourceUrl": "https://www.novaparks.com/parks/pohick-bay-regional-park/things-to-do/fishing"
-        },
-        {
-          "speciesId": "northern-snakehead",
-          "availability": 0.8,
-          "quality": null,
-          "evidenceConfidence": 0.8,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR documents northern snakehead throughout the tidal Potomac tributaries including Pohick Creek, though numbers have stabilized below historical peaks.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "Virginia DWR documents northern snakehead throughout the tidal Potomac tributaries including Pohick Creek, though numbers have stabilized below historical peaks.",
-            "Established but at reduced/average levels in northern tributaries versus earlier highs."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/"
-        },
-        {
-          "speciesId": "white-perch",
-          "availability": 0.75,
-          "quality": null,
-          "evidenceConfidence": 0.8,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR lists white perch in the tidal Occoquan River / Belmont Bay.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "Virginia DWR lists white perch in the tidal Occoquan River / Belmont Bay."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
-        },
-        {
-          "speciesId": "yellow-perch",
-          "availability": 0.75,
-          "quality": null,
-          "evidenceConfidence": 0.8,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR lists yellow perch in the tidal Occoquan River / Belmont Bay.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "Virginia DWR lists yellow perch in the tidal Occoquan River / Belmont Bay."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
-        },
-        {
-          "speciesId": "channel-catfish",
-          "availability": 0.75,
-          "quality": null,
-          "evidenceConfidence": 0.8,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR lists channel catfish in the tidal Occoquan River / Belmont Bay.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "Virginia DWR lists channel catfish in the tidal Occoquan River / Belmont Bay."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
-        },
-        {
-          "speciesId": "flathead-catfish",
-          "availability": 0.75,
-          "quality": null,
-          "evidenceConfidence": 0.8,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR lists flathead catfish in the tidal Occoquan River / Belmont Bay.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "Virginia DWR lists flathead catfish in the tidal Occoquan River / Belmont Bay."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
-        },
-        {
-          "speciesId": "black-crappie",
-          "availability": 0.65,
-          "quality": null,
-          "evidenceConfidence": 0.68,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR lists crappie in the tidal Occoquan River / Belmont Bay (species not specified; black crappie is the predominant tidal Potomac crappie).",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "Virginia DWR lists crappie in the tidal Occoquan River / Belmont Bay (species not specified; black crappie is the predominant tidal Potomac crappie).",
-            "DWR names only 'crappie'; mapped to black crappie as the dominant tidal-Potomac species."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
         }
       ],
       "accessAuthority": "NOVA Parks",
@@ -7172,26 +6877,6 @@
           "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
         },
         {
-          "speciesId": "northern-snakehead",
-          "availability": 0.7,
-          "quality": null,
-          "evidenceConfidence": 0.68,
-          "evidenceType": "official listing",
-          "evidenceSummary": "The National Park Service documents invasive northern snakehead as established in the Potomac River along the C&O Canal / Great Falls corridor.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "The National Park Service documents invasive northern snakehead as established in the Potomac River along the C&O Canal / Great Falls corridor.",
-            "Invasive; NPS instructs anglers not to release and to report catches."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "National Park Service",
-          "sourceUrl": "https://www.nps.gov/choh/planyourvisit/fishing.htm"
-        },
-        {
           "speciesId": "bluegill",
           "availability": 0.52,
           "quality": null,
@@ -7405,26 +7090,6 @@
           "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
         },
         {
-          "speciesId": "northern-snakehead",
-          "availability": 0.7,
-          "quality": null,
-          "evidenceConfidence": 0.68,
-          "evidenceType": "official listing",
-          "evidenceSummary": "The National Park Service documents invasive northern snakehead as established in the Potomac River along the C&O Canal / Great Falls corridor.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "The National Park Service documents invasive northern snakehead as established in the Potomac River along the C&O Canal / Great Falls corridor.",
-            "Invasive; NPS instructs anglers not to release and to report catches."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "National Park Service",
-          "sourceUrl": "https://www.nps.gov/choh/planyourvisit/fishing.htm"
-        },
-        {
           "speciesId": "bluegill",
           "availability": 0.52,
           "quality": null,
@@ -7632,26 +7297,6 @@
           ],
           "sourceName": "Maryland Department of Natural Resources",
           "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
-        },
-        {
-          "speciesId": "northern-snakehead",
-          "availability": 0.7,
-          "quality": null,
-          "evidenceConfidence": 0.68,
-          "evidenceType": "official listing",
-          "evidenceSummary": "The National Park Service documents invasive northern snakehead as established in the Potomac River along the C&O Canal / Great Falls corridor.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "The National Park Service documents invasive northern snakehead as established in the Potomac River along the C&O Canal / Great Falls corridor.",
-            "Invasive; NPS instructs anglers not to release and to report catches."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "National Park Service",
-          "sourceUrl": "https://www.nps.gov/choh/planyourvisit/fishing.htm"
         }
       ],
       "accessAuthority": "NOVA Parks",
@@ -7816,26 +7461,6 @@
           ],
           "sourceName": "NOVA Parks",
           "sourceUrl": "https://www.novaparks.com/parks/occoquan-regional-park/things-to-do/fishing"
-        },
-        {
-          "speciesId": "black-crappie",
-          "availability": 0.75,
-          "quality": null,
-          "evidenceConfidence": 0.68,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR documents crappie in the tidal Occoquan River.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "Virginia DWR documents crappie in the tidal Occoquan River.",
-            "DWR page lists generic 'crappie'; mapped to black crappie, the dominant tidal-freshwater crappie"
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
         }
       ],
       "accessAuthority": "NOVA Parks",
@@ -8586,141 +8211,6 @@
           ],
           "sourceName": "Virginia State Parks",
           "sourceUrl": "https://www.dcr.virginia.gov/state-parks/fishing"
-        },
-        {
-          "speciesId": "northern-snakehead",
-          "availability": 0.8,
-          "quality": null,
-          "evidenceConfidence": 0.8,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR documents northern snakehead throughout the tidal Potomac tributaries including Pohick Creek, though numbers have stabilized below historical peaks.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "Virginia DWR documents northern snakehead throughout the tidal Potomac tributaries including Pohick Creek, though numbers have stabilized below historical peaks.",
-            "Established but at reduced/average levels in northern tributaries versus earlier highs."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/"
-        },
-        {
-          "speciesId": "white-perch",
-          "availability": 0.75,
-          "quality": null,
-          "evidenceConfidence": 0.8,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR lists white perch in the tidal Occoquan River / Belmont Bay.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "Virginia DWR lists white perch in the tidal Occoquan River / Belmont Bay."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
-        },
-        {
-          "speciesId": "striped-bass",
-          "availability": 0.75,
-          "quality": null,
-          "evidenceConfidence": 0.8,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR lists striped bass in the tidal Occoquan River / Belmont Bay.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "Virginia DWR lists striped bass in the tidal Occoquan River / Belmont Bay."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
-        },
-        {
-          "speciesId": "yellow-perch",
-          "availability": 0.75,
-          "quality": null,
-          "evidenceConfidence": 0.8,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR lists yellow perch in the tidal Occoquan River / Belmont Bay.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "Virginia DWR lists yellow perch in the tidal Occoquan River / Belmont Bay."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
-        },
-        {
-          "speciesId": "channel-catfish",
-          "availability": 0.75,
-          "quality": null,
-          "evidenceConfidence": 0.8,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR lists channel catfish in the tidal Occoquan River / Belmont Bay.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "Virginia DWR lists channel catfish in the tidal Occoquan River / Belmont Bay."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
-        },
-        {
-          "speciesId": "flathead-catfish",
-          "availability": 0.75,
-          "quality": null,
-          "evidenceConfidence": 0.8,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR lists flathead catfish in the tidal Occoquan River / Belmont Bay.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "Virginia DWR lists flathead catfish in the tidal Occoquan River / Belmont Bay."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
-        },
-        {
-          "speciesId": "black-crappie",
-          "availability": 0.65,
-          "quality": null,
-          "evidenceConfidence": 0.68,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR lists crappie in the tidal Occoquan River / Belmont Bay (species not specified; black crappie is the predominant tidal Potomac crappie).",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "Virginia DWR lists crappie in the tidal Occoquan River / Belmont Bay (species not specified; black crappie is the predominant tidal Potomac crappie).",
-            "DWR names only 'crappie'; mapped to black crappie as the dominant tidal-Potomac species."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
         }
       ],
       "accessAuthority": "Virginia State Parks",
@@ -8983,7 +8473,7 @@
             "Evidence is the documented waterbody listing, not an angler report at this specific access point"
           ],
           "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+          "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Occoquan-Reservoir-Fisheries-Management-Report-2022.pdf"
         }
       ],
       "accessAuthority": "Prince William County Parks",
@@ -9474,26 +8964,6 @@
           "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
         },
         {
-          "speciesId": "black-crappie",
-          "availability": 0.75,
-          "quality": null,
-          "evidenceConfidence": 0.68,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR documents crappie in the tidal Occoquan River.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "Virginia DWR documents crappie in the tidal Occoquan River.",
-            "DWR page lists generic 'crappie'; mapped to black crappie, the dominant tidal-freshwater crappie"
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
-        },
-        {
           "speciesId": "yellow-perch",
           "availability": 0.75,
           "quality": null,
@@ -9710,26 +9180,6 @@
           ],
           "sourceName": "Maryland Department of Natural Resources",
           "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
-        },
-        {
-          "speciesId": "northern-snakehead",
-          "availability": 0.7,
-          "quality": null,
-          "evidenceConfidence": 0.68,
-          "evidenceType": "official listing",
-          "evidenceSummary": "The National Park Service documents invasive northern snakehead as established in the Potomac River along the C&O Canal / Great Falls corridor.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "The National Park Service documents invasive northern snakehead as established in the Potomac River along the C&O Canal / Great Falls corridor.",
-            "Invasive; NPS instructs anglers not to release and to report catches."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "National Park Service",
-          "sourceUrl": "https://www.nps.gov/choh/planyourvisit/fishing.htm"
         }
       ],
       "accessAuthority": "National Park Service",
@@ -11481,18 +10931,19 @@
           "quality": null,
           "evidenceConfidence": 0.68,
           "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR lists crappie among the species at Mountain Run Lake.",
+          "evidenceSummary": "Virginia DWR's 2023 fisheries report documents an exact-water Black Crappie fishery at Mountain Run Reservoir, including April 2022 electrofishing results.",
           "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
           "technique": "Match presentation to the species, season, and current conditions",
           "depth": "Work accessible cover and structure first, then probe the first depth change",
           "positive": [
-            "Virginia DWR lists crappie among the species at Mountain Run Lake."
+            "Virginia DWR's 2023 fisheries report documents an exact-water Black Crappie fishery at Mountain Run Reservoir, including April 2022 electrofishing results.",
+            "Adequate fishery; exact species documented in the 2022 sample."
           ],
           "negative": [
             "Evidence is the documented waterbody listing, not an angler report at this specific access point"
           ],
           "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/mountain-run/"
+          "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Mountain-Run-Reservoir-Fisheries-Management-Report-2023.pdf"
         },
         {
           "speciesId": "bluegill",
@@ -14608,66 +14059,7 @@
       "activityEstimate": 0.5,
       "accessFit": 0.66,
       "bestWindow": "Unavailable",
-      "evidence": [
-        {
-          "speciesId": "largemouth-bass",
-          "availability": 0.8,
-          "quality": null,
-          "evidenceConfidence": 0.8,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR documents largemouth bass in Cook Lake at Cameron Run Regional Park.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "Virginia DWR documents largemouth bass in Cook Lake at Cameron Run Regional Park."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/blog/five-great-places-in-northern-virginia-to-fish-after-work/"
-        },
-        {
-          "speciesId": "channel-catfish",
-          "availability": 0.8,
-          "quality": null,
-          "evidenceConfidence": 0.8,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR documents channel catfish in Cook Lake at Cameron Run Regional Park.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "Virginia DWR documents channel catfish in Cook Lake at Cameron Run Regional Park."
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/blog/five-great-places-in-northern-virginia-to-fish-after-work/"
-        },
-        {
-          "speciesId": "rainbow-trout",
-          "availability": 0.65,
-          "quality": null,
-          "evidenceConfidence": 0.68,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR notes it stocks trout in the cooler months at Cook Lake, Cameron Run Regional Park (DWR urban stockings are rainbow trout).",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "Virginia DWR notes it stocks trout in the cooler months at Cook Lake, Cameron Run Regional Park (DWR urban stockings are rainbow trout).",
-            "Seasonally stocked in cooler months"
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/blog/five-great-places-in-northern-virginia-to-fish-after-work/"
-        }
-      ],
+      "evidence": [],
       "accessAuthority": "Cameron Run Regional Park",
       "accessSourceUrl": "https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer/6",
       "sourceReviewed": "2026-07-14",
@@ -20292,88 +19684,7 @@
       "activityEstimate": 0.5,
       "accessFit": 0.66,
       "bestWindow": "Unavailable",
-      "evidence": [
-        {
-          "speciesId": "largemouth-bass",
-          "availability": 0.85,
-          "quality": null,
-          "evidenceConfidence": 0.8,
-          "evidenceType": "official listing",
-          "evidenceSummary": "The NPS Prince William Forest Park fishing page documents largemouth bass as one of the most commonly found fish in Quantico Creek.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "The NPS Prince William Forest Park fishing page documents largemouth bass as one of the most commonly found fish in Quantico Creek.",
-            "Listed among the most commonly caught species"
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "National Park Service",
-          "sourceUrl": "https://www.nps.gov/prwi/planyourvisit/fishing.htm"
-        },
-        {
-          "speciesId": "channel-catfish",
-          "availability": 0.85,
-          "quality": null,
-          "evidenceConfidence": 0.8,
-          "evidenceType": "official listing",
-          "evidenceSummary": "The NPS Prince William Forest Park fishing page documents channel catfish among the most commonly found fish in Quantico Creek.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "The NPS Prince William Forest Park fishing page documents channel catfish among the most commonly found fish in Quantico Creek.",
-            "Listed among the most commonly caught species"
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "National Park Service",
-          "sourceUrl": "https://www.nps.gov/prwi/planyourvisit/fishing.htm"
-        },
-        {
-          "speciesId": "bluegill",
-          "availability": 0.85,
-          "quality": null,
-          "evidenceConfidence": 0.8,
-          "evidenceType": "official listing",
-          "evidenceSummary": "The NPS Prince William Forest Park fishing page documents bluegill among the most commonly found fish in Quantico Creek.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "The NPS Prince William Forest Park fishing page documents bluegill among the most commonly found fish in Quantico Creek.",
-            "Listed among the most commonly caught species"
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "National Park Service",
-          "sourceUrl": "https://www.nps.gov/prwi/planyourvisit/fishing.htm"
-        },
-        {
-          "speciesId": "northern-snakehead",
-          "availability": 0.7,
-          "quality": null,
-          "evidenceConfidence": 0.68,
-          "evidenceType": "official listing",
-          "evidenceSummary": "The NPS Prince William Forest Park fishing page notes northern snakehead as a documented invasive species present in the park's waters including Quantico Creek.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "The NPS Prince William Forest Park fishing page notes northern snakehead as a documented invasive species present in the park's waters including Quantico Creek.",
-            "Documented invasive presence"
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "National Park Service",
-          "sourceUrl": "https://www.nps.gov/prwi/planyourvisit/fishing.htm"
-        }
-      ],
+      "evidence": [],
       "accessAuthority": "Prince William Forest Park",
       "accessSourceUrl": "https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer/6",
       "sourceReviewed": "2026-07-14",
@@ -22091,28 +21402,7 @@
       "activityEstimate": 0.5,
       "accessFit": 0.66,
       "bestWindow": "Unavailable",
-      "evidence": [
-        {
-          "speciesId": "brook-trout",
-          "availability": 0.85,
-          "quality": 0.8,
-          "evidenceConfidence": 0.8,
-          "evidenceType": "official listing",
-          "evidenceSummary": "Virginia DWR's North Fork Thornton River waterbody page documents an excellent native brook trout population within Shenandoah National Park near Sperryville.",
-          "lastEvidence": "Agency waterbody documentation reviewed 2026-07-14",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "Virginia DWR's North Fork Thornton River waterbody page documents an excellent native brook trout population within Shenandoah National Park near Sperryville.",
-            "Excellent population; most adults 6-9 inches"
-          ],
-          "negative": [
-            "Evidence is the documented waterbody listing, not an angler report at this specific access point"
-          ],
-          "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/north-fork-thorton-river/"
-        }
-      ],
+      "evidence": [],
       "accessAuthority": "Shenandoah National Park",
       "accessSourceUrl": "https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer/6",
       "sourceReviewed": "2026-07-14",

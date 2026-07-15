@@ -1,0 +1,680 @@
+{
+  "meta": {
+    "retrieved": "2026-07-14",
+    "targetLocationCount": 129,
+    "sourceUrls": {
+      "wildTrout": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0",
+      "anadromous": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Anadromous_Fish_Use_Waters/FeatureServer/0"
+    },
+    "useNote": "Reach-level candidates only; each still requires contradiction and access review before promotion.",
+    "privacyNote": "Source geometry is discarded after a within-five-mile exact-name association."
+  },
+  "wildTrout": [
+    {
+      "objectId": 500,
+      "name": "Brokenback Run",
+      "speciesIds": [
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "brook": "Y",
+        "brown": null,
+        "rainbow": null
+      },
+      "reachCode": "08BKK-01",
+      "streamCode": "08BKK",
+      "classification": "I",
+      "type": null,
+      "globalId": "{AECEA0FD-6811-4604-9C6D-D2712B8447F9}",
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-brokenback-run",
+          "distanceMiles": 0.03
+        }
+      ]
+    },
+    {
+      "objectId": 452,
+      "name": "Cedar Run",
+      "speciesIds": [
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "brook": "Y",
+        "brown": null,
+        "rainbow": null
+      },
+      "reachCode": "08CEA-01",
+      "streamCode": "08CEA",
+      "classification": "I",
+      "type": null,
+      "globalId": "{460F5FB7-7853-46DC-96E4-AF84E58A1E32}",
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-cedar-run",
+          "distanceMiles": 0.02
+        }
+      ]
+    },
+    {
+      "objectId": 606,
+      "name": "Gooney Run",
+      "speciesIds": [
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "brook": "Y",
+        "brown": null,
+        "rainbow": null
+      },
+      "reachCode": "07GNY-01",
+      "streamCode": "07GNY",
+      "classification": "II",
+      "type": null,
+      "globalId": "{6E96F637-01C0-4714-BDEE-D0E080787902}",
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-gooney-run",
+          "distanceMiles": 0.69
+        }
+      ]
+    },
+    {
+      "objectId": 115,
+      "name": "Jordan River",
+      "speciesIds": [
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "brook": "Y",
+        "brown": null,
+        "rainbow": null
+      },
+      "reachCode": "08JOR-01",
+      "streamCode": "08JOR",
+      "classification": "II",
+      "type": null,
+      "globalId": "{A9AD9582-D387-4056-B808-B0CA36AE524F}",
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-jordan-river",
+          "distanceMiles": 0.04
+        }
+      ]
+    },
+    {
+      "objectId": 854,
+      "name": "Kinsey Run",
+      "speciesIds": [
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "brook": "Y",
+        "brown": null,
+        "rainbow": null
+      },
+      "reachCode": "08KIN-01",
+      "streamCode": "08KIN",
+      "classification": "III",
+      "type": null,
+      "globalId": "{FABDA615-EC29-49A6-AD13-456BBE5F8A34}",
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-kinsey-run",
+          "distanceMiles": 0.02
+        }
+      ]
+    },
+    {
+      "objectId": 748,
+      "name": "Jeremys Run",
+      "speciesIds": [
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "brook": "Y",
+        "brown": null,
+        "rainbow": null
+      },
+      "reachCode": "07JER-01",
+      "streamCode": "07JER",
+      "classification": "II",
+      "type": null,
+      "globalId": "{FEB9A10B-F6E9-416C-A034-1EDF63679515}",
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-jeremys-run",
+          "distanceMiles": 0.03
+        }
+      ]
+    },
+    {
+      "objectId": 935,
+      "name": "Hughes River",
+      "speciesIds": [
+        "brook-trout",
+        "brown-trout"
+      ],
+      "speciesFlags": {
+        "brook": "Y",
+        "brown": "Y",
+        "rainbow": null
+      },
+      "reachCode": "08HUE-01",
+      "streamCode": "08HUE",
+      "classification": "I",
+      "type": null,
+      "globalId": "{F9D61B9A-67B2-462B-A43B-2C8EECA2209C}",
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-hughes-river",
+          "distanceMiles": 0.02
+        }
+      ]
+    },
+    {
+      "objectId": 893,
+      "name": "Hannah Run",
+      "speciesIds": [
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "brook": "Y",
+        "brown": null,
+        "rainbow": null
+      },
+      "reachCode": "08HAH-01",
+      "streamCode": "08HAH",
+      "classification": "II",
+      "type": null,
+      "globalId": "{245D380A-F4D1-4BA9-8A34-495DF9D1E73C}",
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-hannah-run",
+          "distanceMiles": 0.03
+        }
+      ]
+    },
+    {
+      "objectId": 209,
+      "name": "Lands Run",
+      "speciesIds": [
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "brook": "Y",
+        "brown": null,
+        "rainbow": null
+      },
+      "reachCode": "07LND-01",
+      "streamCode": "07LND",
+      "classification": "II",
+      "type": null,
+      "globalId": "{28B7FB2D-6908-41D1-9E06-ECA4E846343D}",
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-lands-run",
+          "distanceMiles": 0.37
+        }
+      ]
+    },
+    {
+      "objectId": 833,
+      "name": "Mill Run",
+      "speciesIds": [
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "brook": "Y",
+        "brown": null,
+        "rainbow": null
+      },
+      "reachCode": "07MLR-01",
+      "streamCode": "07MLR",
+      "classification": "II",
+      "type": null,
+      "globalId": "{AA72107C-F9A2-4D1C-ADC8-28CA278B7D4F}",
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-mill-run",
+          "distanceMiles": 0
+        }
+      ]
+    },
+    {
+      "objectId": 898,
+      "name": "Little Passage Creek",
+      "speciesIds": [
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "brook": "Y",
+        "brown": null,
+        "rainbow": null
+      },
+      "reachCode": "07LPC-01",
+      "streamCode": "07LPC",
+      "classification": "III",
+      "type": null,
+      "globalId": "{7BCFC126-40FC-44AE-8783-D8174A7B9835}",
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-little-passage-creek",
+          "distanceMiles": 0.05
+        }
+      ]
+    },
+    {
+      "objectId": 836,
+      "name": "Pass Run",
+      "speciesIds": [
+        "brook-trout",
+        "rainbow-trout"
+      ],
+      "speciesFlags": {
+        "brook": "Y",
+        "brown": null,
+        "rainbow": "Y"
+      },
+      "reachCode": "07PSS-02",
+      "streamCode": "07PSS",
+      "classification": "II",
+      "type": null,
+      "globalId": "{0835D742-9467-4E1A-9465-AD61FE7604FB}",
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-pass-run",
+          "distanceMiles": 0.31
+        }
+      ]
+    },
+    {
+      "objectId": 282,
+      "name": "Overall Run",
+      "speciesIds": [
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "brook": "Y",
+        "brown": null,
+        "rainbow": null
+      },
+      "reachCode": "07OVL-01",
+      "streamCode": "07OVL",
+      "classification": "II",
+      "type": null,
+      "globalId": "{F8BEC457-C414-4710-BBBE-C2A6006F64E9}",
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-overall-run",
+          "distanceMiles": 0.09
+        }
+      ]
+    },
+    {
+      "objectId": 420,
+      "name": "Piney River",
+      "speciesIds": [
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "brook": "Y",
+        "brown": null,
+        "rainbow": null
+      },
+      "reachCode": "08PIY-01",
+      "streamCode": "08PIY",
+      "classification": "II",
+      "type": null,
+      "globalId": "{9BAA96BD-2A59-4A98-9930-3E64F18EA940}",
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-piney-river",
+          "distanceMiles": 0.01
+        }
+      ]
+    },
+    {
+      "objectId": 348,
+      "name": "Mine Run",
+      "speciesIds": [
+        "rainbow-trout"
+      ],
+      "speciesFlags": {
+        "brook": null,
+        "brown": null,
+        "rainbow": "Y"
+      },
+      "reachCode": "07MNE-01",
+      "streamCode": "07MNE",
+      "classification": "III",
+      "type": null,
+      "globalId": "{97A69066-92FB-4FA2-AF31-7BCE720C8C30}",
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-mine-run",
+          "distanceMiles": 0.02
+        }
+      ]
+    },
+    {
+      "objectId": 89,
+      "name": "Rush River",
+      "speciesIds": [
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "brook": "Y",
+        "brown": null,
+        "rainbow": null
+      },
+      "reachCode": "08RUS-01",
+      "streamCode": "08RUS",
+      "classification": "IV",
+      "type": null,
+      "globalId": "{A79F2C5E-CCE7-40A0-9DE9-C673ECE34F83}",
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-rush-river",
+          "distanceMiles": 0.23
+        }
+      ]
+    },
+    {
+      "objectId": 875,
+      "name": "Rapidan River",
+      "speciesIds": [
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "brook": "Y",
+        "brown": null,
+        "rainbow": null
+      },
+      "reachCode": "08RAP-01",
+      "streamCode": "08RAP",
+      "classification": "I",
+      "type": null,
+      "globalId": "{FA8D1B21-CB2D-43E2-971D-F4516446F92D}",
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-rapidan-river",
+          "distanceMiles": 0.04
+        }
+      ]
+    },
+    {
+      "objectId": 786,
+      "name": "Sams Run",
+      "speciesIds": [
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "brook": "Y",
+        "brown": null,
+        "rainbow": null
+      },
+      "reachCode": "08SAS-01",
+      "streamCode": "08SAS",
+      "classification": "II",
+      "type": null,
+      "globalId": "{CEA3E449-2CC5-4471-929C-CBAD4A137097}",
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-sams-run",
+          "distanceMiles": 0.26
+        }
+      ]
+    },
+    {
+      "objectId": 727,
+      "name": "Ragged Run",
+      "speciesIds": [
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "brook": "Y",
+        "brown": null,
+        "rainbow": null
+      },
+      "reachCode": "08RAG-01",
+      "streamCode": "08RAG",
+      "classification": "II",
+      "type": null,
+      "globalId": "{ACCB6AB3-4EBF-4519-9443-A89F35EF73BB}",
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-ragged-run",
+          "distanceMiles": 0.26
+        }
+      ]
+    },
+    {
+      "objectId": 196,
+      "name": "Staunton River",
+      "speciesIds": [
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "brook": "Y",
+        "brown": null,
+        "rainbow": null
+      },
+      "reachCode": "08STT-01",
+      "streamCode": "08STT",
+      "classification": "I",
+      "type": null,
+      "globalId": "{833DD82C-2C09-4EF3-A09F-F270BB0B6615}",
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-staunton-river",
+          "distanceMiles": 0.11
+        }
+      ]
+    }
+  ],
+  "anadromous": [
+    {
+      "objectId": 132,
+      "uniqueId": "C1",
+      "name": "Accokeek creek",
+      "upperBoundary": "2100 m downstr. of Rt. 609",
+      "status": "confirmed",
+      "scientificName": "Perca flavescens",
+      "commonName": "Perch, yellow",
+      "majorDrainage": "Potomac",
+      "globalId": "{A4C419CA-98C6-4997-9E90-9A44AC32FC07}",
+      "lastEdited": null,
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-accokeek-creek",
+          "distanceMiles": 1.09
+        }
+      ]
+    },
+    {
+      "objectId": 371,
+      "uniqueId": "P42",
+      "name": "Cameron run",
+      "upperBoundary": "Railroad crossing",
+      "status": "potential",
+      "scientificName": null,
+      "commonName": null,
+      "majorDrainage": "Potomac",
+      "globalId": "{06B061AD-6F30-44B7-B057-29AD3443A7D6}",
+      "lastEdited": null,
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-cameron-run",
+          "distanceMiles": 0.23
+        }
+      ]
+    },
+    {
+      "objectId": 409,
+      "uniqueId": "P45",
+      "name": "Chotank creek",
+      "upperBoundary": "Road crossing approx. 4000 m from mouth",
+      "status": "potential",
+      "scientificName": null,
+      "commonName": null,
+      "majorDrainage": "Potomac",
+      "globalId": "{FDEA6B9B-D9E4-4915-8BE4-40311E357974}",
+      "lastEdited": null,
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-chotank-creek",
+          "distanceMiles": 0
+        }
+      ]
+    },
+    {
+      "objectId": 451,
+      "uniqueId": "C18",
+      "name": "Dogue creek",
+      "upperBoundary": "approx. 100 m above Rt. 235",
+      "status": "confirmed",
+      "scientificName": "Alosa aestivalis",
+      "commonName": "Herring, blueback",
+      "majorDrainage": "Potomac",
+      "globalId": "{251B4B8B-9AED-4A91-9D3C-671531F99D3D}",
+      "lastEdited": null,
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-dogue-creek",
+          "distanceMiles": 3.23
+        }
+      ]
+    },
+    {
+      "objectId": 414,
+      "uniqueId": "C18",
+      "name": "Dogue creek",
+      "upperBoundary": "approx. 100 m above Rt. 235",
+      "status": "confirmed",
+      "scientificName": "Alosa pseudoharengus",
+      "commonName": "Herring, alewife",
+      "majorDrainage": "Potomac",
+      "globalId": "{8DB1F8EA-09FE-47B2-8769-E1CFFA30042B}",
+      "lastEdited": null,
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-dogue-creek",
+          "distanceMiles": 3.23
+        }
+      ]
+    },
+    {
+      "objectId": 143,
+      "uniqueId": "C18",
+      "name": "Dogue creek",
+      "upperBoundary": "approx. 100 m above Rt. 235",
+      "status": "confirmed",
+      "scientificName": "Morone saxatilis",
+      "commonName": "Bass, striped",
+      "majorDrainage": "Potomac",
+      "globalId": "{0306228D-882D-4D59-A3C0-5B10A1B1837C}",
+      "lastEdited": null,
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-dogue-creek",
+          "distanceMiles": 3.23
+        }
+      ]
+    },
+    {
+      "objectId": 412,
+      "uniqueId": "C18",
+      "name": "Dogue creek",
+      "upperBoundary": "approx. 100 m above Rt. 235",
+      "status": "confirmed",
+      "scientificName": "Perca flavescens",
+      "commonName": "Perch, yellow",
+      "majorDrainage": "Potomac",
+      "globalId": "{B1581917-2CF4-4875-83BA-992D0169C076}",
+      "lastEdited": null,
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-dogue-creek",
+          "distanceMiles": 3.23
+        }
+      ]
+    },
+    {
+      "objectId": 261,
+      "uniqueId": "P184",
+      "name": "Jordan river",
+      "upperBoundary": "conf. with Indian Run",
+      "status": "potential",
+      "scientificName": null,
+      "commonName": null,
+      "majorDrainage": "Rappahannock",
+      "globalId": "{2BF59B2C-9E1A-4329-9467-7EE03E86C90C}",
+      "lastEdited": null,
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-jordan-river",
+          "distanceMiles": 3.78
+        }
+      ]
+    },
+    {
+      "objectId": 360,
+      "uniqueId": "P112",
+      "name": "Marumsco creek",
+      "upperBoundary": "approx. 700 m below Rt. 1",
+      "status": "potential",
+      "scientificName": null,
+      "commonName": null,
+      "majorDrainage": "Potomac",
+      "globalId": "{3508A83D-BAEC-4ACA-8D5F-EE9A995582FC}",
+      "lastEdited": null,
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-marumsco-creek",
+          "distanceMiles": 1.68
+        }
+      ]
+    },
+    {
+      "objectId": 346,
+      "uniqueId": "P186",
+      "name": "Rapidan river",
+      "upperBoundary": "Rapidan Mill Dam",
+      "status": "potential",
+      "scientificName": null,
+      "commonName": null,
+      "majorDrainage": "Rappahannock",
+      "globalId": "{B9CAFD0E-C771-425D-9D6C-4C65B27A69EC}",
+      "lastEdited": null,
+      "locationMatches": [
+        {
+          "locationId": "dwr-boat-173",
+          "distanceMiles": 0.01
+        },
+        {
+          "locationId": "dwr-boat-182",
+          "distanceMiles": 0.01
+        }
+      ]
+    },
+    {
+      "objectId": 161,
+      "uniqueId": "P185",
+      "name": "Thornton river",
+      "upperBoundary": "North Fork",
+      "status": "potential",
+      "scientificName": null,
+      "commonName": null,
+      "majorDrainage": "Rappahannock",
+      "globalId": "{27AE2E07-7857-40E8-8C11-D5F7293790F7}",
+      "lastEdited": null,
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-thornton-river",
+          "distanceMiles": 4.65
+        }
+      ]
+    }
+  ]
+}

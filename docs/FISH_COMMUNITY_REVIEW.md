@@ -1,0 +1,19 @@
+# Fish-community evidence review
+
+Generated 2026-07-14. This is a review queue, not runtime evidence.
+
+- 196 total catalog locations retained for adversarial review
+- 131 locations currently rely only on modeled/nearby evidence
+- 80 guess-reliant locations now have exact-named-water agency target-fish candidates
+- 10 have exact-water agency records only for non-target fish currently outside the guide
+- 40 have no exact-water primary-source candidate and still require another source
+
+- 60 exact-water claims across 39 locations have passed the first adversarial source review
+- 176 prior-agent claims already present in runtime are now independently verified or corroborated
+- 37 unsupported prior-agent claims have been removed or rejected
+- 88 live direct claims still need adversarial re-verification
+- 0 newly researched candidate claims have been promoted into live rankings
+
+## Promotion gate
+
+A claim can be approved only after exact-water/segment, exact species, observation date, source provenance, contradictory evidence, and public-access status are reviewed. Automated candidates are never promoted by this script.

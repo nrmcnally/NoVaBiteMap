@@ -1,0 +1,231 @@
+{
+  "meta": {
+    "generated": "2026-07-14",
+    "source": "docs/data/fish-community-verdicts.json",
+    "policy": "Exact rejected claim triples are excluded from runtime; other evidence for the same species remains eligible for separate review."
+  },
+  "claims": [
+    {
+      "locationId": "royal-lake",
+      "speciesId": "largemouth-bass",
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
+      "verdict": "removed-historical-fish-save"
+    },
+    {
+      "locationId": "royal-lake",
+      "speciesId": "black-crappie",
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
+      "verdict": "removed-historical-fish-save"
+    },
+    {
+      "locationId": "royal-lake",
+      "speciesId": "bluegill",
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
+      "verdict": "removed-historical-fish-save"
+    },
+    {
+      "locationId": "walney-pond",
+      "speciesId": "largemouth-bass",
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing",
+      "verdict": "removed-insufficient-taxon-specificity"
+    },
+    {
+      "locationId": "walney-pond",
+      "speciesId": "bluegill",
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing",
+      "verdict": "removed-insufficient-taxon-specificity"
+    },
+    {
+      "locationId": "walney-pond",
+      "speciesId": "channel-catfish",
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing",
+      "verdict": "removed-insufficient-taxon-specificity"
+    },
+    {
+      "locationId": "nhd-stream-cameron-run",
+      "speciesId": "largemouth-bass",
+      "sourceUrl": "https://dwr.virginia.gov/blog/five-great-places-in-northern-virginia-to-fish-after-work/",
+      "verdict": "removed-wrong-waterbody"
+    },
+    {
+      "locationId": "nhd-stream-cameron-run",
+      "speciesId": "channel-catfish",
+      "sourceUrl": "https://dwr.virginia.gov/blog/five-great-places-in-northern-virginia-to-fish-after-work/",
+      "verdict": "removed-wrong-waterbody"
+    },
+    {
+      "locationId": "nhd-stream-cameron-run",
+      "speciesId": "rainbow-trout",
+      "sourceUrl": "https://dwr.virginia.gov/blog/five-great-places-in-northern-virginia-to-fish-after-work/",
+      "verdict": "removed-wrong-waterbody-and-inferred-taxon"
+    },
+    {
+      "locationId": "pohick-bay",
+      "speciesId": "white-perch",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/",
+      "verdict": "removed-wrong-waterbody-and-inferred-taxon"
+    },
+    {
+      "locationId": "pohick-bay",
+      "speciesId": "yellow-perch",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/",
+      "verdict": "removed-wrong-waterbody-and-inferred-taxon"
+    },
+    {
+      "locationId": "pohick-bay",
+      "speciesId": "channel-catfish",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/",
+      "verdict": "removed-wrong-waterbody-and-inferred-taxon"
+    },
+    {
+      "locationId": "pohick-bay",
+      "speciesId": "flathead-catfish",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/",
+      "verdict": "removed-wrong-waterbody-and-inferred-taxon"
+    },
+    {
+      "locationId": "pohick-bay",
+      "speciesId": "black-crappie",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/",
+      "verdict": "removed-wrong-waterbody-and-inferred-taxon"
+    },
+    {
+      "locationId": "mason-neck",
+      "speciesId": "white-perch",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/",
+      "verdict": "removed-wrong-waterbody-and-inferred-taxon"
+    },
+    {
+      "locationId": "mason-neck",
+      "speciesId": "striped-bass",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/",
+      "verdict": "removed-wrong-waterbody-and-inferred-taxon"
+    },
+    {
+      "locationId": "mason-neck",
+      "speciesId": "yellow-perch",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/",
+      "verdict": "removed-wrong-waterbody-and-inferred-taxon"
+    },
+    {
+      "locationId": "mason-neck",
+      "speciesId": "channel-catfish",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/",
+      "verdict": "removed-wrong-waterbody-and-inferred-taxon"
+    },
+    {
+      "locationId": "mason-neck",
+      "speciesId": "flathead-catfish",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/",
+      "verdict": "removed-wrong-waterbody-and-inferred-taxon"
+    },
+    {
+      "locationId": "mason-neck",
+      "speciesId": "black-crappie",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/",
+      "verdict": "removed-wrong-waterbody-and-inferred-taxon"
+    },
+    {
+      "locationId": "occoquan-regional",
+      "speciesId": "black-crappie",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/",
+      "verdict": "removed-insufficient-taxon-specificity"
+    },
+    {
+      "locationId": "occoquan-hand-carry",
+      "speciesId": "black-crappie",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/",
+      "verdict": "removed-insufficient-taxon-specificity"
+    },
+    {
+      "locationId": "nhd-stream-quantico-creek",
+      "speciesId": "largemouth-bass",
+      "sourceUrl": "https://www.nps.gov/prwi/planyourvisit/fishing.htm",
+      "verdict": "removed-park-wide-list-not-exact-water-survey"
+    },
+    {
+      "locationId": "nhd-stream-quantico-creek",
+      "speciesId": "channel-catfish",
+      "sourceUrl": "https://www.nps.gov/prwi/planyourvisit/fishing.htm",
+      "verdict": "removed-park-wide-list-not-exact-water-survey"
+    },
+    {
+      "locationId": "nhd-stream-quantico-creek",
+      "speciesId": "bluegill",
+      "sourceUrl": "https://www.nps.gov/prwi/planyourvisit/fishing.htm",
+      "verdict": "removed-park-wide-list-not-exact-water-survey"
+    },
+    {
+      "locationId": "nhd-stream-quantico-creek",
+      "speciesId": "northern-snakehead",
+      "sourceUrl": "https://www.nps.gov/prwi/planyourvisit/fishing.htm",
+      "verdict": "removed-park-wide-list-not-exact-water-survey"
+    },
+    {
+      "locationId": "point-of-rocks",
+      "speciesId": "northern-snakehead",
+      "sourceUrl": "https://www.nps.gov/choh/planyourvisit/fishing.htm",
+      "verdict": "removed-broad-river-statement-not-access-segment-evidence"
+    },
+    {
+      "locationId": "riverbend-park",
+      "speciesId": "northern-snakehead",
+      "sourceUrl": "https://www.nps.gov/choh/planyourvisit/fishing.htm",
+      "verdict": "removed-broad-river-statement-not-access-segment-evidence"
+    },
+    {
+      "locationId": "algonkian",
+      "speciesId": "northern-snakehead",
+      "sourceUrl": "https://www.nps.gov/choh/planyourvisit/fishing.htm",
+      "verdict": "removed-broad-river-statement-not-access-segment-evidence"
+    },
+    {
+      "locationId": "piscataway-crossing",
+      "speciesId": "northern-snakehead",
+      "sourceUrl": "https://www.nps.gov/choh/planyourvisit/fishing.htm",
+      "verdict": "removed-broad-river-statement-not-access-segment-evidence"
+    },
+    {
+      "locationId": "seneca-regional",
+      "speciesId": "northern-snakehead",
+      "sourceUrl": "https://www.nps.gov/choh/planyourvisit/fishing.htm",
+      "verdict": "removed-broad-river-statement-not-access-segment-evidence"
+    },
+    {
+      "locationId": "great-falls",
+      "speciesId": "northern-snakehead",
+      "sourceUrl": "https://www.nps.gov/choh/planyourvisit/fishing.htm",
+      "verdict": "removed-broad-river-statement-not-access-segment-evidence"
+    },
+    {
+      "locationId": "pohick-bay",
+      "speciesId": "northern-snakehead",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-broad-tidal-region-statement-not-exact-water-evidence"
+    },
+    {
+      "locationId": "mason-neck",
+      "speciesId": "northern-snakehead",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "verdict": "removed-broad-tidal-region-statement-not-exact-water-evidence"
+    },
+    {
+      "locationId": "riverbend-park",
+      "speciesId": "channel-catfish",
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing",
+      "verdict": "removed-insufficient-taxon-specificity"
+    },
+    {
+      "locationId": "lake-fairfax",
+      "speciesId": "black-crappie",
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing",
+      "verdict": "removed-insufficient-taxon-specificity"
+    },
+    {
+      "locationId": "fredericksburg-city-docks",
+      "speciesId": "smallmouth-bass",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/",
+      "verdict": "removed-wrong-river-segment"
+    }
+  ]
+}

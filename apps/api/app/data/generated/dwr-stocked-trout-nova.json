@@ -1,0 +1,483 @@
+{
+  "meta": {
+    "source": "Virginia DWR TroutApp - Designated Stocked Trout Waters",
+    "sourceUrls": [
+      "https://services.dwr.virginia.gov/arcgis/rest/services/Projects/TroutApp/MapServer/0",
+      "https://services.dwr.virginia.gov/arcgis/rest/services/Projects/TroutApp/MapServer/1"
+    ],
+    "retrieved": "2026-07-14",
+    "catalogLocationCount": 196,
+    "recordCount": 15,
+    "useNote": "Exact-water stocking candidates. DWR catalog records must match source object ID; other locations require exact name and <=1.25 miles to the official section. Species flags must equal numeric 1. Access and current posted restrictions require separate review.",
+    "sourceCaveat": "DWR states that some stocked sections are on private land and that this guide does not supersede physical signage.",
+    "privacyNote": "Source geometry is discarded after exact-name and within-five-mile matching."
+  },
+  "records": [
+    {
+      "layerId": 0,
+      "evidenceKind": "lake-or-pond",
+      "objectId": 19,
+      "waterbody": "Locust Shade Park",
+      "county": "Prince William",
+      "designation": "U",
+      "stockingSchedule": "U",
+      "speciesIds": [
+        "rainbow-trout",
+        "brown-trout"
+      ],
+      "speciesFlags": {
+        "rainbow": 1,
+        "brown": 1,
+        "brook": 0
+      },
+      "heritageDay": false,
+      "nationalForest": false,
+      "noFallStocking": false,
+      "notes": null,
+      "stockingUrl": "http://www.dgif.virginia.gov/fishing/stock/",
+      "globalId": "{7A2607DD-F30D-4A3F-BB70-7E61E9AEABDE}",
+      "locationMatches": [
+        {
+          "locationId": "locust-shade",
+          "distanceMiles": 0.64,
+          "matchBasis": "exact-name-and-near-section"
+        }
+      ]
+    },
+    {
+      "layerId": 1,
+      "evidenceKind": "stream-section",
+      "objectId": 312,
+      "waterbody": "Accotink Creek",
+      "county": "Fairfax",
+      "designation": "DH",
+      "stockingSchedule": "DH",
+      "speciesIds": [
+        "rainbow-trout",
+        "brown-trout"
+      ],
+      "speciesFlags": {
+        "rainbow": 1,
+        "brown": 1,
+        "brook": 0
+      },
+      "heritageDay": false,
+      "nationalForest": false,
+      "noFallStocking": false,
+      "notes": "On Fairfax County Park Authority land",
+      "stockingUrl": "http://www.dgif.virginia.gov/fishing/stock/",
+      "globalId": "{7400290B-8381-434E-8DB5-44FCE0912B66}",
+      "locationMatches": [
+        {
+          "locationId": "dwr-trout-312",
+          "distanceMiles": 0.01,
+          "matchBasis": "source-object-id"
+        }
+      ]
+    },
+    {
+      "layerId": 1,
+      "evidenceKind": "stream-section",
+      "objectId": 295,
+      "waterbody": "Cub Run",
+      "county": "Page",
+      "designation": "PNT",
+      "stockingSchedule": "B",
+      "speciesIds": [
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "rainbow": 0,
+        "brown": 0,
+        "brook": 1
+      },
+      "heritageDay": false,
+      "nationalForest": true,
+      "noFallStocking": false,
+      "notes": null,
+      "stockingUrl": "http://www.dgif.virginia.gov/fishing/stock/",
+      "globalId": "{DA2EA91B-F276-46F4-8642-C4204287440C}",
+      "locationMatches": [
+        {
+          "locationId": "dwr-trout-295",
+          "distanceMiles": 0,
+          "matchBasis": "source-object-id"
+        }
+      ]
+    },
+    {
+      "layerId": 1,
+      "evidenceKind": "stream-section",
+      "objectId": 55,
+      "waterbody": "Happy Creek",
+      "county": "Warren",
+      "designation": "PNT",
+      "stockingSchedule": "B",
+      "speciesIds": [
+        "rainbow-trout",
+        "brown-trout",
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "rainbow": 1,
+        "brown": 1,
+        "brook": 1
+      },
+      "heritageDay": false,
+      "nationalForest": false,
+      "noFallStocking": false,
+      "notes": null,
+      "stockingUrl": "http://www.dgif.virginia.gov/fishing/stock/",
+      "globalId": "{B8413D58-4BD9-464B-A704-C40EC6E70432}",
+      "locationMatches": [
+        {
+          "locationId": "dwr-trout-55",
+          "distanceMiles": 0,
+          "matchBasis": "source-object-id"
+        }
+      ]
+    },
+    {
+      "layerId": 1,
+      "evidenceKind": "stream-section",
+      "objectId": 64,
+      "waterbody": "Hogue Creek",
+      "county": "Frederick",
+      "designation": "PNT",
+      "stockingSchedule": "B",
+      "speciesIds": [
+        "rainbow-trout"
+      ],
+      "speciesFlags": {
+        "rainbow": 1,
+        "brown": 0,
+        "brook": 0
+      },
+      "heritageDay": false,
+      "nationalForest": false,
+      "noFallStocking": false,
+      "notes": "One parking area off Indian Hollow road.",
+      "stockingUrl": "http://www.dgif.virginia.gov/fishing/stock/",
+      "globalId": "{6A135150-5D2E-430D-9262-B42AB217D8E8}",
+      "locationMatches": [
+        {
+          "locationId": "dwr-trout-64",
+          "distanceMiles": 0.01,
+          "matchBasis": "source-object-id"
+        }
+      ]
+    },
+    {
+      "layerId": 1,
+      "evidenceKind": "stream-section",
+      "objectId": 207,
+      "waterbody": "Hawksbill Creek",
+      "county": "Page",
+      "designation": "PNT",
+      "stockingSchedule": "A",
+      "speciesIds": [
+        "rainbow-trout"
+      ],
+      "speciesFlags": {
+        "rainbow": 1,
+        "brown": 0,
+        "brook": 0
+      },
+      "heritageDay": true,
+      "nationalForest": false,
+      "noFallStocking": false,
+      "notes": null,
+      "stockingUrl": "http://www.dgif.virginia.gov/fishing/stock/",
+      "globalId": "{79C297C2-80F9-4D5F-AD23-1AD8ABF24BB3}",
+      "locationMatches": [
+        {
+          "locationId": "dwr-trout-207",
+          "distanceMiles": 0.01,
+          "matchBasis": "source-object-id"
+        }
+      ]
+    },
+    {
+      "layerId": 1,
+      "evidenceKind": "stream-section",
+      "objectId": 257,
+      "waterbody": "Holmes Run",
+      "county": "Fairfax",
+      "designation": "DH",
+      "stockingSchedule": "DH",
+      "speciesIds": [
+        "rainbow-trout",
+        "brown-trout"
+      ],
+      "speciesFlags": {
+        "rainbow": 1,
+        "brown": 1,
+        "brook": 0
+      },
+      "heritageDay": false,
+      "nationalForest": false,
+      "noFallStocking": false,
+      "notes": null,
+      "stockingUrl": "http://www.dgif.virginia.gov/fishing/stock/",
+      "globalId": "{A21FD84D-B39B-4F4A-A6D7-2CAF37E14AE5}",
+      "locationMatches": [
+        {
+          "locationId": "dwr-trout-257",
+          "distanceMiles": 0,
+          "matchBasis": "source-object-id"
+        }
+      ]
+    },
+    {
+      "layerId": 1,
+      "evidenceKind": "stream-section",
+      "objectId": 71,
+      "waterbody": "Mill Creek",
+      "county": "Shenandoah",
+      "designation": "PNT",
+      "stockingSchedule": "B",
+      "speciesIds": [
+        "rainbow-trout",
+        "brown-trout",
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "rainbow": 1,
+        "brown": 1,
+        "brook": 1
+      },
+      "heritageDay": false,
+      "nationalForest": false,
+      "noFallStocking": false,
+      "notes": "Not contiguous.",
+      "stockingUrl": "http://www.dgif.virginia.gov/fishing/stock/",
+      "globalId": "{0B353D8D-31BA-41E2-B912-1DBC55BA6080}",
+      "locationMatches": [
+        {
+          "locationId": "dwr-trout-71",
+          "distanceMiles": 0,
+          "matchBasis": "source-object-id"
+        }
+      ]
+    },
+    {
+      "layerId": 1,
+      "evidenceKind": "stream-section",
+      "objectId": 50,
+      "waterbody": "Passage Creek",
+      "county": "Shenandoah",
+      "designation": "PNT",
+      "stockingSchedule": "A",
+      "speciesIds": [
+        "rainbow-trout",
+        "brown-trout",
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "rainbow": 1,
+        "brown": 1,
+        "brook": 1
+      },
+      "heritageDay": true,
+      "nationalForest": true,
+      "noFallStocking": false,
+      "notes": null,
+      "stockingUrl": "http://www.dgif.virginia.gov/fishing/stock/",
+      "globalId": "{DE49CE57-1CA5-4AEF-AFEB-C1477EC650E0}",
+      "locationMatches": [
+        {
+          "locationId": "dwr-trout-50",
+          "distanceMiles": 0,
+          "matchBasis": "source-object-id"
+        }
+      ]
+    },
+    {
+      "layerId": 1,
+      "evidenceKind": "stream-section",
+      "objectId": 10,
+      "waterbody": "Peters Mill Run",
+      "county": "Shenandoah",
+      "designation": "PNT",
+      "stockingSchedule": "C",
+      "speciesIds": [
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "rainbow": 0,
+        "brown": 0,
+        "brook": 1
+      },
+      "heritageDay": false,
+      "nationalForest": true,
+      "noFallStocking": false,
+      "notes": null,
+      "stockingUrl": "http://www.dgif.virginia.gov/fishing/stock/",
+      "globalId": "{5797BF77-9F38-4DA7-909F-7AFE03B0897B}",
+      "locationMatches": [
+        {
+          "locationId": "dwr-trout-10",
+          "distanceMiles": 0,
+          "matchBasis": "source-object-id"
+        }
+      ]
+    },
+    {
+      "layerId": 1,
+      "evidenceKind": "stream-section",
+      "objectId": 36,
+      "waterbody": "Paddy Run",
+      "county": "Frederick",
+      "designation": "PNT",
+      "stockingSchedule": "B",
+      "speciesIds": [
+        "rainbow-trout",
+        "brown-trout",
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "rainbow": 1,
+        "brown": 1,
+        "brook": 1
+      },
+      "heritageDay": false,
+      "nationalForest": true,
+      "noFallStocking": false,
+      "notes": null,
+      "stockingUrl": "http://www.dgif.virginia.gov/fishing/stock/",
+      "globalId": "{CCA2D46D-687A-45FC-83C6-47D66609ED30}",
+      "locationMatches": [
+        {
+          "locationId": "dwr-trout-36",
+          "distanceMiles": 0,
+          "matchBasis": "source-object-id"
+        }
+      ]
+    },
+    {
+      "layerId": 1,
+      "evidenceKind": "stream-section",
+      "objectId": 174,
+      "waterbody": "Passage Creek",
+      "county": "Warren",
+      "designation": "DH",
+      "stockingSchedule": "DH",
+      "speciesIds": [
+        "rainbow-trout",
+        "brown-trout",
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "rainbow": 1,
+        "brown": 1,
+        "brook": 1
+      },
+      "heritageDay": false,
+      "nationalForest": false,
+      "noFallStocking": false,
+      "notes": "Adjacent to DGIF property.",
+      "stockingUrl": "http://www.dgif.virginia.gov/fishing/stock/",
+      "globalId": "{944B0FB2-664F-49BF-91A1-21E5875A1318}",
+      "locationMatches": [
+        {
+          "locationId": "dwr-trout-174",
+          "distanceMiles": 0.01,
+          "matchBasis": "source-object-id"
+        }
+      ]
+    },
+    {
+      "layerId": 1,
+      "evidenceKind": "stream-section",
+      "objectId": 107,
+      "waterbody": "Rapidan River",
+      "county": "Madison",
+      "designation": "SR",
+      "stockingSchedule": "WT",
+      "speciesIds": [
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "rainbow": 0,
+        "brown": 0,
+        "brook": 1
+      },
+      "heritageDay": false,
+      "nationalForest": false,
+      "noFallStocking": false,
+      "notes": "Wild Trout(no stockings). Catch and Release.",
+      "stockingUrl": "http://www.dgif.virginia.gov/fishing/stock/",
+      "globalId": "{F609D93D-A1C5-4C41-B501-33837180FDC8}",
+      "locationMatches": [
+        {
+          "locationId": "nhd-stream-rapidan-river",
+          "distanceMiles": 0,
+          "matchBasis": "exact-name-and-near-section"
+        }
+      ]
+    },
+    {
+      "layerId": 1,
+      "evidenceKind": "stream-section",
+      "objectId": 177,
+      "waterbody": "Stony Creek",
+      "county": "Shenandoah",
+      "designation": "PNT",
+      "stockingSchedule": "A",
+      "speciesIds": [
+        "rainbow-trout",
+        "brown-trout",
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "rainbow": 1,
+        "brown": 1,
+        "brook": 1
+      },
+      "heritageDay": false,
+      "nationalForest": false,
+      "noFallStocking": false,
+      "notes": "Not contiguous.",
+      "stockingUrl": "http://www.dgif.virginia.gov/fishing/stock/",
+      "globalId": "{28CDDBDC-5EFF-4E61-B562-DA057D941FF3}",
+      "locationMatches": [
+        {
+          "locationId": "dwr-trout-177",
+          "distanceMiles": 0.01,
+          "matchBasis": "source-object-id"
+        }
+      ]
+    },
+    {
+      "layerId": 1,
+      "evidenceKind": "stream-section",
+      "objectId": 130,
+      "waterbody": "Upper Passage Creek",
+      "county": "Page",
+      "designation": "PNT",
+      "stockingSchedule": "C",
+      "speciesIds": [
+        "rainbow-trout",
+        "brook-trout"
+      ],
+      "speciesFlags": {
+        "rainbow": 1,
+        "brown": 0,
+        "brook": 1
+      },
+      "heritageDay": false,
+      "nationalForest": true,
+      "noFallStocking": false,
+      "notes": null,
+      "stockingUrl": "http://www.dgif.virginia.gov/fishing/stock/",
+      "globalId": "{6EEF0C31-DB90-4214-97E7-586860381499}",
+      "locationMatches": [
+        {
+          "locationId": "dwr-trout-130",
+          "distanceMiles": 0,
+          "matchBasis": "source-object-id"
+        }
+      ]
+    }
+  ]
+}

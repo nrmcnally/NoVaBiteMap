@@ -3,6 +3,7 @@ import { advisoryForLocation, vdhAdvisoryIndexUrl, type ConsumptionAdvisory } fr
 import { hydrologyForLocation, type HydrologyAssociation } from "./hydrology";
 import { aquaticGapEvidenceForLocation, troutLocations } from "./public-evidence";
 import { dwrAccessLocations, inferredEvidenceFor, nhdParkWaterLocations, nhdStreamLocations, waterbodySpeciesFor } from "./expanded-coverage";
+import evidenceRejections from "./generated/evidence-rejections.json";
 
 export type AccessMethod = "shore" | "wade" | "kayak" | "boat";
 export type WaterbodyType = "river" | "reservoir" | "lake" | "pond" | "bay" | "stream";
@@ -78,6 +79,12 @@ export const sourceLinks = {
     "https://services.dwr.virginia.gov/arcgis/rest/services/Public/BoatingAccessSites/FeatureServer/0",
   shenandoah:
     "https://dwr.virginia.gov/blog/five-great-places-in-the-northern-shenandoah-valley-to-fish-after-work/",
+  shenandoahMainStem:
+    "https://dwr.virginia.gov/waterbody/shenandoah-river-main-stem/",
+  shenandoahNorthFork:
+    "https://dwr.virginia.gov/waterbody/shenandoah-river-north-fork/",
+  shenandoahSouthFork:
+    "https://dwr.virginia.gov/waterbody/shenandoah-river-south-fork/",
   walleye2026:
     "https://dwr.virginia.gov/wp-content/uploads/media/Walleye-Fishing-Forecast-2026.pdf",
   aquaticGap:
@@ -126,19 +133,27 @@ export const species: Species[] = [
   { id: "muskellunge", name: "Muskellunge", scientificName: "Esox masquinongy", short: "MUS", habitat: "Large rivers where agency evidence supports them" },
 ];
 
-const shenandoahSmallmouth = (freshness: string): SpeciesEvidence => ({
+const shenandoahSmallmouth = (
+  freshness: string,
+  segment: "main-stem" | "north-fork" | "south-fork",
+): SpeciesEvidence => ({
   speciesId: "smallmouth-bass",
   availability: 0.91,
   quality: 0.78,
   evidenceConfidence: 0.88,
   evidenceType: "official listing",
-  evidenceSummary:
-    "Virginia DWR identifies the Shenandoah as a smallmouth fishery; this score uses the shared waterbody listing, not an angler report.",
+  evidenceSummary: `Virginia DWR documents smallmouth bass throughout the ${segment === "main-stem" ? "Main Stem" : segment === "north-fork" ? "North Fork" : "South Fork"} Shenandoah River.`,
   lastEvidence: freshness,
   technique: "3–4 in. natural paddletail or craw tube along current breaks",
   depth: "Lower third of the water column; slide shallower in low light",
   positive: ["Strong official waterbody evidence", "Rocky current habitat matches the species profile"],
   negative: ["Hourly activity is a seasonal estimate until live providers refresh", "Access-point conditions can differ along the river"],
+  sourceName: "Virginia Department of Wildlife Resources",
+  sourceUrl: segment === "main-stem"
+    ? sourceLinks.shenandoahMainStem
+    : segment === "north-fork"
+      ? sourceLinks.shenandoahNorthFork
+      : sourceLinks.shenandoahSouthFork,
 });
 
 const shenandoahWalleye = (freshness: string): SpeciesEvidence => ({
@@ -148,12 +163,14 @@ const shenandoahWalleye = (freshness: string): SpeciesEvidence => ({
   evidenceConfidence: 0.74,
   evidenceType: "official listing",
   evidenceSummary:
-    "Virginia DWR describes walleye in the main-stem Shenandoah; connected-fork access points receive lower directness.",
+    "Virginia DWR describes walleye throughout the Main Stem Shenandoah River.",
   lastEvidence: freshness,
   technique: "Small minnow-profile jig worked slowly near deeper seams",
   depth: "Deep current edge, especially near dawn and dusk",
   positive: ["Official regional fishery evidence"],
   negative: ["Evidence is broader than this individual access point"],
+  sourceName: "Virginia Department of Wildlife Resources",
+  sourceUrl: sourceLinks.shenandoahMainStem,
 });
 
 const burkeEvidence: SpeciesEvidence[] = [
@@ -169,6 +186,8 @@ const burkeEvidence: SpeciesEvidence[] = [
     depth: "Shallow shade early; outside weed edge after sunrise",
     positive: ["Official DWR priority-fishery designation", "Public bank and boat access"],
     negative: ["No live water-temperature observation in the current snapshot"],
+    sourceName: "Virginia Department of Wildlife Resources",
+    sourceUrl: "https://dwr.virginia.gov/waterbody/lake-burke/",
   },
   {
     speciesId: "black-crappie",
@@ -182,6 +201,8 @@ const burkeEvidence: SpeciesEvidence[] = [
     depth: "Mid-column around cover",
     positive: ["Official species evidence"],
     negative: ["Fishery-quality metric is a coarse agency classification"],
+    sourceName: "Virginia Department of Wildlife Resources",
+    sourceUrl: "https://dwr.virginia.gov/waterbody/lake-burke/",
   },
   {
     speciesId: "yellow-perch",
@@ -195,6 +216,8 @@ const burkeEvidence: SpeciesEvidence[] = [
     depth: "Bottom third near a depth change",
     positive: ["Official species evidence"],
     negative: ["Comparable long-term quality data unavailable"],
+    sourceName: "Virginia Department of Wildlife Resources",
+    sourceUrl: "https://dwr.virginia.gov/waterbody/lake-burke/",
   },
 ];
 
@@ -211,6 +234,8 @@ const lakeFrederickEvidence: SpeciesEvidence[] = [
     depth: "Shallow at first light; 6–10 ft after sunrise",
     positive: ["Official species listing", "Defined public DWR access"],
     negative: ["Current water temperature unavailable"],
+    sourceName: "Virginia Department of Wildlife Resources",
+    sourceUrl: "https://dwr.virginia.gov/waterbody/lake-frederick/",
   },
   {
     speciesId: "black-crappie",
@@ -224,6 +249,8 @@ const lakeFrederickEvidence: SpeciesEvidence[] = [
     depth: "Mid-column",
     positive: ["Official species listing"],
     negative: ["Long-term quality metric unavailable"],
+    sourceName: "Virginia Department of Wildlife Resources",
+    sourceUrl: "https://dwr.virginia.gov/waterbody/lake-frederick/",
   },
 ];
 
@@ -241,6 +268,8 @@ const lakeBrittleEvidence: SpeciesEvidence[] = [
     depth: "Lower third",
     positive: ["Recent DWR electrofishing program", "Strong bank and boat access noted by DWR"],
     negative: ["No walleye collected in the 2025 survey", "Current stocking targets saugeye, not walleye"],
+    sourceName: "Virginia Department of Wildlife Resources",
+    sourceUrl: sourceLinks.walleye2026,
   },
 ];
 
@@ -488,7 +517,12 @@ const dwrLocations: Array<Omit<FishingLocationSeed, "accessAuthority" | "accessS
     ["simpsons", "Simpson’s", "South Fork Shenandoah River", "Warren", 38.878751, -78.261977, 53, 64, ["shore", "wade", "kayak", "boat"], 0.77, 0.89],
   ].map((row) => {
     const [id, name, waterbody, county, lat, lng, distanceMiles, travelMinutes, access, activityEstimate, accessFit] = row as [string, string, string, string, number, number, number, number, AccessMethod[], number, number];
-    const mainStem = waterbody === "Main Stem Shenandoah River" || waterbody === "Shenandoah River";
+    const segment = waterbody === "Main Stem Shenandoah River" || waterbody === "Shenandoah River"
+      ? "main-stem"
+      : waterbody === "North Fork Shenandoah River"
+        ? "north-fork"
+        : "south-fork";
+    const mainStem = segment === "main-stem";
     return {
       id,
       name,
@@ -507,7 +541,7 @@ const dwrLocations: Array<Omit<FishingLocationSeed, "accessAuthority" | "accessS
       activityEstimate,
       accessFit,
       bestWindow: "6:20–9:10 AM",
-      evidence: [shenandoahSmallmouth("DWR source reviewed 2026-07-13"), ...(mainStem ? [shenandoahWalleye("DWR source reviewed 2026-07-13")] : [])],
+      evidence: [shenandoahSmallmouth("DWR source reviewed 2026-07-14", segment), ...(mainStem ? [shenandoahWalleye("DWR source reviewed 2026-07-14")] : [])],
     };
   }),
   ...rappahannockLocations,
@@ -541,13 +575,28 @@ const streamAdded = nhdStreamLocations([...curatedPoints, ...dwrAdded.map(toPoin
 
 const sourcedLocations: FishingLocationSeed[] = [...curatedLocations, ...dwrAdded, ...nhdAdded, ...streamAdded];
 
+const rejectedEvidenceClaimKeys = new Set(
+  evidenceRejections.claims.map((claim) =>
+    `${claim.locationId}\u0000${claim.speciesId}\u0000${claim.sourceUrl ?? ""}`
+  ),
+);
+const evidenceAllowed = (locationId: string, evidence: SpeciesEvidence) =>
+  evidence.evidenceType === "modeled" || !rejectedEvidenceClaimKeys.has(
+    `${locationId}\u0000${evidence.speciesId}\u0000${evidence.sourceUrl ?? ""}`,
+  );
+
 export const locations: FishingLocation[] = sourcedLocations.map((location) => {
   const has = (list: SpeciesEvidence[], speciesId: string) => list.some((item) => item.speciesId === speciesId);
+  const curatedEvidence = location.evidence.filter((candidate) => evidenceAllowed(location.id, candidate));
   // Documented-waterbody agency listings layer under curated evidence.
-  const waterbodyEvidence = waterbodySpeciesFor(location).filter((candidate) => !has(location.evidence, candidate.speciesId));
-  const withWaterbody = [...location.evidence, ...waterbodyEvidence];
+  const waterbodyEvidence = waterbodySpeciesFor(location)
+    .filter((candidate) => evidenceAllowed(location.id, candidate))
+    .filter((candidate) => !has(curatedEvidence, candidate.speciesId));
+  const withWaterbody = [...curatedEvidence, ...waterbodyEvidence];
   // Modeled nearby-reach (Aquatic GAP) evidence fills any remaining gaps.
-  const aquaticGapEvidence = aquaticGapEvidenceForLocation(location).filter((candidate) => !has(withWaterbody, candidate.speciesId));
+  const aquaticGapEvidence = aquaticGapEvidenceForLocation(location)
+    .filter((candidate) => evidenceAllowed(location.id, candidate))
+    .filter((candidate) => !has(withWaterbody, candidate.speciesId));
   const documented = [...withWaterbody, ...aquaticGapEvidence];
   // Only when a water has no documented evidence at all, add clearly-labeled
   // basin-inferred species so public waters aren't left blank.

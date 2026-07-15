@@ -1,0 +1,548 @@
+{
+  "meta": {
+    "reviewed": "2026-07-14",
+    "reviewer": "Codex adversarial source review",
+    "policy": "Approval applies only to the exact species/evidence scope stated here. It does not approve abundance, bite quality, public access, harvest safety, or a catalog waypoint.",
+    "primarySourcesOnly": true
+  },
+  "recordReviews": {
+    "dwrWildTrout": {
+      "approvedObjectIds": [
+        89,
+        115,
+        196,
+        209,
+        282,
+        348,
+        420,
+        452,
+        500,
+        606,
+        727,
+        748,
+        786,
+        833,
+        836,
+        854,
+        875,
+        893,
+        898,
+        935
+      ],
+      "checks": {
+        "officialAgencyLayer": true,
+        "exactNamedWater": true,
+        "sourceGeometryNearCatalogWater": true,
+        "literalYSpeciesFlagsOnly": true,
+        "sourceRecordInspected": true,
+        "accessSeparatelyReviewed": true
+      },
+      "verdict": "approved-official-reach-listing",
+      "limitations": "The public layer has no per-record observation date. Treat this as an official reach species listing retrieved on the snapshot date, not a recent abundance survey."
+    },
+    "dwrAnadromous": {
+      "approvedObjectIds": [132, 143, 412],
+      "potentialDoNotPromoteObjectIds": [161, 261, 346, 360, 371, 409],
+      "checks": {
+        "officialAgencyLayer": true,
+        "exactNamedWater": true,
+        "sourceGeometryNearCatalogWater": true,
+        "statusMustEqualConfirmed": true,
+        "sourceRecordInspected": true,
+        "accessSeparatelyReviewed": true
+      },
+      "verdict": "approved-confirmed-use-record",
+      "limitations": "Only confirmed, target-guide species records are approved. Potential-use records remain quarantined and records outside the current species guide are retained without promotion."
+    },
+    "dwrStockedTrout": {
+      "approvedObjectIds": [10, 19, 36, 50, 55, 64, 71, 107, 130, 174, 177, 207, 257, 295, 312],
+      "checks": {
+        "officialAgencyLayer": true,
+        "exactNamedWater": true,
+        "sourceObjectIdOrNearSectionMatch": true,
+        "numericOneSpeciesFlagsOnly": true,
+        "sourceRecordInspected": true,
+        "accessSeparatelyReviewed": true
+      },
+      "verdict": "approved-designated-trout-record",
+      "limitations": "The layer documents designated stocked-trout species and includes a wild-trout special-regulation record. It does not prove a recent stocking event, fish abundance, or public access at every point; DWR says posted signs control and some sections cross private land."
+    }
+  },
+  "priorClaimReviews": [
+    {
+      "locationId": "fountainhead",
+      "speciesId": "yellow-perch",
+      "verdict": "approved-exact-agency-report",
+      "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Occoquan-Reservoir-Fisheries-Management-Report-2022.pdf",
+      "note": "The exact Occoquan Reservoir report lists Yellow Perch in the current fish community. The prior live claim was retained and its citation was corrected from the shorter waterbody page to the report."
+    },
+    {
+      "locationId": "bull-run-marina",
+      "speciesId": "yellow-perch",
+      "verdict": "approved-exact-agency-report",
+      "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Occoquan-Reservoir-Fisheries-Management-Report-2022.pdf",
+      "note": "The exact Occoquan Reservoir report lists Yellow Perch in the current fish community. The prior live claim was retained and its citation was corrected from the shorter waterbody page to the report."
+    },
+    {
+      "locationId": "lake-ridge-marina",
+      "speciesId": "yellow-perch",
+      "verdict": "approved-exact-agency-report",
+      "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Occoquan-Reservoir-Fisheries-Management-Report-2022.pdf",
+      "note": "The exact Occoquan Reservoir report lists Yellow Perch in the current fish community. The prior live claim was retained and its citation was corrected from the shorter waterbody page to the report."
+    },
+    {
+      "locationId": "nhd-stream-neabsco-creek",
+      "speciesId": "northern-snakehead",
+      "verdict": "approved-exact-agency-listing",
+      "sourceUrl": "https://dwr.virginia.gov/fishing/snakehead/",
+      "note": "DWR explicitly names Neabsco Creek among Virginia tidal Potomac tributaries where northern snakehead are very abundant. The abundance statement is based on data through 2018 and should not be represented as a current-year survey."
+    },
+    {
+      "locationId": "lake-brittle",
+      "speciesId": "channel-catfish",
+      "verdict": "approved-current-agency-caveat",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-brittle/",
+      "note": "The current DWR notice says stocking is discontinued until further notice; an existing population remains and catch rates may decline. The prior annual-stocking language was corrected in runtime."
+    },
+    {
+      "locationId": "royal-lake",
+      "speciesId": "largemouth-bass",
+      "verdict": "removed-historical-fish-save",
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
+      "note": "The county page documents juvenile bass removed from Royal Lake before 2016 dredging and does not identify them to largemouth bass. This is not current exact-species evidence."
+    },
+    {
+      "locationId": "royal-lake",
+      "speciesId": "black-crappie",
+      "verdict": "removed-historical-fish-save",
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
+      "note": "The county page documents generic crappie removed from Royal Lake before 2016 dredging. This is not current exact-species evidence."
+    },
+    {
+      "locationId": "royal-lake",
+      "speciesId": "bluegill",
+      "verdict": "removed-historical-fish-save",
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
+      "note": "The county page documents bluegill removed from Royal Lake before 2016 dredging. It does not establish a current population after refilling."
+    },
+    {
+      "locationId": "walney-pond",
+      "speciesId": "largemouth-bass",
+      "verdict": "removed-insufficient-taxon-specificity",
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing",
+      "note": "The exact Walney Pond section says only bass; it does not identify largemouth bass."
+    },
+    {
+      "locationId": "walney-pond",
+      "speciesId": "bluegill",
+      "verdict": "removed-insufficient-taxon-specificity",
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing",
+      "note": "The exact Walney Pond section says only sunfish; it does not identify bluegill."
+    },
+    {
+      "locationId": "walney-pond",
+      "speciesId": "channel-catfish",
+      "verdict": "removed-insufficient-taxon-specificity",
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing",
+      "note": "The exact Walney Pond section says only catfish; it does not identify channel catfish."
+    },
+    {
+      "locationId": "nhd-stream-cameron-run",
+      "speciesId": "largemouth-bass",
+      "verdict": "removed-wrong-waterbody",
+      "sourceUrl": "https://dwr.virginia.gov/blog/five-great-places-in-northern-virginia-to-fish-after-work/",
+      "note": "The DWR article documents Cook Lake inside Cameron Run Regional Park, not Cameron Run itself."
+    },
+    {
+      "locationId": "nhd-stream-cameron-run",
+      "speciesId": "channel-catfish",
+      "verdict": "removed-wrong-waterbody",
+      "sourceUrl": "https://dwr.virginia.gov/blog/five-great-places-in-northern-virginia-to-fish-after-work/",
+      "note": "The DWR article documents Cook Lake inside Cameron Run Regional Park, not Cameron Run itself."
+    },
+    {
+      "locationId": "nhd-stream-cameron-run",
+      "speciesId": "rainbow-trout",
+      "verdict": "removed-wrong-waterbody-and-inferred-taxon",
+      "sourceUrl": "https://dwr.virginia.gov/blog/five-great-places-in-northern-virginia-to-fish-after-work/",
+      "note": "The DWR article documents generic trout stocking at Cook Lake, not Cameron Run, and does not identify rainbow trout in that passage."
+    }
+  ],
+  "sourceClaimRejections": [
+    {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/",
+      "locationIds": ["pohick-bay"],
+      "rejectedSpeciesIds": ["white-perch", "yellow-perch", "channel-catfish", "flathead-catfish", "black-crappie"],
+      "verdict": "removed-wrong-waterbody-and-inferred-taxon",
+      "note": "The source documents the tidal Occoquan River, not Pohick Bay. It also says only generic crappie, so black crappie was an unsupported taxonomic inference."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/",
+      "locationIds": ["mason-neck"],
+      "rejectedSpeciesIds": ["white-perch", "striped-bass", "yellow-perch", "channel-catfish", "flathead-catfish", "black-crappie"],
+      "verdict": "removed-wrong-waterbody-and-inferred-taxon",
+      "note": "Mason Neck fronts Belmont Bay/Potomac waters, not the Occoquan River. The source also says only generic crappie, so black crappie was an unsupported taxonomic inference."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/",
+      "locationIds": ["occoquan-regional", "occoquan-hand-carry"],
+      "rejectedSpeciesIds": ["black-crappie"],
+      "verdict": "removed-insufficient-taxon-specificity",
+      "note": "The exact Occoquan River source lists generic crappie and does not identify black crappie. The other exact species remain separately reviewable."
+    },
+    {
+      "sourceUrl": "https://www.nps.gov/prwi/planyourvisit/fishing.htm",
+      "locationIds": ["nhd-stream-quantico-creek"],
+      "rejectedSpeciesIds": ["largemouth-bass", "channel-catfish", "bluegill", "northern-snakehead"],
+      "verdict": "removed-park-wide-list-not-exact-water-survey",
+      "note": "NPS gives a park-wide list covering roughly eighteen stream miles and two impoundments; it does not assign these species specifically to Quantico Creek. The snakehead passage is a possession rule, not a presence statement."
+    },
+    {
+      "sourceUrl": "https://www.nps.gov/choh/planyourvisit/fishing.htm",
+      "locationIds": ["point-of-rocks", "riverbend-park", "algonkian", "piscataway-crossing", "seneca-regional", "great-falls"],
+      "rejectedSpeciesIds": ["northern-snakehead"],
+      "verdict": "removed-broad-river-statement-not-access-segment-evidence",
+      "note": "The NPS page says snakehead have appeared in the Potomac River but supplies no reach, date, or access-level location. It cannot support six specific nontidal access-point rankings."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/fishing/forecasts-and-reports/tidal-rivers-fishing-forecast/",
+      "locationIds": ["pohick-bay", "mason-neck"],
+      "rejectedSpeciesIds": ["northern-snakehead"],
+      "verdict": "removed-broad-tidal-region-statement-not-exact-water-evidence",
+      "note": "The 2026 forecast discusses many northern Potomac creeks below Washington, D.C., but does not identify Pohick Bay or Belmont Bay for snakehead. It is a regional lead, not exact-water evidence."
+    },
+    {
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing",
+      "locationIds": ["riverbend-park"],
+      "rejectedSpeciesIds": ["channel-catfish"],
+      "verdict": "removed-insufficient-taxon-specificity",
+      "note": "The exact Riverbend section says catfish but does not identify channel catfish."
+    },
+    {
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing",
+      "locationIds": ["lake-fairfax"],
+      "rejectedSpeciesIds": ["black-crappie"],
+      "verdict": "removed-insufficient-taxon-specificity",
+      "note": "The exact Lake Fairfax section says crappie but does not identify black crappie."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/",
+      "locationIds": ["fredericksburg-city-docks"],
+      "rejectedSpeciesIds": ["smallmouth-bass"],
+      "verdict": "removed-wrong-river-segment",
+      "note": "DWR places City Dock in tidal water below the fall line and identifies smallmouth habitat above Fredericksburg. The page does not support an exact City Dock smallmouth claim."
+    }
+  ],
+  "sourceClaimReviews": [
+    {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-brittle/",
+      "locationIds": ["lake-brittle"],
+      "approvedSpeciesIds": ["largemouth-bass", "bluegill", "black-crappie", "channel-catfish", "flathead-catfish", "northern-snakehead"],
+      "verdict": "approved-exact-agency-waterbody-page",
+      "limitations": "The current notice supersedes stale body text about annual channel-catfish stocking: stocking is discontinued, the existing population remains, and catch rates may decline."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-curtis/",
+      "locationIds": ["lake-curtis"],
+      "approvedSpeciesIds": ["largemouth-bass", "bluegill", "channel-catfish"],
+      "verdict": "approved-exact-agency-waterbody-page",
+      "limitations": "The current notice says channel-catfish stocking is discontinued; the existing population remains."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-mooney/",
+      "locationIds": ["rocky-pen-park"],
+      "approvedSpeciesIds": ["largemouth-bass", "black-crappie", "bluegill", "channel-catfish"],
+      "verdict": "approved-exact-agency-waterbody-page-and-alias",
+      "limitations": "DWR explicitly states that Lake Mooney was originally named Rocky Pen Reservoir for the impounded stream. Older stocking statements prove introduction and the page describes the current fish community; they are not recent abundance estimates."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-shenandoah/",
+      "locationIds": ["dwr-boat-11"],
+      "approvedSpeciesIds": ["largemouth-bass", "black-crappie", "bluegill", "channel-catfish", "common-carp", "muskellunge"],
+      "verdict": "approved-exact-agency-waterbody-page",
+      "limitations": "The lake is being held about five feet below full pool pending dam work currently estimated for 2027. Channel-catfish stocking is discontinued; the existing population remains."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/mountain-run/",
+      "locationIds": ["dwr-boat-30"],
+      "approvedSpeciesIds": ["largemouth-bass", "bluegill", "channel-catfish"],
+      "verdict": "approved-exact-agency-waterbody-page",
+      "limitations": "The page says only generic crappie, so the live black-crappie claim is not approved by this source review."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Mountain-Run-Reservoir-Fisheries-Management-Report-2023.pdf",
+      "locationIds": ["dwr-boat-30"],
+      "approvedSpeciesIds": ["black-crappie"],
+      "verdict": "approved-exact-dated-agency-survey-report",
+      "limitations": "The report identifies Black Crappie by species and discusses the April 2022 electrofishing sample. The live citation was corrected from the generic waterbody page to this report."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-orange/",
+      "locationIds": ["dwr-boat-79"],
+      "approvedSpeciesIds": ["largemouth-bass", "black-crappie", "walleye", "channel-catfish", "bluegill", "yellow-perch", "white-perch", "common-carp"],
+      "verdict": "approved-exact-agency-waterbody-page",
+      "limitations": "The current notice supersedes stale body text about regular channel-catfish stocking: stocking is discontinued, the existing population remains, and catch rates may decline."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/",
+      "locationIds": ["fountainhead", "bull-run-marina", "lake-ridge-marina"],
+      "approvedSpeciesIds": ["largemouth-bass", "bluegill", "black-crappie", "white-crappie", "channel-catfish", "flathead-catfish", "white-perch"],
+      "verdict": "approved-shared-exact-waterbody-page",
+      "limitations": "Approval is for species presence in the shared Occoquan Reservoir, not equal abundance or access conditions at every marina. Yellow perch is reviewed separately against the exact 2022 management report."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-main-stem/",
+      "locationIds": ["berrys", "castlemans-ferry", "lockes", "morgans-ford"],
+      "approvedSpeciesIds": ["smallmouth-bass", "walleye"],
+      "verdict": "approved-exact-agency-river-segment-page",
+      "limitations": "DWR identifies the Main Stem fishery and the named public access reaches. Species presence is approved at the connected river segment level, not as equal abundance at every ramp."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-north-fork/",
+      "locationIds": ["catletts-ford", "riverton"],
+      "approvedSpeciesIds": ["smallmouth-bass"],
+      "verdict": "approved-exact-agency-river-segment-page",
+      "limitations": "DWR explicitly documents Catletts Ford, Riverton, and North Fork smallmouth bass. The current harmful-algal-growth notice must remain separate from species presence and should be shown to users."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-south-fork/",
+      "locationIds": ["bentonville", "front-royal", "karo", "simpsons"],
+      "approvedSpeciesIds": ["smallmouth-bass"],
+      "verdict": "approved-exact-agency-river-segment-page",
+      "limitations": "DWR explicitly documents each named access reach and smallmouth habitat on the South Fork. This approves connected-reach presence, not equal abundance at each ramp."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-burke/",
+      "locationIds": ["lake-burke"],
+      "approvedSpeciesIds": ["largemouth-bass", "black-crappie", "yellow-perch", "muskellunge", "walleye", "channel-catfish", "bluegill", "white-perch", "blue-catfish"],
+      "verdict": "approved-exact-agency-waterbody-page",
+      "limitations": "The current notice supersedes stale body text about annual channel-catfish stocking: stocking is discontinued, the existing population remains, and catch rates may decline. Blue catfish are described as occasional."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/blog/let-out-some-line-at-burke-lake/",
+      "locationIds": ["lake-burke"],
+      "approvedSpeciesIds": ["northern-snakehead"],
+      "verdict": "approved-exact-dated-agency-feature",
+      "limitations": "The 2021 DWR feature explicitly states that Burke Lake has northern snakehead. It supports presence, not a current abundance estimate."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-frederick/",
+      "locationIds": ["lake-frederick"],
+      "approvedSpeciesIds": ["largemouth-bass", "black-crappie", "bluegill", "channel-catfish"],
+      "verdict": "approved-exact-agency-waterbody-page",
+      "limitations": "DWR's access records identify Wheatlands Lake as the body of water and Lake Frederick as the access/fishery name. The current notice supersedes stale stocking text: channel-catfish stocking is discontinued, but the existing population remains."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Walleye-Fishing-Forecast-2026.pdf",
+      "locationIds": ["lake-brittle"],
+      "approvedSpeciesIds": ["walleye"],
+      "verdict": "approved-exact-dated-agency-survey-with-negative-evidence",
+      "limitations": "The 2025 electrofishing survey collected no walleye; DWR says some likely remain, while the current stocking program targets saugeye. The live claim must remain low-confidence and must not present walleye as a primary target."
+    },
+    {
+      "sourceUrl": "https://www.novaparks.com/parks/pohick-bay-regional-park/things-to-do/fishing",
+      "locationIds": ["pohick-bay"],
+      "approvedSpeciesIds": ["largemouth-bass", "bluegill", "common-carp", "striped-bass"],
+      "verdict": "approved-exact-public-park-waterbody-page",
+      "limitations": "NOVA Parks explicitly names Pohick Bay and these species. Generic catfish, crappie, and perch are not narrowed to a species by this approval."
+    },
+    {
+      "sourceUrl": "https://www.novaparks.com/parks/occoquan-regional-park/things-to-do/fishing",
+      "locationIds": ["occoquan-regional"],
+      "approvedSpeciesIds": ["largemouth-bass", "white-perch", "striped-bass", "yellow-perch", "flathead-catfish", "channel-catfish"],
+      "verdict": "approved-exact-public-park-waterbody-page",
+      "limitations": "NOVA Parks explicitly identifies Occoquan Regional Park's shoreline on the Occoquan River and these species. Generic crappie is not narrowed to black crappie."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/",
+      "locationIds": ["occoquan-hand-carry"],
+      "approvedSpeciesIds": ["white-perch", "striped-bass", "largemouth-bass", "yellow-perch", "flathead-catfish", "channel-catfish"],
+      "verdict": "approved-exact-agency-river-page",
+      "limitations": "The catalog point is an official access on the named tidal Occoquan River. DWR's generic crappie listing is intentionally excluded from exact-species approval."
+    },
+    {
+      "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+      "locationIds": ["point-of-rocks", "riverbend-park", "algonkian", "piscataway-crossing", "seneca-regional", "great-falls"],
+      "approvedSpeciesIds": ["smallmouth-bass", "walleye", "muskellunge", "channel-catfish", "largemouth-bass", "flathead-catfish"],
+      "verdict": "approved-shared-official-nontidal-river-page",
+      "limitations": "Maryland DNR defines the Upper Potomac as the warmwater nontidal river from Cumberland to Washington, D.C. Presence is approved at the connected river level; densities vary by reach, and Maryland-side regulations must not be presented as universally applicable to Virginia access."
+    },
+    {
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/fishing",
+      "locationIds": ["lake-fairfax", "riverbend-park", "lake-accotink"],
+      "approvedSpeciesIds": ["bluegill", "smallmouth-bass"],
+      "verdict": "approved-exact-county-park-sections",
+      "limitations": "Approval is limited to bluegill at Lake Fairfax and Lake Accotink and smallmouth bass at Riverbend. Generic bass, catfish, sunfish, and crappie terms are not narrowed to species. Lake Accotink is explicitly described as shallow and generally poor fishing water."
+    },
+    {
+      "sourceUrl": "https://www.pwcva.gov/department/parks-recreation/fishing/",
+      "locationIds": ["lake-ridge-marina", "locust-shade", "silver-lake"],
+      "approvedSpeciesIds": ["largemouth-bass", "channel-catfish", "bluegill"],
+      "verdict": "approved-exact-county-park-list",
+      "limitations": "The county page introduces exactly three named fishing locations and lists these species for that set. The claim supports presence, not equal abundance or a recent survey at each water."
+    },
+    {
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/",
+      "locationIds": ["kellys-ford", "motts-landing", "nhd-stream-hazel-river"],
+      "approvedSpeciesIds": ["smallmouth-bass", "redbreast-sunfish"],
+      "verdict": "approved-exact-agency-upper-river-reaches",
+      "limitations": "DWR explicitly documents Kelly's Ford and Motts Landing in the upper smallmouth/redbreast fishery and identifies Hazel River as a good smallmouth stream. Fredericksburg City Dock is excluded because it lies in the tidal reach below the fall line."
+    }
+  ],
+  "manualClaims": [
+    {
+      "claimId": "nps-shen-dry-run-brook-trout-historical",
+      "locationId": "nhd-stream-dry-run",
+      "speciesId": "brook-trout",
+      "verdict": "approved-historical-only",
+      "evidenceDate": null,
+      "publicationYear": 2006,
+      "sourceName": "National Park Service - Shenandoah National Park Natural Resource Assessment",
+      "sourceUrl": "https://irma.nps.gov/DataStore/DownloadFile/423188",
+      "summary": "The NPS assessment identifies Dry Run as one of the park's brook-trout monitoring streams. This supports historical presence only; current presence still needs a dated survey.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": false,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "nps-prwi-south-fork-quantico-bluegill-2021",
+      "locationId": "nhd-stream-south-fork-quantico-creek",
+      "speciesId": "bluegill",
+      "verdict": "approved-direct-observation",
+      "evidenceDate": "2021",
+      "sourceName": "National Park Service - Stream Life at Prince William Forest Park",
+      "sourceUrl": "https://www.nps.gov/articles/000/prwi-stream-biota-monitoring-2021.htm",
+      "summary": "The exact South Fork Quantico Creek 2021 survey table reports one bluegill.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "datedSurvey": true,
+        "primarySource": true,
+        "abundanceNotGeneralized": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "nps-prwi-south-fork-quantico-redbreast-2021",
+      "locationId": "nhd-stream-south-fork-quantico-creek",
+      "speciesId": "redbreast-sunfish",
+      "verdict": "approved-direct-observation",
+      "evidenceDate": "2021",
+      "sourceName": "National Park Service - Stream Life at Prince William Forest Park",
+      "sourceUrl": "https://www.nps.gov/articles/000/prwi-stream-biota-monitoring-2021.htm",
+      "summary": "The exact South Fork Quantico Creek 2021 survey table reports three redbreast sunfish.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "datedSurvey": true,
+        "primarySource": true,
+        "abundanceNotGeneralized": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "dwr-north-fork-thornton-brook-trout",
+      "locationId": "nhd-stream-north-fork-thornton-river",
+      "speciesId": "brook-trout",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia Department of Wildlife Resources - North Fork Thornton River",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/north-fork-thorton-river/",
+      "summary": "The exact North Fork Thornton River page documents an excellent brook trout population, typically 6-9 inch adults.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "parentRiverNotSubstituted": true,
+        "accessSeparatelyReviewed": true
+      }
+    }
+  ],
+  "contradictionReviews": [
+    {
+      "locationId": "nhd-stream-south-fork-quantico-creek",
+      "speciesId": "largemouth-bass",
+      "verdict": "historical-only-do-not-represent-current",
+      "olderEvidence": "VAFWIS observation records through 2011",
+      "newerEvidence": "Not reported in the exact-water NPS 2021 survey table",
+      "sourceUrl": "https://www.nps.gov/articles/000/prwi-stream-biota-monitoring-2021.htm",
+      "note": "Non-detection is not proof of absence, but the older records cannot be presented as current without newer corroboration."
+    },
+    {
+      "locationId": "nhd-stream-south-fork-quantico-creek",
+      "speciesId": "smallmouth-bass",
+      "verdict": "historical-only-do-not-represent-current",
+      "olderEvidence": "VAFWIS observation records through 1999",
+      "newerEvidence": "Not reported in the exact-water NPS 2021 survey table",
+      "sourceUrl": "https://www.nps.gov/articles/000/prwi-stream-biota-monitoring-2021.htm",
+      "note": "Non-detection is not proof of absence, but the older records cannot be presented as current without newer corroboration."
+    }
+  ],
+  "accessReviews": [
+    {
+      "locationId": "huntsman-lake",
+      "fishingPermission": "approved",
+      "waypointAccess": "approved-with-limitations",
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/sites/parks/files/Assets/documents/fishing/FCPA-Fishing-Brochure-23.pdf",
+      "corroboratingSourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
+      "note": "The county brochure explicitly lists Huntsman Lake as a place to fish. The county lake page confirms limited street parking and carry-in craft only. It does not identify the stocked fingerling species."
+    },
+    {
+      "locationId": "lake-mercer",
+      "fishingPermission": "approved",
+      "waypointAccess": "approved-with-limitations",
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
+      "note": "The exact Lake Mercer section explicitly lists fishing, the Hooes Road parking location, the walk to the lake, carry-in launch limitations, and no motors."
+    },
+    {
+      "locationId": "woodglen-lake",
+      "fishingPermission": "pending-exact-water-confirmation",
+      "waypointAccess": "approved-with-limitations",
+      "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
+      "note": "The exact section confirms public parking, public-land shoreline constraints, and carry-in boating. The page's fishing statement applies to 'most' Pohick watershed lakes and does not explicitly name Woodglen, so fishing permission remains pending."
+    },
+    {
+      "locationId": "nhd-happyland-camp-five-lake",
+      "fishingPermission": "approved-with-restricted-frontage",
+      "waypointAccess": "pending",
+      "sourceUrl": "https://home.nps.gov/prwi/planyourvisit/fishing.htm",
+      "corroboratingSourceUrl": "https://www.nps.gov/prwi/faqs.htm",
+      "note": "Park lakes are open to fishing by foot, but the Cabin Camp 5 frontage and dock access on Lake 5 are reserved for cabin-camp permit holders. The catalog point must be checked against that restricted frontage before release."
+    },
+    {
+      "locationId": "nhd-stream-south-fork-quantico-creek",
+      "fishingPermission": "approved",
+      "waypointAccess": "pending",
+      "sourceUrl": "https://home.nps.gov/prwi/planyourvisit/fishing.htm",
+      "note": "NPS explicitly permits fishing anywhere along South Fork Quantico Creek, subject to park and Virginia rules. The generated NHD coordinate is not itself a verified parking or shore-access point."
+    },
+    {
+      "locationId": "nhd-stream-dry-run",
+      "fishingPermission": "approved-catch-and-release",
+      "waypointAccess": "pending",
+      "sourceUrl": "https://www.nps.gov/shen/planyourvisit/fishing.htm",
+      "note": "Current NPS rules say all park streams are open to catch-and-release fishing. The old 2006 monitoring closure is superseded, but the generated NHD coordinate is not a verified access waypoint."
+    },
+    {
+      "locationId": "nhd-stream-north-fork-thornton-river",
+      "fishingPermission": "approved",
+      "waypointAccess": "pending",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/north-fork-thorton-river/",
+      "note": "DWR explicitly describes fishing rules and limited lower-section access from Route 612. The generated NHD coordinate is not the documented parking point, so waypoint release remains pending."
+    }
+  ],
+  "correctionReviews": [
+    {
+      "incorrectLocationId": "nhd-stream-thornton-river",
+      "correctLocationId": "nhd-stream-north-fork-thornton-river",
+      "speciesId": "brook-trout",
+      "verdict": "removed-wrong-waterbody",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/north-fork-thorton-river/",
+      "note": "The prior agent attached a North Fork Thornton River claim to the distinct parent Thornton River catalog entry. The live parent-stream claim was removed."
+    }
+  ]
+}
