@@ -6,7 +6,7 @@
 import type { FishFacts, SpeciesLocation } from "./api";
 import { locations, speciesById } from "./data";
 import { opportunityFor } from "./scoring";
-import { profileFor, type SpeciesProfile } from "./species-profiles";
+import { guideProfileFor, type SpeciesProfile } from "./species-profiles";
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const DIEL_TEXT: Record<string, string> = {
@@ -29,7 +29,7 @@ function monthRanges(months: number[]): string {
 }
 
 export function localFishFacts(speciesId: string): FishFacts | null {
-  const p = profileFor(speciesId) as (SpeciesProfile & Record<string, unknown>) | undefined;
+  const p = guideProfileFor(speciesId) as (SpeciesProfile & Record<string, unknown>) | undefined;
   if (!p) return null;
   const species = speciesById(speciesId);
   const seasonal = (p.seasonalActivityByMonth as number[]) ?? [];

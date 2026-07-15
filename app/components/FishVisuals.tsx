@@ -1,7 +1,7 @@
 const MONTHS = ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"];
 const MONTH_FULL = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-export function SeasonalChart({ data }: { data: number[] }) {
+export function SeasonalChart({ data, guideOnly = false }: { data: number[]; guideOnly?: boolean }) {
   if (!data || data.length !== 12) return null;
   const max = Math.max(...data, 0.01);
   const peak = max * 0.85;
@@ -18,7 +18,7 @@ export function SeasonalChart({ data }: { data: number[] }) {
           </div>
         ))}
       </div>
-      <small>Relative feeding activity through the year, from the researched seasonal profile.</small>
+      <small>{guideOnly ? "Relative biological activity through the year; not used for bite scoring." : "Relative feeding activity through the year, from the researched seasonal profile."}</small>
     </div>
   );
 }

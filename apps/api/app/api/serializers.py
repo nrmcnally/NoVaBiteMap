@@ -133,6 +133,7 @@ def association_out(assoc: LocationStationAssociation | None, station_name: str 
     return {
         "stationId": assoc.station_id,
         "stationName": station_name,
+        "monitorUrl": f"https://waterdata.usgs.gov/monitoring-location/USGS-{assoc.station_id}/",
         "associationType": assoc.relationship_type,
         "associationFactor": assoc.association_factor,
         "basis": assoc.basis,

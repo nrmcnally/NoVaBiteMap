@@ -14,6 +14,23 @@ def test_locations_list_has_provenance_backed_locations(client):
     assert {"lake-fairfax", "gravelly-point", "beaverdam-reservoir", "kellys-ford"}.issubset(ids)
 
 
+def test_explore_catalog_is_canonical_and_score_consistent(client):
+    response = client.get("/api/explore")
+    assert response.status_code == 200, response.text
+    payload = response.json()
+    assert payload["dataSource"] == "canonical-api"
+    assert payload["counts"] == {"species": 20, "locations": 196}
+    assert len(payload["species"]) == 20
+    burke = next(item for item in payload["locations"] if item["id"] == "lake-burke")
+    assert burke["runtimeSource"] == "canonical-api"
+    assert burke["consumptionAdvisory"] is not None
+    assert "largemouth-bass" in burke["opportunities"]
+    explore_score = burke["opportunities"]["largemouth-bass"]["score"]
+    detail = client.get("/api/locations/lake-burke/species", params={"live": "false"}).json()
+    detail_score = next(item for item in detail["species"] if item["speciesId"] == "largemouth-bass")["opportunity_score"]
+    assert explore_score == detail_score
+
+
 def test_access_status_classifies_public_waters(client):
     locations = client.get("/api/locations", params={"limit": 200}).json()
     by_status = {}
@@ -49,6 +66,8 @@ def test_location_detail_exposes_all_evidenced_species(client):
     species_ids = set(detail["evidenceSpeciesIds"])
     assert {"largemouth-bass", "black-crappie", "yellow-perch"}.issubset(species_ids)
     assert detail["consumptionAdvisory"] is not None
+    assert detail["runtimeSource"] == "canonical-api"
+    assert detail["opportunities"]
 
 
 def test_vdh_segment_species_reconcile_with_morgans_ford(client):

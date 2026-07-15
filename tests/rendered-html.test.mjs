@@ -3,14 +3,19 @@ import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
 test("build contains the BiteMap opportunity board product contract", async () => {
-  const [page, dashboard, layout, data] = await Promise.all([
+  const [page, dashboard, layout, data, apiClient, scoring] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/components/ExploreDashboard.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/lib/data.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/lib/api.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/lib/scoring.ts", import.meta.url), "utf8"),
   ]);
   await access(new URL("../dist/server/index.js", import.meta.url));
   assert.match(page, /ExploreDashboard/);
+  assert.match(page, /fetchExploreCatalog/);
+  assert.match(apiClient, /\/api\/explore/);
+  assert.match(scoring, /runtimeSource === "canonical-api"/);
   assert.match(dashboard, /Find your next/);
   assert.match(dashboard, /useState<string\[\]>\(\[\]\)/);
   assert.match(dashboard, /useState\(false\)/);
@@ -111,4 +116,17 @@ test("live public-data spine includes hydrology, multi-day weather, trout, and A
   assert.match(importer, /dataset_md5/);
   assert.match(gap, /"sampleCount": 225/);
   assert.match(trout, /"waterCount": 13/);
+});
+
+test("spot details separate bite forecasts from presence-only fish and link every state to the guide", async () => {
+  const [spot, whatsBiting] = await Promise.all([
+    readFile(new URL("../app/locations/[id]/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/components/WhatsBiting.tsx", import.meta.url), "utf8"),
+  ]);
+  assert.match(spot, /Prefer direct documentation over modeled evidence/);
+  assert.match(whatsBiting, /Bite forecast/);
+  assert.match(whatsBiting, /Present in the evidence · no bite forecast/);
+  assert.match(whatsBiting, /Nearby or modeled records · not confirmed here/);
+  assert.match(whatsBiting, /none are labeled as biting or not biting/i);
+  assert.match(whatsBiting, /Open fish guide/);
 });

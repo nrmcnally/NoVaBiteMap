@@ -1,7 +1,20 @@
 import profilesPayload from "./generated/species-profiles.json";
+import communityProfilesPayload from "./community-fish-profiles.json";
+
+export type SpeciesLookalike = {
+  speciesId: string;
+  tell: string;
+};
+
+export type SeasonalTechniques = {
+  cold?: string;
+  cool?: string;
+  warm?: string;
+};
 
 export type SpeciesProfile = {
   speciesId: string;
+  guideOnly?: boolean;
   family?: string;
   nativeStatus?: "native" | "introduced" | "invasive";
   statusNote?: string;
@@ -11,14 +24,47 @@ export type SpeciesProfile = {
   waterbodyPreference?: Record<string, number>;
   seasonalActivityByMonth?: number[];
   dielPattern?: string;
+  preferredMinF?: number;
+  preferredMaxF?: number;
+  toleranceMinF?: number;
+  toleranceMaxF?: number;
+  spawnMonths?: number[];
+  spawnTempF?: number;
+  primaryTechniquesBySeason?: SeasonalTechniques;
+  identification?: string;
+  baits?: string[];
+  handlingNote?: string;
+  diet?: string;
+  confusedWith?: SpeciesLookalike[];
+  sourceUrls?: string[];
+  notes?: string;
+  confidence?: string;
+  citationWeightLb?: number | null;
+  stateRecordLb?: number | null;
 };
 
 const byId: Record<string, SpeciesProfile> = Object.fromEntries(
   ((profilesPayload.profiles as SpeciesProfile[]) ?? []).map((p) => [p.speciesId, p]),
 );
 
+const communityById: Record<string, SpeciesProfile> = Object.fromEntries(
+  ((communityProfilesPayload.profiles as SpeciesProfile[]) ?? []).map((p) => [p.speciesId, p]),
+);
+
 export function profileFor(speciesId: string): SpeciesProfile | undefined {
   return byId[speciesId];
+}
+
+/**
+ * Returns either a reviewed bite-scoring profile or a guide-only community
+ * profile. Guide-only profiles must never be used by the opportunity model.
+ */
+export function guideProfileFor(speciesId: string): SpeciesProfile | undefined {
+  return byId[speciesId] ?? communityById[speciesId];
+}
+
+export function isGuideOnlyProfile(profile: SpeciesProfile | undefined): boolean {
+  return profile?.guideOnly === true;
 }
 
 const WB_LABEL: Record<string, string> = {

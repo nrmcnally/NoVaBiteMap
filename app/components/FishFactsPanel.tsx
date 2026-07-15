@@ -24,9 +24,10 @@ type Props = {
   stockingCategory?: string | null;
   stockingPlanUrl?: string | null;
   variant?: "drawer" | "page";
+  guideOnly?: boolean;
 };
 
-export function FishFactsPanel({ facts, stocked, stockingCategory, stockingPlanUrl, variant = "drawer" }: Props) {
+export function FishFactsPanel({ facts, stocked, stockingCategory, stockingPlanUrl, variant = "drawer", guideOnly = false }: Props) {
   const preferred = tempRange(facts.preferredTempF);
   const tolerance = tempRange(facts.toleranceTempF);
   const size = sizeRange(facts.typicalSizeInches);
@@ -53,7 +54,7 @@ export function FishFactsPanel({ facts, stocked, stockingCategory, stockingPlanU
         )}
         <div className="fish-fact">
           <Clock3 size={14} />
-          <span>When they bite</span>
+          <span>{guideOnly ? "Daily activity" : "When they bite"}</span>
           <strong className="fish-fact-diel">{facts.dielPattern}</strong>
           {facts.seasonalPeak && <small>Peak {facts.seasonalPeak}</small>}
         </div>
@@ -71,7 +72,7 @@ export function FishFactsPanel({ facts, stocked, stockingCategory, stockingPlanU
 
       {facts.baits.length > 0 && (
         <div className="fish-baits">
-          <h4>Productive baits &amp; lures</h4>
+          <h4>{guideOnly ? "Common hook-and-line offerings" : "Productive baits & lures"}</h4>
           <div className="fish-bait-chips">
             {facts.baits.map((bait) => (
               <span key={bait}>{bait}</span>

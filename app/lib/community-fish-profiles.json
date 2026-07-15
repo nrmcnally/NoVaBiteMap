@@ -1,0 +1,464 @@
+{
+  "meta": {
+    "version": "1.0",
+    "reviewed": "2026-07-14",
+    "description": "Guide-only natural-history profiles for evidence-backed Northern Virginia fish-community records. These profiles enrich the Fish Guide but are deliberately excluded from opportunity scoring.",
+    "provenance": "Reviewed against U.S. Fish and Wildlife Service, U.S. Geological Survey, National Park Service, Fairfax County, and state fisheries-agency references."
+  },
+  "profiles": [
+    {
+      "speciesId": "american-eel",
+      "guideOnly": true,
+      "family": "Freshwater eels (Anguillidae)",
+      "nativeStatus": "native",
+      "statusNote": "A native catadromous fish: it grows in rivers and estuaries, then migrates to the Sargasso Sea to spawn.",
+      "typicalMinInches": 12,
+      "typicalMaxInches": 36,
+      "identification": "A long, snake-like fish with a continuous dorsal, tail, and anal fin, a protruding lower jaw, and tiny scales hidden beneath a thick mucus layer. Unlike a lamprey, it has a true jaw and paired pectoral fins.",
+      "baits": ["nightcrawlers", "cut fish", "small live fish", "crayfish"],
+      "dielPattern": "nocturnal",
+      "waterbodyPreference": { "river": 1, "stream": 0.8, "reservoir": 0.3, "lake": 0.3, "pond": -0.8, "bay": 0.9 },
+      "diet": "A night-feeding predator and scavenger that eats crustaceans, aquatic insects, worms, and fish; larger eels take larger prey.",
+      "handlingNote": "Wet your hands before handling its mucus-coated skin and check the water-specific consumption advisory before considering harvest.",
+      "primaryTechniquesBySeason": {
+        "warm": "Fish after dark with a simple bottom rig around rock, wood, bridge cover, and connected river channels; keep the bait close to the bottom."
+      },
+      "confusedWith": [],
+      "confidence": "reviewed-guide-only",
+      "sourceUrls": [
+        "https://www.fws.gov/apps/species/american-eel-anguilla-rostrata",
+        "https://www.fws.gov/story/reconnecting-american-eel-migrations"
+      ],
+      "notes": "This biology profile does not create a BiteMap opportunity score. Eel abundance and migration access can change sharply above dams and other barriers."
+    },
+    {
+      "speciesId": "blacknose-dace",
+      "guideOnly": true,
+      "family": "Minnows (Leuciscidae)",
+      "nativeStatus": "native",
+      "statusNote": "Native and widespread in Northern Virginia headwaters; Fairfax County describes it as the county's most commonly collected fish.",
+      "typicalMinInches": 2,
+      "typicalMaxInches": 4,
+      "identification": "A small, stout minnow with a dark stripe running from the tail through the eye and around the downturned snout. Adults have olive backs and pale bellies; breeding males may show rusty orange along the sides and fin bases.",
+      "baits": [],
+      "dielPattern": "diurnal",
+      "spawnMonths": [5, 6, 7],
+      "waterbodyPreference": { "river": 0.4, "stream": 1, "reservoir": -0.4, "lake": -0.3, "pond": -0.3, "bay": -0.9 },
+      "diet": "Aquatic and terrestrial insects, fish and invertebrate eggs, diatoms and other algae, plant material, and detritus.",
+      "handlingNote": "A small native forage fish rather than a normal hook-and-line target; release incidental captures promptly and do not move baitfish between waters.",
+      "confusedWith": [
+        { "speciesId": "longnose-dace", "tell": "Blacknose dace has a bold eye-to-tail stripe and a shorter snout; longnose dace has a distinctly overhanging snout, small barbels, and a mottled pattern." }
+      ],
+      "confidence": "reviewed-guide-only",
+      "sourceUrls": [
+        "https://www.fairfaxcounty.gov/publicworks/sites/publicworks/files/Assets/documents/PDF/publications/Field-Guide-Fairfax-County-Plants-Wildlife.pdf",
+        "https://www.fws.gov/media/eastern-blacknose-dace"
+      ],
+      "notes": "Presence is informative about the stream community, not an angling forecast. A dace-heavy sample with few other species can also occur in degraded habitat."
+    },
+    {
+      "speciesId": "brown-bullhead",
+      "guideOnly": true,
+      "family": "North American catfishes (Ictaluridae)",
+      "nativeStatus": "native",
+      "statusNote": "A native, highly tolerant bullhead of warm, slow water and soft bottoms.",
+      "typicalMinInches": 7,
+      "typicalMaxInches": 15,
+      "identification": "A compact, mottled brown catfish with dark chin barbels and a square or only slightly notched tail. The dark chin whiskers separate it from the pale-whiskered yellow bullhead.",
+      "baits": ["nightcrawlers", "chicken liver", "cut fish", "stink bait"],
+      "dielPattern": "nocturnal",
+      "spawnMonths": [5, 6],
+      "waterbodyPreference": { "river": 0.5, "stream": 0.4, "reservoir": 0.8, "lake": 0.9, "pond": 1, "bay": 0.4 },
+      "diet": "An omnivorous bottom feeder taking aquatic insects, worms, crayfish, mollusks, small fish, algae, and other plant material.",
+      "handlingNote": "The dorsal and pectoral spines can puncture a hand. Grip behind the spines and verify local consumption advice before harvest.",
+      "primaryTechniquesBySeason": {
+        "warm": "Still-fish a bottom rig around soft-bottom coves, vegetation edges, and slow pools, especially on summer evenings and after dark."
+      },
+      "confusedWith": [
+        { "speciesId": "yellow-bullhead", "tell": "Brown bullhead has dark chin barbels and usually stronger mottling; yellow bullhead has white or yellow chin barbels." }
+      ],
+      "confidence": "reviewed-guide-only",
+      "sourceUrls": [
+        "https://dep.nj.gov/njfw/fishing/freshwater/brown-bullhead/",
+        "https://fishspecies.dnrec.delaware.gov/FishSpecies.aspx?habitat=1&species=27"
+      ],
+      "notes": "Brown bullhead tolerates warmth, low oxygen, and turbidity better than many fishes, so presence alone is not evidence of high water quality."
+    },
+    {
+      "speciesId": "creek-chub",
+      "guideOnly": true,
+      "family": "Minnows (Leuciscidae)",
+      "nativeStatus": "native",
+      "statusNote": "A common native headwater minnow and important prey fish in small streams.",
+      "typicalMinInches": 4,
+      "typicalMaxInches": 8,
+      "identification": "A robust minnow with a dark spot at the front base of the dorsal fin, another spot at the tail base, and a large mouth. Young fish show a dark lateral stripe; adults may have a tiny barbel at the corner of the mouth.",
+      "baits": ["small worms", "grasshoppers", "wet flies", "size 0 inline spinners"],
+      "dielPattern": "crepuscular",
+      "spawnMonths": [4, 5, 6],
+      "waterbodyPreference": { "river": 0.4, "stream": 1, "reservoir": -0.4, "lake": -0.3, "pond": -0.2, "bay": -0.9 },
+      "diet": "Mostly aquatic and terrestrial insects, with larger fish also eating crayfish, worms, mollusks, and small fish.",
+      "handlingNote": "Do not transfer creek chubs between drainages as bait; bait-bucket release can spread fish and disease beyond their native water.",
+      "primaryTechniquesBySeason": {
+        "cool": "Use tiny spinners, wet flies, or a small worm in pools below riffles and around root cover.",
+        "warm": "Fish shaded headwater pools and slower runs near sunset with ultralight tackle."
+      },
+      "confusedWith": [
+        { "speciesId": "fallfish", "tell": "Creek chub has a distinct dark spot at the front of the dorsal-fin base; fallfish lacks that spot and adults show dark-edged scales." }
+      ],
+      "confidence": "reviewed-guide-only",
+      "sourceUrls": [
+        "https://www.mass.gov/info-details/creek-chub",
+        "https://programs.iowadnr.gov/lakemanagement/FishIowa/FishDetails/CRC"
+      ],
+      "notes": "This is a guide profile only. Its sunset activity and small-stream tactics are descriptive and do not feed the BiteMap score."
+    },
+    {
+      "speciesId": "fallfish",
+      "guideOnly": true,
+      "family": "Minnows (Leuciscidae)",
+      "nativeStatus": "native",
+      "statusNote": "A large native minnow of the Potomac drainage and one of the region's most underrated ultralight sport fish.",
+      "typicalMinInches": 6,
+      "typicalMaxInches": 14,
+      "identification": "A silvery to brassy, chub-shaped fish with a large mouth, dark-edged scales on adults, and no black spot at the front of the dorsal fin. A small fleshy barbel may sit in the groove behind the upper jaw.",
+      "baits": ["small inline spinners", "small spoons", "nymphs and streamers", "worms"],
+      "dielPattern": "flexible",
+      "spawnMonths": [4],
+      "waterbodyPreference": { "river": 1, "stream": 0.8, "reservoir": 0.3, "lake": 0.2, "pond": -0.7, "bay": -0.8 },
+      "diet": "Young fish eat algae and aquatic or terrestrial insects; larger fallfish add crayfish, fish, and seasonally abundant fish eggs.",
+      "handlingNote": "Treat large fallfish as a native sport fish: wet your hands, support the body, and release quickly if not keeping them under current rules.",
+      "primaryTechniquesBySeason": {
+        "cool": "Cast small spinners, spoons, nymphs, or streamers across current seams and the tails of pools.",
+        "warm": "Work deeper runs, boulder edges, and shaded pools with ultralight lures or a lightly weighted worm."
+      },
+      "confusedWith": [
+        { "speciesId": "creek-chub", "tell": "Fallfish lacks the creek chub's black dorsal-base spot and grows larger; adult fallfish often have conspicuously dark-edged scales." }
+      ],
+      "confidence": "reviewed-guide-only",
+      "sourceUrls": [
+        "https://wvdnr.gov/plants-animals/sportfish/fall-fish/",
+        "https://nas.er.usgs.gov/queries/FactSheet.aspx?SpeciesID=650"
+      ],
+      "notes": "Fallfish are catchable, but this entry remains guide-only until BiteMap has a reviewed temperature and seasonal scoring profile."
+    },
+    {
+      "speciesId": "green-sunfish",
+      "guideOnly": true,
+      "family": "Sunfishes (Centrarchidae)",
+      "nativeStatus": "introduced",
+      "statusNote": "Native farther west in North America but introduced and established in much of Atlantic-slope Virginia, including Northern Virginia waters.",
+      "typicalMinInches": 4,
+      "typicalMaxInches": 8,
+      "identification": "A thick-bodied sunfish with a comparatively large mouth, blue-green cheek streaks, a long dark ear flap, and yellow to orange edging on the dorsal, tail, and anal fins.",
+      "baits": ["earthworms", "grubs", "grasshoppers", "tiny jigs and spinners"],
+      "dielPattern": "diurnal",
+      "spawnMonths": [5, 6, 7, 8],
+      "spawnTempF": 70,
+      "waterbodyPreference": { "river": 0.5, "stream": 0.8, "reservoir": 0.7, "lake": 0.7, "pond": 1, "bay": 0.1 },
+      "diet": "A visual predator that eats insects, crayfish, and small fish.",
+      "handlingNote": "Its sharp dorsal spines can catch skin or fabric. Fold the spines flat before handling and never release live fish into another waterbody.",
+      "primaryTechniquesBySeason": {
+        "warm": "Fish daylight hours around wood, undercut banks, vegetation, and quiet creek pools with a small worm under a float or an ultralight lure."
+      },
+      "confusedWith": [
+        { "speciesId": "bluegill", "tell": "Green sunfish has a much larger mouth, a longer body, and yellow-orange fin margins; bluegill is deeper-bodied with a small mouth and solid dark ear flap." },
+        { "speciesId": "pumpkinseed", "tell": "Pumpkinseed has a small mouth and a red-orange crescent on the ear flap; green sunfish has a large mouth and pale fin edges." }
+      ],
+      "confidence": "reviewed-guide-only",
+      "sourceUrls": [
+        "https://mdc.mo.gov/discover-nature/field-guide/green-sunfish",
+        "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=380"
+      ],
+      "notes": "The 70 F spawning threshold comes from the Missouri Department of Conservation and is a broad biological cue, not a local bite trigger."
+    },
+    {
+      "speciesId": "longnose-dace",
+      "guideOnly": true,
+      "family": "Minnows (Leuciscidae)",
+      "nativeStatus": "native",
+      "statusNote": "A native riffle specialist of cool, fast, rocky streams.",
+      "typicalMinInches": 3,
+      "typicalMaxInches": 5,
+      "identification": "A slender, mottled dace with a long snout that overhangs the small mouth, tiny scales, and a small barbel at each corner of the mouth. Breeding fish can show red around the mouth and fin bases.",
+      "baits": [],
+      "dielPattern": "flexible",
+      "spawnMonths": [4, 5, 6],
+      "waterbodyPreference": { "river": 0.8, "stream": 1, "reservoir": -0.5, "lake": 0.1, "pond": -0.9, "bay": -0.9 },
+      "diet": "A bottom feeder taking mayfly, blackfly, and midge larvae, other small invertebrates, and some algae.",
+      "handlingNote": "A small native forage fish and stream-community indicator, not a normal angling target. Return incidental captures to the same water promptly.",
+      "confusedWith": [
+        { "speciesId": "blacknose-dace", "tell": "Longnose dace has an overhanging snout, barbels, and mottling; blacknose dace has a bold dark stripe through the eye and a shorter snout." }
+      ],
+      "confidence": "reviewed-guide-only",
+      "sourceUrls": [
+        "https://www.nps.gov/upde/learn/nature/nongame-fish-species.htm",
+        "https://www.usgs.gov/publications/habitat-suitability-index-models-longnose-dace"
+      ],
+      "notes": "Riffle habitat and clean interstitial spaces matter more than a simple waterbody label for this species."
+    },
+    {
+      "speciesId": "mottled-sculpin",
+      "guideOnly": true,
+      "family": "Sculpins (Cottidae)",
+      "nativeStatus": "native",
+      "statusNote": "A native coldwater bottom fish associated with spring-fed streams and rocky cover.",
+      "typicalMinInches": 2.5,
+      "typicalMaxInches": 4.5,
+      "identification": "A scaleless, mottled brown bottom fish with a broad flattened head, very large fan-shaped pectoral fins, and two dorsal fins. Its color can shift to match the streambed.",
+      "baits": [],
+      "dielPattern": "nocturnal",
+      "spawnMonths": [3, 4, 5],
+      "waterbodyPreference": { "river": 0.5, "stream": 1, "reservoir": -0.5, "lake": 0.1, "pond": -0.9, "bay": -0.9 },
+      "diet": "A benthic ambush predator eating aquatic insect larvae, crustaceans, worms, occasional small fish, and sometimes other sculpins.",
+      "handlingNote": "Sculpins are small native predators and useful coldwater indicators. Avoid disturbing the rocks and submerged cover they use for shelter and nests.",
+      "confusedWith": [
+        { "speciesId": "tessellated-darter", "tell": "Sculpins have a much broader head, huge pectoral fins, and no scales; tessellated darters are slender, scaled, and marked with small W- or X-shaped blotches." }
+      ],
+      "confidence": "reviewed-guide-only",
+      "sourceUrls": [
+        "https://mdc.mo.gov/discover-nature/field-guide/mottled-sculpin",
+        "https://nas.er.usgs.gov/queries/factsheet.aspx?SpeciesID=502"
+      ],
+      "notes": "Taxonomy within the mottled-sculpin complex has changed in parts of North America; BiteMap uses the community-record name supplied by its regional evidence."
+    },
+    {
+      "speciesId": "northern-hogsucker",
+      "guideOnly": true,
+      "family": "Suckers (Catostomidae)",
+      "nativeStatus": "native",
+      "statusNote": "A native, clear-stream bottom feeder often associated with healthy gravel and rubble habitat.",
+      "typicalMinInches": 8,
+      "typicalMaxInches": 16,
+      "identification": "A stout sucker with a large, blocky head, a concave profile behind the eyes, broad fleshy lips beneath the snout, and dark saddle-like bands across a mottled body.",
+      "baits": [],
+      "dielPattern": "diurnal",
+      "spawnMonths": [4, 5],
+      "waterbodyPreference": { "river": 0.9, "stream": 1, "reservoir": -0.3, "lake": -0.4, "pond": -0.9, "bay": -0.9 },
+      "diet": "Uses its fleshy lips and head to turn stones and vacuum up immature aquatic insects and other small bottom organisms.",
+      "handlingNote": "Northern hogsuckers are native ecosystem engineers: feeding exposes insects that other fish follow and eat. Release incidental captures carefully.",
+      "confusedWith": [
+        { "speciesId": "white-sucker", "tell": "Northern hogsucker has a larger, blockier head and dark saddles; white sucker is more cylindrical and usually plain brown to olive." }
+      ],
+      "confidence": "reviewed-guide-only",
+      "sourceUrls": [
+        "https://mdc.mo.gov/discover-nature/field-guide/northern-hog-sucker",
+        "https://nas.er.usgs.gov/queries/FactSheet.aspx?SpeciesID=360"
+      ],
+      "notes": "This species is seldom caught on a baited hook. Its guide entry emphasizes identification and ecological role rather than lure advice."
+    },
+    {
+      "speciesId": "pumpkinseed",
+      "guideOnly": true,
+      "family": "Sunfishes (Centrarchidae)",
+      "nativeStatus": "native",
+      "statusNote": "A colorful native sunfish of vegetated shallows, quiet rivers, ponds, and lakes.",
+      "typicalMinInches": 5,
+      "typicalMaxInches": 8,
+      "identification": "A deep, disk-shaped sunfish with blue-green wavy cheek lines, an orange belly, and a red-orange crescent on the rear of the dark ear flap. The mouth is noticeably smaller than a green sunfish's.",
+      "baits": ["small pieces of worm", "crickets", "tiny jigs", "nymphs and small poppers"],
+      "dielPattern": "diurnal",
+      "spawnMonths": [5, 6, 7],
+      "waterbodyPreference": { "river": 0.4, "stream": 0.2, "reservoir": 0.8, "lake": 1, "pond": 0.9, "bay": 0.2 },
+      "diet": "Aquatic insects, snails, small clams and other crustaceans, plus occasional small fish; specialized crushing teeth help it eat snails.",
+      "handlingNote": "Fold the sharp dorsal spines before handling. Wet hands and a quick release protect the fish's slime coat.",
+      "primaryTechniquesBySeason": {
+        "cool": "Look for warming, sheltered shallows and work a tiny jig, nymph, or worm slowly near cover.",
+        "warm": "Fish vegetation edges, docks, submerged wood, and shallow spawning colonies with a tiny bait under a float or a small fly."
+      },
+      "confusedWith": [
+        { "speciesId": "bluegill", "tell": "Pumpkinseed has blue cheek lines and a red-orange mark on the ear flap; bluegill has a solid dark ear flap and lacks the bright red crescent." },
+        { "speciesId": "green-sunfish", "tell": "Pumpkinseed is deeper-bodied with a small mouth; green sunfish has a larger mouth and yellow-orange fin margins." }
+      ],
+      "confidence": "reviewed-guide-only",
+      "sourceUrls": [
+        "https://www.nps.gov/miss/learn/nature/pumpkinseed-lepomis-gibossus.htm",
+        "https://www.michigan.gov/en/dnr/education/michigan-species/fish-species/Pumpkinseed"
+      ],
+      "notes": "Pumpkinseed commonly hybridize with other sunfish, so some individuals will not match every field mark cleanly."
+    },
+    {
+      "speciesId": "rock-bass",
+      "guideOnly": true,
+      "family": "Sunfishes (Centrarchidae)",
+      "nativeStatus": "native",
+      "statusNote": "A native, structure-oriented sunfish of rocky rivers, streams, and clear-water shorelines.",
+      "typicalMinInches": 6,
+      "typicalMaxInches": 10,
+      "identification": "A stocky olive-to-brassy sunfish with rows of dark spots, a large mouth, and red to orange eyes. It has six anal-fin spines, compared with three on most other local sunfish.",
+      "baits": ["small minnows", "crayfish", "nightcrawlers", "hellgrammites", "small spinners and grubs"],
+      "dielPattern": "crepuscular",
+      "spawnMonths": [4, 5, 6],
+      "waterbodyPreference": { "river": 1, "stream": 0.9, "reservoir": 0.6, "lake": 0.6, "pond": 0.2, "bay": -0.4 },
+      "diet": "An opportunistic predator of crayfish, aquatic insects, and smaller fish, feeding heavily around dawn, dusk, and other low-light periods.",
+      "handlingNote": "Support larger fish horizontally and watch the dorsal and anal spines when unhooking them.",
+      "primaryTechniquesBySeason": {
+        "cool": "Drift a small minnow, crayfish, grub, or hellgrammite along the bottom of rocky pools and current pockets.",
+        "warm": "Target boulders, ledges, rootwads, and water-willow edges early and late with small spinners, grubs, or live bait."
+      },
+      "confusedWith": [],
+      "confidence": "reviewed-guide-only",
+      "sourceUrls": [
+        "https://wvdnr.gov/plants-animals/sportfish/rock-bass/",
+        "https://www.pa.gov/agencies/fishandboat/fishing/all-about-fish/catch-pa-fish/rock-bass"
+      ],
+      "notes": "Rock bass are genuinely catchable, but this profile remains outside the ranking model until its local condition-response evidence is reviewed."
+    },
+    {
+      "speciesId": "shorthead-redhorse",
+      "guideOnly": true,
+      "family": "Suckers (Catostomidae)",
+      "nativeStatus": "native",
+      "statusNote": "A native migratory river sucker and benthic feeder, often associated with flowing water and clean mineral substrate.",
+      "typicalMinInches": 9,
+      "typicalMaxInches": 16,
+      "identification": "A slender, coarse-scaled sucker with a short head, fleshy folded lips beneath the snout, a short dorsal fin, and often orange to red lower fins and tail.",
+      "baits": [],
+      "dielPattern": "flexible",
+      "spawnMonths": [4],
+      "waterbodyPreference": { "river": 1, "stream": 0.7, "reservoir": 0.3, "lake": 0.2, "pond": -0.9, "bay": -0.5 },
+      "diet": "Primarily immature midges, mayflies, and caddisflies grubbed from sand, gravel, and rubble.",
+      "handlingNote": "Redhorse are native, long-lived river fish that are often misidentified. Release unwanted fish carefully and never discard them as 'rough fish.'",
+      "confusedWith": [
+        { "speciesId": "white-sucker", "tell": "Shorthead redhorse has coarser scales, a shorter head, and often reddish lower fins; white sucker is plainer and has smaller scales toward the head." }
+      ],
+      "confidence": "reviewed-guide-only",
+      "sourceUrls": [
+        "https://mdc.mo.gov/discover-nature/field-guide/shorthead-redhorse",
+        "https://www.fws.gov/media/shorthead-redhorse-sucker-2"
+      ],
+      "notes": "Spring tributary movements can concentrate fish, but the month shown is a broad biological window and not a harvest recommendation."
+    },
+    {
+      "speciesId": "tessellated-darter",
+      "guideOnly": true,
+      "family": "Perches and darters (Percidae)",
+      "nativeStatus": "native",
+      "statusNote": "A native Atlantic-slope darter that lives on the bottom of streams and rivers.",
+      "typicalMinInches": 2,
+      "typicalMaxInches": 4,
+      "identification": "A small sandy-tan bottom fish with a continuous lateral line and a row of roughly 9 to 11 dark W- or X-shaped marks along the sides. It rests propped on its pelvic fins, then moves in abrupt darts.",
+      "baits": [],
+      "dielPattern": "diurnal",
+      "waterbodyPreference": { "river": 0.8, "stream": 1, "reservoir": -0.3, "lake": 0.2, "pond": -0.6, "bay": -0.5 },
+      "diet": "Small aquatic insect larvae and other bottom-dwelling invertebrates picked from sand, rubble, mud, and vegetation.",
+      "handlingNote": "A small native community fish rather than an angling target. Avoid disturbing rocks or logs used as spawning cover.",
+      "confusedWith": [
+        { "speciesId": "mottled-sculpin", "tell": "Tessellated darter is slender and scaled with W-shaped side marks; mottled sculpin has a broad head, huge pectoral fins, and no scales." }
+      ],
+      "confidence": "reviewed-guide-only",
+      "sourceUrls": [
+        "https://portal.ct.gov/DEEP/Fishing/Freshwater/Freshwater-Fishes-of-Connecticut/Tessellated-Darter",
+        "https://www.mass.gov/info-details/tessellated-darter",
+        "https://nas.er.usgs.gov/queries/factsheet.aspx?SpeciesID=816"
+      ],
+      "notes": "The entry focuses on identification and habitat because tessellated darter is not a hook-and-line target."
+    },
+    {
+      "speciesId": "white-sucker",
+      "guideOnly": true,
+      "family": "Suckers (Catostomidae)",
+      "nativeStatus": "native",
+      "statusNote": "A widespread native coolwater sucker found in streams, rivers, and some lakes.",
+      "typicalMinInches": 8,
+      "typicalMaxInches": 16,
+      "identification": "A cylindrical olive-brown to bronze fish with a pale belly, a blunt snout, and a horizontal fleshy sucker mouth beneath the head. The dorsal and tail fins are slate gray while the lower fins are paler.",
+      "baits": ["small worms", "insect larvae", "dough bait"],
+      "dielPattern": "flexible",
+      "spawnMonths": [3, 4],
+      "waterbodyPreference": { "river": 0.8, "stream": 1, "reservoir": 0.4, "lake": 0.5, "pond": 0, "bay": -0.6 },
+      "diet": "A generalist bottom feeder that selects immature aquatic insects, fish eggs, and other small invertebrates from sediment and debris.",
+      "handlingNote": "Suckers are native food-web links, not trash fish. Check water-specific consumption advice and release unwanted fish promptly.",
+      "confusedWith": [
+        { "speciesId": "northern-hogsucker", "tell": "White sucker is more cylindrical and plain; northern hogsucker has a much larger blocky head and dark saddle marks." },
+        { "speciesId": "shorthead-redhorse", "tell": "White sucker is generally plainer with less colorful fins; shorthead redhorse has coarse scales, a shorter head, and often reddish lower fins." }
+      ],
+      "confidence": "reviewed-guide-only",
+      "sourceUrls": [
+        "https://www.mass.gov/info-details/white-sucker",
+        "https://mdc.mo.gov/discover-nature/field-guide/white-sucker"
+      ],
+      "notes": "The profile does not infer local abundance. White sucker can occur across a wide range of stream conditions."
+    },
+    {
+      "speciesId": "yellow-bullhead",
+      "guideOnly": true,
+      "family": "North American catfishes (Ictaluridae)",
+      "nativeStatus": "native",
+      "statusNote": "A native bullhead of soft-bottom pools, sluggish backwaters, ponds, and reservoirs.",
+      "typicalMinInches": 7,
+      "typicalMaxInches": 13,
+      "identification": "An olive to yellow-brown bullhead with white or yellow chin barbels and a rounded or nearly straight tail. The pale chin whiskers are the quickest separation from brown bullhead.",
+      "baits": ["nightcrawlers", "crayfish", "cut fish", "chicken liver"],
+      "dielPattern": "nocturnal",
+      "spawnMonths": [5, 6],
+      "waterbodyPreference": { "river": 0.6, "stream": 0.8, "reservoir": 0.7, "lake": 0.6, "pond": 0.8, "bay": 0.2 },
+      "diet": "Crayfish, mussels, aquatic insects, fish and fish eggs; adults also take snails, small crustaceans, and some plant material.",
+      "handlingNote": "Avoid the sharp dorsal and pectoral spines. Keep the fish behind the spines while unhooking and check local consumption advisories before harvest.",
+      "primaryTechniquesBySeason": {
+        "warm": "Fish a small bottom rig near leaf packs, woody cover, and soft-bottom pools during the early evening or after dark."
+      },
+      "confusedWith": [
+        { "speciesId": "brown-bullhead", "tell": "Yellow bullhead has pale white-to-yellow chin barbels; brown bullhead has dark chin barbels and usually mottled sides." }
+      ],
+      "confidence": "reviewed-guide-only",
+      "sourceUrls": [
+        "https://www.dnr.sc.gov/fish/species/yellowbullhead.html",
+        "https://mdc.mo.gov/discover-nature/field-guide/yellow-bullhead"
+      ],
+      "notes": "Bullhead bites are strongly associated with low light and bottom-oriented presentation, but no BiteMap condition score is generated for this species."
+    },
+    {
+      "speciesId": "white-catfish",
+      "guideOnly": true,
+      "family": "North American catfishes (Ictaluridae)",
+      "nativeStatus": "native",
+      "statusNote": "A native Atlantic-slope catfish that tolerates tidal fresh and brackish water better than most local catfishes.",
+      "typicalMinInches": 10,
+      "typicalMaxInches": 14,
+      "identification": "A compact catfish with a broad head, white chin barbels, a dark back over pale sides, and a tail that is rounded or only shallowly forked. Channel and blue catfish have much more deeply forked tails.",
+      "baits": ["worms", "shrimp", "chicken liver", "cut fish", "prepared catfish bait"],
+      "dielPattern": "flexible",
+      "waterbodyPreference": { "river": 0.9, "stream": 0.2, "reservoir": 0.5, "lake": 0.4, "pond": 0.2, "bay": 1 },
+      "diet": "Fish are favored, but white catfish also eat aquatic insect larvae, crustaceans, fish eggs, and aquatic plants.",
+      "handlingNote": "The dorsal and pectoral spines can puncture skin. Check tidal-river consumption advisories before keeping a fish for the table.",
+      "primaryTechniquesBySeason": {
+        "warm": "Bottom-fish sluggish channels, tidal holes, backwaters, and mud-bottom pools with fresh bait; moving water around a tide change can reposition fish."
+      },
+      "confusedWith": [
+        { "speciesId": "channel-catfish", "tell": "White catfish has a broad head and a rounded to shallowly forked tail; channel catfish has a distinctly deep fork and usually scattered dark spots when young." },
+        { "speciesId": "blue-catfish", "tell": "Blue catfish has a deeply forked tail and a long straight-edged anal fin; white catfish has a much shallower tail fork and a shorter, rounded anal fin." }
+      ],
+      "confidence": "reviewed-guide-only",
+      "sourceUrls": [
+        "https://fishspecies.dnrec.delaware.gov/FishSpecies.aspx?habitat=1&species=60",
+        "https://www.fws.gov/sites/default/files/documents/Ecological-Risk-Screening-Summary-White_catfish.pdf"
+      ],
+      "notes": "This is the most estuary-oriented of BiteMap's guide-only catfishes; do not transfer its habitat preference to inland ponds."
+    },
+    {
+      "speciesId": "gizzard-shad",
+      "guideOnly": true,
+      "family": "Thread herrings (Dorosomatidae)",
+      "nativeStatus": "native",
+      "statusNote": "A native schooling forage fish that connects plankton and detritus to bass, catfish, crappie, birds, and other predators.",
+      "typicalMinInches": 6,
+      "typicalMaxInches": 12,
+      "identification": "A deep, silvery, strongly compressed fish with a blunt snout, a small subterminal mouth, sharp belly scutes, and a long whip-like final dorsal ray. Young fish usually show a dark shoulder spot.",
+      "baits": [],
+      "dielPattern": "crepuscular",
+      "spawnMonths": [5, 6],
+      "waterbodyPreference": { "river": 0.8, "stream": -0.5, "reservoir": 1, "lake": 0.9, "pond": 0.4, "bay": 0.7 },
+      "diet": "Primarily a filter feeder on phytoplankton and zooplankton, with adults also processing algae, plant debris, and organic detritus in a muscular gizzard-like stomach.",
+      "handlingNote": "Gizzard shad are primarily forage, rarely a hook-and-line target. Do not move live shad between waters; they can overpopulate and alter food webs outside their native range.",
+      "confusedWith": [],
+      "confidence": "reviewed-guide-only",
+      "sourceUrls": [
+        "https://nas.er.usgs.gov/queries/factsheet.aspx?SpeciesID=492",
+        "https://www.nps.gov/miss/learn/nature/gizzard-shad-dorosoma-cepedianum.htm",
+        "https://mdc.mo.gov/discover-nature/field-guide/gizzard-shad"
+      ],
+      "notes": "Shad abundance strongly affects predator fisheries, but this guide record is not a direct baitfish-density measurement at any BiteMap access point."
+    }
+  ]
+}

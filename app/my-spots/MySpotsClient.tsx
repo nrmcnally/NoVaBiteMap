@@ -6,6 +6,7 @@ import { useCallback, useEffect, useState } from "react";
 import { locationById, speciesById } from "../lib/data";
 import { opportunityFor } from "../lib/scoring";
 import { googleDirectionsUrl } from "../lib/travel";
+import type { ExploreCatalog } from "../lib/api";
 
 export type FavoriteView = {
   id: number;
@@ -14,7 +15,7 @@ export type FavoriteView = {
   preferredSpecies: string | null;
 };
 
-export function MySpotsClient({ initialFavorites }: { initialFavorites: FavoriteView[] }) {
+export function MySpotsClient({ initialFavorites, catalog }: { initialFavorites: FavoriteView[]; catalog: ExploreCatalog | null }) {
   const [favorites, setFavorites] = useState(initialFavorites);
   const [loading, setLoading] = useState(false);
 
@@ -67,7 +68,7 @@ export function MySpotsClient({ initialFavorites }: { initialFavorites: Favorite
   return (
     <section className="favorite-grid" aria-busy={loading}>
       {favorites.map((favorite) => {
-        const location = locationById(favorite.locationId);
+        const location = catalog?.locations.find((item) => item.id === favorite.locationId) ?? locationById(favorite.locationId);
         if (!location) return null;
         const evidence = favorite.preferredSpecies ? opportunityFor(location, favorite.preferredSpecies) : null;
         return (
@@ -77,7 +78,7 @@ export function MySpotsClient({ initialFavorites }: { initialFavorites: Favorite
             <p>{location.waterbody}</p>
             <div className="favorite-score">
               <strong>{evidence?.score ?? "—"}</strong>
-              <span>{favorite.preferredSpecies ? speciesById(favorite.preferredSpecies)?.name : "Choose a target"}<br />{location.bestWindow}</span>
+              <span>{favorite.preferredSpecies ? catalog?.species.find((item) => item.id === favorite.preferredSpecies)?.name ?? speciesById(favorite.preferredSpecies)?.name : "Choose a target"}<br />{location.bestWindow}</span>
             </div>
             <div className="favorite-card-actions">
               <a href={googleDirectionsUrl(location)} target="_blank" rel="noreferrer"><Navigation size={15} /> Directions</a>

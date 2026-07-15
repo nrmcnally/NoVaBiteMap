@@ -31,7 +31,8 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import type { FormEvent, ReactNode } from "react";
 import { FishingMap } from "./FishingMap";
 import { consumptionAdviceFor } from "../lib/advisories";
-import { locations, targetSpecies as species, speciesById, type AccessMethod, type WaterbodyType } from "../lib/data";
+import { locations as bundledLocations, targetSpecies as bundledSpecies, speciesById as bundledSpeciesById, type AccessMethod, type WaterbodyType } from "../lib/data";
+import type { ExploreCatalog } from "../lib/api";
 import { opportunityFor } from "../lib/scoring";
 import { estimateTravel, googleDirectionsUrl, type TravelOrigin } from "../lib/travel";
 
@@ -104,7 +105,13 @@ const harvestOptions: { value: HarvestFilter; label: string; detail: string }[] 
   { value: "keep-and-eat", label: "Keep-and-eat mode", detail: "Requires no matching VDH restriction for the selected species and no boundary check." },
 ];
 
-export function ExploreDashboard() {
+export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }) {
+  const locations = catalog?.locations ?? bundledLocations;
+  const species = catalog?.species ?? bundledSpecies;
+  const speciesById = useCallback(
+    (id: string) => species.find((item) => item.id === id) ?? bundledSpeciesById(id),
+    [species],
+  );
   const [speciesIds, setSpeciesIds] = useState<string[]>([]);
   const [query, setQuery] = useState("");
   const [access, setAccess] = useState<AccessMethod | "any">("any");
@@ -144,7 +151,7 @@ export function ExploreDashboard() {
         ].join(" ").toLowerCase();
         return haystack.includes(normalized);
       });
-  }, [access, harvestFilter, origin, query, speciesIds, stockedOnly, timeFilter, waterbodyTypes]);
+  }, [access, harvestFilter, origin, query, speciesById, speciesIds, stockedOnly, timeFilter, waterbodyTypes, locations]);
 
   const ranked = useMemo(() => {
     return visibleRows
@@ -163,7 +170,7 @@ export function ExploreDashboard() {
       })
       .filter((row) => Boolean(row.opportunity))
       .sort((a, b) => (b.opportunity!.score - a.opportunity!.score) || (b.matches.length - a.matches.length));
-  }, [speciesIds, visibleRows]);
+  }, [speciesById, speciesIds, visibleRows]);
 
   useEffect(() => {
     if (speciesIds.length === 0) return;
@@ -184,12 +191,12 @@ export function ExploreDashboard() {
   const speciesHealth = useMemo(() => new Map(species.map((fish) => {
     const bestScore = Math.max(0, ...visibleRows.map(({ location }) => opportunityFor(location, fish.id)?.score ?? 0));
     return [fish.id, bestScore] as const;
-  })), [visibleRows]);
+  })), [species, visibleRows]);
 
   const waterTypeCounts = useMemo(() => new Map(waterTypeOptions.map((option) => [
     option.value,
     locations.filter((location) => location.waterbodyType === option.value).length,
-  ])), []);
+  ])), [locations]);
 
   const selectedSpeciesLabel = selectedSpecies.length === 0
     ? "Choose fish species"
@@ -238,7 +245,7 @@ export function ExploreDashboard() {
       }
     }, 0);
     return () => window.clearTimeout(timer);
-  }, []);
+  }, [speciesById]);
 
   // Close any open top-of-page filter dropdown when clicking/pressing outside it
   // or pressing Escape. Selections inside a menu keep it open (multi-select).
@@ -407,7 +414,7 @@ export function ExploreDashboard() {
     } else {
       setToast(`${location.name} is verified public access, but no species has cleared the evidence gate yet.`);
     }
-  }, [speciesIds]);
+  }, [locations, speciesIds]);
 
   return (
     <main className="explore-shell">

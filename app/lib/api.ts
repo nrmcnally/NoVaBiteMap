@@ -6,6 +6,8 @@
  * fetchApi returns null rather than throwing, and UI falls back to the
  * evidence facts already bundled with the page.
  */
+import type { FishingLocation, Species } from "./data";
+
 export function apiBaseUrl(): string | null {
   const explicit =
     typeof process !== "undefined" && process.env
@@ -156,4 +158,19 @@ export type WhatsBitingResponse = {
 
 export function fetchWhatsBiting(locationId: string, live = false): Promise<WhatsBitingResponse | null> {
   return fetchApi<WhatsBitingResponse>(`/api/locations/${encodeURIComponent(locationId)}/species?live=${live}`);
+}
+
+export type ExploreCatalog = {
+  dataSource: "canonical-api";
+  species: Species[];
+  locations: FishingLocation[];
+  counts: { species: number; locations: number };
+};
+
+export function fetchExploreCatalog(): Promise<ExploreCatalog | null> {
+  return fetchApi<ExploreCatalog>("/api/explore", { signal: AbortSignal.timeout(8000) });
+}
+
+export function fetchLocation(locationId: string): Promise<FishingLocation | null> {
+  return fetchApi<FishingLocation>(`/api/locations/${encodeURIComponent(locationId)}`);
 }

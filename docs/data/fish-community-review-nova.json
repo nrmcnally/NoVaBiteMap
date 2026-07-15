@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-07-14",
+    "generated": "2026-07-15",
     "locationCount": 196,
     "guessReliantLocationCount": 132,
     "policy": "Candidates never affect rankings until finalVerdict is approved after exact-water, species, date, provenance, contradiction, and access review.",
@@ -59372,7 +59372,7 @@
           "lastObserved": "2006-09-08",
           "recency": {
             "band": "historical-over-10-years",
-            "ageYears": 19.8
+            "ageYears": 19.9
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder",

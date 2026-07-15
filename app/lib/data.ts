@@ -41,6 +41,17 @@ export type SpeciesEvidence = {
   modeled?: boolean;
 };
 
+export type CanonicalOpportunity = {
+  score: number;
+  confidence: number;
+  confidenceLabel: "High" | "Moderate" | "Low";
+  availability: number;
+  quality: number | null;
+  activity: number;
+  accessFit: number;
+  evidence: SpeciesEvidence;
+};
+
 export type FishingLocation = {
   id: string;
   name: string;
@@ -73,6 +84,10 @@ export type FishingLocation = {
     planUrl: string;
   };
   consumptionAdvisory: ConsumptionAdvisory;
+  /** Present when this row came from the canonical FastAPI/PostgreSQL runtime. */
+  runtimeSource?: "canonical-api";
+  /** Database-scored opportunities keyed by species id. */
+  opportunities?: Record<string, CanonicalOpportunity>;
 };
 
 export type FishingLocationSeed = Omit<FishingLocation, "consumptionAdvisory">;

@@ -141,10 +141,10 @@ these should relax the private-property exclusion.
 
 ### Flagged follow-ups (honesty / sourcing constraints)
 
-- [ ] **Fish photos.** Data model + UI are ready (attribution fields, placeholder-
-  free). Actual images are deferred: each asset needs individual public-domain /
-  compatible-license verification (USFWS, Wikimedia) and a file download. Do a
-  curated batch once approved.
+- [x] **Fish photos.** All 37 guide species now have a locally optimized,
+  individually license-reviewed public-domain image with visible attribution.
+  Documentary federal photos were preferred; identification-grade government
+  artwork is used where it presents the fish more clearly.
 - [ ] **Real last-stock dates.** Ingest the DWR recently-stocked-trout feed so the
   drawer can show actual dates instead of the designation only.
 - [ ] **Remaining prompt waters.** Bull Run proper, Goose Creek, Broad Run,
@@ -155,8 +155,9 @@ these should relax the private-property exclusion.
 - [ ] Link species names in the Explore results/filters to `/fish/[id]`.
 
 Still open: scheduled ingestion + admin UI rewire, account recovery/email
-verification for a wider beta, and search/map depth. Frontend still reads `data.ts` for the
-single-species outlook; full migration to the API is in progress.
+verification for a wider beta, and search/map depth. Explore rankings, spot base
+records, and My Spots cards now prefer the canonical API/database and use the
+bundled evidence snapshot only as an explicit local/hosted fallback.
 
 ## P0 — close Phase 1
 
@@ -179,6 +180,8 @@ single-species outlook; full migration to the API is in progress.
 
 ### Phase 1 coverage and release QA
 
+- [x] Move Explore rankings, spot base records, and saved-spot card lookups onto
+  one canonical FastAPI payload while preserving an honest bundled fallback.
 - [ ] Audit map coverage around Arlington, Alexandria, Fairfax, Loudoun, and
   Prince William for missing public access points and accidental geographic
   clustering.
@@ -245,7 +248,7 @@ search results.
 - [x] Productive natural baits, artificial lures/flies, presentations, retrieve
   styles, tackle guidance, and shore/wade/boat considerations.
 - [x] Conservation, handling, invasive-species, and ethical-release notes.
-- [ ] Official Virginia regulation links with a reminder that rules vary by
+- [x] Official Virginia regulation links with a reminder that rules vary by
   water, season, size, and harvest method.
 - [x] A map/list of locations where BiteMap has qualifying evidence for the fish,
   plus current top opportunities with confidence shown.
@@ -253,18 +256,18 @@ search results.
 
 ### Fish imagery and licensing
 
-- [ ] Prefer accurate documentary photographs over generated identification
-  images.
-- [ ] Use only public-domain or explicitly compatible licensed images; verify the
+- [x] Prefer accurate documentary photographs over generated identification
+  images; use identification-grade agency artwork where it is clearer.
+- [x] Use only public-domain or explicitly compatible licensed images; verify the
   license on each individual asset rather than assuming an entire site is free.
 - [ ] Store creator, source URL, license name/version, license URL, modification
   status, and required attribution alongside every image.
-- [ ] Consider USFWS or other government media when the individual asset is
+- [x] Consider USFWS or other government media when the individual asset is
   confirmed public domain, and Wikimedia Commons when the individual file's
   license and attribution requirements are compatible.
-- [ ] Download and optimize approved assets instead of depending on fragile
+- [x] Download and optimize approved assets instead of depending on fragile
   third-party hotlinks.
-- [ ] Add descriptive alt text and a visible photo credit/license link.
+- [x] Add descriptive alt text and a visible photo credit/license link.
 
 ### Fish-page data model
 
@@ -273,9 +276,9 @@ search results.
 - [x] Model seasonal bite factors separately from live observations so air
   temperature is never mislabeled as water temperature.
 - [x] Add structured techniques, baits, habitats, and citations.
-- [ ] Add licensed media records after individual image-license review.
+- [x] Add licensed media records after individual image-license review.
 - [ ] Add content-review status and reviewed-at fields for safe editorial updates.
-- [ ] Add API and rendered-contract tests for missing profiles, missing images,
+- [x] Add API and rendered-contract tests for missing profiles, missing images,
   attribution, citations, and species-to-location links.
 
 ## P2 — follow-on improvements
@@ -291,7 +294,8 @@ search results.
 
 1. Finish access verification and the exact-water candidate review queue.
 2. Finish scheduled ingestion, persistence, audit history, and fallbacks.
-3. Move the remaining frontend data reads to the canonical API; the standalone
-   email/password and favorites journey is now unified.
+3. **Completed for the alpha journeys:** Explore rankings, spot base records,
+   and My Spots cards prefer the canonical API; Fish Guide reference content
+   intentionally remains bundled and versioned for offline fallback.
 4. Complete end-to-end release QA, then add licensed photography species by
    species.

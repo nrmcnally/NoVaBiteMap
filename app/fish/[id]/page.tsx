@@ -29,6 +29,7 @@ export default async function FishPage({ params }: FishPageProps) {
   const habitat = facts?.habitat ?? local.habitat ?? null;
   const image = fishImageFor(id);
   const topWaters = locations;
+  const guideOnly = !local.targetable;
 
   return (
     <div className="app-frame detail-page">
@@ -54,7 +55,7 @@ export default async function FishPage({ params }: FishPageProps) {
           {image && (
             <figure className="fish-hero-photo">
               <img src={image.src} alt={name} />
-              <figcaption>{image.credit} · {image.license}</figcaption>
+              <figcaption><a href={image.sourceUrl} target="_blank" rel="noreferrer">{image.credit}</a> · {image.license}</figcaption>
             </figure>
           )}
         </header>
@@ -87,13 +88,13 @@ export default async function FishPage({ params }: FishPageProps) {
 
             {facts ? (
               <article>
-                <div className="section-heading"><div><span className="eyebrow">Field guide</span><h2>Conditions, size &amp; presentation</h2></div></div>
+                <div className="section-heading"><div><span className="eyebrow">Field guide</span><h2>{guideOnly ? "Biology, size & habitat" : "Conditions, size & presentation"}</h2></div></div>
                 <div className="fish-viz-row">
-                  <SeasonalChart data={facts.seasonalActivityByMonth} />
+                  <SeasonalChart data={facts.seasonalActivityByMonth} guideOnly={guideOnly} />
                   <TempGauge preferred={facts.preferredTempF} tolerance={facts.toleranceTempF} />
                   <WaterTypeFit pref={facts.waterbodyPreference} />
                 </div>
-                <FishFactsPanel facts={facts} variant="page" />
+                <FishFactsPanel facts={facts} variant="page" guideOnly={guideOnly} />
                 {facts.diet && <p className="fish-diet"><Fish size={13} /> <strong>Diet:</strong> {facts.diet}</p>}
               </article>
             ) : (
@@ -105,7 +106,7 @@ export default async function FishPage({ params }: FishPageProps) {
 
             {facts && (facts.techniquesBySeason.cold || facts.techniquesBySeason.cool || facts.techniquesBySeason.warm) && (
               <article className="fish-technique-card">
-                <div className="section-heading"><div><span className="eyebrow">Seasonal approach</span><h2>How to target it through the year</h2></div></div>
+                <div className="section-heading"><div><span className="eyebrow">Seasonal approach</span><h2>{guideOnly ? "How anglers encounter it" : "How to target it through the year"}</h2></div></div>
                 <div className="fish-season-columns">
                   {facts.techniquesBySeason.cold && <div><h3>Cold water</h3><p>{facts.techniquesBySeason.cold}</p></div>}
                   {facts.techniquesBySeason.cool && <div><h3>Cool water</h3><p>{facts.techniquesBySeason.cool}</p></div>}
@@ -125,7 +126,7 @@ export default async function FishPage({ params }: FishPageProps) {
           <aside className="detail-aside">
             <section>
               <div className="fish-where-heading">
-                <div><span className="eyebrow">Where to fish for it</span><h2>{locations.length > 0 ? `${locations.length} evidenced water${locations.length === 1 ? "" : "s"}` : "No evidenced waters yet"}</h2></div>
+                <div><span className="eyebrow">{guideOnly ? "Where it has evidence" : "Where to fish for it"}</span><h2>{locations.length > 0 ? `${locations.length} evidenced water${locations.length === 1 ? "" : "s"}` : "No evidenced waters yet"}</h2></div>
                 {locations.length > 0 && local.targetable && <Link className="see-on-map" href={`/?species=${id}`}>See on map <ArrowRight size={13} /></Link>}
               </div>
               {topWaters.length > 0 ? (

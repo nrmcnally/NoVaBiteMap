@@ -30,14 +30,10 @@ export async function POST(request: Request) {
       notes?: string;
       accessMethod?: string;
     };
-    if (!body.locationId || !locationById(body.locationId)) {
-      return Response.json({ error: "A valid verified location is required." }, { status: 400 });
-    }
-    if (body.preferredSpecies && !speciesById(body.preferredSpecies)) {
-      return Response.json({ error: "Unknown species." }, { status: 400 });
-    }
-
     if (accountBackend() === "api") {
+      if (!body.locationId) {
+        return Response.json({ error: "A location is required." }, { status: 400 });
+      }
       const token = await passwordSessionToken();
       if (!token) return Response.json({ error: "Sign in required." }, { status: 401 });
       const response = await passwordApiRequest("/api/users/me/favorites", {
@@ -56,6 +52,13 @@ export async function POST(request: Request) {
       }
       const favorite = normalizePasswordFavorite(await response.json());
       return Response.json({ favorite }, { status: 201 });
+    }
+
+    if (!body.locationId || !locationById(body.locationId)) {
+      return Response.json({ error: "A valid verified location is required." }, { status: 400 });
+    }
+    if (body.preferredSpecies && !speciesById(body.preferredSpecies)) {
+      return Response.json({ error: "Unknown species." }, { status: 400 });
     }
 
     const [{ getDb }, { savedLocations }] = await Promise.all([

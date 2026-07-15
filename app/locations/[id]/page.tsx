@@ -23,6 +23,7 @@ import { LocationIntelligence } from "../../components/LocationIntelligence";
 import { WhatsBiting, type KnownSpecies } from "../../components/WhatsBiting";
 import { consumptionAdviceFor } from "../../lib/advisories";
 import { locationById, sourceLinks, speciesById } from "../../lib/data";
+import { fetchLocation } from "../../lib/api";
 import { estimatedHourlyScores, opportunityFor } from "../../lib/scoring";
 import { googleDirectionsUrl } from "../../lib/travel";
 
@@ -31,7 +32,7 @@ type LocationPageProps = { params: Promise<{ id: string }>; searchParams: Promis
 export default async function LocationPage({ params, searchParams }: LocationPageProps) {
   const { id } = await params;
   const { species: speciesQuery } = await searchParams;
-  const location = locationById(id);
+  const location = await fetchLocation(id) ?? locationById(id);
   if (!location) notFound();
 
   const advisorySpeciesIds = (speciesQuery ?? "").split(",").filter((speciesId) => Boolean(speciesById(speciesId)));
@@ -45,17 +46,34 @@ export default async function LocationPage({ params, searchParams }: LocationPag
   const target = primaryEvidence ? speciesById(primaryEvidence.speciesId) : null;
   const hourly = opportunity ? estimatedHourlyScores(opportunity.score) : [];
 
-  const knownSpecies: KnownSpecies[] = location.evidence.map((evidence) => ({
-    speciesId: evidence.speciesId,
-    name: speciesById(evidence.speciesId)?.name ?? evidence.speciesId,
-    evidenceType: evidence.evidenceType,
-    availability: evidence.availability,
-    evidenceSummary: evidence.evidenceSummary,
-    lastEvidence: evidence.lastEvidence,
-    modeled: evidence.evidenceType === "modeled" || (evidence.sourceName ?? "").toLowerCase().includes("aquatic gap"),
-    sourceName: evidence.sourceName,
-    sourceUrl: evidence.sourceUrl,
-  }));
+  const knownSpecies: KnownSpecies[] = Array.from(
+    location.evidence.reduce((bySpecies, evidence) => {
+      const fish = speciesById(evidence.speciesId);
+      const modeled = evidence.modeled === true
+        || evidence.evidenceType === "modeled"
+        || (evidence.sourceName ?? "").toLowerCase().includes("aquatic gap");
+      const candidate: KnownSpecies = {
+        speciesId: evidence.speciesId,
+        name: fish?.name ?? evidence.speciesId,
+        scientificName: fish?.scientificName,
+        targetable: fish?.targetable ?? false,
+        evidenceType: evidence.evidenceType,
+        availability: evidence.availability,
+        evidenceSummary: evidence.evidenceSummary,
+        lastEvidence: evidence.lastEvidence,
+        modeled,
+        sourceName: evidence.sourceName,
+        sourceUrl: evidence.sourceUrl,
+      };
+      const current = bySpecies.get(evidence.speciesId);
+      // Prefer direct documentation over modeled evidence, then keep the
+      // strongest record. One fish should appear only once in the spot guide.
+      if (!current || (current.modeled && !modeled) || (current.modeled === modeled && candidate.availability > current.availability)) {
+        bySpecies.set(evidence.speciesId, candidate);
+      }
+      return bySpecies;
+    }, new Map<string, KnownSpecies>()),
+  ).map(([, fish]) => fish).sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <div className="app-frame detail-page">

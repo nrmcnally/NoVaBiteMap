@@ -3,7 +3,8 @@ import { TopNav } from "../components/TopNav";
 import { FishGlossaryClient, type GlossaryFish } from "../components/FishGlossaryClient";
 import { locations, species, targetSpecies } from "../lib/data";
 import { fishImageFor } from "../lib/fish-images";
-import { profileFor, topWaterTypes } from "../lib/species-profiles";
+import { guideProfileFor, topWaterTypes } from "../lib/species-profiles";
+import { familyGroup } from "../lib/fish-taxonomy";
 
 export const metadata = {
   title: "Fish guide — BiteMap NOVA",
@@ -14,15 +15,10 @@ function evidenceCount(speciesId: string): number {
   return locations.filter((location) => location.evidence.some((e) => e.speciesId === speciesId)).length;
 }
 
-// Trim the parenthetical scientific family for a compact grouping label.
-function shortFamily(family?: string): string {
-  if (!family) return "Other";
-  return family.replace(/\s*\(.*\)$/, "").split("/")[0].trim();
-}
-
 export default function FishGuidePage() {
   const fish: GlossaryFish[] = species.map((item) => {
-    const profile = profileFor(item.id);
+    const profile = guideProfileFor(item.id);
+    const family = profile?.family ?? item.family;
     const size =
       profile?.typicalMinInches && profile?.typicalMaxInches
         ? `${profile.typicalMinInches}–${profile.typicalMaxInches} in`
@@ -32,8 +28,8 @@ export default function FishGuidePage() {
       name: item.name,
       scientificName: item.scientificName,
       habitat: item.habitat,
-      family: profile?.family ?? "",
-      familyShort: shortFamily(profile?.family),
+      family: family ?? "",
+      familyShort: familyGroup(family),
       nativeStatus: (profile?.nativeStatus as GlossaryFish["nativeStatus"]) ?? null,
       typicalSize: size,
       topWater: topWaterTypes(profile),

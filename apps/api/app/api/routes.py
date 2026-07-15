@@ -96,6 +96,56 @@ def _station_name(session: Session, station_id: str | None) -> str | None:
     return station.name if station else None
 
 
+def _canonical_opportunities(
+    session: Session,
+    record: FishingLocationRecord,
+    *,
+    profiles: dict[str, dict] | None = None,
+    names: dict[str, SpeciesRecord] | None = None,
+) -> dict[str, dict]:
+    """Explore-ready scores from the same database engine used by detail pages."""
+    scored = opp.score_location_species(session, record, profiles=profiles, names=names)
+    opportunities: dict[str, dict] = {}
+    for item in scored["species"]:
+        species_id = item["speciesId"]
+        records = [evidence for evidence in record.evidence if evidence.species_id == species_id]
+        if not records:
+            continue
+        primary = max(records, key=lambda evidence: evidence.availability)
+        opportunities[species_id] = {
+            "score": item["opportunity_score"],
+            "confidence": item["confidence_score"],
+            "confidenceLabel": item["confidence_label"],
+            "availability": item["availability_score"],
+            "quality": item["fishery_quality_score"],
+            "activity": item["activity_score"] if item["activity_score"] is not None else record.activity_estimate,
+            "accessFit": record.access_fit,
+            "evidence": serializers.evidence_out(primary),
+        }
+    return opportunities
+
+
+def _runtime_location(
+    session: Session,
+    record: FishingLocationRecord,
+    *,
+    profiles: dict[str, dict] | None = None,
+    names: dict[str, SpeciesRecord] | None = None,
+) -> dict:
+    association = opp.get_association(session, record.id)
+    payload = serializers.location_detail(
+        record,
+        stocking=_stocking(session, record.id),
+        association=association,
+        station_name=_station_name(session, association.station_id if association else None),
+    )
+    payload["runtimeSource"] = "canonical-api"
+    payload["opportunities"] = _canonical_opportunities(
+        session, record, profiles=profiles, names=names
+    )
+    return payload
+
+
 # ---------------------------------------------------------------------------
 # Auth dependency
 # ---------------------------------------------------------------------------
@@ -118,6 +168,41 @@ def current_user(
 def list_species(session: Session = Depends(get_session)) -> list[dict]:
     rows = session.scalars(select(SpeciesRecord).order_by(SpeciesRecord.common_name)).all()
     return [serializers.species_out(r) for r in rows]
+
+
+@router.get("/explore")
+def explore_catalog(session: Session = Depends(get_session)) -> dict:
+    """One canonical payload for the map, filters, scores, and saved-spot cards."""
+    profiles = opp.load_active_profiles(session)
+    names = opp.species_names(session)
+    rows = session.scalars(
+        select(FishingLocationRecord)
+        .where(FishingLocationRecord.public_access == True)  # noqa: E712
+        .order_by(FishingLocationRecord.name)
+    ).all()
+    target_species = [record for record in names.values() if record.id in profiles]
+    target_species.sort(key=lambda record: record.common_name)
+    species_payload = [
+        {
+            "id": record.id,
+            "name": record.common_name,
+            "scientificName": record.scientific_name,
+            "short": record.species_code,
+            "habitat": record.habitat or "Habitat guidance pending review",
+            "targetable": True,
+        }
+        for record in target_species
+    ]
+    locations = [
+        _runtime_location(session, record, profiles=profiles, names=names)
+        for record in rows
+    ]
+    return {
+        "dataSource": "canonical-api",
+        "species": species_payload,
+        "locations": locations,
+        "counts": {"species": len(species_payload), "locations": len(locations)},
+    }
 
 
 @router.get("/species/search")
@@ -269,11 +354,7 @@ def nearby_locations(
 @router.get("/locations/{location_id}")
 def location_detail(location_id: str, session: Session = Depends(get_session)) -> dict:
     record = get_location(session, location_id)
-    association = opp.get_association(session, location_id)
-    station_name = _station_name(session, association.station_id if association else None)
-    return serializers.location_detail(
-        record, stocking=_stocking(session, location_id), association=association, station_name=station_name
-    )
+    return _runtime_location(session, record)
 
 
 @router.get("/locations/{location_id}/species")

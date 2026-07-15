@@ -1,20 +1,17 @@
-import type { FishingLocation, SpeciesEvidence } from "./data";
+import type { CanonicalOpportunity, FishingLocation } from "./data";
 
-export type Opportunity = {
-  score: number;
-  confidence: number;
-  confidenceLabel: "High" | "Moderate" | "Low";
-  availability: number;
-  quality: number | null;
-  activity: number;
-  accessFit: number;
-  evidence: SpeciesEvidence;
-};
+export type Opportunity = CanonicalOpportunity;
 
 export function opportunityFor(
   location: FishingLocation,
   speciesId: string,
 ): Opportunity | null {
+  const canonical = location.opportunities?.[speciesId];
+  if (canonical) return canonical;
+  // Never silently recompute a different score for a canonical API row. If the
+  // backend did not offer this species, it did not clear the evidence gate.
+  if (location.runtimeSource === "canonical-api") return null;
+
   const evidence = location.evidence.find((item) => item.speciesId === speciesId);
   if (!evidence || evidence.availability < 0.35) return null;
 
@@ -57,4 +54,3 @@ export function estimatedHourlyScores(base: number) {
     score: Math.max(0, Math.min(100, base + offsets[index])),
   }));
 }
-
