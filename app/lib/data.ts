@@ -2,7 +2,7 @@ import { coverageLocations } from "./coverage-data";
 import { advisoryForLocation, vdhAdvisoryIndexUrl, type ConsumptionAdvisory } from "./advisories";
 import { hydrologyForLocation, type HydrologyAssociation } from "./hydrology";
 import { aquaticGapEvidenceForLocation, troutLocations } from "./public-evidence";
-import { dwrAccessLocations, likelyPresentFor, nhdParkWaterLocations, nhdStreamLocations, promotedEvidenceFor, waterbodySpeciesFor } from "./expanded-coverage";
+import { dwrAccessLocations, likelyPresentFor, nhdParkWaterLocations, nhdStreamLocations, promotedEvidenceFor, waterbodyCommunityFor, waterbodySpeciesFor } from "./expanded-coverage";
 import evidenceRejections from "./generated/evidence-rejections.json";
 
 export type AccessMethod = "shore" | "wade" | "kayak" | "boat";
@@ -693,16 +693,22 @@ export const locations: FishingLocation[] = sourcedLocations.map((location) => {
     .filter((candidate) => evidenceAllowed(location.id, candidate))
     .filter((candidate) => !has(withAdvisory, candidate.speciesId));
   const documented = [...withAdvisory, ...aquaticGapEvidence];
+  // Same-waterbody completion: fill species documented on this shared water (river/
+  // reservoir) at other access points but missing here, so one water reads consistently.
+  const communityEvidence = waterbodyCommunityFor(location)
+    .filter((candidate) => evidenceAllowed(location.id, candidate))
+    .filter((candidate) => !has(documented, candidate.speciesId));
+  const withCommunity = [...documented, ...communityEvidence];
   // Only when a water has no documented evidence at all, add honest, cited
   // "likely present" species (same-waterbody / downstream connectivity /
   // subwatershed survey records). Waters with no real basis stay empty.
-  const inferred = documented.length === 0 ? likelyPresentFor(location) : [];
+  const inferred = withCommunity.length === 0 ? likelyPresentFor(location) : [];
   const hydrology = hydrologyForLocation(location.id);
   return {
     ...location,
     accessStatus: location.accessStatus ?? "verified",
     flowStatus: hydrology ? `USGS ${hydrology.stationId} linked · live reading on details` : location.flowStatus,
-    evidence: [...documented, ...inferred],
+    evidence: [...withCommunity, ...inferred],
     hydrology,
     consumptionAdvisory: advisoryForLocation(location),
   };

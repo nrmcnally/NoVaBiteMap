@@ -4,6 +4,7 @@ import nhdStreamsPayload from "./generated/nhd-streams-nova.json";
 import waterbodySpeciesPayload from "./generated/waterbody-species-nova.json";
 import likelyPresentPayload from "./generated/likely-present-nova.json";
 import promotedEvidencePayload from "./generated/promoted-evidence-nova.json";
+import waterbodyCommunityPayload from "./generated/waterbody-community-nova.json";
 import type { AccessMethod, FishingLocationSeed, SpeciesEvidence, WaterbodyType } from "./data";
 
 type DwrAccessSite = {
@@ -399,6 +400,42 @@ const promotedByLocation = (promotedEvidencePayload as { byLocation: Record<stri
 
 export function promotedEvidenceFor(locationId: string): SpeciesEvidence[] {
   return (promotedByLocation[locationId] ?? []) as SpeciesEvidence[];
+}
+
+// ---------------------------------------------------------------------------
+// Same-waterbody community (#3: no species overlooked). Access points on one river/
+// reservoir share that water's documented fish; this fills the species a given point
+// is missing, from scripts/build-waterbody-community.mjs. Labeled as the shared-water
+// listing, not an exact-point survey; only direct agency evidence ever propagates.
+// ---------------------------------------------------------------------------
+type WbCommunity = { waterbody: string; species: { speciesId: string; availability: number; quality: number | null; evidenceType: string; sourceName: string | null; sourceUrl: string | null }[] };
+const wbCommunity = (waterbodyCommunityPayload as { byWaterbody: Record<string, WbCommunity> }).byWaterbody;
+const normWbKey = (w: string) => (w || "").toLowerCase()
+  .replace(/\bn\.?\s+fork\b/g, "north fork").replace(/\bs\.?\s+fork\b/g, "south fork")
+  .replace(/\be\.?\s+fork\b/g, "east fork").replace(/\bw\.?\s+fork\b/g, "west fork")
+  .replace(/[^a-z0-9]+/g, " ").replace(/\s+/g, " ").trim();
+
+export function waterbodyCommunityFor(location: Pick<FishingLocationSeed, "waterbody">): SpeciesEvidence[] {
+  const community = wbCommunity[normWbKey(location.waterbody)];
+  if (!community) return [];
+  return community.species.map((s) => ({
+    speciesId: s.speciesId,
+    availability: Math.round((s.availability ?? 0.5) * 0.9 * 100) / 100,
+    quality: s.quality ?? null,
+    evidenceConfidence: 0.72,
+    // Modeled for THIS point: the species is agency-documented in the shared water,
+    // inferred present at this access point on it (not a survey of the exact point).
+    evidenceType: "modeled" as const,
+    modeled: true,
+    evidenceSummary: `Documented in ${community.waterbody} — the shared water this access point sits on (not a survey at this exact point).`,
+    lastEvidence: "Shared-waterbody community listing",
+    technique: "Match presentation to the species, season, and current conditions",
+    depth: "Work accessible cover and structure first, then probe the first depth change",
+    positive: [`${s.speciesId.replace(/-/g, " ")} is documented in ${community.waterbody}`],
+    negative: ["Evidence is the shared-water listing, not a survey at this exact access point"],
+    sourceName: s.sourceName ?? undefined,
+    sourceUrl: s.sourceUrl ?? undefined,
+  }));
 }
 
 export const expandedCoverageStats = {

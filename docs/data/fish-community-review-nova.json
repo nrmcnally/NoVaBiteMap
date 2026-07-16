@@ -1075,6 +1075,17 @@
           "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R",
           "reviewStatus": "modeled-do-not-promote",
           "review": null
+        },
+        {
+          "speciesId": "striped-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/blog/10-top-virginia-fishing-waters-rivers/",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [],
@@ -2270,6 +2281,182 @@
           "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R",
           "reviewStatus": "modeled-do-not-promote",
           "review": null
+        },
+        {
+          "speciesId": "american-eel",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "black-crappie",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "bluegill",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "channel-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "common-carp",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "fallfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "green-sunfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "mottled-sculpin",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "northern-hogsucker",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "pumpkinseed",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "redbreast-sunfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "rock-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "spotted-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "tessellated-darter",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "yellow-bullhead",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [],
@@ -2335,6 +2522,127 @@
             "verdict": "approved-exact-agency-river-segment-page",
             "limitations": "DWR explicitly documents Catletts Ford, Riverton, and North Fork smallmouth bass. The current harmful-algal-growth notice must remain separate from species presence and should be shown to users."
           }
+        },
+        {
+          "speciesId": "black-crappie",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in North Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "blacknose-dace",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in North Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "bluegill",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in North Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "channel-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in North Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "common-carp",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in North Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in North Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "northern-hogsucker",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in North Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "redbreast-sunfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in North Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "rock-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in North Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "white-sucker",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in North Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "yellow-bullhead",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in North Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [],
@@ -2555,6 +2863,149 @@
             "verdict": "approved-current-official-consumption-advisory-segment",
             "limitations": "The visually reviewed VDH table explicitly names these exact species for the approximately 41-mile lower-forks/main-stem segment and says its recommendations concern fish caught from specified waterbodies. This supports segment-level occurrence, not access-point sampling, abundance, or fishery quality. Generic Sunfish is retained for consumption matching but is not promoted to any exact species."
           }
+        },
+        {
+          "speciesId": "american-eel",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "black-crappie",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "bluegill",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "fallfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "green-sunfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "longnose-dace",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "mottled-sculpin",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "northern-hogsucker",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "pumpkinseed",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "redbreast-sunfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "spotted-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "tessellated-darter",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "yellow-bullhead",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [],
@@ -2643,6 +3094,204 @@
             "verdict": "approved-exact-agency-river-segment-page",
             "limitations": "DWR explicitly documents each named access reach and smallmouth habitat on the South Fork. This approves connected-reach presence, not equal abundance at each ramp."
           }
+        },
+        {
+          "speciesId": "american-eel",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "black-crappie",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "bluegill",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "channel-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "common-carp",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "fallfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "green-sunfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "longnose-dace",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "mottled-sculpin",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "northern-hogsucker",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "pumpkinseed",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "redbreast-sunfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "rock-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "spotted-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "tessellated-darter",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "white-sucker",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "yellow-bullhead",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [],
@@ -3133,6 +3782,72 @@
             "verdict": "approved-current-official-consumption-advisory-segment",
             "limitations": "The visually reviewed VDH table explicitly names these exact species for the approximately 41-mile lower-forks/main-stem segment and says its recommendations concern fish caught from specified waterbodies. This supports segment-level occurrence, not access-point sampling, abundance, or fishery quality. Generic Sunfish is retained for consumption matching but is not promoted to any exact species."
           }
+        },
+        {
+          "speciesId": "black-crappie",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in North Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "blacknose-dace",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in North Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "bluegill",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in North Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "northern-hogsucker",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in North Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "redbreast-sunfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in North Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "yellow-bullhead",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in North Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [],
@@ -3219,6 +3934,204 @@
             "verdict": "approved-exact-agency-river-segment-page",
             "limitations": "DWR explicitly documents each named access reach and smallmouth habitat on the South Fork. This approves connected-reach presence, not equal abundance at each ramp."
           }
+        },
+        {
+          "speciesId": "american-eel",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "black-crappie",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "bluegill",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "channel-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "common-carp",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "fallfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "green-sunfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "longnose-dace",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "mottled-sculpin",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "northern-hogsucker",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "pumpkinseed",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "redbreast-sunfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "rock-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "spotted-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "tessellated-darter",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "white-sucker",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "yellow-bullhead",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [],
@@ -3310,6 +4223,28 @@
             "verdict": "approved-exact-agency-upper-river-reaches",
             "limitations": "DWR explicitly documents Kelly's Ford and Motts Landing in the upper smallmouth/redbreast fishery and identifies Hazel River as a good smallmouth stream. Fredericksburg City Dock is excluded because it lies in the tidal reach below the fall line."
           }
+        },
+        {
+          "speciesId": "channel-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Rappahannock River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-tidal/",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Rappahannock River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-tidal/",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [],
@@ -3377,6 +4312,52 @@
             "verdict": "approved-exact-agency-upper-river-reaches",
             "limitations": "DWR explicitly documents Kelly's Ford and Motts Landing in the upper smallmouth/redbreast fishery and identifies Hazel River as a good smallmouth stream. Fredericksburg City Dock is excluded because it lies in the tidal reach below the fall line."
           }
+        },
+        {
+          "speciesId": "channel-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Rappahannock River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-tidal/",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Rappahannock River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-tidal/",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "redbreast-sunfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Rappahannock River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": {
+            "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/",
+            "locationIds": [
+              "kellys-ford",
+              "motts-landing",
+              "nhd-stream-hazel-river"
+            ],
+            "approvedSpeciesIds": [
+              "smallmouth-bass",
+              "redbreast-sunfish"
+            ],
+            "verdict": "approved-exact-agency-upper-river-reaches",
+            "limitations": "DWR explicitly documents Kelly's Ford and Motts Landing in the upper smallmouth/redbreast fishery and identifies Hazel River as a good smallmouth stream. Fredericksburg City Dock is excluded because it lies in the tidal reach below the fall line."
+          }
         }
       ],
       "agencyObservationCandidates": [],
@@ -3422,11 +4403,44 @@
       "releaseEligible": false,
       "priorAgentClaims": [
         {
+          "speciesId": "channel-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Rappahannock River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-tidal/",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Rappahannock River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-tidal/",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "redbreast-sunfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Rappahannock River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
           "speciesId": "smallmouth-bass",
           "evidenceType": "modeled",
           "modeled": true,
-          "summary": "Documented in Rappahannock River — the same water this access point sits on.",
-          "lastEvidence": "Likely-present model (USGS NLDI river network + USGS Aquatic GAP)",
+          "summary": "Documented in Rappahannock River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
           "sourceName": "Virginia Department of Wildlife Resources",
           "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/",
           "reviewStatus": "modeled-do-not-promote",
@@ -3441,160 +4455,6 @@
             "verdict": "removed-wrong-river-segment",
             "note": "DWR places City Dock in tidal water below the fall line and identifies smallmouth habitat above Fredericksburg. The page does not support an exact City Dock smallmouth claim."
           }
-        },
-        {
-          "speciesId": "redbreast-sunfish",
-          "evidenceType": "modeled",
-          "modeled": true,
-          "summary": "Documented in Rappahannock River — the same water this access point sits on.",
-          "lastEvidence": "Likely-present model (USGS NLDI river network + USGS Aquatic GAP)",
-          "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/",
-          "reviewStatus": "modeled-do-not-promote",
-          "review": null
-        },
-        {
-          "speciesId": "largemouth-bass",
-          "evidenceType": "modeled",
-          "modeled": true,
-          "summary": "Documented in Rappahannock River — the same water this access point sits on.",
-          "lastEvidence": "Likely-present model (USGS NLDI river network + USGS Aquatic GAP)",
-          "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-tidal/",
-          "reviewStatus": "modeled-do-not-promote",
-          "review": null
-        },
-        {
-          "speciesId": "channel-catfish",
-          "evidenceType": "modeled",
-          "modeled": true,
-          "summary": "Documented in Rappahannock River — the same water this access point sits on.",
-          "lastEvidence": "Likely-present model (USGS NLDI river network + USGS Aquatic GAP)",
-          "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-tidal/",
-          "reviewStatus": "modeled-do-not-promote",
-          "review": null
-        },
-        {
-          "speciesId": "american-eel",
-          "evidenceType": "modeled",
-          "modeled": true,
-          "summary": "Recorded at 1 surveyed reach in this subwatershed (USGS Aquatic GAP).",
-          "lastEvidence": "Likely-present model (USGS NLDI river network + USGS Aquatic GAP)",
-          "sourceName": "USGS Aquatic GAP presence/absence database",
-          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R",
-          "reviewStatus": "modeled-do-not-promote",
-          "review": null
-        },
-        {
-          "speciesId": "blacknose-dace",
-          "evidenceType": "modeled",
-          "modeled": true,
-          "summary": "Recorded at 1 surveyed reach in this subwatershed (USGS Aquatic GAP).",
-          "lastEvidence": "Likely-present model (USGS NLDI river network + USGS Aquatic GAP)",
-          "sourceName": "USGS Aquatic GAP presence/absence database",
-          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R",
-          "reviewStatus": "modeled-do-not-promote",
-          "review": null
-        },
-        {
-          "speciesId": "bluegill",
-          "evidenceType": "modeled",
-          "modeled": true,
-          "summary": "Recorded at 1 surveyed reach in this subwatershed (USGS Aquatic GAP).",
-          "lastEvidence": "Likely-present model (USGS NLDI river network + USGS Aquatic GAP)",
-          "sourceName": "USGS Aquatic GAP presence/absence database",
-          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R",
-          "reviewStatus": "modeled-do-not-promote",
-          "review": null
-        },
-        {
-          "speciesId": "brown-bullhead",
-          "evidenceType": "modeled",
-          "modeled": true,
-          "summary": "Recorded at 1 surveyed reach in this subwatershed (USGS Aquatic GAP).",
-          "lastEvidence": "Likely-present model (USGS NLDI river network + USGS Aquatic GAP)",
-          "sourceName": "USGS Aquatic GAP presence/absence database",
-          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R",
-          "reviewStatus": "modeled-do-not-promote",
-          "review": null
-        },
-        {
-          "speciesId": "creek-chub",
-          "evidenceType": "modeled",
-          "modeled": true,
-          "summary": "Recorded at 1 surveyed reach in this subwatershed (USGS Aquatic GAP).",
-          "lastEvidence": "Likely-present model (USGS NLDI river network + USGS Aquatic GAP)",
-          "sourceName": "USGS Aquatic GAP presence/absence database",
-          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R",
-          "reviewStatus": "modeled-do-not-promote",
-          "review": null
-        },
-        {
-          "speciesId": "fallfish",
-          "evidenceType": "modeled",
-          "modeled": true,
-          "summary": "Recorded at 1 surveyed reach in this subwatershed (USGS Aquatic GAP).",
-          "lastEvidence": "Likely-present model (USGS NLDI river network + USGS Aquatic GAP)",
-          "sourceName": "USGS Aquatic GAP presence/absence database",
-          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R",
-          "reviewStatus": "modeled-do-not-promote",
-          "review": null
-        },
-        {
-          "speciesId": "green-sunfish",
-          "evidenceType": "modeled",
-          "modeled": true,
-          "summary": "Recorded at 1 surveyed reach in this subwatershed (USGS Aquatic GAP).",
-          "lastEvidence": "Likely-present model (USGS NLDI river network + USGS Aquatic GAP)",
-          "sourceName": "USGS Aquatic GAP presence/absence database",
-          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R",
-          "reviewStatus": "modeled-do-not-promote",
-          "review": null
-        },
-        {
-          "speciesId": "longnose-dace",
-          "evidenceType": "modeled",
-          "modeled": true,
-          "summary": "Recorded at 1 surveyed reach in this subwatershed (USGS Aquatic GAP).",
-          "lastEvidence": "Likely-present model (USGS NLDI river network + USGS Aquatic GAP)",
-          "sourceName": "USGS Aquatic GAP presence/absence database",
-          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R",
-          "reviewStatus": "modeled-do-not-promote",
-          "review": null
-        },
-        {
-          "speciesId": "tessellated-darter",
-          "evidenceType": "modeled",
-          "modeled": true,
-          "summary": "Recorded at 1 surveyed reach in this subwatershed (USGS Aquatic GAP).",
-          "lastEvidence": "Likely-present model (USGS NLDI river network + USGS Aquatic GAP)",
-          "sourceName": "USGS Aquatic GAP presence/absence database",
-          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R",
-          "reviewStatus": "modeled-do-not-promote",
-          "review": null
-        },
-        {
-          "speciesId": "white-sucker",
-          "evidenceType": "modeled",
-          "modeled": true,
-          "summary": "Recorded at 1 surveyed reach in this subwatershed (USGS Aquatic GAP).",
-          "lastEvidence": "Likely-present model (USGS NLDI river network + USGS Aquatic GAP)",
-          "sourceName": "USGS Aquatic GAP presence/absence database",
-          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R",
-          "reviewStatus": "modeled-do-not-promote",
-          "review": null
-        },
-        {
-          "speciesId": "yellow-bullhead",
-          "evidenceType": "modeled",
-          "modeled": true,
-          "summary": "Recorded at 1 surveyed reach in this subwatershed (USGS Aquatic GAP).",
-          "lastEvidence": "Likely-present model (USGS NLDI river network + USGS Aquatic GAP)",
-          "sourceName": "USGS Aquatic GAP presence/absence database",
-          "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R",
-          "reviewStatus": "modeled-do-not-promote",
-          "review": null
         }
       ],
       "agencyObservationCandidates": [],
@@ -3732,6 +4592,28 @@
           "lastEvidence": "Latest nearby sample 2007-11-09 · USGS release v2.0 (December 2024)",
           "sourceName": "USGS Aquatic GAP presence/absence database",
           "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "redbreast-sunfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Rappahannock River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "smallmouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Rappahannock River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/",
           "reviewStatus": "modeled-do-not-promote",
           "review": null
         }
@@ -4103,6 +4985,17 @@
             "verdict": "approved-shared-official-nontidal-river-page",
             "limitations": "Maryland DNR defines the Upper Potomac as the warmwater nontidal river from Cumberland to Washington, D.C. Presence is approved at the connected river level; densities vary by reach, and Maryland-side regulations must not be presented as universally applicable to Virginia access."
           }
+        },
+        {
+          "speciesId": "striped-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/blog/10-top-virginia-fishing-waters-rivers/",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [],
@@ -5920,6 +6813,72 @@
             "verdict": "approved-shared-dwr-hosted-coastal-potomac-feature",
             "limitations": "The feature explicitly identifies stripers among coastal Potomac target species. Approval is limited to shared river-segment presence; it is not an access-level survey, abundance estimate, or proof of shore catchability. Generic carp is rejected separately."
           }
+        },
+        {
+          "speciesId": "channel-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "flathead-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "muskellunge",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "smallmouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "walleye",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [],
@@ -6059,6 +7018,72 @@
             "verdict": "approved-shared-dwr-hosted-coastal-potomac-feature",
             "limitations": "The feature explicitly identifies stripers among coastal Potomac target species. Approval is limited to shared river-segment presence; it is not an access-level survey, abundance estimate, or proof of shore catchability. Generic carp is rejected separately."
           }
+        },
+        {
+          "speciesId": "channel-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "flathead-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "muskellunge",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "smallmouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "walleye",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [],
@@ -6198,6 +7223,72 @@
             "verdict": "approved-shared-dwr-hosted-coastal-potomac-feature",
             "limitations": "The feature explicitly identifies stripers among coastal Potomac target species. Approval is limited to shared river-segment presence; it is not an access-level survey, abundance estimate, or proof of shore catchability. Generic carp is rejected separately."
           }
+        },
+        {
+          "speciesId": "channel-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "flathead-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "muskellunge",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "smallmouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "walleye",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [],
@@ -6337,6 +7428,72 @@
             "verdict": "approved-shared-dwr-hosted-coastal-potomac-feature",
             "limitations": "The feature explicitly identifies stripers among coastal Potomac target species. Approval is limited to shared river-segment presence; it is not an access-level survey, abundance estimate, or proof of shore catchability. Generic carp is rejected separately."
           }
+        },
+        {
+          "speciesId": "channel-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "flathead-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "muskellunge",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "smallmouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "walleye",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [],
@@ -6476,6 +7633,72 @@
             "verdict": "approved-shared-dwr-hosted-coastal-potomac-feature",
             "limitations": "The feature explicitly identifies stripers among coastal Potomac target species. Approval is limited to shared river-segment presence; it is not an access-level survey, abundance estimate, or proof of shore catchability. Generic carp is rejected separately."
           }
+        },
+        {
+          "speciesId": "channel-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "flathead-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "muskellunge",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "smallmouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "walleye",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [],
@@ -6615,6 +7838,72 @@
             "verdict": "approved-shared-dwr-hosted-coastal-potomac-feature",
             "limitations": "The feature explicitly identifies stripers among coastal Potomac target species. Approval is limited to shared river-segment presence; it is not an access-level survey, abundance estimate, or proof of shore catchability. Generic carp is rejected separately."
           }
+        },
+        {
+          "speciesId": "channel-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "flathead-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "muskellunge",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "smallmouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "walleye",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [],
@@ -6998,6 +8287,72 @@
             "verdict": "approved-shared-dwr-hosted-coastal-potomac-feature",
             "limitations": "The feature explicitly identifies stripers among coastal Potomac target species. Approval is limited to shared river-segment presence; it is not an access-level survey, abundance estimate, or proof of shore catchability. Generic carp is rejected separately."
           }
+        },
+        {
+          "speciesId": "channel-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "flathead-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "muskellunge",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "smallmouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "walleye",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [],
@@ -7137,6 +8492,72 @@
             "verdict": "approved-shared-dwr-hosted-coastal-potomac-feature",
             "limitations": "The feature explicitly identifies stripers among coastal Potomac target species. Approval is limited to shared river-segment presence; it is not an access-level survey, abundance estimate, or proof of shore catchability. Generic carp is rejected separately."
           }
+        },
+        {
+          "speciesId": "channel-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "flathead-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "muskellunge",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "smallmouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "walleye",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [],
@@ -8469,6 +9890,17 @@
           "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R",
           "reviewStatus": "modeled-do-not-promote",
           "review": null
+        },
+        {
+          "speciesId": "striped-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/blog/10-top-virginia-fishing-waters-rivers/",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [],
@@ -8810,6 +10242,17 @@
           "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R",
           "reviewStatus": "modeled-do-not-promote",
           "review": null
+        },
+        {
+          "speciesId": "striped-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/blog/10-top-virginia-fishing-waters-rivers/",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [],
@@ -9063,6 +10506,17 @@
             "verdict": "approved-shared-official-nontidal-river-page",
             "limitations": "Maryland DNR defines the Upper Potomac as the warmwater nontidal river from Cumberland to Washington, D.C. Presence is approved at the connected river level; densities vary by reach, and Maryland-side regulations must not be presented as universally applicable to Virginia access."
           }
+        },
+        {
+          "speciesId": "striped-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/blog/10-top-virginia-fishing-waters-rivers/",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [],
@@ -9818,6 +11272,61 @@
             "verdict": "approved-shared-dwr-hosted-coastal-potomac-feature",
             "limitations": "The feature explicitly identifies stripers among coastal Potomac target species. Approval is limited to shared river-segment presence; it is not an access-level survey, abundance estimate, or proof of shore catchability. Generic carp is rejected separately."
           }
+        },
+        {
+          "speciesId": "channel-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "flathead-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "muskellunge",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "smallmouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "walleye",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [],
@@ -10884,6 +12393,72 @@
             "verdict": "approved-exact-agency-river-page",
             "limitations": "The catalog point is an official access on the named tidal Occoquan River. DWR's generic crappie listing is intentionally excluded from exact-species approval."
           }
+        },
+        {
+          "speciesId": "american-eel",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Occoquan River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/PotomacRiver_2026-1.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "bluegill",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Occoquan River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/PotomacRiver_2026-1.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "common-carp",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Occoquan River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/PotomacRiver_2026-1.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "gizzard-shad",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Occoquan River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/PotomacRiver_2026-1.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "smallmouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Occoquan River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/PotomacRiver_2026-1.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "white-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Occoquan River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/PotomacRiver_2026-1.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [],
@@ -11128,6 +12703,17 @@
             "verdict": "approved-shared-official-nontidal-river-page",
             "limitations": "Maryland DNR defines the Upper Potomac as the warmwater nontidal river from Cumberland to Washington, D.C. Presence is approved at the connected river level; densities vary by reach, and Maryland-side regulations must not be presented as universally applicable to Virginia access."
           }
+        },
+        {
+          "speciesId": "striped-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Potomac River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/blog/10-top-virginia-fishing-waters-rivers/",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [],
@@ -12559,6 +14145,83 @@
           "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Happy%20Creek%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27B%27",
           "reviewStatus": "corroborated-by-approved-agency-record",
           "review": null
+        },
+        {
+          "speciesId": "blacknose-dace",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Happy Creek — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "bluegill",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Happy Creek — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "creek-chub",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Happy Creek — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "longnose-dace",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Happy Creek — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "northern-hogsucker",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Happy Creek — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "rock-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Happy Creek — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "white-sucker",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Happy Creek — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [],
@@ -13493,6 +15156,50 @@
           "lastEvidence": "Latest nearby sample 1998-08-25 · USGS release v2.0 (December 2024)",
           "sourceName": "USGS Aquatic GAP presence/absence database",
           "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "black-crappie",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "common-carp",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "fallfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "spotted-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
           "reviewStatus": "modeled-do-not-promote",
           "review": null
         }
@@ -15209,6 +16916,28 @@
             "verdict": "approved-exact-agency-observation",
             "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
           }
+        },
+        {
+          "speciesId": "black-crappie",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "common-carp",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [
@@ -17093,6 +18822,17 @@
           "lastEvidence": "Latest nearby sample 1998-08-26 · USGS release v2.0 (December 2024)",
           "sourceName": "USGS Aquatic GAP presence/absence database",
           "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "common-carp",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
           "reviewStatus": "modeled-do-not-promote",
           "review": null
         }
@@ -19015,6 +20755,17 @@
             "verdict": "approved-exact-agency-observation",
             "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
           }
+        },
+        {
+          "speciesId": "common-carp",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [
@@ -20804,6 +22555,28 @@
             "verdict": "approved-exact-agency-observation",
             "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
           }
+        },
+        {
+          "speciesId": "common-carp",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in North Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "white-sucker",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in North Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [
@@ -23256,6 +25029,28 @@
             "verdict": "approved-exact-agency-observation",
             "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
           }
+        },
+        {
+          "speciesId": "common-carp",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in North Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "white-sucker",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in North Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [
@@ -24147,6 +25942,28 @@
             "verdict": "approved-exact-agency-observation",
             "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
           }
+        },
+        {
+          "speciesId": "common-carp",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in North Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "white-sucker",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in North Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [
@@ -25384,6 +27201,28 @@
             "verdict": "approved-exact-agency-observation",
             "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
           }
+        },
+        {
+          "speciesId": "black-crappie",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "common-carp",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [
@@ -27136,6 +28975,39 @@
             "verdict": "approved-exact-agency-observation",
             "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
           }
+        },
+        {
+          "speciesId": "brook-trout",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Rapidan River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "brown-bullhead",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Rapidan River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "creek-chub",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Rapidan River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [
@@ -28939,6 +30811,17 @@
           "sourceUrl": "https://doi.org/10.5066/P9FZ6J6R",
           "reviewStatus": "modeled-do-not-promote",
           "review": null
+        },
+        {
+          "speciesId": "common-carp",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [
@@ -30633,6 +32516,72 @@
             "verdict": "approved-exact-agency-observation",
             "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
           }
+        },
+        {
+          "speciesId": "blacknose-dace",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Rapidan River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "brook-trout",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Rapidan River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "brown-bullhead",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Rapidan River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "creek-chub",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Rapidan River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "mottled-sculpin",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Rapidan River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "pumpkinseed",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Rapidan River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [
@@ -31866,6 +33815,28 @@
             "verdict": "approved-exact-agency-observation",
             "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
           }
+        },
+        {
+          "speciesId": "common-carp",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in North Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "white-sucker",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in North Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [
@@ -33159,6 +35130,17 @@
             "verdict": "approved-exact-agency-observation",
             "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
           }
+        },
+        {
+          "speciesId": "common-carp",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [
@@ -35023,6 +37005,28 @@
             "verdict": "approved-exact-agency-observation",
             "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
           }
+        },
+        {
+          "speciesId": "black-crappie",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "common-carp",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [
@@ -36888,6 +38892,17 @@
             "verdict": "approved-exact-agency-observation",
             "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
           }
+        },
+        {
+          "speciesId": "common-carp",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [
@@ -38752,6 +40767,28 @@
             "verdict": "approved-exact-agency-observation",
             "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
           }
+        },
+        {
+          "speciesId": "black-crappie",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "common-carp",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [
@@ -40617,6 +42654,17 @@
             "verdict": "approved-exact-agency-observation",
             "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
           }
+        },
+        {
+          "speciesId": "common-carp",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in South Fork Shenandoah River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [
@@ -45440,7 +47488,7 @@
           "lastObserved": "2006-08-03",
           "recency": {
             "band": "historical-over-10-years",
-            "ageYears": 19.9
+            "ageYears": 20
           },
           "observerTypes": [
             "professional biologists, could include pesonnel from several organizations including DGIF"
@@ -61598,6 +63646,17 @@
             "verdict": "approved-exact-agency-observation",
             "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
           }
+        },
+        {
+          "speciesId": "brook-trout",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Happy Creek — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Happy%20Creek%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27B%27",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [
@@ -81923,7 +83982,7 @@
           "lastObserved": "2023-08-03",
           "recency": {
             "band": "recent-0-to-5-years",
-            "ageYears": 2.9
+            "ageYears": 3
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder",
@@ -81990,7 +84049,7 @@
           "lastObserved": "2023-08-03",
           "recency": {
             "band": "recent-0-to-5-years",
-            "ageYears": 2.9
+            "ageYears": 3
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder",
@@ -84491,6 +86550,50 @@
             "verdict": "approved-exact-agency-observation",
             "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
           }
+        },
+        {
+          "speciesId": "bluegill",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Rapidan River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "gizzard-shad",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Rapidan River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Rapidan River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "yellow-bullhead",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Documented in Rapidan River — the shared water this access point sits on (not a survey at this exact point).",
+          "lastEvidence": "Shared-waterbody community listing",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
         }
       ],
       "agencyObservationCandidates": [
@@ -94544,7 +96647,7 @@
           "lastObserved": "2000-06-27",
           "recency": {
             "band": "historical-over-10-years",
-            "ageYears": 26
+            "ageYears": 26.1
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder"
@@ -94738,7 +96841,7 @@
           "lastObserved": "2000-06-27",
           "recency": {
             "band": "historical-over-10-years",
-            "ageYears": 26
+            "ageYears": 26.1
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder",
@@ -94804,7 +96907,7 @@
           "lastObserved": "2000-06-27",
           "recency": {
             "band": "historical-over-10-years",
-            "ageYears": 26
+            "ageYears": 26.1
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder",
@@ -94870,7 +96973,7 @@
           "lastObserved": "2000-06-27",
           "recency": {
             "band": "historical-over-10-years",
-            "ageYears": 26
+            "ageYears": 26.1
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder"
@@ -94934,7 +97037,7 @@
           "lastObserved": "2000-06-27",
           "recency": {
             "band": "historical-over-10-years",
-            "ageYears": 26
+            "ageYears": 26.1
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder",
@@ -95000,7 +97103,7 @@
           "lastObserved": "2000-06-27",
           "recency": {
             "band": "historical-over-10-years",
-            "ageYears": 26
+            "ageYears": 26.1
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder"

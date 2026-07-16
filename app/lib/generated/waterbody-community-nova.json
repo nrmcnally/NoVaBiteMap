@@ -1,0 +1,874 @@
+{
+  "meta": {
+    "waterbodies": 10,
+    "speciesRecords": 102
+  },
+  "byWaterbody": {
+    "potomac river": {
+      "waterbody": "Potomac River",
+      "species": [
+        {
+          "speciesId": "channel-catfish",
+          "availability": 0.8,
+          "quality": 0.6,
+          "evidenceType": "official listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
+        },
+        {
+          "speciesId": "flathead-catfish",
+          "availability": 0.72,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "availability": 0.72,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
+        },
+        {
+          "speciesId": "muskellunge",
+          "availability": 0.8,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
+        },
+        {
+          "speciesId": "smallmouth-bass",
+          "availability": 0.9,
+          "quality": 0.85,
+          "evidenceType": "official listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
+        },
+        {
+          "speciesId": "striped-bass",
+          "availability": 0.75,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/blog/10-top-virginia-fishing-waters-rivers/"
+        },
+        {
+          "speciesId": "walleye",
+          "availability": 0.85,
+          "quality": 0.75,
+          "evidenceType": "official listing",
+          "sourceName": "Maryland Department of Natural Resources",
+          "sourceUrl": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx"
+        }
+      ]
+    },
+    "shenandoah river": {
+      "waterbody": "Shenandoah River",
+      "species": [
+        {
+          "speciesId": "channel-catfish",
+          "availability": 0.7,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+        },
+        {
+          "speciesId": "common-carp",
+          "availability": 0.7,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "availability": 0.7,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+        },
+        {
+          "speciesId": "rock-bass",
+          "availability": 0.7,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+        },
+        {
+          "speciesId": "smallmouth-bass",
+          "availability": 0.91,
+          "quality": 0.78,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-main-stem/"
+        },
+        {
+          "speciesId": "walleye",
+          "availability": 0.74,
+          "quality": 0.63,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-main-stem/"
+        },
+        {
+          "speciesId": "white-sucker",
+          "availability": 0.7,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+        }
+      ]
+    },
+    "south fork shenandoah river": {
+      "waterbody": "South Fork Shenandoah River",
+      "species": [
+        {
+          "speciesId": "american-eel",
+          "availability": 0.54,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "black-crappie",
+          "availability": 0.46,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "bluegill",
+          "availability": 0.62,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "channel-catfish",
+          "availability": 0.7,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+        },
+        {
+          "speciesId": "common-carp",
+          "availability": 0.7,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+        },
+        {
+          "speciesId": "fallfish",
+          "availability": 0.46,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "green-sunfish",
+          "availability": 0.54,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "availability": 0.7,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+        },
+        {
+          "speciesId": "longnose-dace",
+          "availability": 0.54,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "mottled-sculpin",
+          "availability": 0.62,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "northern-hogsucker",
+          "availability": 0.62,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "pumpkinseed",
+          "availability": 0.46,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "redbreast-sunfish",
+          "availability": 0.62,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "rock-bass",
+          "availability": 0.7,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+        },
+        {
+          "speciesId": "smallmouth-bass",
+          "availability": 0.91,
+          "quality": 0.78,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-south-fork/"
+        },
+        {
+          "speciesId": "spotted-bass",
+          "availability": 0.46,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "tessellated-darter",
+          "availability": 0.54,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "white-sucker",
+          "availability": 0.7,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+        },
+        {
+          "speciesId": "yellow-bullhead",
+          "availability": 0.54,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        }
+      ]
+    },
+    "north fork shenandoah river": {
+      "waterbody": "North Fork Shenandoah River",
+      "species": [
+        {
+          "speciesId": "black-crappie",
+          "availability": 0.46,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "blacknose-dace",
+          "availability": 0.46,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "bluegill",
+          "availability": 0.62,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "channel-catfish",
+          "availability": 0.7,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+        },
+        {
+          "speciesId": "common-carp",
+          "availability": 0.7,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "availability": 0.7,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+        },
+        {
+          "speciesId": "northern-hogsucker",
+          "availability": 0.62,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "redbreast-sunfish",
+          "availability": 0.62,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "rock-bass",
+          "availability": 0.7,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+        },
+        {
+          "speciesId": "smallmouth-bass",
+          "availability": 0.91,
+          "quality": 0.78,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/shenandoah-river-north-fork/"
+        },
+        {
+          "speciesId": "white-sucker",
+          "availability": 0.7,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/2025/06/ShenandoahRiver_2025.pdf"
+        },
+        {
+          "speciesId": "yellow-bullhead",
+          "availability": 0.62,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        }
+      ]
+    },
+    "rappahannock river": {
+      "waterbody": "Rappahannock River",
+      "species": [
+        {
+          "speciesId": "channel-catfish",
+          "availability": 0.7,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-tidal/"
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "availability": 0.72,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-tidal/"
+        },
+        {
+          "speciesId": "redbreast-sunfish",
+          "availability": 0.72,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/"
+        },
+        {
+          "speciesId": "smallmouth-bass",
+          "availability": 0.85,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/"
+        }
+      ]
+    },
+    "occoquan reservoir": {
+      "waterbody": "Occoquan Reservoir",
+      "species": [
+        {
+          "speciesId": "black-crappie",
+          "availability": 0.8,
+          "quality": 0.75,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+        },
+        {
+          "speciesId": "bluegill",
+          "availability": 0.79,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Prince William County Parks",
+          "sourceUrl": "https://www.pwcva.gov/department/parks-recreation/fishing/"
+        },
+        {
+          "speciesId": "channel-catfish",
+          "availability": 0.85,
+          "quality": 0.6,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+        },
+        {
+          "speciesId": "flathead-catfish",
+          "availability": 0.8,
+          "quality": 0.85,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "availability": 0.9,
+          "quality": 0.9,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+        },
+        {
+          "speciesId": "white-crappie",
+          "availability": 0.8,
+          "quality": 0.75,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+        },
+        {
+          "speciesId": "white-perch",
+          "availability": 0.75,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-reservoir/"
+        },
+        {
+          "speciesId": "yellow-perch",
+          "availability": 0.7,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Occoquan-Reservoir-Fisheries-Management-Report-2022.pdf"
+        }
+      ]
+    },
+    "occoquan river": {
+      "waterbody": "Occoquan River",
+      "species": [
+        {
+          "speciesId": "american-eel",
+          "availability": 0.7,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/PotomacRiver_2026-1.pdf"
+        },
+        {
+          "speciesId": "bluegill",
+          "availability": 0.7,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/PotomacRiver_2026-1.pdf"
+        },
+        {
+          "speciesId": "channel-catfish",
+          "availability": 0.75,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
+        },
+        {
+          "speciesId": "common-carp",
+          "availability": 0.7,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/PotomacRiver_2026-1.pdf"
+        },
+        {
+          "speciesId": "flathead-catfish",
+          "availability": 0.75,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
+        },
+        {
+          "speciesId": "gizzard-shad",
+          "availability": 0.7,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/PotomacRiver_2026-1.pdf"
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "availability": 0.76,
+          "quality": 0.6,
+          "evidenceType": "official listing",
+          "sourceName": "NOVA Parks",
+          "sourceUrl": "https://www.novaparks.com/parks/occoquan-regional-park/things-to-do/fishing"
+        },
+        {
+          "speciesId": "smallmouth-bass",
+          "availability": 0.7,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/PotomacRiver_2026-1.pdf"
+        },
+        {
+          "speciesId": "striped-bass",
+          "availability": 0.75,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
+        },
+        {
+          "speciesId": "white-catfish",
+          "availability": 0.7,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/content/uploads/sites/20/PotomacRiver_2026-1.pdf"
+        },
+        {
+          "speciesId": "white-perch",
+          "availability": 0.75,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
+        },
+        {
+          "speciesId": "yellow-perch",
+          "availability": 0.75,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dwr.virginia.gov/waterbody/occoquan-river/"
+        }
+      ]
+    },
+    "passage creek": {
+      "waterbody": "Passage Creek",
+      "species": [
+        {
+          "speciesId": "brook-trout",
+          "availability": 0.84,
+          "quality": null,
+          "evidenceType": "stocking",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Passage%20Creek%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27A%27"
+        },
+        {
+          "speciesId": "brown-trout",
+          "availability": 0.84,
+          "quality": null,
+          "evidenceType": "stocking",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Passage%20Creek%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27A%27"
+        },
+        {
+          "speciesId": "rainbow-trout",
+          "availability": 0.84,
+          "quality": null,
+          "evidenceType": "stocking",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Passage%20Creek%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27A%27"
+        }
+      ]
+    },
+    "happy creek": {
+      "waterbody": "Happy Creek",
+      "species": [
+        {
+          "speciesId": "blacknose-dace",
+          "availability": 0.46,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "bluegill",
+          "availability": 0.46,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "brook-trout",
+          "availability": 0.84,
+          "quality": null,
+          "evidenceType": "stocking",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Happy%20Creek%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27B%27"
+        },
+        {
+          "speciesId": "brown-trout",
+          "availability": 0.84,
+          "quality": null,
+          "evidenceType": "stocking",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Happy%20Creek%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27B%27"
+        },
+        {
+          "speciesId": "creek-chub",
+          "availability": 0.46,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "longnose-dace",
+          "availability": 0.46,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "northern-hogsucker",
+          "availability": 0.46,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "rainbow-trout",
+          "availability": 0.84,
+          "quality": null,
+          "evidenceType": "stocking",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=441ed456c8664166bb735b1db6024e48&query=Trout_App_2637,WATERBODY=%27Happy%20Creek%27%20AND%20Designation=%27PNT%27%20AND%20StockSched=%27B%27"
+        },
+        {
+          "speciesId": "rock-bass",
+          "availability": 0.62,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "white-sucker",
+          "availability": 0.62,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        }
+      ]
+    },
+    "rapidan river": {
+      "waterbody": "Rapidan River",
+      "species": [
+        {
+          "speciesId": "american-eel",
+          "availability": 0.54,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "blacknose-dace",
+          "availability": 0.46,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "bluegill",
+          "availability": 0.54,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "brook-trout",
+          "availability": 0.74,
+          "quality": null,
+          "evidenceType": "official listing",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Wild_Trout_Streams/FeatureServer/0"
+        },
+        {
+          "speciesId": "brown-bullhead",
+          "availability": 0.46,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "creek-chub",
+          "availability": 0.46,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "fallfish",
+          "availability": 0.54,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "gizzard-shad",
+          "availability": 0.54,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "green-sunfish",
+          "availability": 0.54,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "availability": 0.54,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "longnose-dace",
+          "availability": 0.46,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "mottled-sculpin",
+          "availability": 0.46,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "northern-hogsucker",
+          "availability": 0.54,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "pumpkinseed",
+          "availability": 0.46,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "redbreast-sunfish",
+          "availability": 0.54,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "rock-bass",
+          "availability": 0.54,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "smallmouth-bass",
+          "availability": 0.54,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "tessellated-darter",
+          "availability": 0.54,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "white-sucker",
+          "availability": 0.46,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        },
+        {
+          "speciesId": "yellow-bullhead",
+          "availability": 0.46,
+          "quality": null,
+          "evidenceType": "agency survey",
+          "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+        }
+      ]
+    }
+  }
+}
