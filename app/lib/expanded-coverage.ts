@@ -438,6 +438,48 @@ export function waterbodyCommunityFor(location: Pick<FishingLocationSeed, "water
   }));
 }
 
+// ---------------------------------------------------------------------------
+// FCPA "watershed-typical" tier. The Fairfax County Park Authority "Parks with
+// Small Lakes" page describes the Pohick Watershed lakes as holding "a standard mix
+// of bass, sunfish, crappie, carp and catfish." For the Pohick lakes with no
+// lake-specific survey anywhere, surface that agency statement as a clearly-labeled,
+// modeled, group-mapped tier — never presented as a survey of the specific lake.
+// (Royal Lake is excluded: its documented record is a fish-save that relocated fish
+// OUT, and those species are in the rejection ledger.)
+// ---------------------------------------------------------------------------
+const POHICK_FCPA_LAKES = new Set(["lake-mercer", "woodglen-lake"]);
+const FCPA_SMALL_LAKES_URL = "https://www.fairfaxcounty.gov/parks/small-lakes";
+const FCPA_TYPICAL: Array<{ group: string; speciesId: string }> = [
+  { group: "bass", speciesId: "largemouth-bass" },
+  { group: "sunfish", speciesId: "bluegill" },
+  { group: "crappie", speciesId: "black-crappie" },
+  { group: "carp", speciesId: "common-carp" },
+  { group: "catfish", speciesId: "channel-catfish" },
+];
+
+export function fcpaWatershedTypicalFor(location: Pick<FishingLocationSeed, "id" | "name">): SpeciesEvidence[] {
+  if (!POHICK_FCPA_LAKES.has(location.id)) return [];
+  return FCPA_TYPICAL.map(({ group, speciesId }) => ({
+    speciesId,
+    availability: 0.42,
+    quality: null,
+    evidenceConfidence: 0.5,
+    evidenceType: "modeled" as const,
+    modeled: true,
+    evidenceSummary: `Watershed-typical — Fairfax County Park Authority describes the Pohick Watershed lakes as holding "a standard mix of bass, sunfish, crappie, carp and catfish." Not a survey of ${location.name} specifically.`,
+    lastEvidence: "FCPA Parks with Small Lakes (watershed-typical characterization)",
+    technique: "Work shoreline cover and the first depth change with a compact natural presentation",
+    depth: "Shoreline cover early, then the first drop-off",
+    positive: [`FCPA describes ${group} among the Pohick Watershed lakes' standard mix`],
+    negative: [
+      `FCPA names the group ("${group}"), not the exact species — the standard Fairfax county-lake species is shown`,
+      "A watershed-level characterization, not a survey of this specific lake",
+    ],
+    sourceName: "Fairfax County Park Authority",
+    sourceUrl: FCPA_SMALL_LAKES_URL,
+  } as SpeciesEvidence));
+}
+
 export const expandedCoverageStats = {
   dwrAccessSites: dwrSites.length,
   dwrRetrieved: dwrMeta.retrieved,

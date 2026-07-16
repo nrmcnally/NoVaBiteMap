@@ -6724,7 +6724,63 @@
       },
       "evidenceQueue": "no-direct-candidate-found",
       "releaseEligible": false,
-      "priorAgentClaims": [],
+      "priorAgentClaims": [
+        {
+          "speciesId": "largemouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Watershed-typical — Fairfax County Park Authority describes the Pohick Watershed lakes as holding \"a standard mix of bass, sunfish, crappie, carp and catfish.\" Not a survey of Lake Mercer specifically.",
+          "lastEvidence": "FCPA Parks with Small Lakes (watershed-typical characterization)",
+          "sourceName": "Fairfax County Park Authority",
+          "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "bluegill",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Watershed-typical — Fairfax County Park Authority describes the Pohick Watershed lakes as holding \"a standard mix of bass, sunfish, crappie, carp and catfish.\" Not a survey of Lake Mercer specifically.",
+          "lastEvidence": "FCPA Parks with Small Lakes (watershed-typical characterization)",
+          "sourceName": "Fairfax County Park Authority",
+          "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "black-crappie",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Watershed-typical — Fairfax County Park Authority describes the Pohick Watershed lakes as holding \"a standard mix of bass, sunfish, crappie, carp and catfish.\" Not a survey of Lake Mercer specifically.",
+          "lastEvidence": "FCPA Parks with Small Lakes (watershed-typical characterization)",
+          "sourceName": "Fairfax County Park Authority",
+          "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "common-carp",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Watershed-typical — Fairfax County Park Authority describes the Pohick Watershed lakes as holding \"a standard mix of bass, sunfish, crappie, carp and catfish.\" Not a survey of Lake Mercer specifically.",
+          "lastEvidence": "FCPA Parks with Small Lakes (watershed-typical characterization)",
+          "sourceName": "Fairfax County Park Authority",
+          "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "channel-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Watershed-typical — Fairfax County Park Authority describes the Pohick Watershed lakes as holding \"a standard mix of bass, sunfish, crappie, carp and catfish.\" Not a survey of Lake Mercer specifically.",
+          "lastEvidence": "FCPA Parks with Small Lakes (watershed-typical characterization)",
+          "sourceName": "Fairfax County Park Authority",
+          "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        }
+      ],
       "agencyObservationCandidates": [],
       "agencyHabitatCandidates": [],
       "agencyStockingCandidates": [],
@@ -6757,7 +6813,63 @@
       },
       "evidenceQueue": "no-direct-candidate-found",
       "releaseEligible": false,
-      "priorAgentClaims": [],
+      "priorAgentClaims": [
+        {
+          "speciesId": "largemouth-bass",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Watershed-typical — Fairfax County Park Authority describes the Pohick Watershed lakes as holding \"a standard mix of bass, sunfish, crappie, carp and catfish.\" Not a survey of Woodglen Lake Park specifically.",
+          "lastEvidence": "FCPA Parks with Small Lakes (watershed-typical characterization)",
+          "sourceName": "Fairfax County Park Authority",
+          "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "bluegill",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Watershed-typical — Fairfax County Park Authority describes the Pohick Watershed lakes as holding \"a standard mix of bass, sunfish, crappie, carp and catfish.\" Not a survey of Woodglen Lake Park specifically.",
+          "lastEvidence": "FCPA Parks with Small Lakes (watershed-typical characterization)",
+          "sourceName": "Fairfax County Park Authority",
+          "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "black-crappie",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Watershed-typical — Fairfax County Park Authority describes the Pohick Watershed lakes as holding \"a standard mix of bass, sunfish, crappie, carp and catfish.\" Not a survey of Woodglen Lake Park specifically.",
+          "lastEvidence": "FCPA Parks with Small Lakes (watershed-typical characterization)",
+          "sourceName": "Fairfax County Park Authority",
+          "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "common-carp",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Watershed-typical — Fairfax County Park Authority describes the Pohick Watershed lakes as holding \"a standard mix of bass, sunfish, crappie, carp and catfish.\" Not a survey of Woodglen Lake Park specifically.",
+          "lastEvidence": "FCPA Parks with Small Lakes (watershed-typical characterization)",
+          "sourceName": "Fairfax County Park Authority",
+          "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        },
+        {
+          "speciesId": "channel-catfish",
+          "evidenceType": "modeled",
+          "modeled": true,
+          "summary": "Watershed-typical — Fairfax County Park Authority describes the Pohick Watershed lakes as holding \"a standard mix of bass, sunfish, crappie, carp and catfish.\" Not a survey of Woodglen Lake Park specifically.",
+          "lastEvidence": "FCPA Parks with Small Lakes (watershed-typical characterization)",
+          "sourceName": "Fairfax County Park Authority",
+          "sourceUrl": "https://www.fairfaxcounty.gov/parks/small-lakes",
+          "reviewStatus": "modeled-do-not-promote",
+          "review": null
+        }
+      ],
       "agencyObservationCandidates": [],
       "agencyHabitatCandidates": [],
       "agencyStockingCandidates": [],

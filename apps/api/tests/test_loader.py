@@ -23,13 +23,13 @@ def test_seed_counts_match_audited_dataset(seeded_db):
     with SessionLocal() as s:
         assert s.scalar(select(func.count()).select_from(FishingLocationRecord)) == 196
         assert s.scalar(select(func.count()).select_from(SpeciesRecord)) == 37
-        assert s.scalar(select(func.count()).select_from(SpeciesEvidenceRecord)) == 1428
+        assert s.scalar(select(func.count()).select_from(SpeciesEvidenceRecord)) == 1438
         assert s.scalar(select(func.count()).select_from(SpeciesScoringProfile)) == 20
         assert s.scalar(select(func.count()).select_from(StockingRecord)) == 13
         assert s.scalar(select(func.count()).select_from(LocationStationAssociation)) == 19
-        # 168 of 196 waters carry evidence; the rest honestly have none (the retired
+        # 170 of 196 waters carry evidence; the rest honestly have none (the retired
         # county/basin guess used to fill all 196).
-        assert s.scalar(select(func.count(func.distinct(SpeciesEvidenceRecord.location_id)))) == 168
+        assert s.scalar(select(func.count(func.distinct(SpeciesEvidenceRecord.location_id)))) == 170
 
 
 def test_reseed_is_idempotent(seeded_db):
@@ -48,7 +48,7 @@ def test_modeled_evidence_flagged_and_records_a_run(seeded_db):
         modeled = s.scalar(
             select(func.count()).select_from(SpeciesEvidenceRecord).where(SpeciesEvidenceRecord.modeled == True)  # noqa: E712
         )
-        assert modeled == 325
+        assert modeled == 335
         runs = s.scalars(select(DataIngestionRun)).all()
         assert any(r.status == "success" for r in runs)
         assert all(r.checksum for r in runs if r.status == "success")
