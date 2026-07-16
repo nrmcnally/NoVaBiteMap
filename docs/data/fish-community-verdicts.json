@@ -2892,6 +2892,24 @@
         "currentPresenceClaimed": false,
         "accessSeparatelyReviewed": true
       }
+    },
+    {
+      "claimId": "vdh-mason-neck-channel-catfish",
+      "locationId": "mason-neck",
+      "speciesId": "channel-catfish",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "publicationYear": 2026,
+      "sourceName": "Virginia Department of Health",
+      "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+      "summary": "VDH active consumption advisory for the tidal Occoquan/Belmont Bay segment sets a channel-catfish-specific, length-based restriction - documenting channel catfish presence in this water.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
     }
   ],
   "contradictionReviews": [

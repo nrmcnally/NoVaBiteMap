@@ -8,8 +8,8 @@ Generated 2026-07-15. This is a review queue, not runtime evidence.
 - 1 have exact-water agency records only for community fish without a reviewed target profile
 - 37 have no exact-water primary-source candidate and still require another source
 
-- 72 exact-water claims across 45 locations have passed the first adversarial source review
-- 1102 prior-agent claims already present in runtime are now independently verified or corroborated
+- 73 exact-water claims across 46 locations have passed the first adversarial source review
+- 1103 prior-agent claims already present in runtime are now independently verified or corroborated
 - 105 unsupported prior-agent claims have been removed or rejected
 - 0 live direct claims still need adversarial re-verification
 - 0 live direct claims are missing a source URL

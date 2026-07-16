@@ -4,10 +4,10 @@
     "reviewed": "2026-07-14",
     "wildTroutReachesApproved": 20,
     "wildTroutClaims": 22,
-    "manualClaims": 15,
+    "manualClaims": 16,
     "vafwisClaims": 860,
     "anadromousClaims": 3,
-    "locations": 93
+    "locations": 94
   },
   "byLocation": {
     "dwr-boat-102": [
@@ -5865,6 +5865,27 @@
         ],
         "sourceName": "Fairfax County Park Authority",
         "sourceUrl": "https://www.fairfaxcounty.gov/parks/sites/parks/files/assets/documents/fishing/fishing-report-101320.pdf"
+      }
+    ],
+    "mason-neck": [
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "VDH active consumption advisory for the tidal Occoquan/Belmont Bay segment sets a channel-catfish-specific, length-based restriction - documenting channel catfish presence in this water.",
+        "lastEvidence": "Virginia Department of Health (2026) — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "VDH active consumption advisory for the tidal Occoquan/Belmont Bay segment sets a channel-catfish-specific, length-based restriction - documenting channel catfish presence in this water."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia Department of Health",
+        "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/"
       }
     ],
     "nhd-stream-accokeek-creek": [

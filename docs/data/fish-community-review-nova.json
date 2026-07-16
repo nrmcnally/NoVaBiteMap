@@ -31,9 +31,9 @@
       "targetCandidateLocationCount": 0,
       "nonTargetOnlyLocationCount": 1,
       "noCandidateLocationCount": 37,
-      "approvedClaimCount": 72,
-      "approvedClaimLocationCount": 45,
-      "verifiedRuntimeClaimCount": 1102,
+      "approvedClaimCount": 73,
+      "approvedClaimLocationCount": 46,
+      "verifiedRuntimeClaimCount": 1103,
       "removedOrRejectedPriorClaimCount": 105,
       "unverifiedRuntimeDirectClaimCount": 0,
       "missingSourceRuntimeDirectClaimCount": 0,
@@ -11473,6 +11473,17 @@
           }
         },
         {
+          "speciesId": "channel-catfish",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "VDH active consumption advisory for the tidal Occoquan/Belmont Bay segment sets a channel-catfish-specific, length-based restriction - documenting channel catfish presence in this water.",
+          "lastEvidence": "Virginia Department of Health (2026) — reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        },
+        {
           "speciesId": "bluegill",
           "evidenceType": "official listing",
           "modeled": false,
@@ -11563,7 +11574,26 @@
           "limitations": "The visually reviewed VDH table explicitly names largemouth bass and bluegill sunfish for the mapped Occoquan River/Reservoir PFOS segment. This supports segment-level occurrence, not abundance or equal conditions across every access point."
         }
       ],
-      "manualClaimReviews": [],
+      "manualClaimReviews": [
+        {
+          "claimId": "vdh-mason-neck-channel-catfish",
+          "locationId": "mason-neck",
+          "speciesId": "channel-catfish",
+          "verdict": "approved-official-waterbody-listing",
+          "evidenceDate": null,
+          "publicationYear": 2026,
+          "sourceName": "Virginia Department of Health",
+          "sourceUrl": "https://www.vdh.virginia.gov/environmental-health/public-health-toxicology/fish-consumption-advisory/",
+          "summary": "VDH active consumption advisory for the tidal Occoquan/Belmont Bay segment sets a channel-catfish-specific, length-based restriction - documenting channel catfish presence in this water.",
+          "checks": {
+            "exactNamedWater": true,
+            "exactSpecies": true,
+            "primarySource": true,
+            "currentPresenceClaimed": true,
+            "accessSeparatelyReviewed": true
+          }
+        }
+      ],
       "contradictionReviews": [],
       "finalVerdict": "pending",
       "reviewerNotes": []

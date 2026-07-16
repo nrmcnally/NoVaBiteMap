@@ -23,7 +23,7 @@ def test_seed_counts_match_audited_dataset(seeded_db):
     with SessionLocal() as s:
         assert s.scalar(select(func.count()).select_from(FishingLocationRecord)) == 196
         assert s.scalar(select(func.count()).select_from(SpeciesRecord)) == 37
-        assert s.scalar(select(func.count()).select_from(SpeciesEvidenceRecord)) == 1427
+        assert s.scalar(select(func.count()).select_from(SpeciesEvidenceRecord)) == 1428
         assert s.scalar(select(func.count()).select_from(SpeciesScoringProfile)) == 20
         assert s.scalar(select(func.count()).select_from(StockingRecord)) == 13
         assert s.scalar(select(func.count()).select_from(LocationStationAssociation)) == 19
