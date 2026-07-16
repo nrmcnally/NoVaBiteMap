@@ -669,6 +669,28 @@ const advisoryEvidenceForLocation = (location: FishingLocationSeed): SpeciesEvid
   }));
 };
 
+// ===========================================================================
+// EVIDENCE ASSEMBLY — the per-water species list, layered strongest → weakest.
+// Full rationale for every tier and the honesty rules lives in
+// docs/EVIDENCE_METHODOLOGY.md. Each layer only adds species not already present,
+// and every layer passes through evidenceAllowed() (the rejection ledger).
+//
+//   1. curated + promoted   direct agency survey/listing evidence (DWR/NPS/DCR/
+//                           county/VDH), incl. review-approved candidates.
+//   2. waterbody listings   DWR waterbody-page communities (shared water).
+//   3. VDH advisory         species-specific consumption restrictions (= presence).
+//   4. Aquatic GAP          USGS presence records on nearby sampled reaches.
+//   --- everything above is "documented" ---
+//   5. same-waterbody       species documented at OTHER access points on THIS river/
+//                           reservoir, filled here so one water reads consistently.
+//   6. FCPA watershed-typical  (empty Pohick lakes only) the FCPA "standard mix"
+//                           statement, group-mapped + clearly labeled.
+//   7. likely-present       (empty waters only) downstream connectivity / HUC12
+//                           subwatershed / same-waterbody-name inference.
+//   8. honest empty         nothing fabricated; "no documented fishery" is valid.
+//
+// Never a county/regional stereotype, never a crowd-sourced (Fishbrain) citation.
+// ===========================================================================
 export const locations: FishingLocation[] = sourcedLocations.map((location) => {
   const has = (list: SpeciesEvidence[], speciesId: string) => list.some((item) => item.speciesId === speciesId);
   const curatedEvidence = location.evidence.filter((candidate) => evidenceAllowed(location.id, candidate));
