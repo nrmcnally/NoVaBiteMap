@@ -4,10 +4,10 @@
     "reviewed": "2026-07-14",
     "wildTroutReachesApproved": 20,
     "wildTroutClaims": 22,
-    "manualClaims": 17,
+    "manualClaims": 22,
     "vafwisClaims": 860,
     "anadromousClaims": 3,
-    "locations": 95
+    "locations": 98
   },
   "byLocation": {
     "dwr-boat-102": [
@@ -11497,6 +11497,27 @@
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
       }
     ],
+    "nhd-stream-keyser-run": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records place a brook trout observation 0.07 mi from the Keyser Run access point on the same Shenandoah headwater reach; no other stream lies within ~1.3 mi, so the record is attributable to Keyser Run by location (the DWR record carries no waterbody name).",
+        "lastEvidence": "Virginia Department of Wildlife Resources - VAFWIS fish collection records — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records place a brook trout observation 0.07 mi from the Keyser Run access point on the same Shenandoah headwater reach; no other stream lies within ~1.3 mi, so the record is attributable to Keyser Run by location (the DWR record carries no waterbody name)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources - VAFWIS fish collection records",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER(TaxaGrp)%3D'FISH'&geometry=-78.270649%2C38.721837%2C-78.246649%2C38.745837&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody&returnGeometry=false&returnDistinctValues=true&f=json"
+      }
+    ],
     "nhd-stream-kinsey-run": [
       {
         "speciesId": "brook-trout",
@@ -15715,6 +15736,27 @@
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
       }
     ],
+    "nhd-stream-south-fork-dry-run": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR's Wild Trout Streams layer designates this reach - mapped under the DWR name 'Dry Run, SF' (= South Fork Dry Run), STREAMCODE 07DSF, 0.02 mi from the access point, the same stream - as a Class II wild trout stream with a documented brook trout (BROOK=Y) population.",
+        "lastEvidence": "Virginia Department of Wildlife Resources - Wild Trout Streams — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR's Wild Trout Streams layer designates this reach - mapped under the DWR name 'Dry Run, SF' (= South Fork Dry Run), STREAMCODE 07DSF, 0.02 mi from the access point, the same stream - as a Class II wild trout stream with a documented brook trout (BROOK=Y) population."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources - Wild Trout Streams",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Projects/TroutApp/FeatureServer/2/query?where=UPPER(NAME)%3D'DRY%20RUN%2C%20SF'&outFields=NAME,BROOK,BROWN,RAINBOW,CLASS,STREAMCODE&returnGeometry=false&f=json"
+      }
+    ],
     "nhd-stream-south-fork-quantico-creek": [
       {
         "speciesId": "american-eel",
@@ -17349,6 +17391,65 @@
         ],
         "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      }
+    ],
+    "nhd-woodstock-reservoir": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Woodstock Reservoir is an impoundment on Little Stony Creek; DWR's Wild Trout Streams layer designates Little Stony Creek at the reservoir (STREAMCODE 07LSC, 0.04 mi from the access point) as a Class II wild trout stream with a documented brook trout (BROOK=Y) population.",
+        "lastEvidence": "Virginia Department of Wildlife Resources - Wild Trout Streams (Little Stony Creek) — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "Woodstock Reservoir is an impoundment on Little Stony Creek; DWR's Wild Trout Streams layer designates Little Stony Creek at the reservoir (STREAMCODE 07LSC, 0.04 mi from the access point) as a Class II wild trout stream with a documented brook trout (BROOK=Y) population."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources - Wild Trout Streams (Little Stony Creek)",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Projects/TroutApp/FeatureServer/2/query?where=UPPER(NAME)%3D'LITTLE%20STONY%20CREEK'&geometry=-78.676763%2C38.900249%2C-78.636763%2C38.940249&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=NAME,BROOK,CLASS,STREAMCODE&returnGeometry=false&f=json"
+      },
+      {
+        "speciesId": "brown-trout",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document brown trout on Little Stony Creek at Woodstock Reservoir (0.08 mi from the access point).",
+        "lastEvidence": "Virginia Department of Wildlife Resources - VAFWIS fish collection records — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document brown trout on Little Stony Creek at Woodstock Reservoir (0.08 mi from the access point)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources - VAFWIS fish collection records",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER(TaxaGrp)%3D'FISH'&geometry=-78.676763%2C38.900249%2C-78.636763%2C38.940249&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody&returnGeometry=false&returnDistinctValues=true&f=json"
+      },
+      {
+        "speciesId": "rainbow-trout",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document rainbow trout on Little Stony Creek at Woodstock Reservoir (0.08 mi from the access point).",
+        "lastEvidence": "Virginia Department of Wildlife Resources - VAFWIS fish collection records — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document rainbow trout on Little Stony Creek at Woodstock Reservoir (0.08 mi from the access point)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources - VAFWIS fish collection records",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER(TaxaGrp)%3D'FISH'&geometry=-78.676763%2C38.900249%2C-78.636763%2C38.940249&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody&returnGeometry=false&returnDistinctValues=true&f=json"
       }
     ],
     "roaches-run": [

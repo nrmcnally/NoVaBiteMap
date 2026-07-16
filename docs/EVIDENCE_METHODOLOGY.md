@@ -114,6 +114,44 @@ agency-only prompt (`scratchpad/RESEARCH_PROMPT.md` is the template); the return
 sources are then **judged and integrated** here (authoritative-domain check +
 exact-water + verbatim), promoted through the manual-claim verdict path.
 
+## Exact-water is a SPATIAL test, not a name test (critical)
+
+DWR's VAFWIS `Species_Observations_All_Distrib` and the TroutApp wild-trout layer are
+keyed by **waterbody *name*, which collides statewide**. A `WHERE UPPER(Waterbody)='X'`
+query returns every same-named stream in Virginia with **no geometry** to tell them
+apart. Judging a name-match as "our water" is the single most common way bad data slips
+in. Two real examples caught this way:
+
+- Batch 2's *"VERIFIED"* rows for Cabin Run, Rocky Run, Moody Creek and Little Creek were
+  all name-collisions — the nearest same-named DWR record sat **48–133 mi** from our
+  seed coordinate. None were our water. All rejected.
+- Batch 1's Tims River brook trout was real, but only confirmable *because* the DWR
+  reach at that coordinate carries the **legacy name "Negro Run."**
+
+So the confirmation rule is **by location, against the seed coordinate**:
+
+1. The layer geometry is **NAD83 / UTM 17N (wkid 26917, metres)**. Query with a small
+   `esriGeometryEnvelope` around the seed lat/lon, `inSR=4326` (the server reprojects),
+   `spatialRel=esriSpatialRelIntersects`; or pull geometry `outSR=4326` and run
+   point-in-polygon + haversine yourself. **Beware large multipart features** (e.g. the
+   Potomac River polygon "intersects" boxes ~10 mi away) — always confirm the true
+   vertex distance, don't trust the intersects flag alone.
+2. **Accept** a record only if it sits essentially *on* our water: a reach/obs whose name
+   *is* our stream or its DWR abbreviation at ≤~0.15 mi (e.g. South Fork Dry Run ⇒
+   `"Dry Run, SF"` 07DSF @ 0.02 mi), **or** a blank-name obs at ≤~0.1 mi with no other
+   named stream comparably close (e.g. Keyser Run brook trout @ 0.07 mi).
+3. **Reject** when the nearest record is a *different named neighbour* the box merely
+   caught (Rocky Run ⇒ Broad Hollow Run @ 0.61 mi; Cabin Run ⇒ Passage Creek @ 1.07 mi;
+   Wilson Run ⇒ "Staunton Run" @ 0.32 mi) — borrowing those is the stereotype error in
+   disguise. The water stays honestly empty until a stream-specific record exists.
+
+This same spatial sweep *also* fills empties honestly: run every empty water's coordinate
+against the VAFWIS + TroutApp layers by **location, ignoring name**, to surface
+legacy-name records the name query would miss. Batch 2's real yield came entirely from
+this sweep: brook trout at **South Fork Dry Run** (07DSF) and **Keyser Run**, and
+brook/brown/rainbow trout at **Woodstock Reservoir** (impoundment on Little Stony Creek,
+Class II 07LSC) — all via the manual-claim verdict path.
+
 ---
 
 ## Generators (each committed artifact → its script)
@@ -134,3 +172,10 @@ Three things are always in progress (see also the project memory): **(1)** fill 
 empty water from real sources, **(2)** ensure all public-access waters in the region
 are present, **(3)** per-water audit so each water's species are correct and none are
 overlooked.
+
+**Coverage state:** 174 / 196 waters carry evidence; **22 honestly empty**. The
+remainder are mostly small SNP/GWNF mountain streams whose only records are non-game or
+in NPS survey PDFs (Wilson Run, Cabin Run, Rocky Run, Phils Arm/Sloan/Moody), a few tidal
+creeks with only a Mummichog record (Chotank Creek — not registered as a target), and a
+handful of small county lakes with no lake-specific survey anywhere. These need
+NPS/county-PDF research (the offload-and-judge lane), not another DWR-layer pass.
