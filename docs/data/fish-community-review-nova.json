@@ -2,7 +2,7 @@
   "meta": {
     "generated": "2026-07-15",
     "locationCount": 196,
-    "guessReliantLocationCount": 40,
+    "guessReliantLocationCount": 39,
     "policy": "Candidates never affect rankings until finalVerdict is approved after exact-water, species, date, provenance, contradiction, and access review.",
     "priorAgentWork": "All existing seed evidence is retained under priorAgentClaims and explicitly queued for re-verification or quarantine.",
     "vafwisSource": {
@@ -22,18 +22,18 @@
       "privacyNote": "Source geometries are used transiently for matching, then deliberately discarded; only distance-to-catalog-water is retained."
     },
     "queueCounts": {
-      "existing-direct-claims-reviewed": 156,
-      "no-direct-candidate-found": 37,
+      "existing-direct-claims-reviewed": 157,
+      "no-direct-candidate-found": 36,
       "manual-primary-source-claim-approved": 2,
       "non-target-fish-candidate-found": 1
     },
     "reviewProgress": {
       "targetCandidateLocationCount": 0,
       "nonTargetOnlyLocationCount": 1,
-      "noCandidateLocationCount": 37,
-      "approvedClaimCount": 73,
-      "approvedClaimLocationCount": 46,
-      "verifiedRuntimeClaimCount": 1103,
+      "noCandidateLocationCount": 36,
+      "approvedClaimCount": 74,
+      "approvedClaimLocationCount": 47,
+      "verifiedRuntimeClaimCount": 1104,
       "removedOrRejectedPriorClaimCount": 105,
       "unverifiedRuntimeDirectClaimCount": 0,
       "missingSourceRuntimeDirectClaimCount": 0,
@@ -96362,16 +96362,47 @@
         "reviewStatus": "separate-access-review-required",
         "decision": null
       },
-      "evidenceQueue": "no-direct-candidate-found",
+      "evidenceQueue": "existing-direct-claims-reviewed",
       "releaseEligible": false,
-      "priorAgentClaims": [],
+      "priorAgentClaims": [
+        {
+          "speciesId": "brook-trout",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "DWR Wild Trout Streams layer designates this reach (mapped under the legacy name Negro Run, 0.37 mi from the Tims River access point - the same stream; no separate Tims River reach exists) as a Class II wild trout stream with a documented brook trout (BROOK=Y) population.",
+          "lastEvidence": "Virginia Department of Wildlife Resources — reviewed 2026-07-14",
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Projects/TroutApp/FeatureServer/2/query?where=OBJECTID%3D720&outFields=NAME%2CBROOK%2CCLASS%2CSTREAMCODE&f=json",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        }
+      ],
       "agencyObservationCandidates": [],
       "agencyHabitatCandidates": [],
       "agencyStockingCandidates": [],
       "priorClaimReviews": [],
       "sourceClaimRejections": [],
       "sourceClaimReviews": [],
-      "manualClaimReviews": [],
+      "manualClaimReviews": [
+        {
+          "claimId": "dwr-wildtrout-tims-river-brook-trout",
+          "locationId": "nhd-stream-tims-river",
+          "speciesId": "brook-trout",
+          "verdict": "approved-official-waterbody-listing",
+          "evidenceDate": null,
+          "publicationYear": null,
+          "sourceName": "Virginia Department of Wildlife Resources",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Projects/TroutApp/FeatureServer/2/query?where=OBJECTID%3D720&outFields=NAME%2CBROOK%2CCLASS%2CSTREAMCODE&f=json",
+          "summary": "DWR Wild Trout Streams layer designates this reach (mapped under the legacy name Negro Run, 0.37 mi from the Tims River access point - the same stream; no separate Tims River reach exists) as a Class II wild trout stream with a documented brook trout (BROOK=Y) population.",
+          "checks": {
+            "exactNamedWater": true,
+            "exactSpecies": true,
+            "primarySource": true,
+            "currentPresenceClaimed": true,
+            "accessSeparatelyReviewed": true
+          }
+        }
+      ],
       "contradictionReviews": [],
       "finalVerdict": "pending",
       "reviewerNotes": []

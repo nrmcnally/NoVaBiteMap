@@ -2624,6 +2624,24 @@
       }
     },
     {
+      "claimId": "dwr-wildtrout-tims-river-brook-trout",
+      "locationId": "nhd-stream-tims-river",
+      "speciesId": "brook-trout",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "publicationYear": null,
+      "sourceName": "Virginia Department of Wildlife Resources",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Projects/TroutApp/FeatureServer/2/query?where=OBJECTID%3D720&outFields=NAME%2CBROOK%2CCLASS%2CSTREAMCODE&f=json",
+      "summary": "DWR Wild Trout Streams layer designates this reach (mapped under the legacy name Negro Run, 0.37 mi from the Tims River access point - the same stream; no separate Tims River reach exists) as a Class II wild trout stream with a documented brook trout (BROOK=Y) population.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
       "claimId": "empties-research-huntsman-lake-bluegill",
       "locationId": "huntsman-lake",
       "speciesId": "bluegill",

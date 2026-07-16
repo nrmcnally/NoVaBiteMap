@@ -4,10 +4,10 @@
     "reviewed": "2026-07-14",
     "wildTroutReachesApproved": 20,
     "wildTroutClaims": 22,
-    "manualClaims": 16,
+    "manualClaims": 17,
     "vafwisClaims": 860,
     "anadromousClaims": 3,
-    "locations": 94
+    "locations": 95
   },
   "byLocation": {
     "dwr-boat-102": [
@@ -16620,6 +16620,27 @@
         ],
         "sourceName": "National Park Service",
         "sourceUrl": "https://www.nps.gov/shen/planyourvisit/fishing.htm"
+      }
+    ],
+    "nhd-stream-tims-river": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR Wild Trout Streams layer designates this reach (mapped under the legacy name Negro Run, 0.37 mi from the Tims River access point - the same stream; no separate Tims River reach exists) as a Class II wild trout stream with a documented brook trout (BROOK=Y) population.",
+        "lastEvidence": "Virginia Department of Wildlife Resources — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR Wild Trout Streams layer designates this reach (mapped under the legacy name Negro Run, 0.37 mi from the Tims River access point - the same stream; no separate Tims River reach exists) as a Class II wild trout stream with a documented brook trout (BROOK=Y) population."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia Department of Wildlife Resources",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/Projects/TroutApp/FeatureServer/2/query?where=OBJECTID%3D720&outFields=NAME%2CBROOK%2CCLASS%2CSTREAMCODE&f=json"
       }
     ],
     "nhd-stream-turkey-run": [
