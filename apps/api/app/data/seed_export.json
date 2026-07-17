@@ -4,7 +4,7 @@
     "schemaVersion": "1.0",
     "locationCount": 196,
     "speciesCount": 37,
-    "evidenceCount": 1444,
+    "evidenceCount": 1443,
     "stationCount": 7
   },
   "species": [
@@ -6514,26 +6514,6 @@
           "depth": "Work accessible cover and structure first, then probe the first depth change",
           "positive": [
             "redbreast sunfish is documented in Rappahannock River"
-          ],
-          "negative": [
-            "Evidence is the shared-water listing, not a survey at this exact access point"
-          ],
-          "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/"
-        },
-        {
-          "speciesId": "smallmouth-bass",
-          "availability": 0.77,
-          "quality": null,
-          "evidenceConfidence": 0.72,
-          "evidenceType": "modeled",
-          "modeled": true,
-          "evidenceSummary": "Documented in Rappahannock River — the shared water this access point sits on (not a survey at this exact point).",
-          "lastEvidence": "Shared-waterbody community listing",
-          "technique": "Match presentation to the species, season, and current conditions",
-          "depth": "Work accessible cover and structure first, then probe the first depth change",
-          "positive": [
-            "smallmouth bass is documented in Rappahannock River"
           ],
           "negative": [
             "Evidence is the shared-water listing, not a survey at this exact access point"

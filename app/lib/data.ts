@@ -625,8 +625,15 @@ const rejectedEvidenceClaimKeys = new Set(
     `${claim.locationId}\u0000${claim.speciesId}\u0000${claim.sourceUrl ?? ""}`
   ),
 );
+// A reviewer-removed (location, species, source) triple is blocked from EVERY
+// tier, modeled ones included. A rejection like "wrong river segment" is a
+// judgment that the fish is not present here from that source; re-deriving the
+// same triple through a modeled tier (e.g. shared-waterbody) would silently
+// reintroduce exactly what the reviewer removed. Modeling the species from a
+// DIFFERENT source stays eligible — the ledger keys on the full triple, not on
+// (location, species) — so honest inference is not suppressed.
 const evidenceAllowed = (locationId: string, evidence: SpeciesEvidence) =>
-  evidence.evidenceType === "modeled" || evidence.modeled || !rejectedEvidenceClaimKeys.has(
+  !rejectedEvidenceClaimKeys.has(
     `${locationId}\u0000${evidence.speciesId}\u0000${evidence.sourceUrl ?? ""}`,
   );
 
@@ -697,6 +704,7 @@ export const locations: FishingLocation[] = sourcedLocations.map((location) => {
   // Approved agency candidates promoted from the review pipeline (e.g. DWR wild
   // trout reaches). Adversarially approved in fish-community-verdicts.json.
   const promotedEvidence = promotedEvidenceFor(location.id)
+    .filter((candidate) => evidenceAllowed(location.id, candidate))
     .filter((candidate) => !has(curatedEvidence, candidate.speciesId));
   // Documented-waterbody agency listings layer under curated evidence.
   const waterbodyEvidence = waterbodySpeciesFor(location)
@@ -729,7 +737,9 @@ export const locations: FishingLocation[] = sourcedLocations.map((location) => {
   // Only when a water has no documented evidence at all, add honest, cited
   // "likely present" species (same-waterbody / downstream connectivity /
   // subwatershed survey records). Waters with no real basis stay empty.
-  const inferred = withFcpa.length === 0 ? likelyPresentFor(location) : [];
+  const inferred = withFcpa.length === 0
+    ? likelyPresentFor(location).filter((candidate) => evidenceAllowed(location.id, candidate))
+    : [];
   const hydrology = hydrologyForLocation(location.id);
   return {
     ...location,

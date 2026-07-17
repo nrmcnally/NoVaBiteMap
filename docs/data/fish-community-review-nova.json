@@ -4434,27 +4434,6 @@
           "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/",
           "reviewStatus": "modeled-do-not-promote",
           "review": null
-        },
-        {
-          "speciesId": "smallmouth-bass",
-          "evidenceType": "modeled",
-          "modeled": true,
-          "summary": "Documented in Rappahannock River — the shared water this access point sits on (not a survey at this exact point).",
-          "lastEvidence": "Shared-waterbody community listing",
-          "sourceName": "Virginia Department of Wildlife Resources",
-          "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/",
-          "reviewStatus": "modeled-do-not-promote",
-          "review": {
-            "sourceUrl": "https://dwr.virginia.gov/waterbody/rappahannock-river-upper/",
-            "locationIds": [
-              "fredericksburg-city-docks"
-            ],
-            "rejectedSpeciesIds": [
-              "smallmouth-bass"
-            ],
-            "verdict": "removed-wrong-river-segment",
-            "note": "DWR places City Dock in tidal water below the fall line and identifies smallmouth habitat above Fredericksburg. The page does not support an exact City Dock smallmouth claim."
-          }
         }
       ],
       "agencyObservationCandidates": [],
