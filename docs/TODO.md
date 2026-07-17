@@ -4,6 +4,21 @@ This backlog is ordered by product dependency. Phase 1 reliability comes before
 new surface area; the spot and fish-detail work follows once the data pipeline is
 operationally dependable.
 
+## Post-alpha: productionization / regional-scale gaps → see [docs/SCALING.md](SCALING.md)
+
+Recorded 2026-07-17. The data model (on-demand fetch + short cache, no poller) is
+the right foundation, but three things are alpha simplifications that won't hold up
+for a public region-wide site. Do NOT block the closed alpha on these; address
+before public launch. Priority order:
+
+- [ ] **Per-NWS-gridpoint forecasts** (retire the single Fairfax map anchor) — biggest
+      accuracy win; same work as the gameplanned scrubber upgrade.
+- [ ] **Enable shared cache (Redis / Cloudflare KV)** so horizontal scaling doesn't
+      fragment the cache and hammer NWS/USGS.
+- [ ] **Key the weather cache on gridpoint, not exact coordinate** (kills redundant fetches).
+- [ ] **Converge map + detail on the canonical scoring engine** (one spot, one number).
+- [ ] **Cache-stampede / rate-limit protection** (stale-while-revalidate + single-flight).
+
 ## Phase 1 audit checkpoint (2026-07-14)
 
 Working completion estimate: **about 60-65% overall**. The visible product and
