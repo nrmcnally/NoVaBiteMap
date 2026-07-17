@@ -10,7 +10,7 @@ export default function MethodologyPage() {
       <TopNav active="methodology" />
       <main className="content-shell">
         <header className="content-hero">
-          <span className="eyebrow">Methodology · scoring profile v1.1</span>
+          <span className="eyebrow">Methodology · scoring profile v1.2</span>
           <h1>A useful forecast should show its work.</h1>
           <p>BiteMap NOVA ranks relative fishing opportunity. It does not predict a guaranteed catch, and its score is not a catch probability.</p>
           <div className="hero-proof"><ShieldCheck size={18} /> Species evidence gates every ranking before weather can help it.</div>
@@ -57,6 +57,13 @@ export default function MethodologyPage() {
           <span className="eyebrow">Multiple target species</span>
           <h2>Scores stay species-specific.</h2>
           <p>When several species are selected, BiteMap ranks each location by its strongest supported target. It never averages unlike species into one score, and every result keeps the matching species scores visible.</p>
+        </section>
+
+        <section className="limits-panel">
+          <span className="eyebrow">Interactive prediction timeline</span>
+          <h2>The selected time changes one shared score set.</h2>
+          <p>Explore uses the exact hourly periods returned by the <a href="https://www.weather.gov/documentation/services-web-api" target="_blank" rel="noreferrer">National Weather Service API</a>. The user&apos;s starting point becomes the regional forecast anchor when it is within the supported area; otherwise BiteMap labels its Fairfax anchor. Hour mode applies one provider period. Day mode evaluates only the hours the provider returned and lets each species use its best supported hour for that date.</p>
+          <p>The selected time, ranked list, species-menu signals, result scores, and marker colors all use that same computed state. Times beyond the provider&apos;s final returned hour are disabled, and shared URLs retain the exact selected hour or date. This alpha uses one labeled regional weather anchor for map-wide comparison—not a separate microforecast at every access point. Air temperature is displayed for context and is not treated as water temperature.</p>
         </section>
 
         <section className="limits-panel">

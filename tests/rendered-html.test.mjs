@@ -97,6 +97,8 @@ test("methodology explains the score without exposing provider health", async ()
   assert.match(methodology, /not a catch probability/i);
   assert.match(methodology, /No evidence = no ranking/);
   assert.match(methodology, /strongest supported target/);
+  assert.match(methodology, /one labeled regional weather anchor/i);
+  assert.match(methodology, /Times beyond the provider/);
   assert.doesNotMatch(methodology, /Inspect provider health|data-health/);
 });
 
@@ -166,6 +168,27 @@ test("forecast capability contracts bound timeline selection and keep snapshots 
   assert.match(capabilities, /forecast-capabilities/);
   assert.match(snapshot, /time is outside the supported forecast window/i);
   assert.doesNotMatch(service, /catchCount|lureOrBait/);
+});
+
+test("Explore timeline uses exact provider bounds and one score set for the map and list", async () => {
+  const [dashboard, timeline, timelineContract, map, scoring] = await Promise.all([
+    readFile(new URL("../app/components/ExploreDashboard.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/components/PredictionTimeline.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/lib/prediction-timeline.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/components/FishingMap.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/lib/scoring.ts", import.meta.url), "utf8"),
+  ]);
+  assert.match(dashboard, /selectionSearch\(url\.search, timelineSelection\)/);
+  assert.match(dashboard, /opportunityForForecast/);
+  assert.match(dashboard, /opportunities=\{mapOpportunities\}/);
+  assert.match(timeline, /Times beyond this boundary are unavailable/);
+  assert.match(timeline, /type="range"/);
+  assert.match(timeline, /each species uses its best supported hour/);
+  assert.match(timelineContract, /periods\.find\(\(item\) => item\.startTime === selection\.key\)/);
+  assert.match(map, /Markers consume that same set/);
+  assert.doesNotMatch(map, /opportunityFor\(/);
+  assert.match(scoring, /profileFor\(speciesId\)/);
+  assert.match(scoring, /seasonalActivityByMonth/);
 });
 
 test("spot details separate bite forecasts from presence-only fish and link every state to the guide", async () => {

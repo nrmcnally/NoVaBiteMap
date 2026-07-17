@@ -1,6 +1,18 @@
 import type { CanonicalOpportunity, FishingLocation } from "./data";
+import { buildForecast, type NwsAlert, type NwsForecastPeriod } from "./forecast";
+import { profileFor } from "./species-profiles";
 
 export type Opportunity = CanonicalOpportunity;
+
+export type ForecastedOpportunity = {
+  opportunity: Opportunity;
+  period: NwsForecastPeriod;
+  factors: {
+    timeOfDay: number;
+    wind: number;
+    precipitation: number;
+  };
+};
 
 export function opportunityFor(
   location: FishingLocation,
@@ -43,6 +55,49 @@ export function opportunityFor(
     activity: location.activityEstimate,
     accessFit: location.accessFit,
     evidence,
+  };
+}
+
+export function opportunityForForecast(
+  base: Opportunity,
+  speciesId: string,
+  periods: NwsForecastPeriod[],
+  alerts: NwsAlert[] = [],
+): ForecastedOpportunity | null {
+  if (periods.length === 0) return null;
+  const profile = profileFor(speciesId);
+  const forecast = buildForecast({
+    periods,
+    alerts,
+    availability: base.availability,
+    quality: base.quality,
+    accessFit: base.accessFit,
+    baseConfidence: base.confidence,
+    associationFactor: 1,
+    hydrologyRelevant: false,
+    dielPattern: profile?.dielPattern,
+    seasonalActivityByMonth: profile?.seasonalActivityByMonth,
+  });
+  const best = [...forecast.hourly].sort((a, b) => b.score - a.score)[0];
+  if (!best) return null;
+  return {
+    opportunity: {
+      ...base,
+      score: best.score,
+      activity: best.activity,
+    },
+    period: {
+      startTime: best.startTime,
+      temperature: best.temperature,
+      temperatureUnit: best.temperatureUnit,
+      shortForecast: best.shortForecast,
+      windSpeed: best.windSpeed,
+      windDirection: best.windDirection,
+      windGust: best.windGust,
+      isDaytime: best.isDaytime,
+      precipitationProbability: best.precipitationProbability,
+    },
+    factors: best.factors,
   };
 }
 

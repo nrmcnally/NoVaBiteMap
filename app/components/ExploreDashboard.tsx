@@ -30,10 +30,18 @@ import {
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { FormEvent, ReactNode } from "react";
 import { FishingMap } from "./FishingMap";
+import { PredictionTimeline } from "./PredictionTimeline";
 import { consumptionAdviceFor } from "../lib/advisories";
 import { locations as bundledLocations, targetSpecies as bundledSpecies, speciesById as bundledSpeciesById, type AccessMethod, type WaterbodyType } from "../lib/data";
 import type { ExploreCatalog } from "../lib/api";
-import { opportunityFor } from "../lib/scoring";
+import type { NwsAlert, NwsForecastPeriod } from "../lib/forecast";
+import {
+  periodsForSelection,
+  selectionFromSearch,
+  selectionSearch,
+  type ForecastSelection,
+} from "../lib/prediction-timeline";
+import { opportunityFor, opportunityForForecast } from "../lib/scoring";
 import { estimateTravel, googleDirectionsUrl, type TravelOrigin } from "../lib/travel";
 
 type LiveCondition = {
@@ -43,6 +51,14 @@ type LiveCondition = {
   shortForecast?: string;
   windSpeed?: string;
   windDirection?: string;
+};
+
+type TimelineForecast = {
+  status: "loading" | "ready" | "error";
+  periods: NwsForecastPeriod[];
+  alerts: NwsAlert[];
+  retrievedAt?: string;
+  error?: string;
 };
 
 type FavoriteRecord = { id: number; locationId: string };
@@ -128,6 +144,29 @@ export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }
   const [origin, setOrigin] = useState<TravelOrigin | null>(null);
   const [originStatus, setOriginStatus] = useState<"idle" | "loading" | "error">("idle");
   const [originMessage, setOriginMessage] = useState("");
+  const [timelineForecast, setTimelineForecast] = useState<TimelineForecast>({
+    status: "loading",
+    periods: [],
+    alerts: [],
+  });
+  const [timelineSelection, setTimelineSelection] = useState<ForecastSelection | null>(null);
+  const [timelineRefreshKey, setTimelineRefreshKey] = useState(0);
+
+  const timelineAnchor = useMemo(() => {
+    const originIsSupported = origin
+      && origin.lat >= 36
+      && origin.lat <= 40.5
+      && origin.lng >= -84
+      && origin.lng <= -74;
+    return originIsSupported
+      ? { lat: origin.lat, lng: origin.lng, label: `Regional forecast near ${origin.label}` }
+      : { lat: 38.8462, lng: -77.3064, label: "Fairfax regional forecast anchor" };
+  }, [origin]);
+
+  const selectedForecastPeriods = useMemo(
+    () => periodsForSelection(timelineForecast.periods, timelineSelection),
+    [timelineForecast.periods, timelineSelection],
+  );
 
   const visibleRows = useMemo(() => {
     const normalized = query.trim().toLowerCase();
@@ -162,15 +201,28 @@ export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }
           ? speciesIds
           : [...new Set(location.evidence.map((evidence) => evidence.speciesId))];
         const matches = sourceSpecies.flatMap((speciesId) => {
-          const opportunity = opportunityFor(location, speciesId);
+          const baseOpportunity = opportunityFor(location, speciesId);
           const fish = speciesById(speciesId);
-          return opportunity && fish ? [{ fish, opportunity }] : [];
+          if (!baseOpportunity || !fish) return [];
+          const forecasted = timelineForecast.status === "ready"
+            ? opportunityForForecast(
+                baseOpportunity,
+                speciesId,
+                selectedForecastPeriods,
+                timelineForecast.alerts,
+              )
+            : null;
+          return [{
+            fish,
+            opportunity: forecasted?.opportunity ?? baseOpportunity,
+            forecastPeriod: forecasted?.period,
+          }];
         }).sort((a, b) => b.opportunity.score - a.opportunity.score);
         return { location, travel, advisory, opportunity: matches[0]?.opportunity ?? null, matches };
       })
       .filter((row) => Boolean(row.opportunity))
       .sort((a, b) => (b.opportunity!.score - a.opportunity!.score) || (b.matches.length - a.matches.length));
-  }, [speciesById, speciesIds, visibleRows]);
+  }, [selectedForecastPeriods, speciesById, speciesIds, timelineForecast.alerts, timelineForecast.status, visibleRows]);
 
   useEffect(() => {
     if (speciesIds.length === 0) return;
@@ -186,12 +238,29 @@ export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }
   const selectedOpportunity = selected?.opportunity ?? null;
   const selectedSpecies = speciesIds.map((id) => speciesById(id)).filter((item): item is NonNullable<typeof item> => Boolean(item));
   const mapLocations = useMemo(() => visibleRows.map(({ location }) => location), [visibleRows]);
+  const mapOpportunities = useMemo(() => new Map(ranked.map((row) => [
+    row.location.id,
+    {
+      score: row.opportunity!.score,
+      speciesName: row.matches[0]?.fish.name ?? "",
+      matchCount: row.matches.length,
+    },
+  ])), [ranked]);
   const activeAdvisoryCount = useMemo(() => mapLocations.filter((location) => consumptionAdviceFor(location.consumptionAdvisory, speciesIds).status === "active").length, [mapLocations, speciesIds]);
 
   const speciesHealth = useMemo(() => new Map(species.map((fish) => {
-    const bestScore = Math.max(0, ...visibleRows.map(({ location }) => opportunityFor(location, fish.id)?.score ?? 0));
+    const bestScore = Math.max(0, ...visibleRows.map(({ location }) => {
+      const baseOpportunity = opportunityFor(location, fish.id);
+      if (!baseOpportunity || timelineForecast.status !== "ready") return baseOpportunity?.score ?? 0;
+      return opportunityForForecast(
+        baseOpportunity,
+        fish.id,
+        selectedForecastPeriods,
+        timelineForecast.alerts,
+      )?.opportunity.score ?? baseOpportunity.score;
+    }));
     return [fish.id, bestScore] as const;
-  })), [species, visibleRows]);
+  })), [selectedForecastPeriods, species, timelineForecast.alerts, timelineForecast.status, visibleRows]);
 
   const waterTypeCounts = useMemo(() => new Map(waterTypeOptions.map((option) => [
     option.value,
@@ -246,6 +315,70 @@ export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }
     }, 0);
     return () => window.clearTimeout(timer);
   }, [speciesById]);
+
+  const refreshTimeline = useCallback(() => {
+    setTimelineForecast((current) => ({ ...current, status: "loading", error: undefined }));
+    setTimelineRefreshKey((current) => current + 1);
+  }, []);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    const timer = window.setTimeout(async () => {
+      setTimelineForecast((current) => ({ ...current, status: "loading", error: undefined }));
+      try {
+        const response = await fetch(
+          `/api/conditions?lat=${timelineAnchor.lat}&lon=${timelineAnchor.lng}`,
+          { cache: "no-store", signal: controller.signal },
+        );
+        const body = await response.json() as {
+          periods?: NwsForecastPeriod[];
+          alerts?: NwsAlert[];
+          retrievedAt?: string;
+          error?: string;
+          detail?: string;
+        };
+        if (!response.ok || !body.periods?.length) {
+          throw new Error(body.detail || body.error || "National Weather Service forecast unavailable.");
+        }
+        const periods = [...body.periods]
+          .filter((period) => Number.isFinite(new Date(period.startTime).getTime()))
+          .sort((a, b) => Date.parse(a.startTime) - Date.parse(b.startTime));
+        if (periods.length === 0) throw new Error("The provider returned no supported forecast hours.");
+        setTimelineForecast({
+          status: "ready",
+          periods,
+          alerts: body.alerts ?? [],
+          retrievedAt: body.retrievedAt,
+        });
+        setTimelineSelection((current) => {
+          if (current && periodsForSelection(periods, current).length > 0) return current;
+          return selectionFromSearch(window.location.search, periods);
+        });
+      } catch (error) {
+        if (controller.signal.aborted) return;
+        setTimelineForecast({
+          status: "error",
+          periods: [],
+          alerts: [],
+          error: error instanceof Error ? error.message : "National Weather Service forecast unavailable.",
+        });
+        setTimelineSelection(null);
+      }
+    }, 250);
+    return () => {
+      window.clearTimeout(timer);
+      controller.abort();
+    };
+  }, [timelineAnchor.lat, timelineAnchor.lng, timelineRefreshKey]);
+
+  useEffect(() => {
+    if (!timelineSelection || timelineForecast.status !== "ready") return;
+    const url = new URL(window.location.href);
+    const nextSearch = selectionSearch(url.search, timelineSelection);
+    if (nextSearch === url.searchParams.toString()) return;
+    url.search = nextSearch;
+    window.history.replaceState(window.history.state, "", url);
+  }, [timelineForecast.status, timelineSelection]);
 
   // Close any open top-of-page filter dropdown when clicking/pressing outside it
   // or pressing Escape. Selections inside a menu keep it open (multi-select).
@@ -544,6 +677,17 @@ export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }
         </div>
       </section>
 
+      <PredictionTimeline
+        status={timelineForecast.status}
+        periods={timelineForecast.periods}
+        selection={timelineSelection}
+        anchorLabel={timelineAnchor.label}
+        retrievedAt={timelineForecast.retrievedAt}
+        error={timelineForecast.error}
+        onChange={setTimelineSelection}
+        onRefresh={refreshTimeline}
+      />
+
       <section className={`workspace-grid ${resultsOpen ? "results-open" : ""}`}>
         <div className="map-panel">
           <div className="map-toolbar">
@@ -558,6 +702,7 @@ export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }
           <FishingMap
             locations={mapLocations}
             speciesIds={speciesIds}
+            opportunities={mapOpportunities}
             selectedId={selectedId}
             origin={origin}
             onSelect={selectMapLocation}
@@ -582,7 +727,17 @@ export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }
           </div>
 
           <div className="ranking-note">
-            <Info size={15} /> {selectedSpecies.length > 1 ? "Each spot is ranked by its strongest selected species; matching scores stay separate." : selectedSpecies.length === 1 ? "Rankings use official species evidence plus a seasonal activity estimate." : "Each water is ranked by its strongest evidenced species. Pick a target species above to rank for a specific fish."}
+            <Info size={15} /> {timelineForecast.status === "ready"
+              ? selectedSpecies.length > 1
+                ? "Selected NWS time applied. Each spot uses its strongest selected species; scores stay separate."
+                : selectedSpecies.length === 1
+                  ? "Selected NWS time applied to official species evidence and the reviewed species activity profile."
+                  : "Selected NWS time applied. Each water uses its strongest evidenced, forecast-supported target."
+              : selectedSpecies.length > 1
+                ? "Each spot is ranked by its strongest selected species; matching scores stay separate."
+                : selectedSpecies.length === 1
+                  ? "Rankings use official species evidence plus a seasonal activity estimate."
+                  : "Each water is ranked by its strongest evidenced species. Pick a target species above to rank for a specific fish."}
             <Link href="/methodology">What this means</Link>
           </div>
 
@@ -631,6 +786,9 @@ export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }
                         <span><Navigation size={14} /> {travel.distanceMiles} mi · ~{travel.driveMinutes} min{travel.personalized ? " from start" : " estimate"}</span>
                         {walkable && <span><Footprints size={14} /> ~{travel.walkMinutes} min walk</span>}
                         <span><Clock3 size={14} /> {location.bestWindow}</span>
+                        {matches[0]?.forecastPeriod && (
+                          <span><CloudSun size={14} /> Modeled for {new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", weekday: "short", hour: "numeric" }).format(new Date(matches[0].forecastPeriod.startTime))}</span>
+                        )}
                         <span className={`confidence confidence-${opportunity.confidenceLabel.toLowerCase()}`}>{opportunity.confidenceLabel} confidence</span>
                         <span className={`advisory-badge advisory-${advisory.status}`}>
                           {advisory.status === "active" ? <AlertTriangle size={13} /> : advisory.status === "jurisdiction-check" ? <Info size={13} /> : <ShieldCheck size={13} />}
@@ -672,13 +830,13 @@ export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }
           </div>
           <div className="condition-cell">
             <CloudSun size={19} />
-            <div><span>NWS forecast</span><strong>{live.status === "ready" ? `${live.temperature}°${live.temperatureUnit ?? "F"}` : live.status === "loading" ? "Refreshing..." : "Unavailable"}</strong></div>
-            <small>{live.status === "ready" ? live.shortForecast : "No fabricated fallback"}</small>
+            <div><span>{selected?.matches[0]?.forecastPeriod ? "Selected forecast" : "NWS forecast"}</span><strong>{selected?.matches[0]?.forecastPeriod ? `${selected.matches[0].forecastPeriod.temperature}°${selected.matches[0].forecastPeriod.temperatureUnit}` : live.status === "ready" ? `${live.temperature}°${live.temperatureUnit ?? "F"}` : live.status === "loading" ? "Refreshing..." : "Unavailable"}</strong></div>
+            <small>{selected?.matches[0]?.forecastPeriod?.shortForecast ?? (live.status === "ready" ? live.shortForecast : "No fabricated fallback")}</small>
           </div>
           <div className="condition-cell">
             <Wind size={19} />
-            <div><span>Wind</span><strong>{live.status === "ready" ? `${live.windDirection ?? ""} ${live.windSpeed ?? ""}` : "—"}</strong></div>
-            <small>{live.status === "ready" ? "Official hourly period" : "Awaiting provider"}</small>
+            <div><span>Wind</span><strong>{selected?.matches[0]?.forecastPeriod ? `${selected.matches[0].forecastPeriod.windDirection} ${selected.matches[0].forecastPeriod.windSpeed}` : live.status === "ready" ? `${live.windDirection ?? ""} ${live.windSpeed ?? ""}` : "—"}</strong></div>
+            <small>{selected?.matches[0]?.forecastPeriod ? "Selected NWS period" : live.status === "ready" ? "Official hourly period" : "Awaiting provider"}</small>
           </div>
           <div className="condition-cell">
             <Droplets size={19} />
@@ -690,7 +848,7 @@ export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }
             <div><span>Access & safety</span><strong>{selectedLocation.access.includes("wade") ? "Check flow before wading" : "Check posted conditions"}</strong></div>
             <small>Never enter closed or unsafe water</small>
           </div>
-          <button className="refresh-button" onClick={() => void refreshConditions()} aria-label="Refresh live conditions"><RefreshCw size={17} /></button>
+          <button className="refresh-button" onClick={() => { refreshTimeline(); void refreshConditions(); }} aria-label="Refresh live conditions"><RefreshCw size={17} /></button>
         </section>
       )}
     </main>

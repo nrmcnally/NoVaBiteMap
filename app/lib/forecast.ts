@@ -66,6 +66,8 @@ export type ForecastInput = {
   hydrologyRelevant: boolean;
   hydrology?: HydrologyResponse | null;
   wadingSelected?: boolean;
+  dielPattern?: string;
+  seasonalActivityByMonth?: number[];
 };
 
 function maxWindMph(value: string) {
@@ -78,11 +80,27 @@ function localParts(value: string) {
     dateKey: new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).format(date),
     dayLabel: new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", weekday: "short", month: "short", day: "numeric" }).format(date),
     hour: Number(new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", hour: "numeric", hourCycle: "h23" }).format(date)),
+    month: Number(new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", month: "numeric" }).format(date)),
     timeLabel: new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", hour: "numeric" }).format(date),
   };
 }
 
-function timeSuitability(hour: number) {
+function timeSuitability(hour: number, pattern = "crepuscular") {
+  if (pattern === "nocturnal") {
+    if (hour >= 20 || hour <= 4) return 0.9;
+    if ((hour >= 5 && hour <= 7) || (hour >= 17 && hour <= 19)) return 0.7;
+    return 0.38;
+  }
+  if (pattern === "diurnal") {
+    if (hour >= 8 && hour <= 16) return 0.82;
+    if ((hour >= 5 && hour <= 7) || (hour >= 17 && hour <= 19)) return 0.7;
+    return 0.38;
+  }
+  if (pattern === "flexible") {
+    if ((hour >= 5 && hour <= 8) || (hour >= 17 && hour <= 20)) return 0.84;
+    if (hour >= 9 && hour <= 16) return 0.72;
+    return 0.55;
+  }
   if ((hour >= 5 && hour <= 8) || (hour >= 17 && hour <= 20)) return 0.86;
   if ((hour >= 9 && hour <= 11) || (hour >= 15 && hour <= 16)) return 0.68;
   if (hour >= 12 && hour <= 14) return 0.54;
@@ -110,6 +128,15 @@ function isSafetyAlert(alert: NwsAlert) {
   return /flash flood|flood warning|severe thunderstorm warning|tornado|hurricane|tropical storm warning/i.test(`${alert.event} ${alert.headline}`);
 }
 
+function alertAppliesAt(alert: NwsAlert, startTime: string) {
+  const selected = Date.parse(startTime);
+  const parsedOnset = alert.onset ? Date.parse(alert.onset) : Number.NaN;
+  const parsedExpires = alert.expires ? Date.parse(alert.expires) : Number.NaN;
+  const onset = Number.isFinite(parsedOnset) ? parsedOnset : Number.NEGATIVE_INFINITY;
+  const expires = Number.isFinite(parsedExpires) ? parsedExpires : Number.POSITIVE_INFINITY;
+  return selected >= onset && selected <= expires;
+}
+
 function rapidRise(hydrology?: HydrologyResponse | null) {
   if (!hydrology?.available || hydrology.freshness === "old") return false;
   const discharge = hydrology.metrics?.discharge;
@@ -123,23 +150,30 @@ function rapidRise(hydrology?: HydrologyResponse | null) {
 export function buildForecast(input: ForecastInput) {
   const activeSafetyAlerts = input.alerts.filter(isSafetyAlert);
   const fastRise = rapidRise(input.hydrology);
-  const safetyCap = activeSafetyAlerts.length > 0 || (input.wadingSelected && fastRise) ? 35 : null;
   const hourly = input.periods.map((period) => {
     const local = localParts(period.startTime);
     const wind = maxWindMph(period.windSpeed);
-    const time = timeSuitability(local.hour);
+    const time = timeSuitability(local.hour, input.dielPattern);
     const windFit = windSuitability(wind);
     const precipitation = precipitationSuitability(period.precipitationProbability, period.shortForecast);
-    const activity = 0.5 * time + 0.25 * windFit + 0.25 * precipitation;
+    const seasonal = input.seasonalActivityByMonth?.[local.month - 1];
+    const activity = typeof seasonal === "number"
+      ? 0.35 * time + 0.2 * windFit + 0.2 * precipitation + 0.25 * seasonal
+      : 0.5 * time + 0.25 * windFit + 0.25 * precipitation;
     const quality = input.quality ?? 0.5;
     const raw = Math.round(100 * Math.pow(input.availability, 1.5) * (0.35 * quality + 0.5 * activity + 0.15 * input.accessFit));
-    const score = safetyCap === null ? raw : Math.min(raw, safetyCap);
+    const periodSafetyCap = activeSafetyAlerts.some((alert) => alertAppliesAt(alert, period.startTime))
+      || (input.wadingSelected && fastRise)
+      ? 35
+      : null;
+    const score = periodSafetyCap === null ? raw : Math.min(raw, periodSafetyCap);
     return {
       ...period,
       ...local,
       windMph: wind,
       activity: Number(activity.toFixed(3)),
       score: Math.max(0, Math.min(100, score)),
+      safetyCapped: periodSafetyCap !== null,
       factors: {
         timeOfDay: Number(time.toFixed(2)),
         wind: Number(windFit.toFixed(2)),
@@ -147,6 +181,7 @@ export function buildForecast(input: ForecastInput) {
       },
     };
   });
+  const safetyCap = hourly.some((period) => period.safetyCapped) ? 35 : null;
 
   const grouped = new Map<string, typeof hourly>();
   for (const period of hourly) grouped.set(period.dateKey, [...(grouped.get(period.dateKey) ?? []), period]);
@@ -180,7 +215,9 @@ export function buildForecast(input: ForecastInput) {
     rapidRise: fastRise,
     explanation: [
       "Availability and fishery quality remain evidence-gated.",
-      "Hourly activity uses forecast time of day, wind, and precipitation; air temperature is shown but is not treated as water temperature.",
+      input.dielPattern
+        ? "Hourly activity uses the reviewed species diel and seasonal profile plus forecast wind and precipitation; air temperature is shown but is not treated as water temperature."
+        : "Hourly activity uses forecast time of day, wind, and precipitation; air temperature is shown but is not treated as water temperature.",
       input.hydrology?.available ? `USGS ${input.hydrology.association?.stationId} adds freshness and association confidence.` : "Hydrology is unavailable or unassociated, so confidence is reduced where flow matters.",
       safetyCap ? "An official weather warning or rapid representative-gage rise applied a safety cap." : "No automatic safety cap is active; always assess conditions at the water.",
     ],

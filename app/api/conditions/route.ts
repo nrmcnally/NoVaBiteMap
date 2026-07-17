@@ -61,6 +61,11 @@ export async function GET(request: Request) {
       validTime: period.startTime,
       retrievedAt: hourly.properties?.updated ?? new Date().toISOString(),
       provider: "National Weather Service",
+      coverage: {
+        hourlyStart: hourly.properties?.periods?.[0]?.startTime ?? null,
+        hourlyEnd: hourly.properties?.periods?.slice(0, 120).at(-1)?.startTime ?? null,
+        unsupportedFutureDisabled: true,
+      },
       observed: false,
       periods: (hourly.properties?.periods ?? []).slice(0, 120).map((item) => ({
         startTime: item.startTime,

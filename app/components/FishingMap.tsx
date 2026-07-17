@@ -2,24 +2,60 @@
 
 import { useEffect, useRef } from "react";
 import { consumptionAdviceFor } from "../lib/advisories";
-import { speciesById, type FishingLocation } from "../lib/data";
-import { opportunityFor } from "../lib/scoring";
+import type { FishingLocation } from "../lib/data";
 import type { TravelOrigin } from "../lib/travel";
+
+export type MapOpportunity = {
+  score: number;
+  speciesName: string;
+  matchCount: number;
+};
 
 type FishingMapProps = {
   locations: FishingLocation[];
   speciesIds: string[];
+  opportunities: Map<string, MapOpportunity>;
   selectedId?: string;
   origin?: TravelOrigin | null;
   onSelect: (id: string) => void;
 };
 
-export function FishingMap({ locations, speciesIds, selectedId, origin, onSelect }: FishingMapProps) {
+function opportunityColor(opportunity: MapOpportunity | null) {
+  if (!opportunity) return "#8b9893";
+  if (opportunity.score >= 70) return "#d65e36";
+  if (opportunity.score >= 55) return "#edae49";
+  return "#1c6c72";
+}
+
+function tooltipHtml(location: FishingLocation, opportunity: MapOpportunity | null, speciesIds: string[]) {
+  const advisory = consumptionAdviceFor(location.consumptionAdvisory, speciesIds);
+  const status = !opportunity
+    ? (speciesIds.length === 0 ? "Verified access · evidence pending" : "Selected-species evidence pending")
+    : speciesIds.length === 0
+      ? `${opportunity.score}/100 · top target ${opportunity.speciesName}`
+      : `${opportunity.score}/100 best selected target${opportunity.matchCount > 1 ? ` · ${opportunity.matchCount} matches` : ""}`;
+  return `<div class="map-tooltip"><strong>${location.name}</strong><span>${status}</span>${advisory.status === "active" ? `<em>${advisory.label}</em>` : ""}</div>`;
+}
+
+export function FishingMap({ locations, speciesIds, opportunities, selectedId, origin, onSelect }: FishingMapProps) {
   const mapElement = useRef<HTMLDivElement>(null);
+  const markerById = useRef<Map<string, import("leaflet").CircleMarker>>(new Map());
+  const advisoryRingById = useRef<Map<string, import("leaflet").CircleMarker>>(new Map());
+  const opportunitiesRef = useRef(opportunities);
+  const selectedIdRef = useRef(selectedId);
+  const onSelectRef = useRef(onSelect);
+
+  useEffect(() => {
+    opportunitiesRef.current = opportunities;
+    selectedIdRef.current = selectedId;
+    onSelectRef.current = onSelect;
+  }, [onSelect, opportunities, selectedId]);
 
   useEffect(() => {
     let disposed = false;
     let map: import("leaflet").Map | undefined;
+    const markers = markerById.current;
+    const advisoryRings = advisoryRingById.current;
 
     async function mountMap() {
       if (!mapElement.current) return;
@@ -43,29 +79,12 @@ export function FishingMap({ locations, speciesIds, selectedId, origin, onSelect
 
       const bounds: [number, number][] = [];
       locations.forEach((location) => {
-        // With a target species, rank by it; otherwise color by the location's
-        // strongest evidenced fish so the map reflects the default ranking.
-        const sourceSpecies = speciesIds.length > 0
-          ? speciesIds
-          : [...new Set(location.evidence.map((evidence) => evidence.speciesId))];
-        const opportunities = sourceSpecies
-          .map((speciesId) => opportunityFor(location, speciesId))
-          .filter((item): item is NonNullable<typeof item> => Boolean(item))
-          .sort((a, b) => b.score - a.score);
-        const opportunity = opportunities[0] ?? null;
+        const opportunity = opportunitiesRef.current.get(location.id) ?? null;
         const advisory = consumptionAdviceFor(location.consumptionAdvisory, speciesIds);
-        const score = opportunity?.score ?? 0;
-        const selected = location.id === selectedId;
+        const selected = location.id === selectedIdRef.current;
         const hasSpeciesEvidence = Boolean(opportunity);
-        const color = !hasSpeciesEvidence
-          ? "#8b9893"
-          : score >= 70
-            ? "#d65e36"
-            : score >= 55
-              ? "#edae49"
-              : "#1c6c72";
         if (advisory.status === "active") {
-          L.circleMarker([location.lat, location.lng], {
+          const ring = L.circleMarker([location.lat, location.lng], {
             radius: selected ? 17 : 14,
             color: "#a84f35",
             weight: 3,
@@ -74,25 +93,21 @@ export function FishingMap({ locations, speciesIds, selectedId, origin, onSelect
             dashArray: "4 3",
             interactive: false,
           }).addTo(map!);
+          advisoryRings.set(location.id, ring);
         }
         const marker = L.circleMarker([location.lat, location.lng], {
           radius: selected ? 12 : 9,
           color: selected ? "#fff8e8" : "#173b3f",
           weight: selected ? 4 : 2,
-          fillColor: color,
+          fillColor: opportunityColor(opportunity),
           fillOpacity: hasSpeciesEvidence ? 1 : 0.72,
         }).addTo(map!);
-        const topFishName = opportunity ? speciesById(opportunity.evidence.speciesId)?.name ?? "" : "";
-        const tooltipStatus = !hasSpeciesEvidence
-          ? (speciesIds.length === 0 ? "Verified access · evidence pending" : "Selected-species evidence pending")
-          : speciesIds.length === 0
-            ? `${score}/100 · top target ${topFishName}`
-            : `${score}/100 best selected target${opportunities.length > 1 ? ` · ${opportunities.length} matches` : ""}`;
         marker.bindTooltip(
-          `<div class="map-tooltip"><strong>${location.name}</strong><span>${tooltipStatus}</span>${advisory.status === "active" ? `<em>${advisory.label}</em>` : ""}</div>`,
+          tooltipHtml(location, opportunity, speciesIds),
           { direction: "top", offset: [0, -8], opacity: 1 },
         );
-        marker.on("click", () => onSelect(location.id));
+        marker.on("click", () => onSelectRef.current(location.id));
+        markers.set(location.id, marker);
         bounds.push([location.lat, location.lng]);
       });
 
@@ -117,10 +132,30 @@ export function FishingMap({ locations, speciesIds, selectedId, origin, onSelect
     void mountMap();
     return () => {
       disposed = true;
+      markers.clear();
+      advisoryRings.clear();
       map?.stop();
       map?.remove();
     };
-  }, [locations, onSelect, origin, selectedId, speciesIds]);
+  }, [locations, origin, speciesIds]);
+
+  useEffect(() => {
+    for (const location of locations) {
+      const marker = markerById.current.get(location.id);
+      if (!marker) continue;
+      const opportunity = opportunities.get(location.id) ?? null;
+      const selected = location.id === selectedId;
+      marker.setRadius(selected ? 12 : 9);
+      marker.setStyle({
+        color: selected ? "#fff8e8" : "#173b3f",
+        weight: selected ? 4 : 2,
+        fillColor: opportunityColor(opportunity),
+        fillOpacity: opportunity ? 1 : 0.72,
+      });
+      marker.setTooltipContent(tooltipHtml(location, opportunity, speciesIds));
+      advisoryRingById.current.get(location.id)?.setRadius(selected ? 17 : 14);
+    }
+  }, [locations, opportunities, selectedId, speciesIds]);
 
   return <div className="leaflet-shell" ref={mapElement} aria-label="Interactive map of fishing opportunities" />;
 }
