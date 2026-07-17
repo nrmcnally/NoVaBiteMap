@@ -14,6 +14,7 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from ..auth.service import create_session_token, hash_password, token_hash, user_for_token, verify_password
+from ..core.config import settings
 from ..core.database import get_session
 from ..models.entities import (
     DataIngestionRun,
@@ -179,6 +180,14 @@ def current_user(
     user = user_for_token(session, credentials.credentials)
     if not user:
         raise HTTPException(status_code=401, detail="Session is invalid or expired")
+    return user
+
+
+def require_admin(user: User = Depends(current_user)) -> User:
+    """Authorization (not just authentication) for privileged routes. Fails
+    closed: with BITEMAP_ADMIN_EMAILS unset, no account is an admin."""
+    if not settings.admin_emails or user.email.lower() not in settings.admin_emails:
+        raise HTTPException(status_code=403, detail="Admin privileges required")
     return user
 
 
@@ -1116,7 +1125,7 @@ def data_source_status(session: Session = Depends(get_session)) -> dict:
 
 
 @router.post("/admin/ingestion/reseed")
-def run_reseed(_: User = Depends(current_user), session: Session = Depends(get_session)) -> dict:
+def run_reseed(_: User = Depends(require_admin), session: Session = Depends(get_session)) -> dict:
     from ..data.loader import load_seed
 
     result = load_seed(force=True)

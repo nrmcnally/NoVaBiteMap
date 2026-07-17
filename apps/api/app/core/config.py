@@ -9,6 +9,13 @@ def _origins() -> list[str]:
     return [origin.strip() for origin in raw.split(",") if origin.strip()]
 
 
+def _admin_emails() -> list[str]:
+    # Fail-closed: with BITEMAP_ADMIN_EMAILS unset, nobody is an admin, so
+    # privileged routes (e.g. reseed) are denied to every account.
+    raw = os.getenv("BITEMAP_ADMIN_EMAILS", "")
+    return [email.strip().lower() for email in raw.split(",") if email.strip()]
+
+
 @dataclass(frozen=True)
 class Settings:
     app_name: str = "BiteMap NOVA API"
@@ -24,6 +31,7 @@ class Settings:
     request_timeout_seconds: float = float(os.getenv("REQUEST_TIMEOUT_SECONDS", "10"))
     session_hours: int = int(os.getenv("SESSION_HOURS", "168"))
     cors_origins: list[str] = field(default_factory=_origins)
+    admin_emails: list[str] = field(default_factory=_admin_emails)
 
 
 settings = Settings()

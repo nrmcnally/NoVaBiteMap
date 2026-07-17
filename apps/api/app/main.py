@@ -3,7 +3,7 @@ from __future__ import annotations
 import logging
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
 from .api.routes import router
@@ -61,4 +61,17 @@ app.include_router(router, prefix=settings.api_prefix)
 
 @app.get("/health")
 def health() -> dict:
-    return {"status": "ok", "service": settings.app_name, "version": "0.2.0"}
+    # A container healthcheck must reflect reality: if migrations ran but the
+    # seed failed, the DB is empty and the app would silently serve snapshot
+    # fallback. Return 503 so Compose marks the API unhealthy (and the web
+    # service does not start against a dataless stack) instead of green-lighting it.
+    from .models.entities import FishingLocationRecord
+
+    try:
+        with SessionLocal() as session:
+            locations = session.query(FishingLocationRecord).count()
+    except Exception as error:  # DB unreachable / schema missing
+        raise HTTPException(status_code=503, detail=f"Database unavailable: {error}") from error
+    if locations <= 0:
+        raise HTTPException(status_code=503, detail="Database has no locations (seed did not load)")
+    return {"status": "ok", "service": settings.app_name, "version": "0.2.0", "locations": locations}

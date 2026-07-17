@@ -40,6 +40,17 @@ def test_favorites_require_auth(client):
     assert client.get("/api/users/me/favorites").status_code == 401
 
 
+def test_reseed_requires_authentication(client):
+    # Anonymous callers cannot reach the privileged reseed route.
+    assert client.post("/api/admin/ingestion/reseed").status_code == 401
+
+
+def test_reseed_denied_for_non_admin(auth_client):
+    # A valid login is not enough: with BITEMAP_ADMIN_EMAILS unset the admin
+    # allowlist is empty, so authorization fails closed for every account.
+    assert auth_client.post("/api/admin/ingestion/reseed").status_code == 403
+
+
 def test_create_favorite_rejects_unknown_location(auth_client):
     resp = auth_client.post("/api/users/me/favorites", json={"location_id": "does-not-exist"})
     assert resp.status_code == 404
