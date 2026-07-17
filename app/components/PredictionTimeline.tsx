@@ -6,6 +6,7 @@ import {
   ChevronRight,
   Clock3,
   CloudSun,
+  Info,
   LoaderCircle,
   RefreshCw,
 } from "lucide-react";
@@ -90,94 +91,91 @@ export function PredictionTimeline({
       }).format(new Date(retrievedAt))
     : null;
 
+  const selectionTitle = status === "ready" && selection
+    ? selection.mode === "daily"
+      ? days[dailyIndex]?.label
+      : forecastHourLabel(selectedPeriod!.startTime)
+    : status === "loading"
+      ? "Loading forecast…"
+      : "Forecast unavailable";
+  const selectionSummary = status === "ready" && selection
+    ? selection.mode === "daily"
+      ? `${selectedPeriods.length} forecast hours · best window by species`
+      : `${selectedPeriod!.shortForecast} · ${selectedPeriod!.temperature}°${selectedPeriod!.temperatureUnit} · ${selectedPeriod!.windDirection} ${selectedPeriod!.windSpeed}`
+    : status === "loading"
+      ? "Checking National Weather Service coverage"
+      : "Seasonal scores remain visible";
+
   return (
-    <section className="prediction-timeline" aria-label="Interactive fishing prediction timeline">
-      <div className="timeline-heading">
-        <div>
-          <span className="eyebrow"><Clock3 size={13} /> Interactive prediction timeline</span>
-          <strong>{anchorLabel}</strong>
-          <small>One selected forecast state drives every score, result rank, and map color.</small>
+    <section className={`prediction-timeline timeline-${status} timeline-${selection?.mode ?? "hourly"}`} aria-label="Interactive fishing prediction timeline">
+      <div className="timeline-main">
+        <div className="timeline-readout" aria-live="polite">
+          <span><Clock3 size={12} /> Bite forecast</span>
+          <strong>{selectionTitle}</strong>
+          <small>{selectionSummary}</small>
         </div>
-        <div className="timeline-mode" role="group" aria-label="Forecast resolution">
-          <button
-            type="button"
-            className={selection?.mode !== "daily" ? "active" : ""}
-            disabled={status !== "ready"}
-            onClick={() => setMode("hourly")}
-          ><Clock3 size={14} /> Hour</button>
-          <button
-            type="button"
-            className={selection?.mode === "daily" ? "active" : ""}
-            disabled={status !== "ready"}
-            onClick={() => setMode("daily")}
-          ><CalendarDays size={14} /> Day</button>
-        </div>
+
+        {status === "loading" && <LoaderCircle className="spin timeline-loader" size={18} />}
+
+        {status === "error" && (
+          <div className="timeline-error">
+            <CloudSun size={16} />
+            <span>{error || "BiteMap did not invent replacement weather."}</span>
+            <button type="button" onClick={onRefresh}><RefreshCw size={13} /> Retry</button>
+          </div>
+        )}
+
+        {status === "ready" && selection && periods.length > 0 && (
+          <>
+            <div className="timeline-scrubber">
+              <button type="button" onClick={() => step(-1)} disabled={activeIndex <= 0} aria-label={`Previous ${selection.mode === "daily" ? "day" : "hour"}`}><ChevronLeft size={16} /></button>
+              {selection.mode === "hourly" ? (
+                <label className="timeline-range">
+                  <span>{hourlyIndex + 1}/{periods.length}</span>
+                  <input
+                    type="range"
+                    min={0}
+                    max={Math.max(0, periods.length - 1)}
+                    value={Math.max(0, hourlyIndex)}
+                    onChange={(event) => onChange({ mode: "hourly", key: periods[Number(event.target.value)].startTime })}
+                    aria-label="Forecast hour"
+                    aria-valuetext={selectedPeriod ? forecastHourLabel(selectedPeriod.startTime) : undefined}
+                  />
+                </label>
+              ) : (
+                <span className="timeline-day-position">Day {dailyIndex + 1} of {days.length}</span>
+              )}
+              <button type="button" onClick={() => step(1)} disabled={activeIndex >= activeLength - 1} aria-label={`Next ${selection.mode === "daily" ? "day" : "hour"}`}><ChevronRight size={16} /></button>
+            </div>
+
+            <div className="timeline-actions">
+              <button type="button" className="timeline-now" onClick={() => onChange({ mode: "hourly", key: periods[0].startTime })}>Now</button>
+              <div className="timeline-mode" role="group" aria-label="Forecast resolution">
+                <button type="button" className={selection.mode === "hourly" ? "active" : ""} onClick={() => setMode("hourly")}><Clock3 size={12} /> Hour</button>
+                <button type="button" className={selection.mode === "daily" ? "active" : ""} onClick={() => setMode("daily")}><CalendarDays size={12} /> Day</button>
+              </div>
+              <details className="timeline-info">
+                <summary aria-label="Forecast coverage details"><Info size={15} /></summary>
+                <div>
+                  <strong>{anchorLabel}</strong>
+                  <span>NWS coverage: {forecastHourLabel(coverageStart!)} through {forecastHourLabel(coverageEnd!)}. Times beyond this boundary are unavailable.</span>
+                  <small>{selection.mode === "daily" ? "Day view: each species uses its best supported hour for the selected day. " : ""}{refreshedLabel ? `Provider updated ${refreshedLabel}. ` : ""}Air temperature is not treated as water temperature.</small>
+                </div>
+              </details>
+              <button type="button" className="timeline-refresh" onClick={onRefresh} aria-label="Refresh NWS forecast"><RefreshCw size={14} /></button>
+            </div>
+          </>
+        )}
       </div>
 
-      {status === "loading" && (
-        <div className="timeline-state"><LoaderCircle className="spin" size={18} /> Loading the exact NWS forecast window…</div>
-      )}
-
-      {status === "error" && (
-        <div className="timeline-state timeline-error">
-          <CloudSun size={18} />
-          <span><strong>Live forecast unavailable.</strong> Seasonal evidence scores remain visible; BiteMap did not invent replacement weather. {error}</span>
-          <button type="button" onClick={onRefresh}><RefreshCw size={14} /> Retry</button>
+      {status === "ready" && selection?.mode === "daily" && (
+        <div className="timeline-days" role="list" aria-label="Provider-backed forecast days">
+          {days.map((day) => (
+            <button type="button" role="listitem" key={day.key} className={selection.key === day.key ? "active" : ""} onClick={() => onChange({ mode: "daily", key: day.key })}>
+              <strong>{day.label}</strong><span>{day.periods.length} hrs</span>
+            </button>
+          ))}
         </div>
-      )}
-
-      {status === "ready" && selection && periods.length > 0 && (
-        <>
-          <div className="timeline-controls">
-            <button type="button" onClick={() => step(-1)} disabled={activeIndex <= 0} aria-label={`Previous ${selection.mode === "daily" ? "day" : "hour"}`}><ChevronLeft size={17} /></button>
-            <button type="button" className="timeline-now" onClick={() => onChange({ mode: "hourly", key: periods[0].startTime })}>Now</button>
-            <div className="timeline-selection" aria-live="polite">
-              <span>{selection.mode === "daily" ? "Daily outlook" : "Hourly forecast"}</span>
-              <strong>{selection.mode === "daily" ? days[dailyIndex]?.label : forecastHourLabel(selectedPeriod!.startTime)}</strong>
-              <small>
-                {selection.mode === "daily"
-                  ? `${selectedPeriods.length} provider-backed hours · each species uses its best supported hour`
-                  : `${selectedPeriod!.shortForecast} · ${selectedPeriod!.temperature}°${selectedPeriod!.temperatureUnit} · ${selectedPeriod!.windDirection} ${selectedPeriod!.windSpeed}`}
-              </small>
-            </div>
-            <button type="button" onClick={() => step(1)} disabled={activeIndex >= activeLength - 1} aria-label={`Next ${selection.mode === "daily" ? "day" : "hour"}`}><ChevronRight size={17} /></button>
-            <button type="button" className="timeline-refresh" onClick={onRefresh} aria-label="Refresh NWS forecast"><RefreshCw size={15} /></button>
-          </div>
-
-          {selection.mode === "hourly" ? (
-            <label className="timeline-range">
-              <span>Hour {hourlyIndex + 1} of {periods.length}</span>
-              <input
-                type="range"
-                min={0}
-                max={Math.max(0, periods.length - 1)}
-                value={Math.max(0, hourlyIndex)}
-                onChange={(event) => onChange({ mode: "hourly", key: periods[Number(event.target.value)].startTime })}
-                aria-label="Forecast hour"
-                aria-valuetext={selectedPeriod ? forecastHourLabel(selectedPeriod.startTime) : undefined}
-              />
-            </label>
-          ) : (
-            <div className="timeline-days" role="list" aria-label="Provider-backed forecast days">
-              {days.map((day) => (
-                <button
-                  type="button"
-                  role="listitem"
-                  key={day.key}
-                  className={selection.key === day.key ? "active" : ""}
-                  onClick={() => onChange({ mode: "daily", key: day.key })}
-                >
-                  <strong>{day.label}</strong><span>{day.periods.length} hours</span>
-                </button>
-              ))}
-            </div>
-          )}
-
-          <div className="timeline-coverage">
-            <span>NWS coverage: {forecastHourLabel(coverageStart!)} through {forecastHourLabel(coverageEnd!)}. Times beyond this boundary are unavailable.</span>
-            <small>{refreshedLabel ? `Provider updated ${refreshedLabel}` : "National Weather Service"} · air temperature is not treated as water temperature</small>
-          </div>
-        </>
       )}
     </section>
   );

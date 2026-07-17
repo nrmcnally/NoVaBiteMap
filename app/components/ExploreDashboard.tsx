@@ -677,17 +677,6 @@ export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }
         </div>
       </section>
 
-      <PredictionTimeline
-        status={timelineForecast.status}
-        periods={timelineForecast.periods}
-        selection={timelineSelection}
-        anchorLabel={timelineAnchor.label}
-        retrievedAt={timelineForecast.retrievedAt}
-        error={timelineForecast.error}
-        onChange={setTimelineSelection}
-        onRefresh={refreshTimeline}
-      />
-
       <section className={`workspace-grid ${resultsOpen ? "results-open" : ""}`}>
         <div className="map-panel">
           <div className="map-toolbar">
@@ -699,6 +688,16 @@ export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }
               <ListFilter size={17} /> {resultsOpen ? "Hide results" : speciesIds.length > 0 ? `Show ${ranked.length} ranked results` : "Open results"}
             </button>
           </div>
+          <PredictionTimeline
+            status={timelineForecast.status}
+            periods={timelineForecast.periods}
+            selection={timelineSelection}
+            anchorLabel={timelineAnchor.label}
+            retrievedAt={timelineForecast.retrievedAt}
+            error={timelineForecast.error}
+            onChange={setTimelineSelection}
+            onRefresh={refreshTimeline}
+          />
           <FishingMap
             locations={mapLocations}
             speciesIds={speciesIds}

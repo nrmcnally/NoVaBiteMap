@@ -185,7 +185,7 @@ test("Explore timeline uses exact provider bounds and one score set for the map 
   assert.match(timeline, /type="range"/);
   assert.match(timeline, /each species uses its best supported hour/);
   assert.match(timelineContract, /periods\.find\(\(item\) => item\.startTime === selection\.key\)/);
-  assert.match(map, /Markers consume that same set/);
+  assert.match(map, /opportunities\.get\(location\.id\)/);
   assert.doesNotMatch(map, /opportunityFor\(/);
   assert.match(scoring, /profileFor\(speciesId\)/);
   assert.match(scoring, /seasonalActivityByMonth/);
