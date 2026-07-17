@@ -1,0 +1,39 @@
+# Production override for a single always-on host (e.g. an Oracle Always Free
+# ARM VM). Layers a Caddy reverse proxy (auto-HTTPS) in front of the stack and
+# points the API's CORS allowlist at the public domain.
+#
+# Deploy with BOTH files:
+#   docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+# (or just run ./deploy.sh). Local dev is unchanged: `docker compose up` still
+# uses only docker-compose.yml and serves the app on localhost:3000.
+#
+# Requires DOMAIN and ACME_EMAIL in .env. Open ONLY ports 22/80/443 on the host;
+# the published web:3000 is not reachable externally behind that firewall, and
+# Caddy reaches web over the internal compose network.
+
+services:
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      DOMAIN: ${DOMAIN:?set DOMAIN in .env, e.g. bitemap-nova.duckdns.org}
+      ACME_EMAIL: ${ACME_EMAIL:-admin@example.com}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - web
+
+  api:
+    environment:
+      # Browser talks to the same-origin web proxy, not the API directly, so CORS
+      # is belt-and-suspenders — but keep it pointed at the real site anyway.
+      CORS_ORIGINS: https://${DOMAIN}
+
+volumes:
+  caddy_data:
+  caddy_config:

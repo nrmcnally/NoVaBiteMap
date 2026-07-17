@@ -1,0 +1,27 @@
+# Caddy reverse proxy — terminates HTTPS (auto Let's Encrypt cert) and forwards
+# to the vinext web container. Used only in the production override
+# (docker-compose.prod.yml). DOMAIN + ACME_EMAIL come from the .env file.
+#
+# Caddy obtains and renews the TLS cert automatically for {$DOMAIN}; the cert is
+# persisted in the caddy_data volume so restarts do not re-request it (which would
+# otherwise risk hitting Let's Encrypt rate limits).
+
+{
+	email {$ACME_EMAIL}
+}
+
+{$DOMAIN} {
+	encode zstd gzip
+	# Forward the real scheme/host so the app builds correct absolute URLs and
+	# marks session cookies Secure behind TLS termination.
+	reverse_proxy web:3000 {
+		header_up X-Forwarded-Proto {scheme}
+		header_up X-Forwarded-Host {host}
+	}
+	header {
+		# Basic hardening headers. Adjust CSP later if you add external assets.
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+	}
+}
