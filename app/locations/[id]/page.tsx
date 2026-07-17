@@ -25,7 +25,7 @@ import { WhatsBiting, type KnownSpecies } from "../../components/WhatsBiting";
 import { consumptionAdviceFor } from "../../lib/advisories";
 import { locationById, sourceLinks, speciesById } from "../../lib/data";
 import { fetchLocation } from "../../lib/api";
-import { estimatedHourlyScores, opportunityFor } from "../../lib/scoring";
+import { opportunityFor } from "../../lib/scoring";
 import { googleDirectionsUrl } from "../../lib/travel";
 
 type LocationPageProps = { params: Promise<{ id: string }>; searchParams: Promise<{ species?: string }> };
@@ -45,7 +45,6 @@ export default async function LocationPage({ params, searchParams }: LocationPag
     .find(Boolean) ?? location.evidence[0];
   const opportunity = primaryEvidence ? opportunityFor(location, primaryEvidence.speciesId) : null;
   const target = primaryEvidence ? speciesById(primaryEvidence.speciesId) : null;
-  const hourly = opportunity ? estimatedHourlyScores(opportunity.score) : [];
 
   const knownSpecies: KnownSpecies[] = Array.from(
     location.evidence.reduce((bySpecies, evidence) => {
@@ -155,7 +154,6 @@ export default async function LocationPage({ params, searchParams }: LocationPag
                 associationFactor={location.hydrology?.associationFactor ?? 1}
                 hydrologyRelevant={location.waterbodyType === "river" || location.waterbodyType === "stream"}
                 wadingAvailable={location.access.includes("wade")}
-                fallbackHourly={hourly}
               />
             )}
 

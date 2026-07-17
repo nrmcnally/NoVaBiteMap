@@ -100,12 +100,3 @@ export function opportunityForForecast(
     factors: best.factors,
   };
 }
-
-export function estimatedHourlyScores(base: number) {
-  const offsets = [-3, 2, 5, 1, -5, -9, -12, -14];
-  const labels = ["5a", "6a", "7a", "8a", "9a", "10a", "11a", "12p"];
-  return labels.map((label, index) => ({
-    label,
-    score: Math.max(0, Math.min(100, base + offsets[index])),
-  }));
-}

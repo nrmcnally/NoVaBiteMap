@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-07-16",
+    "generated": "2026-07-17",
     "locationCount": 196,
     "guessReliantLocationCount": 36,
     "policy": "Candidates never affect rankings until finalVerdict is approved after exact-water, species, date, provenance, contradiction, and access review.",
@@ -52612,7 +52612,7 @@
           "lastObserved": "1999-06-29",
           "recency": {
             "band": "historical-over-10-years",
-            "ageYears": 27
+            "ageYears": 27.1
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder",
@@ -52745,7 +52745,7 @@
           "lastObserved": "1999-06-29",
           "recency": {
             "band": "historical-over-10-years",
-            "ageYears": 27
+            "ageYears": 27.1
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder",
@@ -54034,7 +54034,7 @@
           "lastObserved": "2014-09-10",
           "recency": {
             "band": "historical-over-10-years",
-            "ageYears": 11.8
+            "ageYears": 11.9
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder"
@@ -54078,7 +54078,7 @@
           "lastObserved": "2014-09-10",
           "recency": {
             "band": "historical-over-10-years",
-            "ageYears": 11.8
+            "ageYears": 11.9
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder"
@@ -54256,7 +54256,7 @@
           "lastObserved": "2009-08-04",
           "recency": {
             "band": "historical-over-10-years",
-            "ageYears": 16.9
+            "ageYears": 17
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder"
@@ -54344,7 +54344,7 @@
           "lastObserved": "2014-09-10",
           "recency": {
             "band": "historical-over-10-years",
-            "ageYears": 11.8
+            "ageYears": 11.9
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder"
@@ -54472,7 +54472,7 @@
           "lastObserved": "2009-08-04",
           "recency": {
             "band": "historical-over-10-years",
-            "ageYears": 16.9
+            "ageYears": 17
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder"
@@ -54650,7 +54650,7 @@
           "lastObserved": "2014-09-10",
           "recency": {
             "band": "historical-over-10-years",
-            "ageYears": 11.8
+            "ageYears": 11.9
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder"

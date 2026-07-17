@@ -31,7 +31,6 @@ type Props = {
   associationFactor: number;
   hydrologyRelevant: boolean;
   wadingAvailable: boolean;
-  fallbackHourly: Array<{ label: string; score: number }>;
 };
 
 type WaterTemperatureState = {
@@ -296,12 +295,7 @@ export function LocationIntelligence(props: Props) {
         </>
       ) : (
         <>
-          <div className="fallback-note"><AlertTriangle size={16} /> Live NWS forecast is unavailable. Showing the labeled seasonal profile; BiteMap did not fabricate replacement weather.</div>
-          <div className="hour-chart fallback-chart">
-            {props.fallbackHourly.map((hour) => (
-              <div className="hour-column" key={hour.label}><span>{hour.score}</span><div><i style={{ height: `${Math.max(12, hour.score)}%` }} /></div><strong>{hour.label}</strong></div>
-            ))}
-          </div>
+          <div className="fallback-note"><AlertTriangle size={16} /> Live forecast is unavailable right now, so no hourly bite estimate is shown. BiteMap does not fabricate replacement weather — the evidence-based species list above is unaffected.</div>
         </>
       )}
 
