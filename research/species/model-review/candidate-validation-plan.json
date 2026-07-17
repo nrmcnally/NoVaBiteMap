@@ -1,0 +1,334 @@
+{
+  "schemaVersion": "0.1.0-draft",
+  "reviewVersion": "engineering-review-v0.1.0",
+  "modelVersion": "candidate-v0.2.0",
+  "snapshotDate": "2026-07-16",
+  "notice": "AI-assisted adversarial engineering review. This is not human scientific approval, production approval, or evidence of predictive validity.",
+  "reviewerAssertion": {
+    "reviewType": "AI-assisted-engineering-review",
+    "humanScientificReviewer": null,
+    "humanApproved": false,
+    "productionApproved": false
+  },
+  "reviewCriteria": [
+    "The response preserves the direction supported by the cited endpoint.",
+    "The response remains neutral outside the studied scope or when an input is missing.",
+    "Magnitude is smaller when endpoint, setting, life stage, or geographic transfer is uncertain.",
+    "Severe penalties activate only at the exact severe physiological condition.",
+    "Correlated temperature, light, tide, cloud, and flow signals cannot stack.",
+    "No curve is treated as validated merely because its deterministic tests pass."
+  ],
+  "magnitudeRevisions": [
+    {
+      "ruleId": "rule-batch-7-american-eel-01",
+      "reason": "Baited-trap capture in one estuary is an indirect angling proxy, so the former full moderate envelope was too assertive.",
+      "expectedResponse": {"type": "categorical", "input": "solarPeriod", "values": {"daylight": 0.97, "post-sunset": 1.03, "night": 1.02}}
+    },
+    {
+      "ruleId": "rule-batch-9-brown-bullhead-04",
+      "reason": "The very-cold evidence includes a confounded field comparison and cannot support a five-percent ordinary score penalty.",
+      "expectedResponse": {"type": "piecewise-linear", "input": "waterTemperatureC", "anchors": [[2, 0.97], [3, 0.99], [4.5, 1.0]], "outsideRange": "neutral"}
+    },
+    {
+      "ruleId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01",
+      "reason": "Progressive ration differences establish direction but not a direct conversion to catchability, so the cold penalty was reduced.",
+      "expectedResponse": {"type": "piecewise-linear", "input": "waterTemperatureC", "anchors": [[7, 0.95], [10, 0.97], [15.6, 0.99], [21.1, 1.0]], "outsideRange": "neutral"}
+    },
+    {
+      "ruleId": "rule-batch-6-northern-snakehead-01",
+      "reason": "The local study is highly relevant, but its predictors explained only a small share of feeding variation; the response is now minor rather than moderate.",
+      "expectedResponse": {"type": "categorical", "input": "solarPeriod", "values": {"overnight": 0.97, "morning": 1.03, "daylight": 1.01}}
+    },
+    {
+      "ruleId": "rule-batch-8-white-sucker-01",
+      "reason": "A controlled juvenile feeding response does not justify the former full moderate envelope for adult field catchability.",
+      "expectedResponse": {"type": "piecewise-linear", "input": "waterTemperatureC", "anchors": [[19, 0.97], [22, 1.01], [25, 1.03], [28, 0.97]], "outsideRange": "neutral"}
+    },
+    {
+      "ruleId": "rule-batch-5-yellow-perch-01",
+      "reason": "Two field stomach chronologies support timing direction but not a ten-percent peak-to-trough catchability swing.",
+      "expectedResponse": {"type": "categorical", "input": "solarPeriod", "values": {"dawn": 0.97, "day": 1.0, "late-evening": 1.03, "post-sunset": 0.99, "night": 0.97}}
+    }
+  ],
+  "curveReviews": [
+    {
+      "ruleId": "rule-batch-7-american-eel-01",
+      "reviewOutcome": "retain-test-only-with-reduced-magnitude",
+      "adversarialFinding": "Nocturnal baited-trap capture is directionally useful but is not hook-and-line catchability and came from a turbid estuary.",
+      "primaryRisk": "endpoint-and-setting-transfer",
+      "comparisonCohortSelected": false
+    },
+    {
+      "ruleId": "rule-batch-10-blacknose-dace-01",
+      "reviewOutcome": "retain-test-only",
+      "adversarialFinding": "Exact timing is verified, but stomach fullness over one July day in one stream may reflect digestion as well as feeding.",
+      "primaryRisk": "single-day-field-chronology",
+      "comparisonCohortSelected": false
+    },
+    {
+      "ruleId": "rule-batch-4-blue-catfish-01",
+      "reviewOutcome": "retain-test-only",
+      "adversarialFinding": "Virginia tidal-river fish improve transferability, but controlled maximum ration is not field angling success.",
+      "primaryRisk": "ration-to-catchability-transfer",
+      "comparisonCohortSelected": false
+    },
+    {
+      "ruleId": "rule-batch-9-brown-bullhead-01",
+      "reviewOutcome": "retain-test-only",
+      "adversarialFinding": "The warm-side direction requires sustained acclimation and must not respond to a single warm afternoon.",
+      "primaryRisk": "exposure-duration-mismatch",
+      "comparisonCohortSelected": false
+    },
+    {
+      "ruleId": "rule-batch-9-brown-bullhead-03",
+      "reviewOutcome": "retain-test-only",
+      "adversarialFinding": "The nighttime signal is limited to very cold winter experimental conditions and cannot define the ordinary seasonal diel curve.",
+      "primaryRisk": "narrow-season-temperature-scope",
+      "comparisonCohortSelected": false
+    },
+    {
+      "ruleId": "rule-batch-9-brown-bullhead-04",
+      "reviewOutcome": "retain-test-only-with-reduced-magnitude",
+      "adversarialFinding": "Feeding at 3 C is supported, while the near-2 C field comparison is confounded and cannot establish a universal threshold.",
+      "primaryRisk": "confounded-cold-threshold",
+      "comparisonCohortSelected": false
+    },
+    {
+      "ruleId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01",
+      "reviewOutcome": "retain-test-only-with-reduced-magnitude",
+      "adversarialFinding": "Temperature anchors support continued cold feeding and directional suppression, but not a direct ration-to-score conversion.",
+      "primaryRisk": "ration-to-catchability-transfer",
+      "comparisonCohortSelected": false
+    },
+    {
+      "ruleId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-02",
+      "reviewOutcome": "retain-test-only",
+      "adversarialFinding": "Cooling-day direction is usable only with genuine 24-48 hour water-temperature history and adds no warming bonus.",
+      "primaryRisk": "thermal-history-quality",
+      "comparisonCohortSelected": false
+    },
+    {
+      "ruleId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03",
+      "reviewOutcome": "retain-test-only",
+      "adversarialFinding": "The severe treatment supports a guarded penalty, but juvenile aquaculture stress activity cannot be interpreted as positive catchability.",
+      "primaryRisk": "aquaculture-to-field-transfer",
+      "comparisonCohortSelected": false
+    },
+    {
+      "ruleId": "rule-batch-7-common-carp-01",
+      "reviewOutcome": "retain-test-only",
+      "adversarialFinding": "Large treatment differences support the bounded shape, but 28 C is not labeled a universal NOVA field optimum.",
+      "primaryRisk": "controlled-treatment-transfer",
+      "comparisonCohortSelected": false
+    },
+    {
+      "ruleId": "rule-batch-8-creek-chub-01",
+      "reviewOutcome": "retain-test-only",
+      "adversarialFinding": "One summer stream chronology supports only a minor relative early-evening signal.",
+      "primaryRisk": "single-stream-transfer",
+      "comparisonCohortSelected": false
+    },
+    {
+      "ruleId": "rule-batch-8-fallfish-01",
+      "reviewOutcome": "blocked-neutral",
+      "adversarialFinding": "A distinct peak is confirmed, but its interval is unavailable; any timed response would be invented.",
+      "primaryRisk": "missing-primary-peak-interval",
+      "comparisonCohortSelected": false
+    },
+    {
+      "ruleId": "rule-batch-4-flathead-catfish-01",
+      "reviewOutcome": "retain-test-only",
+      "adversarialFinding": "Juvenile laboratory cessation anchors justify a severe cold guardrail, not a claim that field capture is impossible.",
+      "primaryRisk": "juvenile-lab-to-field-transfer",
+      "comparisonCohortSelected": false
+    },
+    {
+      "ruleId": "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-03",
+      "reviewOutcome": "retain-test-only",
+      "adversarialFinding": "The exact chronic 35 C condition supports a guardrail, but the study does not identify a lower onset temperature.",
+      "primaryRisk": "unknown-heat-onset",
+      "comparisonCohortSelected": false
+    },
+    {
+      "ruleId": "rule-batch-6-muskellunge-01",
+      "reviewOutcome": "retain-test-only",
+      "adversarialFinding": "Angler-trip success is directly relevant, but one lake fishery cannot establish the same radiation slope for every NOVA water.",
+      "primaryRisk": "single-fishery-transfer",
+      "comparisonCohortSelected": false
+    },
+    {
+      "ruleId": "rule-batch-6-northern-snakehead-01",
+      "reviewOutcome": "retain-test-only-with-reduced-magnitude",
+      "adversarialFinding": "The study is local and directionally relevant, but predictors explained only six percent of feeding variation and sampling covered May-June.",
+      "primaryRisk": "low-explained-variation-and-season-scope",
+      "comparisonCohortSelected": true
+    },
+    {
+      "ruleId": "rule-batch-6-northern-snakehead-02",
+      "reviewOutcome": "retain-test-only",
+      "adversarialFinding": "Outgoing tide covaried with time of day and requires a trustworthy local tidal prediction plus a joint cap.",
+      "primaryRisk": "diel-tide-confounding",
+      "comparisonCohortSelected": false
+    },
+    {
+      "ruleId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02",
+      "reviewOutcome": "retain-test-only",
+      "adversarialFinding": "Controlled adult feeding supports direction, but NTU and FNU optics are not interchangeable with suspended-sediment mass.",
+      "primaryRisk": "measurement-unit-and-field-transfer",
+      "comparisonCohortSelected": false
+    },
+    {
+      "ruleId": "rule-batch-5-striped-bass-01",
+      "reviewOutcome": "retain-test-only",
+      "adversarialFinding": "The oxygen anchors are biologically direct, but a station value may not represent the fish's depth or selected access point.",
+      "primaryRisk": "gage-representativeness",
+      "comparisonCohortSelected": false
+    },
+    {
+      "ruleId": "rule-batch-6-walleye-02",
+      "reviewOutcome": "retain-test-only",
+      "adversarialFinding": "The hook-and-line endpoint is direct, but the Wisconsin lake effect needs prospective NOVA validation and cannot stack with radiation or cloud.",
+      "primaryRisk": "geographic-fishery-transfer",
+      "comparisonCohortSelected": true
+    },
+    {
+      "ruleId": "rule-batch-8-white-sucker-01",
+      "reviewOutcome": "retain-test-only-with-reduced-magnitude",
+      "adversarialFinding": "Juvenile controlled feeding supports a broad intermediate-temperature shape, not a precise adult field optimum.",
+      "primaryRisk": "life-stage-and-setting-transfer",
+      "comparisonCohortSelected": false
+    },
+    {
+      "ruleId": "rule-batch-5-yellow-perch-01",
+      "reviewOutcome": "retain-test-only-with-reduced-magnitude",
+      "adversarialFinding": "Summer chronologies support a late-evening peak, but stomach contents are not angling success and the response depends on clear water.",
+      "primaryRisk": "endpoint-and-water-clarity-transfer",
+      "comparisonCohortSelected": false
+    }
+  ],
+  "comparisonCohort": [
+    {
+      "ruleId": "rule-batch-6-northern-snakehead-01",
+      "selectionRationale": "Local tidal-Potomac feeding evidence, hourly solar input, exact May-June and tidal-water gates, and reduced minor magnitude.",
+      "validationScope": "Prospective targeted trips in tidal Potomac or comparable connected tidal reaches during May-June, stratified across morning, daylight, and overnight periods."
+    },
+    {
+      "ruleId": "rule-batch-6-walleye-02",
+      "selectionRationale": "Direct compulsory-creel catchability endpoint, hourly solar input, simple nonstacking light representation, and conservative bounded uplift.",
+      "validationScope": "Prospective targeted trips on documented NOVA or upper-Potomac lake/reservoir walleye waters, stratified across dawn, day, and dusk."
+    }
+  ],
+  "externalDatasetReview": [
+    {
+      "url": "https://www.usgs.gov/publications/diel-feeding-and-movement-activity-northern-snakehead-channa-argus",
+      "decision": "derivation-source-not-held-out",
+      "reason": "This is the source that motivated the snakehead rule, not an independent validation dataset."
+    },
+    {
+      "url": "https://www.usgs.gov/data/health-assessment-invasive-northern-snakehead-potomac-river-drainage-2006-2017",
+      "decision": "not-a-catchability-dataset",
+      "reason": "The release contains specimen health, date, and location data but no targeted angling effort or catch/no-catch outcome."
+    },
+    {
+      "url": "https://dnr.maryland.gov/fisheries/pages/recreational/muskie_management.aspx",
+      "decision": "useful-protocol-wrong-species-and-not-public-row-data",
+      "reason": "The volunteer diary records effort and zero-catch trips, but it concerns muskellunge and publishes pooled summaries rather than suitable row-level cohort data."
+    },
+    {
+      "url": "https://dnr.maryland.gov/fisheries/Pages/hotspots/potomac.aspx",
+      "decision": "population-context-only",
+      "reason": "The page documents managed fisheries and survey summaries but does not provide timestamped targeted-trip outcomes."
+    }
+  ],
+  "observationContract": {
+    "unitOfAnalysis": "one completed targeted angling trip for one species and one continuous fishing interval",
+    "requiredFields": [
+      "observationId",
+      "occurredAtStart",
+      "occurredAtEnd",
+      "receivedAt",
+      "spotId",
+      "waterbodyId",
+      "speciesId",
+      "targetedSpecies",
+      "anglerCount",
+      "effortMinutes",
+      "catchCount",
+      "zeroCatchExplicit",
+      "sourceType",
+      "modelVersion",
+      "conditionReplayId",
+      "consentForAggregateAnalysis"
+    ],
+    "requiredPractices": [
+      "Record zero-catch trips rather than collecting catches only.",
+      "Lock the model version, fixture hash, and analysis plan before a trip can enter confirmatory evaluation.",
+      "Record the actual named spot and start/end time supplied by the angler; do not freeze a forecast in the trip-entry flow.",
+      "Reconstruct environmental inputs from independently archived, time-indexed sources without using the catch outcome.",
+      "Keep targeted and incidental catches separate.",
+      "Exclude exact private coordinates from public outputs.",
+      "Never scrape or republish restricted third-party catch reports.",
+      "Keep ordinary private trip logs in the calibration store; never copy them automatically into the formal validation-observation store."
+    ]
+  },
+  "validationStages": [
+    {
+      "stage": "deterministic-contract",
+      "status": "complete",
+      "purpose": "Verify ranges, interpolation, gates, caps, missing inputs, and nonstacking behavior."
+    },
+    {
+      "stage": "prospective-pilot",
+      "status": "instrumentation-built-awaiting-preregistration-signoff-and-observations",
+      "purpose": "Collect effort-aware targeted trips, including explicit zero-catch trips, against a locked model version; environmental inputs are replayed from independent historical sources."
+    },
+    {
+      "stage": "held-out-comparison",
+      "status": "blocked-awaiting-prospective-pilot",
+      "purpose": "Compare candidate-v0.2.0 against the current score on waterbody and time holdouts."
+    },
+    {
+      "stage": "human-production-signoff",
+      "status": "blocked",
+      "purpose": "A named human reviewer accepts sources, curves, metrics, uncertainty, and release scope."
+    }
+  ],
+  "preRegistration": {
+    "approved": false,
+    "approvedBy": null,
+    "approvedAt": null,
+    "draftProtocol": {
+      "instrumentationPilot": "The first 30 consented trips per species are for form, coverage, missingness, duplicate, and variance checks only; they cannot establish predictive validity.",
+      "primaryOutcome": "Target-species catch count per angler-hour, analyzed with logged angler-effort as an offset.",
+      "secondaryOutcomes": [
+        "Explicit zero-catch rate by predeclared activity stratum.",
+        "Probability of at least one target catch per trip.",
+        "Calibration and discrimination of the candidate score versus the current baseline on held-out waters and dates."
+      ],
+      "candidateCohort": ["northern-snakehead", "walleye"],
+      "minimumCoverageBeforeConfirmatoryDesign": "At least 30 consented trips per cohort species, at least 10 trips in each compared solar stratum, and at least three waters where the evidenced distribution permits it.",
+      "holdoutRule": "Declare whole-waterbody and future-date holdouts after the instrumentation pilot using exposure and missingness only, before viewing catches by score stratum.",
+      "defaultExclusions": [
+        "Incidental rather than targeted catch records.",
+        "Trips shorter than 15 minutes or longer than seven days.",
+        "Impossible or reversed timestamps.",
+        "Species not evidenced at the selected BiteMap spot.",
+        "Duplicate trips or mechanically implausible effort/catch values.",
+        "Rows whose historical condition replay lacks a required candidate input."
+      ],
+      "antiLeakage": "Catch outcome, lure, notes, and user identity may not select or alter historical condition inputs."
+    },
+    "requiredBeforeObservationCollection": [
+      "A named human reviewer signs the draft protocol before any row is promoted from calibration to confirmatory evaluation.",
+      "Use the outcome-blinded instrumentation pilot to set a precision- or power-based confirmatory sample size.",
+      "Declare exact waterbody and future-date holdouts before viewing held-out outcomes.",
+      "Declare the minimum held-out improvement and maximum calibration regression allowed."
+    ]
+  },
+  "humanApprovalGate": {
+    "approved": false,
+    "approvedBy": null,
+    "approvedAt": null,
+    "note": "Must remain false until a named reviewer signs the source passages, curve choices, preregistration, and held-out results."
+  }
+}

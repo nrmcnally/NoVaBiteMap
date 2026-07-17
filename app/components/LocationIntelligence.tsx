@@ -22,6 +22,7 @@ type Props = {
   locationId: string;
   latitude: number;
   longitude: number;
+  speciesId: string;
   speciesName: string;
   availability: number;
   quality: number | null;
@@ -33,10 +34,56 @@ type Props = {
   fallbackHourly: Array<{ label: string; score: number }>;
 };
 
+type WaterTemperatureState = {
+  status: "observed" | "estimated-calibrated" | "estimated-regional" | "unavailable";
+  valueF: number | null;
+  rangeF: [number, number] | null;
+  confidence: number;
+  source: string | null;
+  modelVersion: string | null;
+  reason?: string;
+};
+
+type CanonicalForecastResponse = {
+  waterTempStatus: WaterTemperatureState["status"];
+  waterTemperature: WaterTemperatureState;
+  forecast: {
+    hourly: Array<{
+      startTime: string;
+      temperature: number;
+      temperatureUnit: string;
+      shortForecast: string;
+      windMph: number;
+      precipitationProbability: number | null;
+      score: number;
+      waterTemperatureF: number | null;
+      waterTemperatureStatus: WaterTemperatureState["status"];
+      waterTemperatureRangeF: [number, number] | null;
+    }>;
+    days: Array<{
+      dateKey: string;
+      score: number;
+      bestHour: number;
+      forecast: string;
+      temperature: number;
+      temperatureUnit: string;
+      confidence: number;
+      confidenceLabel: "High" | "Moderate" | "Low";
+      waterTemperatureF: number | null;
+      waterTemperatureStatus: WaterTemperatureState["status"];
+      waterTemperatureRangeF: [number, number] | null;
+    }>;
+    activeSafetyAlerts: NwsAlert[];
+    rapidRise: boolean;
+    explanation: string[];
+  };
+};
+
 type LiveState = {
   status: "loading" | "ready" | "partial" | "unavailable";
   conditions: ConditionsResponse | null;
   hydrology: HydrologyResponse | null;
+  canonical: CanonicalForecastResponse | null;
 };
 
 function metricValue(key: string, metric: HydrologyMetric) {
@@ -53,11 +100,95 @@ function metricTrend(metric: HydrologyMetric) {
   return `${metric.direction} · ${prefix}${metric.delta} over ${metric.windowHours}h`;
 }
 
+function timeLabel(value: string) {
+  return new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/New_York",
+    hour: "numeric",
+  }).format(new Date(value));
+}
+
+function hourLabel(hour24: number) {
+  const suffix = hour24 < 12 ? "AM" : "PM";
+  const hour12 = hour24 % 12 || 12;
+  return `${hour12}:00 ${suffix}`;
+}
+
+function dayLabel(dateKey: string) {
+  return new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/New_York",
+    weekday: "short",
+    month: "short",
+    day: "numeric",
+  }).format(new Date(`${dateKey}T12:00:00-04:00`));
+}
+
+function canonicalForDisplay(payload: CanonicalForecastResponse) {
+  return {
+    activeSafetyAlerts: payload.forecast.activeSafetyAlerts,
+    rapidRise: payload.forecast.rapidRise,
+    explanation: payload.forecast.explanation,
+    hourly: payload.forecast.hourly.map((hour) => ({
+      ...hour,
+      timeLabel: timeLabel(hour.startTime),
+    })),
+    days: payload.forecast.days.map((day) => ({
+      ...day,
+      dayLabel: dayLabel(day.dateKey),
+      bestTime: hourLabel(day.bestHour),
+    })),
+  };
+}
+
+function temperatureNote(state: WaterTemperatureState | undefined) {
+  if (!state || state.status === "unavailable" || state.valueF === null) {
+    return "No measured or modeled water temperature is available. Air temperature is shown but is not treated as water temperature.";
+  }
+  if (state.status === "observed") {
+    return `Representative USGS water temperature: ${state.valueF.toFixed(0)}°F. The station association is included in forecast confidence.`;
+  }
+  const range = state.rangeF
+    ? `; model range ${state.rangeF[0].toFixed(0)}–${state.rangeF[1].toFixed(0)}°F`
+    : "";
+  const label = state.status === "estimated-calibrated"
+    ? "gage-calibrated estimate"
+    : "regional stream estimate";
+  return `Estimated surface water temperature: ${state.valueF.toFixed(0)}°F (${label}${range}). Air temperature is never substituted directly.`;
+}
+
 export function LocationIntelligence(props: Props) {
-  const [state, setState] = useState<LiveState>({ status: "loading", conditions: null, hydrology: null });
+  const [state, setState] = useState<LiveState>({
+    status: "loading",
+    conditions: null,
+    hydrology: null,
+    canonical: null,
+  });
 
   useEffect(() => {
     const controller = new AbortController();
+    async function loadCanonical() {
+      try {
+        const endpoint = new URL("/api/live-forecast", window.location.origin);
+        endpoint.searchParams.set("locationId", props.locationId);
+        endpoint.searchParams.set("speciesId", props.speciesId);
+        endpoint.searchParams.set("wading", String(props.wadingAvailable));
+        const response = await fetch(endpoint, {
+          signal: controller.signal,
+          cache: "no-store",
+        });
+        if (!response.ok || controller.signal.aborted) return;
+        const canonical = await response.json() as CanonicalForecastResponse;
+        if (!controller.signal.aborted) {
+          setState((current) => ({
+            ...current,
+            status: "ready",
+            canonical,
+          }));
+        }
+      } catch {
+        // The public NWS/USGS route below remains the explicit degraded fallback.
+      }
+    }
+
     async function load() {
       const [conditionsResult, hydrologyResult] = await Promise.allSettled([
         fetch(`/api/conditions?lat=${props.latitude}&lon=${props.longitude}`, { signal: controller.signal, cache: "no-store" }),
@@ -73,17 +204,33 @@ export function LocationIntelligence(props: Props) {
         : null;
       const forecastReady = Boolean(conditions?.periods?.length);
       const hydroReady = Boolean(hydrology?.available);
-      setState({
-        status: forecastReady && (hydroReady || !props.hydrologyRelevant) ? "ready" : forecastReady || hydroReady ? "partial" : "unavailable",
+      setState((current) => ({
+        ...current,
+        status: current.canonical
+          ? "ready"
+          : forecastReady && (hydroReady || !props.hydrologyRelevant)
+            ? "ready"
+            : forecastReady || hydroReady
+              ? "partial"
+              : "unavailable",
         conditions,
         hydrology,
-      });
+      }));
     }
+    void loadCanonical();
     void load();
     return () => controller.abort();
-  }, [props.hydrologyRelevant, props.latitude, props.locationId, props.longitude]);
+  }, [
+    props.hydrologyRelevant,
+    props.latitude,
+    props.locationId,
+    props.longitude,
+    props.speciesId,
+    props.wadingAvailable,
+  ]);
 
   const forecast = useMemo(() => {
+    if (state.canonical) return canonicalForDisplay(state.canonical);
     if (!state.conditions?.periods?.length) return null;
     return buildForecast({
       periods: state.conditions.periods,
@@ -97,7 +244,7 @@ export function LocationIntelligence(props: Props) {
       hydrology: state.hydrology,
       wadingSelected: props.wadingAvailable,
     });
-  }, [props, state.conditions, state.hydrology]);
+  }, [props, state.canonical, state.conditions, state.hydrology]);
 
   const hydroMetrics = Object.entries(state.hydrology?.metrics ?? {}) as Array<[string, HydrologyMetric]>;
 
@@ -107,7 +254,7 @@ export function LocationIntelligence(props: Props) {
         <div><span className="eyebrow">Today through day five</span><h2>Live fishing outlook</h2></div>
         <span className={`live-provider-badge provider-${state.status}`}>
           {state.status === "loading" ? <LoaderCircle className="spin" size={14} /> : state.status === "ready" ? <CheckCircle2 size={14} /> : <AlertTriangle size={14} />}
-          {state.status === "loading" ? "Loading public data" : state.status === "ready" ? "NWS + USGS live" : state.status === "partial" ? "Partial live data" : "Seasonal fallback"}
+          {state.status === "loading" ? "Loading public data" : state.canonical ? "Canonical science model" : state.status === "ready" ? "NWS + USGS live" : state.status === "partial" ? "Partial live data" : "Seasonal fallback"}
         </span>
       </div>
 
@@ -131,7 +278,7 @@ export function LocationIntelligence(props: Props) {
               </div>
             ))}
           </div>
-          <p className="forecast-temperature-note">Air temperature is shown but is not treated as water temperature; it is included only for trip planning.</p>
+          <p className="forecast-temperature-note">{temperatureNote(state.canonical?.waterTemperature)}</p>
           <div className="multi-day-grid">
             {forecast.days.map((day, index) => (
               <section className={index === 0 ? "today" : ""} key={day.dateKey}>

@@ -1,0 +1,463 @@
+{
+  "schemaVersion": "0.1.0-draft",
+  "pipelineVersion": "0.1.0",
+  "aggregateSha256": "0c826e634a5d38145f65aea0083899657524749e152ac9657e9d1c207ba51902",
+  "totalBytes": 3163982,
+  "archives": [
+    {
+      "archiveId": "batch-1",
+      "filename": "BiteMap_batch-1_deep_verified_research_archive.zip",
+      "sizeBytes": 300693,
+      "sha256": "f157d05a5ae6224fc2d0345ac369c338c90270c138dec1bc47a5fba4a9ce3ca0",
+      "manifestSchemaVersion": "1.1",
+      "speciesIds": [
+        "black-crappie",
+        "bluegill",
+        "white-crappie"
+      ],
+      "manifestCounts": {
+        "species": 3,
+        "sources": 32,
+        "evidenceRecords": 48,
+        "scoreRules": 5,
+        "contextOnlyRules": 15,
+        "zeroWeightRules": 9,
+        "unavailableRules": 2,
+        "fullTextSources": 20,
+        "abstractOnlySources": 12,
+        "verifiedSourceLocators": 48,
+        "unresolvedIssues": 6
+      },
+      "importedCounts": {
+        "abstractOnlySources": 12,
+        "contextOnlyRules": 15,
+        "evidenceRecords": 48,
+        "fullTextSources": 20,
+        "scoreRules": 5,
+        "sources": 32,
+        "species": 3,
+        "unavailableRules": 2,
+        "zeroWeightRules": 9
+      }
+    },
+    {
+      "archiveId": "batch-10",
+      "filename": "BiteMap_batch-10_deep_verified_research_archive.zip",
+      "sizeBytes": 97101,
+      "sha256": "de03866b1eba1ae08d3518acbc97b1f3283b3d87fffc2463edb733ea53ed13d4",
+      "manifestSchemaVersion": "1.1",
+      "speciesIds": [
+        "blacknose-dace",
+        "longnose-dace",
+        "shorthead-redhorse"
+      ],
+      "manifestCounts": {
+        "species": 3,
+        "sources": 27,
+        "evidenceRecords": 39,
+        "scoreRules": 2,
+        "contextOnlyRules": 13,
+        "zeroWeightRules": 34,
+        "fullTextSources": 6,
+        "abstractOnlySources": 18,
+        "verifiedSourceLocators": 30,
+        "unresolvedIssues": 43
+      },
+      "importedCounts": {
+        "abstractOnlySources": 14,
+        "contextOnlyRules": 13,
+        "evidenceRecords": 39,
+        "fullTextSources": 6,
+        "scoreRules": 2,
+        "sources": 27,
+        "species": 3,
+        "zeroWeightRules": 5
+      }
+    },
+    {
+      "archiveId": "batch-11",
+      "filename": "BiteMap_batch-11_deep_verified_research_archive.zip",
+      "sizeBytes": 92951,
+      "sha256": "2f046cd09806d4fe506a416bb280422a50124b42dc7cbe688559fa113a0d1c6e",
+      "manifestSchemaVersion": "1.1",
+      "speciesIds": [
+        "gizzard-shad",
+        "mottled-sculpin",
+        "tessellated-darter"
+      ],
+      "manifestCounts": {
+        "species": 3,
+        "sources": 24,
+        "evidenceRecords": 36,
+        "scoreRules": 2,
+        "contextOnlyRules": 9,
+        "zeroWeightRules": 43,
+        "fullTextSources": 11,
+        "abstractOnlySources": 12,
+        "verifiedSourceLocators": 30,
+        "unresolvedIssues": 24
+      },
+      "importedCounts": {
+        "abstractOnlySources": 7,
+        "contextOnlyRules": 9,
+        "evidenceRecords": 36,
+        "fullTextSources": 11,
+        "scoreRules": 2,
+        "sources": 24,
+        "species": 3,
+        "zeroWeightRules": 10
+      }
+    },
+    {
+      "archiveId": "batch-2",
+      "filename": "BiteMap_batch-2_deep_verified_research_archive.zip",
+      "sizeBytes": 377773,
+      "sha256": "087a77037189544dca1182e2bc29b14d1bcea73c9a843c302670df80e21b1c16",
+      "manifestSchemaVersion": "1.1",
+      "speciesIds": [
+        "green-sunfish",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "rock-bass"
+      ],
+      "manifestCounts": {
+        "species": 4,
+        "sources": 43,
+        "evidenceRecords": 62,
+        "scoreRules": 2,
+        "contextOnlyRules": 23,
+        "zeroWeightRules": 12,
+        "unavailableRules": 5,
+        "fullTextSources": 25,
+        "abstractOnlySources": 18,
+        "verifiedSourceLocators": 43,
+        "unresolvedIssues": 8,
+        "uniqueSourceUrls": 42
+      },
+      "importedCounts": {
+        "abstractOnlySources": 18,
+        "contextOnlyRules": 23,
+        "evidenceRecords": 62,
+        "fullTextSources": 25,
+        "scoreRules": 2,
+        "sources": 43,
+        "species": 4,
+        "unavailableRules": 5,
+        "zeroWeightRules": 12
+      }
+    },
+    {
+      "archiveId": "batch-3",
+      "filename": "BiteMap_batch-3_deep_verified_research_archive.zip",
+      "sizeBytes": 292420,
+      "sha256": "ae4e30f6689134b2e0226dbde3fa5c3942b9af6704bb41646092d407149ea9b6",
+      "manifestSchemaVersion": "1.1",
+      "speciesIds": [
+        "brook-trout",
+        "brown-trout",
+        "rainbow-trout"
+      ],
+      "manifestCounts": {
+        "species": 3,
+        "sources": 35,
+        "evidenceRecords": 45,
+        "scoreRules": 6,
+        "contextOnlyRules": 8,
+        "zeroWeightRules": 15,
+        "unavailableRules": 1,
+        "fullTextSources": 15,
+        "abstractOnlySources": 20,
+        "verifiedSourceLocators": 35,
+        "unresolvedIssues": 8
+      },
+      "importedCounts": {
+        "abstractOnlySources": 20,
+        "contextOnlyRules": 8,
+        "evidenceRecords": 45,
+        "fullTextSources": 15,
+        "scoreRules": 6,
+        "sources": 35,
+        "species": 3,
+        "unavailableRules": 1,
+        "zeroWeightRules": 15
+      }
+    },
+    {
+      "archiveId": "batch-4",
+      "filename": "BiteMap_batch-4_deep_verified_research_archive.zip",
+      "sizeBytes": 286630,
+      "sha256": "75462c057f27d4c3ed2b1dd8fe975c4545f24f37ac01f3991bec9c0df09e181a",
+      "manifestSchemaVersion": "1.1",
+      "speciesIds": [
+        "blue-catfish",
+        "flathead-catfish",
+        "white-catfish"
+      ],
+      "manifestCounts": {
+        "species": 3,
+        "sources": 35,
+        "evidenceRecords": 42,
+        "scoreRules": 5,
+        "contextOnlyRules": 9,
+        "zeroWeightRules": 12,
+        "unavailableRules": 3,
+        "fullTextSources": 19,
+        "abstractOnlySources": 16,
+        "verifiedSourceLocators": 35,
+        "unresolvedIssues": 8
+      },
+      "importedCounts": {
+        "abstractOnlySources": 16,
+        "contextOnlyRules": 9,
+        "evidenceRecords": 42,
+        "fullTextSources": 19,
+        "scoreRules": 5,
+        "sources": 35,
+        "species": 3,
+        "unavailableRules": 3,
+        "zeroWeightRules": 12
+      }
+    },
+    {
+      "archiveId": "batch-5",
+      "filename": "BiteMap_batch-5_deep_verified_research_archive.zip",
+      "sizeBytes": 287090,
+      "sha256": "f4c0f5d388228bc34d7766ae1493e2fa160e36024c6360348e1d43a52c6ce9d5",
+      "manifestSchemaVersion": "1.1",
+      "speciesIds": [
+        "striped-bass",
+        "white-perch",
+        "yellow-perch"
+      ],
+      "manifestCounts": {
+        "species": 3,
+        "sources": 34,
+        "evidenceRecords": 45,
+        "scoreRules": 2,
+        "contextOnlyRules": 14,
+        "zeroWeightRules": 11,
+        "unavailableRules": 5,
+        "fullTextSources": 18,
+        "abstractOnlySources": 15,
+        "verifiedSourceLocators": 34,
+        "unresolvedIssues": 8
+      },
+      "importedCounts": {
+        "abstractOnlySources": 15,
+        "contextOnlyRules": 14,
+        "evidenceRecords": 45,
+        "fullTextSources": 18,
+        "scoreRules": 2,
+        "sources": 34,
+        "species": 3,
+        "unavailableRules": 5,
+        "zeroWeightRules": 11
+      }
+    },
+    {
+      "archiveId": "batch-6",
+      "filename": "BiteMap_batch-6_deep_verified_research_archive.zip",
+      "sizeBytes": 284298,
+      "sha256": "6a0dc00d07c5aef1c4fe4b118115df3337d07aa32f8bf9d1e5359bb8912811cd",
+      "manifestSchemaVersion": "1.1",
+      "speciesIds": [
+        "muskellunge",
+        "northern-snakehead",
+        "walleye"
+      ],
+      "manifestCounts": {
+        "species": 3,
+        "sources": 33,
+        "evidenceRecords": 43,
+        "scoreRules": 8,
+        "contextOnlyRules": 12,
+        "zeroWeightRules": 10,
+        "unavailableRules": 1,
+        "fullTextSources": 20,
+        "abstractOnlySources": 13,
+        "verifiedSourceLocators": 33,
+        "unresolvedIssues": 8
+      },
+      "importedCounts": {
+        "abstractOnlySources": 13,
+        "contextOnlyRules": 12,
+        "evidenceRecords": 43,
+        "fullTextSources": 20,
+        "scoreRules": 8,
+        "sources": 33,
+        "species": 3,
+        "unavailableRules": 1,
+        "zeroWeightRules": 10
+      }
+    },
+    {
+      "archiveId": "batch-7",
+      "filename": "BiteMap_batch-7_deep_verified_research_archive.zip",
+      "sizeBytes": 289174,
+      "sha256": "4f062e70fe26aab3ebde08b6134249a637b3d9f6b2ec191d5cfc42fe28a7a104",
+      "manifestSchemaVersion": "1.1",
+      "speciesIds": [
+        "american-eel",
+        "common-carp",
+        "spotted-bass"
+      ],
+      "manifestCounts": {
+        "species": 3,
+        "sources": 33,
+        "evidenceRecords": 44,
+        "scoreRules": 8,
+        "contextOnlyRules": 10,
+        "zeroWeightRules": 9,
+        "unavailableRules": 3,
+        "fullTextSources": 22,
+        "abstractOnlySources": 11,
+        "verifiedSourceLocators": 33,
+        "unresolvedIssues": 8
+      },
+      "importedCounts": {
+        "abstractOnlySources": 11,
+        "contextOnlyRules": 10,
+        "evidenceRecords": 44,
+        "fullTextSources": 22,
+        "scoreRules": 8,
+        "sources": 33,
+        "species": 3,
+        "unavailableRules": 3,
+        "zeroWeightRules": 9
+      }
+    },
+    {
+      "archiveId": "batch-8",
+      "filename": "BiteMap_batch-8_deep_verified_research_archive.zip",
+      "sizeBytes": 279820,
+      "sha256": "99ef8a5457cff9e5aa50954ebb56054c417c4e619ed952530c23a7d793e016a7",
+      "manifestSchemaVersion": "1.1",
+      "speciesIds": [
+        "creek-chub",
+        "fallfish",
+        "white-sucker"
+      ],
+      "manifestCounts": {
+        "species": 3,
+        "sources": 32,
+        "evidenceRecords": 44,
+        "scoreRules": 3,
+        "contextOnlyRules": 12,
+        "zeroWeightRules": 12,
+        "unavailableRules": 3,
+        "fullTextSources": 22,
+        "abstractOnlySources": 10,
+        "verifiedSourceLocators": 32,
+        "unresolvedIssues": 8
+      },
+      "importedCounts": {
+        "abstractOnlySources": 10,
+        "contextOnlyRules": 12,
+        "evidenceRecords": 44,
+        "fullTextSources": 22,
+        "scoreRules": 3,
+        "sources": 32,
+        "species": 3,
+        "unavailableRules": 3,
+        "zeroWeightRules": 12
+      }
+    },
+    {
+      "archiveId": "batch-9",
+      "filename": "BiteMap_batch-9_deep_verified_research_archive.zip",
+      "sizeBytes": 89046,
+      "sha256": "79478ee7467e9ff7f911a8fc358e2f645750c7f56faf2dd3be255c033343fef0",
+      "manifestSchemaVersion": "1.1",
+      "speciesIds": [
+        "brown-bullhead",
+        "northern-hogsucker",
+        "yellow-bullhead"
+      ],
+      "manifestCounts": {
+        "species": 3,
+        "sources": 25,
+        "evidenceRecords": 38,
+        "scoreRules": 4,
+        "contextOnlyRules": 12,
+        "zeroWeightRules": 26,
+        "fullTextSources": 12,
+        "abstractOnlySources": 8,
+        "verifiedSourceLocators": 35,
+        "unresolvedIssues": 15
+      },
+      "importedCounts": {
+        "abstractOnlySources": 8,
+        "contextOnlyRules": 12,
+        "evidenceRecords": 38,
+        "fullTextSources": 12,
+        "scoreRules": 4,
+        "sources": 25,
+        "species": 3,
+        "zeroWeightRules": 2
+      }
+    },
+    {
+      "archiveId": "bitemap-channel-catfish-deep-verified-research-archive",
+      "filename": "BiteMap_channel-catfish_deep_verified_research_archive.zip",
+      "sizeBytes": 185119,
+      "sha256": "797b47d78ba54021b468c20ccd6fabfa088525a73acf81fcdad7e99c5d576bf2",
+      "manifestSchemaVersion": "1.1",
+      "speciesIds": [
+        "channel-catfish"
+      ],
+      "manifestCounts": {},
+      "importedCounts": {
+        "abstractOnlySources": 5,
+        "contextOnlyRules": 5,
+        "evidenceRecords": 20,
+        "fullTextSources": 12,
+        "scoreRules": 6,
+        "sources": 17,
+        "species": 1,
+        "zeroWeightRules": 1
+      }
+    },
+    {
+      "archiveId": "bitemap-largemouth-bass-research-archive",
+      "filename": "BiteMap_largemouth-bass_research_archive.zip",
+      "sizeBytes": 147099,
+      "sha256": "f615301e9873993997de951626211a869388b612ff9d42a60695231620c49a29",
+      "manifestSchemaVersion": "1.1",
+      "speciesIds": [
+        "largemouth-bass"
+      ],
+      "manifestCounts": {},
+      "importedCounts": {
+        "abstractOnlySources": 3,
+        "contextOnlyRules": 5,
+        "evidenceRecords": 13,
+        "fullTextSources": 11,
+        "scoreRules": 5,
+        "sources": 14,
+        "species": 1,
+        "zeroWeightRules": 1
+      }
+    },
+    {
+      "archiveId": "bitemap-smallmouth-bass-deep-research-archive",
+      "filename": "BiteMap_smallmouth-bass_deep_research_archive.zip",
+      "sizeBytes": 154768,
+      "sha256": "f0629071d485e6de2d5672696ac0a427930927cb7675e6458d4a6bd5130fde7d",
+      "manifestSchemaVersion": "1.1",
+      "speciesIds": [
+        "smallmouth-bass"
+      ],
+      "manifestCounts": {},
+      "importedCounts": {
+        "abstractOnlySources": 4,
+        "contextOnlyRules": 4,
+        "evidenceRecords": 13,
+        "fullTextSources": 9,
+        "scoreRules": 3,
+        "sources": 13,
+        "species": 1,
+        "unavailableRules": 2
+      }
+    }
+  ]
+}

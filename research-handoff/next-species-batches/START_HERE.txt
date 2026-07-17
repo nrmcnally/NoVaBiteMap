@@ -1,0 +1,32 @@
+BiteMap remaining-species research starter pack
+================================================
+
+For the first new ChatGPT conversation, attach these three files from this folder:
+
+1. BiteMap_complete_37_species_research_archive.zip
+2. BiteMap_channel-catfish_deep_verified_research_archive.zip
+3. COPY_PASTE_MASTER_PROMPT.txt
+
+Then paste the contents of COPY_PASTE_MASTER_PROMPT.txt into the conversation.
+It is already configured for BATCH 1.
+
+For later batches:
+
+1. Start a new conversation to avoid the context-length limit.
+2. Attach the two baseline archives above.
+3. Attach the ZIP produced by the immediately preceding batch.
+4. Paste the master prompt again.
+5. Change "ACTIVE BATCH = BATCH 1" to the next batch number.
+
+The three completed species that should not be researched again are:
+
+- largemouth-bass
+- smallmouth-bass
+- channel-catfish
+
+Important validation note:
+
+The channel-catfish archive is the structural and quality template, but its
+validation report missed one bibliography problem. Source S13's original paper
+lists Kenneth O. Allen AND James W. Avault Jr. Every new report must verify the
+complete author byline against the original PDF title page.

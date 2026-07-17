@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from datetime import datetime
+
 from pydantic import BaseModel, EmailStr, Field
 
 
@@ -28,6 +30,30 @@ class FavoriteUpdate(BaseModel):
     preferred_species_id: str | None = None
     default_access_method: str | None = None
     sort_order: int | None = None
+
+
+class FishingTripCreate(BaseModel):
+    location_id: str = Field(min_length=1, max_length=100)
+    species_id: str = Field(min_length=1, max_length=100)
+    started_at: datetime
+    ended_at: datetime
+    timezone: str = Field(default="America/New_York", min_length=1, max_length=64)
+    angler_count: int = Field(default=1, ge=1, le=20)
+    catch_count: int = Field(ge=0, le=1000)
+    location_detail: str | None = Field(default=None, max_length=160)
+    lure_or_bait: str | None = Field(default=None, max_length=160)
+    observed_water_temperature_c: float | None = Field(default=None, ge=-5, le=45)
+    observed_clarity: str | None = Field(default=None, pattern="^(clear|stained|muddy|unknown)$")
+    notes: str | None = Field(default=None, max_length=2000)
+    consent_for_aggregate_analysis: bool = False
+
+
+class FishingTripReplayUpdate(BaseModel):
+    condition_replay_id: str = Field(min_length=36, max_length=36)
+    condition_replay_status: str = Field(pattern="^(complete|partial|unavailable)$")
+    condition_replay_policy_version: str = Field(min_length=1, max_length=40)
+    condition_replay: dict
+    condition_replayed_at: datetime
 
 
 class EvidenceInput(BaseModel):

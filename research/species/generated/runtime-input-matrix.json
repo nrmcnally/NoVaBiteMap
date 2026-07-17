@@ -1,0 +1,2323 @@
+{
+  "schemaVersion": "0.1.0-draft",
+  "pipelineVersion": "0.1.0",
+  "note": "Availability describes the current BiteMap data layer, not scientific approval. Every score rule remains pending model-translation review.",
+  "inputs": [
+    {
+      "inputKey": "aggressiondominance",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "aggressionDominance"
+      ],
+      "ruleIds": [
+        "rule-batch-1-bluegill-06"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "bluegill"
+      ]
+    },
+    {
+      "inputKey": "ambientlight",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "ambientLight"
+      ],
+      "ruleIds": [
+        "rule-batch-2-pumpkinseed-03"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "pumpkinseed"
+      ]
+    },
+    {
+      "inputKey": "anglingpressure",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "anglingPressure"
+      ],
+      "ruleIds": [
+        "rule-batch-7-spotted-bass-01"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "spotted-bass"
+      ]
+    },
+    {
+      "inputKey": "baitandguide",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "baitAndGuide"
+      ],
+      "ruleIds": [
+        "rule-batch-6-muskellunge-05"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "muskellunge"
+      ]
+    },
+    {
+      "inputKey": "baittype",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "baitType"
+      ],
+      "ruleIds": [
+        "rule-batch-6-walleye-04"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "walleye"
+      ]
+    },
+    {
+      "inputKey": "barometricpressure",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "barometricPressure"
+      ],
+      "ruleIds": [
+        "rule-batch-2-redbreast-sunfish-08"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "redbreast-sunfish"
+      ]
+    },
+    {
+      "inputKey": "barometricpressurefronts",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "barometricPressureFronts"
+      ],
+      "ruleIds": [
+        "rule-batch-2-green-sunfish-09"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "green-sunfish"
+      ]
+    },
+    {
+      "inputKey": "barometricpressurefrontwind",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "barometricPressureFrontWind"
+      ],
+      "ruleIds": [
+        "rule-batch-6-muskellunge-10"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "muskellunge"
+      ]
+    },
+    {
+      "inputKey": "barometricpressuretrend",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "barometricPressureTrend"
+      ],
+      "ruleIds": [
+        "rule-batch-5-yellow-perch-08"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "yellow-perch"
+      ]
+    },
+    {
+      "inputKey": "barrier-connectivity",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "barrier/connectivity"
+      ],
+      "ruleIds": [
+        "rule-batch-9-northern-hogsucker-05"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "northern-hogsucker"
+      ]
+    },
+    {
+      "inputKey": "behavioralphenotype",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "behavioralPhenotype"
+      ],
+      "ruleIds": [
+        "rule-batch-2-pumpkinseed-08"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "pumpkinseed"
+      ]
+    },
+    {
+      "inputKey": "body-condition",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "body condition"
+      ],
+      "ruleIds": [
+        "rule-batch-9-brown-bullhead-07"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "brown-bullhead"
+      ]
+    },
+    {
+      "inputKey": "chemosensory-presentation",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "chemosensory presentation"
+      ],
+      "ruleIds": [
+        "rule-batch-9-yellow-bullhead-03"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "yellow-bullhead"
+      ]
+    },
+    {
+      "inputKey": "communitycompetition",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "communityCompetition"
+      ],
+      "ruleIds": [
+        "rule-batch-2-green-sunfish-06"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "green-sunfish"
+      ]
+    },
+    {
+      "inputKey": "competitor-presence",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "competitor presence"
+      ],
+      "ruleIds": [
+        "rule-batch-11-tessellated-darter-03"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "tessellated-darter"
+      ]
+    },
+    {
+      "inputKey": "cover",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "cover"
+      ],
+      "ruleIds": [
+        "rule-batch-2-rock-bass-02"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "rock-bass"
+      ]
+    },
+    {
+      "inputKey": "coverandmovement",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "coverAndMovement"
+      ],
+      "ruleIds": [
+        "rule-batch-8-creek-chub-06"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "creek-chub"
+      ]
+    },
+    {
+      "inputKey": "depth",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "depth"
+      ],
+      "ruleIds": [
+        "rule-batch-2-rock-bass-01"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "rock-bass"
+      ]
+    },
+    {
+      "inputKey": "depth-and-substrate-position",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "depth and substrate position"
+      ],
+      "ruleIds": [
+        "rule-batch-11-tessellated-darter-02"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "tessellated-darter"
+      ]
+    },
+    {
+      "inputKey": "dissolved-oxygen",
+      "availability": "conditional",
+      "forecastResolutions": [
+        "observed-only"
+      ],
+      "originalInputs": [
+        "dissolvedOxygen",
+        "dissolvedOxygenMgL",
+        "dissolvedOxygenPercentSaturation",
+        "dissolvedOxygenTurbidity",
+        "dissolvedOxygenTurbidityLight",
+        "flowTurbidityDissolvedOxygen",
+        "minimumDailyDissolvedOxygen",
+        "oxygenXtemperaturePrey",
+        "temperatureXoxygen"
+      ],
+      "ruleIds": [
+        "rule-batch-2-green-sunfish-04",
+        "rule-batch-2-pumpkinseed-11",
+        "rule-batch-2-rock-bass-09",
+        "rule-batch-3-brook-trout-07",
+        "rule-batch-3-rainbow-trout-01",
+        "rule-batch-4-white-catfish-06",
+        "rule-batch-5-striped-bass-01",
+        "rule-batch-5-striped-bass-03",
+        "rule-batch-5-white-perch-08",
+        "rule-batch-5-yellow-perch-05",
+        "rule-batch-5-yellow-perch-06",
+        "rule-batch-7-american-eel-11",
+        "rule-batch-7-common-carp-11",
+        "rule-batch-8-creek-chub-07",
+        "rule-batch-8-fallfish-06",
+        "rule-batch-8-white-sucker-08",
+        "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-04",
+        "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-05",
+        "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-04",
+        "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-09"
+      ],
+      "scoreRuleIds": [
+        "rule-batch-3-rainbow-trout-01",
+        "rule-batch-5-striped-bass-01",
+        "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-04",
+        "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-05",
+        "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-04"
+      ],
+      "speciesIds": [
+        "american-eel",
+        "brook-trout",
+        "channel-catfish",
+        "common-carp",
+        "creek-chub",
+        "fallfish",
+        "green-sunfish",
+        "largemouth-bass",
+        "pumpkinseed",
+        "rainbow-trout",
+        "rock-bass",
+        "smallmouth-bass",
+        "striped-bass",
+        "white-catfish",
+        "white-perch",
+        "white-sucker",
+        "yellow-perch"
+      ]
+    },
+    {
+      "inputKey": "environmentalbitescore",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "environmentalBiteScore"
+      ],
+      "ruleIds": [
+        "rule-batch-7-spotted-bass-08"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "spotted-bass"
+      ]
+    },
+    {
+      "inputKey": "exploratoryphenotype",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "exploratoryPhenotype"
+      ],
+      "ruleIds": [
+        "rule-batch-3-brown-trout-05"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "brown-trout"
+      ]
+    },
+    {
+      "inputKey": "extreme-cold",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "extreme cold"
+      ],
+      "ruleIds": [
+        "rule-batch-11-gizzard-shad-07"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "gizzard-shad"
+      ]
+    },
+    {
+      "inputKey": "extremetailwaterdischarge",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "extremeTailwaterDischarge"
+      ],
+      "ruleIds": [
+        "rule-batch-1-white-crappie-05"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "white-crappie"
+      ]
+    },
+    {
+      "inputKey": "fish-size-or-age",
+      "availability": "unavailable",
+      "forecastResolutions": [
+        "not-forecastable"
+      ],
+      "originalInputs": [
+        "fish size / life stage",
+        "fish size / territoriality",
+        "fish size/life stage",
+        "fishAgeOrSize",
+        "fishLengthCm",
+        "fishLengthMm",
+        "fishSize",
+        "fishSizeAge",
+        "fishTotalLength",
+        "fishTotalLengthMm"
+      ],
+      "ruleIds": [
+        "rule-batch-1-black-crappie-01",
+        "rule-batch-1-black-crappie-02",
+        "rule-batch-1-white-crappie-01",
+        "rule-batch-1-white-crappie-02",
+        "rule-batch-10-longnose-dace-07",
+        "rule-batch-11-gizzard-shad-06",
+        "rule-batch-11-mottled-sculpin-05",
+        "rule-batch-2-pumpkinseed-06",
+        "rule-batch-3-rainbow-trout-02",
+        "rule-batch-4-blue-catfish-02",
+        "rule-batch-4-flathead-catfish-04",
+        "rule-batch-6-walleye-03",
+        "rule-batch-7-spotted-bass-02",
+        "rule-batch-8-fallfish-03"
+      ],
+      "scoreRuleIds": [
+        "rule-batch-1-black-crappie-01",
+        "rule-batch-1-black-crappie-02",
+        "rule-batch-1-white-crappie-01",
+        "rule-batch-1-white-crappie-02",
+        "rule-batch-3-rainbow-trout-02",
+        "rule-batch-4-blue-catfish-02",
+        "rule-batch-6-walleye-03"
+      ],
+      "speciesIds": [
+        "black-crappie",
+        "blue-catfish",
+        "fallfish",
+        "flathead-catfish",
+        "gizzard-shad",
+        "longnose-dace",
+        "mottled-sculpin",
+        "pumpkinseed",
+        "rainbow-trout",
+        "spotted-bass",
+        "walleye",
+        "white-crappie"
+      ]
+    },
+    {
+      "inputKey": "flow-or-current",
+      "availability": "conditional",
+      "forecastResolutions": [
+        "observed-or-hourly"
+      ],
+      "originalInputs": [
+        "current velocity",
+        "currentVelocity",
+        "extremeFlow",
+        "flow and fishway access",
+        "flow change",
+        "flow/current",
+        "flowDischarge",
+        "high flow",
+        "population/current adaptation",
+        "riverCurrent",
+        "riverFlowConnectivity",
+        "springFlow",
+        "substrate and current"
+      ],
+      "ruleIds": [
+        "rule-batch-10-blacknose-dace-04",
+        "rule-batch-10-longnose-dace-05",
+        "rule-batch-10-shorthead-redhorse-03",
+        "rule-batch-11-mottled-sculpin-07",
+        "rule-batch-11-tessellated-darter-04",
+        "rule-batch-2-redbreast-sunfish-05",
+        "rule-batch-4-flathead-catfish-06",
+        "rule-batch-7-american-eel-08",
+        "rule-batch-8-creek-chub-05",
+        "rule-batch-8-white-sucker-02",
+        "rule-batch-9-brown-bullhead-05",
+        "rule-batch-9-northern-hogsucker-03",
+        "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-08",
+        "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-05"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "brown-bullhead",
+        "channel-catfish",
+        "creek-chub",
+        "flathead-catfish",
+        "longnose-dace",
+        "mottled-sculpin",
+        "northern-hogsucker",
+        "redbreast-sunfish",
+        "shorthead-redhorse",
+        "smallmouth-bass",
+        "tessellated-darter",
+        "white-sucker"
+      ]
+    },
+    {
+      "inputKey": "foragingsearchmode",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "foragingSearchMode"
+      ],
+      "ruleIds": [
+        "rule-batch-1-white-crappie-08"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "white-crappie"
+      ]
+    },
+    {
+      "inputKey": "growth-and-age",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "growth and age"
+      ],
+      "ruleIds": [
+        "rule-batch-10-shorthead-redhorse-05"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "shorthead-redhorse"
+      ]
+    },
+    {
+      "inputKey": "habitattype",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "habitatType"
+      ],
+      "ruleIds": [
+        "rule-batch-4-white-catfish-04"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "white-catfish"
+      ]
+    },
+    {
+      "inputKey": "habitatvegetationvelocity",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "habitatVegetationVelocity"
+      ],
+      "ruleIds": [
+        "rule-batch-6-northern-snakehead-05"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "northern-snakehead"
+      ]
+    },
+    {
+      "inputKey": "hooktype",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "hookType"
+      ],
+      "ruleIds": [
+        "rule-batch-2-rock-bass-04"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "rock-bass"
+      ]
+    },
+    {
+      "inputKey": "individualsociability",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "individualSociability"
+      ],
+      "ruleIds": [
+        "rule-batch-1-bluegill-05"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "bluegill"
+      ]
+    },
+    {
+      "inputKey": "individualtimidity",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "individualTimidity"
+      ],
+      "ruleIds": [
+        "rule-batch-1-bluegill-04"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "bluegill"
+      ]
+    },
+    {
+      "inputKey": "light-and-diel",
+      "availability": "available",
+      "forecastResolutions": [
+        "hourly"
+      ],
+      "originalInputs": [
+        "diel display",
+        "dielPeriod",
+        "dielPeriodOrUnderwaterLight",
+        "solarRadiationOrDiel",
+        "solarRadiationWm2",
+        "time of day",
+        "time of day / underwater light",
+        "timeOfDay",
+        "underwater light",
+        "underwaterLightLux"
+      ],
+      "ruleIds": [
+        "rule-batch-1-black-crappie-06",
+        "rule-batch-10-blacknose-dace-01",
+        "rule-batch-10-longnose-dace-03",
+        "rule-batch-11-mottled-sculpin-02",
+        "rule-batch-2-pumpkinseed-02",
+        "rule-batch-2-redbreast-sunfish-02",
+        "rule-batch-3-brook-trout-08",
+        "rule-batch-3-brown-trout-07",
+        "rule-batch-4-blue-catfish-05",
+        "rule-batch-4-flathead-catfish-07",
+        "rule-batch-4-white-catfish-05",
+        "rule-batch-5-white-perch-05",
+        "rule-batch-5-yellow-perch-01",
+        "rule-batch-6-muskellunge-01",
+        "rule-batch-6-muskellunge-04",
+        "rule-batch-6-northern-snakehead-01",
+        "rule-batch-6-walleye-01",
+        "rule-batch-6-walleye-02",
+        "rule-batch-7-american-eel-01",
+        "rule-batch-7-common-carp-04",
+        "rule-batch-8-creek-chub-01",
+        "rule-batch-8-fallfish-01",
+        "rule-batch-8-white-sucker-06",
+        "rule-batch-9-brown-bullhead-03",
+        "rule-batch-9-northern-hogsucker-02",
+        "rule-batch-9-yellow-bullhead-01",
+        "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-07",
+        "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-05",
+        "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-04"
+      ],
+      "scoreRuleIds": [
+        "rule-batch-10-blacknose-dace-01",
+        "rule-batch-5-yellow-perch-01",
+        "rule-batch-6-muskellunge-01",
+        "rule-batch-6-northern-snakehead-01",
+        "rule-batch-6-walleye-01",
+        "rule-batch-6-walleye-02",
+        "rule-batch-7-american-eel-01",
+        "rule-batch-7-common-carp-04",
+        "rule-batch-8-creek-chub-01",
+        "rule-batch-8-fallfish-01",
+        "rule-batch-9-brown-bullhead-03"
+      ],
+      "speciesIds": [
+        "american-eel",
+        "black-crappie",
+        "blacknose-dace",
+        "blue-catfish",
+        "brook-trout",
+        "brown-bullhead",
+        "brown-trout",
+        "channel-catfish",
+        "common-carp",
+        "creek-chub",
+        "fallfish",
+        "flathead-catfish",
+        "largemouth-bass",
+        "longnose-dace",
+        "mottled-sculpin",
+        "muskellunge",
+        "northern-hogsucker",
+        "northern-snakehead",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "smallmouth-bass",
+        "walleye",
+        "white-catfish",
+        "white-perch",
+        "white-sucker",
+        "yellow-bullhead",
+        "yellow-perch"
+      ]
+    },
+    {
+      "inputKey": "local-artificial-light",
+      "availability": "unavailable",
+      "forecastResolutions": [
+        "not-forecastable"
+      ],
+      "originalInputs": [
+        "intermittentArtificialLightLux",
+        "steadyArtificialLightLux"
+      ],
+      "ruleIds": [
+        "rule-batch-1-bluegill-01",
+        "rule-batch-1-bluegill-02"
+      ],
+      "scoreRuleIds": [
+        "rule-batch-1-bluegill-01"
+      ],
+      "speciesIds": [
+        "bluegill"
+      ]
+    },
+    {
+      "inputKey": "local-food-abundance",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "local food abundance"
+      ],
+      "ruleIds": [
+        "rule-batch-11-gizzard-shad-03"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "gizzard-shad"
+      ]
+    },
+    {
+      "inputKey": "longtermcapturememory",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "longTermCaptureMemory"
+      ],
+      "ruleIds": [
+        "rule-batch-7-common-carp-07"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "common-carp"
+      ]
+    },
+    {
+      "inputKey": "lunar-phase",
+      "availability": "available",
+      "forecastResolutions": [
+        "daily"
+      ],
+      "originalInputs": [
+        "barometerFrontWindRainCloudMoon",
+        "barometerWindCloudMoon",
+        "barometricPressureFrontMoon",
+        "barometricPressureFrontsMoon",
+        "barometricPressureFrontsMoonWind",
+        "lunarPhase",
+        "moonPhase",
+        "moonPressureFrontWind",
+        "weatherPressureMoon"
+      ],
+      "ruleIds": [
+        "rule-batch-1-black-crappie-08",
+        "rule-batch-1-bluegill-11",
+        "rule-batch-1-white-crappie-10",
+        "rule-batch-2-green-sunfish-10",
+        "rule-batch-2-pumpkinseed-10",
+        "rule-batch-2-redbreast-sunfish-09",
+        "rule-batch-2-rock-bass-10",
+        "rule-batch-3-brook-trout-09",
+        "rule-batch-3-brown-trout-09",
+        "rule-batch-3-rainbow-trout-09",
+        "rule-batch-4-blue-catfish-08",
+        "rule-batch-4-flathead-catfish-10",
+        "rule-batch-4-white-catfish-08",
+        "rule-batch-5-striped-bass-09",
+        "rule-batch-5-white-perch-10",
+        "rule-batch-6-muskellunge-02",
+        "rule-batch-6-northern-snakehead-09",
+        "rule-batch-6-walleye-09",
+        "rule-batch-7-american-eel-10",
+        "rule-batch-7-common-carp-10",
+        "rule-batch-7-spotted-bass-06",
+        "rule-batch-8-creek-chub-08",
+        "rule-batch-8-fallfish-08",
+        "rule-batch-8-white-sucker-09",
+        "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-12",
+        "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-10"
+      ],
+      "scoreRuleIds": [
+        "rule-batch-6-muskellunge-02"
+      ],
+      "speciesIds": [
+        "american-eel",
+        "black-crappie",
+        "blue-catfish",
+        "bluegill",
+        "brook-trout",
+        "brown-trout",
+        "channel-catfish",
+        "common-carp",
+        "creek-chub",
+        "fallfish",
+        "flathead-catfish",
+        "green-sunfish",
+        "largemouth-bass",
+        "muskellunge",
+        "northern-snakehead",
+        "pumpkinseed",
+        "rainbow-trout",
+        "redbreast-sunfish",
+        "rock-bass",
+        "spotted-bass",
+        "striped-bass",
+        "walleye",
+        "white-catfish",
+        "white-crappie",
+        "white-perch",
+        "white-sucker"
+      ]
+    },
+    {
+      "inputKey": "lureandbait",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "lureAndBait"
+      ],
+      "ruleIds": [
+        "rule-batch-8-fallfish-10"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "fallfish"
+      ]
+    },
+    {
+      "inputKey": "luretargetability",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "lureTargetability"
+      ],
+      "ruleIds": [
+        "rule-batch-8-creek-chub-10"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "creek-chub"
+      ]
+    },
+    {
+      "inputKey": "macrophytehabitat",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "macrophyteHabitat"
+      ],
+      "ruleIds": [
+        "rule-batch-2-rock-bass-05"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "rock-bass"
+      ]
+    },
+    {
+      "inputKey": "metabolicphenotype",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "metabolicPhenotype"
+      ],
+      "ruleIds": [
+        "rule-batch-1-bluegill-07"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "bluegill"
+      ]
+    },
+    {
+      "inputKey": "metabolicrate",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "metabolicRate"
+      ],
+      "ruleIds": [
+        "rule-batch-6-northern-snakehead-08"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "northern-snakehead"
+      ]
+    },
+    {
+      "inputKey": "microhabitat",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "microhabitat"
+      ],
+      "ruleIds": [
+        "rule-batch-9-northern-hogsucker-06"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "northern-hogsucker"
+      ]
+    },
+    {
+      "inputKey": "monthlyactivity",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "monthlyActivity"
+      ],
+      "ruleIds": [
+        "rule-batch-3-brook-trout-10",
+        "rule-batch-3-brown-trout-10",
+        "rule-batch-3-rainbow-trout-10",
+        "rule-batch-4-blue-catfish-09",
+        "rule-batch-4-flathead-catfish-11",
+        "rule-batch-4-white-catfish-09",
+        "rule-batch-5-striped-bass-10",
+        "rule-batch-5-white-perch-11",
+        "rule-batch-5-yellow-perch-11",
+        "rule-batch-6-muskellunge-11",
+        "rule-batch-6-northern-snakehead-10",
+        "rule-batch-6-walleye-10",
+        "rule-batch-7-spotted-bass-07",
+        "rule-batch-8-creek-chub-09",
+        "rule-batch-8-fallfish-09",
+        "rule-batch-8-white-sucker-10"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "blue-catfish",
+        "brook-trout",
+        "brown-trout",
+        "creek-chub",
+        "fallfish",
+        "flathead-catfish",
+        "muskellunge",
+        "northern-snakehead",
+        "rainbow-trout",
+        "spotted-bass",
+        "striped-bass",
+        "walleye",
+        "white-catfish",
+        "white-perch",
+        "white-sucker",
+        "yellow-perch"
+      ]
+    },
+    {
+      "inputKey": "movement",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "movement"
+      ],
+      "ruleIds": [
+        "rule-batch-2-redbreast-sunfish-07",
+        "rule-batch-2-rock-bass-11"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "redbreast-sunfish",
+        "rock-bass"
+      ]
+    },
+    {
+      "inputKey": "movementorlittoraloccupancy",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "movementOrLittoralOccupancy"
+      ],
+      "ruleIds": [
+        "rule-batch-5-yellow-perch-02"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "yellow-perch"
+      ]
+    },
+    {
+      "inputKey": "nestdefense",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "nestDefense"
+      ],
+      "ruleIds": [
+        "rule-batch-2-rock-bass-07"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "rock-bass"
+      ]
+    },
+    {
+      "inputKey": "night",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "night"
+      ],
+      "ruleIds": [
+        "rule-batch-2-pumpkinseed-05"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "pumpkinseed"
+      ]
+    },
+    {
+      "inputKey": "photoperiod",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "photoperiod"
+      ],
+      "ruleIds": [
+        "rule-batch-1-white-crappie-06"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "white-crappie"
+      ]
+    },
+    {
+      "inputKey": "photoperiod-thermal-threshold",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "photoperiod thermal threshold"
+      ],
+      "ruleIds": [
+        "rule-batch-10-blacknose-dace-06"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "blacknose-dace"
+      ]
+    },
+    {
+      "inputKey": "photoperiodorcloudcover",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "photoperiodOrCloudCover"
+      ],
+      "ruleIds": [
+        "rule-batch-5-yellow-perch-07"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "yellow-perch"
+      ]
+    },
+    {
+      "inputKey": "physiological-performance",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "physiological performance"
+      ],
+      "ruleIds": [
+        "rule-batch-10-shorthead-redhorse-04"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "shorthead-redhorse"
+      ]
+    },
+    {
+      "inputKey": "population-or-strain",
+      "availability": "unavailable",
+      "forecastResolutions": [
+        "static-unavailable"
+      ],
+      "originalInputs": [
+        "populationOrStrain",
+        "stockOrHybridIdentity"
+      ],
+      "ruleIds": [
+        "rule-batch-3-brook-trout-02",
+        "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-10"
+      ],
+      "scoreRuleIds": [
+        "rule-batch-3-brook-trout-02"
+      ],
+      "speciesIds": [
+        "brook-trout",
+        "channel-catfish"
+      ]
+    },
+    {
+      "inputKey": "populationdensity",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "populationDensity"
+      ],
+      "ruleIds": [
+        "rule-batch-6-walleye-05"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "walleye"
+      ]
+    },
+    {
+      "inputKey": "populationexpansion",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "populationExpansion"
+      ],
+      "ruleIds": [
+        "rule-batch-6-northern-snakehead-07"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "northern-snakehead"
+      ]
+    },
+    {
+      "inputKey": "populationexploitation",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "populationExploitation"
+      ],
+      "ruleIds": [
+        "rule-batch-1-white-crappie-07"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "white-crappie"
+      ]
+    },
+    {
+      "inputKey": "prebaiting",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "prebaiting"
+      ],
+      "ruleIds": [
+        "rule-batch-7-common-carp-09"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "common-carp"
+      ]
+    },
+    {
+      "inputKey": "predator-density-day-night-response",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "predator density/day-night response"
+      ],
+      "ruleIds": [
+        "rule-batch-10-blacknose-dace-07"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "blacknose-dace"
+      ]
+    },
+    {
+      "inputKey": "presentation-vibration-movement",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "presentation vibration/movement"
+      ],
+      "ruleIds": [
+        "rule-batch-11-mottled-sculpin-03"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "mottled-sculpin"
+      ]
+    },
+    {
+      "inputKey": "presentationmode",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "presentationMode"
+      ],
+      "ruleIds": [
+        "rule-batch-2-pumpkinseed-04"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "pumpkinseed"
+      ]
+    },
+    {
+      "inputKey": "prey-availability",
+      "availability": "unavailable",
+      "forecastResolutions": [
+        "not-forecastable"
+      ],
+      "originalInputs": [
+        "benthic prey availability",
+        "benthic prey/presentation",
+        "local prey availability",
+        "local prey patchiness",
+        "prey availability and habitat",
+        "prey/presentation context",
+        "preyAndLifeStage",
+        "preyAssemblage",
+        "preyAvailability",
+        "preyCommunity",
+        "preyDensity",
+        "preyPulse",
+        "preyType",
+        "reach-scale prey and habitat",
+        "seasonalPrey",
+        "single-cobble prey biomass"
+      ],
+      "ruleIds": [
+        "rule-batch-10-blacknose-dace-02",
+        "rule-batch-10-longnose-dace-01",
+        "rule-batch-10-longnose-dace-02",
+        "rule-batch-10-longnose-dace-04",
+        "rule-batch-10-longnose-dace-06",
+        "rule-batch-10-shorthead-redhorse-01",
+        "rule-batch-11-mottled-sculpin-01",
+        "rule-batch-11-tessellated-darter-01",
+        "rule-batch-2-green-sunfish-07",
+        "rule-batch-2-redbreast-sunfish-03",
+        "rule-batch-2-rock-bass-03",
+        "rule-batch-4-blue-catfish-03",
+        "rule-batch-4-flathead-catfish-05",
+        "rule-batch-4-white-catfish-02",
+        "rule-batch-5-striped-bass-04",
+        "rule-batch-5-white-perch-03",
+        "rule-batch-5-yellow-perch-04",
+        "rule-batch-6-muskellunge-07",
+        "rule-batch-6-northern-snakehead-06",
+        "rule-batch-7-american-eel-06",
+        "rule-batch-7-spotted-bass-03",
+        "rule-batch-8-fallfish-02",
+        "rule-batch-8-white-sucker-07",
+        "rule-batch-9-brown-bullhead-06",
+        "rule-batch-9-yellow-bullhead-02"
+      ],
+      "scoreRuleIds": [
+        "rule-batch-10-longnose-dace-01"
+      ],
+      "speciesIds": [
+        "american-eel",
+        "blacknose-dace",
+        "blue-catfish",
+        "brown-bullhead",
+        "fallfish",
+        "flathead-catfish",
+        "green-sunfish",
+        "longnose-dace",
+        "mottled-sculpin",
+        "muskellunge",
+        "northern-snakehead",
+        "redbreast-sunfish",
+        "rock-bass",
+        "shorthead-redhorse",
+        "spotted-bass",
+        "striped-bass",
+        "tessellated-darter",
+        "white-catfish",
+        "white-perch",
+        "white-sucker",
+        "yellow-bullhead",
+        "yellow-perch"
+      ]
+    },
+    {
+      "inputKey": "production-targetability",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "production targetability"
+      ],
+      "ruleIds": [
+        "rule-batch-11-gizzard-shad-08"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "gizzard-shad"
+      ]
+    },
+    {
+      "inputKey": "recent-angling-or-capture-history",
+      "availability": "unavailable",
+      "forecastResolutions": [
+        "not-forecastable"
+      ],
+      "originalInputs": [
+        "recentAnglingDisturbance",
+        "recentAnglingPressure",
+        "recentCapture",
+        "recentFishingPressure",
+        "socialExposure"
+      ],
+      "ruleIds": [
+        "rule-batch-1-black-crappie-09",
+        "rule-batch-1-bluegill-12",
+        "rule-batch-2-green-sunfish-08",
+        "rule-batch-2-redbreast-sunfish-10",
+        "rule-batch-3-brown-trout-01",
+        "rule-batch-4-white-catfish-07",
+        "rule-batch-5-striped-bass-08",
+        "rule-batch-5-white-perch-09",
+        "rule-batch-5-yellow-perch-10",
+        "rule-batch-6-walleye-07",
+        "rule-batch-7-common-carp-05",
+        "rule-batch-7-common-carp-06",
+        "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-01",
+        "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-08"
+      ],
+      "scoreRuleIds": [
+        "rule-batch-3-brown-trout-01",
+        "rule-batch-7-common-carp-05",
+        "rule-batch-7-common-carp-06",
+        "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-01"
+      ],
+      "speciesIds": [
+        "black-crappie",
+        "bluegill",
+        "brown-trout",
+        "common-carp",
+        "green-sunfish",
+        "largemouth-bass",
+        "redbreast-sunfish",
+        "smallmouth-bass",
+        "striped-bass",
+        "walleye",
+        "white-catfish",
+        "white-perch",
+        "yellow-perch"
+      ]
+    },
+    {
+      "inputKey": "recent-stocking-event",
+      "availability": "unavailable",
+      "forecastResolutions": [
+        "not-currently-ingested"
+      ],
+      "originalInputs": [
+        "daysSinceStocking",
+        "isStockingDay",
+        "recentStocking",
+        "stockingRecency"
+      ],
+      "ruleIds": [
+        "rule-batch-3-brook-trout-04",
+        "rule-batch-3-brook-trout-05",
+        "rule-batch-3-brown-trout-03",
+        "rule-batch-3-brown-trout-04",
+        "rule-batch-3-rainbow-trout-03",
+        "rule-batch-3-rainbow-trout-04",
+        "rule-batch-6-walleye-08",
+        "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-06"
+      ],
+      "scoreRuleIds": [
+        "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-06"
+      ],
+      "speciesIds": [
+        "brook-trout",
+        "brown-trout",
+        "channel-catfish",
+        "rainbow-trout",
+        "walleye"
+      ]
+    },
+    {
+      "inputKey": "recentcatchandrelease",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "recentCatchAndRelease"
+      ],
+      "ruleIds": [
+        "rule-batch-3-rainbow-trout-07"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "rainbow-trout"
+      ]
+    },
+    {
+      "inputKey": "reproductive-phase",
+      "availability": "modeled",
+      "forecastResolutions": [
+        "daily"
+      ],
+      "originalInputs": [
+        "reproductivePhase",
+        "reproductiveState",
+        "spawn aggregation as bite bonus",
+        "spawning stage",
+        "spawning stage and temperature",
+        "spawning/nest stage",
+        "spawningFlowStability",
+        "spawningHabitat",
+        "spawningMigration",
+        "spawningMovementOrFlood",
+        "spawningPhase",
+        "spawningStage"
+      ],
+      "ruleIds": [
+        "rule-batch-1-black-crappie-07",
+        "rule-batch-1-bluegill-10",
+        "rule-batch-1-white-crappie-09",
+        "rule-batch-10-shorthead-redhorse-02",
+        "rule-batch-10-shorthead-redhorse-06",
+        "rule-batch-11-tessellated-darter-05",
+        "rule-batch-2-pumpkinseed-01",
+        "rule-batch-2-redbreast-sunfish-01",
+        "rule-batch-2-rock-bass-06",
+        "rule-batch-4-blue-catfish-07",
+        "rule-batch-4-flathead-catfish-09",
+        "rule-batch-4-white-catfish-03",
+        "rule-batch-5-striped-bass-07",
+        "rule-batch-5-white-perch-07",
+        "rule-batch-5-yellow-perch-09",
+        "rule-batch-6-northern-snakehead-03",
+        "rule-batch-8-fallfish-04",
+        "rule-batch-8-white-sucker-05",
+        "rule-batch-9-northern-hogsucker-04",
+        "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-09",
+        "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-06",
+        "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-03",
+        "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-06"
+      ],
+      "scoreRuleIds": [
+        "rule-batch-2-pumpkinseed-01",
+        "rule-batch-2-redbreast-sunfish-01",
+        "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-06",
+        "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-03"
+      ],
+      "speciesIds": [
+        "black-crappie",
+        "blue-catfish",
+        "bluegill",
+        "channel-catfish",
+        "fallfish",
+        "flathead-catfish",
+        "largemouth-bass",
+        "northern-hogsucker",
+        "northern-snakehead",
+        "pumpkinseed",
+        "redbreast-sunfish",
+        "rock-bass",
+        "shorthead-redhorse",
+        "smallmouth-bass",
+        "striped-bass",
+        "tessellated-darter",
+        "white-catfish",
+        "white-crappie",
+        "white-perch",
+        "white-sucker",
+        "yellow-perch"
+      ]
+    },
+    {
+      "inputKey": "riverdischarge",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "riverDischarge"
+      ],
+      "ruleIds": [
+        "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-08"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "largemouth-bass"
+      ]
+    },
+    {
+      "inputKey": "salinity",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "salinity"
+      ],
+      "ruleIds": [
+        "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-09"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "largemouth-bass"
+      ]
+    },
+    {
+      "inputKey": "salinityormigrationcontingent",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "salinityOrMigrationContingent"
+      ],
+      "ruleIds": [
+        "rule-batch-5-white-perch-06"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "white-perch"
+      ]
+    },
+    {
+      "inputKey": "salinityzone",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "salinityZone"
+      ],
+      "ruleIds": [
+        "rule-batch-4-blue-catfish-06"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "blue-catfish"
+      ]
+    },
+    {
+      "inputKey": "season-month",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "season/month"
+      ],
+      "ruleIds": [
+        "rule-batch-11-mottled-sculpin-06"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "mottled-sculpin"
+      ]
+    },
+    {
+      "inputKey": "seasonal-movement-display",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "seasonal movement display"
+      ],
+      "ruleIds": [
+        "rule-batch-9-northern-hogsucker-01"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "northern-hogsucker"
+      ]
+    },
+    {
+      "inputKey": "seasonalcold",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "seasonalCold"
+      ],
+      "ruleIds": [
+        "rule-batch-7-american-eel-05"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "american-eel"
+      ]
+    },
+    {
+      "inputKey": "seasonalmovement",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "seasonalMovement"
+      ],
+      "ruleIds": [
+        "rule-batch-6-muskellunge-08"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "muskellunge"
+      ]
+    },
+    {
+      "inputKey": "seasonmonth",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "seasonMonth"
+      ],
+      "ruleIds": [
+        "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-11"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "channel-catfish"
+      ]
+    },
+    {
+      "inputKey": "seasonwithinsummer",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "seasonWithinSummer"
+      ],
+      "ruleIds": [
+        "rule-batch-8-creek-chub-02"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "creek-chub"
+      ]
+    },
+    {
+      "inputKey": "silvereelstage",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "silverEelStage"
+      ],
+      "ruleIds": [
+        "rule-batch-7-american-eel-09"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "american-eel"
+      ]
+    },
+    {
+      "inputKey": "speciesorpopulationvulnerability",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "speciesOrPopulationVulnerability"
+      ],
+      "ruleIds": [
+        "rule-batch-1-black-crappie-04"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "black-crappie"
+      ]
+    },
+    {
+      "inputKey": "springmigration",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "springMigration"
+      ],
+      "ruleIds": [
+        "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-07"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "smallmouth-bass"
+      ]
+    },
+    {
+      "inputKey": "straindomestication",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "strainDomestication"
+      ],
+      "ruleIds": [
+        "rule-batch-7-common-carp-08"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "common-carp"
+      ]
+    },
+    {
+      "inputKey": "stream-microhabitat",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "stream microhabitat"
+      ],
+      "ruleIds": [
+        "rule-batch-11-mottled-sculpin-04"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "mottled-sculpin"
+      ]
+    },
+    {
+      "inputKey": "streamhabitat",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "streamHabitat"
+      ],
+      "ruleIds": [
+        "rule-batch-2-redbreast-sunfish-04"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "redbreast-sunfish"
+      ]
+    },
+    {
+      "inputKey": "sustainedremovalpressure",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "sustainedRemovalPressure"
+      ],
+      "ruleIds": [
+        "rule-batch-2-pumpkinseed-09"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "pumpkinseed"
+      ]
+    },
+    {
+      "inputKey": "tailwaterdischarge",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "tailwaterDischarge"
+      ],
+      "ruleIds": [
+        "rule-batch-1-white-crappie-04"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "white-crappie"
+      ]
+    },
+    {
+      "inputKey": "taxonomic-ecotype-gate",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "taxonomic/ecotype gate"
+      ],
+      "ruleIds": [
+        "rule-batch-10-blacknose-dace-05"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "blacknose-dace"
+      ]
+    },
+    {
+      "inputKey": "thermalacclimation",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "thermalAcclimation"
+      ],
+      "ruleIds": [
+        "rule-batch-2-green-sunfish-05"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "green-sunfish"
+      ]
+    },
+    {
+      "inputKey": "thermalopticalhabitat",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "thermalOpticalHabitat"
+      ],
+      "ruleIds": [
+        "rule-batch-6-walleye-06"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "walleye"
+      ]
+    },
+    {
+      "inputKey": "thermalpreference",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "thermalPreference"
+      ],
+      "ruleIds": [
+        "rule-batch-7-american-eel-04",
+        "rule-batch-8-white-sucker-04"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "american-eel",
+        "white-sucker"
+      ]
+    },
+    {
+      "inputKey": "thermalrefugeavailability",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "thermalRefugeAvailability"
+      ],
+      "ruleIds": [
+        "rule-batch-3-brook-trout-06"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "brook-trout"
+      ]
+    },
+    {
+      "inputKey": "tidal-stage",
+      "availability": "conditional",
+      "forecastResolutions": [
+        "hourly"
+      ],
+      "originalInputs": [
+        "tidalAccess",
+        "tidalPhase",
+        "tidalStage"
+      ],
+      "ruleIds": [
+        "rule-batch-4-blue-catfish-04",
+        "rule-batch-5-striped-bass-05",
+        "rule-batch-5-white-perch-04",
+        "rule-batch-6-northern-snakehead-02",
+        "rule-batch-7-american-eel-07",
+        "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-11"
+      ],
+      "scoreRuleIds": [
+        "rule-batch-6-northern-snakehead-02"
+      ],
+      "speciesIds": [
+        "american-eel",
+        "blue-catfish",
+        "largemouth-bass",
+        "northern-snakehead",
+        "striped-bass",
+        "white-perch"
+      ]
+    },
+    {
+      "inputKey": "turbidity-or-suspended-sediment",
+      "availability": "conditional",
+      "forecastResolutions": [
+        "observed-or-hourly"
+      ],
+      "originalInputs": [
+        "Secchi depth / water clarity",
+        "siltTurbidity",
+        "streamStabilityTurbidity",
+        "suspendedSedimentMgL",
+        "temperature, diel, light, turbidity, weather",
+        "turbidity",
+        "turbidityAndPreyField",
+        "turbidityLightInteraction",
+        "turbidityNtu",
+        "turbidityType",
+        "underwaterLightOrTurbidity"
+      ],
+      "ruleIds": [
+        "rule-batch-1-black-crappie-03",
+        "rule-batch-1-bluegill-03",
+        "rule-batch-1-white-crappie-03",
+        "rule-batch-11-gizzard-shad-04",
+        "rule-batch-11-tessellated-darter-06",
+        "rule-batch-2-green-sunfish-02",
+        "rule-batch-2-green-sunfish-03",
+        "rule-batch-3-brook-trout-03",
+        "rule-batch-3-brown-trout-02",
+        "rule-batch-3-rainbow-trout-05",
+        "rule-batch-3-rainbow-trout-06",
+        "rule-batch-5-striped-bass-06",
+        "rule-batch-5-yellow-perch-03",
+        "rule-batch-7-spotted-bass-05",
+        "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-07",
+        "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02"
+      ],
+      "scoreRuleIds": [
+        "rule-batch-3-brown-trout-02",
+        "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02"
+      ],
+      "speciesIds": [
+        "black-crappie",
+        "bluegill",
+        "brook-trout",
+        "brown-trout",
+        "gizzard-shad",
+        "green-sunfish",
+        "largemouth-bass",
+        "rainbow-trout",
+        "smallmouth-bass",
+        "spotted-bass",
+        "striped-bass",
+        "tessellated-darter",
+        "white-crappie",
+        "yellow-perch"
+      ]
+    },
+    {
+      "inputKey": "water-temperature",
+      "availability": "modeled",
+      "forecastResolutions": [
+        "hourly-and-daily"
+      ],
+      "originalInputs": [
+        "absolute water temperature",
+        "absoluteWaterTemperature",
+        "extremeHeat",
+        "extremeWarmWater",
+        "field temperature correlation",
+        "foodRationTemperature",
+        "gastric evacuation / temperature",
+        "growth temperature",
+        "postReleaseTemperature",
+        "seasonalWaterTemperature",
+        "short winter temperature change",
+        "shortTermWaterTemperatureTrend",
+        "temperature",
+        "temperatureCompetitorInteraction",
+        "temperatureDependentDigestion",
+        "temperatureOrSalinityTolerance",
+        "very cold water guardrail",
+        "warmWaterPeriod",
+        "water temperature",
+        "waterTemperature",
+        "waterTemperatureC",
+        "waterTemperatureC_x_creekChubPresence",
+        "waterTemperatureF",
+        "waterTemperatureTrend",
+        "winterTemperatureFoodSize"
+      ],
+      "ruleIds": [
+        "rule-batch-1-bluegill-09",
+        "rule-batch-11-gizzard-shad-01",
+        "rule-batch-11-gizzard-shad-02",
+        "rule-batch-11-gizzard-shad-05",
+        "rule-batch-2-green-sunfish-01",
+        "rule-batch-2-pumpkinseed-07",
+        "rule-batch-2-redbreast-sunfish-06",
+        "rule-batch-2-rock-bass-08",
+        "rule-batch-3-brook-trout-01",
+        "rule-batch-3-brown-trout-06",
+        "rule-batch-3-rainbow-trout-08",
+        "rule-batch-4-blue-catfish-01",
+        "rule-batch-4-flathead-catfish-01",
+        "rule-batch-4-flathead-catfish-02",
+        "rule-batch-4-flathead-catfish-03",
+        "rule-batch-4-white-catfish-01",
+        "rule-batch-5-striped-bass-02",
+        "rule-batch-5-white-perch-01",
+        "rule-batch-5-white-perch-02",
+        "rule-batch-6-muskellunge-03",
+        "rule-batch-6-muskellunge-06",
+        "rule-batch-6-muskellunge-09",
+        "rule-batch-6-northern-snakehead-04",
+        "rule-batch-7-american-eel-02",
+        "rule-batch-7-american-eel-03",
+        "rule-batch-7-common-carp-01",
+        "rule-batch-7-common-carp-02",
+        "rule-batch-7-common-carp-03",
+        "rule-batch-7-spotted-bass-04",
+        "rule-batch-8-creek-chub-03",
+        "rule-batch-8-creek-chub-04",
+        "rule-batch-8-fallfish-05",
+        "rule-batch-8-white-sucker-01",
+        "rule-batch-8-white-sucker-03",
+        "rule-batch-9-brown-bullhead-01",
+        "rule-batch-9-brown-bullhead-02",
+        "rule-batch-9-brown-bullhead-04",
+        "rule-batch-9-brown-bullhead-08",
+        "rule-batch-9-yellow-bullhead-04",
+        "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01",
+        "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-02",
+        "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03",
+        "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-02",
+        "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-03",
+        "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-01"
+      ],
+      "scoreRuleIds": [
+        "rule-batch-11-gizzard-shad-01",
+        "rule-batch-11-gizzard-shad-02",
+        "rule-batch-3-brook-trout-01",
+        "rule-batch-4-blue-catfish-01",
+        "rule-batch-4-flathead-catfish-01",
+        "rule-batch-4-flathead-catfish-02",
+        "rule-batch-4-flathead-catfish-03",
+        "rule-batch-6-muskellunge-03",
+        "rule-batch-7-american-eel-02",
+        "rule-batch-7-common-carp-01",
+        "rule-batch-7-common-carp-02",
+        "rule-batch-7-common-carp-03",
+        "rule-batch-8-white-sucker-01",
+        "rule-batch-9-brown-bullhead-01",
+        "rule-batch-9-brown-bullhead-02",
+        "rule-batch-9-brown-bullhead-04",
+        "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01",
+        "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-02",
+        "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03",
+        "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-02",
+        "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-03",
+        "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-01"
+      ],
+      "speciesIds": [
+        "american-eel",
+        "blue-catfish",
+        "bluegill",
+        "brook-trout",
+        "brown-bullhead",
+        "brown-trout",
+        "channel-catfish",
+        "common-carp",
+        "creek-chub",
+        "fallfish",
+        "flathead-catfish",
+        "gizzard-shad",
+        "green-sunfish",
+        "largemouth-bass",
+        "muskellunge",
+        "northern-snakehead",
+        "pumpkinseed",
+        "rainbow-trout",
+        "redbreast-sunfish",
+        "rock-bass",
+        "smallmouth-bass",
+        "spotted-bass",
+        "striped-bass",
+        "white-catfish",
+        "white-perch",
+        "white-sucker",
+        "yellow-bullhead"
+      ]
+    },
+    {
+      "inputKey": "weatherpressurefronts",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "weatherPressureFronts"
+      ],
+      "ruleIds": [
+        "rule-batch-8-fallfish-07"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "fallfish"
+      ]
+    },
+    {
+      "inputKey": "winter-habitat",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "winter habitat"
+      ],
+      "ruleIds": [
+        "rule-batch-10-blacknose-dace-03"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "blacknose-dace"
+      ]
+    },
+    {
+      "inputKey": "winterhabitatquality",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "winterHabitatQuality"
+      ],
+      "ruleIds": [
+        "rule-batch-1-black-crappie-05",
+        "rule-batch-1-bluegill-08"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "black-crappie",
+        "bluegill"
+      ]
+    },
+    {
+      "inputKey": "wintermovement",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "winterMovement"
+      ],
+      "ruleIds": [
+        "rule-batch-4-flathead-catfish-08"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "flathead-catfish"
+      ]
+    },
+    {
+      "inputKey": "winterseason",
+      "availability": "unknown",
+      "forecastResolutions": [
+        "unknown"
+      ],
+      "originalInputs": [
+        "winterSeason"
+      ],
+      "ruleIds": [
+        "rule-batch-3-brown-trout-08"
+      ],
+      "scoreRuleIds": [],
+      "speciesIds": [
+        "brown-trout"
+      ]
+    }
+  ]
+}

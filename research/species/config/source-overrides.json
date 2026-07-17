@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "overrides": [
+    {
+      "archiveId": "batch-5",
+      "speciesId": "striped-bass",
+      "localSourceId": "S11",
+      "reason": "The archive attributed the report only to NMFS and linked the NOAA repository homepage. NOAA's publication record and original report identify nine personal authors and a stable record URL.",
+      "verifiedAgainst": [
+        "https://spo.nmfs.noaa.gov/content/circular-433-synopsis-biological-data-striped-bass-morone-saxatilis-walbaum",
+        "https://repository.library.noaa.gov/view/noaa/2955"
+      ],
+      "set": {
+        "authorsOrAgency": "Eileen M. Setzler; Walter R. Boynton; Kathryn V. Wood; Henry H. Zion; Lawrence Lubbers; Nancy K. Mountford; Phyllis Frere; Luther Tucker; Joseph A. Mihursky",
+        "journalOrPublisher": "NOAA Technical Report NMFS Circular 433; FAO Fisheries Synopsis 121",
+        "url": "https://repository.library.noaa.gov/view/noaa/2955"
+      }
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-# BiteMap NOVA scoring profile v1.0 — model card
+# BiteMap NOVA scoring profile v1.1 — model card
 
 ## Intended use
 
@@ -10,7 +10,9 @@ probability, a guarantee, or a substitute for regulations and safety guidance.
 
 1. Species availability: weighted authoritative evidence and valid absence.
 2. Long-term fishery quality: comparable method-specific metrics and ratings.
-3. Hourly activity: species-configured suitability curves for available inputs.
+3. Hourly activity: species-configured seasonal and thermal suitability,
+   daylight pattern, measured dissolved-oxygen stress where available, and
+   supported flow/safety conditions.
 4. Access fit: whether the chosen fishing method is supported.
 5. Confidence: coverage, recency, authority, agreement, directness, horizon,
    and hydrologic association—reported separately.
@@ -23,8 +25,30 @@ Safety caps apply after the formula. Missing quality or activity uses a neutral
 
 Phase 1 is deterministic and transparent. It has not been calibrated against
 angler catch probability. Unit tests cover evidence conflicts, modeled-only
-caps, missing inputs, safety gates, confidence horizon, and the rule that strong
-weather cannot override weak species presence.
+caps, missing inputs, safety gates, confidence horizon, temperature provenance,
+regional-estimate uncertainty, oxygen stress, and the rule that strong weather
+cannot override weak species presence.
+
+The alpha account can now store private, angler-entered trip logs with named
+spot, target species, actual start/end time, angler effort, target catch count,
+explicit zero-catch status, and optional field observations. It does not freeze
+a forecast. Consent for de-identified aggregate analysis is optional; account
+identity and private notes are outside that consent. These rows are calibration
+instrumentation only and are never copied automatically into the separate
+confirmatory validation store. Every current row remains
+`validation_eligible = false`.
+
+Water temperature follows this precedence:
+
+1. current observation at a manually associated USGS station;
+2. future daily stream estimate bias-corrected to that observation;
+3. ungaged regional daily flowing-water surface estimate;
+4. unavailable.
+
+The regional model is not applied to standing waters. Temperature and the
+monthly seasonal prior are blended rather than multiplied to avoid counting the
+same temperature-of-season signal twice. Estimated temperature has less scoring
+authority than an observation.
 
 ## First ML experiment
 
@@ -41,7 +65,10 @@ size and validation quality.
 
 Agency surveys do not equal angler catch rates. Broad waterbody evidence can
 miss reach variation. Forecasts change. Water temperature may be estimated.
-Gages may not be representative. The imported Aquatic GAP v2.0 records are
+Gages may not be representative. Regional water-temperature ranges are
+engineering uncertainty bands, not validated prediction intervals. Barometric
+pressure, lunar phase, and universal cloud/wind bonuses are not scored. The
+imported Aquatic GAP v2.0 records are
 historical presence/absence samples associated through nearby NHDPlus reach
 midpoints. They are capped at 0.56 availability and never described as a current
 or exact access-point survey. Modeled Aquatic GAP distributions remain separate

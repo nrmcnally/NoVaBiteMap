@@ -18,8 +18,8 @@ from .engine import (
     final_opportunity_score,
 )
 
-MODEL_VERSION = "evidence-scorer-0.2"
-SCORING_PROFILE_VERSION = "1.0"
+MODEL_VERSION = "evidence-scorer-0.3"
+SCORING_PROFILE_VERSION = "1.1"
 
 AVAILABILITY_GATE = 0.35
 

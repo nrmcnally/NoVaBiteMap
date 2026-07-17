@@ -1,0 +1,286 @@
+{
+  "schemaVersion": "0.1.0-draft",
+  "modelVersion": "candidate-v0.2.0",
+  "snapshotDate": "2026-07-16",
+  "notice": "Test-only engineering fixtures derived from reviewed blueprints. They are not production weights, are not imported by the live scorer, and remain blocked pending validation and human approval.",
+  "neutralMultiplier": 1.0,
+  "rules": [
+    {
+      "ruleId": "rule-batch-7-american-eel-01",
+      "status": "candidate-test-only",
+      "correlationGroup": "american-eel-light-diel",
+      "gates": [
+        {"input": "seasonalPhase", "operator": "in", "values": ["late-summer", "early-autumn"], "testValue": "late-summer", "testFailValue": "spring"},
+        {"input": "waterbodyClass", "operator": "in", "values": ["estuary", "tidal-river"], "testValue": "tidal-river", "testFailValue": "lake"}
+      ],
+      "response": {"type": "categorical", "input": "solarPeriod", "values": {"daylight": 0.97, "post-sunset": 1.03, "night": 1.02}},
+      "orderingAssertions": [
+        {"lower": "daylight", "higher": "night"},
+        {"lower": "night", "higher": "post-sunset"}
+      ]
+    },
+    {
+      "ruleId": "rule-batch-10-blacknose-dace-01",
+      "status": "candidate-test-only",
+      "correlationGroup": "blacknose-dace-light-diel",
+      "gates": [
+        {"input": "season", "operator": "equals", "value": "summer", "testValue": "summer", "testFailValue": "winter"}
+      ],
+      "response": {"type": "categorical", "input": "solarPeriod", "values": {"pre-dawn": 0.97, "dawn": 1.01, "day": 0.97, "late-day": 1.03, "evening": 1.0}},
+      "orderingAssertions": [
+        {"lower": "pre-dawn", "higher": "dawn"},
+        {"lower": "day", "higher": "dawn"},
+        {"lower": "dawn", "higher": "late-day"}
+      ]
+    },
+    {
+      "ruleId": "rule-batch-4-blue-catfish-01",
+      "status": "candidate-test-only",
+      "correlationGroup": "blue-catfish-thermal",
+      "gates": [],
+      "response": {"type": "piecewise-linear", "input": "waterTemperatureC", "anchors": [[5, 0.95], [15, 1.0], [25, 1.0]], "outsideRange": "neutral"},
+      "orderingAssertions": [
+        {"lower": 5, "higher": 15},
+        {"equal": [15, 25]}
+      ]
+    },
+    {
+      "ruleId": "rule-batch-9-brown-bullhead-01",
+      "status": "candidate-test-only",
+      "correlationGroup": "brown-bullhead-thermal",
+      "gates": [
+        {"input": "sustainedWarmExposure", "operator": "equals", "value": true, "testValue": true, "testFailValue": false}
+      ],
+      "response": {"type": "piecewise-linear", "input": "waterTemperatureC", "anchors": [[18, 1.0], [25, 0.95]], "outsideRange": "neutral"},
+      "orderingAssertions": [
+        {"lower": 25, "higher": 18}
+      ]
+    },
+    {
+      "ruleId": "rule-batch-9-brown-bullhead-03",
+      "status": "candidate-test-only",
+      "correlationGroup": "brown-bullhead-light-diel",
+      "gates": [
+        {"input": "season", "operator": "equals", "value": "winter", "testValue": "winter", "testFailValue": "summer"},
+        {"input": "waterTemperatureC", "operator": "range", "minimum": 3, "maximum": 4.5, "testValue": 3.75, "testFailValue": 8}
+      ],
+      "response": {"type": "categorical", "input": "solarPeriod", "values": {"day": 0.97, "night": 1.03}},
+      "orderingAssertions": [
+        {"lower": "day", "higher": "night"}
+      ]
+    },
+    {
+      "ruleId": "rule-batch-9-brown-bullhead-04",
+      "status": "candidate-test-only",
+      "correlationGroup": "brown-bullhead-thermal",
+      "gates": [],
+      "response": {"type": "piecewise-linear", "input": "waterTemperatureC", "anchors": [[2, 0.97], [3, 0.99], [4.5, 1.0]], "outsideRange": "neutral"},
+      "orderingAssertions": [
+        {"lower": 2, "higher": 3},
+        {"lower": 3, "higher": 4.5}
+      ]
+    },
+    {
+      "ruleId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01",
+      "status": "candidate-test-only",
+      "correlationGroup": "channel-catfish-thermal",
+      "gates": [],
+      "response": {"type": "piecewise-linear", "input": "waterTemperatureC", "anchors": [[7, 0.95], [10, 0.97], [15.6, 0.99], [21.1, 1.0]], "outsideRange": "neutral"},
+      "orderingAssertions": [
+        {"lower": 7, "higher": 10},
+        {"lower": 10, "higher": 15.6},
+        {"lower": 15.6, "higher": 21.1}
+      ]
+    },
+    {
+      "ruleId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-02",
+      "status": "candidate-test-only",
+      "correlationGroup": "channel-catfish-thermal",
+      "gates": [
+        {"input": "waterTemperatureC", "operator": "range", "minimum": 7, "maximum": 21.1, "testValue": 14, "testFailValue": 25}
+      ],
+      "response": {"type": "categorical", "input": "temperatureTrend", "values": {"cooling": 0.97, "stable": 1.0, "warming": 1.0}},
+      "orderingAssertions": [
+        {"lower": "cooling", "higher": "stable"},
+        {"equal": ["stable", "warming"]}
+      ]
+    },
+    {
+      "ruleId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03",
+      "status": "candidate-test-only",
+      "correlationGroup": "channel-catfish-thermal",
+      "gates": [
+        {"input": "sustainedHeatExposure", "operator": "equals", "value": true, "testValue": true, "testFailValue": false}
+      ],
+      "response": {"type": "piecewise-linear", "input": "waterTemperatureC", "anchors": [[23, 1.0], [31, 1.0], [35, 0.85]], "outsideRange": "neutral"},
+      "orderingAssertions": [
+        {"lower": 35, "higher": 31},
+        {"equal": [23, 31]}
+      ]
+    },
+    {
+      "ruleId": "rule-batch-7-common-carp-01",
+      "status": "candidate-test-only",
+      "correlationGroup": "common-carp-thermal",
+      "gates": [],
+      "response": {"type": "piecewise-linear", "input": "waterTemperatureC", "anchors": [[6, 0.92], [14, 0.99], [28, 1.08], [34, 0.97]], "outsideRange": "neutral"},
+      "orderingAssertions": [
+        {"lower": 6, "higher": 14},
+        {"lower": 14, "higher": 28},
+        {"lower": 34, "higher": 28}
+      ]
+    },
+    {
+      "ruleId": "rule-batch-8-creek-chub-01",
+      "status": "candidate-test-only",
+      "correlationGroup": "creek-chub-light-diel",
+      "gates": [
+        {"input": "season", "operator": "equals", "value": "summer", "testValue": "summer", "testFailValue": "winter"}
+      ],
+      "response": {"type": "categorical", "input": "solarPeriod", "values": {"morning": 0.97, "day": 1.0, "early-evening": 1.03, "night": 1.0}},
+      "orderingAssertions": [
+        {"lower": "morning", "higher": "early-evening"}
+      ]
+    },
+    {
+      "ruleId": "rule-batch-8-fallfish-01",
+      "status": "blocked-source-timing",
+      "correlationGroup": "fallfish-light-diel",
+      "gates": [],
+      "response": {"type": "blocked-neutral"},
+      "orderingAssertions": []
+    },
+    {
+      "ruleId": "rule-batch-4-flathead-catfish-01",
+      "status": "candidate-test-only",
+      "correlationGroup": "flathead-catfish-thermal",
+      "gates": [],
+      "response": {"type": "piecewise-linear", "input": "waterTemperatureC", "anchors": [[3, 0.85], [7, 0.85], [11, 0.9], [15, 1.0], [32, 1.0]], "outsideRange": "neutral"},
+      "orderingAssertions": [
+        {"equal": [3, 7]},
+        {"lower": 7, "higher": 11},
+        {"lower": 11, "higher": 15}
+      ]
+    },
+    {
+      "ruleId": "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-03",
+      "status": "candidate-test-only",
+      "correlationGroup": "largemouth-bass-thermal",
+      "gates": [
+        {"input": "waterTemperatureC", "operator": "range", "minimum": 34.5, "maximum": 35.5, "testValue": 35, "testFailValue": 32},
+        {"input": "exposureDays", "operator": "at-least", "minimum": 28, "testValue": 28, "testFailValue": 1}
+      ],
+      "response": {"type": "constant", "multiplier": 0.85},
+      "orderingAssertions": []
+    },
+    {
+      "ruleId": "rule-batch-6-muskellunge-01",
+      "status": "candidate-test-only",
+      "correlationGroup": "muskellunge-light-diel",
+      "gates": [
+        {"input": "waterbodyClass", "operator": "in", "values": ["lake", "reservoir"], "testValue": "lake", "testFailValue": "stream"}
+      ],
+      "response": {"type": "piecewise-linear", "input": "solarRadiationWm2", "anchors": [[25, 1.03], [450, 0.97]], "outsideRange": "clamp"},
+      "orderingAssertions": [
+        {"lower": 450, "higher": 25}
+      ]
+    },
+    {
+      "ruleId": "rule-batch-6-northern-snakehead-01",
+      "status": "candidate-test-only",
+      "correlationGroup": "northern-snakehead-diel-tide",
+      "gates": [
+        {"input": "month", "operator": "in", "values": [5, 6], "testValue": 5, "testFailValue": 9},
+        {"input": "waterbodyClass", "operator": "in", "values": ["tidal-river", "tidal-water"], "testValue": "tidal-river", "testFailValue": "lake"}
+      ],
+      "response": {"type": "categorical", "input": "solarPeriod", "values": {"overnight": 0.97, "morning": 1.03, "daylight": 1.01}},
+      "orderingAssertions": [
+        {"lower": "overnight", "higher": "daylight"},
+        {"lower": "daylight", "higher": "morning"}
+      ]
+    },
+    {
+      "ruleId": "rule-batch-6-northern-snakehead-02",
+      "status": "candidate-test-only",
+      "correlationGroup": "northern-snakehead-diel-tide",
+      "gates": [
+        {"input": "month", "operator": "in", "values": [5, 6], "testValue": 5, "testFailValue": 9},
+        {"input": "waterbodyClass", "operator": "in", "values": ["tidal-river", "tidal-water"], "testValue": "tidal-river", "testFailValue": "lake"}
+      ],
+      "response": {"type": "categorical", "input": "tidalStage", "values": {"outgoing": 1.03, "other": 1.0}},
+      "orderingAssertions": [
+        {"lower": "other", "higher": "outgoing"}
+      ]
+    },
+    {
+      "ruleId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02",
+      "status": "candidate-test-only",
+      "correlationGroup": "smallmouth-bass-water-clarity",
+      "gates": [
+        {"input": "turbidityUnit", "operator": "in", "values": ["NTU", "FNU-comparable"], "testValue": "NTU", "testFailValue": "mg/L-suspended-sediment"}
+      ],
+      "response": {"type": "piecewise-linear", "input": "turbidityNtu", "anchors": [[0, 1.02], [5, 1.01], [10, 1.0], [20, 0.98], [40, 0.95]], "outsideRange": "clamp"},
+      "orderingAssertions": [
+        {"lower": 40, "higher": 20},
+        {"lower": 20, "higher": 10},
+        {"lower": 10, "higher": 5},
+        {"lower": 5, "higher": 0}
+      ]
+    },
+    {
+      "ruleId": "rule-batch-5-striped-bass-01",
+      "status": "candidate-test-only",
+      "correlationGroup": "striped-bass-oxygen-thermal",
+      "gates": [
+        {"input": "waterTemperatureC", "operator": "range", "minimum": 20, "maximum": 30, "testValue": 25, "testFailValue": 15}
+      ],
+      "response": {"type": "piecewise-linear", "input": "dissolvedOxygenMgL", "anchors": [[2, 0.92], [4, 0.96], [8, 1.0]], "outsideRange": "clamp"},
+      "orderingAssertions": [
+        {"lower": 2, "higher": 4},
+        {"lower": 4, "higher": 8}
+      ]
+    },
+    {
+      "ruleId": "rule-batch-6-walleye-02",
+      "status": "candidate-test-only",
+      "correlationGroup": "walleye-light-diel",
+      "gates": [
+        {"input": "waterbodyClass", "operator": "in", "values": ["lake", "reservoir"], "testValue": "lake", "testFailValue": "stream"}
+      ],
+      "response": {"type": "categorical", "input": "solarPeriod", "values": {"dawn": 1.05, "day": 1.0, "dusk": 1.05, "night": 1.0}, "ignoredCorrelatedInputs": ["solarRadiationWm2", "cloudCoverPercent"]},
+      "orderingAssertions": [
+        {"lower": "day", "higher": "dawn"},
+        {"lower": "day", "higher": "dusk"},
+        {"equal": ["dawn", "dusk"]}
+      ]
+    },
+    {
+      "ruleId": "rule-batch-8-white-sucker-01",
+      "status": "candidate-test-only",
+      "correlationGroup": "white-sucker-thermal",
+      "gates": [],
+      "response": {"type": "piecewise-linear", "input": "waterTemperatureC", "anchors": [[19, 0.97], [22, 1.01], [25, 1.03], [28, 0.97]], "outsideRange": "neutral"},
+      "orderingAssertions": [
+        {"lower": 19, "higher": 22},
+        {"lower": 28, "higher": 22},
+        {"lower": 22, "higher": 25}
+      ]
+    },
+    {
+      "ruleId": "rule-batch-5-yellow-perch-01",
+      "status": "candidate-test-only",
+      "correlationGroup": "yellow-perch-light-diel",
+      "gates": [
+        {"input": "season", "operator": "equals", "value": "summer", "testValue": "summer", "testFailValue": "winter"},
+        {"input": "waterbodyClass", "operator": "equals", "value": "lake", "testValue": "lake", "testFailValue": "stream"},
+        {"input": "waterClarityClass", "operator": "equals", "value": "clear", "testValue": "clear", "testFailValue": "turbid"}
+      ],
+      "response": {"type": "categorical", "input": "solarPeriod", "values": {"dawn": 0.97, "day": 1.0, "late-evening": 1.03, "post-sunset": 0.99, "night": 0.97}},
+      "orderingAssertions": [
+        {"lower": "dawn", "higher": "day"},
+        {"lower": "day", "higher": "late-evening"},
+        {"lower": "post-sunset", "higher": "late-evening"}
+      ]
+    }
+  ]
+}

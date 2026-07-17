@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "0.1.0-draft",
+  "snapshotDate": "2026-07-16",
+  "status": "pass",
+  "errorCount": 0,
+  "warningCount": 0,
+  "errors": [],
+  "warnings": [],
+  "checks": {
+    "scoreRuleCount": 61,
+    "reviewedRuleCount": 61,
+    "allScoreRulesAssignedExactlyOnce": true,
+    "productionCandidateCount": 2,
+    "modelableRuleCount": 22,
+    "candidateBlueprintCount": 22,
+    "sourceReviewPendingCount": 0,
+    "sourceReviewBlockedCount": 1,
+    "liveScorerEligibleCount": 0,
+    "cohortRuleCount": 6
+  }
+}

@@ -1,0 +1,1907 @@
+{
+  "schemaVersion": "0.1.0-draft",
+  "modelVersion": "candidate-v0.2.0",
+  "snapshotDate": "2026-07-16",
+  "specSha256": "807ad0df2809be12c719e968f51ab356171e5f4a364da6b4494e5c2cf1189bf0",
+  "modelReviewLedgerSha256": "e7796aa60f2f574dcac655f227ef10a53aaec3e6b6f1bb94245de225ff322fbd",
+  "notice": "Test-only engineering fixtures derived from reviewed blueprints. They are not production weights, are not imported by the live scorer, and remain blocked pending validation and human approval.",
+  "scenarioCount": 194,
+  "scenarios": [
+    {
+      "scenarioId": "rule-batch-7-american-eel-01:missing-gate-seasonalphase",
+      "fixtureId": "rule-batch-7-american-eel-01@candidate-v0.2.0",
+      "inputs": {
+        "waterbodyClass": "tidal-river",
+        "solarPeriod": "daylight"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-7-american-eel-01:failed-gate-seasonalphase",
+      "fixtureId": "rule-batch-7-american-eel-01@candidate-v0.2.0",
+      "inputs": {
+        "seasonalPhase": "spring",
+        "waterbodyClass": "tidal-river",
+        "solarPeriod": "daylight"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An out-of-scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-7-american-eel-01:missing-gate-waterbodyclass",
+      "fixtureId": "rule-batch-7-american-eel-01@candidate-v0.2.0",
+      "inputs": {
+        "seasonalPhase": "late-summer",
+        "solarPeriod": "daylight"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-7-american-eel-01:failed-gate-waterbodyclass",
+      "fixtureId": "rule-batch-7-american-eel-01@candidate-v0.2.0",
+      "inputs": {
+        "seasonalPhase": "late-summer",
+        "waterbodyClass": "lake",
+        "solarPeriod": "daylight"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An out-of-scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-7-american-eel-01:missing-response-input",
+      "fixtureId": "rule-batch-7-american-eel-01@candidate-v0.2.0",
+      "inputs": {
+        "seasonalPhase": "late-summer",
+        "waterbodyClass": "tidal-river"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing response input must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-7-american-eel-01:category-daylight",
+      "fixtureId": "rule-batch-7-american-eel-01@candidate-v0.2.0",
+      "inputs": {
+        "seasonalPhase": "late-summer",
+        "waterbodyClass": "tidal-river",
+        "solarPeriod": "daylight"
+      },
+      "expectedMultiplier": 0.97,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-7-american-eel-01:category-post-sunset",
+      "fixtureId": "rule-batch-7-american-eel-01@candidate-v0.2.0",
+      "inputs": {
+        "seasonalPhase": "late-summer",
+        "waterbodyClass": "tidal-river",
+        "solarPeriod": "post-sunset"
+      },
+      "expectedMultiplier": 1.03,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-7-american-eel-01:category-night",
+      "fixtureId": "rule-batch-7-american-eel-01@candidate-v0.2.0",
+      "inputs": {
+        "seasonalPhase": "late-summer",
+        "waterbodyClass": "tidal-river",
+        "solarPeriod": "night"
+      },
+      "expectedMultiplier": 1.02,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-7-american-eel-01:unknown-category",
+      "fixtureId": "rule-batch-7-american-eel-01@candidate-v0.2.0",
+      "inputs": {
+        "seasonalPhase": "late-summer",
+        "waterbodyClass": "tidal-river",
+        "solarPeriod": "unmapped-category"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An unmapped category must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-10-blacknose-dace-01:missing-gate-season",
+      "fixtureId": "rule-batch-10-blacknose-dace-01@candidate-v0.2.0",
+      "inputs": {
+        "solarPeriod": "pre-dawn"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-10-blacknose-dace-01:failed-gate-season",
+      "fixtureId": "rule-batch-10-blacknose-dace-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "winter",
+        "solarPeriod": "pre-dawn"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An out-of-scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-10-blacknose-dace-01:missing-response-input",
+      "fixtureId": "rule-batch-10-blacknose-dace-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "summer"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing response input must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-10-blacknose-dace-01:category-pre-dawn",
+      "fixtureId": "rule-batch-10-blacknose-dace-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "summer",
+        "solarPeriod": "pre-dawn"
+      },
+      "expectedMultiplier": 0.97,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-10-blacknose-dace-01:category-dawn",
+      "fixtureId": "rule-batch-10-blacknose-dace-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "summer",
+        "solarPeriod": "dawn"
+      },
+      "expectedMultiplier": 1.01,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-10-blacknose-dace-01:category-day",
+      "fixtureId": "rule-batch-10-blacknose-dace-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "summer",
+        "solarPeriod": "day"
+      },
+      "expectedMultiplier": 0.97,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-10-blacknose-dace-01:category-late-day",
+      "fixtureId": "rule-batch-10-blacknose-dace-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "summer",
+        "solarPeriod": "late-day"
+      },
+      "expectedMultiplier": 1.03,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-10-blacknose-dace-01:category-evening",
+      "fixtureId": "rule-batch-10-blacknose-dace-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "summer",
+        "solarPeriod": "evening"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-10-blacknose-dace-01:unknown-category",
+      "fixtureId": "rule-batch-10-blacknose-dace-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "summer",
+        "solarPeriod": "unmapped-category"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An unmapped category must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-4-blue-catfish-01:missing-response-input",
+      "fixtureId": "rule-batch-4-blue-catfish-01@candidate-v0.2.0",
+      "inputs": {},
+      "expectedMultiplier": 1.0,
+      "reason": "A missing response input must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-4-blue-catfish-01:anchor-5",
+      "fixtureId": "rule-batch-4-blue-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 5
+      },
+      "expectedMultiplier": 0.95,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-batch-4-blue-catfish-01:anchor-15",
+      "fixtureId": "rule-batch-4-blue-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 15
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-batch-4-blue-catfish-01:anchor-25",
+      "fixtureId": "rule-batch-4-blue-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 25
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-batch-4-blue-catfish-01:midpoint-10p0",
+      "fixtureId": "rule-batch-4-blue-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 10.0
+      },
+      "expectedMultiplier": 0.975,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-batch-4-blue-catfish-01:midpoint-20p0",
+      "fixtureId": "rule-batch-4-blue-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 20.0
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-batch-4-blue-catfish-01:below-range",
+      "fixtureId": "rule-batch-4-blue-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 4
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Outside-range behavior is neutral."
+    },
+    {
+      "scenarioId": "rule-batch-4-blue-catfish-01:above-range",
+      "fixtureId": "rule-batch-4-blue-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 26
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Outside-range behavior is neutral."
+    },
+    {
+      "scenarioId": "rule-batch-9-brown-bullhead-01:missing-gate-sustainedwarmexposure",
+      "fixtureId": "rule-batch-9-brown-bullhead-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 18
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-9-brown-bullhead-01:failed-gate-sustainedwarmexposure",
+      "fixtureId": "rule-batch-9-brown-bullhead-01@candidate-v0.2.0",
+      "inputs": {
+        "sustainedWarmExposure": false,
+        "waterTemperatureC": 18
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An out-of-scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-9-brown-bullhead-01:missing-response-input",
+      "fixtureId": "rule-batch-9-brown-bullhead-01@candidate-v0.2.0",
+      "inputs": {
+        "sustainedWarmExposure": true
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing response input must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-9-brown-bullhead-01:anchor-18",
+      "fixtureId": "rule-batch-9-brown-bullhead-01@candidate-v0.2.0",
+      "inputs": {
+        "sustainedWarmExposure": true,
+        "waterTemperatureC": 18
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-batch-9-brown-bullhead-01:anchor-25",
+      "fixtureId": "rule-batch-9-brown-bullhead-01@candidate-v0.2.0",
+      "inputs": {
+        "sustainedWarmExposure": true,
+        "waterTemperatureC": 25
+      },
+      "expectedMultiplier": 0.95,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-batch-9-brown-bullhead-01:midpoint-21p5",
+      "fixtureId": "rule-batch-9-brown-bullhead-01@candidate-v0.2.0",
+      "inputs": {
+        "sustainedWarmExposure": true,
+        "waterTemperatureC": 21.5
+      },
+      "expectedMultiplier": 0.975,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-batch-9-brown-bullhead-01:below-range",
+      "fixtureId": "rule-batch-9-brown-bullhead-01@candidate-v0.2.0",
+      "inputs": {
+        "sustainedWarmExposure": true,
+        "waterTemperatureC": 17
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Outside-range behavior is neutral."
+    },
+    {
+      "scenarioId": "rule-batch-9-brown-bullhead-01:above-range",
+      "fixtureId": "rule-batch-9-brown-bullhead-01@candidate-v0.2.0",
+      "inputs": {
+        "sustainedWarmExposure": true,
+        "waterTemperatureC": 26
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Outside-range behavior is neutral."
+    },
+    {
+      "scenarioId": "rule-batch-9-brown-bullhead-03:missing-gate-season",
+      "fixtureId": "rule-batch-9-brown-bullhead-03@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 3.75,
+        "solarPeriod": "day"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-9-brown-bullhead-03:failed-gate-season",
+      "fixtureId": "rule-batch-9-brown-bullhead-03@candidate-v0.2.0",
+      "inputs": {
+        "season": "summer",
+        "waterTemperatureC": 3.75,
+        "solarPeriod": "day"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An out-of-scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-9-brown-bullhead-03:missing-gate-watertemperaturec",
+      "fixtureId": "rule-batch-9-brown-bullhead-03@candidate-v0.2.0",
+      "inputs": {
+        "season": "winter",
+        "solarPeriod": "day"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-9-brown-bullhead-03:failed-gate-watertemperaturec",
+      "fixtureId": "rule-batch-9-brown-bullhead-03@candidate-v0.2.0",
+      "inputs": {
+        "season": "winter",
+        "waterTemperatureC": 8,
+        "solarPeriod": "day"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An out-of-scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-9-brown-bullhead-03:missing-response-input",
+      "fixtureId": "rule-batch-9-brown-bullhead-03@candidate-v0.2.0",
+      "inputs": {
+        "season": "winter",
+        "waterTemperatureC": 3.75
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing response input must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-9-brown-bullhead-03:category-day",
+      "fixtureId": "rule-batch-9-brown-bullhead-03@candidate-v0.2.0",
+      "inputs": {
+        "season": "winter",
+        "waterTemperatureC": 3.75,
+        "solarPeriod": "day"
+      },
+      "expectedMultiplier": 0.97,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-9-brown-bullhead-03:category-night",
+      "fixtureId": "rule-batch-9-brown-bullhead-03@candidate-v0.2.0",
+      "inputs": {
+        "season": "winter",
+        "waterTemperatureC": 3.75,
+        "solarPeriod": "night"
+      },
+      "expectedMultiplier": 1.03,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-9-brown-bullhead-03:unknown-category",
+      "fixtureId": "rule-batch-9-brown-bullhead-03@candidate-v0.2.0",
+      "inputs": {
+        "season": "winter",
+        "waterTemperatureC": 3.75,
+        "solarPeriod": "unmapped-category"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An unmapped category must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-9-brown-bullhead-04:missing-response-input",
+      "fixtureId": "rule-batch-9-brown-bullhead-04@candidate-v0.2.0",
+      "inputs": {},
+      "expectedMultiplier": 1.0,
+      "reason": "A missing response input must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-9-brown-bullhead-04:anchor-2",
+      "fixtureId": "rule-batch-9-brown-bullhead-04@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 2
+      },
+      "expectedMultiplier": 0.97,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-batch-9-brown-bullhead-04:anchor-3",
+      "fixtureId": "rule-batch-9-brown-bullhead-04@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 3
+      },
+      "expectedMultiplier": 0.99,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-batch-9-brown-bullhead-04:anchor-4p5",
+      "fixtureId": "rule-batch-9-brown-bullhead-04@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 4.5
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-batch-9-brown-bullhead-04:midpoint-2p5",
+      "fixtureId": "rule-batch-9-brown-bullhead-04@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 2.5
+      },
+      "expectedMultiplier": 0.98,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-batch-9-brown-bullhead-04:midpoint-3p75",
+      "fixtureId": "rule-batch-9-brown-bullhead-04@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 3.75
+      },
+      "expectedMultiplier": 0.995,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-batch-9-brown-bullhead-04:below-range",
+      "fixtureId": "rule-batch-9-brown-bullhead-04@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 1
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Outside-range behavior is neutral."
+    },
+    {
+      "scenarioId": "rule-batch-9-brown-bullhead-04:above-range",
+      "fixtureId": "rule-batch-9-brown-bullhead-04@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 5.5
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Outside-range behavior is neutral."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01:missing-response-input",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01@candidate-v0.2.0",
+      "inputs": {},
+      "expectedMultiplier": 1.0,
+      "reason": "A missing response input must be neutral."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01:anchor-7",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 7
+      },
+      "expectedMultiplier": 0.95,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01:anchor-10",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 10
+      },
+      "expectedMultiplier": 0.97,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01:anchor-15p6",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 15.6
+      },
+      "expectedMultiplier": 0.99,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01:anchor-21p1",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 21.1
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01:midpoint-8p5",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 8.5
+      },
+      "expectedMultiplier": 0.96,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01:midpoint-12p8",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 12.8
+      },
+      "expectedMultiplier": 0.98,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01:midpoint-18p35",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 18.35
+      },
+      "expectedMultiplier": 0.995,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01:below-range",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 6
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Outside-range behavior is neutral."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01:above-range",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 22.1
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Outside-range behavior is neutral."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-02:missing-gate-watertemperaturec",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-02@candidate-v0.2.0",
+      "inputs": {
+        "temperatureTrend": "cooling"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-02:failed-gate-watertemperaturec",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-02@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 25,
+        "temperatureTrend": "cooling"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An out-of-scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-02:missing-response-input",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-02@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 14
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing response input must be neutral."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-02:category-cooling",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-02@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 14,
+        "temperatureTrend": "cooling"
+      },
+      "expectedMultiplier": 0.97,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-02:category-stable",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-02@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 14,
+        "temperatureTrend": "stable"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-02:category-warming",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-02@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 14,
+        "temperatureTrend": "warming"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-02:unknown-category",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-02@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 14,
+        "temperatureTrend": "unmapped-category"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An unmapped category must be neutral."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03:missing-gate-sustainedheatexposure",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 23
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03:failed-gate-sustainedheatexposure",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03@candidate-v0.2.0",
+      "inputs": {
+        "sustainedHeatExposure": false,
+        "waterTemperatureC": 23
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An out-of-scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03:missing-response-input",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03@candidate-v0.2.0",
+      "inputs": {
+        "sustainedHeatExposure": true
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing response input must be neutral."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03:anchor-23",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03@candidate-v0.2.0",
+      "inputs": {
+        "sustainedHeatExposure": true,
+        "waterTemperatureC": 23
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03:anchor-31",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03@candidate-v0.2.0",
+      "inputs": {
+        "sustainedHeatExposure": true,
+        "waterTemperatureC": 31
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03:anchor-35",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03@candidate-v0.2.0",
+      "inputs": {
+        "sustainedHeatExposure": true,
+        "waterTemperatureC": 35
+      },
+      "expectedMultiplier": 0.85,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03:midpoint-27p0",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03@candidate-v0.2.0",
+      "inputs": {
+        "sustainedHeatExposure": true,
+        "waterTemperatureC": 27.0
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03:midpoint-33p0",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03@candidate-v0.2.0",
+      "inputs": {
+        "sustainedHeatExposure": true,
+        "waterTemperatureC": 33.0
+      },
+      "expectedMultiplier": 0.925,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03:below-range",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03@candidate-v0.2.0",
+      "inputs": {
+        "sustainedHeatExposure": true,
+        "waterTemperatureC": 22
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Outside-range behavior is neutral."
+    },
+    {
+      "scenarioId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03:above-range",
+      "fixtureId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03@candidate-v0.2.0",
+      "inputs": {
+        "sustainedHeatExposure": true,
+        "waterTemperatureC": 36
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Outside-range behavior is neutral."
+    },
+    {
+      "scenarioId": "rule-batch-7-common-carp-01:missing-response-input",
+      "fixtureId": "rule-batch-7-common-carp-01@candidate-v0.2.0",
+      "inputs": {},
+      "expectedMultiplier": 1.0,
+      "reason": "A missing response input must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-7-common-carp-01:anchor-6",
+      "fixtureId": "rule-batch-7-common-carp-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 6
+      },
+      "expectedMultiplier": 0.92,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-batch-7-common-carp-01:anchor-14",
+      "fixtureId": "rule-batch-7-common-carp-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 14
+      },
+      "expectedMultiplier": 0.99,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-batch-7-common-carp-01:anchor-28",
+      "fixtureId": "rule-batch-7-common-carp-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 28
+      },
+      "expectedMultiplier": 1.08,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-batch-7-common-carp-01:anchor-34",
+      "fixtureId": "rule-batch-7-common-carp-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 34
+      },
+      "expectedMultiplier": 0.97,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-batch-7-common-carp-01:midpoint-10p0",
+      "fixtureId": "rule-batch-7-common-carp-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 10.0
+      },
+      "expectedMultiplier": 0.9550000000000001,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-batch-7-common-carp-01:midpoint-21p0",
+      "fixtureId": "rule-batch-7-common-carp-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 21.0
+      },
+      "expectedMultiplier": 1.0350000000000001,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-batch-7-common-carp-01:midpoint-31p0",
+      "fixtureId": "rule-batch-7-common-carp-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 31.0
+      },
+      "expectedMultiplier": 1.025,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-batch-7-common-carp-01:below-range",
+      "fixtureId": "rule-batch-7-common-carp-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 5
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Outside-range behavior is neutral."
+    },
+    {
+      "scenarioId": "rule-batch-7-common-carp-01:above-range",
+      "fixtureId": "rule-batch-7-common-carp-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 35
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Outside-range behavior is neutral."
+    },
+    {
+      "scenarioId": "rule-batch-8-creek-chub-01:missing-gate-season",
+      "fixtureId": "rule-batch-8-creek-chub-01@candidate-v0.2.0",
+      "inputs": {
+        "solarPeriod": "morning"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-8-creek-chub-01:failed-gate-season",
+      "fixtureId": "rule-batch-8-creek-chub-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "winter",
+        "solarPeriod": "morning"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An out-of-scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-8-creek-chub-01:missing-response-input",
+      "fixtureId": "rule-batch-8-creek-chub-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "summer"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing response input must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-8-creek-chub-01:category-morning",
+      "fixtureId": "rule-batch-8-creek-chub-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "summer",
+        "solarPeriod": "morning"
+      },
+      "expectedMultiplier": 0.97,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-8-creek-chub-01:category-day",
+      "fixtureId": "rule-batch-8-creek-chub-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "summer",
+        "solarPeriod": "day"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-8-creek-chub-01:category-early-evening",
+      "fixtureId": "rule-batch-8-creek-chub-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "summer",
+        "solarPeriod": "early-evening"
+      },
+      "expectedMultiplier": 1.03,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-8-creek-chub-01:category-night",
+      "fixtureId": "rule-batch-8-creek-chub-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "summer",
+        "solarPeriod": "night"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-8-creek-chub-01:unknown-category",
+      "fixtureId": "rule-batch-8-creek-chub-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "summer",
+        "solarPeriod": "unmapped-category"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An unmapped category must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-8-fallfish-01:blocked-neutral",
+      "fixtureId": "rule-batch-8-fallfish-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "summer",
+        "solarPeriod": "late-day"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Unverified peak timing keeps the fixture neutral."
+    },
+    {
+      "scenarioId": "rule-batch-4-flathead-catfish-01:missing-response-input",
+      "fixtureId": "rule-batch-4-flathead-catfish-01@candidate-v0.2.0",
+      "inputs": {},
+      "expectedMultiplier": 1.0,
+      "reason": "A missing response input must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-4-flathead-catfish-01:anchor-3",
+      "fixtureId": "rule-batch-4-flathead-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 3
+      },
+      "expectedMultiplier": 0.85,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-batch-4-flathead-catfish-01:anchor-7",
+      "fixtureId": "rule-batch-4-flathead-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 7
+      },
+      "expectedMultiplier": 0.85,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-batch-4-flathead-catfish-01:anchor-11",
+      "fixtureId": "rule-batch-4-flathead-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 11
+      },
+      "expectedMultiplier": 0.9,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-batch-4-flathead-catfish-01:anchor-15",
+      "fixtureId": "rule-batch-4-flathead-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 15
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-batch-4-flathead-catfish-01:anchor-32",
+      "fixtureId": "rule-batch-4-flathead-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 32
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-batch-4-flathead-catfish-01:midpoint-5p0",
+      "fixtureId": "rule-batch-4-flathead-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 5.0
+      },
+      "expectedMultiplier": 0.85,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-batch-4-flathead-catfish-01:midpoint-9p0",
+      "fixtureId": "rule-batch-4-flathead-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 9.0
+      },
+      "expectedMultiplier": 0.875,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-batch-4-flathead-catfish-01:midpoint-13p0",
+      "fixtureId": "rule-batch-4-flathead-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 13.0
+      },
+      "expectedMultiplier": 0.95,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-batch-4-flathead-catfish-01:midpoint-23p5",
+      "fixtureId": "rule-batch-4-flathead-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 23.5
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-batch-4-flathead-catfish-01:below-range",
+      "fixtureId": "rule-batch-4-flathead-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 2
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Outside-range behavior is neutral."
+    },
+    {
+      "scenarioId": "rule-batch-4-flathead-catfish-01:above-range",
+      "fixtureId": "rule-batch-4-flathead-catfish-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 33
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Outside-range behavior is neutral."
+    },
+    {
+      "scenarioId": "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-03:missing-gate-watertemperaturec",
+      "fixtureId": "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-03@candidate-v0.2.0",
+      "inputs": {
+        "exposureDays": 28
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-03:failed-gate-watertemperaturec",
+      "fixtureId": "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-03@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 32,
+        "exposureDays": 28
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An out-of-scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-03:missing-gate-exposuredays",
+      "fixtureId": "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-03@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 35
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-03:failed-gate-exposuredays",
+      "fixtureId": "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-03@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 35,
+        "exposureDays": 1
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An out-of-scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-03:all-gates-active",
+      "fixtureId": "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-03@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 35,
+        "exposureDays": 28
+      },
+      "expectedMultiplier": 0.85,
+      "reason": "The exact severe condition activates the capped guardrail."
+    },
+    {
+      "scenarioId": "rule-batch-6-muskellunge-01:missing-gate-waterbodyclass",
+      "fixtureId": "rule-batch-6-muskellunge-01@candidate-v0.2.0",
+      "inputs": {
+        "solarRadiationWm2": 25
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-6-muskellunge-01:failed-gate-waterbodyclass",
+      "fixtureId": "rule-batch-6-muskellunge-01@candidate-v0.2.0",
+      "inputs": {
+        "waterbodyClass": "stream",
+        "solarRadiationWm2": 25
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An out-of-scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-6-muskellunge-01:missing-response-input",
+      "fixtureId": "rule-batch-6-muskellunge-01@candidate-v0.2.0",
+      "inputs": {
+        "waterbodyClass": "lake"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing response input must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-6-muskellunge-01:anchor-25",
+      "fixtureId": "rule-batch-6-muskellunge-01@candidate-v0.2.0",
+      "inputs": {
+        "waterbodyClass": "lake",
+        "solarRadiationWm2": 25
+      },
+      "expectedMultiplier": 1.03,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-batch-6-muskellunge-01:anchor-450",
+      "fixtureId": "rule-batch-6-muskellunge-01@candidate-v0.2.0",
+      "inputs": {
+        "waterbodyClass": "lake",
+        "solarRadiationWm2": 450
+      },
+      "expectedMultiplier": 0.97,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-batch-6-muskellunge-01:midpoint-237p5",
+      "fixtureId": "rule-batch-6-muskellunge-01@candidate-v0.2.0",
+      "inputs": {
+        "waterbodyClass": "lake",
+        "solarRadiationWm2": 237.5
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-batch-6-muskellunge-01:below-range",
+      "fixtureId": "rule-batch-6-muskellunge-01@candidate-v0.2.0",
+      "inputs": {
+        "waterbodyClass": "lake",
+        "solarRadiationWm2": 24
+      },
+      "expectedMultiplier": 1.03,
+      "reason": "Outside-range behavior is clamp."
+    },
+    {
+      "scenarioId": "rule-batch-6-muskellunge-01:above-range",
+      "fixtureId": "rule-batch-6-muskellunge-01@candidate-v0.2.0",
+      "inputs": {
+        "waterbodyClass": "lake",
+        "solarRadiationWm2": 451
+      },
+      "expectedMultiplier": 0.97,
+      "reason": "Outside-range behavior is clamp."
+    },
+    {
+      "scenarioId": "rule-batch-6-northern-snakehead-01:missing-gate-month",
+      "fixtureId": "rule-batch-6-northern-snakehead-01@candidate-v0.2.0",
+      "inputs": {
+        "waterbodyClass": "tidal-river",
+        "solarPeriod": "overnight"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-6-northern-snakehead-01:failed-gate-month",
+      "fixtureId": "rule-batch-6-northern-snakehead-01@candidate-v0.2.0",
+      "inputs": {
+        "month": 9,
+        "waterbodyClass": "tidal-river",
+        "solarPeriod": "overnight"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An out-of-scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-6-northern-snakehead-01:missing-gate-waterbodyclass",
+      "fixtureId": "rule-batch-6-northern-snakehead-01@candidate-v0.2.0",
+      "inputs": {
+        "month": 5,
+        "solarPeriod": "overnight"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-6-northern-snakehead-01:failed-gate-waterbodyclass",
+      "fixtureId": "rule-batch-6-northern-snakehead-01@candidate-v0.2.0",
+      "inputs": {
+        "month": 5,
+        "waterbodyClass": "lake",
+        "solarPeriod": "overnight"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An out-of-scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-6-northern-snakehead-01:missing-response-input",
+      "fixtureId": "rule-batch-6-northern-snakehead-01@candidate-v0.2.0",
+      "inputs": {
+        "month": 5,
+        "waterbodyClass": "tidal-river"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing response input must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-6-northern-snakehead-01:category-overnight",
+      "fixtureId": "rule-batch-6-northern-snakehead-01@candidate-v0.2.0",
+      "inputs": {
+        "month": 5,
+        "waterbodyClass": "tidal-river",
+        "solarPeriod": "overnight"
+      },
+      "expectedMultiplier": 0.97,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-6-northern-snakehead-01:category-morning",
+      "fixtureId": "rule-batch-6-northern-snakehead-01@candidate-v0.2.0",
+      "inputs": {
+        "month": 5,
+        "waterbodyClass": "tidal-river",
+        "solarPeriod": "morning"
+      },
+      "expectedMultiplier": 1.03,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-6-northern-snakehead-01:category-daylight",
+      "fixtureId": "rule-batch-6-northern-snakehead-01@candidate-v0.2.0",
+      "inputs": {
+        "month": 5,
+        "waterbodyClass": "tidal-river",
+        "solarPeriod": "daylight"
+      },
+      "expectedMultiplier": 1.01,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-6-northern-snakehead-01:unknown-category",
+      "fixtureId": "rule-batch-6-northern-snakehead-01@candidate-v0.2.0",
+      "inputs": {
+        "month": 5,
+        "waterbodyClass": "tidal-river",
+        "solarPeriod": "unmapped-category"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An unmapped category must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-6-northern-snakehead-02:missing-gate-month",
+      "fixtureId": "rule-batch-6-northern-snakehead-02@candidate-v0.2.0",
+      "inputs": {
+        "waterbodyClass": "tidal-river",
+        "tidalStage": "outgoing"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-6-northern-snakehead-02:failed-gate-month",
+      "fixtureId": "rule-batch-6-northern-snakehead-02@candidate-v0.2.0",
+      "inputs": {
+        "month": 9,
+        "waterbodyClass": "tidal-river",
+        "tidalStage": "outgoing"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An out-of-scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-6-northern-snakehead-02:missing-gate-waterbodyclass",
+      "fixtureId": "rule-batch-6-northern-snakehead-02@candidate-v0.2.0",
+      "inputs": {
+        "month": 5,
+        "tidalStage": "outgoing"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-6-northern-snakehead-02:failed-gate-waterbodyclass",
+      "fixtureId": "rule-batch-6-northern-snakehead-02@candidate-v0.2.0",
+      "inputs": {
+        "month": 5,
+        "waterbodyClass": "lake",
+        "tidalStage": "outgoing"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An out-of-scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-6-northern-snakehead-02:missing-response-input",
+      "fixtureId": "rule-batch-6-northern-snakehead-02@candidate-v0.2.0",
+      "inputs": {
+        "month": 5,
+        "waterbodyClass": "tidal-river"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing response input must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-6-northern-snakehead-02:category-outgoing",
+      "fixtureId": "rule-batch-6-northern-snakehead-02@candidate-v0.2.0",
+      "inputs": {
+        "month": 5,
+        "waterbodyClass": "tidal-river",
+        "tidalStage": "outgoing"
+      },
+      "expectedMultiplier": 1.03,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-6-northern-snakehead-02:category-other",
+      "fixtureId": "rule-batch-6-northern-snakehead-02@candidate-v0.2.0",
+      "inputs": {
+        "month": 5,
+        "waterbodyClass": "tidal-river",
+        "tidalStage": "other"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-6-northern-snakehead-02:unknown-category",
+      "fixtureId": "rule-batch-6-northern-snakehead-02@candidate-v0.2.0",
+      "inputs": {
+        "month": 5,
+        "waterbodyClass": "tidal-river",
+        "tidalStage": "unmapped-category"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An unmapped category must be neutral."
+    },
+    {
+      "scenarioId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02:missing-gate-turbidityunit",
+      "fixtureId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02@candidate-v0.2.0",
+      "inputs": {
+        "turbidityNtu": 0
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02:failed-gate-turbidityunit",
+      "fixtureId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02@candidate-v0.2.0",
+      "inputs": {
+        "turbidityUnit": "mg/L-suspended-sediment",
+        "turbidityNtu": 0
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An out-of-scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02:missing-response-input",
+      "fixtureId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02@candidate-v0.2.0",
+      "inputs": {
+        "turbidityUnit": "NTU"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing response input must be neutral."
+    },
+    {
+      "scenarioId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02:anchor-0",
+      "fixtureId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02@candidate-v0.2.0",
+      "inputs": {
+        "turbidityUnit": "NTU",
+        "turbidityNtu": 0
+      },
+      "expectedMultiplier": 1.02,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02:anchor-5",
+      "fixtureId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02@candidate-v0.2.0",
+      "inputs": {
+        "turbidityUnit": "NTU",
+        "turbidityNtu": 5
+      },
+      "expectedMultiplier": 1.01,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02:anchor-10",
+      "fixtureId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02@candidate-v0.2.0",
+      "inputs": {
+        "turbidityUnit": "NTU",
+        "turbidityNtu": 10
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02:anchor-20",
+      "fixtureId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02@candidate-v0.2.0",
+      "inputs": {
+        "turbidityUnit": "NTU",
+        "turbidityNtu": 20
+      },
+      "expectedMultiplier": 0.98,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02:anchor-40",
+      "fixtureId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02@candidate-v0.2.0",
+      "inputs": {
+        "turbidityUnit": "NTU",
+        "turbidityNtu": 40
+      },
+      "expectedMultiplier": 0.95,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02:midpoint-2p5",
+      "fixtureId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02@candidate-v0.2.0",
+      "inputs": {
+        "turbidityUnit": "NTU",
+        "turbidityNtu": 2.5
+      },
+      "expectedMultiplier": 1.0150000000000001,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02:midpoint-7p5",
+      "fixtureId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02@candidate-v0.2.0",
+      "inputs": {
+        "turbidityUnit": "NTU",
+        "turbidityNtu": 7.5
+      },
+      "expectedMultiplier": 1.005,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02:midpoint-15p0",
+      "fixtureId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02@candidate-v0.2.0",
+      "inputs": {
+        "turbidityUnit": "NTU",
+        "turbidityNtu": 15.0
+      },
+      "expectedMultiplier": 0.99,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02:midpoint-30p0",
+      "fixtureId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02@candidate-v0.2.0",
+      "inputs": {
+        "turbidityUnit": "NTU",
+        "turbidityNtu": 30.0
+      },
+      "expectedMultiplier": 0.965,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02:below-range",
+      "fixtureId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02@candidate-v0.2.0",
+      "inputs": {
+        "turbidityUnit": "NTU",
+        "turbidityNtu": -1
+      },
+      "expectedMultiplier": 1.02,
+      "reason": "Outside-range behavior is clamp."
+    },
+    {
+      "scenarioId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02:above-range",
+      "fixtureId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02@candidate-v0.2.0",
+      "inputs": {
+        "turbidityUnit": "NTU",
+        "turbidityNtu": 41
+      },
+      "expectedMultiplier": 0.95,
+      "reason": "Outside-range behavior is clamp."
+    },
+    {
+      "scenarioId": "rule-batch-5-striped-bass-01:missing-gate-watertemperaturec",
+      "fixtureId": "rule-batch-5-striped-bass-01@candidate-v0.2.0",
+      "inputs": {
+        "dissolvedOxygenMgL": 2
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-5-striped-bass-01:failed-gate-watertemperaturec",
+      "fixtureId": "rule-batch-5-striped-bass-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 15,
+        "dissolvedOxygenMgL": 2
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An out-of-scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-5-striped-bass-01:missing-response-input",
+      "fixtureId": "rule-batch-5-striped-bass-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 25
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing response input must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-5-striped-bass-01:anchor-2",
+      "fixtureId": "rule-batch-5-striped-bass-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 25,
+        "dissolvedOxygenMgL": 2
+      },
+      "expectedMultiplier": 0.92,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-batch-5-striped-bass-01:anchor-4",
+      "fixtureId": "rule-batch-5-striped-bass-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 25,
+        "dissolvedOxygenMgL": 4
+      },
+      "expectedMultiplier": 0.96,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-batch-5-striped-bass-01:anchor-8",
+      "fixtureId": "rule-batch-5-striped-bass-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 25,
+        "dissolvedOxygenMgL": 8
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-batch-5-striped-bass-01:midpoint-3p0",
+      "fixtureId": "rule-batch-5-striped-bass-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 25,
+        "dissolvedOxygenMgL": 3.0
+      },
+      "expectedMultiplier": 0.94,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-batch-5-striped-bass-01:midpoint-6p0",
+      "fixtureId": "rule-batch-5-striped-bass-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 25,
+        "dissolvedOxygenMgL": 6.0
+      },
+      "expectedMultiplier": 0.98,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-batch-5-striped-bass-01:below-range",
+      "fixtureId": "rule-batch-5-striped-bass-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 25,
+        "dissolvedOxygenMgL": 1
+      },
+      "expectedMultiplier": 0.92,
+      "reason": "Outside-range behavior is clamp."
+    },
+    {
+      "scenarioId": "rule-batch-5-striped-bass-01:above-range",
+      "fixtureId": "rule-batch-5-striped-bass-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 25,
+        "dissolvedOxygenMgL": 9
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Outside-range behavior is clamp."
+    },
+    {
+      "scenarioId": "rule-batch-6-walleye-02:missing-gate-waterbodyclass",
+      "fixtureId": "rule-batch-6-walleye-02@candidate-v0.2.0",
+      "inputs": {
+        "solarPeriod": "dawn"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-6-walleye-02:failed-gate-waterbodyclass",
+      "fixtureId": "rule-batch-6-walleye-02@candidate-v0.2.0",
+      "inputs": {
+        "waterbodyClass": "stream",
+        "solarPeriod": "dawn"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An out-of-scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-6-walleye-02:missing-response-input",
+      "fixtureId": "rule-batch-6-walleye-02@candidate-v0.2.0",
+      "inputs": {
+        "waterbodyClass": "lake"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing response input must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-6-walleye-02:category-dawn",
+      "fixtureId": "rule-batch-6-walleye-02@candidate-v0.2.0",
+      "inputs": {
+        "waterbodyClass": "lake",
+        "solarPeriod": "dawn"
+      },
+      "expectedMultiplier": 1.05,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-6-walleye-02:category-day",
+      "fixtureId": "rule-batch-6-walleye-02@candidate-v0.2.0",
+      "inputs": {
+        "waterbodyClass": "lake",
+        "solarPeriod": "day"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-6-walleye-02:category-dusk",
+      "fixtureId": "rule-batch-6-walleye-02@candidate-v0.2.0",
+      "inputs": {
+        "waterbodyClass": "lake",
+        "solarPeriod": "dusk"
+      },
+      "expectedMultiplier": 1.05,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-6-walleye-02:category-night",
+      "fixtureId": "rule-batch-6-walleye-02@candidate-v0.2.0",
+      "inputs": {
+        "waterbodyClass": "lake",
+        "solarPeriod": "night"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-6-walleye-02:unknown-category",
+      "fixtureId": "rule-batch-6-walleye-02@candidate-v0.2.0",
+      "inputs": {
+        "waterbodyClass": "lake",
+        "solarPeriod": "unmapped-category"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An unmapped category must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-6-walleye-02:correlated-inputs-ignored",
+      "fixtureId": "rule-batch-6-walleye-02@candidate-v0.2.0",
+      "inputs": {
+        "waterbodyClass": "lake",
+        "solarPeriod": "dawn",
+        "solarRadiationWm2": 999,
+        "cloudCoverPercent": 999
+      },
+      "expectedMultiplier": 1.05,
+      "reason": "Correlated light inputs cannot stack with the selected representation."
+    },
+    {
+      "scenarioId": "rule-batch-8-white-sucker-01:missing-response-input",
+      "fixtureId": "rule-batch-8-white-sucker-01@candidate-v0.2.0",
+      "inputs": {},
+      "expectedMultiplier": 1.0,
+      "reason": "A missing response input must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-8-white-sucker-01:anchor-19",
+      "fixtureId": "rule-batch-8-white-sucker-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 19
+      },
+      "expectedMultiplier": 0.97,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-batch-8-white-sucker-01:anchor-22",
+      "fixtureId": "rule-batch-8-white-sucker-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 22
+      },
+      "expectedMultiplier": 1.01,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-batch-8-white-sucker-01:anchor-25",
+      "fixtureId": "rule-batch-8-white-sucker-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 25
+      },
+      "expectedMultiplier": 1.03,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-batch-8-white-sucker-01:anchor-28",
+      "fixtureId": "rule-batch-8-white-sucker-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 28
+      },
+      "expectedMultiplier": 0.97,
+      "reason": "Candidate anchor must remain exact."
+    },
+    {
+      "scenarioId": "rule-batch-8-white-sucker-01:midpoint-20p5",
+      "fixtureId": "rule-batch-8-white-sucker-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 20.5
+      },
+      "expectedMultiplier": 0.99,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-batch-8-white-sucker-01:midpoint-23p5",
+      "fixtureId": "rule-batch-8-white-sucker-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 23.5
+      },
+      "expectedMultiplier": 1.02,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-batch-8-white-sucker-01:midpoint-26p5",
+      "fixtureId": "rule-batch-8-white-sucker-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 26.5
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Piecewise interpolation must be deterministic."
+    },
+    {
+      "scenarioId": "rule-batch-8-white-sucker-01:below-range",
+      "fixtureId": "rule-batch-8-white-sucker-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 18
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Outside-range behavior is neutral."
+    },
+    {
+      "scenarioId": "rule-batch-8-white-sucker-01:above-range",
+      "fixtureId": "rule-batch-8-white-sucker-01@candidate-v0.2.0",
+      "inputs": {
+        "waterTemperatureC": 29
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Outside-range behavior is neutral."
+    },
+    {
+      "scenarioId": "rule-batch-5-yellow-perch-01:missing-gate-season",
+      "fixtureId": "rule-batch-5-yellow-perch-01@candidate-v0.2.0",
+      "inputs": {
+        "waterbodyClass": "lake",
+        "waterClarityClass": "clear",
+        "solarPeriod": "dawn"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-5-yellow-perch-01:failed-gate-season",
+      "fixtureId": "rule-batch-5-yellow-perch-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "winter",
+        "waterbodyClass": "lake",
+        "waterClarityClass": "clear",
+        "solarPeriod": "dawn"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An out-of-scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-5-yellow-perch-01:missing-gate-waterbodyclass",
+      "fixtureId": "rule-batch-5-yellow-perch-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "summer",
+        "waterClarityClass": "clear",
+        "solarPeriod": "dawn"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-5-yellow-perch-01:failed-gate-waterbodyclass",
+      "fixtureId": "rule-batch-5-yellow-perch-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "summer",
+        "waterbodyClass": "stream",
+        "waterClarityClass": "clear",
+        "solarPeriod": "dawn"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An out-of-scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-5-yellow-perch-01:missing-gate-waterclarityclass",
+      "fixtureId": "rule-batch-5-yellow-perch-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "summer",
+        "waterbodyClass": "lake",
+        "solarPeriod": "dawn"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-5-yellow-perch-01:failed-gate-waterclarityclass",
+      "fixtureId": "rule-batch-5-yellow-perch-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "summer",
+        "waterbodyClass": "lake",
+        "waterClarityClass": "turbid",
+        "solarPeriod": "dawn"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An out-of-scope gate must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-5-yellow-perch-01:missing-response-input",
+      "fixtureId": "rule-batch-5-yellow-perch-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "summer",
+        "waterbodyClass": "lake",
+        "waterClarityClass": "clear"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "A missing response input must be neutral."
+    },
+    {
+      "scenarioId": "rule-batch-5-yellow-perch-01:category-dawn",
+      "fixtureId": "rule-batch-5-yellow-perch-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "summer",
+        "waterbodyClass": "lake",
+        "waterClarityClass": "clear",
+        "solarPeriod": "dawn"
+      },
+      "expectedMultiplier": 0.97,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-5-yellow-perch-01:category-day",
+      "fixtureId": "rule-batch-5-yellow-perch-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "summer",
+        "waterbodyClass": "lake",
+        "waterClarityClass": "clear",
+        "solarPeriod": "day"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-5-yellow-perch-01:category-late-evening",
+      "fixtureId": "rule-batch-5-yellow-perch-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "summer",
+        "waterbodyClass": "lake",
+        "waterClarityClass": "clear",
+        "solarPeriod": "late-evening"
+      },
+      "expectedMultiplier": 1.03,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-5-yellow-perch-01:category-post-sunset",
+      "fixtureId": "rule-batch-5-yellow-perch-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "summer",
+        "waterbodyClass": "lake",
+        "waterClarityClass": "clear",
+        "solarPeriod": "post-sunset"
+      },
+      "expectedMultiplier": 0.99,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-5-yellow-perch-01:category-night",
+      "fixtureId": "rule-batch-5-yellow-perch-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "summer",
+        "waterbodyClass": "lake",
+        "waterClarityClass": "clear",
+        "solarPeriod": "night"
+      },
+      "expectedMultiplier": 0.97,
+      "reason": "Verified categorical response value."
+    },
+    {
+      "scenarioId": "rule-batch-5-yellow-perch-01:unknown-category",
+      "fixtureId": "rule-batch-5-yellow-perch-01@candidate-v0.2.0",
+      "inputs": {
+        "season": "summer",
+        "waterbodyClass": "lake",
+        "waterClarityClass": "clear",
+        "solarPeriod": "unmapped-category"
+      },
+      "expectedMultiplier": 1.0,
+      "reason": "An unmapped category must be neutral."
+    }
+  ]
+}

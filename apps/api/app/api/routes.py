@@ -1,7 +1,11 @@
 from __future__ import annotations
 
+import asyncio
+import uuid
+from datetime import datetime, timedelta, timezone
 from difflib import SequenceMatcher
 from math import asin, cos, radians, sin, sqrt
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 from fastapi import APIRouter, Depends, HTTPException, Query, Response, status
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
@@ -22,13 +26,21 @@ from ..models.entities import (
     SpeciesRecord,
     StockingRecord,
     User,
+    FishingTrip,
 )
 from ..providers.base import ProviderError
 from ..providers.usgs import UsgsWaterProvider
-from ..schemas.contracts import FavoriteCreate, FavoriteUpdate, LoginRequest, RegisterRequest, ScoreRequest
+from ..schemas.contracts import (
+    FavoriteCreate,
+    FavoriteUpdate,
+    LoginRequest,
+    RegisterRequest,
+    ScoreRequest,
+    FishingTripCreate,
+    FishingTripReplayUpdate,
+)
 from ..scoring.activity import build_species_forecast
 from ..scoring.engine import score_opportunity
-from datetime import datetime
 from ..scoring.service import score_species_at_location
 
 
@@ -375,12 +387,38 @@ async def location_species(
     record = get_location(session, location_id)
     weather = None
     hydro_state = None
+    temperature_state = None
     if live:
-        weather = await conditions_service.get_weather(record.latitude, record.longitude)
         association = opp.get_association(session, location_id)
-        if association is not None:
-            hydro_state = await conditions_service.get_hydrology_state(opp.association_dict(association))
-    return opp.score_location_species(session, record, weather=weather, hydro_state=hydro_state)
+        weather_task = asyncio.create_task(
+            conditions_service.get_weather(record.latitude, record.longitude)
+        )
+        hydro_task = (
+            asyncio.create_task(
+                conditions_service.get_hydrology_state(
+                    opp.association_dict(association)
+                )
+            )
+            if association is not None
+            else None
+        )
+        if hydro_task is not None:
+            weather, hydro_state = await asyncio.gather(weather_task, hydro_task)
+        else:
+            weather = await weather_task
+        temperature_state = await conditions_service.get_water_temperature_state(
+            record.latitude,
+            record.longitude,
+            record.waterbody_type,
+            hydro_state if hydro_state and hydro_state.get("available") else None,
+        )
+    return opp.score_location_species(
+        session,
+        record,
+        weather=weather,
+        hydro_state=hydro_state,
+        temperature_state=temperature_state,
+    )
 
 
 @router.get("/locations/{location_id}/conditions")
@@ -428,13 +466,30 @@ async def location_forecast(
         raise HTTPException(status_code=404, detail="Species not evidenced at this location")
     records = by_species[target]
 
-    weather = await conditions_service.get_weather(record.latitude, record.longitude)
+    association = opp.get_association(session, location_id)
+    weather_task = asyncio.create_task(
+        conditions_service.get_weather(record.latitude, record.longitude)
+    )
+    hydro_task = (
+        asyncio.create_task(
+            conditions_service.get_hydrology_state(opp.association_dict(association))
+        )
+        if association is not None
+        else None
+    )
+    if hydro_task is not None:
+        weather, hydro_state = await asyncio.gather(weather_task, hydro_task)
+    else:
+        weather = await weather_task
+        hydro_state = None
     if not weather.get("available"):
         raise HTTPException(status_code=503, detail=f"{weather.get('reason', 'weather unavailable')}. Forecast needs live weather.")
-    association = opp.get_association(session, location_id)
-    hydro_state = None
-    if association is not None:
-        hydro_state = await conditions_service.get_hydrology_state(opp.association_dict(association))
+    temperature_state = await conditions_service.get_water_temperature_state(
+        record.latitude,
+        record.longitude,
+        record.waterbody_type,
+        hydro_state if hydro_state and hydro_state.get("available") else None,
+    )
 
     scored = score_species_at_location(
         records,
@@ -459,7 +514,7 @@ async def location_forecast(
         base_confidence=scored["confidence_score"],
         hydrology=hydro_state if hydro_state and hydro_state.get("available") else None,
         alerts=weather.get("alerts", []),
-        water_temp_f=hydro_state.get("waterTempF") if hydro_state else None,
+        water_temperature=temperature_state,
         wading_selected=wading,
         association_factor=association.association_factor if association else 1.0,
     )
@@ -468,6 +523,7 @@ async def location_forecast(
         "speciesId": target,
         "scores": scored,
         "waterTempStatus": forecast["waterTempStatus"],
+        "waterTemperature": forecast["waterTemperature"],
         "forecast": forecast,
     }
 
@@ -565,6 +621,38 @@ def favorite_dict(favorite: SavedLocation) -> dict:
         "sort_order": favorite.sort_order,
         "created_at": favorite.created_at,
         "updated_at": favorite.updated_at,
+    }
+
+
+def fishing_trip_dict(trip: FishingTrip) -> dict:
+    return {
+        "id": trip.id,
+        "location_id": trip.location_id,
+        "species_id": trip.species_id,
+        "started_at": trip.started_at,
+        "ended_at": trip.ended_at,
+        "timezone": trip.timezone,
+        "angler_count": trip.angler_count,
+        "effort_minutes": trip.effort_minutes,
+        "catch_count": trip.catch_count,
+        "zero_catch_explicit": trip.zero_catch_explicit,
+        "location_detail": trip.location_detail,
+        "lure_or_bait": trip.lure_or_bait,
+        "observed_water_temperature_c": trip.observed_water_temperature_c,
+        "observed_clarity": trip.observed_clarity,
+        "notes": trip.notes,
+        "consent_for_aggregate_analysis": trip.consent_for_aggregate_analysis,
+        "source_type": trip.source_type,
+        "candidate_cohort": trip.candidate_cohort,
+        "calibration_eligible": trip.calibration_eligible,
+        "validation_eligible": trip.validation_eligible,
+        "condition_replay_id": trip.condition_replay_id,
+        "condition_replay_status": trip.condition_replay_status,
+        "condition_replay_policy_version": trip.condition_replay_policy_version,
+        "condition_replay": trip.condition_replay,
+        "condition_replayed_at": trip.condition_replayed_at,
+        "created_at": trip.created_at,
+        "updated_at": trip.updated_at,
     }
 
 
@@ -678,6 +766,186 @@ def delete_favorite(favorite_id: int, user: User = Depends(current_user), sessio
     return Response(status_code=204)
 
 
+@router.get("/users/me/fishing-trips")
+def list_fishing_trips(
+    user: User = Depends(current_user),
+    session: Session = Depends(get_session),
+) -> list[dict]:
+    records = session.scalars(
+        select(FishingTrip)
+        .where(FishingTrip.user_id == user.id)
+        .order_by(FishingTrip.started_at.desc())
+    ).all()
+    return [fishing_trip_dict(record) for record in records]
+
+
+@router.post("/users/me/fishing-trips", status_code=201)
+def create_fishing_trip(
+    payload: FishingTripCreate,
+    user: User = Depends(current_user),
+    session: Session = Depends(get_session),
+) -> dict:
+    get_location(session, payload.location_id)
+    get_species(session, payload.species_id)
+    evidenced = session.scalar(
+        select(SpeciesEvidenceRecord.id).where(
+            SpeciesEvidenceRecord.location_id == payload.location_id,
+            SpeciesEvidenceRecord.species_id == payload.species_id,
+            SpeciesEvidenceRecord.presence_status == "present",
+        )
+    )
+    if not evidenced:
+        raise HTTPException(status_code=400, detail="Species is not evidenced at this BiteMap spot")
+    if payload.started_at.tzinfo is None or payload.ended_at.tzinfo is None:
+        raise HTTPException(status_code=400, detail="Trip times must include a time-zone offset")
+    try:
+        ZoneInfo(payload.timezone)
+    except ZoneInfoNotFoundError as error:
+        raise HTTPException(status_code=400, detail="Unknown time zone") from error
+    started_at = payload.started_at.astimezone(timezone.utc)
+    ended_at = payload.ended_at.astimezone(timezone.utc)
+    if ended_at <= started_at:
+        raise HTTPException(status_code=400, detail="Trip end time must be after its start time")
+    effort_minutes = round((ended_at - started_at).total_seconds() / 60)
+    if effort_minutes < 1 or effort_minutes > 10_080:
+        raise HTTPException(status_code=400, detail="Trip length must be between 1 minute and 7 days")
+    if ended_at > datetime.now(timezone.utc) + timedelta(minutes=15):
+        raise HTTPException(status_code=400, detail="Trip end time cannot be in the future")
+    candidate_cohort = payload.species_id in {"northern-snakehead", "walleye"}
+    trip = FishingTrip(
+        id=str(uuid.uuid4()),
+        user_id=user.id,
+        location_id=payload.location_id,
+        species_id=payload.species_id,
+        started_at=started_at,
+        ended_at=ended_at,
+        timezone=payload.timezone,
+        angler_count=payload.angler_count,
+        effort_minutes=effort_minutes,
+        catch_count=payload.catch_count,
+        zero_catch_explicit=payload.catch_count == 0,
+        location_detail=payload.location_detail.strip() if payload.location_detail else None,
+        lure_or_bait=payload.lure_or_bait.strip() if payload.lure_or_bait else None,
+        observed_water_temperature_c=payload.observed_water_temperature_c,
+        observed_clarity=payload.observed_clarity,
+        notes=payload.notes.strip() if payload.notes else None,
+        consent_for_aggregate_analysis=payload.consent_for_aggregate_analysis,
+        candidate_cohort=candidate_cohort,
+        calibration_eligible=bool(
+            payload.consent_for_aggregate_analysis
+            and effort_minutes >= 15
+        ),
+        validation_eligible=False,
+    )
+    session.add(trip)
+    session.commit()
+    session.refresh(trip)
+    return fishing_trip_dict(trip)
+
+
+@router.patch("/users/me/fishing-trips/{trip_id}/condition-replay")
+def update_fishing_trip_condition_replay(
+    trip_id: str,
+    payload: FishingTripReplayUpdate,
+    user: User = Depends(current_user),
+    session: Session = Depends(get_session),
+) -> dict:
+    trip = session.scalar(
+        select(FishingTrip).where(
+            FishingTrip.id == trip_id,
+            FishingTrip.user_id == user.id,
+        )
+    )
+    if not trip:
+        raise HTTPException(status_code=404, detail="Trip not found")
+    replay = payload.condition_replay
+    if (
+        replay.get("replayId") != payload.condition_replay_id
+        or replay.get("policyVersion") != payload.condition_replay_policy_version
+        or replay.get("status") != payload.condition_replay_status
+        or replay.get("generatedBy") != "bitemap-server"
+    ):
+        raise HTTPException(status_code=400, detail="Condition replay envelope is inconsistent")
+    replay_window = replay.get("tripWindow")
+    if not isinstance(replay_window, dict) or replay_window.get("locationId") != trip.location_id:
+        raise HTTPException(status_code=400, detail="Condition replay does not match this trip")
+    try:
+        replay_start = datetime.fromisoformat(str(replay_window.get("startedAt")).replace("Z", "+00:00"))
+        replay_end = datetime.fromisoformat(str(replay_window.get("endedAt")).replace("Z", "+00:00"))
+    except (TypeError, ValueError) as error:
+        raise HTTPException(status_code=400, detail="Condition replay interval is invalid") from error
+    if (
+        replay_start.astimezone(timezone.utc) != trip.started_at.astimezone(timezone.utc)
+        or replay_end.astimezone(timezone.utc) != trip.ended_at.astimezone(timezone.utc)
+    ):
+        raise HTTPException(status_code=400, detail="Condition replay interval does not match this trip")
+    prohibited = {
+        "speciesid",
+        "catchcount",
+        "zerocatchexplicit",
+        "lureorbait",
+        "notes",
+        "consentforaggregateanalysis",
+        "calibrationeligible",
+        "validationeligible",
+        "observedwatertemperaturec",
+        "observedclarity",
+    }
+    replay_keys = {
+        "".join(character.lower() for character in key if character.isalnum())
+        for key in _nested_dict_keys(replay)
+    }
+    if replay_keys & prohibited:
+        raise HTTPException(status_code=400, detail="Condition replay contains trip-outcome fields")
+    if payload.condition_replayed_at.tzinfo is None:
+        raise HTTPException(status_code=400, detail="Condition replay time must include a time-zone offset")
+    trip.condition_replay_id = payload.condition_replay_id
+    trip.condition_replay_status = payload.condition_replay_status
+    trip.condition_replay_policy_version = payload.condition_replay_policy_version
+    trip.condition_replay = replay
+    trip.condition_replayed_at = payload.condition_replayed_at.astimezone(timezone.utc)
+    # Reconstruction is context only; it can never promote a trip into validation.
+    trip.validation_eligible = False
+    session.commit()
+    session.refresh(trip)
+    return fishing_trip_dict(trip)
+
+
+@router.delete("/users/me/fishing-trips/{trip_id}", status_code=204, response_class=Response)
+def delete_fishing_trip(
+    trip_id: str,
+    user: User = Depends(current_user),
+    session: Session = Depends(get_session),
+) -> Response:
+    trip = session.scalar(
+        select(FishingTrip).where(
+            FishingTrip.id == trip_id,
+            FishingTrip.user_id == user.id,
+        )
+    )
+    if not trip:
+        raise HTTPException(status_code=404, detail="Trip not found")
+    session.delete(trip)
+    session.commit()
+    return Response(status_code=204)
+
+
+def _nested_dict_keys(value: object) -> set[str]:
+    if isinstance(value, dict):
+        return set(value) | {
+            nested_key
+            for nested_value in value.values()
+            for nested_key in _nested_dict_keys(nested_value)
+        }
+    if isinstance(value, list):
+        return {
+            nested_key
+            for item in value
+            for nested_key in _nested_dict_keys(item)
+        }
+    return set()
+
+
 # ---------------------------------------------------------------------------
 # Data health (derived from real ingestion runs + DB counts)
 # ---------------------------------------------------------------------------
@@ -733,6 +1001,11 @@ def data_source_status(session: Session = Depends(get_session)) -> dict:
         "liveProviders": [
             {"provider": "National Weather Service", "mode": "on-demand", "cache": "15-minute"},
             {"provider": "USGS Water Services", "mode": "on-demand", "cache": "15-minute"},
+            {
+                "provider": "Open-Meteo",
+                "mode": "water-temperature thermal history",
+                "cache": "6-hour",
+            },
         ],
     }
 

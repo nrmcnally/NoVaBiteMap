@@ -1,0 +1,6 @@
+{
+  "schemaVersion": "0.1.0-draft",
+  "snapshotDate": "2026-07-16",
+  "notice": "Confirmatory validation observations only. Empty by design until preregistration is signed. Private app trip logs remain in a separate calibration store and are never promoted automatically; never add synthetic catches or restricted third-party reports.",
+  "observations": []
+}

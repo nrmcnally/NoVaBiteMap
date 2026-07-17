@@ -1,0 +1,547 @@
+You are conducting a deep, source-verified fisheries-science review for BiteMap
+NOVA, a Northern Virginia and Washington, DC-area fishing intelligence
+application.
+
+This is not a generic fish profile or fishing article.
+
+The objective is to determine which measurable environmental and biological
+variables can scientifically support predictions of real-world fish feeding
+activity or hook-and-line catchability. Unsupported fishing folklore must be
+explicitly rejected rather than repeated.
+
+ATTACHED REFERENCE ARCHIVES
+
+1. BiteMap_complete_37_species_research_archive.zip
+   - Use this as the existing shallow baseline, species list, and status
+     reference.
+   - Do not assume its earlier conclusions are correct.
+   - Reuse valid sources and findings only after independently verifying them.
+
+2. BiteMap_channel-catfish_deep_verified_research_archive.zip
+   - Use this as the required schema, organization, report-depth, and PDF-layout
+     reference.
+   - Do not transfer channel-catfish scientific findings to another species.
+   - Do not blindly trust its validation report.
+   - Its source S13 omitted James W. Avault Jr. from the original byline. This
+     illustrates why every original title page must be checked manually.
+
+COMPLETED SPECIES
+
+Exclude these species from the active research queue:
+
+- largemouth-bass
+- smallmouth-bass
+- channel-catfish
+
+Largemouth bass and smallmouth bass will receive a separate verification audit
+later.
+
+ACTIVE BATCH
+
+Research ONLY this batch during this conversation:
+
+ACTIVE BATCH = BATCH 1
+
+Do not continue into another batch. Complete, validate, package, and deliver the
+active batch before stopping.
+
+REMAINING RESEARCH QUEUE
+
+BATCH 1 — Current panfish
+- black-crappie — Pomoxis nigromaculatus
+- white-crappie — Pomoxis annularis
+- bluegill — Lepomis macrochirus
+
+BATCH 2 — Sunfishes
+- redbreast-sunfish — Lepomis auritus
+- pumpkinseed — Lepomis gibbosus
+- green-sunfish — Lepomis cyanellus
+- rock-bass — Ambloplites rupestris
+
+BATCH 3 — Trout
+- rainbow-trout — Oncorhynchus mykiss
+- brown-trout — Salmo trutta
+- brook-trout — Salvelinus fontinalis
+
+BATCH 4 — Catfish
+- blue-catfish — Ictalurus furcatus
+- flathead-catfish — Pylodictis olivaris
+- white-catfish — Ameiurus catus
+
+BATCH 5 — Temperate bass and perch
+- striped-bass — Morone saxatilis
+- white-perch — Morone americana
+- yellow-perch — Perca flavescens
+
+BATCH 6 — Large predators
+- walleye — Sander vitreus
+- muskellunge — Esox masquinongy
+- northern-snakehead — Channa argus
+
+BATCH 7 — Mixed recreational targets
+- spotted-bass — Micropterus punctulatus
+- common-carp — Cyprinus carpio
+- american-eel — Anguilla rostrata
+
+BATCH 8 — Chubs and sucker
+- fallfish — Semotilus corporalis
+- creek-chub — Semotilus atromaculatus
+- white-sucker — Catostomus commersonii
+
+BATCH 9 — Bullheads and sucker
+- yellow-bullhead — Ameiurus natalis
+- brown-bullhead — Ameiurus nebulosus
+- northern-hogsucker — Hypentelium nigricans
+
+BATCH 10 — Redhorse and daces
+- shorthead-redhorse — Moxostoma macrolepidotum
+- blacknose-dace — Rhinichthys atratulus
+- longnose-dace — Rhinichthys cataractae
+
+BATCH 11 — Primarily Fish Guide species
+- mottled-sculpin — Cottus bairdii
+- tessellated-darter — Etheostoma olmstedi
+- gizzard-shad — Dorosoma cepedianum
+
+RESEARCH QUESTION
+
+For each species in the active batch, determine what scientific evidence exists
+for predicting:
+
+1. Hook-and-line or angler catchability
+2. Feeding rate or prey consumption
+3. Foraging, attack, or prey-selection behavior
+4. Movement or general activity
+5. Habitat occupancy
+6. Growth, physiology, stress, or survival
+
+Keep these endpoints separate.
+
+Evidence measuring endpoints 1–3 may support BiteMap scoring rules.
+
+Evidence measuring endpoints 4–6 is normally contextual and must not become a
+bite-score rule unless the study directly connects the measurement to feeding or
+catchability.
+
+Specifically:
+
+- Growth optimum is not automatically bite optimum.
+- Thermal preference is not automatically feeding optimum.
+- Movement is not automatically feeding.
+- Habitat presence is not automatically catchability.
+- Creel seasonality can be confounded by angler effort, regulations, fish
+  abundance, and access.
+- Post-stocking accessibility is not automatically a feeding surge.
+- Spawning-related catches may reflect aggression or nest defense rather than
+  feeding.
+
+VARIABLES TO INVESTIGATE
+
+Search for species-specific evidence concerning:
+
+- Absolute water temperature
+- Thermal acclimation
+- Seasonal temperature
+- Short-term temperature trend and rate of temperature change
+- Extreme heat and cold
+- Dissolved oxygen in mg/L and oxygen saturation percentage
+- Temperature and oxygen interactions
+- Time of day, diel cycles, underwater light, and photoperiod
+- Cloud cover, turbidity, and water clarity
+- Spawning stage, migration, nest defense, and post-spawn behavior
+- Streamflow, discharge, rate of flow change, flooding, and current velocity
+- Tidal stage, tidal current, and salinity
+- Barometric pressure and weather fronts
+- Rainfall, wind, and moon phase
+- Prey or forage availability
+- Recent stocking
+- Angling pressure, hook avoidance, learning, and depletion
+- Fish size, life stage, sex, population, strain, and ecotype
+
+Barometric pressure, fronts, moon phase, and similar weather variables must not
+be scored merely because anglers commonly discuss them. Require direct,
+species-specific evidence measuring feeding, foraging, or catchability.
+
+Bait, lure, hook, gear, and presentation findings may be documented when
+supported by controlled experiments or reliable creel evidence. These usually
+belong in the Fish Guide rather than the environmental bite score.
+
+GEOGRAPHIC PRIORITY
+
+Prioritize evidence applicable to Northern Virginia and the Mid-Atlantic,
+including:
+
+- Potomac River
+- Shenandoah River
+- Rappahannock River
+- Occoquan system
+- Chesapeake Bay tidal tributaries
+- Virginia
+- Maryland
+- Washington, DC
+- Pennsylvania
+- West Virginia
+
+Distinguish:
+
+- Wild and stocked populations
+- Rivers, streams, reservoirs, ponds, and tidal waters
+- Native and introduced populations
+- Juveniles and adults
+- Laboratory, pond, raceway, and natural-water evidence
+
+Do not silently transfer exact thresholds between regions, strains, life
+stages, or waterbody types. Explain all transfer limitations.
+
+SOURCE REQUIREMENTS
+
+Prioritize:
+
+1. Primary peer-reviewed studies
+2. Graduate theses and dissertations
+3. Original state or federal agency technical reports
+4. Original agency datasets
+5. Original proceedings papers
+6. Authoritative taxonomic or life-history catalogs when primary experimental
+   research is unavailable
+
+Do not use as evidence:
+
+- Tackle-company articles
+- Fishing blogs
+- Forums
+- Social-media posts
+- AI-generated summaries
+- Search-result snippets
+- Unsourced fishing websites
+- Articles that merely repeat another source
+
+Search-result snippets may be used only to discover a source. They cannot
+support an evidence claim.
+
+Source-depth targets:
+
+- Major recreational species: aim for 8–12 genuinely relevant independent
+  sources when available.
+- Secondary or proposed bite-scored species: aim for 5–8.
+- Guide-only species: do not manufacture a source quota. Perform a documented
+  broad search and explain why the evidence base is sparse.
+
+Do not pad the bibliography with irrelevant studies merely to meet a count.
+
+Use full-text evidence whenever possible. Abstract-only access may support only
+claims explicitly stated in the abstract.
+
+Related-species evidence must not be used as direct scoring evidence. It may be
+recorded as surrogate or contextual evidence, clearly labeled as such.
+
+SOURCE VERIFICATION
+
+Verify every included source in two separate ways:
+
+1. Verify its bibliographic identity through the DOI record, publisher,
+   university repository, or issuing agency.
+2. Inspect the original PDF title page or original report byline whenever
+   accessible.
+
+Record:
+
+- Exact title
+- Every author, including initials and suffixes
+- Agency authorship where applicable
+- Publication year
+- Journal or publisher
+- Volume
+- Issue
+- Page range
+- DOI
+- Stable URL
+- Species actually studied
+- Study location
+- Access method
+
+The original publication byline controls the author list, especially for
+proceedings and agency reports.
+
+A DOI must resolve to the same title and author list. Record and resolve any
+conflicts between repositories, databases, and the original paper.
+
+ResearchGate or another upload site should be used only when no stable
+publisher, repository, DOI, or agency source is available. Explain that
+limitation.
+
+If the work has only been AI-reviewed, retain:
+
+"verificationStatus": "AI-reviewed-unverified"
+
+Do not label something human-verified unless a human actually verified it.
+
+EVIDENCE RECORD FORMAT
+
+Follow the channel-catfish archive’s JSON structure.
+
+Every evidence record must include:
+
+- evidenceId
+- variable
+- exactConditionOrRange
+- observedEffect
+- whatWasMeasured
+- populationLocation
+- lifeStage
+- evidenceType
+- novaApplicability
+- confidence
+- sourceId
+- sourceLocator
+  - page
+  - section
+  - table
+  - figure
+- limitations
+- recommendedModelUse
+- surrogateEvidence
+
+Use exact study conditions and units. Do not generalize a point measurement
+into a universal threshold.
+
+Every source must include:
+
+- sourceId
+- type
+- title
+- authorsOrAgency
+- year
+- journalOrPublisher
+- doi
+- url
+- geographicScope
+- speciesActuallyStudied
+- accessMode
+- verificationStatus
+
+CANDIDATE MODEL RULES
+
+Each candidate rule must contain:
+
+- input
+- condition
+- direction
+- strength
+- confidence
+- mechanism
+- recommendedModelUse
+- evidenceIds
+- doubleCountingRisk
+
+Allowed recommendedModelUse values:
+
+- score
+- context-only
+- zero-weight
+- unavailable
+
+Do not invent final production multipliers.
+
+If a study directly estimates a portable effect size, it may be documented as a
+calibration candidate, but not automatically adopted as the final BiteMap value.
+
+Do not invent smooth response curves from one or two isolated thresholds.
+
+Do not create monthly activity curves based only on fishing seasons, stocking
+calendars, regulations, general natural history, or conventional angling
+wisdom.
+
+Represent monthly or seasonal activity as categorical or unknown unless direct
+evidence supports something more precise.
+
+TARGETABILITY ASSESSMENT
+
+Independently assess whether each species should be:
+
+- Bite-scored
+- Proposed for bite scoring
+- Fish Guide only
+- Insufficient evidence
+
+The old archive’s status is not binding.
+
+Lack of research does not prove that a species is not recreationally
+targetable.
+
+Promotion to bite-scored should require:
+
+1. Plausible intentional recreational targeting
+2. At least some direct evidence supporting honest predictive variables
+3. Enough separation between feeding/catchability evidence and general habitat
+   information
+
+Pumpkinseed, green sunfish, and rock bass should be seriously evaluated for bite
+scoring rather than dismissed as incidental species.
+
+White catfish should also receive an independent targetability assessment.
+
+ADVERSARIAL REVIEW
+
+After drafting each species report, conduct a hostile second-pass review.
+
+Challenge every proposed score rule:
+
+- Was feeding or catchability actually measured?
+- Is this merely movement, habitat use, growth, or survival?
+- Is the life stage applicable?
+- Was the research performed in aquaculture conditions?
+- Is the geography transferable to Northern Virginia?
+- Could effort, abundance, season, regulations, or gear explain the result?
+- Is the rule double-counting temperature, season, oxygen, spawn, or flow?
+- Does another study contradict it?
+- Is an exact number being asserted beyond what the study measured?
+- Is the source locator precise enough for another reviewer to reproduce the
+  claim?
+
+Preserve contradictory and null findings. Do not discard them to make the model
+appear cleaner.
+
+VALIDATION REQUIREMENTS
+
+Validation must fail if it detects:
+
+- An omitted coauthor
+- Incorrect initials or suffixes
+- Title mismatch
+- Incorrect DOI
+- Incorrect journal, volume, issue, year, or pages
+- DOI resolving to another paper
+- Broken source IDs
+- Broken evidence IDs
+- Duplicate URLs masquerading as independent sources
+- Unsupported numerical thresholds
+- Missing units
+- Placeholder text
+- Inaccessible or fabricated source locators
+- Abstract-only evidence represented as full-text verified
+- Markdown, JSON, and PDF conclusions that disagree
+
+Track these separately:
+
+- bibliographicMetadataMatches
+- originalBylineChecked
+- claimLocatorVerified
+- fullTextAccessConfirmed
+- doiMetadataValid
+
+A correct citation does not automatically mean that the paper supports the
+claim.
+
+OUTPUT ARCHIVE
+
+Create:
+
+BiteMap_<batch-id>_deep_verified_research_archive.zip
+
+Use this structure:
+
+species-research/
+  manifest.json
+  search-breadth-audit.json
+  validation-report.json
+  correction-and-conflict-log.json
+  resume-packet.md
+
+  <species-id>/
+    <species-id>.json
+    <species-id>.md
+    <species-id>.pdf
+
+The manifest must contain exact counts for:
+
+- Species
+- Sources
+- Evidence records
+- Score rules
+- Context-only rules
+- Zero-weight rules
+- Full-text sources
+- Abstract-only sources
+- Verified source locators
+- Unresolved issues
+
+The search-breadth audit must document, per species:
+
+- Databases searched
+- Agency repositories searched
+- Query themes used
+- Included sources
+- Excluded sources and reasons
+- Remaining research gaps
+- Search stopping rationale
+
+The correction-and-conflict log must document:
+
+- Incorrect metadata found in the baseline archive
+- Conflicting database records
+- Which record was accepted
+- Why it was accepted
+- Remaining unresolved discrepancies
+
+The resume packet must list:
+
+- Completed species
+- Pending species
+- Next recommended batch
+- Schema version
+- Known corrections
+- Unresolved questions
+- Files a new chat must receive
+
+PDF REQUIREMENTS
+
+Generate a polished PDF for every species.
+
+Each PDF must include:
+
+- Species and scientific name
+- Executive conclusion
+- Model-ready findings
+- Context-only findings
+- Rejected or zero-weight variables
+- Contradictions and limitations
+- Targetability recommendation
+- Evidence ledger
+- Candidate model rules
+- Complete bibliography with linked URLs
+- Page numbers
+
+Render every PDF page to an image and visually inspect it.
+
+Fix:
+
+- Clipping
+- Overlapping text
+- Broken tables
+- Missing characters
+- Unreadable links
+- Bad page breaks
+- Empty or nearly empty pages
+- Inconsistent margins
+
+The JSON, Markdown, and PDF must agree scientifically.
+
+FINAL DELIVERY
+
+Deliver:
+
+1. The downloadable ZIP archive
+2. A short batch summary
+3. Counts of sources, evidence records, and candidate score rules
+4. The most important supported predictors
+5. Important rejected assumptions
+6. Remaining gaps
+7. The recommended next batch
+
+Do not paste the complete research reports into the conversation.
+
+Do not start the next batch.
+
+Scientific defensibility, reproducibility, and honest uncertainty are more
+important than producing a full scoring curve for every variable.

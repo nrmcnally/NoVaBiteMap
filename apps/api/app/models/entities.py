@@ -37,6 +37,7 @@ class User(Base):
 
     favorites: Mapped[list["SavedLocation"]] = relationship(cascade="all, delete-orphan")
     sessions: Mapped[list["SessionToken"]] = relationship(cascade="all, delete-orphan")
+    fishing_trips: Mapped[list["FishingTrip"]] = relationship(cascade="all, delete-orphan")
 
 
 class SessionToken(Base):
@@ -61,6 +62,41 @@ class SavedLocation(Base):
     preferred_species_id: Mapped[str | None] = mapped_column(String(100))
     default_access_method: Mapped[str | None] = mapped_column(String(20))
     sort_order: Mapped[int] = mapped_column(Integer, default=0)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, onupdate=utcnow)
+
+
+class FishingTrip(Base):
+    """Private angler-entered trip log; no forecast is frozen at entry time."""
+
+    __tablename__ = "fishing_trips"
+
+    id: Mapped[str] = mapped_column(String(36), primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
+    location_id: Mapped[str] = mapped_column(ForeignKey("fishing_locations.id"), index=True)
+    species_id: Mapped[str] = mapped_column(ForeignKey("species.id"), index=True)
+    started_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), index=True)
+    ended_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    timezone: Mapped[str] = mapped_column(String(64), default="America/New_York")
+    angler_count: Mapped[int] = mapped_column(Integer, default=1)
+    effort_minutes: Mapped[int] = mapped_column(Integer)
+    catch_count: Mapped[int] = mapped_column(Integer)
+    zero_catch_explicit: Mapped[bool] = mapped_column(Boolean)
+    location_detail: Mapped[str | None] = mapped_column(String(160))
+    lure_or_bait: Mapped[str | None] = mapped_column(String(160))
+    observed_water_temperature_c: Mapped[float | None] = mapped_column(Float)
+    observed_clarity: Mapped[str | None] = mapped_column(String(30))
+    notes: Mapped[str | None] = mapped_column(Text)
+    consent_for_aggregate_analysis: Mapped[bool] = mapped_column(Boolean, default=False)
+    source_type: Mapped[str] = mapped_column(String(40), default="first-party-alpha-trip-log")
+    candidate_cohort: Mapped[bool] = mapped_column(Boolean, default=False)
+    calibration_eligible: Mapped[bool] = mapped_column(Boolean, default=False)
+    validation_eligible: Mapped[bool] = mapped_column(Boolean, default=False)
+    condition_replay_id: Mapped[str | None] = mapped_column(String(36))
+    condition_replay_status: Mapped[str] = mapped_column(String(20), default="not-requested")
+    condition_replay_policy_version: Mapped[str | None] = mapped_column(String(40))
+    condition_replay: Mapped[dict | None] = mapped_column(JSON)
+    condition_replayed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, onupdate=utcnow)
 

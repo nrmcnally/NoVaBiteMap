@@ -1,0 +1,1107 @@
+{
+  "schemaVersion": "0.1.0-draft",
+  "pipelineVersion": "0.1.0",
+  "totals": {
+    "archives": 14,
+    "species": 37,
+    "uniqueSources": 372,
+    "sourceOccurrences": 397,
+    "evidenceRecords": 532,
+    "candidateRules": 346,
+    "scoreRulesPendingScientificReview": 61
+  },
+  "species": [
+    {
+      "speciesId": "american-eel",
+      "commonName": "American Eel",
+      "acceptedScientificName": "Anguilla rostrata",
+      "archiveId": "batch-7",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "current",
+      "promotionRecommendation": "proposed-for-bite-scoring",
+      "uniqueSources": 11,
+      "fullTextSourceOccurrences": 6,
+      "abstractOnlySourceOccurrences": 5,
+      "evidenceRecords": 15,
+      "endpointCounts": {
+        "feeding-or-foraging": 7,
+        "habitat-or-population": 1,
+        "hook-and-line-catchability": 2,
+        "movement-or-general-activity": 3,
+        "other-or-context": 2
+      },
+      "candidateRuleCounts": {
+        "context-only": 5,
+        "score": 2,
+        "unavailable": 1,
+        "zero-weight": 3
+      },
+      "scoreRuleRuntimeAvailability": {
+        "available": 1,
+        "modeled": 1
+      },
+      "scoreRulesPendingScientificReview": 2
+    },
+    {
+      "speciesId": "black-crappie",
+      "commonName": "Black crappie",
+      "acceptedScientificName": "Pomoxis nigromaculatus",
+      "archiveId": "batch-1",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "current",
+      "promotionRecommendation": "bite-scored",
+      "uniqueSources": 10,
+      "fullTextSourceOccurrences": 10,
+      "abstractOnlySourceOccurrences": 6,
+      "evidenceRecords": 14,
+      "endpointCounts": {
+        "evidence-gap": 2,
+        "feeding-or-foraging": 6,
+        "hook-and-line-catchability": 2,
+        "movement-or-general-activity": 2,
+        "reproduction-or-migration": 1,
+        "taxonomy": 1
+      },
+      "candidateRuleCounts": {
+        "context-only": 4,
+        "score": 2,
+        "unavailable": 1,
+        "zero-weight": 2
+      },
+      "scoreRuleRuntimeAvailability": {
+        "unavailable": 2
+      },
+      "scoreRulesPendingScientificReview": 2
+    },
+    {
+      "speciesId": "blacknose-dace",
+      "commonName": "Blacknose dace",
+      "acceptedScientificName": "Rhinichthys atratulus",
+      "archiveId": "batch-10",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "guide-only",
+      "promotionRecommendation": "fish-guide-only",
+      "uniqueSources": 9,
+      "fullTextSourceOccurrences": 1,
+      "abstractOnlySourceOccurrences": 7,
+      "evidenceRecords": 13,
+      "endpointCounts": {
+        "evidence-gap": 2,
+        "feeding-or-foraging": 3,
+        "habitat-or-population": 1,
+        "movement-or-general-activity": 1,
+        "other-or-context": 5,
+        "taxonomy": 1
+      },
+      "candidateRuleCounts": {
+        "context-only": 4,
+        "score": 1,
+        "zero-weight": 2
+      },
+      "scoreRuleRuntimeAvailability": {
+        "available": 1
+      },
+      "scoreRulesPendingScientificReview": 1
+    },
+    {
+      "speciesId": "blue-catfish",
+      "commonName": "Blue Catfish",
+      "acceptedScientificName": "Ictalurus furcatus",
+      "archiveId": "batch-4",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "current",
+      "promotionRecommendation": "bite-scored",
+      "uniqueSources": 11,
+      "fullTextSourceOccurrences": 9,
+      "abstractOnlySourceOccurrences": 5,
+      "evidenceRecords": 14,
+      "endpointCounts": {
+        "evidence-gap": 1,
+        "feeding-or-foraging": 9,
+        "habitat-or-population": 1,
+        "hook-and-line-catchability": 1,
+        "movement-or-general-activity": 1,
+        "other-or-context": 1
+      },
+      "candidateRuleCounts": {
+        "context-only": 3,
+        "score": 2,
+        "zero-weight": 4
+      },
+      "scoreRuleRuntimeAvailability": {
+        "modeled": 1,
+        "unavailable": 1
+      },
+      "scoreRulesPendingScientificReview": 2
+    },
+    {
+      "speciesId": "bluegill",
+      "commonName": "Bluegill",
+      "acceptedScientificName": "Lepomis macrochirus",
+      "archiveId": "batch-1",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "current",
+      "promotionRecommendation": "bite-scored",
+      "uniqueSources": 12,
+      "fullTextSourceOccurrences": 9,
+      "abstractOnlySourceOccurrences": 6,
+      "evidenceRecords": 18,
+      "endpointCounts": {
+        "evidence-gap": 2,
+        "feeding-or-foraging": 7,
+        "hook-and-line-catchability": 6,
+        "movement-or-general-activity": 1,
+        "reproduction-or-migration": 1,
+        "taxonomy": 1
+      },
+      "candidateRuleCounts": {
+        "context-only": 6,
+        "score": 1,
+        "unavailable": 1,
+        "zero-weight": 4
+      },
+      "scoreRuleRuntimeAvailability": {
+        "unavailable": 1
+      },
+      "scoreRulesPendingScientificReview": 1
+    },
+    {
+      "speciesId": "brook-trout",
+      "commonName": "Brook Trout",
+      "acceptedScientificName": "Salvelinus fontinalis",
+      "archiveId": "batch-3",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "current",
+      "promotionRecommendation": "bite-scored",
+      "uniqueSources": 12,
+      "fullTextSourceOccurrences": 13,
+      "abstractOnlySourceOccurrences": 6,
+      "evidenceRecords": 15,
+      "endpointCounts": {
+        "feeding-or-foraging": 3,
+        "growth-physiology-or-survival": 1,
+        "habitat-or-population": 2,
+        "hook-and-line-catchability": 5,
+        "movement-or-general-activity": 4
+      },
+      "candidateRuleCounts": {
+        "context-only": 2,
+        "score": 2,
+        "zero-weight": 6
+      },
+      "scoreRuleRuntimeAvailability": {
+        "modeled": 1,
+        "unavailable": 1
+      },
+      "scoreRulesPendingScientificReview": 2
+    },
+    {
+      "speciesId": "brown-bullhead",
+      "commonName": "Brown bullhead",
+      "acceptedScientificName": "Ameiurus nebulosus",
+      "archiveId": "batch-9",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "proposed",
+      "promotionRecommendation": "proposed-for-bite-scoring",
+      "uniqueSources": 9,
+      "fullTextSourceOccurrences": 6,
+      "abstractOnlySourceOccurrences": 2,
+      "evidenceRecords": 16,
+      "endpointCounts": {
+        "feeding-or-foraging": 11,
+        "growth-physiology-or-survival": 2,
+        "other-or-context": 2,
+        "taxonomy": 1
+      },
+      "candidateRuleCounts": {
+        "context-only": 3,
+        "score": 4,
+        "zero-weight": 1
+      },
+      "scoreRuleRuntimeAvailability": {
+        "available": 1,
+        "modeled": 3
+      },
+      "scoreRulesPendingScientificReview": 4
+    },
+    {
+      "speciesId": "brown-trout",
+      "commonName": "Brown Trout",
+      "acceptedScientificName": "Salmo trutta",
+      "archiveId": "batch-3",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "current",
+      "promotionRecommendation": "bite-scored",
+      "uniqueSources": 12,
+      "fullTextSourceOccurrences": 8,
+      "abstractOnlySourceOccurrences": 10,
+      "evidenceRecords": 15,
+      "endpointCounts": {
+        "feeding-or-foraging": 5,
+        "habitat-or-population": 1,
+        "hook-and-line-catchability": 7,
+        "movement-or-general-activity": 2
+      },
+      "candidateRuleCounts": {
+        "context-only": 3,
+        "score": 2,
+        "zero-weight": 5
+      },
+      "scoreRuleRuntimeAvailability": {
+        "conditional": 1,
+        "unavailable": 1
+      },
+      "scoreRulesPendingScientificReview": 2
+    },
+    {
+      "speciesId": "channel-catfish",
+      "commonName": "Channel catfish",
+      "acceptedScientificName": "Ictalurus punctatus",
+      "archiveId": "bitemap-channel-catfish-deep-verified-research-archive",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "current",
+      "promotionRecommendation": "bite-scored",
+      "uniqueSources": 17,
+      "fullTextSourceOccurrences": 12,
+      "abstractOnlySourceOccurrences": 5,
+      "evidenceRecords": 20,
+      "endpointCounts": {
+        "feeding-or-foraging": 12,
+        "growth-physiology-or-survival": 1,
+        "hook-and-line-catchability": 3,
+        "movement-or-general-activity": 2,
+        "other-or-context": 1,
+        "taxonomy": 1
+      },
+      "candidateRuleCounts": {
+        "context-only": 5,
+        "score": 6,
+        "zero-weight": 1
+      },
+      "scoreRuleRuntimeAvailability": {
+        "conditional": 2,
+        "modeled": 3,
+        "unavailable": 1
+      },
+      "scoreRulesPendingScientificReview": 6
+    },
+    {
+      "speciesId": "common-carp",
+      "commonName": "Common Carp",
+      "acceptedScientificName": "Cyprinus carpio",
+      "archiveId": "batch-7",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "current",
+      "promotionRecommendation": "bite-scored",
+      "uniqueSources": 11,
+      "fullTextSourceOccurrences": 8,
+      "abstractOnlySourceOccurrences": 3,
+      "evidenceRecords": 15,
+      "endpointCounts": {
+        "feeding-or-foraging": 4,
+        "habitat-or-population": 2,
+        "hook-and-line-catchability": 5,
+        "other-or-context": 4
+      },
+      "candidateRuleCounts": {
+        "context-only": 2,
+        "score": 6,
+        "unavailable": 1,
+        "zero-weight": 2
+      },
+      "scoreRuleRuntimeAvailability": {
+        "available": 1,
+        "modeled": 3,
+        "unavailable": 2
+      },
+      "scoreRulesPendingScientificReview": 6
+    },
+    {
+      "speciesId": "creek-chub",
+      "commonName": "Creek Chub",
+      "acceptedScientificName": "Semotilus atromaculatus",
+      "archiveId": "batch-8",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "current",
+      "promotionRecommendation": "proposed-for-bite-scoring",
+      "uniqueSources": 11,
+      "fullTextSourceOccurrences": 9,
+      "abstractOnlySourceOccurrences": 3,
+      "evidenceRecords": 15,
+      "endpointCounts": {
+        "feeding-or-foraging": 6,
+        "hook-and-line-catchability": 1,
+        "movement-or-general-activity": 3,
+        "other-or-context": 4,
+        "reproduction-or-migration": 1
+      },
+      "candidateRuleCounts": {
+        "context-only": 5,
+        "score": 1,
+        "unavailable": 1,
+        "zero-weight": 3
+      },
+      "scoreRuleRuntimeAvailability": {
+        "available": 1
+      },
+      "scoreRulesPendingScientificReview": 1
+    },
+    {
+      "speciesId": "fallfish",
+      "commonName": "Fallfish",
+      "acceptedScientificName": "Semotilus corporalis",
+      "archiveId": "batch-8",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "current",
+      "promotionRecommendation": "proposed-for-bite-scoring",
+      "uniqueSources": 10,
+      "fullTextSourceOccurrences": 6,
+      "abstractOnlySourceOccurrences": 4,
+      "evidenceRecords": 14,
+      "endpointCounts": {
+        "feeding-or-foraging": 6,
+        "habitat-or-population": 2,
+        "hook-and-line-catchability": 1,
+        "movement-or-general-activity": 1,
+        "other-or-context": 3,
+        "reproduction-or-migration": 1
+      },
+      "candidateRuleCounts": {
+        "context-only": 4,
+        "score": 1,
+        "unavailable": 1,
+        "zero-weight": 4
+      },
+      "scoreRuleRuntimeAvailability": {
+        "available": 1
+      },
+      "scoreRulesPendingScientificReview": 1
+    },
+    {
+      "speciesId": "flathead-catfish",
+      "commonName": "Flathead Catfish",
+      "acceptedScientificName": "Pylodictis olivaris",
+      "archiveId": "batch-4",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "current",
+      "promotionRecommendation": "bite-scored",
+      "uniqueSources": 12,
+      "fullTextSourceOccurrences": 6,
+      "abstractOnlySourceOccurrences": 9,
+      "evidenceRecords": 14,
+      "endpointCounts": {
+        "evidence-gap": 1,
+        "feeding-or-foraging": 7,
+        "habitat-or-population": 1,
+        "hook-and-line-catchability": 1,
+        "movement-or-general-activity": 2,
+        "other-or-context": 1,
+        "reproduction-or-migration": 1
+      },
+      "candidateRuleCounts": {
+        "context-only": 3,
+        "score": 3,
+        "zero-weight": 5
+      },
+      "scoreRuleRuntimeAvailability": {
+        "modeled": 3
+      },
+      "scoreRulesPendingScientificReview": 3
+    },
+    {
+      "speciesId": "gizzard-shad",
+      "commonName": "Gizzard shad",
+      "acceptedScientificName": "Dorosoma cepedianum",
+      "archiveId": "batch-11",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "guide-only",
+      "promotionRecommendation": "fish-guide-only",
+      "uniqueSources": 8,
+      "fullTextSourceOccurrences": 3,
+      "abstractOnlySourceOccurrences": 2,
+      "evidenceRecords": 12,
+      "endpointCounts": {
+        "feeding-or-foraging": 8,
+        "growth-physiology-or-survival": 2,
+        "habitat-or-population": 1,
+        "hook-and-line-catchability": 1
+      },
+      "candidateRuleCounts": {
+        "context-only": 2,
+        "score": 2,
+        "zero-weight": 4
+      },
+      "scoreRuleRuntimeAvailability": {
+        "modeled": 2
+      },
+      "scoreRulesPendingScientificReview": 2
+    },
+    {
+      "speciesId": "green-sunfish",
+      "commonName": "Green Sunfish",
+      "acceptedScientificName": "Lepomis cyanellus",
+      "archiveId": "batch-2",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "proposed",
+      "promotionRecommendation": "fish-guide-only",
+      "uniqueSources": 10,
+      "fullTextSourceOccurrences": 7,
+      "abstractOnlySourceOccurrences": 3,
+      "evidenceRecords": 14,
+      "endpointCounts": {
+        "evidence-gap": 2,
+        "feeding-or-foraging": 1,
+        "growth-physiology-or-survival": 1,
+        "habitat-or-population": 4,
+        "movement-or-general-activity": 2,
+        "other-or-context": 3,
+        "reproduction-or-migration": 1
+      },
+      "candidateRuleCounts": {
+        "context-only": 4,
+        "unavailable": 1,
+        "zero-weight": 5
+      },
+      "scoreRuleRuntimeAvailability": {},
+      "scoreRulesPendingScientificReview": 0
+    },
+    {
+      "speciesId": "largemouth-bass",
+      "commonName": "Largemouth bass",
+      "acceptedScientificName": "Micropterus nigricans",
+      "archiveId": "bitemap-largemouth-bass-research-archive",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "current",
+      "promotionRecommendation": "bite-scored",
+      "uniqueSources": 14,
+      "fullTextSourceOccurrences": 12,
+      "abstractOnlySourceOccurrences": 4,
+      "evidenceRecords": 13,
+      "endpointCounts": {
+        "feeding-or-foraging": 4,
+        "habitat-or-population": 2,
+        "hook-and-line-catchability": 2,
+        "movement-or-general-activity": 3,
+        "other-or-context": 1,
+        "reproduction-or-migration": 1
+      },
+      "candidateRuleCounts": {
+        "context-only": 5,
+        "score": 5,
+        "zero-weight": 1
+      },
+      "scoreRuleRuntimeAvailability": {
+        "conditional": 1,
+        "modeled": 3,
+        "unavailable": 1
+      },
+      "scoreRulesPendingScientificReview": 5
+    },
+    {
+      "speciesId": "longnose-dace",
+      "commonName": "Longnose dace",
+      "acceptedScientificName": "Rhinichthys cataractae",
+      "archiveId": "batch-10",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "guide-only",
+      "promotionRecommendation": "fish-guide-only",
+      "uniqueSources": 9,
+      "fullTextSourceOccurrences": 2,
+      "abstractOnlySourceOccurrences": 1,
+      "evidenceRecords": 14,
+      "endpointCounts": {
+        "evidence-gap": 1,
+        "feeding-or-foraging": 8,
+        "habitat-or-population": 4,
+        "other-or-context": 1
+      },
+      "candidateRuleCounts": {
+        "context-only": 4,
+        "score": 1,
+        "zero-weight": 2
+      },
+      "scoreRuleRuntimeAvailability": {
+        "unavailable": 1
+      },
+      "scoreRulesPendingScientificReview": 1
+    },
+    {
+      "speciesId": "mottled-sculpin",
+      "commonName": "Mottled sculpin",
+      "acceptedScientificName": "Cottus bairdii",
+      "archiveId": "batch-11",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "guide-only",
+      "promotionRecommendation": "fish-guide-only",
+      "uniqueSources": 8,
+      "fullTextSourceOccurrences": 5,
+      "abstractOnlySourceOccurrences": 3,
+      "evidenceRecords": 12,
+      "endpointCounts": {
+        "feeding-or-foraging": 4,
+        "growth-physiology-or-survival": 1,
+        "habitat-or-population": 1,
+        "hook-and-line-catchability": 2,
+        "movement-or-general-activity": 2,
+        "other-or-context": 2
+      },
+      "candidateRuleCounts": {
+        "context-only": 4,
+        "zero-weight": 3
+      },
+      "scoreRuleRuntimeAvailability": {},
+      "scoreRulesPendingScientificReview": 0
+    },
+    {
+      "speciesId": "muskellunge",
+      "commonName": "Muskellunge",
+      "acceptedScientificName": "Esox masquinongy",
+      "archiveId": "batch-6",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "current",
+      "promotionRecommendation": "bite-scored",
+      "uniqueSources": 10,
+      "fullTextSourceOccurrences": 8,
+      "abstractOnlySourceOccurrences": 3,
+      "evidenceRecords": 14,
+      "endpointCounts": {
+        "feeding-or-foraging": 3,
+        "habitat-or-population": 2,
+        "hook-and-line-catchability": 6,
+        "movement-or-general-activity": 1,
+        "other-or-context": 2
+      },
+      "candidateRuleCounts": {
+        "context-only": 5,
+        "score": 3,
+        "zero-weight": 3
+      },
+      "scoreRuleRuntimeAvailability": {
+        "available": 2,
+        "modeled": 1
+      },
+      "scoreRulesPendingScientificReview": 3
+    },
+    {
+      "speciesId": "northern-hogsucker",
+      "commonName": "Northern hogsucker",
+      "acceptedScientificName": "Hypentelium nigricans",
+      "archiveId": "batch-9",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "guide-only",
+      "promotionRecommendation": "fish-guide-only",
+      "uniqueSources": 8,
+      "fullTextSourceOccurrences": 4,
+      "abstractOnlySourceOccurrences": 3,
+      "evidenceRecords": 12,
+      "endpointCounts": {
+        "feeding-or-foraging": 1,
+        "habitat-or-population": 2,
+        "movement-or-general-activity": 6,
+        "reproduction-or-migration": 2,
+        "taxonomy": 1
+      },
+      "candidateRuleCounts": {
+        "context-only": 6
+      },
+      "scoreRuleRuntimeAvailability": {},
+      "scoreRulesPendingScientificReview": 0
+    },
+    {
+      "speciesId": "northern-snakehead",
+      "commonName": "Northern Snakehead",
+      "acceptedScientificName": "Channa argus",
+      "archiveId": "batch-6",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "current",
+      "promotionRecommendation": "bite-scored",
+      "uniqueSources": 12,
+      "fullTextSourceOccurrences": 5,
+      "abstractOnlySourceOccurrences": 7,
+      "evidenceRecords": 15,
+      "endpointCounts": {
+        "feeding-or-foraging": 8,
+        "hook-and-line-catchability": 1,
+        "movement-or-general-activity": 3,
+        "other-or-context": 2,
+        "reproduction-or-migration": 1
+      },
+      "candidateRuleCounts": {
+        "context-only": 3,
+        "score": 2,
+        "unavailable": 1,
+        "zero-weight": 4
+      },
+      "scoreRuleRuntimeAvailability": {
+        "available": 1,
+        "conditional": 1
+      },
+      "scoreRulesPendingScientificReview": 2
+    },
+    {
+      "speciesId": "pumpkinseed",
+      "commonName": "Pumpkinseed",
+      "acceptedScientificName": "Lepomis gibbosus",
+      "archiveId": "batch-2",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "proposed",
+      "promotionRecommendation": "proposed-for-bite-scoring",
+      "uniqueSources": 11,
+      "fullTextSourceOccurrences": 5,
+      "abstractOnlySourceOccurrences": 7,
+      "evidenceRecords": 17,
+      "endpointCounts": {
+        "evidence-gap": 1,
+        "feeding-or-foraging": 6,
+        "hook-and-line-catchability": 5,
+        "other-or-context": 2,
+        "reproduction-or-migration": 3
+      },
+      "candidateRuleCounts": {
+        "context-only": 7,
+        "score": 1,
+        "unavailable": 1,
+        "zero-weight": 2
+      },
+      "scoreRuleRuntimeAvailability": {
+        "modeled": 1
+      },
+      "scoreRulesPendingScientificReview": 1
+    },
+    {
+      "speciesId": "rainbow-trout",
+      "commonName": "Rainbow Trout",
+      "acceptedScientificName": "Oncorhynchus mykiss",
+      "archiveId": "batch-3",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "current",
+      "promotionRecommendation": "bite-scored",
+      "uniqueSources": 11,
+      "fullTextSourceOccurrences": 7,
+      "abstractOnlySourceOccurrences": 10,
+      "evidenceRecords": 15,
+      "endpointCounts": {
+        "feeding-or-foraging": 7,
+        "habitat-or-population": 1,
+        "hook-and-line-catchability": 6,
+        "other-or-context": 1
+      },
+      "candidateRuleCounts": {
+        "context-only": 3,
+        "score": 2,
+        "unavailable": 1,
+        "zero-weight": 4
+      },
+      "scoreRuleRuntimeAvailability": {
+        "conditional": 1,
+        "unavailable": 1
+      },
+      "scoreRulesPendingScientificReview": 2
+    },
+    {
+      "speciesId": "redbreast-sunfish",
+      "commonName": "Redbreast Sunfish",
+      "acceptedScientificName": "Lepomis auritus",
+      "archiveId": "batch-2",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "current",
+      "promotionRecommendation": "proposed-for-bite-scoring",
+      "uniqueSources": 11,
+      "fullTextSourceOccurrences": 8,
+      "abstractOnlySourceOccurrences": 4,
+      "evidenceRecords": 15,
+      "endpointCounts": {
+        "evidence-gap": 1,
+        "feeding-or-foraging": 5,
+        "growth-physiology-or-survival": 3,
+        "hook-and-line-catchability": 1,
+        "other-or-context": 2,
+        "reproduction-or-migration": 3
+      },
+      "candidateRuleCounts": {
+        "context-only": 5,
+        "score": 1,
+        "unavailable": 1,
+        "zero-weight": 3
+      },
+      "scoreRuleRuntimeAvailability": {
+        "modeled": 1
+      },
+      "scoreRulesPendingScientificReview": 1
+    },
+    {
+      "speciesId": "rock-bass",
+      "commonName": "Rock Bass",
+      "acceptedScientificName": "Ambloplites rupestris",
+      "archiveId": "batch-2",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "proposed",
+      "promotionRecommendation": "proposed-for-bite-scoring",
+      "uniqueSources": 11,
+      "fullTextSourceOccurrences": 5,
+      "abstractOnlySourceOccurrences": 6,
+      "evidenceRecords": 16,
+      "endpointCounts": {
+        "evidence-gap": 3,
+        "feeding-or-foraging": 4,
+        "hook-and-line-catchability": 2,
+        "movement-or-general-activity": 1,
+        "other-or-context": 4,
+        "reproduction-or-migration": 2
+      },
+      "candidateRuleCounts": {
+        "context-only": 7,
+        "unavailable": 2,
+        "zero-weight": 2
+      },
+      "scoreRuleRuntimeAvailability": {},
+      "scoreRulesPendingScientificReview": 0
+    },
+    {
+      "speciesId": "shorthead-redhorse",
+      "commonName": "Shorthead redhorse",
+      "acceptedScientificName": "Moxostoma macrolepidotum",
+      "archiveId": "batch-10",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "guide-only",
+      "promotionRecommendation": "fish-guide-only",
+      "uniqueSources": 9,
+      "fullTextSourceOccurrences": 3,
+      "abstractOnlySourceOccurrences": 6,
+      "evidenceRecords": 12,
+      "endpointCounts": {
+        "evidence-gap": 1,
+        "feeding-or-foraging": 2,
+        "growth-physiology-or-survival": 1,
+        "habitat-or-population": 1,
+        "other-or-context": 5,
+        "reproduction-or-migration": 2
+      },
+      "candidateRuleCounts": {
+        "context-only": 5,
+        "zero-weight": 1
+      },
+      "scoreRuleRuntimeAvailability": {},
+      "scoreRulesPendingScientificReview": 0
+    },
+    {
+      "speciesId": "smallmouth-bass",
+      "commonName": "Smallmouth bass",
+      "acceptedScientificName": "Micropterus dolomieu",
+      "archiveId": "bitemap-smallmouth-bass-deep-research-archive",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "current",
+      "promotionRecommendation": "bite-scored",
+      "uniqueSources": 13,
+      "fullTextSourceOccurrences": 10,
+      "abstractOnlySourceOccurrences": 5,
+      "evidenceRecords": 13,
+      "endpointCounts": {
+        "feeding-or-foraging": 4,
+        "habitat-or-population": 1,
+        "hook-and-line-catchability": 2,
+        "movement-or-general-activity": 2,
+        "other-or-context": 1,
+        "reproduction-or-migration": 3
+      },
+      "candidateRuleCounts": {
+        "context-only": 4,
+        "score": 3,
+        "unavailable": 2
+      },
+      "scoreRuleRuntimeAvailability": {
+        "conditional": 1,
+        "modeled": 2
+      },
+      "scoreRulesPendingScientificReview": 3
+    },
+    {
+      "speciesId": "spotted-bass",
+      "commonName": "Spotted Bass",
+      "acceptedScientificName": "Micropterus punctulatus",
+      "archiveId": "batch-7",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "current",
+      "promotionRecommendation": "proposed-for-bite-scoring",
+      "uniqueSources": 11,
+      "fullTextSourceOccurrences": 8,
+      "abstractOnlySourceOccurrences": 3,
+      "evidenceRecords": 14,
+      "endpointCounts": {
+        "feeding-or-foraging": 6,
+        "habitat-or-population": 1,
+        "hook-and-line-catchability": 3,
+        "other-or-context": 2,
+        "reproduction-or-migration": 1,
+        "taxonomy": 1
+      },
+      "candidateRuleCounts": {
+        "context-only": 3,
+        "unavailable": 1,
+        "zero-weight": 4
+      },
+      "scoreRuleRuntimeAvailability": {},
+      "scoreRulesPendingScientificReview": 0
+    },
+    {
+      "speciesId": "striped-bass",
+      "commonName": "Striped Bass",
+      "acceptedScientificName": "Morone saxatilis",
+      "archiveId": "batch-5",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "current",
+      "promotionRecommendation": "bite-scored",
+      "uniqueSources": 11,
+      "fullTextSourceOccurrences": 7,
+      "abstractOnlySourceOccurrences": 3,
+      "evidenceRecords": 15,
+      "endpointCounts": {
+        "evidence-gap": 1,
+        "feeding-or-foraging": 10,
+        "habitat-or-population": 1,
+        "other-or-context": 3
+      },
+      "candidateRuleCounts": {
+        "context-only": 4,
+        "score": 1,
+        "unavailable": 2,
+        "zero-weight": 3
+      },
+      "scoreRuleRuntimeAvailability": {
+        "conditional": 1
+      },
+      "scoreRulesPendingScientificReview": 1
+    },
+    {
+      "speciesId": "tessellated-darter",
+      "commonName": "Tessellated darter",
+      "acceptedScientificName": "Etheostoma olmstedi",
+      "archiveId": "batch-11",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "guide-only",
+      "promotionRecommendation": "fish-guide-only",
+      "uniqueSources": 8,
+      "fullTextSourceOccurrences": 5,
+      "abstractOnlySourceOccurrences": 2,
+      "evidenceRecords": 12,
+      "endpointCounts": {
+        "feeding-or-foraging": 2,
+        "growth-physiology-or-survival": 1,
+        "habitat-or-population": 3,
+        "hook-and-line-catchability": 1,
+        "other-or-context": 2,
+        "reproduction-or-migration": 3
+      },
+      "candidateRuleCounts": {
+        "context-only": 3,
+        "zero-weight": 3
+      },
+      "scoreRuleRuntimeAvailability": {},
+      "scoreRulesPendingScientificReview": 0
+    },
+    {
+      "speciesId": "walleye",
+      "commonName": "Walleye",
+      "acceptedScientificName": "Sander vitreus",
+      "archiveId": "batch-6",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "current",
+      "promotionRecommendation": "bite-scored",
+      "uniqueSources": 11,
+      "fullTextSourceOccurrences": 9,
+      "abstractOnlySourceOccurrences": 3,
+      "evidenceRecords": 14,
+      "endpointCounts": {
+        "feeding-or-foraging": 2,
+        "habitat-or-population": 2,
+        "hook-and-line-catchability": 6,
+        "movement-or-general-activity": 2,
+        "other-or-context": 2
+      },
+      "candidateRuleCounts": {
+        "context-only": 4,
+        "score": 3,
+        "zero-weight": 3
+      },
+      "scoreRuleRuntimeAvailability": {
+        "available": 2,
+        "unavailable": 1
+      },
+      "scoreRulesPendingScientificReview": 3
+    },
+    {
+      "speciesId": "white-catfish",
+      "commonName": "White Catfish",
+      "acceptedScientificName": "Ameiurus catus",
+      "archiveId": "batch-4",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "current",
+      "promotionRecommendation": "proposed-for-bite-scoring",
+      "uniqueSources": 12,
+      "fullTextSourceOccurrences": 6,
+      "abstractOnlySourceOccurrences": 6,
+      "evidenceRecords": 14,
+      "endpointCounts": {
+        "evidence-gap": 2,
+        "feeding-or-foraging": 2,
+        "growth-physiology-or-survival": 4,
+        "habitat-or-population": 3,
+        "other-or-context": 2,
+        "reproduction-or-migration": 1
+      },
+      "candidateRuleCounts": {
+        "context-only": 3,
+        "unavailable": 3,
+        "zero-weight": 3
+      },
+      "scoreRuleRuntimeAvailability": {},
+      "scoreRulesPendingScientificReview": 0
+    },
+    {
+      "speciesId": "white-crappie",
+      "commonName": "White crappie",
+      "acceptedScientificName": "Pomoxis annularis",
+      "archiveId": "batch-1",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "current",
+      "promotionRecommendation": "bite-scored",
+      "uniqueSources": 10,
+      "fullTextSourceOccurrences": 11,
+      "abstractOnlySourceOccurrences": 4,
+      "evidenceRecords": 16,
+      "endpointCounts": {
+        "evidence-gap": 1,
+        "feeding-or-foraging": 5,
+        "hook-and-line-catchability": 6,
+        "movement-or-general-activity": 1,
+        "other-or-context": 1,
+        "reproduction-or-migration": 1,
+        "taxonomy": 1
+      },
+      "candidateRuleCounts": {
+        "context-only": 5,
+        "score": 2,
+        "zero-weight": 3
+      },
+      "scoreRuleRuntimeAvailability": {
+        "unavailable": 2
+      },
+      "scoreRulesPendingScientificReview": 2
+    },
+    {
+      "speciesId": "white-perch",
+      "commonName": "White Perch",
+      "acceptedScientificName": "Morone americana",
+      "archiveId": "batch-5",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "current",
+      "promotionRecommendation": "proposed-for-bite-scoring",
+      "uniqueSources": 11,
+      "fullTextSourceOccurrences": 5,
+      "abstractOnlySourceOccurrences": 7,
+      "evidenceRecords": 15,
+      "endpointCounts": {
+        "evidence-gap": 1,
+        "feeding-or-foraging": 2,
+        "growth-physiology-or-survival": 1,
+        "habitat-or-population": 1,
+        "movement-or-general-activity": 2,
+        "other-or-context": 5,
+        "reproduction-or-migration": 3
+      },
+      "candidateRuleCounts": {
+        "context-only": 5,
+        "unavailable": 2,
+        "zero-weight": 4
+      },
+      "scoreRuleRuntimeAvailability": {},
+      "scoreRulesPendingScientificReview": 0
+    },
+    {
+      "speciesId": "white-sucker",
+      "commonName": "White Sucker",
+      "acceptedScientificName": "Catostomus commersonii",
+      "archiveId": "batch-8",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "current",
+      "promotionRecommendation": "proposed-for-bite-scoring",
+      "uniqueSources": 11,
+      "fullTextSourceOccurrences": 9,
+      "abstractOnlySourceOccurrences": 3,
+      "evidenceRecords": 15,
+      "endpointCounts": {
+        "feeding-or-foraging": 5,
+        "growth-physiology-or-survival": 1,
+        "habitat-or-population": 1,
+        "movement-or-general-activity": 4,
+        "other-or-context": 2,
+        "reproduction-or-migration": 2
+      },
+      "candidateRuleCounts": {
+        "context-only": 3,
+        "score": 1,
+        "unavailable": 1,
+        "zero-weight": 5
+      },
+      "scoreRuleRuntimeAvailability": {
+        "modeled": 1
+      },
+      "scoreRulesPendingScientificReview": 1
+    },
+    {
+      "speciesId": "yellow-bullhead",
+      "commonName": "Yellow bullhead",
+      "acceptedScientificName": "Ameiurus natalis",
+      "archiveId": "batch-9",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "guide-only",
+      "promotionRecommendation": "proposed-for-bite-scoring",
+      "uniqueSources": 8,
+      "fullTextSourceOccurrences": 3,
+      "abstractOnlySourceOccurrences": 3,
+      "evidenceRecords": 10,
+      "endpointCounts": {
+        "feeding-or-foraging": 3,
+        "growth-physiology-or-survival": 1,
+        "habitat-or-population": 1,
+        "hook-and-line-catchability": 1,
+        "movement-or-general-activity": 2,
+        "other-or-context": 2
+      },
+      "candidateRuleCounts": {
+        "context-only": 3,
+        "zero-weight": 1
+      },
+      "scoreRuleRuntimeAvailability": {},
+      "scoreRulesPendingScientificReview": 0
+    },
+    {
+      "speciesId": "yellow-perch",
+      "commonName": "Yellow Perch",
+      "acceptedScientificName": "Perca flavescens",
+      "archiveId": "batch-5",
+      "researchStatus": "partial",
+      "currentBiteMapStatus": "current",
+      "promotionRecommendation": "bite-scored",
+      "uniqueSources": 12,
+      "fullTextSourceOccurrences": 6,
+      "abstractOnlySourceOccurrences": 7,
+      "evidenceRecords": 15,
+      "endpointCounts": {
+        "feeding-or-foraging": 13,
+        "movement-or-general-activity": 1,
+        "other-or-context": 1
+      },
+      "candidateRuleCounts": {
+        "context-only": 5,
+        "score": 1,
+        "unavailable": 1,
+        "zero-weight": 4
+      },
+      "scoreRuleRuntimeAvailability": {
+        "available": 1
+      },
+      "scoreRulesPendingScientificReview": 1
+    }
+  ]
+}

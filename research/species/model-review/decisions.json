@@ -1,0 +1,261 @@
+{
+  "schemaVersion": "0.1.0-draft",
+  "snapshotDate": "2026-07-16",
+  "notice": "This is a scientific review ledger, not a production-scoring configuration. No rule is approved for the live scorer.",
+  "decisionGroups": [
+    {
+      "disposition": "production-candidate",
+      "reasonCode": "direct-endpoint-bounded-runtime-input",
+      "rationale": "The rule has a direct feeding or angling-catch endpoint, an input BiteMap can supply at the required resolution, and a study scope that can be represented with explicit geographic, seasonal, and waterbody bounds.",
+      "requiredActions": [
+        "Have a human reviewer inspect the cited primary-source passage and sign the claim.",
+        "Choose and document a conservative bounded curve without extrapolating beyond the study.",
+        "Add adversarial tests for season, geography, waterbody, missing inputs, and correlated light variables.",
+        "Validate the modifier against held-out observations before production integration."
+      ],
+      "ruleIds": [
+        "rule-batch-6-northern-snakehead-01",
+        "rule-batch-6-walleye-02"
+      ]
+    },
+    {
+      "disposition": "evidence-informed-candidate",
+      "reasonCode": "correct-species-relevant-endpoint-bounded-model-input",
+      "rationale": "The evidence studies the correct species and a relevant feeding, foraging, activity, or catchability endpoint with an input BiteMap can supply or defensibly model. Geography, life stage, and study setting reduce confidence and effect size rather than automatically disqualifying the rule.",
+      "requiredActions": [
+        "Use the bounded candidate blueprint and its conservative engineering cap.",
+        "Complete primary-source passage review before connecting the rule to production.",
+        "Validate the response and preserve study-setting uncertainty in the displayed confidence."
+      ],
+      "ruleIds": [
+        "rule-batch-7-american-eel-01",
+        "rule-batch-10-blacknose-dace-01",
+        "rule-batch-4-blue-catfish-01",
+        "rule-batch-9-brown-bullhead-01",
+        "rule-batch-9-brown-bullhead-03",
+        "rule-batch-9-brown-bullhead-04",
+        "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01",
+        "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-02",
+        "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03",
+        "rule-batch-7-common-carp-01",
+        "rule-batch-8-creek-chub-01",
+        "rule-batch-8-fallfish-01",
+        "rule-batch-4-flathead-catfish-01",
+        "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-03",
+        "rule-batch-6-muskellunge-01",
+        "rule-batch-6-northern-snakehead-02",
+        "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02",
+        "rule-batch-5-striped-bass-01",
+        "rule-batch-8-white-sucker-01",
+        "rule-batch-5-yellow-perch-01"
+      ]
+    },
+    {
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "ruleIds": [
+        "rule-batch-7-american-eel-02",
+        "rule-batch-1-black-crappie-01",
+        "rule-batch-1-black-crappie-02",
+        "rule-batch-4-blue-catfish-02",
+        "rule-batch-1-bluegill-01",
+        "rule-batch-3-brook-trout-01",
+        "rule-batch-3-brook-trout-02",
+        "rule-batch-3-brown-trout-01",
+        "rule-batch-3-brown-trout-02",
+        "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-04",
+        "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-05",
+        "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-06",
+        "rule-batch-7-common-carp-05",
+        "rule-batch-7-common-carp-06",
+        "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-01",
+        "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-06",
+        "rule-batch-10-longnose-dace-01",
+        "rule-batch-2-pumpkinseed-01",
+        "rule-batch-3-rainbow-trout-01",
+        "rule-batch-3-rainbow-trout-02",
+        "rule-batch-2-redbreast-sunfish-01",
+        "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-03",
+        "rule-batch-6-walleye-01",
+        "rule-batch-6-walleye-03",
+        "rule-batch-1-white-crappie-01",
+        "rule-batch-1-white-crappie-02"
+      ]
+    },
+    {
+      "disposition": "context-only",
+      "reasonCode": "not-a-portable-bite-endpoint",
+      "rationale": "The result is useful biological or interpretive context but does not isolate a portable feeding or hook-and-line catchability effect suitable for a score modifier.",
+      "requiredActions": [
+        "Use the finding in Fish Guide or methodology explanations where relevant.",
+        "Do not convert movement, habitat occupancy, growth, survival, or a confounded seasonal observation into a bite weight."
+      ],
+      "ruleIds": [
+        "rule-batch-9-brown-bullhead-02",
+        "rule-batch-7-common-carp-04",
+        "rule-batch-11-gizzard-shad-01",
+        "rule-batch-11-gizzard-shad-02",
+        "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-02",
+        "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-04",
+        "rule-batch-6-muskellunge-03",
+        "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-01"
+      ]
+    },
+    {
+      "disposition": "zero-weight",
+      "reasonCode": "duplicate-or-insufficient-independent-signal",
+      "rationale": "The candidate duplicates evidence already represented by another rule or has a signal too small, confounded, or contradictory to justify a score contribution.",
+      "requiredActions": [
+        "Retain the evidence trail for auditability.",
+        "Merge duplicate support into the retained candidate when appropriate.",
+        "Assign no scoring weight."
+      ],
+      "ruleIds": [
+        "rule-batch-7-common-carp-02",
+        "rule-batch-7-common-carp-03",
+        "rule-batch-4-flathead-catfish-02",
+        "rule-batch-4-flathead-catfish-03",
+        "rule-batch-6-muskellunge-02"
+      ]
+    }
+  ],
+  "initialValidationCohortRuleIds": [
+    "rule-batch-7-american-eel-01",
+    "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01",
+    "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03",
+    "rule-batch-7-common-carp-01",
+    "rule-batch-6-northern-snakehead-01",
+    "rule-batch-6-walleye-02"
+  ],
+  "primarySourcePreflights": {
+    "rule-batch-10-blacknose-dace-01": {
+      "status": "primary-source-preflight-complete",
+      "checkedOn": "2026-07-16",
+      "sourceUrls": [
+        "https://www.biodiversitylibrary.org/item/89040",
+        "https://archive.org/download/canadianfieldnat1982otta/canadianfieldnat1982otta_djvu.txt"
+      ],
+      "findings": [
+        "The full-volume OCR and page scan identify a July 24-hour stomach-fullness study with a primary feeding peak from 16:00-20:00, a smaller increase from 04:00-08:00, the lowest feeding from 08:00-16:00, and a sharp decrease from 00:00-04:00."
+      ],
+      "limitations": [
+        "The chronology sampled one tributary of Lake Ontario during one July 24-hour period.",
+        "Clock intervals must be converted conservatively to local solar-relative periods rather than copied directly across latitude, longitude, and season."
+      ],
+      "humanApproved": false
+    },
+    "rule-batch-8-fallfish-01": {
+      "status": "primary-source-preflight-blocked-exact-timing-unavailable",
+      "checkedOn": "2026-07-16",
+      "sourceUrls": [
+        "https://pubs.usgs.gov/publication/70160762",
+        "https://doi.org/10.1674/amid-173-02-326-334.1"
+      ],
+      "findings": [
+        "The official USGS record confirms that fallfish had a distinct feeding peak during a single 24-hour summer study."
+      ],
+      "limitations": [
+        "The official abstract does not disclose the peak interval, and no publicly accessible primary full text was located during this review.",
+        "A late-day or evening response must remain disabled until the exact primary-source interval can be inspected."
+      ],
+      "humanApproved": false
+    },
+    "rule-batch-7-american-eel-01": {
+      "status": "primary-source-preflight-complete",
+      "checkedOn": "2026-07-16",
+      "sourceUrls": [
+        "https://spo.nmfs.noaa.gov/sites/default/files/pdf-content/fish-bull/sorensen.pdf"
+      ],
+      "findings": [
+        "The NOAA-hosted paper directly reports overwhelmingly nocturnal baited-trap capture, with the largest fraction just after sunset."
+      ],
+      "limitations": [
+        "Baited traps are not hook-and-line catch rates.",
+        "The study was conducted in a turbid Rhode Island estuary during early September and October, so the result is not a universal freshwater diel curve."
+      ],
+      "humanApproved": false
+    },
+    "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01": {
+      "status": "primary-source-preflight-complete",
+      "checkedOn": "2026-07-16",
+      "sourceUrls": [
+        "https://seafwa.org/sites/default/files/journal-articles/MATHUR-377.pdf",
+        "https://www.tandfonline.com/doi/abs/10.1080/15222055.2011.544628"
+      ],
+      "findings": [
+        "The field chronology and winter-feeding experiment support continued but seasonally changing feeding, including feeding at cold temperatures."
+      ],
+      "limitations": [
+        "The sources do not justify a single smooth seasonal penalty independent of acclimation, prey, and system type.",
+        "One source is a reservoir stomach-content study and the other is an aquaculture pond experiment."
+      ],
+      "humanApproved": false
+    },
+    "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03": {
+      "status": "primary-source-preflight-complete",
+      "checkedOn": "2026-07-16",
+      "sourceUrls": [
+        "https://www.ars.usda.gov/research/publications/publication/?seqNo115=287364"
+      ],
+      "findings": [
+        "The USDA record confirms lower feed consumption, growth, and survival in the hottest 31-35 C cyclic treatment."
+      ],
+      "limitations": [
+        "The experiment used juvenile channel catfish in aquaculture tanks, so the result supports a severe-heat guardrail more directly than a field catchability curve."
+      ],
+      "humanApproved": false
+    },
+    "rule-batch-7-common-carp-01": {
+      "status": "primary-source-preflight-complete",
+      "checkedOn": "2026-07-16",
+      "sourceUrls": [
+        "https://www.sciencedirect.com/science/article/abs/pii/S1006810412600397"
+      ],
+      "findings": [
+        "The publisher abstract reports very low feeding at 6 C, increasing feeding through intermediate treatments, a maximum at 28 C, and a decrease at 34 C."
+      ],
+      "limitations": [
+        "Only the publisher abstract was available in this preflight.",
+        "The controlled aquaculture population and feeding protocol do not directly establish NOVA angling catchability."
+      ],
+      "humanApproved": false
+    },
+    "rule-batch-6-northern-snakehead-01": {
+      "status": "primary-source-preflight-complete",
+      "checkedOn": "2026-07-16",
+      "sourceUrls": [
+        "https://www.osti.gov/servlets/purl/1648996",
+        "https://hero.epa.gov/reference/8043122/"
+      ],
+      "findings": [
+        "The primary Potomac study reports little fresh prey overnight and greater feeding in morning/daylight samples during May and June."
+      ],
+      "limitations": [
+        "The diel model explained only a small share of feeding variation.",
+        "The result must remain limited to the tidal Potomac and the sampled May-June season unless new evidence supports transfer."
+      ],
+      "humanApproved": false
+    },
+    "rule-batch-6-walleye-02": {
+      "status": "primary-source-preflight-complete",
+      "checkedOn": "2026-07-16",
+      "sourceUrls": [
+        "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0257882"
+      ],
+      "findings": [
+        "The long-term compulsory-creel study directly estimated higher walleye angling success at dawn and dusk than during daytime and a negative solar-radiation effect."
+      ],
+      "limitations": [
+        "The effect comes from one Wisconsin lake fishery and requires conservative transfer to NOVA lakes and reservoirs.",
+        "Solar radiation and diel period are correlated and must not be scored twice."
+      ],
+      "humanApproved": false
+    }
+  }
+}

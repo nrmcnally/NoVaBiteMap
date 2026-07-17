@@ -5,6 +5,7 @@ import {
   ArrowLeft,
   Sailboat,
   CheckCircle2,
+  ClipboardList,
   Clock3,
   Droplets,
   ExternalLink,
@@ -109,6 +110,7 @@ export default async function LocationPage({ params, searchParams }: LocationPag
               <Navigation size={17} /> Google Maps directions
             </a>
             <Link href="/my-spots"><Heart size={17} /> Save spot</Link>
+            <Link href={`/trips?location=${location.id}${target ? `&species=${target.id}` : ""}`}><ClipboardList size={17} /> Log a trip</Link>
           </div>
         </header>
 
@@ -144,6 +146,7 @@ export default async function LocationPage({ params, searchParams }: LocationPag
                 locationId={location.id}
                 latitude={location.lat}
                 longitude={location.lng}
+                speciesId={target.id}
                 speciesName={target.name}
                 availability={opportunity.availability}
                 quality={opportunity.quality}

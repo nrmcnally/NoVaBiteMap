@@ -1,6 +1,6 @@
 import { and, eq, lt } from "drizzle-orm";
 import { getDb } from "../../db";
-import { accountSessions, accountUsers, savedLocations } from "../../db/schema";
+import { accountSessions, accountUsers, fishingTrips, savedLocations } from "../../db/schema";
 import { createSessionToken, hashPassword, sessionTokenHash, verifyPassword } from "./password-auth";
 import type { AccountUser } from "./account-server";
 
@@ -73,6 +73,7 @@ export async function deleteD1Account(token: string): Promise<boolean> {
   if (!user?.id) return false;
   const db = getDb();
   await db.delete(savedLocations).where(eq(savedLocations.userEmail, user.email));
+  await db.delete(fishingTrips).where(eq(fishingTrips.userEmail, user.email));
   await db.delete(accountSessions).where(eq(accountSessions.userId, user.id));
   await db.delete(accountUsers).where(and(eq(accountUsers.id, user.id), eq(accountUsers.email, user.email)));
   return true;

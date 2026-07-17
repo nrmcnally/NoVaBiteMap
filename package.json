@@ -13,10 +13,16 @@
     "audit:seed": "tsx scripts/check-seed-parity.mts",
     "audit:review": "tsx scripts/build-fish-community-review.mts --check",
     "audit:guide": "tsx scripts/check-fish-guide.mts",
-    "test": "npm run audit:evidence && npm run audit:seed && npm run audit:review && npm run audit:guide && npm run build && node --test tests/rendered-html.test.mjs tests/advisories.test.mjs",
+    "audit:species-research": "node scripts/run-species-research-pipeline.mjs --check",
+    "audit:model-review": "node scripts/run-model-review-audit.mjs --check",
+    "audit:candidate-models": "node scripts/run-candidate-model-fixtures.mjs --check",
+    "audit:candidate-validation": "node scripts/run-candidate-validation-gate.mjs --check",
+    "test:replay": "tsx --test tests/historical-replay.test.ts",
+    "test": "npm run audit:evidence && npm run audit:seed && npm run audit:review && npm run audit:guide && npm run test:replay && npm run build && node --test tests/rendered-html.test.mjs tests/advisories.test.mjs",
     "test:api": "python -m pytest apps/api/tests -q",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern .pytest_cache --ignore-pattern apps/api/.pytest_cache",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "db:local:apply": "node scripts/apply-local-d1-migrations.mjs"
   },
   "dependencies": {
     "drizzle-orm": "0.45.2",

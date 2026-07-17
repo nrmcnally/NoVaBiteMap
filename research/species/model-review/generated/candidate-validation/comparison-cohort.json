@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "0.1.0-draft",
+  "reviewVersion": "engineering-review-v0.1.0",
+  "modelVersion": "candidate-v0.2.0",
+  "snapshotDate": "2026-07-16",
+  "planSha256": "3d4eaf21b3dbd578c223c52ea5828b406dee98fd7af8b39056485a46fb360396",
+  "observationStoreSha256": "179ebc8b492059cd605411b2e423231535c50cf3a6fca7c2c057896ed7cc6a2e",
+  "notice": "AI-assisted adversarial engineering review. This is not human scientific approval, production approval, or evidence of predictive validity.",
+  "cohortRuleCount": 2,
+  "rules": [
+    {
+      "ruleId": "rule-batch-6-northern-snakehead-01",
+      "selectionRationale": "Local tidal-Potomac feeding evidence, hourly solar input, exact May-June and tidal-water gates, and reduced minor magnitude.",
+      "validationScope": "Prospective targeted trips in tidal Potomac or comparable connected tidal reaches during May-June, stratified across morning, daylight, and overnight periods.",
+      "fixtureId": "rule-batch-6-northern-snakehead-01@candidate-v0.2.0",
+      "speciesId": "northern-snakehead",
+      "inputKey": "light-and-diel",
+      "forecastResolution": "hourly",
+      "sourceReviewStatus": "primary-full-text-preflight-complete",
+      "maximumAbsoluteModifier": 0.03,
+      "offlineValidationSelected": true,
+      "liveShadowEligible": false,
+      "productionEligible": false
+    },
+    {
+      "ruleId": "rule-batch-6-walleye-02",
+      "selectionRationale": "Direct compulsory-creel catchability endpoint, hourly solar input, simple nonstacking light representation, and conservative bounded uplift.",
+      "validationScope": "Prospective targeted trips on documented NOVA or upper-Potomac lake/reservoir walleye waters, stratified across dawn, day, and dusk.",
+      "fixtureId": "rule-batch-6-walleye-02@candidate-v0.2.0",
+      "speciesId": "walleye",
+      "inputKey": "light-and-diel",
+      "forecastResolution": "hourly",
+      "sourceReviewStatus": "primary-full-text-preflight-complete",
+      "maximumAbsoluteModifier": 0.05,
+      "offlineValidationSelected": true,
+      "liveShadowEligible": false,
+      "productionEligible": false
+    }
+  ],
+  "observationContract": {
+    "unitOfAnalysis": "one completed targeted angling trip for one species and one continuous fishing interval",
+    "requiredFields": [
+      "observationId",
+      "occurredAtStart",
+      "occurredAtEnd",
+      "receivedAt",
+      "spotId",
+      "waterbodyId",
+      "speciesId",
+      "targetedSpecies",
+      "anglerCount",
+      "effortMinutes",
+      "catchCount",
+      "zeroCatchExplicit",
+      "sourceType",
+      "modelVersion",
+      "conditionReplayId",
+      "consentForAggregateAnalysis"
+    ],
+    "requiredPractices": [
+      "Record zero-catch trips rather than collecting catches only.",
+      "Lock the model version, fixture hash, and analysis plan before a trip can enter confirmatory evaluation.",
+      "Record the actual named spot and start/end time supplied by the angler; do not freeze a forecast in the trip-entry flow.",
+      "Reconstruct environmental inputs from independently archived, time-indexed sources without using the catch outcome.",
+      "Keep targeted and incidental catches separate.",
+      "Exclude exact private coordinates from public outputs.",
+      "Never scrape or republish restricted third-party catch reports.",
+      "Keep ordinary private trip logs in the calibration store; never copy them automatically into the formal validation-observation store."
+    ]
+  },
+  "validationStages": [
+    {
+      "stage": "deterministic-contract",
+      "status": "complete",
+      "purpose": "Verify ranges, interpolation, gates, caps, missing inputs, and nonstacking behavior."
+    },
+    {
+      "stage": "prospective-pilot",
+      "status": "instrumentation-built-awaiting-preregistration-signoff-and-observations",
+      "purpose": "Collect effort-aware targeted trips, including explicit zero-catch trips, against a locked model version; environmental inputs are replayed from independent historical sources."
+    },
+    {
+      "stage": "held-out-comparison",
+      "status": "blocked-awaiting-prospective-pilot",
+      "purpose": "Compare candidate-v0.2.0 against the current score on waterbody and time holdouts."
+    },
+    {
+      "stage": "human-production-signoff",
+      "status": "blocked",
+      "purpose": "A named human reviewer accepts sources, curves, metrics, uncertainty, and release scope."
+    }
+  ]
+}

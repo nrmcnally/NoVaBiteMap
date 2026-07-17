@@ -100,11 +100,18 @@ def _fmt_hour(hour24: int) -> str:
     return f"{hour12}:00 {suffix}"
 
 
-def _species_activity(profile, location, availability, quality, weather, hydro_state):
+def _species_activity(
+    profile,
+    location,
+    availability,
+    quality,
+    weather,
+    hydro_state,
+    temperature_state,
+):
     """Returns (activity_value, available, best_window, forecast|None)."""
     if not weather or not weather.get("available") or not profile:
         return location.activity_estimate, False, location.best_window, None
-    water_temp = hydro_state.get("waterTempF") if hydro_state else None
     forecast = build_species_forecast(
         profile,
         weather["periods"],
@@ -117,7 +124,7 @@ def _species_activity(profile, location, availability, quality, weather, hydro_s
         base_confidence=70,
         hydrology=hydro_state if hydro_state and hydro_state.get("available") else None,
         alerts=weather.get("alerts", []),
-        water_temp_f=water_temp,
+        water_temperature=temperature_state,
     )
     hourly = forecast["hourly"]
     if not hourly:
@@ -134,6 +141,7 @@ def score_location_species(
     *,
     weather: dict | None = None,
     hydro_state: dict | None = None,
+    temperature_state: dict | None = None,
     profiles: dict[str, dict] | None = None,
     names: dict[str, SpeciesRecord] | None = None,
 ) -> dict:
@@ -190,7 +198,13 @@ def score_location_species(
             continue
 
         activity, activity_available, best_window, _forecast = _species_activity(
-            profile, location, availability_preview, quality_preview, weather, hydro_state
+            profile,
+            location,
+            availability_preview,
+            quality_preview,
+            weather,
+            hydro_state,
+            temperature_state,
         )
         live = live or activity_available
         scored = score_species_at_location(
@@ -231,6 +245,11 @@ def score_location_species(
         },
         "liveConditions": live,
         "hydrologyAvailable": bool(hydro_state and hydro_state.get("available")),
+        "waterTemperatureStatus": (
+            temperature_state.get("status", "unavailable")
+            if temperature_state
+            else "unavailable"
+        ),
         "species": offered,
         "community": sorted(community, key=lambda item: item["name"]),
         "insufficient": insufficient,

@@ -1,0 +1,3343 @@
+{
+  "schemaVersion": "0.1.0-draft",
+  "snapshotDate": "2026-07-16",
+  "decisionSha256": "a50227c4aff06b6a9e3af5067e9ab829ba41deeec62b06062dddac4109f473af",
+  "candidateBlueprintSha256": "8b0ccc4dede76985df06a6f0f8e2c4d436631324bd4b53d3d4c9f78b4bee4a14",
+  "notice": "This is a scientific review ledger, not a production-scoring configuration. No rule is approved for the live scorer.",
+  "summary": {
+    "scoreRuleCount": 61,
+    "reviewedRuleCount": 61,
+    "dispositionCounts": {
+      "context-only": 8,
+      "evidence-informed-candidate": 20,
+      "production-candidate": 2,
+      "unavailable-input": 26,
+      "zero-weight": 5
+    },
+    "productionApprovedCount": 0,
+    "liveScorerEligibleCount": 0,
+    "modelableRuleCount": 22,
+    "sourceReviewPendingCount": 0,
+    "sourceReviewBlockedCount": 1
+  },
+  "effectCapPolicy": {
+    "minor": {
+      "minimumMultiplier": 0.97,
+      "maximumMultiplier": 1.03,
+      "purpose": "Narrow, weak, indirect, or incompletely verified signals."
+    },
+    "moderate": {
+      "minimumMultiplier": 0.95,
+      "maximumMultiplier": 1.05,
+      "purpose": "Direct feeding or catchability direction with meaningful setting or transfer uncertainty."
+    },
+    "strong-conservative": {
+      "minimumMultiplier": 0.92,
+      "maximumMultiplier": 1.08,
+      "purpose": "Direct and comparatively strong evidence, still capped pending validation."
+    },
+    "severe-stress": {
+      "minimumMultiplier": 0.85,
+      "maximumMultiplier": 1.0,
+      "purpose": "Only for an exact severe physiological condition; never an ordinary-weather penalty."
+    }
+  },
+  "rules": [
+    {
+      "ruleId": "rule-batch-7-american-eel-01",
+      "speciesId": "american-eel",
+      "disposition": "evidence-informed-candidate",
+      "reasonCode": "correct-species-relevant-endpoint-bounded-model-input",
+      "rationale": "The evidence studies the correct species and a relevant feeding, foraging, activity, or catchability endpoint with an input BiteMap can supply or defensibly model. Geography, life stage, and study setting reduce confidence and effect size rather than automatically disqualifying the rule.",
+      "requiredActions": [
+        "Use the bounded candidate blueprint and its conservative engineering cap.",
+        "Complete primary-source passage review before connecting the rule to production.",
+        "Validate the response and preserve study-setting uncertainty in the displayed confidence."
+      ],
+      "input": "timeOfDay",
+      "inputKey": "light-and-diel",
+      "runtimeAvailability": "available",
+      "forecastResolution": "hourly",
+      "condition": "Late summer/early autumn estuarine yellow eels: just after sunset through night",
+      "direction": "positive; daylight strongly negative",
+      "strength": "strong within study",
+      "confidence": "high",
+      "endpointCategories": [
+        "feeding-or-foraging",
+        "hook-and-line-catchability"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-1e0aba8181a8d36b",
+          "citation": "Peter W. Sorensen; Marco L. Bianchini; Howard E. Winn (1986). Diel Foraging Activity of American Eels, Anguilla rostrata (LeSueur), in a Rhode Island Estuary. Fishery Bulletin 84(3):746-747.",
+          "url": "https://spo.nmfs.noaa.gov/sites/default/files/pdf-content/fish-bull/sorensen.pdf",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": {
+        "status": "primary-source-preflight-complete",
+        "checkedOn": "2026-07-16",
+        "sourceUrls": [
+          "https://spo.nmfs.noaa.gov/sites/default/files/pdf-content/fish-bull/sorensen.pdf"
+        ],
+        "findings": [
+          "The NOAA-hosted paper directly reports overwhelmingly nocturnal baited-trap capture, with the largest fraction just after sunset."
+        ],
+        "limitations": [
+          "Baited traps are not hook-and-line catch rates.",
+          "The study was conducted in a turbid Rhode Island estuary during early September and October, so the result is not a universal freshwater diel curve."
+        ],
+        "humanApproved": false
+      },
+      "translationBlueprint": {
+        "ruleId": "rule-batch-7-american-eel-01",
+        "evidenceClass": "field baited-capture and foraging proxy",
+        "modelConfidence": "moderate",
+        "sourceReviewStatus": "primary-full-text-preflight-complete",
+        "inputContract": "Local solar-relative time and selected date.",
+        "validRange": {
+          "season": "late summer through early autumn; strongest source support is September-October",
+          "solarWindow": "sunset through night, with strongest support during the first 90 minutes after sunset"
+        },
+        "integrationMode": "replace-generic-diel-factor",
+        "curveType": "solar-relative-window",
+        "proposedResponse": "Use a smooth, moderate post-sunset increase and a modest daylight decrease; attenuate outside the source season and in non-estuarine waters.",
+        "effectCapTier": "moderate",
+        "missingBehavior": "Neutral when local solar time cannot be calculated.",
+        "doubleCountingGuard": "Use one light/diel factor; do not stack sunset, clock time, cloud, and generic nocturnal weights.",
+        "validationRequirements": [
+          "sunset continuity",
+          "seasonal attenuation",
+          "single-light-factor",
+          "daylight-versus-night ordering"
+        ]
+      },
+      "inInitialValidationCohort": true,
+      "approvalStatus": "blocked-pending-source-curve-and-validation-review",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Complete source-passage review and validate the bounded evidence-informed curve before integration."
+    },
+    {
+      "ruleId": "rule-batch-7-american-eel-02",
+      "speciesId": "american-eel",
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "input": "waterTemperature",
+      "inputKey": "water-temperature",
+      "runtimeAvailability": "modeled",
+      "forecastResolution": "hourly-and-daily",
+      "condition": "Chronic acclimation at or below about 5 C for more than five weeks",
+      "direction": "strong negative/feeding cessation",
+      "strength": "strong within study",
+      "confidence": "high",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-cb0013f76e2ff574",
+          "citation": "Patrick J. Walsh; Glen D. Foster; Thomas W. Moon (1983). The Effects of Temperature on Metabolism of the American Eel Anguilla rostrata (LeSueur): Compensation in the Summer and Torpor in the Winter. Physiological Zoology 56(4):532-540.",
+          "url": "https://www.journals.uchicago.edu/doi/pdf/10.1086/physzool.56.4.30155876",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-runtime-contract",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Wait for the exact runtime input; do not substitute a scientifically different proxy."
+    },
+    {
+      "ruleId": "rule-batch-1-black-crappie-01",
+      "speciesId": "black-crappie",
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "input": "fishLengthCm",
+      "inputKey": "fish-size-or-age",
+      "runtimeAvailability": "unavailable",
+      "forecastResolution": "not-forecastable",
+      "condition": "26–32 cm total length within populations and gear contexts comparable to the five-reservoir tagging study",
+      "direction": "increase",
+      "strength": "moderate",
+      "confidence": "medium",
+      "endpointCategories": [
+        "hook-and-line-catchability"
+      ],
+      "concerns": [
+        "runtime-input-not-available"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-5cb9c808662b1a31",
+          "citation": "L. E. Miranda and B. S. Dorr (2000). Size Selectivity of Crappie Angling. North American Journal of Fisheries Management 20(3):706–710.",
+          "url": "https://doi.org/10.1577/1548-8675(2000)020%3C0706:SSOCA%3E2.3.CO;2",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 2,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-runtime-contract",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Wait for the exact runtime input; do not substitute a scientifically different proxy."
+    },
+    {
+      "ruleId": "rule-batch-1-black-crappie-02",
+      "speciesId": "black-crappie",
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "input": "fishLengthCm",
+      "inputKey": "fish-size-or-age",
+      "runtimeAvailability": "unavailable",
+      "forecastResolution": "not-forecastable",
+      "condition": "Near 20 cm or above approximately 32 cm within the measured 20.0–39.8 cm range",
+      "direction": "decrease",
+      "strength": "weak-to-moderate",
+      "confidence": "medium",
+      "endpointCategories": [
+        "hook-and-line-catchability"
+      ],
+      "concerns": [
+        "runtime-input-not-available"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-5cb9c808662b1a31",
+          "citation": "L. E. Miranda and B. S. Dorr (2000). Size Selectivity of Crappie Angling. North American Journal of Fisheries Management 20(3):706–710.",
+          "url": "https://doi.org/10.1577/1548-8675(2000)020%3C0706:SSOCA%3E2.3.CO;2",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 2,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-runtime-contract",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Wait for the exact runtime input; do not substitute a scientifically different proxy."
+    },
+    {
+      "ruleId": "rule-batch-10-blacknose-dace-01",
+      "speciesId": "blacknose-dace",
+      "disposition": "evidence-informed-candidate",
+      "reasonCode": "correct-species-relevant-endpoint-bounded-model-input",
+      "rationale": "The evidence studies the correct species and a relevant feeding, foraging, activity, or catchability endpoint with an input BiteMap can supply or defensibly model. Geography, life stage, and study setting reduce confidence and effect size rather than automatically disqualifying the rule.",
+      "requiredActions": [
+        "Use the bounded candidate blueprint and its conservative engineering cap.",
+        "Complete primary-source passage review before connecting the rule to production.",
+        "Validate the response and preserve study-setting uncertainty in the displayed confidence."
+      ],
+      "input": "time of day",
+      "inputKey": "light-and-diel",
+      "runtimeAvailability": "available",
+      "forecastResolution": "hourly",
+      "condition": "Summer conditions comparable to the reviewed Lake Ontario tributary",
+      "direction": "Increase expected feeding near crepuscular periods; main observed peak 1600-2000 h and smaller peak 0400-0800 h",
+      "strength": "moderate within-study; weak transfer",
+      "confidence": "medium",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-67b76864fb805625",
+          "citation": "James H. Johnson (1982). Summer feeding ecology of the Blacknose Dace, Rhinichthys atratulus, in a tributary of Lake Ontario. The Canadian Field-Naturalist 96(3):282-286.",
+          "url": "https://www.biodiversitylibrary.org/item/89040",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 0,
+          "abstractOnlyOccurrences": 1
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": {
+        "status": "primary-source-preflight-complete",
+        "checkedOn": "2026-07-16",
+        "sourceUrls": [
+          "https://www.biodiversitylibrary.org/item/89040",
+          "https://archive.org/download/canadianfieldnat1982otta/canadianfieldnat1982otta_djvu.txt"
+        ],
+        "findings": [
+          "The full-volume OCR and page scan identify a July 24-hour stomach-fullness study with a primary feeding peak from 16:00-20:00, a smaller increase from 04:00-08:00, the lowest feeding from 08:00-16:00, and a sharp decrease from 00:00-04:00."
+        ],
+        "limitations": [
+          "The chronology sampled one tributary of Lake Ontario during one July 24-hour period.",
+          "Clock intervals must be converted conservatively to local solar-relative periods rather than copied directly across latitude, longitude, and season."
+        ],
+        "humanApproved": false
+      },
+      "translationBlueprint": {
+        "ruleId": "rule-batch-10-blacknose-dace-01",
+        "evidenceClass": "single-stream stomach-fullness chronology",
+        "modelConfidence": "low",
+        "sourceReviewStatus": "primary-full-text-ocr-claim-confirmed",
+        "inputContract": "Local solar-relative time and selected date.",
+        "validRange": {
+          "season": "summer",
+          "observedClockWindows": "verified July study: primary peak 16:00-20:00, minor increase 04:00-08:00, lowest feeding 08:00-16:00, and a sharp decrease 00:00-04:00"
+        },
+        "integrationMode": "replace-generic-diel-factor",
+        "curveType": "two-crepuscular-shoulders",
+        "proposedResponse": "Allow only a minor dawn increase and a larger but still minor late-day increase in summer, expressed relative to local solar time rather than assuming the New York clock intervals transfer exactly.",
+        "effectCapTier": "minor",
+        "missingBehavior": "Neutral outside summer or when local solar time cannot be calculated.",
+        "doubleCountingGuard": "Do not add this to a generic crepuscular multiplier.",
+        "validationRequirements": [
+          "verified 16:00-20:00 primary and 04:00-08:00 secondary peak ordering",
+          "summer-only activation",
+          "solar-relative conversion",
+          "maximum-contribution cap"
+        ]
+      },
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-pending-source-curve-and-validation-review",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Complete source-passage review and validate the bounded evidence-informed curve before integration."
+    },
+    {
+      "ruleId": "rule-batch-4-blue-catfish-01",
+      "speciesId": "blue-catfish",
+      "disposition": "evidence-informed-candidate",
+      "reasonCode": "correct-species-relevant-endpoint-bounded-model-input",
+      "rationale": "The evidence studies the correct species and a relevant feeding, foraging, activity, or catchability endpoint with an input BiteMap can supply or defensibly model. Geography, life stage, and study setting reduce confidence and effect size rather than automatically disqualifying the rule.",
+      "requiredActions": [
+        "Use the bounded candidate blueprint and its conservative engineering cap.",
+        "Complete primary-source passage review before connecting the rule to production.",
+        "Validate the response and preserve study-setting uncertainty in the displayed confidence."
+      ],
+      "input": "waterTemperatureC",
+      "inputKey": "water-temperature",
+      "runtimeAvailability": "modeled",
+      "forecastResolution": "hourly-and-daily",
+      "condition": "Approximately 5 C versus 15-25 C under the Schmitt laboratory design",
+      "direction": "decrease below 15 C relative to tested warmer treatments",
+      "strength": "moderate",
+      "confidence": "medium-high",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-0d1d33c4c91c629c",
+          "citation": "Joseph D. Schmitt, Corbin D. Hilling, and Donald J. Orth (2021). Estimates of Food Consumption Rates for Invasive Blue Catfish. Transactions of the American Fisheries Society 150(4):465-476.",
+          "url": "https://vtechworks.lib.vt.edu/bitstreams/0a0bf12b-c487-46d4-b63c-88a3a2353eb0/download",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": {
+        "ruleId": "rule-batch-4-blue-catfish-01",
+        "evidenceClass": "controlled maximum-ration experiment using Virginia tidal-river fish",
+        "modelConfidence": "moderate-high",
+        "sourceReviewStatus": "primary-full-text-claim-confirmed",
+        "inputContract": "Observed or modeled water temperature in degrees C with provenance and uncertainty.",
+        "validRange": {
+          "temperatureC": [
+            5,
+            25
+          ],
+          "anchors": "5 C lower consumption; 15 C and 25 C statistically similar"
+        },
+        "integrationMode": "calibrate-existing-water-temperature-factor",
+        "curveType": "bounded-anchor-interpolation",
+        "proposedResponse": "Reduce the existing thermal suitability toward 5 C, reach neutral by 15 C, and add no bonus from 15-25 C.",
+        "effectCapTier": "moderate",
+        "missingBehavior": "Fall back to the documented seasonal prior when water temperature is unavailable.",
+        "doubleCountingGuard": "Modify the existing thermal curve; never multiply a separate cold penalty by it.",
+        "validationRequirements": [
+          "5-15 C monotonic recovery",
+          "15-25 C plateau",
+          "no extrapolation beyond tested range",
+          "modeled-temperature uncertainty attenuation"
+        ]
+      },
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-pending-source-curve-and-validation-review",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Complete source-passage review and validate the bounded evidence-informed curve before integration."
+    },
+    {
+      "ruleId": "rule-batch-4-blue-catfish-02",
+      "speciesId": "blue-catfish",
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "input": "fishTotalLengthMm",
+      "inputKey": "fish-size-or-age",
+      "runtimeAvailability": "unavailable",
+      "forecastResolution": "not-forecastable",
+      "condition": "840-890 mm in sampled Missouri River reaches or 891-1,015 mm in sampled Mississippi River reaches",
+      "direction": "increase in observed exploitation relative to other sampled sizes",
+      "strength": "moderate",
+      "confidence": "medium-low",
+      "endpointCategories": [
+        "hook-and-line-catchability"
+      ],
+      "concerns": [
+        "low-nova-transferability",
+        "runtime-input-not-available"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-6505d43a6e709294",
+          "citation": "Kyle Robert Winders and Joseph A. McMullen (2021). Size-Specific Exploitation of Flathead Catfish and Blue Catfish by Recreational and Commercial Fishers in the Missouri and Mississippi Rivers, Missouri. North American Journal of Fisheries Management 41(S1):S247-S254.",
+          "url": "https://academic.oup.com/najfm/article/41/S1/S247/7749315",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 0,
+          "abstractOnlyOccurrences": 2
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-runtime-contract",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Wait for the exact runtime input; do not substitute a scientifically different proxy."
+    },
+    {
+      "ruleId": "rule-batch-1-bluegill-01",
+      "speciesId": "bluegill",
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "input": "intermittentArtificialLightLux",
+      "inputKey": "local-artificial-light",
+      "runtimeAvailability": "unavailable",
+      "forecastResolution": "not-forecastable",
+      "condition": "Intermittent nighttime artificial light at 12 lx, matching the juvenile mesocosm treatment",
+      "direction": "decrease",
+      "strength": "moderate",
+      "confidence": "high",
+      "endpointCategories": [
+        "hook-and-line-catchability"
+      ],
+      "concerns": [
+        "runtime-input-not-available"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-641e670191303cde",
+          "citation": "Susanna E. Harrison and Suzanne M. Gray (2024). Effects of light pollution on Bluegill foraging behavior. Transactions of the American Fisheries Society 153(2):152–162.",
+          "url": "https://doi.org/10.1002/tafs.10451",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-runtime-contract",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Wait for the exact runtime input; do not substitute a scientifically different proxy."
+    },
+    {
+      "ruleId": "rule-batch-3-brook-trout-01",
+      "speciesId": "brook-trout",
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "input": "waterTemperatureC_x_creekChubPresence",
+      "inputKey": "water-temperature",
+      "runtimeAvailability": "modeled",
+      "forecastResolution": "hourly-and-daily",
+      "condition": "18-22 C with creek chub present in the Colby flow-through-tank design",
+      "direction": "decrease",
+      "strength": "moderate",
+      "confidence": "medium",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [
+        "low-nova-transferability"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-fbf02a6ff4e2b9e9",
+          "citation": "Bryan R. Colby, Jonathan M. Niles, and Matthew Persons (2022). Shifting thermal regimes influence competitive feeding and aggression dynamics of brook trout (Salvelinus fontinalis) and creek chub (Semotilus atromaculatus). Ecology and Evolution 12:e9056.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9251879",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 2,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-runtime-contract",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Wait for the exact runtime input; do not substitute a scientifically different proxy."
+    },
+    {
+      "ruleId": "rule-batch-3-brook-trout-02",
+      "speciesId": "brook-trout",
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "input": "populationOrStrain",
+      "inputKey": "population-or-strain",
+      "runtimeAvailability": "unavailable",
+      "forecastResolution": "static-unavailable",
+      "condition": "East Branch Fox versus Au Sable strains in the Michigan exploitation experiment",
+      "direction": "increase for the faster-growing strain",
+      "strength": "weak",
+      "confidence": "low-medium",
+      "endpointCategories": [
+        "hook-and-line-catchability"
+      ],
+      "concerns": [
+        "runtime-input-not-available"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-b495ce9b72b07fb1",
+          "citation": "Andrew J. Nuhfer and Gaylord R. Alexander (1994). Growth, Survival, and Vulnerability to Angling of Three Wild Brook Trout Strains Exposed to Different Levels of Angler Exploitation. North American Journal of Fisheries Management 14(2):423-434.",
+          "url": "https://www.tandfonline.com/doi/abs/10.1577/1548-8675(1994)014%3C0423:GSAVTA%3E2.3.CO%3B2",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 0,
+          "abstractOnlyOccurrences": 1
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-runtime-contract",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Wait for the exact runtime input; do not substitute a scientifically different proxy."
+    },
+    {
+      "ruleId": "rule-batch-9-brown-bullhead-01",
+      "speciesId": "brown-bullhead",
+      "disposition": "evidence-informed-candidate",
+      "reasonCode": "correct-species-relevant-endpoint-bounded-model-input",
+      "rationale": "The evidence studies the correct species and a relevant feeding, foraging, activity, or catchability endpoint with an input BiteMap can supply or defensibly model. Geography, life stage, and study setting reduce confidence and effect size rather than automatically disqualifying the rule.",
+      "requiredActions": [
+        "Use the bounded candidate blueprint and its conservative engineering cap.",
+        "Complete primary-source passage review before connecting the rule to production.",
+        "Validate the response and preserve study-setting uncertainty in the displayed confidence."
+      ],
+      "input": "water temperature",
+      "inputKey": "water-temperature",
+      "runtimeAvailability": "modeled",
+      "forecastResolution": "hourly-and-daily",
+      "condition": "After sustained acclimation: compare approximately 25 C with 18 C",
+      "direction": "decrease feeding performance at 25 C",
+      "strength": "strong within study; do not calibrate universally",
+      "confidence": "high internal / medium transfer",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-6b21c6f9ee83706a",
+          "citation": "Christophe Benjamin; Jaclyn Hill; Anthony Ricciardi (2026). Thermal effects on feeding efficiency and body condition in invasive and native benthivorous freshwater fishes. Biological Invasions 28:51.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12901266",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 2,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": {
+        "ruleId": "rule-batch-9-brown-bullhead-01",
+        "evidenceClass": "controlled acclimated feeding experiment",
+        "modelConfidence": "moderate",
+        "sourceReviewStatus": "primary-full-text-claim-confirmed",
+        "inputContract": "Observed or modeled water temperature plus a sustained-temperature indicator.",
+        "validRange": {
+          "temperatureC": [
+            18,
+            25
+          ],
+          "exposure": "sustained acclimation, not an acute warm afternoon"
+        },
+        "integrationMode": "calibrate-existing-water-temperature-factor",
+        "curveType": "two-anchor-warm-side-penalty",
+        "proposedResponse": "Treat 18 C as neutral and apply a smoothly increasing, capped penalty approaching 25 C only after sustained warm exposure.",
+        "effectCapTier": "moderate",
+        "missingBehavior": "Neutral when temperature history is unavailable.",
+        "doubleCountingGuard": "Use this to shape the warm side of the thermal factor; do not stack it with a generic heat penalty.",
+        "validationRequirements": [
+          "18 C neutral anchor",
+          "25 C capped penalty",
+          "acute-warming neutral test",
+          "no inferred optimum below 18 C"
+        ]
+      },
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-pending-source-curve-and-validation-review",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Complete source-passage review and validate the bounded evidence-informed curve before integration."
+    },
+    {
+      "ruleId": "rule-batch-9-brown-bullhead-02",
+      "speciesId": "brown-bullhead",
+      "disposition": "context-only",
+      "reasonCode": "not-a-portable-bite-endpoint",
+      "rationale": "The result is useful biological or interpretive context but does not isolate a portable feeding or hook-and-line catchability effect suitable for a score modifier.",
+      "requiredActions": [
+        "Use the finding in Fish Guide or methodology explanations where relevant.",
+        "Do not convert movement, habitat occupancy, growth, survival, or a confounded seasonal observation into a bite weight."
+      ],
+      "input": "short winter temperature change",
+      "inputKey": "water-temperature",
+      "runtimeAvailability": "modeled",
+      "forecastResolution": "hourly-and-daily",
+      "condition": "Within the studied cold range, 3 C to 4.5 C",
+      "direction": "increase modeled predation potential",
+      "strength": "weak portable rule",
+      "confidence": "low",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [
+        "low-nova-transferability"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-512c3dccf9ffc809",
+          "citation": "Alan Fritsch; Pavel Staněk; Miloš Buřič; Antonín Kouba; Lukáš Veselý; Paride Balzani (2025). Winter predatory efficiency and periodicity of the non-native brown bullhead Ameiurus nebulosus. Journal of Fish Biology 107(6):1889-1897.",
+          "url": "https://onlinelibrary.wiley.com/doi/10.1111/jfb.70189",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "non-scoring-context",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Use as explanatory biological context, not as a score modifier."
+    },
+    {
+      "ruleId": "rule-batch-9-brown-bullhead-03",
+      "speciesId": "brown-bullhead",
+      "disposition": "evidence-informed-candidate",
+      "reasonCode": "correct-species-relevant-endpoint-bounded-model-input",
+      "rationale": "The evidence studies the correct species and a relevant feeding, foraging, activity, or catchability endpoint with an input BiteMap can supply or defensibly model. Geography, life stage, and study setting reduce confidence and effect size rather than automatically disqualifying the rule.",
+      "requiredActions": [
+        "Use the bounded candidate blueprint and its conservative engineering cap.",
+        "Complete primary-source passage review before connecting the rule to production.",
+        "Validate the response and preserve study-setting uncertainty in the displayed confidence."
+      ],
+      "input": "time of day / underwater light",
+      "inputKey": "light-and-diel",
+      "runtimeAvailability": "available",
+      "forecastResolution": "hourly",
+      "condition": "Winter lab conditions comparable to the reviewed experiment",
+      "direction": "increase at night",
+      "strength": "weak and seasonal",
+      "confidence": "low-medium",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [
+        "low-nova-transferability"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-512c3dccf9ffc809",
+          "citation": "Alan Fritsch; Pavel Staněk; Miloš Buřič; Antonín Kouba; Lukáš Veselý; Paride Balzani (2025). Winter predatory efficiency and periodicity of the non-native brown bullhead Ameiurus nebulosus. Journal of Fish Biology 107(6):1889-1897.",
+          "url": "https://onlinelibrary.wiley.com/doi/10.1111/jfb.70189",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": {
+        "ruleId": "rule-batch-9-brown-bullhead-03",
+        "evidenceClass": "winter controlled predation periodicity",
+        "modelConfidence": "low-medium",
+        "sourceReviewStatus": "primary-abstract-claim-confirmed",
+        "inputContract": "Local solar-relative time, selected date, and very-cold-water state.",
+        "validRange": {
+          "season": "winter",
+          "temperatureC": [
+            3,
+            4.5
+          ]
+        },
+        "integrationMode": "replace-generic-diel-factor-when-cold",
+        "curveType": "night-versus-day-categorical",
+        "proposedResponse": "Apply only a minor nighttime increase under comparable winter water temperatures; otherwise retain the baseline diel profile.",
+        "effectCapTier": "minor",
+        "missingBehavior": "Neutral if water temperature is unavailable or outside the winter study context.",
+        "doubleCountingGuard": "Replace, rather than stack with, the generic nocturnal multiplier.",
+        "validationRequirements": [
+          "winter-temperature gate",
+          "night-versus-day ordering",
+          "nonwinter neutral test",
+          "single-diel-factor"
+        ]
+      },
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-pending-source-curve-and-validation-review",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Complete source-passage review and validate the bounded evidence-informed curve before integration."
+    },
+    {
+      "ruleId": "rule-batch-9-brown-bullhead-04",
+      "speciesId": "brown-bullhead",
+      "disposition": "evidence-informed-candidate",
+      "reasonCode": "correct-species-relevant-endpoint-bounded-model-input",
+      "rationale": "The evidence studies the correct species and a relevant feeding, foraging, activity, or catchability endpoint with an input BiteMap can supply or defensibly model. Geography, life stage, and study setting reduce confidence and effect size rather than automatically disqualifying the rule.",
+      "requiredActions": [
+        "Use the bounded candidate blueprint and its conservative engineering cap.",
+        "Complete primary-source passage review before connecting the rule to production.",
+        "Validate the response and preserve study-setting uncertainty in the displayed confidence."
+      ],
+      "input": "very cold water guardrail",
+      "inputKey": "water-temperature",
+      "runtimeAvailability": "modeled",
+      "forecastResolution": "hourly-and-daily",
+      "condition": "Approximately 2-3 C",
+      "direction": "suppress expected feeding but never force a universal zero",
+      "strength": "weak",
+      "confidence": "low",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [
+        "low-nova-transferability"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-512c3dccf9ffc809",
+          "citation": "Alan Fritsch; Pavel Staněk; Miloš Buřič; Antonín Kouba; Lukáš Veselý; Paride Balzani (2025). Winter predatory efficiency and periodicity of the non-native brown bullhead Ameiurus nebulosus. Journal of Fish Biology 107(6):1889-1897.",
+          "url": "https://onlinelibrary.wiley.com/doi/10.1111/jfb.70189",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        },
+        {
+          "sourceId": "src-fc1b987fc1624fd3",
+          "citation": "Ronald R. Massengill (1973). Change in feeding and body condition of brown bullheads overwintering in the heated effluent of a power plant. Chesapeake Science 14(2):138-141.",
+          "url": "https://link.springer.com/article/10.2307/1350881",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 0,
+          "abstractOnlyOccurrences": 1
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": {
+        "ruleId": "rule-batch-9-brown-bullhead-04",
+        "evidenceClass": "winter feeding experiment plus confounded field comparison",
+        "modelConfidence": "low",
+        "sourceReviewStatus": "primary-abstract-claims-confirmed",
+        "inputContract": "Observed or modeled water temperature in degrees C.",
+        "validRange": {
+          "temperatureC": [
+            2,
+            4.5
+          ],
+          "anchors": "feeding observed at 3 C; stronger modeled predation by 4.5 C; one field comparison reported no feeding near 2 C"
+        },
+        "integrationMode": "calibrate-existing-water-temperature-factor",
+        "curveType": "very-cold-guardrail",
+        "proposedResponse": "Keep expected feeding nonzero at 3 C, apply a stronger capped penalty near 2 C, and recover toward 4.5 C without claiming a universal threshold.",
+        "effectCapTier": "moderate",
+        "missingBehavior": "Use the seasonal prior when water temperature is unavailable.",
+        "doubleCountingGuard": "This is the cold tail of the thermal factor, not an additional winter penalty.",
+        "validationRequirements": [
+          "nonzero 3 C response",
+          "2 C lower than 3 C",
+          "continuous recovery to 4.5 C",
+          "no universal zero"
+        ]
+      },
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-pending-source-curve-and-validation-review",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Complete source-passage review and validate the bounded evidence-informed curve before integration."
+    },
+    {
+      "ruleId": "rule-batch-3-brown-trout-01",
+      "speciesId": "brown-trout",
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "input": "recentAnglingDisturbance",
+      "inputKey": "recent-angling-or-capture-history",
+      "runtimeAvailability": "unavailable",
+      "forecastResolution": "not-forecastable",
+      "condition": "Fish caught/released or closely disturbed during the previous several days in clear, sight-fished backcountry rivers",
+      "direction": "decrease",
+      "strength": "moderate",
+      "confidence": "medium",
+      "endpointCategories": [
+        "hook-and-line-catchability"
+      ],
+      "concerns": [
+        "runtime-input-not-available"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-d29afbc2759c16cd",
+          "citation": "Roger G. Young and John W. Hayes (2004). Angling Pressure and Trout Catchability: Behavioral Observations of Brown Trout in Two New Zealand Backcountry Rivers. North American Journal of Fisheries Management 24(4):1203-1213.",
+          "url": "https://www.tandfonline.com/doi/full/10.1577/M03-177.1",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-runtime-contract",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Wait for the exact runtime input; do not substitute a scientifically different proxy."
+    },
+    {
+      "ruleId": "rule-batch-3-brown-trout-02",
+      "speciesId": "brown-trout",
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "input": "suspendedSedimentMgL",
+      "inputKey": "turbidity-or-suspended-sediment",
+      "runtimeAvailability": "conditional",
+      "forecastResolution": "observed-or-hourly",
+      "condition": "Approximately 450-600 mg/L in the Greer experimental design",
+      "direction": "decrease",
+      "strength": "moderate",
+      "confidence": "medium",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-ace125c43826c81f",
+          "citation": "Melanie J. C. Greer, Simone K. Crow, Brendan J. Hicks, and Gerard P. Closs (2015). The effects of suspended sediment on brown trout (Salmo trutta) feeding and respiration after macrophyte control. New Zealand Journal of Marine and Freshwater Research 49(2):278-285.",
+          "url": "https://doi.org/10.1080/00288330.2015.1013140",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 0,
+          "abstractOnlyOccurrences": 1
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-runtime-contract",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Wait for the exact runtime input; do not substitute a scientifically different proxy."
+    },
+    {
+      "ruleId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01",
+      "speciesId": "channel-catfish",
+      "disposition": "evidence-informed-candidate",
+      "reasonCode": "correct-species-relevant-endpoint-bounded-model-input",
+      "rationale": "The evidence studies the correct species and a relevant feeding, foraging, activity, or catchability endpoint with an input BiteMap can supply or defensibly model. Geography, life stage, and study setting reduce confidence and effect size rather than automatically disqualifying the rule.",
+      "requiredActions": [
+        "Use the bounded candidate blueprint and its conservative engineering cap.",
+        "Complete primary-source passage review before connecting the rule to production.",
+        "Validate the response and preserve study-setting uncertainty in the displayed confidence."
+      ],
+      "input": "seasonalWaterTemperature",
+      "inputKey": "water-temperature",
+      "runtimeAvailability": "modeled",
+      "forecastResolution": "hourly-and-daily",
+      "condition": "Progressive cooling from summer toward winter within the population's recent thermal history",
+      "direction": "decrease",
+      "strength": "moderate",
+      "confidence": "medium",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-5195bf2bfc42c218",
+          "citation": "Adam S. Nanninga, Carole R. Engle, Nathan Stone, and Andrew E. Goodwin (2011). Effects of Winter Feeding of Channel Catfish on Production in Multibatch Systems. North American Journal of Aquaculture, volume 73, issue 1, pages 60-67.",
+          "url": "https://academic.oup.com/naja/article/73/1/60/7834420",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        },
+        {
+          "sourceId": "src-c26a2f4f4f773894",
+          "citation": "Dilip Mathur (1970). Food Habits and Feeding Chronology of Channel Catfish Ictalurus punctatus (Rafinesque), in Conowingo Reservoir. Proceedings of the Annual Conference of the Southeastern Association of Game and Fish Commissioners, volume 24, pages 377-386.",
+          "url": "https://seafwa.org/sites/default/files/journal-articles/MATHUR-377.pdf",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": {
+        "status": "primary-source-preflight-complete",
+        "checkedOn": "2026-07-16",
+        "sourceUrls": [
+          "https://seafwa.org/sites/default/files/journal-articles/MATHUR-377.pdf",
+          "https://www.tandfonline.com/doi/abs/10.1080/15222055.2011.544628"
+        ],
+        "findings": [
+          "The field chronology and winter-feeding experiment support continued but seasonally changing feeding, including feeding at cold temperatures."
+        ],
+        "limitations": [
+          "The sources do not justify a single smooth seasonal penalty independent of acclimation, prey, and system type.",
+          "One source is a reservoir stomach-content study and the other is an aquaculture pond experiment."
+        ],
+        "humanApproved": false
+      },
+      "translationBlueprint": {
+        "ruleId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01",
+        "evidenceClass": "reservoir stomach chronology plus winter feeding experiment",
+        "modelConfidence": "moderate",
+        "sourceReviewStatus": "primary-full-text-preflight-complete",
+        "inputContract": "Observed or modeled water temperature and recent thermal history.",
+        "validRange": {
+          "temperatureC": [
+            7,
+            21.1
+          ],
+          "anchors": "continued feeding at 7 C; progressively higher intake across <=10, 10.1-15.6, and 15.7-21.1 C"
+        },
+        "integrationMode": "calibrate-existing-water-temperature-factor",
+        "curveType": "bounded-cold-season-anchors",
+        "proposedResponse": "Represent progressive cold-season suppression without cessation; use temperature rather than calendar month as the main driver.",
+        "effectCapTier": "strong-conservative",
+        "missingBehavior": "Fall back to the monthly seasonal prior.",
+        "doubleCountingGuard": "Blend this into the single seasonal-thermal factor; do not multiply monthly winter and cold-water penalties.",
+        "validationRequirements": [
+          "feeding remains nonzero at 7 C",
+          "monotonic cold-to-mild recovery",
+          "season-temperature blend",
+          "no ration-to-score conversion"
+        ]
+      },
+      "inInitialValidationCohort": true,
+      "approvalStatus": "blocked-pending-source-curve-and-validation-review",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Complete source-passage review and validate the bounded evidence-informed curve before integration."
+    },
+    {
+      "ruleId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-02",
+      "speciesId": "channel-catfish",
+      "disposition": "evidence-informed-candidate",
+      "reasonCode": "correct-species-relevant-endpoint-bounded-model-input",
+      "rationale": "The evidence studies the correct species and a relevant feeding, foraging, activity, or catchability endpoint with an input BiteMap can supply or defensibly model. Geography, life stage, and study setting reduce confidence and effect size rather than automatically disqualifying the rule.",
+      "requiredActions": [
+        "Use the bounded candidate blueprint and its conservative engineering cap.",
+        "Complete primary-source passage review before connecting the rule to production.",
+        "Validate the response and preserve study-setting uncertainty in the displayed confidence."
+      ],
+      "input": "shortTermWaterTemperatureTrend",
+      "inputKey": "water-temperature",
+      "runtimeAvailability": "modeled",
+      "forecastResolution": "hourly-and-daily",
+      "condition": "Cooling day versus warming or thermally stable day during cold-water conditions",
+      "direction": "decrease",
+      "strength": "weak",
+      "confidence": "medium",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-5195bf2bfc42c218",
+          "citation": "Adam S. Nanninga, Carole R. Engle, Nathan Stone, and Andrew E. Goodwin (2011). Effects of Winter Feeding of Channel Catfish on Production in Multibatch Systems. North American Journal of Aquaculture, volume 73, issue 1, pages 60-67.",
+          "url": "https://academic.oup.com/naja/article/73/1/60/7834420",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": {
+        "ruleId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-02",
+        "evidenceClass": "managed winter feeding trend experiment",
+        "modelConfidence": "moderate",
+        "sourceReviewStatus": "primary-full-text-claim-confirmed",
+        "inputContract": "Water-temperature change over the preceding 24-48 hours in degrees C.",
+        "validRange": {
+          "temperatureC": [
+            7,
+            21.1
+          ],
+          "trend": "cooling versus stable or warming winter conditions"
+        },
+        "integrationMode": "bounded-secondary-thermal-modifier",
+        "curveType": "temperature-trend-categorical",
+        "proposedResponse": "Apply a minor penalty on cooling days in the tested cold-water range; stable and warming conditions receive no bonus above neutral.",
+        "effectCapTier": "minor",
+        "missingBehavior": "Neutral without at least 24 hours of comparable water-temperature history.",
+        "doubleCountingGuard": "Cap the combined level-and-trend thermal contribution; do not use air-pressure or weather-front labels as substitutes.",
+        "validationRequirements": [
+          "cooling-versus-stable ordering",
+          "outside-range neutral test",
+          "missing-history neutral test",
+          "combined-thermal cap"
+        ]
+      },
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-pending-source-curve-and-validation-review",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Complete source-passage review and validate the bounded evidence-informed curve before integration."
+    },
+    {
+      "ruleId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03",
+      "speciesId": "channel-catfish",
+      "disposition": "evidence-informed-candidate",
+      "reasonCode": "correct-species-relevant-endpoint-bounded-model-input",
+      "rationale": "The evidence studies the correct species and a relevant feeding, foraging, activity, or catchability endpoint with an input BiteMap can supply or defensibly model. Geography, life stage, and study setting reduce confidence and effect size rather than automatically disqualifying the rule.",
+      "requiredActions": [
+        "Use the bounded candidate blueprint and its conservative engineering cap.",
+        "Complete primary-source passage review before connecting the rule to production.",
+        "Validate the response and preserve study-setting uncertainty in the displayed confidence."
+      ],
+      "input": "extremeWarmWater",
+      "inputKey": "water-temperature",
+      "runtimeAvailability": "modeled",
+      "forecastResolution": "hourly-and-daily",
+      "condition": "Sustained cyclic water temperature reaching 31-35 C (87.8-95 F)",
+      "direction": "decrease",
+      "strength": "moderate",
+      "confidence": "medium",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-c6b372a6470b7ae1",
+          "citation": "Michael B. Arnold, Eugene L. Torrans, and Peter J. Allen (2013). Influences of Cyclic, High Temperatures on Juvenile Channel Catfish Growth and Feeding. North American Journal of Aquaculture, volume 75, issue 1, pages 77-84.",
+          "url": "https://academic.oup.com/naja/article/75/1/77/7834728",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": {
+        "status": "primary-source-preflight-complete",
+        "checkedOn": "2026-07-16",
+        "sourceUrls": [
+          "https://www.ars.usda.gov/research/publications/publication/?seqNo115=287364"
+        ],
+        "findings": [
+          "The USDA record confirms lower feed consumption, growth, and survival in the hottest 31-35 C cyclic treatment."
+        ],
+        "limitations": [
+          "The experiment used juvenile channel catfish in aquaculture tanks, so the result supports a severe-heat guardrail more directly than a field catchability curve."
+        ],
+        "humanApproved": false
+      },
+      "translationBlueprint": {
+        "ruleId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03",
+        "evidenceClass": "controlled cyclic extreme-heat feeding experiment",
+        "modelConfidence": "moderate",
+        "sourceReviewStatus": "primary-full-text-preflight-complete",
+        "inputContract": "Observed or modeled water temperature plus recent heat-exposure history.",
+        "validRange": {
+          "temperatureC": [
+            23,
+            35
+          ],
+          "severeTreatmentC": [
+            31,
+            35
+          ]
+        },
+        "integrationMode": "calibrate-existing-water-temperature-factor",
+        "curveType": "extreme-heat-guardrail",
+        "proposedResponse": "Apply no separate bonus at 27-31 C; increase the existing high-temperature penalty only as sustained conditions enter 31-35 C.",
+        "effectCapTier": "severe-stress",
+        "missingBehavior": "Neutral beyond the ordinary thermal factor when heat history is unavailable.",
+        "doubleCountingGuard": "Replace the high-temperature tail of the thermal curve and ignore stress-related tank activity as positive catchability.",
+        "validationRequirements": [
+          "31 C onset continuity",
+          "35 C maximum penalty cap",
+          "no 27-31 C bonus",
+          "stress-activity exclusion"
+        ]
+      },
+      "inInitialValidationCohort": true,
+      "approvalStatus": "blocked-pending-source-curve-and-validation-review",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Complete source-passage review and validate the bounded evidence-informed curve before integration."
+    },
+    {
+      "ruleId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-04",
+      "speciesId": "channel-catfish",
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "input": "dissolvedOxygenPercentSaturation",
+      "inputKey": "dissolved-oxygen",
+      "runtimeAvailability": "conditional",
+      "forecastResolution": "observed-only",
+      "condition": "Declining oxygen saturation below well-oxygenated conditions, especially near 36% or lower in the studied experiments",
+      "direction": "decrease",
+      "strength": "moderate",
+      "confidence": "medium",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [
+        "low-nova-transferability"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-09df4398fc300b80",
+          "citation": "James W. Andrews, Takeshi Murai, and George Gibbons (1973). The Influence of Dissolved Oxygen on the Growth of Channel Catfish. Transactions of the American Fisheries Society, volume 102, issue 4, pages 835-838.",
+          "url": "https://academic.oup.com/tafs/article-abstract/102/4/835/7895306",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 0,
+          "abstractOnlyOccurrences": 1
+        },
+        {
+          "sourceId": "src-9ae7f244ebff67ac",
+          "citation": "J. Alejandro Buentello, Delbert M. Gatlin III, and William H. Neill (2000). Effects of water temperature and dissolved oxygen on daily feed consumption, feed utilization and growth of channel catfish (Ictalurus punctatus). Aquaculture, volume 182, issues 3-4, pages 339-352.",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0044848699002744",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-runtime-contract",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Wait for the exact runtime input; do not substitute a scientifically different proxy."
+    },
+    {
+      "ruleId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-05",
+      "speciesId": "channel-catfish",
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "input": "minimumDailyDissolvedOxygen",
+      "inputKey": "dissolved-oxygen",
+      "runtimeAvailability": "conditional",
+      "forecastResolution": "observed-only",
+      "condition": "Warm pond or reservoir nightly minimum below approximately 3.0 mg/L, with stronger penalty below 2.5 mg/L",
+      "direction": "decrease",
+      "strength": "moderate",
+      "confidence": "medium",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-1e0bd3628d8b6bb3",
+          "citation": "Eugene L. Torrans (2008). Production Responses of Channel Catfish to Minimum Daily Dissolved Oxygen Concentrations in Earthen Ponds. North American Journal of Aquaculture, volume 70, issue 4, pages 371-381.",
+          "url": "https://academic.oup.com/naja/article/70/4/371/7849058",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-runtime-contract",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Wait for the exact runtime input; do not substitute a scientifically different proxy."
+    },
+    {
+      "ruleId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-06",
+      "speciesId": "channel-catfish",
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "input": "recentStocking",
+      "inputKey": "recent-stocking-event",
+      "runtimeAvailability": "unavailable",
+      "forecastResolution": "not-currently-ingested",
+      "condition": "Same day or first daily fishing period after a documented put-and-take Channel Catfish stocking",
+      "direction": "increase",
+      "strength": "moderate",
+      "confidence": "medium",
+      "endpointCategories": [
+        "hook-and-line-catchability"
+      ],
+      "concerns": [
+        "runtime-input-not-available"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-8c1696b7ba12d100",
+          "citation": "Thomas J. Hungerford, Kristopher A. Bodine, John E. Tibbs, Randall A. Myers, David Prangnell, Daniel J. Daugherty, and J. Warren Schlechte (2021). Relative Catchability of Channel Catfish and Blue Catfish x Channel Catfish Hybrids by Anglers in Put-and-Take Urban Fisheries. North American Journal of Fisheries Management, volume 41, issue S1, pages S293-S297.",
+          "url": "https://academic.oup.com/najfm/article-abstract/41/S1/S293/7748545",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 0,
+          "abstractOnlyOccurrences": 1
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-runtime-contract",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Wait for the exact runtime input; do not substitute a scientifically different proxy."
+    },
+    {
+      "ruleId": "rule-batch-7-common-carp-01",
+      "speciesId": "common-carp",
+      "disposition": "evidence-informed-candidate",
+      "reasonCode": "correct-species-relevant-endpoint-bounded-model-input",
+      "rationale": "The evidence studies the correct species and a relevant feeding, foraging, activity, or catchability endpoint with an input BiteMap can supply or defensibly model. Geography, life stage, and study setting reduce confidence and effect size rather than automatically disqualifying the rule.",
+      "requiredActions": [
+        "Use the bounded candidate blueprint and its conservative engineering cap.",
+        "Complete primary-source passage review before connecting the rule to production.",
+        "Validate the response and preserve study-setting uncertainty in the displayed confidence."
+      ],
+      "input": "waterTemperature",
+      "inputKey": "water-temperature",
+      "runtimeAvailability": "modeled",
+      "forecastResolution": "hourly-and-daily",
+      "condition": "Chronic or acclimated conditions near 6 C versus 14-28 C",
+      "direction": "strong negative at 6 C; higher at intermediate/warm treatments",
+      "strength": "moderate",
+      "confidence": "medium",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-7851c1856e25da0b",
+          "citation": "Chen Song-bo; Chen Wei-xing; Fan Zhao-ting (2012). Effect of Water Temperature on Feeding Rhythm in Common Carp (Cyprinus carpio haematopterus Temminck et Schlegel). Journal of Northeast Agricultural University (English Edition) 19(1):57-61.",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1006810412600397",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 0,
+          "abstractOnlyOccurrences": 1
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": {
+        "status": "primary-source-preflight-complete",
+        "checkedOn": "2026-07-16",
+        "sourceUrls": [
+          "https://www.sciencedirect.com/science/article/abs/pii/S1006810412600397"
+        ],
+        "findings": [
+          "The publisher abstract reports very low feeding at 6 C, increasing feeding through intermediate treatments, a maximum at 28 C, and a decrease at 34 C."
+        ],
+        "limitations": [
+          "Only the publisher abstract was available in this preflight.",
+          "The controlled aquaculture population and feeding protocol do not directly establish NOVA angling catchability."
+        ],
+        "humanApproved": false
+      },
+      "translationBlueprint": {
+        "ruleId": "rule-batch-7-common-carp-01",
+        "evidenceClass": "controlled temperature feeding experiment",
+        "modelConfidence": "moderate",
+        "sourceReviewStatus": "primary-publisher-abstract-preflight-complete",
+        "inputContract": "Observed or modeled water temperature in degrees C.",
+        "validRange": {
+          "temperatureC": [
+            6,
+            34
+          ],
+          "anchors": "very low at 6 C, higher by 14 C, highest highlighted treatment at 28 C, lower at 34 C"
+        },
+        "integrationMode": "calibrate-existing-water-temperature-factor",
+        "curveType": "four-anchor-bounded-response",
+        "proposedResponse": "Fit a conservative shape through the four observed anchors without treating 28 C as a universal field optimum or extrapolating outside 6-34 C.",
+        "effectCapTier": "strong-conservative",
+        "missingBehavior": "Fall back to seasonal activity when water temperature is unavailable.",
+        "doubleCountingGuard": "Replace the existing thermal response; do not stack cold and warm carp rules separately.",
+        "validationRequirements": [
+          "anchor ordering",
+          "bounded interpolation",
+          "no extrapolation",
+          "juvenile-adult shared-direction test"
+        ]
+      },
+      "inInitialValidationCohort": true,
+      "approvalStatus": "blocked-pending-source-curve-and-validation-review",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Complete source-passage review and validate the bounded evidence-informed curve before integration."
+    },
+    {
+      "ruleId": "rule-batch-7-common-carp-02",
+      "speciesId": "common-carp",
+      "disposition": "zero-weight",
+      "reasonCode": "duplicate-or-insufficient-independent-signal",
+      "rationale": "The candidate duplicates evidence already represented by another rule or has a signal too small, confounded, or contradictory to justify a score contribution.",
+      "requiredActions": [
+        "Retain the evidence trail for auditability.",
+        "Merge duplicate support into the retained candidate when appropriate.",
+        "Assign no scoring weight."
+      ],
+      "input": "waterTemperature",
+      "inputKey": "water-temperature",
+      "runtimeAvailability": "modeled",
+      "forecastResolution": "hourly-and-daily",
+      "condition": "Juveniles at 16 C versus 20-28 C",
+      "direction": "lower feeding at 16 C; plateau around 24-28 C",
+      "strength": "low-moderate",
+      "confidence": "medium",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-ff4e6c89687d2fb4",
+          "citation": "Dalmas O. Oyugi; Julien Cucherousset; David J. Baker; J. Robert Britton (2012). Temperature Effects on the Growth and Foraging of Juvenile Common Carp Cyprinus carpio. Journal of Thermal Biology 37(1):89-94.",
+          "url": "https://doi.org/10.1016/j.jtherbio.2011.11.005",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 0,
+          "abstractOnlyOccurrences": 1
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "zero-weight-retained-for-audit",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Preserve the evidence trail and assign no scoring weight."
+    },
+    {
+      "ruleId": "rule-batch-7-common-carp-03",
+      "speciesId": "common-carp",
+      "disposition": "zero-weight",
+      "reasonCode": "duplicate-or-insufficient-independent-signal",
+      "rationale": "The candidate duplicates evidence already represented by another rule or has a signal too small, confounded, or contradictory to justify a score contribution.",
+      "requiredActions": [
+        "Retain the evidence trail for auditability.",
+        "Merge duplicate support into the retained candidate when appropriate.",
+        "Assign no scoring weight."
+      ],
+      "input": "extremeHeat",
+      "inputKey": "water-temperature",
+      "runtimeAvailability": "modeled",
+      "forecastResolution": "hourly-and-daily",
+      "condition": "34 C relative to 28 C in the ration experiment",
+      "direction": "negative",
+      "strength": "low-moderate",
+      "confidence": "medium",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-7851c1856e25da0b",
+          "citation": "Chen Song-bo; Chen Wei-xing; Fan Zhao-ting (2012). Effect of Water Temperature on Feeding Rhythm in Common Carp (Cyprinus carpio haematopterus Temminck et Schlegel). Journal of Northeast Agricultural University (English Edition) 19(1):57-61.",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1006810412600397",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 0,
+          "abstractOnlyOccurrences": 1
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "zero-weight-retained-for-audit",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Preserve the evidence trail and assign no scoring weight."
+    },
+    {
+      "ruleId": "rule-batch-7-common-carp-04",
+      "speciesId": "common-carp",
+      "disposition": "context-only",
+      "reasonCode": "not-a-portable-bite-endpoint",
+      "rationale": "The result is useful biological or interpretive context but does not isolate a portable feeding or hook-and-line catchability effect suitable for a score modifier.",
+      "requiredActions": [
+        "Use the finding in Fish Guide or methodology explanations where relevant.",
+        "Do not convert movement, habitat occupancy, growth, survival, or a confounded seasonal observation into a bite weight."
+      ],
+      "input": "timeOfDay",
+      "inputKey": "light-and-diel",
+      "runtimeAvailability": "available",
+      "forecastResolution": "hourly",
+      "condition": "Approximately 08:00-11:00 and 19:00-23:00 under the tested husbandry",
+      "direction": "positive windows",
+      "strength": "low",
+      "confidence": "low-medium",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [
+        "low-nova-transferability"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-7851c1856e25da0b",
+          "citation": "Chen Song-bo; Chen Wei-xing; Fan Zhao-ting (2012). Effect of Water Temperature on Feeding Rhythm in Common Carp (Cyprinus carpio haematopterus Temminck et Schlegel). Journal of Northeast Agricultural University (English Edition) 19(1):57-61.",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1006810412600397",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 0,
+          "abstractOnlyOccurrences": 1
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "non-scoring-context",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Use as explanatory biological context, not as a score modifier."
+    },
+    {
+      "ruleId": "rule-batch-7-common-carp-05",
+      "speciesId": "common-carp",
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "input": "recentCapture",
+      "inputKey": "recent-angling-or-capture-history",
+      "runtimeAvailability": "unavailable",
+      "forecastResolution": "not-forecastable",
+      "condition": "Direct catch-and-release within hours to about one week",
+      "direction": "negative",
+      "strength": "moderate",
+      "confidence": "high",
+      "endpointCategories": [
+        "hook-and-line-catchability"
+      ],
+      "concerns": [
+        "runtime-input-not-available"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-cd3443930451d17c",
+          "citation": "Magnus Lovén Wallerius; Jörgen I. Johnsson; Steven J. Cooke; Robert Arlinghaus (2020). Hook Avoidance Induced by Private and Social Learning in Common Carp. Transactions of the American Fisheries Society 149(4):498-511.",
+          "url": "https://academic.oup.com/tafs/article/149/4/498/7819381",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-runtime-contract",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Wait for the exact runtime input; do not substitute a scientifically different proxy."
+    },
+    {
+      "ruleId": "rule-batch-7-common-carp-06",
+      "speciesId": "common-carp",
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "input": "socialExposure",
+      "inputKey": "recent-angling-or-capture-history",
+      "runtimeAvailability": "unavailable",
+      "forecastResolution": "not-forecastable",
+      "condition": "Witnessing conspecific capture within hours/days",
+      "direction": "negative",
+      "strength": "low",
+      "confidence": "medium",
+      "endpointCategories": [
+        "other-or-context"
+      ],
+      "concerns": [
+        "no-direct-feeding-or-catchability-endpoint",
+        "runtime-input-not-available"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-cd3443930451d17c",
+          "citation": "Magnus Lovén Wallerius; Jörgen I. Johnsson; Steven J. Cooke; Robert Arlinghaus (2020). Hook Avoidance Induced by Private and Social Learning in Common Carp. Transactions of the American Fisheries Society 149(4):498-511.",
+          "url": "https://academic.oup.com/tafs/article/149/4/498/7819381",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-runtime-contract",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Wait for the exact runtime input; do not substitute a scientifically different proxy."
+    },
+    {
+      "ruleId": "rule-batch-8-creek-chub-01",
+      "speciesId": "creek-chub",
+      "disposition": "evidence-informed-candidate",
+      "reasonCode": "correct-species-relevant-endpoint-bounded-model-input",
+      "rationale": "The evidence studies the correct species and a relevant feeding, foraging, activity, or catchability endpoint with an input BiteMap can supply or defensibly model. Geography, life stage, and study setting reduce confidence and effect size rather than automatically disqualifying the rule.",
+      "requiredActions": [
+        "Use the bounded candidate blueprint and its conservative engineering cap.",
+        "Complete primary-source passage review before connecting the rule to production.",
+        "Validate the response and preserve study-setting uncertainty in the displayed confidence."
+      ],
+      "input": "timeOfDay",
+      "inputKey": "light-and-diel",
+      "runtimeAvailability": "available",
+      "forecastResolution": "hourly",
+      "condition": "Summer in comparable small streams: early evening versus morning",
+      "direction": "positive",
+      "strength": "low-moderate",
+      "confidence": "medium-high",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-c64643a845c443c6",
+          "citation": "Willard E. Barber; W. L. Minckley (1971). Summer Foods of the Cyprinid Fish Semotilus atromaculatus. Transactions of the American Fisheries Society 100(2):283-289.",
+          "url": "https://academic.oup.com/tafs/article/100/2/283/7894466",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": {
+        "ruleId": "rule-batch-8-creek-chub-01",
+        "evidenceClass": "single-stream summer stomach-content chronology",
+        "modelConfidence": "moderate",
+        "sourceReviewStatus": "primary-publisher-abstract-claim-confirmed",
+        "inputContract": "Local solar-relative time and selected date.",
+        "validRange": {
+          "season": "summer",
+          "solarWindow": "early evening versus morning"
+        },
+        "integrationMode": "replace-generic-diel-factor",
+        "curveType": "late-day-shoulder",
+        "proposedResponse": "Apply a minor early-evening increase and modest morning decrease in summer, expressed relative to local sunset rather than fixed clock time.",
+        "effectCapTier": "minor",
+        "missingBehavior": "Neutral outside summer or without local solar time.",
+        "doubleCountingGuard": "Do not stack with a generic crepuscular profile.",
+        "validationRequirements": [
+          "early-evening greater than morning",
+          "solar-relative timing",
+          "summer-only activation",
+          "maximum-contribution cap"
+        ]
+      },
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-pending-source-curve-and-validation-review",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Complete source-passage review and validate the bounded evidence-informed curve before integration."
+    },
+    {
+      "ruleId": "rule-batch-8-fallfish-01",
+      "speciesId": "fallfish",
+      "disposition": "evidence-informed-candidate",
+      "reasonCode": "correct-species-relevant-endpoint-bounded-model-input",
+      "rationale": "The evidence studies the correct species and a relevant feeding, foraging, activity, or catchability endpoint with an input BiteMap can supply or defensibly model. Geography, life stage, and study setting reduce confidence and effect size rather than automatically disqualifying the rule.",
+      "requiredActions": [
+        "Use the bounded candidate blueprint and its conservative engineering cap.",
+        "Complete primary-source passage review before connecting the rule to production.",
+        "Validate the response and preserve study-setting uncertainty in the displayed confidence."
+      ],
+      "input": "timeOfDay",
+      "inputKey": "light-and-diel",
+      "runtimeAvailability": "available",
+      "forecastResolution": "hourly",
+      "condition": "Summer, comparable river habitat: late-day/evening relative to other sampled diel intervals",
+      "direction": "positive",
+      "strength": "low",
+      "confidence": "medium",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-3f47c92600fbf36a",
+          "citation": "James H. Johnson (2015). Summer diel diet and feeding periodicity of four species of cyprinids in the Salmon River, New York. American Midland Naturalist 173(2):326-334.",
+          "url": "https://pubs.usgs.gov/publication/70160762",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 0,
+          "abstractOnlyOccurrences": 1
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": {
+        "status": "primary-source-preflight-blocked-exact-timing-unavailable",
+        "checkedOn": "2026-07-16",
+        "sourceUrls": [
+          "https://pubs.usgs.gov/publication/70160762",
+          "https://doi.org/10.1674/amid-173-02-326-334.1"
+        ],
+        "findings": [
+          "The official USGS record confirms that fallfish had a distinct feeding peak during a single 24-hour summer study."
+        ],
+        "limitations": [
+          "The official abstract does not disclose the peak interval, and no publicly accessible primary full text was located during this review.",
+          "A late-day or evening response must remain disabled until the exact primary-source interval can be inspected."
+        ],
+        "humanApproved": false
+      },
+      "translationBlueprint": {
+        "ruleId": "rule-batch-8-fallfish-01",
+        "evidenceClass": "single 24-hour field stomach-content chronology",
+        "modelConfidence": "low",
+        "sourceReviewStatus": "primary-abstract-confirms-peak-exact-timing-unavailable",
+        "inputContract": "Local solar-relative time and selected date.",
+        "validRange": {
+          "season": "summer",
+          "timing": "a distinct peak is confirmed; the claimed late-day placement requires full-text sign-off"
+        },
+        "integrationMode": "replace-generic-diel-factor",
+        "curveType": "single-narrow-peak-blocked-without-timing",
+        "proposedResponse": "Remain neutral unless the primary full text or author-supplied material establishes the exact peak interval; the supplied late-day interpretation is not accepted as verified evidence.",
+        "effectCapTier": "minor",
+        "missingBehavior": "Neutral before full-text peak-timing review and outside summer.",
+        "doubleCountingGuard": "Do not stack with a generic diel pattern.",
+        "validationRequirements": [
+          "full-text peak interval required before activation",
+          "one-day study uncertainty",
+          "summer-only activation",
+          "maximum-contribution cap"
+        ]
+      },
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-pending-source-curve-and-validation-review",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Complete source-passage review and validate the bounded evidence-informed curve before integration."
+    },
+    {
+      "ruleId": "rule-batch-4-flathead-catfish-01",
+      "speciesId": "flathead-catfish",
+      "disposition": "evidence-informed-candidate",
+      "reasonCode": "correct-species-relevant-endpoint-bounded-model-input",
+      "rationale": "The evidence studies the correct species and a relevant feeding, foraging, activity, or catchability endpoint with an input BiteMap can supply or defensibly model. Geography, life stage, and study setting reduce confidence and effect size rather than automatically disqualifying the rule.",
+      "requiredActions": [
+        "Use the bounded candidate blueprint and its conservative engineering cap.",
+        "Complete primary-source passage review before connecting the rule to production.",
+        "Validate the response and preserve study-setting uncertainty in the displayed confidence."
+      ],
+      "input": "waterTemperatureC",
+      "inputKey": "water-temperature",
+      "runtimeAvailability": "modeled",
+      "forecastResolution": "hourly-and-daily",
+      "condition": "Juvenile laboratory fish at <=7 C",
+      "direction": "strong decrease / no consumption observed",
+      "strength": "strong",
+      "confidence": "medium-high",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-1a5492e4509ca47a",
+          "citation": "Samuel L. Bourret, Ralph W. Tingley III, Yoichiro Kanno, and Jason C. Vokoun (2008). Maximum Daily Consumption and Specific Daily Metabolic Demand of Juvenile Flathead Catfish (Pylodictis olivaris). Journal of Freshwater Ecology 23(3):413-419.",
+          "url": "https://www.tandfonline.com/doi/abs/10.1080/02705060.2008.9664218",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 0,
+          "abstractOnlyOccurrences": 1
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": {
+        "ruleId": "rule-batch-4-flathead-catfish-01",
+        "evidenceClass": "controlled juvenile temperature-consumption experiment",
+        "modelConfidence": "moderate",
+        "sourceReviewStatus": "primary-abstract-claim-confirmed",
+        "inputContract": "Observed or modeled water temperature in degrees C.",
+        "validRange": {
+          "temperatureC": [
+            3,
+            32
+          ],
+          "anchors": "rare feeding below 15 C, most stopped at 11 C, none observed at 7 C or lower"
+        },
+        "integrationMode": "calibrate-existing-water-temperature-factor",
+        "curveType": "cold-tail-guardrail",
+        "proposedResponse": "Shape the existing cold-water tail around the observed anchors while retaining a small nonzero field possibility and avoiding extrapolation below 3 C.",
+        "effectCapTier": "severe-stress",
+        "missingBehavior": "Use the seasonal prior when water temperature is unavailable.",
+        "doubleCountingGuard": "This replaces the low-temperature tail; it is not an additional winter multiplier.",
+        "validationRequirements": [
+          "15-to-11 C decline",
+          "7 C maximum penalty",
+          "nonzero numerical floor",
+          "no below-range extrapolation"
+        ]
+      },
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-pending-source-curve-and-validation-review",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Complete source-passage review and validate the bounded evidence-informed curve before integration."
+    },
+    {
+      "ruleId": "rule-batch-4-flathead-catfish-02",
+      "speciesId": "flathead-catfish",
+      "disposition": "zero-weight",
+      "reasonCode": "duplicate-or-insufficient-independent-signal",
+      "rationale": "The candidate duplicates evidence already represented by another rule or has a signal too small, confounded, or contradictory to justify a score contribution.",
+      "requiredActions": [
+        "Retain the evidence trail for auditability.",
+        "Merge duplicate support into the retained candidate when appropriate.",
+        "Assign no scoring weight."
+      ],
+      "input": "waterTemperatureC",
+      "inputKey": "water-temperature",
+      "runtimeAvailability": "modeled",
+      "forecastResolution": "hourly-and-daily",
+      "condition": "Juvenile laboratory fish below 15 C, especially around 11 C",
+      "direction": "decrease",
+      "strength": "moderate-strong",
+      "confidence": "medium-high",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-1a5492e4509ca47a",
+          "citation": "Samuel L. Bourret, Ralph W. Tingley III, Yoichiro Kanno, and Jason C. Vokoun (2008). Maximum Daily Consumption and Specific Daily Metabolic Demand of Juvenile Flathead Catfish (Pylodictis olivaris). Journal of Freshwater Ecology 23(3):413-419.",
+          "url": "https://www.tandfonline.com/doi/abs/10.1080/02705060.2008.9664218",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 0,
+          "abstractOnlyOccurrences": 1
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "zero-weight-retained-for-audit",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Preserve the evidence trail and assign no scoring weight."
+    },
+    {
+      "ruleId": "rule-batch-4-flathead-catfish-03",
+      "speciesId": "flathead-catfish",
+      "disposition": "zero-weight",
+      "reasonCode": "duplicate-or-insufficient-independent-signal",
+      "rationale": "The candidate duplicates evidence already represented by another rule or has a signal too small, confounded, or contradictory to justify a score contribution.",
+      "requiredActions": [
+        "Retain the evidence trail for auditability.",
+        "Merge duplicate support into the retained candidate when appropriate.",
+        "Assign no scoring weight."
+      ],
+      "input": "waterTemperatureC",
+      "inputKey": "water-temperature",
+      "runtimeAvailability": "modeled",
+      "forecastResolution": "hourly-and-daily",
+      "condition": "Juvenile laboratory fish at 19-32 C",
+      "direction": "increase relative to colder tested treatments",
+      "strength": "moderate",
+      "confidence": "medium",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-1a5492e4509ca47a",
+          "citation": "Samuel L. Bourret, Ralph W. Tingley III, Yoichiro Kanno, and Jason C. Vokoun (2008). Maximum Daily Consumption and Specific Daily Metabolic Demand of Juvenile Flathead Catfish (Pylodictis olivaris). Journal of Freshwater Ecology 23(3):413-419.",
+          "url": "https://www.tandfonline.com/doi/abs/10.1080/02705060.2008.9664218",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 0,
+          "abstractOnlyOccurrences": 1
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "zero-weight-retained-for-audit",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Preserve the evidence trail and assign no scoring weight."
+    },
+    {
+      "ruleId": "rule-batch-11-gizzard-shad-01",
+      "speciesId": "gizzard-shad",
+      "disposition": "context-only",
+      "reasonCode": "not-a-portable-bite-endpoint",
+      "rationale": "The result is useful biological or interpretive context but does not isolate a portable feeding or hook-and-line catchability effect suitable for a score modifier.",
+      "requiredActions": [
+        "Use the finding in Fish Guide or methodology explanations where relevant.",
+        "Do not convert movement, habitat occupancy, growth, survival, or a confounded seasonal observation into a bite weight."
+      ],
+      "input": "absolute water temperature",
+      "inputKey": "water-temperature",
+      "runtimeAvailability": "modeled",
+      "forecastResolution": "hourly-and-daily",
+      "condition": "Age-0 gizzard shad under conditions comparable to the experiment: approximately 5 deg C versus 10-20 deg C",
+      "direction": "lower feeding activity at 5 deg C; increasing feeding acts across the warmer treatments",
+      "strength": "moderate",
+      "confidence": "high for experiment / low-to-moderate transfer",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [
+        "low-nova-transferability"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-cd64c8d83479f4a2",
+          "citation": "Scott R. Salvatore; Thomas E. Wissing; Neal D. Mundahl (1987). Effect of Water Temperature on Food Evacuation Rate and Feeding Activity of Age-0 Gizzard Shad. Transactions of the American Fisheries Society 116(1):67-70.",
+          "url": "https://academic.oup.com/tafs/article/116/1/67/7891987",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 0,
+          "abstractOnlyOccurrences": 1
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "non-scoring-context",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Use as explanatory biological context, not as a score modifier."
+    },
+    {
+      "ruleId": "rule-batch-11-gizzard-shad-02",
+      "speciesId": "gizzard-shad",
+      "disposition": "context-only",
+      "reasonCode": "not-a-portable-bite-endpoint",
+      "rationale": "The result is useful biological or interpretive context but does not isolate a portable feeding or hook-and-line catchability effect suitable for a score modifier.",
+      "requiredActions": [
+        "Use the finding in Fish Guide or methodology explanations where relevant.",
+        "Do not convert movement, habitat occupancy, growth, survival, or a confounded seasonal observation into a bite weight."
+      ],
+      "input": "gastric evacuation / temperature",
+      "inputKey": "water-temperature",
+      "runtimeAvailability": "modeled",
+      "forecastResolution": "hourly-and-daily",
+      "condition": "Age-0 fish at 10, 15, and 20 deg C",
+      "direction": "faster evacuation from 10 to 15 deg C, little additional change from 15 to 20 deg C",
+      "strength": "moderate",
+      "confidence": "high for experiment",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [
+        "low-nova-transferability"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-cd64c8d83479f4a2",
+          "citation": "Scott R. Salvatore; Thomas E. Wissing; Neal D. Mundahl (1987). Effect of Water Temperature on Food Evacuation Rate and Feeding Activity of Age-0 Gizzard Shad. Transactions of the American Fisheries Society 116(1):67-70.",
+          "url": "https://academic.oup.com/tafs/article/116/1/67/7891987",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 0,
+          "abstractOnlyOccurrences": 1
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "non-scoring-context",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Use as explanatory biological context, not as a score modifier."
+    },
+    {
+      "ruleId": "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-01",
+      "speciesId": "largemouth-bass",
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "input": "recentFishingPressure",
+      "inputKey": "recent-angling-or-capture-history",
+      "runtimeAvailability": "unavailable",
+      "forecastResolution": "not-forecastable",
+      "condition": "Sustained recent hook-and-line effort at the same waterbody or area",
+      "direction": "decrease",
+      "strength": "strong",
+      "confidence": "high",
+      "endpointCategories": [
+        "hook-and-line-catchability"
+      ],
+      "concerns": [
+        "runtime-input-not-available"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-b57521fb31c54a6e",
+          "citation": "M. G. Wegener, Harold Schramm, J. W. Neal, and P. D. Gerard (2018). Effect of fishing effort on catch rate and catchability of largemouth bass in small impoundments. Fisheries Management and Ecology 25(1):66-76.",
+          "url": "https://pubs.usgs.gov/publication/70193170",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 0,
+          "abstractOnlyOccurrences": 1
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-runtime-contract",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Wait for the exact runtime input; do not substitute a scientifically different proxy."
+    },
+    {
+      "ruleId": "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-02",
+      "speciesId": "largemouth-bass",
+      "disposition": "context-only",
+      "reasonCode": "not-a-portable-bite-endpoint",
+      "rationale": "The result is useful biological or interpretive context but does not isolate a portable feeding or hook-and-line catchability effect suitable for a score modifier.",
+      "requiredActions": [
+        "Use the finding in Fish Guide or methodology explanations where relevant.",
+        "Do not convert movement, habitat occupancy, growth, survival, or a confounded seasonal observation into a bite weight."
+      ],
+      "input": "waterTemperature",
+      "inputKey": "water-temperature",
+      "runtimeAvailability": "modeled",
+      "forecastResolution": "hourly-and-daily",
+      "condition": "Progressive cooling relative to recent acclimation",
+      "direction": "decrease",
+      "strength": "moderate",
+      "confidence": "medium",
+      "endpointCategories": [
+        "movement-or-general-activity"
+      ],
+      "concerns": [
+        "no-direct-feeding-or-catchability-endpoint"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-187786b25d4ec012",
+          "citation": "Caleb T. Hasler, Cory D. Suski, Kyle C. Hanson, Steven J. Cooke, David P. Philipp, and Bruce L. Tufts (2009). Effect of water temperature on laboratory swimming performance and natural activity levels of adult largemouth bass. Canadian Journal of Zoology 87:589-596.",
+          "url": "https://calebthasler.wordpress.com/wp-content/uploads/2014/06/9cjz-hasler-et-al-2009.pdf",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "non-scoring-context",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Use as explanatory biological context, not as a score modifier."
+    },
+    {
+      "ruleId": "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-03",
+      "speciesId": "largemouth-bass",
+      "disposition": "evidence-informed-candidate",
+      "reasonCode": "correct-species-relevant-endpoint-bounded-model-input",
+      "rationale": "The evidence studies the correct species and a relevant feeding, foraging, activity, or catchability endpoint with an input BiteMap can supply or defensibly model. Geography, life stage, and study setting reduce confidence and effect size rather than automatically disqualifying the rule.",
+      "requiredActions": [
+        "Use the bounded candidate blueprint and its conservative engineering cap.",
+        "Complete primary-source passage review before connecting the rule to production.",
+        "Validate the response and preserve study-setting uncertainty in the displayed confidence."
+      ],
+      "input": "waterTemperature",
+      "inputKey": "water-temperature",
+      "runtimeAvailability": "modeled",
+      "forecastResolution": "hourly-and-daily",
+      "condition": "Prolonged water near 95 F (35 C)",
+      "direction": "decrease",
+      "strength": "strong",
+      "confidence": "medium",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-1d056ddd626bbc70",
+          "citation": "Leticia E. Fantini, Matthew A. Smith, Michele Jones, Luke A. Roy, Rebecca Lochmann, and Anita M. Kelly (2021). Growth parameters in northern largemouth bass Micropterus salmoides salmoides raised near their upper thermal tolerance for 28 days. Aquaculture Reports 21:100845.",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2352513421002611",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 0,
+          "abstractOnlyOccurrences": 1
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": {
+        "ruleId": "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-03",
+        "evidenceClass": "controlled prolonged upper-thermal exposure",
+        "modelConfidence": "moderate-low",
+        "sourceReviewStatus": "primary-publisher-abstract-claim-confirmed",
+        "inputContract": "Rolling estimated or observed water-temperature history, not a single hot-hour reading.",
+        "validRange": {
+          "temperatureC": [
+            35,
+            35
+          ],
+          "exposureDays": 28
+        },
+        "integrationMode": "calibrate-existing-water-temperature-factor",
+        "curveType": "chronic-extreme-heat-anchor",
+        "proposedResponse": "Apply a severe-heat penalty only as multi-day exposure approaches 35 C; the study does not define the onset temperature, so ordinary hot days remain governed by the baseline thermal curve.",
+        "effectCapTier": "severe-stress",
+        "missingBehavior": "No additional penalty without rolling water-temperature history.",
+        "doubleCountingGuard": "Replace the extreme upper tail and do not stack with generic heat, seasonal summer, or low-oxygen penalties without an interaction model.",
+        "validationRequirements": [
+          "single-hot-day neutral test",
+          "chronic-exposure requirement",
+          "35 C capped penalty",
+          "unknown-onset non-extrapolation"
+        ]
+      },
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-pending-source-curve-and-validation-review",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Complete source-passage review and validate the bounded evidence-informed curve before integration."
+    },
+    {
+      "ruleId": "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-04",
+      "speciesId": "largemouth-bass",
+      "disposition": "context-only",
+      "reasonCode": "not-a-portable-bite-endpoint",
+      "rationale": "The result is useful biological or interpretive context but does not isolate a portable feeding or hook-and-line catchability effect suitable for a score modifier.",
+      "requiredActions": [
+        "Use the finding in Fish Guide or methodology explanations where relevant.",
+        "Do not convert movement, habitat occupancy, growth, survival, or a confounded seasonal observation into a bite weight."
+      ],
+      "input": "dissolvedOxygen",
+      "inputKey": "dissolved-oxygen",
+      "runtimeAvailability": "conditional",
+      "forecastResolution": "observed-only",
+      "condition": "Below approximately 2.0 mg/L in winter habitat",
+      "direction": "decrease",
+      "strength": "strong",
+      "confidence": "high",
+      "endpointCategories": [
+        "habitat-or-population"
+      ],
+      "concerns": [
+        "no-direct-feeding-or-catchability-endpoint"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-edb6193df756b6c6",
+          "citation": "Caleb T. Hasler, Cory D. Suski, Kyle C. Hanson, Steven J. Cooke, and Bruce L. Tufts (2009). The Influence of Dissolved Oxygen on Winter Habitat Selection by Largemouth Bass: An Integration of Field Biotelemetry Studies and Laboratory Experiments. Physiological and Biochemical Zoology 82(2):143-152.",
+          "url": "https://fishlab.nres.illinois.edu/wp-content/uploads/2025/05/Hasler_et_al_PBZ_2009.pdf",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "non-scoring-context",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Use as explanatory biological context, not as a score modifier."
+    },
+    {
+      "ruleId": "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-06",
+      "speciesId": "largemouth-bass",
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "input": "reproductivePhase",
+      "inputKey": "reproductive-phase",
+      "runtimeAvailability": "modeled",
+      "forecastResolution": "daily",
+      "condition": "Male actively guarding eggs or fry",
+      "direction": "increase",
+      "strength": "moderate",
+      "confidence": "high",
+      "endpointCategories": [
+        "feeding-or-foraging",
+        "hook-and-line-catchability"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-3d502b7efa30ee5d",
+          "citation": "Virginia Department of Wildlife Resources (2024). Largemouth Bass. Virginia DWR Species Profile Database.",
+          "url": "https://dwr.virginia.gov/wildlife/information/largemouth-bass",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        },
+        {
+          "sourceId": "src-58bd6a9d6a5a2762",
+          "citation": "Cory D. Suski and David P. Philipp (2004). Factors Affecting the Vulnerability to Angling of Nesting Male Largemouth and Smallmouth Bass. Transactions of the American Fisheries Society 133:1100-1106.",
+          "url": "https://academic.oup.com/tafs/article-abstract/133/5/1100/7887981",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 0,
+          "abstractOnlyOccurrences": 2
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-runtime-contract",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Wait for the exact runtime input; do not substitute a scientifically different proxy."
+    },
+    {
+      "ruleId": "rule-batch-10-longnose-dace-01",
+      "speciesId": "longnose-dace",
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "input": "local prey patchiness",
+      "inputKey": "prey-availability",
+      "runtimeAvailability": "unavailable",
+      "forecastResolution": "not-forecastable",
+      "condition": "Summer, physically suitable patches under 5 m where benthic prey are demonstrably patchy",
+      "direction": "Prioritize high-prey patches; avoid a continuous prey-density curve",
+      "strength": "moderate",
+      "confidence": "high",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [
+        "runtime-input-not-available"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-6dbb5f9347bc60c3",
+          "citation": "Andrew R. Thompson; J. Todd Petty; Gary D. Grossman (2001). Multi-scale effects of resource patchiness on foraging behaviour and habitat use by longnose dace, Rhinichthys cataractae. Freshwater Biology 46:145-160.",
+          "url": "https://research.fs.usda.gov/download/treesearch/9427.pdf",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-runtime-contract",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Wait for the exact runtime input; do not substitute a scientifically different proxy."
+    },
+    {
+      "ruleId": "rule-batch-6-muskellunge-01",
+      "speciesId": "muskellunge",
+      "disposition": "evidence-informed-candidate",
+      "reasonCode": "correct-species-relevant-endpoint-bounded-model-input",
+      "rationale": "The evidence studies the correct species and a relevant feeding, foraging, activity, or catchability endpoint with an input BiteMap can supply or defensibly model. Geography, life stage, and study setting reduce confidence and effect size rather than automatically disqualifying the rule.",
+      "requiredActions": [
+        "Use the bounded candidate blueprint and its conservative engineering cap.",
+        "Complete primary-source passage review before connecting the rule to production.",
+        "Validate the response and preserve study-setting uncertainty in the displayed confidence."
+      ],
+      "input": "solarRadiationWm2",
+      "inputKey": "light-and-diel",
+      "runtimeAvailability": "available",
+      "forecastResolution": "hourly",
+      "condition": "Very low versus high surface solar radiation in Escanaba Lake",
+      "direction": "decrease with higher radiation",
+      "strength": "small",
+      "confidence": "low-medium",
+      "endpointCategories": [
+        "hook-and-line-catchability"
+      ],
+      "concerns": [
+        "low-nova-transferability"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-0011c7e1c1843d4f",
+          "citation": "Stephanie L. Shaw; Kathryn M. Renik; Greg G. Sass (2021). Angler and environmental influences on walleye Sander vitreus and muskellunge Esox masquinongy angler catch in Escanaba Lake, Wisconsin 2003-2015. PLOS ONE 16(9):e0257882.",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0257882",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 2,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": {
+        "ruleId": "rule-batch-6-muskellunge-01",
+        "evidenceClass": "long-term angler trip-success model",
+        "modelConfidence": "moderate",
+        "sourceReviewStatus": "primary-full-text-claim-confirmed",
+        "inputContract": "Forecast surface solar radiation or a solar-relative low-light classification for lake/reservoir locations.",
+        "validRange": {
+          "solarRadiationWm2": [
+            25,
+            450
+          ],
+          "waterbody": "lake or reservoir"
+        },
+        "integrationMode": "replace-generic-diel-light-factor",
+        "curveType": "bounded-radiation-slope",
+        "proposedResponse": "Apply a small decrease from very low toward high radiation; do not reproduce the study probability difference directly as BiteMap points.",
+        "effectCapTier": "minor",
+        "missingBehavior": "Use solar-relative light at reduced confidence, otherwise neutral.",
+        "doubleCountingGuard": "Cloud, radiation, and diel period feed one latent light factor and cannot stack.",
+        "validationRequirements": [
+          "low-radiation greater than high",
+          "range clamping",
+          "single-light-factor",
+          "lake-reservoir scope"
+        ]
+      },
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-pending-source-curve-and-validation-review",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Complete source-passage review and validate the bounded evidence-informed curve before integration."
+    },
+    {
+      "ruleId": "rule-batch-6-muskellunge-02",
+      "speciesId": "muskellunge",
+      "disposition": "zero-weight",
+      "reasonCode": "duplicate-or-insufficient-independent-signal",
+      "rationale": "The candidate duplicates evidence already represented by another rule or has a signal too small, confounded, or contradictory to justify a score contribution.",
+      "requiredActions": [
+        "Retain the evidence trail for auditability.",
+        "Merge duplicate support into the retained candidate when appropriate.",
+        "Assign no scoring weight."
+      ],
+      "input": "lunarPhase",
+      "inputKey": "lunar-phase",
+      "runtimeAvailability": "available",
+      "forecastResolution": "daily",
+      "condition": "Near full or new moon versus intermediate lunar dates",
+      "direction": "increase",
+      "strength": "very small",
+      "confidence": "low-medium",
+      "endpointCategories": [
+        "hook-and-line-catchability",
+        "other-or-context"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-0011c7e1c1843d4f",
+          "citation": "Stephanie L. Shaw; Kathryn M. Renik; Greg G. Sass (2021). Angler and environmental influences on walleye Sander vitreus and muskellunge Esox masquinongy angler catch in Escanaba Lake, Wisconsin 2003-2015. PLOS ONE 16(9):e0257882.",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0257882",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 2,
+          "abstractOnlyOccurrences": 0
+        },
+        {
+          "sourceId": "src-510576cb5d8c3ffd",
+          "citation": "Mark R. Vinson; Ted R. Angradi (2014). Muskie Lunacy: Does the Lunar Cycle Influence Angler Catch of Muskellunge (Esox masquinongy)?. PLOS ONE 9(5):e98046.",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0098046",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "zero-weight-retained-for-audit",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Preserve the evidence trail and assign no scoring weight."
+    },
+    {
+      "ruleId": "rule-batch-6-muskellunge-03",
+      "speciesId": "muskellunge",
+      "disposition": "context-only",
+      "reasonCode": "not-a-portable-bite-endpoint",
+      "rationale": "The result is useful biological or interpretive context but does not isolate a portable feeding or hook-and-line catchability effect suitable for a score modifier.",
+      "requiredActions": [
+        "Use the finding in Fish Guide or methodology explanations where relevant.",
+        "Do not convert movement, habitat occupancy, growth, survival, or a confounded seasonal observation into a bite weight."
+      ],
+      "input": "warmWaterPeriod",
+      "inputKey": "water-temperature",
+      "runtimeAvailability": "modeled",
+      "forecastResolution": "hourly-and-daily",
+      "condition": "James River July-August, commonly >25 C",
+      "direction": "decrease in observed capture opportunity",
+      "strength": "weak/uncalibrated",
+      "confidence": "low-medium",
+      "endpointCategories": [
+        "hook-and-line-catchability"
+      ],
+      "concerns": [
+        "low-nova-transferability"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-5cfa1e12c48b9120",
+          "citation": "Cory J. Bauerlien; Derek P. Crane; Scott M. Smith; George Palmer; Tyler Young; Daniel B. Goetz; Jeff Hansbarger; Kyle J. Hartman (2022). Low catchability limits the effect of warm-water catch-and-release mortality on muskellunge. Fisheries Research 254:106434.",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0165783622002119",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "non-scoring-context",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Use as explanatory biological context, not as a score modifier."
+    },
+    {
+      "ruleId": "rule-batch-6-northern-snakehead-01",
+      "speciesId": "northern-snakehead",
+      "disposition": "production-candidate",
+      "reasonCode": "direct-endpoint-bounded-runtime-input",
+      "rationale": "The rule has a direct feeding or angling-catch endpoint, an input BiteMap can supply at the required resolution, and a study scope that can be represented with explicit geographic, seasonal, and waterbody bounds.",
+      "requiredActions": [
+        "Have a human reviewer inspect the cited primary-source passage and sign the claim.",
+        "Choose and document a conservative bounded curve without extrapolating beyond the study.",
+        "Add adversarial tests for season, geography, waterbody, missing inputs, and correlated light variables.",
+        "Validate the modifier against held-out observations before production integration."
+      ],
+      "input": "timeOfDay",
+      "inputKey": "light-and-diel",
+      "runtimeAvailability": "available",
+      "forecastResolution": "hourly",
+      "condition": "May-June tidal Potomac: daylight, especially morning, versus overnight",
+      "direction": "increase during daylight/morning",
+      "strength": "moderate",
+      "confidence": "medium",
+      "endpointCategories": [
+        "feeding-or-foraging",
+        "other-or-context"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-b457ceb8a1b810b2",
+          "citation": "Nicolas W. R. Lapointe; Ryan K. Saylor; Paul L. Angermeier (2019). Diel Feeding and Movement Activity of Northern Snakehead Channa argus. Proceedings of the First International Snakehead Symposium, AFS Symposium 89:69-81.",
+          "url": "https://cwf-fcf.org/en/resources/research-papers/Lapointe-et-al-2019-Diel-activity-of-Northern-Snakehead.pdf",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": {
+        "status": "primary-source-preflight-complete",
+        "checkedOn": "2026-07-16",
+        "sourceUrls": [
+          "https://www.osti.gov/servlets/purl/1648996",
+          "https://hero.epa.gov/reference/8043122/"
+        ],
+        "findings": [
+          "The primary Potomac study reports little fresh prey overnight and greater feeding in morning/daylight samples during May and June."
+        ],
+        "limitations": [
+          "The diel model explained only a small share of feeding variation.",
+          "The result must remain limited to the tidal Potomac and the sampled May-June season unless new evidence supports transfer."
+        ],
+        "humanApproved": false
+      },
+      "translationBlueprint": {
+        "ruleId": "rule-batch-6-northern-snakehead-01",
+        "evidenceClass": "local tidal-river field feeding and movement study",
+        "modelConfidence": "moderate-high",
+        "sourceReviewStatus": "primary-full-text-preflight-complete",
+        "inputContract": "Local solar-relative time and selected date.",
+        "validRange": {
+          "months": [
+            5,
+            6
+          ],
+          "waterbody": "tidal Potomac and comparable tidal river habitat",
+          "solarWindow": "daylight, especially morning, versus overnight"
+        },
+        "integrationMode": "replace-generic-diel-factor",
+        "curveType": "season-gated-daylight-morning-response",
+        "proposedResponse": "Apply a bounded morning/daylight increase and overnight decrease in May-June; strongly attenuate outside the source season or tidal setting.",
+        "effectCapTier": "moderate",
+        "missingBehavior": "Neutral without local solar time or location scope.",
+        "doubleCountingGuard": "Use one diel/tide joint cap so daylight and outgoing tide cannot independently reach full strength.",
+        "validationRequirements": [
+          "May-June scope",
+          "overnight lower than morning",
+          "non-tidal attenuation",
+          "joint diel-tide cap"
+        ]
+      },
+      "inInitialValidationCohort": true,
+      "approvalStatus": "blocked-pending-human-source-and-curve-review",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Human source sign-off, bounded curve design, adversarial tests, and held-out validation."
+    },
+    {
+      "ruleId": "rule-batch-6-northern-snakehead-02",
+      "speciesId": "northern-snakehead",
+      "disposition": "evidence-informed-candidate",
+      "reasonCode": "correct-species-relevant-endpoint-bounded-model-input",
+      "rationale": "The evidence studies the correct species and a relevant feeding, foraging, activity, or catchability endpoint with an input BiteMap can supply or defensibly model. Geography, life stage, and study setting reduce confidence and effect size rather than automatically disqualifying the rule.",
+      "requiredActions": [
+        "Use the bounded candidate blueprint and its conservative engineering cap.",
+        "Complete primary-source passage review before connecting the rule to production.",
+        "Validate the response and preserve study-setting uncertainty in the displayed confidence."
+      ],
+      "input": "tidalStage",
+      "inputKey": "tidal-stage",
+      "runtimeAvailability": "conditional",
+      "forecastResolution": "hourly",
+      "condition": "Outgoing tide during May-June Potomac sampling",
+      "direction": "increase",
+      "strength": "small to moderate",
+      "confidence": "medium",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-b457ceb8a1b810b2",
+          "citation": "Nicolas W. R. Lapointe; Ryan K. Saylor; Paul L. Angermeier (2019). Diel Feeding and Movement Activity of Northern Snakehead Channa argus. Proceedings of the First International Snakehead Symposium, AFS Symposium 89:69-81.",
+          "url": "https://cwf-fcf.org/en/resources/research-papers/Lapointe-et-al-2019-Diel-activity-of-Northern-Snakehead.pdf",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": {
+        "ruleId": "rule-batch-6-northern-snakehead-02",
+        "evidenceClass": "local tidal-river gut-content association",
+        "modelConfidence": "moderate",
+        "sourceReviewStatus": "primary-full-text-claim-confirmed",
+        "inputContract": "Forecast or computed tidal stage for the spot and selected hour.",
+        "validRange": {
+          "months": [
+            5,
+            6
+          ],
+          "waterbody": "tidal Potomac and comparable tidal water",
+          "tidalStage": "outgoing versus other stages"
+        },
+        "integrationMode": "bounded-secondary-tidal-modifier",
+        "curveType": "tidal-stage-categorical",
+        "proposedResponse": "Apply a minor outgoing-tide increase only where a trustworthy tidal prediction exists; other stages remain neutral rather than penalized.",
+        "effectCapTier": "minor",
+        "missingBehavior": "Neutral on non-tidal waters or without a tidal prediction.",
+        "doubleCountingGuard": "Cap the combined snakehead diel and tide response because time of day and tide covaried in the study.",
+        "validationRequirements": [
+          "tidal-water gate",
+          "outgoing-versus-neutral ordering",
+          "missing-tide neutral test",
+          "joint diel-tide cap"
+        ]
+      },
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-pending-source-curve-and-validation-review",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Complete source-passage review and validate the bounded evidence-informed curve before integration."
+    },
+    {
+      "ruleId": "rule-batch-2-pumpkinseed-01",
+      "speciesId": "pumpkinseed",
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "input": "reproductiveState",
+      "inputKey": "reproductive-phase",
+      "runtimeAvailability": "modeled",
+      "forecastResolution": "daily",
+      "condition": "Confirmed parental male actively guarding a nest",
+      "direction": "decrease",
+      "strength": "moderate",
+      "confidence": "high",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-93d7188c7f49ceb0",
+          "citation": "Grzegorz Zieba, Malgorzata Dukowska, Miroslaw Przybylski, Michael G. Fox, and Carl Smith (2018). Parental Care Compromises Feeding in the Pumpkinseed (Lepomis gibbosus). The Science of Nature 105:26.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5869894",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        },
+        {
+          "sourceId": "src-beb2e44ce3a5d8be",
+          "citation": "J. H. Thorp, L. D. Goldsmith, J. A. Polgreen, and L. M. Mayer (1989). Foraging Patterns of Nesting and Nonnesting Sunfish (Centrarchidae: Lepomis auritus and L. gibbosus). Canadian Journal of Fisheries and Aquatic Sciences 46:1342-1346.",
+          "url": "https://doi.org/10.1139/f89-172",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 0,
+          "abstractOnlyOccurrences": 2
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-runtime-contract",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Wait for the exact runtime input; do not substitute a scientifically different proxy."
+    },
+    {
+      "ruleId": "rule-batch-3-rainbow-trout-01",
+      "speciesId": "rainbow-trout",
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "input": "dissolvedOxygenMgL",
+      "inputKey": "dissolved-oxygen",
+      "runtimeAvailability": "conditional",
+      "forecastResolution": "observed-only",
+      "condition": "Approximately 4.5 mg/L versus 7.9 mg/L for 42 days at 14 C in cultured fish",
+      "direction": "decrease",
+      "strength": "weak",
+      "confidence": "medium",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-66b13bc65f4d275d",
+          "citation": "Leonardo J. Magnoni, Ep Eding, Isabelle Leguen, Patrick Prunet, Inge Geurden, Rodrigo O. A. Ozório, and Johan W. Schrama (2018). Hypoxia, but not an electrolyte-imbalanced diet, reduces feed intake, growth and oxygen consumption in rainbow trout (Oncorhynchus mykiss). Scientific Reports 8:4965.",
+          "url": "https://www.nature.com/articles/s41598-018-23352-z",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-runtime-contract",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Wait for the exact runtime input; do not substitute a scientifically different proxy."
+    },
+    {
+      "ruleId": "rule-batch-3-rainbow-trout-02",
+      "speciesId": "rainbow-trout",
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "input": "fishLengthMm",
+      "inputKey": "fish-size-or-age",
+      "runtimeAvailability": "unavailable",
+      "forecastResolution": "not-forecastable",
+      "condition": "Stocked rainbow trout >300 mm versus <260 mm in the studied Adirondack river",
+      "direction": "increase",
+      "strength": "moderate",
+      "confidence": "medium-low",
+      "endpointCategories": [
+        "hook-and-line-catchability"
+      ],
+      "concerns": [
+        "runtime-input-not-available"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-05c4cdb37cb3b384",
+          "citation": "Owen E. Baird, Charles C. Krueger, and Daniel C. Josephson (2006). Growth, Movement, and Catch of Brook, Rainbow, and Brown Trout after Stocking into a Large, Marginally Suitable Adirondack River. North American Journal of Fisheries Management 26(1):180-189.",
+          "url": "https://academic.oup.com/najfm/article/26/1/180/7847743",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 0,
+          "abstractOnlyOccurrences": 3
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-runtime-contract",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Wait for the exact runtime input; do not substitute a scientifically different proxy."
+    },
+    {
+      "ruleId": "rule-batch-2-redbreast-sunfish-01",
+      "speciesId": "redbreast-sunfish",
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "input": "reproductiveState",
+      "inputKey": "reproductive-phase",
+      "runtimeAvailability": "modeled",
+      "forecastResolution": "daily",
+      "condition": "Confirmed nest-guarding parental male",
+      "direction": "decrease",
+      "strength": "moderate",
+      "confidence": "medium",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-beb2e44ce3a5d8be",
+          "citation": "J. H. Thorp, L. D. Goldsmith, J. A. Polgreen, and L. M. Mayer (1989). Foraging Patterns of Nesting and Nonnesting Sunfish (Centrarchidae: Lepomis auritus and L. gibbosus). Canadian Journal of Fisheries and Aquatic Sciences 46:1342-1346.",
+          "url": "https://doi.org/10.1139/f89-172",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 0,
+          "abstractOnlyOccurrences": 2
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-runtime-contract",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Wait for the exact runtime input; do not substitute a scientifically different proxy."
+    },
+    {
+      "ruleId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-01",
+      "speciesId": "smallmouth-bass",
+      "disposition": "context-only",
+      "reasonCode": "not-a-portable-bite-endpoint",
+      "rationale": "The result is useful biological or interpretive context but does not isolate a portable feeding or hook-and-line catchability effect suitable for a score modifier.",
+      "requiredActions": [
+        "Use the finding in Fish Guide or methodology explanations where relevant.",
+        "Do not convert movement, habitat occupancy, growth, survival, or a confounded seasonal observation into a bite weight."
+      ],
+      "input": "waterTemperatureTrend",
+      "inputKey": "water-temperature",
+      "runtimeAvailability": "modeled",
+      "forecastResolution": "hourly-and-daily",
+      "condition": "Progressive seasonal cooling relative to the population's recent thermal history",
+      "direction": "decrease",
+      "strength": "moderate",
+      "confidence": "medium",
+      "endpointCategories": [
+        "movement-or-general-activity"
+      ],
+      "concerns": [
+        "no-direct-feeding-or-catchability-endpoint"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-787930ad5effc85a",
+          "citation": "Patrick H. Wolf, Connor W. Elliott, Paul J. Blanchfield, Mark S. Ridgway, et al. (2026). Activity and metabolic rate of free-swimming smallmouth bass (Micropterus dolomieu) in large, interconnected ecosystems. Animal Biotelemetry 14:15.",
+          "url": "https://link.springer.com/article/10.1186/s40317-026-00455-3",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "non-scoring-context",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Use as explanatory biological context, not as a score modifier."
+    },
+    {
+      "ruleId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02",
+      "speciesId": "smallmouth-bass",
+      "disposition": "evidence-informed-candidate",
+      "reasonCode": "correct-species-relevant-endpoint-bounded-model-input",
+      "rationale": "The evidence studies the correct species and a relevant feeding, foraging, activity, or catchability endpoint with an input BiteMap can supply or defensibly model. Geography, life stage, and study setting reduce confidence and effect size rather than automatically disqualifying the rule.",
+      "requiredActions": [
+        "Use the bounded candidate blueprint and its conservative engineering cap.",
+        "Complete primary-source passage review before connecting the rule to production.",
+        "Validate the response and preserve study-setting uncertainty in the displayed confidence."
+      ],
+      "input": "turbidity",
+      "inputKey": "turbidity-or-suspended-sediment",
+      "runtimeAvailability": "conditional",
+      "forecastResolution": "observed-or-hourly",
+      "condition": "Increasing short-term turbidity within the experimentally tested 0-40 NTU range",
+      "direction": "decrease",
+      "strength": "moderate",
+      "confidence": "high",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-e5c0c961ae268f06",
+          "citation": "Mark W. Carter, Daniel E. Shoup, John M. Dettmers, and David H. Wahl (2010). Effects of Turbidity and Cover on Prey Selectivity of Adult Smallmouth Bass. Transactions of the American Fisheries Society 139:353-361.",
+          "url": "https://www.researchgate.net/publication/244836976_Effects_of_Turbidity_and_Cover_on_Prey_Selectivity_of_Adult_Smallmouth_Bass",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": {
+        "ruleId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02",
+        "evidenceClass": "controlled adult feeding experiment",
+        "modelConfidence": "moderate-high",
+        "sourceReviewStatus": "primary-full-text-claim-confirmed",
+        "inputContract": "Observed turbidity in NTU, or FNU only when the provider documents comparable optics; never suspended sediment mass.",
+        "validRange": {
+          "turbidityNtu": [
+            0,
+            40
+          ],
+          "treatmentsNtu": [
+            0,
+            5,
+            10,
+            20,
+            40
+          ]
+        },
+        "integrationMode": "species-specific-water-quality-factor",
+        "curveType": "bounded-monotonic-decrease",
+        "proposedResponse": "Apply a modest decreasing response within 0-40 NTU and clamp outside the range; do not claim that every amount of stained water is harmful in the field.",
+        "effectCapTier": "moderate",
+        "missingBehavior": "Neutral when representative turbidity is unavailable or the unit is not comparable.",
+        "doubleCountingGuard": "Do not stack turbidity with rainfall or flow as separate visibility penalties.",
+        "validationRequirements": [
+          "0-40 NTU monotonic ordering",
+          "unit-compatibility gate",
+          "outside-range clamp",
+          "rain-flow-turbidity deduplication"
+        ]
+      },
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-pending-source-curve-and-validation-review",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Complete source-passage review and validate the bounded evidence-informed curve before integration."
+    },
+    {
+      "ruleId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-03",
+      "speciesId": "smallmouth-bass",
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "input": "reproductivePhase",
+      "inputKey": "reproductive-phase",
+      "runtimeAvailability": "modeled",
+      "forecastResolution": "daily",
+      "condition": "Male actively guarding newly deposited eggs or dependent fry",
+      "direction": "increase",
+      "strength": "strong",
+      "confidence": "high",
+      "endpointCategories": [
+        "feeding-or-foraging",
+        "hook-and-line-catchability"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-20484c914f301cee",
+          "citation": "Geoffrey B. Steinhart, Melissa E. Sandrene, Stephanie Weaver, Roy A. Stein, and Elizabeth A. Marschall (2005). Increased parental care cost for nest-guarding fish in a lake with hyperabundant nest predators. Behavioral Ecology 16:427-434.",
+          "url": "https://academic.oup.com/beheco/article/16/2/427/297852",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 0,
+          "abstractOnlyOccurrences": 1
+        },
+        {
+          "sourceId": "src-58bd6a9d6a5a2762",
+          "citation": "Cory D. Suski and David P. Philipp (2004). Factors Affecting the Vulnerability to Angling of Nesting Male Largemouth and Smallmouth Bass. Transactions of the American Fisheries Society 133:1100-1106.",
+          "url": "https://academic.oup.com/tafs/article-abstract/133/5/1100/7887981",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 0,
+          "abstractOnlyOccurrences": 2
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-runtime-contract",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Wait for the exact runtime input; do not substitute a scientifically different proxy."
+    },
+    {
+      "ruleId": "rule-batch-5-striped-bass-01",
+      "speciesId": "striped-bass",
+      "disposition": "evidence-informed-candidate",
+      "reasonCode": "correct-species-relevant-endpoint-bounded-model-input",
+      "rationale": "The evidence studies the correct species and a relevant feeding, foraging, activity, or catchability endpoint with an input BiteMap can supply or defensibly model. Geography, life stage, and study setting reduce confidence and effect size rather than automatically disqualifying the rule.",
+      "requiredActions": [
+        "Use the bounded candidate blueprint and its conservative engineering cap.",
+        "Complete primary-source passage review before connecting the rule to production.",
+        "Validate the response and preserve study-setting uncertainty in the displayed confidence."
+      ],
+      "input": "dissolvedOxygenMgL",
+      "inputKey": "dissolved-oxygen",
+      "runtimeAvailability": "conditional",
+      "forecastResolution": "observed-only",
+      "condition": "Juvenile laboratory exposure at 2 mg/L versus 4 mg/L and approximately saturated (~8 mg/L) within 20-30 C",
+      "direction": "lower at 2 mg/L; higher at 4/saturation",
+      "strength": "bounded moderate",
+      "confidence": "medium-high",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-195f04b66539a443",
+          "citation": "Stephen B. Brandt; Melinda Gerken; Kyle J. Hartman; Eric Demers (2009). Effects of hypoxia on food consumption and growth of juvenile striped bass (Morone saxatilis). Journal of Experimental Marine Biology and Ecology 381 Supplement:S143-S149.",
+          "url": "https://doi.org/10.1016/j.jembe.2009.07.028",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": {
+        "ruleId": "rule-batch-5-striped-bass-01",
+        "evidenceClass": "controlled juvenile dissolved-oxygen feeding experiment",
+        "modelConfidence": "moderate-high",
+        "sourceReviewStatus": "primary-publisher-claim-confirmed",
+        "inputContract": "Representative dissolved oxygen in mg/L and water temperature in degrees C.",
+        "validRange": {
+          "dissolvedOxygenMgL": [
+            2,
+            8
+          ],
+          "temperatureC": [
+            20,
+            30
+          ],
+          "oxygenTreatmentsMgL": [
+            2,
+            4,
+            8
+          ]
+        },
+        "integrationMode": "replace-generic-oxygen-factor",
+        "curveType": "bounded-oxygen-anchor-response",
+        "proposedResponse": "Use a moderate penalty near 2 mg/L, a smaller penalty near 4 mg/L, and neutral at adequate oxygen; add no oxygen bonus above the tested adequate condition.",
+        "effectCapTier": "strong-conservative",
+        "missingBehavior": "Neutral with reduced confidence when representative dissolved oxygen is unavailable.",
+        "doubleCountingGuard": "Replace the generic striped-bass oxygen term and cap any warm-water interaction rather than multiplying two full penalties.",
+        "validationRequirements": [
+          "2-4-8 mg/L ordering",
+          "20-30 C scope",
+          "adequate-oxygen neutrality",
+          "gage representativeness attenuation"
+        ]
+      },
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-pending-source-curve-and-validation-review",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Complete source-passage review and validate the bounded evidence-informed curve before integration."
+    },
+    {
+      "ruleId": "rule-batch-6-walleye-01",
+      "speciesId": "walleye",
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "input": "underwaterLightLux",
+      "inputKey": "light-and-diel",
+      "runtimeAvailability": "available",
+      "forecastResolution": "hourly",
+      "condition": "Measured underwater illuminance approximately 0.05-1 lx, versus full darkness or brighter treatments",
+      "direction": "increase",
+      "strength": "bounded moderate",
+      "confidence": "medium",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-3492cdaef13d09ad",
+          "citation": "Noland O. Michels; Quinnlan C. Smith; Loranzie S. Rogers; Thomas R. Hrabik; Greg G. Sass; Allen F. Mensinger (2025). Visual sensitivity, foraging behavior, and success of walleye (Sander vitreus) under ecologically relevant downwelling light conditions. Environmental Biology of Fishes 108:147-160.",
+          "url": "https://doi.org/10.1007/s10641-024-01650-y",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-runtime-contract",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Wait for the exact runtime input; do not substitute a scientifically different proxy."
+    },
+    {
+      "ruleId": "rule-batch-6-walleye-02",
+      "speciesId": "walleye",
+      "disposition": "production-candidate",
+      "reasonCode": "direct-endpoint-bounded-runtime-input",
+      "rationale": "The rule has a direct feeding or angling-catch endpoint, an input BiteMap can supply at the required resolution, and a study scope that can be represented with explicit geographic, seasonal, and waterbody bounds.",
+      "requiredActions": [
+        "Have a human reviewer inspect the cited primary-source passage and sign the claim.",
+        "Choose and document a conservative bounded curve without extrapolating beyond the study.",
+        "Add adversarial tests for season, geography, waterbody, missing inputs, and correlated light variables.",
+        "Validate the modifier against held-out observations before production integration."
+      ],
+      "input": "solarRadiationOrDiel",
+      "inputKey": "light-and-diel",
+      "runtimeAvailability": "available",
+      "forecastResolution": "hourly",
+      "condition": "Dawn/dusk or lower measured solar radiation in a lake fishery",
+      "direction": "increase",
+      "strength": "small to moderate",
+      "confidence": "medium",
+      "endpointCategories": [
+        "hook-and-line-catchability"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-0011c7e1c1843d4f",
+          "citation": "Stephanie L. Shaw; Kathryn M. Renik; Greg G. Sass (2021). Angler and environmental influences on walleye Sander vitreus and muskellunge Esox masquinongy angler catch in Escanaba Lake, Wisconsin 2003-2015. PLOS ONE 16(9):e0257882.",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0257882",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 2,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": {
+        "status": "primary-source-preflight-complete",
+        "checkedOn": "2026-07-16",
+        "sourceUrls": [
+          "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0257882"
+        ],
+        "findings": [
+          "The long-term compulsory-creel study directly estimated higher walleye angling success at dawn and dusk than during daytime and a negative solar-radiation effect."
+        ],
+        "limitations": [
+          "The effect comes from one Wisconsin lake fishery and requires conservative transfer to NOVA lakes and reservoirs.",
+          "Solar radiation and diel period are correlated and must not be scored twice."
+        ],
+        "humanApproved": false
+      },
+      "translationBlueprint": {
+        "ruleId": "rule-batch-6-walleye-02",
+        "evidenceClass": "long-term compulsory-creel angling-success model",
+        "modelConfidence": "moderate-high",
+        "sourceReviewStatus": "primary-full-text-preflight-complete",
+        "inputContract": "Local solar-relative period and optionally forecast surface solar radiation for lake/reservoir locations.",
+        "validRange": {
+          "solarRadiationWm2": [
+            3,
+            570
+          ],
+          "periods": [
+            "dawn",
+            "day",
+            "dusk"
+          ],
+          "waterbody": "lake or reservoir"
+        },
+        "integrationMode": "replace-generic-diel-light-factor",
+        "curveType": "single-latent-light-response",
+        "proposedResponse": "Apply bounded dawn and dusk increases relative to day, with radiation as an alternate continuous representation rather than an additional factor.",
+        "effectCapTier": "moderate",
+        "missingBehavior": "Use solar-relative period alone when radiation is missing; otherwise neutral.",
+        "doubleCountingGuard": "Dawn/dusk, cloud, and solar radiation are one latent light signal and cannot stack.",
+        "validationRequirements": [
+          "dawn-dusk greater than day",
+          "continuous solar boundaries",
+          "single-light-factor",
+          "lake-reservoir scope"
+        ]
+      },
+      "inInitialValidationCohort": true,
+      "approvalStatus": "blocked-pending-human-source-and-curve-review",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Human source sign-off, bounded curve design, adversarial tests, and held-out validation."
+    },
+    {
+      "ruleId": "rule-batch-6-walleye-03",
+      "speciesId": "walleye",
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "input": "fishAgeOrSize",
+      "inputKey": "fish-size-or-age",
+      "runtimeAvailability": "unavailable",
+      "forecastResolution": "not-forecastable",
+      "condition": "Escanaba Lake ages 3-8",
+      "direction": "decrease with age within studied population",
+      "strength": "moderate",
+      "confidence": "medium",
+      "endpointCategories": [
+        "hook-and-line-catchability"
+      ],
+      "concerns": [
+        "runtime-input-not-available"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-ca7f9145e1cddf0f",
+          "citation": "Justine R. Newby; Michael J. Hansen; Steven P. Newman; Charles J. Edwards (2000). Catchability of Walleyes to Angling in Escanaba Lake, Wisconsin, 1980-1995. North American Journal of Fisheries Management 20:873-881.",
+          "url": "https://academic.oup.com/najfm/article-pdf/20/4/873/61069595/nafm0873.pdf",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-runtime-contract",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Wait for the exact runtime input; do not substitute a scientifically different proxy."
+    },
+    {
+      "ruleId": "rule-batch-1-white-crappie-01",
+      "speciesId": "white-crappie",
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "input": "fishLengthCm",
+      "inputKey": "fish-size-or-age",
+      "runtimeAvailability": "unavailable",
+      "forecastResolution": "not-forecastable",
+      "condition": "26–32 cm total length within contexts comparable to the five-reservoir tagging study",
+      "direction": "increase",
+      "strength": "moderate",
+      "confidence": "medium",
+      "endpointCategories": [
+        "hook-and-line-catchability"
+      ],
+      "concerns": [
+        "runtime-input-not-available"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-5cb9c808662b1a31",
+          "citation": "L. E. Miranda and B. S. Dorr (2000). Size Selectivity of Crappie Angling. North American Journal of Fisheries Management 20(3):706–710.",
+          "url": "https://doi.org/10.1577/1548-8675(2000)020%3C0706:SSOCA%3E2.3.CO;2",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 2,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-runtime-contract",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Wait for the exact runtime input; do not substitute a scientifically different proxy."
+    },
+    {
+      "ruleId": "rule-batch-1-white-crappie-02",
+      "speciesId": "white-crappie",
+      "disposition": "unavailable-input",
+      "reasonCode": "runtime-contract-not-supported",
+      "rationale": "The claim may be accurate, but BiteMap cannot observe the required state at the necessary location and time resolution. A nearby proxy would change the scientific meaning of the rule.",
+      "requiredActions": [
+        "Keep the rule out of scoring until the exact runtime input and its provenance are available.",
+        "Document temporal semantics such as instantaneous, nightly minimum, chronic exposure, or recent-event history.",
+        "Re-run scientific and runtime review if the data layer gains the required input."
+      ],
+      "input": "fishLengthCm",
+      "inputKey": "fish-size-or-age",
+      "runtimeAvailability": "unavailable",
+      "forecastResolution": "not-forecastable",
+      "condition": "Near 20 cm or above approximately 32 cm within the measured range",
+      "direction": "decrease",
+      "strength": "weak-to-moderate",
+      "confidence": "medium",
+      "endpointCategories": [
+        "hook-and-line-catchability"
+      ],
+      "concerns": [
+        "runtime-input-not-available"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-5cb9c808662b1a31",
+          "citation": "L. E. Miranda and B. S. Dorr (2000). Size Selectivity of Crappie Angling. North American Journal of Fisheries Management 20(3):706–710.",
+          "url": "https://doi.org/10.1577/1548-8675(2000)020%3C0706:SSOCA%3E2.3.CO;2",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 2,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": null,
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-runtime-contract",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Wait for the exact runtime input; do not substitute a scientifically different proxy."
+    },
+    {
+      "ruleId": "rule-batch-8-white-sucker-01",
+      "speciesId": "white-sucker",
+      "disposition": "evidence-informed-candidate",
+      "reasonCode": "correct-species-relevant-endpoint-bounded-model-input",
+      "rationale": "The evidence studies the correct species and a relevant feeding, foraging, activity, or catchability endpoint with an input BiteMap can supply or defensibly model. Geography, life stage, and study setting reduce confidence and effect size rather than automatically disqualifying the rule.",
+      "requiredActions": [
+        "Use the bounded candidate blueprint and its conservative engineering cap.",
+        "Complete primary-source passage review before connecting the rule to production.",
+        "Validate the response and preserve study-setting uncertainty in the displayed confidence."
+      ],
+      "input": "waterTemperature",
+      "inputKey": "water-temperature",
+      "runtimeAvailability": "modeled",
+      "forecastResolution": "hourly-and-daily",
+      "condition": "Juvenile laboratory conditions: 22-25 C compared with 19 or 28 C",
+      "direction": "positive at intermediate treatments; lower at tested extremes",
+      "strength": "low-moderate",
+      "confidence": "high",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [],
+      "sourceRecords": [
+        {
+          "sourceId": "src-ec10c04733ebe359",
+          "citation": "Meagan M. Kindree; Nicholas E. Jones; Nicholas E. Mandrak (2024). Interactive effects of temperature and velocity on the feeding behavior of competing native and invasive stream fishes. Frontiers in Ecology and Evolution 12:1290083.",
+          "url": "https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2024.1290083/full",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 1,
+          "abstractOnlyOccurrences": 0
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": {
+        "ruleId": "rule-batch-8-white-sucker-01",
+        "evidenceClass": "controlled juvenile feeding experiment",
+        "modelConfidence": "moderate",
+        "sourceReviewStatus": "primary-full-text-claim-confirmed",
+        "inputContract": "Observed or modeled water temperature in degrees C.",
+        "validRange": {
+          "temperatureC": [
+            19,
+            28
+          ],
+          "treatmentsC": [
+            19,
+            22,
+            25,
+            28
+          ]
+        },
+        "integrationMode": "calibrate-existing-water-temperature-factor",
+        "curveType": "four-anchor-bounded-response",
+        "proposedResponse": "Use a broad intermediate-temperature plateau with lower suitability at 19 and 28 C; do not treat 25 C as a precise adult field optimum.",
+        "effectCapTier": "moderate",
+        "missingBehavior": "Fall back to the seasonal prior when water temperature is unavailable.",
+        "doubleCountingGuard": "Replace the existing thermal response and do not add a second warm or cool penalty.",
+        "validationRequirements": [
+          "intermediate greater than extremes",
+          "broad plateau rather than point optimum",
+          "no extrapolation",
+          "modeled-temperature uncertainty attenuation"
+        ]
+      },
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-pending-source-curve-and-validation-review",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Complete source-passage review and validate the bounded evidence-informed curve before integration."
+    },
+    {
+      "ruleId": "rule-batch-5-yellow-perch-01",
+      "speciesId": "yellow-perch",
+      "disposition": "evidence-informed-candidate",
+      "reasonCode": "correct-species-relevant-endpoint-bounded-model-input",
+      "rationale": "The evidence studies the correct species and a relevant feeding, foraging, activity, or catchability endpoint with an input BiteMap can supply or defensibly model. Geography, life stage, and study setting reduce confidence and effect size rather than automatically disqualifying the rule.",
+      "requiredActions": [
+        "Use the bounded candidate blueprint and its conservative engineering cap.",
+        "Complete primary-source passage review before connecting the rule to production.",
+        "Validate the response and preserve study-setting uncertainty in the displayed confidence."
+      ],
+      "input": "timeOfDay",
+      "inputKey": "light-and-diel",
+      "runtimeAvailability": "available",
+      "forecastResolution": "hourly",
+      "condition": "Summer daylight through late evening in a clear/northern lake; after-sunset period",
+      "direction": "feeding rises through day, peaks late evening, then declines after sunset",
+      "strength": "bounded low-medium",
+      "confidence": "medium",
+      "endpointCategories": [
+        "feeding-or-foraging"
+      ],
+      "concerns": [
+        "low-nova-transferability"
+      ],
+      "sourceRecords": [
+        {
+          "sourceId": "src-2f5204d0e38b5373",
+          "citation": "Wolfgang A. Jansen; William C. Mackay (1992). Foraging in yellow perch, Perca flavescens: biological and physical factors affecting diel periodicity in feeding, consumption, and movement. Environmental Biology of Fishes 34:287-303.",
+          "url": "https://doi.org/10.1007/BF00004776",
+          "canonicalHumanVerified": false,
+          "fullTextConfirmedOccurrences": 0,
+          "abstractOnlyOccurrences": 1
+        }
+      ],
+      "canonicalSourcesHumanVerified": false,
+      "primarySourcePreflight": null,
+      "translationBlueprint": {
+        "ruleId": "rule-batch-5-yellow-perch-01",
+        "evidenceClass": "two summer 24-hour field feeding chronologies",
+        "modelConfidence": "moderate",
+        "sourceReviewStatus": "primary-author-full-text-claim-confirmed",
+        "inputContract": "Local solar-relative time and selected date.",
+        "validRange": {
+          "season": "summer",
+          "waterbody": "clear lake",
+          "solarWindow": "feeding rises through daylight, peaks late evening, and declines after sunset"
+        },
+        "integrationMode": "replace-generic-diel-factor",
+        "curveType": "daylight-to-late-evening-ramp",
+        "proposedResponse": "Use a modest daylight ramp toward late evening and decline after sunset; attenuate in turbid water and outside summer.",
+        "effectCapTier": "moderate",
+        "missingBehavior": "Neutral without local solar time; use reduced confidence when clarity is unknown.",
+        "doubleCountingGuard": "Use one diel/light factor and do not stack a separate dusk or cloud modifier.",
+        "validationRequirements": [
+          "daylight ramp",
+          "late-evening peak",
+          "post-sunset decline",
+          "summer-clear-water scope"
+        ]
+      },
+      "inInitialValidationCohort": false,
+      "approvalStatus": "blocked-pending-source-curve-and-validation-review",
+      "eligibleForLiveScorer": false,
+      "nextAction": "Complete source-passage review and validate the bounded evidence-informed curve before integration."
+    }
+  ]
+}

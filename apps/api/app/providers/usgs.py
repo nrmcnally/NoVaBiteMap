@@ -15,8 +15,9 @@ class UsgsWaterProvider(JsonProvider):
             params={
                 "format": "json",
                 "sites": station_id,
-                "parameterCd": "00060,00065,00010,63680,00300",
+                "parameterCd": "00060,00065,00010,00095,63680,00300",
                 "siteStatus": "all",
+                "period": "P2D",
             },
         )
         return {
@@ -25,4 +26,3 @@ class UsgsWaterProvider(JsonProvider):
             "retrieved_at": datetime.now(timezone.utc).isoformat(),
             "time_series": data.get("value", {}).get("timeSeries", []),
         }
-

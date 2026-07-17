@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "0.1.0-draft",
+  "reviewVersion": "engineering-review-v0.1.0",
+  "modelVersion": "candidate-v0.2.0",
+  "snapshotDate": "2026-07-16",
+  "planSha256": "3d4eaf21b3dbd578c223c52ea5828b406dee98fd7af8b39056485a46fb360396",
+  "observationStoreSha256": "179ebc8b492059cd605411b2e423231535c50cf3a6fca7c2c057896ed7cc6a2e",
+  "notice": "AI-assisted adversarial engineering review. This is not human scientific approval, production approval, or evidence of predictive validity.",
+  "status": "blocked-awaiting-preregistration-and-independent-observations",
+  "errorCount": 0,
+  "independentObservationCount": 0,
+  "comparisonCohortRuleCount": 2,
+  "preRegistrationApproved": false,
+  "humanApproved": false,
+  "productionApproved": false,
+  "liveShadowEligibleCount": 0,
+  "liveScorerEligibleCount": 0,
+  "nextRequiredActions": [
+    "A named human reviewer signs the draft protocol before any row is promoted from calibration to confirmatory evaluation.",
+    "Use the outcome-blinded instrumentation pilot to set a precision- or power-based confirmatory sample size.",
+    "Declare exact waterbody and future-date holdouts before viewing held-out outcomes.",
+    "Declare the minimum held-out improvement and maximum calibration regression allowed."
+  ]
+}

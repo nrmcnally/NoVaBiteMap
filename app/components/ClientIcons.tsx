@@ -7,6 +7,7 @@ export {
   Award,
   Sailboat,
   CheckCircle2,
+  ClipboardList,
   ChevronDown,
   Clock3,
   Droplets,

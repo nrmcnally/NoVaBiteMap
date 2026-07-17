@@ -32,7 +32,7 @@ export function DataHealthClient({ adminName }: { adminName: string }) {
       <main className="content-shell health-shell">
         <header className="health-header">
           <div><span className="eyebrow">Administrative data health</span><h1>What BiteMap knows—and what it doesn&apos;t.</h1><p>This operational view is authenticated and excluded from public navigation.</p></div>
-          <div className="admin-badges"><span className="identity-chip"><ShieldCheck size={16} /> {adminName}</span><span className="model-chip"><ServerCog size={17} /> Score profile v1.0 active</span></div>
+          <div className="admin-badges"><span className="identity-chip"><ShieldCheck size={16} /> {adminName}</span><span className="model-chip"><ServerCog size={17} /> Score profile v1.1 active</span></div>
         </header>
         <section className="health-stats">
           <article><MapPin size={21} /><strong>{locations.length}</strong><span>Verified locations</span><small>Multi-agency access catalog</small></article>

@@ -57,7 +57,7 @@ export function AccountClient({ initialUser, returnTo }: AccountClientProps) {
   }
 
   async function deleteAccount() {
-    if (!window.confirm("Delete your BiteMap account and every saved spot? This cannot be undone.")) return;
+    if (!window.confirm("Delete your BiteMap account, saved spots, and private trip logs? This cannot be undone.")) return;
     setBusy(true);
     const response = await fetch("/api/account", { method: "DELETE" });
     if (response.ok) {
@@ -80,9 +80,10 @@ export function AccountClient({ initialUser, returnTo }: AccountClientProps) {
         {error && <p className="account-error" role="alert">{error}</p>}
         <div className="account-actions">
           <a className="primary-action" href="/my-spots">Open My Spots</a>
+          <a className="secondary-action" href="/trips">Open Trip Log</a>
           <button className="secondary-action" type="button" disabled={busy} onClick={() => void signOut()}>Sign out</button>
         </div>
-        <button className="delete-account" type="button" disabled={busy} onClick={() => void deleteAccount()}>Delete account and saved spots</button>
+        <button className="delete-account" type="button" disabled={busy} onClick={() => void deleteAccount()}>Delete account, saved spots, and trip logs</button>
       </section>
     );
   }

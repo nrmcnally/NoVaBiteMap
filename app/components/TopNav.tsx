@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { BookOpen, Fish, Heart, Map } from "lucide-react";
+import { BookOpen, ClipboardList, Fish, Heart, Map } from "lucide-react";
 import { AccountNav } from "./AccountNav";
 
-type TopNavProps = { active?: "explore" | "spots" | "methodology" | "fish" | "account" };
+type TopNavProps = { active?: "explore" | "spots" | "trips" | "methodology" | "fish" | "account" };
 
 export function TopNav({ active = "explore" }: TopNavProps) {
   return (
@@ -25,6 +25,9 @@ export function TopNav({ active = "explore" }: TopNavProps) {
         </Link>
         <Link prefetch={false} className={active === "spots" ? "active" : ""} href="/my-spots">
           <Heart size={16} /> My spots
+        </Link>
+        <Link prefetch={false} className={active === "trips" ? "active" : ""} href="/trips">
+          <ClipboardList size={16} /> Trips
         </Link>
         <Link className={active === "methodology" ? "active" : ""} href="/methodology">
           How it works

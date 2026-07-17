@@ -63,6 +63,34 @@ test("alpha accounts use email and password with private cookie sessions", async
   assert.match(dockerfile, /vinext\/dist\/cli\.js", "start"/);
 });
 
+test("private trip logs record actual spot and time without freezing a forecast", async () => {
+  const [tripPage, tripClient, tripRoute, replayRoute, replay, d1Trips, schema, methodology] = await Promise.all([
+    readFile(new URL("../app/trips/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/trips/TripLogClient.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/api/trips/route.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/api/trips/[id]/replay/route.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/lib/historical-replay.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/lib/d1-fishing-trips.ts", import.meta.url), "utf8"),
+    readFile(new URL("../db/schema.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/methodology/page.tsx", import.meta.url), "utf8"),
+  ]);
+  assert.match(tripPage, /does not freeze a forecast/i);
+  assert.match(tripClient, /type="datetime-local"/);
+  assert.match(tripClient, /A zero-catch trip is useful data too/);
+  assert.match(tripRoute, /That species is not evidenced at this BiteMap spot/);
+  assert.match(`${tripRoute}${d1Trips}`, /validationEligible: false/);
+  assert.match(schema, /first-party-alpha-trip-log/);
+  assert.match(tripClient, /Reconstruct conditions/);
+  assert.match(replay, /modeled-historical-forecast/);
+  assert.match(replay, /No manually verified USGS station relationship/);
+  assert.match(replayRoute, /locationId: trip\.locationId[\s\S]*startedAt: trip\.startedAt[\s\S]*endedAt: trip\.endedAt/);
+  assert.doesNotMatch(replay, /catchCount|lureOrBait|validationEligible/);
+  assert.doesNotMatch(`${tripRoute}${d1Trips}${schema}`, /environmentSnapshot|snapshotId/);
+  assert.match(methodology, /calibration evidence, not proof/i);
+  assert.match(methodology, /Open-Meteo modeled history/);
+  assert.match(methodology, /manually mapped USGS station/);
+});
+
 test("methodology explains the score without exposing provider health", async () => {
   const methodology = await readFile(new URL("../app/methodology/page.tsx", import.meta.url), "utf8");
   assert.match(methodology, /A useful forecast should show its work/);
@@ -95,10 +123,11 @@ test("source code preserves the species gate, provenance, and precise advisory l
   assert.equal((coverage.match(/verifiedLocation\(\{ id:/g) ?? []).length, 34);
 });
 
-test("live public-data spine includes hydrology, multi-day weather, trout, and Aquatic GAP", async () => {
-  const [hydrology, conditions, detail, publicEvidence, importer, gap, trout] = await Promise.all([
+test("live public-data spine includes canonical science forecast, hydrology, multi-day weather, trout, and Aquatic GAP", async () => {
+  const [hydrology, conditions, canonical, detail, publicEvidence, importer, gap, trout] = await Promise.all([
     readFile(new URL("../app/api/hydrology/route.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/api/conditions/route.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/api/live-forecast/route.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/components/LocationIntelligence.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/lib/public-evidence.ts", import.meta.url), "utf8"),
     readFile(new URL("../apps/api/app/ingestion/public_data.py", import.meta.url), "utf8"),
@@ -109,7 +138,10 @@ test("live public-data spine includes hydrology, multi-day weather, trout, and A
   assert.match(hydrology, /stale-while-revalidate=1800/);
   assert.match(conditions, /periods: .*slice\(0, 120\)/);
   assert.match(conditions, /alerts:/);
+  assert.match(canonical, /\/forecast/);
   assert.match(detail, /Today through day five/);
+  assert.match(detail, /Canonical science model/);
+  assert.match(detail, /estimated-regional/);
   assert.match(detail, /air temperature is shown but is not treated as water temperature/i);
   assert.match(publicEvidence, /nearby historic stream evidence, not proof at the access point/i);
   assert.match(publicEvidence, /designated stocked-water layer/);

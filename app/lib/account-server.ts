@@ -1,5 +1,6 @@
 import { eq } from "drizzle-orm";
 import { cookies } from "next/headers";
+import type { ConditionReplayStatus, HistoricalConditionReplay } from "./historical-replay";
 
 export const SESSION_COOKIE = "bitemap_session";
 
@@ -23,6 +24,36 @@ export type AccountFavorite = {
   sortOrder: number;
 };
 
+export type AccountFishingTrip = {
+  id: string;
+  locationId: string;
+  speciesId: string;
+  startedAt: string;
+  endedAt: string;
+  timezone: string;
+  anglerCount: number;
+  effortMinutes: number;
+  catchCount: number;
+  zeroCatchExplicit: boolean;
+  locationDetail: string | null;
+  lureOrBait: string | null;
+  observedWaterTemperatureC: number | null;
+  observedClarity: string | null;
+  notes: string | null;
+  consentForAggregateAnalysis: boolean;
+  sourceType: "first-party-alpha-trip-log";
+  candidateCohort: boolean;
+  calibrationEligible: boolean;
+  validationEligible: boolean;
+  conditionReplayId: string | null;
+  conditionReplayStatus: ConditionReplayStatus;
+  conditionReplayPolicyVersion: string | null;
+  conditionReplay: HistoricalConditionReplay | null;
+  conditionReplayedAt: string | null;
+  createdAt: string;
+  updatedAt: string;
+};
+
 type PasswordUserResponse = {
   id: number;
   email: string;
@@ -37,6 +68,36 @@ type PasswordFavoriteResponse = {
   preferred_species_id: string | null;
   default_access_method: string | null;
   sort_order: number;
+};
+
+export type PasswordFishingTripResponse = {
+  id: string;
+  location_id: string;
+  species_id: string;
+  started_at: string;
+  ended_at: string;
+  timezone: string;
+  angler_count: number;
+  effort_minutes: number;
+  catch_count: number;
+  zero_catch_explicit: boolean;
+  location_detail: string | null;
+  lure_or_bait: string | null;
+  observed_water_temperature_c: number | null;
+  observed_clarity: string | null;
+  notes: string | null;
+  consent_for_aggregate_analysis: boolean;
+  source_type: "first-party-alpha-trip-log";
+  candidate_cohort: boolean;
+  calibration_eligible: boolean;
+  validation_eligible: boolean;
+  condition_replay_id: string | null;
+  condition_replay_status: ConditionReplayStatus;
+  condition_replay_policy_version: string | null;
+  condition_replay: HistoricalConditionReplay | null;
+  condition_replayed_at: string | null;
+  created_at: string;
+  updated_at: string;
 };
 
 export function accountMode(): AccountMode {
@@ -116,6 +177,21 @@ export async function listAccountFavorites(): Promise<AccountFavorite[]> {
   }));
 }
 
+export async function listAccountFishingTrips(): Promise<AccountFishingTrip[]> {
+  const user = await getAccountUser();
+  if (!user) return [];
+  if (accountBackend() === "d1") {
+    const { listD1FishingTrips } = await import("./d1-fishing-trips");
+    return listD1FishingTrips(user);
+  }
+  const token = await passwordSessionToken();
+  if (!token) return [];
+  const response = await passwordApiRequest("/api/users/me/fishing-trips", { method: "GET" }, token);
+  if (!response.ok) throw new Error("Trip-log storage is unavailable.");
+  const trips = await response.json() as PasswordFishingTripResponse[];
+  return trips.map(normalizePasswordFishingTrip);
+}
+
 export async function passwordSessionToken(): Promise<string | null> {
   return (await cookies()).get(SESSION_COOKIE)?.value ?? null;
 }
@@ -151,6 +227,38 @@ export function normalizePasswordFavorite(favorite: PasswordFavoriteResponse): A
     preferredSpecies: favorite.preferred_species_id,
     accessMethod: favorite.default_access_method,
     sortOrder: favorite.sort_order,
+  };
+}
+
+export function normalizePasswordFishingTrip(trip: PasswordFishingTripResponse): AccountFishingTrip {
+  return {
+    id: trip.id,
+    locationId: trip.location_id,
+    speciesId: trip.species_id,
+    startedAt: trip.started_at,
+    endedAt: trip.ended_at,
+    timezone: trip.timezone,
+    anglerCount: trip.angler_count,
+    effortMinutes: trip.effort_minutes,
+    catchCount: trip.catch_count,
+    zeroCatchExplicit: trip.zero_catch_explicit,
+    locationDetail: trip.location_detail,
+    lureOrBait: trip.lure_or_bait,
+    observedWaterTemperatureC: trip.observed_water_temperature_c,
+    observedClarity: trip.observed_clarity,
+    notes: trip.notes,
+    consentForAggregateAnalysis: trip.consent_for_aggregate_analysis,
+    sourceType: trip.source_type,
+    candidateCohort: trip.candidate_cohort,
+    calibrationEligible: trip.calibration_eligible,
+    validationEligible: trip.validation_eligible,
+    conditionReplayId: trip.condition_replay_id ?? null,
+    conditionReplayStatus: trip.condition_replay_status ?? "not-requested",
+    conditionReplayPolicyVersion: trip.condition_replay_policy_version ?? null,
+    conditionReplay: trip.condition_replay ?? null,
+    conditionReplayedAt: trip.condition_replayed_at ?? null,
+    createdAt: trip.created_at,
+    updatedAt: trip.updated_at,
   };
 }
 

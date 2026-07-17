@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bitemap.local/schema/canonical-species-research.schema.json",
+  "title": "BiteMap canonical species research library",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "pipelineVersion",
+    "archiveIds",
+    "species"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "0.1.0-draft"
+    },
+    "pipelineVersion": {
+      "type": "string"
+    },
+    "archiveIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "species": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/speciesRecord"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "speciesRecord": {
+      "type": "object",
+      "required": [
+        "speciesId",
+        "commonName",
+        "acceptedScientificName",
+        "researchStatus",
+        "currentBiteMapStatus",
+        "promotionRecommendation",
+        "sourceIds",
+        "evidenceIds",
+        "candidateRuleIds",
+        "provenance"
+      ],
+      "properties": {
+        "speciesId": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "commonName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "suppliedScientificName": {
+          "type": ["string", "null"]
+        },
+        "acceptedScientificName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "taxonomicAliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "taxonomyNotes": {},
+        "researchStatus": {
+          "enum": ["complete", "partial", "insufficient", "unknown"]
+        },
+        "currentBiteMapStatus": {
+          "enum": ["current", "proposed", "guide-only", "unknown"]
+        },
+        "promotionRecommendation": {
+          "enum": [
+            "bite-scored",
+            "proposed-for-bite-scoring",
+            "fish-guide-only",
+            "insufficient-evidence",
+            "unknown"
+          ]
+        },
+        "executiveConclusion": {},
+        "targetabilityAssessment": {},
+        "finalVerdict": {},
+        "topicFindings": {
+          "type": "object"
+        },
+        "zeroWeightVariables": {},
+        "missingResearch": {},
+        "sourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^src-[a-f0-9]{16}$"
+          },
+          "uniqueItems": true
+        },
+        "evidenceIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "candidateRuleIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "taxonomySourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "rawRecordSha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "provenance": {
+          "type": "object",
+          "required": ["archiveId", "archiveFilename", "recordPath"],
+          "properties": {
+            "archiveId": {
+              "type": "string"
+            },
+            "archiveFilename": {
+              "type": "string"
+            },
+            "recordPath": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

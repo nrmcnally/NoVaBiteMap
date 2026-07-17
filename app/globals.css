@@ -289,6 +289,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .method-grid p, .limits-panel p { color: var(--ink-soft); line-height: 1.65; }.method-grid a { display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; color: var(--orange); font-weight: 850; }
 .limits-panel { padding: 34px; background: var(--paper-deep); border-left: 4px solid var(--amber); }
 .limits-panel + .limits-panel { margin-top: 16px; }
+.limits-panel > a { display: inline-flex; align-items: center; margin-top: 8px; color: var(--orange); font-size: 11px; font-weight: 850; }
 
 /* Data health */
 .health-header, .spots-header { display: flex; justify-content: space-between; align-items: flex-end; gap: 25px; margin-bottom: 38px; }
@@ -565,8 +566,67 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .fish-hero-photo figcaption { margin-top: 5px; font-size: 8px; color: #8a958f; line-height: 1.4; }
 .fish-hero-photo figcaption a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 
+/* Private trip log */
+.trips-shell { max-width: 1320px; }
+.trips-header { align-items: flex-end; }
+.trip-layout { display: grid; grid-template-columns: minmax(0,1.12fr) minmax(330px,.88fr); gap: 18px; align-items: start; }
+.trip-entry-card, .trip-history { background: var(--white); border: 1px solid var(--line); box-shadow: 0 12px 32px rgba(17,48,49,.07); }
+.trip-entry-card { padding: 27px; }
+.trip-card-heading { display: flex; gap: 13px; align-items: center; }
+.trip-card-heading h2, .trip-history-heading h2 { margin: 5px 0 0; font-family: Georgia,serif; font-size: 29px; font-weight: 500; }
+.trip-icon { width: 45px; height: 45px; display: grid; place-items: center; flex: 0 0 auto; color: var(--amber); background: var(--pine); border-radius: 50%; }
+.trip-intro { margin: 15px 0 22px; color: var(--ink-soft); line-height: 1.55; font-size: 12px; }
+.trip-form { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 12px; }
+.trip-field { display: flex; flex-direction: column; gap: 6px; color: var(--ink); font-size: 9px; font-weight: 900; letter-spacing: .55px; text-transform: uppercase; }
+.trip-field > span { color: #81908d; font-size: 8px; font-weight: 750; }
+.trip-field > small { color: #748481; font-size: 8px; font-weight: 600; line-height: 1.45; letter-spacing: 0; text-transform: none; }
+.trip-field-wide { grid-column: 1/-1; }
+.trip-field input, .trip-field select, .trip-field textarea { width: 100%; border: 1px solid rgba(16,47,49,.22); border-radius: 3px; background: #fffefa; color: var(--ink); font-size: 12px; font-weight: 600; letter-spacing: 0; text-transform: none; }
+.trip-field input, .trip-field select { height: 44px; padding: 0 11px; }
+.trip-field textarea { min-height: 92px; padding: 11px; resize: vertical; font-family: inherit; }
+.trip-field input:focus, .trip-field select:focus, .trip-field textarea:focus { outline: 0; border-color: var(--water); box-shadow: 0 0 0 3px rgba(38,122,130,.12); }
+.trip-field select:disabled { color: #8a9795; background: #f2efe6; cursor: not-allowed; }
+.trip-consent { display: flex; gap: 10px; align-items: flex-start; padding: 13px; background: #edf1e6; border: 1px solid #d7ddce; color: var(--ink-soft); cursor: pointer; }
+.trip-consent input { width: 17px; height: 17px; flex: 0 0 auto; margin-top: 1px; accent-color: var(--water); }
+.trip-consent span { display: flex; flex-direction: column; gap: 3px; font-size: 9px; line-height: 1.45; }
+.trip-consent strong { color: var(--ink); font-size: 10px; }
+.trip-success { display: flex; align-items: center; gap: 7px; margin: 0; padding: 10px 12px; background: #e1eee3; color: #376b4b; font-size: 10px; font-weight: 800; }
+.trip-history { overflow: hidden; }
+.trip-history-heading { display: flex; align-items: center; justify-content: space-between; padding: 22px; border-bottom: 1px solid var(--line); }
+.trip-history-heading > span { min-width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; background: var(--paper-deep); color: var(--ink); font-family: Georgia,serif; font-size: 17px; }
+.trip-empty { padding: 55px 25px; text-align: center; color: var(--water); }
+.trip-empty h3 { margin: 12px 0 5px; color: var(--ink); font-family: Georgia,serif; font-size: 23px; }
+.trip-empty p { margin: 0; color: var(--ink-soft); font-size: 11px; }
+.trip-row { padding: 20px 22px; border-bottom: 1px solid var(--line); }
+.trip-row:last-child { border-bottom: 0; }
+.trip-row-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.trip-place { display: inline-flex; align-items: center; gap: 6px; color: var(--water); font-size: 9px; font-weight: 900; letter-spacing: .45px; text-transform: uppercase; }
+.trip-row-top button { width: 31px; height: 31px; display: grid; place-items: center; flex: 0 0 auto; border: 1px solid var(--line); border-radius: 50%; background: transparent; color: #9a5947; }
+.trip-row h3 { margin: 8px 0 3px; font-family: Georgia,serif; font-size: 23px; font-weight: 500; }
+.trip-row > p { margin: 0; color: #6d7f7c; font-size: 9px; line-height: 1.45; }
+.trip-result { display: flex; align-items: center; gap: 10px; margin: 14px 0 11px; padding: 11px; background: var(--paper); }
+.trip-result > strong { min-width: 37px; font-family: Georgia,serif; color: var(--orange); font-size: 31px; line-height: 1; text-align: center; }
+.trip-result > span { display: flex; flex-direction: column; gap: 3px; color: var(--ink); font-size: 9px; font-weight: 850; text-transform: uppercase; }
+.trip-result small { color: #71817f; font-size: 8px; font-weight: 600; text-transform: none; }
+.trip-row .trip-detail { margin: -2px 0 10px; }
+.trip-replay { margin: 12px 0 10px; padding: 11px; border: 1px solid #d7dedb; background: #f6f7f1; }
+.trip-replay-heading { display: flex; align-items: flex-start; gap: 8px; }
+.trip-replay-heading > span { width: 27px; height: 27px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 50%; background: #dcebed; color: var(--water); }
+.trip-replay-heading > div { display: flex; min-width: 0; flex-direction: column; gap: 3px; }
+.trip-replay-heading strong { color: var(--ink); font-size: 9px; letter-spacing: .35px; text-transform: uppercase; }
+.trip-replay-heading small, .trip-replay > p { color: #667875; font-size: 8px; line-height: 1.45; }
+.trip-replay-facts { display: flex; flex-wrap: wrap; gap: 6px; margin: 9px 0 0; }
+.trip-replay-facts span { display: inline-flex; align-items: center; gap: 5px; padding: 5px 7px; background: #e8eeea; color: #345d5f; font-size: 8px; font-weight: 800; }
+.trip-replay > p { margin: 8px 0 0; }
+.trip-replay > button { display: inline-flex; align-items: center; gap: 5px; margin-top: 9px; padding: 7px 9px; border: 1px solid rgba(38,122,130,.38); border-radius: 2px; background: #fffefa; color: var(--water); font-size: 8px; font-weight: 900; letter-spacing: .3px; text-transform: uppercase; }
+.trip-replay > button:disabled { cursor: wait; opacity: .6; }
+.trip-replay-partial { border-color: #dfc78c; background: #fbf7eb; }
+.trip-replay-unavailable { border-color: #e2c0b7; background: #fbf2ef; }
+.trip-use { display: inline-flex; margin-top: 2px; padding: 5px 7px; background: #eee9dd; color: #786f60; border-radius: 2px; font-size: 8px; font-weight: 900; text-transform: uppercase; letter-spacing: .45px; }
+.trip-use.trip-use-consented { color: #356d4a; background: #deecdf; }
+
 @media (max-width: 1160px) {
-  .top-nav { grid-template-columns: 210px 1fr auto; }.nav-status { display: none; }.top-nav nav { justify-content: flex-end; }
+  .top-nav { grid-template-columns: 210px 1fr auto; }.nav-status { display: none; }.top-nav nav { justify-content: flex-end; }.top-nav nav a { padding-left: 9px; padding-right: 9px; }
   .command-bar { grid-template-columns: 1fr; gap: 18px; }.command-intro { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px 18px; }.command-intro .eyebrow { width: 100%; }.command-intro p { margin-left: auto; }
   .filter-row { grid-template-columns: 1.2fr .8fr .8fr; }.harvest-filter-menu { grid-column: 1; }.access-filter { grid-column: 2/-1; }.origin-form { grid-column: 1/-1; }.origin-form small { position: static; display: block; margin-top: 4px; }.origin-form .clear-origin { top: auto; bottom: 0; }
   .workspace-grid { height: 720px; }.results-panel { width: min(650px, 62vw); }.condition-dock { grid-template-columns: 1.1fr 1fr 1fr 1.2fr 44px; }.condition-cell:nth-of-type(4) { display: none; }
@@ -583,6 +643,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .health-header, .spots-header, .detail-hero { align-items: flex-start; flex-direction: column; }.health-stats { grid-template-columns: 1fr 1fr; }.provider-row { grid-template-columns: 30px 1fr auto; }.provider-row > span:not(.provider-icon), .provider-row small { display: none; }.provider-row > svg { display: none; }.favorite-grid { grid-template-columns: 1fr; }
   .detail-grid { display: flex; flex-direction: column; }.detail-aside { order: -1; }.outlook-summary { grid-template-columns: 1fr; }.factor-columns { grid-template-columns: 1fr; }.multi-day-grid { grid-template-columns: repeat(2,1fr); }.forecast-basis { grid-template-columns: 1fr; }.hydrology-metrics { grid-template-columns: 1fr 1fr; }
   .fish-facts-page .fish-fact-grid { grid-template-columns: 1fr 1fr; }.fish-season-columns { grid-template-columns: 1fr; }.fish-viz-row { grid-template-columns: 1fr; }
+  .trip-layout { grid-template-columns: 1fr; }.trips-header { align-items: flex-start; }
 }
 
 @media (max-width: 560px) {
@@ -593,6 +654,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .map-legend { max-width: calc(100% - 16px); flex-wrap: wrap; }.result-card { grid-template-columns: 20px 53px minmax(0,1fr); padding: 11px 8px; }.score-orb { width: 50px; height: 50px; }.results-heading { padding: 17px 14px 10px; }.ranking-note { padding: 8px 14px; }.ranking-note a { display: none; }
   .health-stats { grid-template-columns: 1fr; }.health-header h1, .spots-header h1 { font-size: 39px; }.model-chip { align-self: stretch; justify-content: center; }.signin-panel { padding: 34px 20px; }.account-card { padding: 28px 20px; }.account-tabs { margin: -10px -10px 25px; }.account-header { align-items: flex-start; }
   .outlook-topline { align-items: flex-start; }.large-score strong { font-size: 38px; }.hour-chart { gap: 4px; }.chart-caption small { display: none; }.hero-actions { width: 100%; }.hero-actions a { flex: 1; justify-content: center; }.technique-card { align-items: flex-start; }.live-heading, .hydrology-title { align-items: flex-start; flex-direction: column; }.multi-day-grid, .hydrology-metrics { grid-template-columns: 1fr; }
+  .trip-entry-card { padding: 22px 16px; }.trip-form { grid-template-columns: 1fr; }.trip-field-wide { grid-column: 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {

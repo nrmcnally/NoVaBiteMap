@@ -15,6 +15,20 @@
       "when": 1784085560392,
       "tag": "0001_minor_ghost_rider",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1784255385350,
+      "tag": "0002_sticky_blonde_phantom",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1784257130225,
+      "tag": "0003_high_skin",
+      "breakpoints": true
     }
   ]
 }

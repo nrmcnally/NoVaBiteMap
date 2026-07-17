@@ -1,0 +1,540 @@
+{
+  "schemaVersion": "0.1.0-draft",
+  "snapshotDate": "2026-07-16",
+  "notice": "These are bounded non-production model blueprints. Numeric envelopes are conservative engineering caps, not effect sizes copied from the studies.",
+  "effectCapPolicy": {
+    "minor": {
+      "minimumMultiplier": 0.97,
+      "maximumMultiplier": 1.03,
+      "purpose": "Narrow, weak, indirect, or incompletely verified signals."
+    },
+    "moderate": {
+      "minimumMultiplier": 0.95,
+      "maximumMultiplier": 1.05,
+      "purpose": "Direct feeding or catchability direction with meaningful setting or transfer uncertainty."
+    },
+    "strong-conservative": {
+      "minimumMultiplier": 0.92,
+      "maximumMultiplier": 1.08,
+      "purpose": "Direct and comparatively strong evidence, still capped pending validation."
+    },
+    "severe-stress": {
+      "minimumMultiplier": 0.85,
+      "maximumMultiplier": 1.0,
+      "purpose": "Only for an exact severe physiological condition; never an ordinary-weather penalty."
+    }
+  },
+  "rules": [
+    {
+      "ruleId": "rule-batch-7-american-eel-01",
+      "evidenceClass": "field baited-capture and foraging proxy",
+      "modelConfidence": "moderate",
+      "sourceReviewStatus": "primary-full-text-preflight-complete",
+      "inputContract": "Local solar-relative time and selected date.",
+      "validRange": {
+        "season": "late summer through early autumn; strongest source support is September-October",
+        "solarWindow": "sunset through night, with strongest support during the first 90 minutes after sunset"
+      },
+      "integrationMode": "replace-generic-diel-factor",
+      "curveType": "solar-relative-window",
+      "proposedResponse": "Use a smooth, moderate post-sunset increase and a modest daylight decrease; attenuate outside the source season and in non-estuarine waters.",
+      "effectCapTier": "moderate",
+      "missingBehavior": "Neutral when local solar time cannot be calculated.",
+      "doubleCountingGuard": "Use one light/diel factor; do not stack sunset, clock time, cloud, and generic nocturnal weights.",
+      "validationRequirements": [
+        "sunset continuity",
+        "seasonal attenuation",
+        "single-light-factor",
+        "daylight-versus-night ordering"
+      ]
+    },
+    {
+      "ruleId": "rule-batch-10-blacknose-dace-01",
+      "evidenceClass": "single-stream stomach-fullness chronology",
+      "modelConfidence": "low",
+      "sourceReviewStatus": "primary-full-text-ocr-claim-confirmed",
+      "inputContract": "Local solar-relative time and selected date.",
+      "validRange": {
+        "season": "summer",
+        "observedClockWindows": "verified July study: primary peak 16:00-20:00, minor increase 04:00-08:00, lowest feeding 08:00-16:00, and a sharp decrease 00:00-04:00"
+      },
+      "integrationMode": "replace-generic-diel-factor",
+      "curveType": "two-crepuscular-shoulders",
+      "proposedResponse": "Allow only a minor dawn increase and a larger but still minor late-day increase in summer, expressed relative to local solar time rather than assuming the New York clock intervals transfer exactly.",
+      "effectCapTier": "minor",
+      "missingBehavior": "Neutral outside summer or when local solar time cannot be calculated.",
+      "doubleCountingGuard": "Do not add this to a generic crepuscular multiplier.",
+      "validationRequirements": [
+        "verified 16:00-20:00 primary and 04:00-08:00 secondary peak ordering",
+        "summer-only activation",
+        "solar-relative conversion",
+        "maximum-contribution cap"
+      ]
+    },
+    {
+      "ruleId": "rule-batch-4-blue-catfish-01",
+      "evidenceClass": "controlled maximum-ration experiment using Virginia tidal-river fish",
+      "modelConfidence": "moderate-high",
+      "sourceReviewStatus": "primary-full-text-claim-confirmed",
+      "inputContract": "Observed or modeled water temperature in degrees C with provenance and uncertainty.",
+      "validRange": {
+        "temperatureC": [5, 25],
+        "anchors": "5 C lower consumption; 15 C and 25 C statistically similar"
+      },
+      "integrationMode": "calibrate-existing-water-temperature-factor",
+      "curveType": "bounded-anchor-interpolation",
+      "proposedResponse": "Reduce the existing thermal suitability toward 5 C, reach neutral by 15 C, and add no bonus from 15-25 C.",
+      "effectCapTier": "moderate",
+      "missingBehavior": "Fall back to the documented seasonal prior when water temperature is unavailable.",
+      "doubleCountingGuard": "Modify the existing thermal curve; never multiply a separate cold penalty by it.",
+      "validationRequirements": [
+        "5-15 C monotonic recovery",
+        "15-25 C plateau",
+        "no extrapolation beyond tested range",
+        "modeled-temperature uncertainty attenuation"
+      ]
+    },
+    {
+      "ruleId": "rule-batch-9-brown-bullhead-01",
+      "evidenceClass": "controlled acclimated feeding experiment",
+      "modelConfidence": "moderate",
+      "sourceReviewStatus": "primary-full-text-claim-confirmed",
+      "inputContract": "Observed or modeled water temperature plus a sustained-temperature indicator.",
+      "validRange": {
+        "temperatureC": [18, 25],
+        "exposure": "sustained acclimation, not an acute warm afternoon"
+      },
+      "integrationMode": "calibrate-existing-water-temperature-factor",
+      "curveType": "two-anchor-warm-side-penalty",
+      "proposedResponse": "Treat 18 C as neutral and apply a smoothly increasing, capped penalty approaching 25 C only after sustained warm exposure.",
+      "effectCapTier": "moderate",
+      "missingBehavior": "Neutral when temperature history is unavailable.",
+      "doubleCountingGuard": "Use this to shape the warm side of the thermal factor; do not stack it with a generic heat penalty.",
+      "validationRequirements": [
+        "18 C neutral anchor",
+        "25 C capped penalty",
+        "acute-warming neutral test",
+        "no inferred optimum below 18 C"
+      ]
+    },
+    {
+      "ruleId": "rule-batch-9-brown-bullhead-03",
+      "evidenceClass": "winter controlled predation periodicity",
+      "modelConfidence": "low-medium",
+      "sourceReviewStatus": "primary-abstract-claim-confirmed",
+      "inputContract": "Local solar-relative time, selected date, and very-cold-water state.",
+      "validRange": {
+        "season": "winter",
+        "temperatureC": [3, 4.5]
+      },
+      "integrationMode": "replace-generic-diel-factor-when-cold",
+      "curveType": "night-versus-day-categorical",
+      "proposedResponse": "Apply only a minor nighttime increase under comparable winter water temperatures; otherwise retain the baseline diel profile.",
+      "effectCapTier": "minor",
+      "missingBehavior": "Neutral if water temperature is unavailable or outside the winter study context.",
+      "doubleCountingGuard": "Replace, rather than stack with, the generic nocturnal multiplier.",
+      "validationRequirements": [
+        "winter-temperature gate",
+        "night-versus-day ordering",
+        "nonwinter neutral test",
+        "single-diel-factor"
+      ]
+    },
+    {
+      "ruleId": "rule-batch-9-brown-bullhead-04",
+      "evidenceClass": "winter feeding experiment plus confounded field comparison",
+      "modelConfidence": "low",
+      "sourceReviewStatus": "primary-abstract-claims-confirmed",
+      "inputContract": "Observed or modeled water temperature in degrees C.",
+      "validRange": {
+        "temperatureC": [2, 4.5],
+        "anchors": "feeding observed at 3 C; stronger modeled predation by 4.5 C; one field comparison reported no feeding near 2 C"
+      },
+      "integrationMode": "calibrate-existing-water-temperature-factor",
+      "curveType": "very-cold-guardrail",
+      "proposedResponse": "Keep expected feeding nonzero at 3 C, apply a stronger capped penalty near 2 C, and recover toward 4.5 C without claiming a universal threshold.",
+      "effectCapTier": "moderate",
+      "missingBehavior": "Use the seasonal prior when water temperature is unavailable.",
+      "doubleCountingGuard": "This is the cold tail of the thermal factor, not an additional winter penalty.",
+      "validationRequirements": [
+        "nonzero 3 C response",
+        "2 C lower than 3 C",
+        "continuous recovery to 4.5 C",
+        "no universal zero"
+      ]
+    },
+    {
+      "ruleId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-01",
+      "evidenceClass": "reservoir stomach chronology plus winter feeding experiment",
+      "modelConfidence": "moderate",
+      "sourceReviewStatus": "primary-full-text-preflight-complete",
+      "inputContract": "Observed or modeled water temperature and recent thermal history.",
+      "validRange": {
+        "temperatureC": [7, 21.1],
+        "anchors": "continued feeding at 7 C; progressively higher intake across <=10, 10.1-15.6, and 15.7-21.1 C"
+      },
+      "integrationMode": "calibrate-existing-water-temperature-factor",
+      "curveType": "bounded-cold-season-anchors",
+      "proposedResponse": "Represent progressive cold-season suppression without cessation; use temperature rather than calendar month as the main driver.",
+      "effectCapTier": "strong-conservative",
+      "missingBehavior": "Fall back to the monthly seasonal prior.",
+      "doubleCountingGuard": "Blend this into the single seasonal-thermal factor; do not multiply monthly winter and cold-water penalties.",
+      "validationRequirements": [
+        "feeding remains nonzero at 7 C",
+        "monotonic cold-to-mild recovery",
+        "season-temperature blend",
+        "no ration-to-score conversion"
+      ]
+    },
+    {
+      "ruleId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-02",
+      "evidenceClass": "managed winter feeding trend experiment",
+      "modelConfidence": "moderate",
+      "sourceReviewStatus": "primary-full-text-claim-confirmed",
+      "inputContract": "Water-temperature change over the preceding 24-48 hours in degrees C.",
+      "validRange": {
+        "temperatureC": [7, 21.1],
+        "trend": "cooling versus stable or warming winter conditions"
+      },
+      "integrationMode": "bounded-secondary-thermal-modifier",
+      "curveType": "temperature-trend-categorical",
+      "proposedResponse": "Apply a minor penalty on cooling days in the tested cold-water range; stable and warming conditions receive no bonus above neutral.",
+      "effectCapTier": "minor",
+      "missingBehavior": "Neutral without at least 24 hours of comparable water-temperature history.",
+      "doubleCountingGuard": "Cap the combined level-and-trend thermal contribution; do not use air-pressure or weather-front labels as substitutes.",
+      "validationRequirements": [
+        "cooling-versus-stable ordering",
+        "outside-range neutral test",
+        "missing-history neutral test",
+        "combined-thermal cap"
+      ]
+    },
+    {
+      "ruleId": "rule-bitemap-channel-catfish-deep-verified-research-archive-channel-catfish-03",
+      "evidenceClass": "controlled cyclic extreme-heat feeding experiment",
+      "modelConfidence": "moderate",
+      "sourceReviewStatus": "primary-full-text-preflight-complete",
+      "inputContract": "Observed or modeled water temperature plus recent heat-exposure history.",
+      "validRange": {
+        "temperatureC": [23, 35],
+        "severeTreatmentC": [31, 35]
+      },
+      "integrationMode": "calibrate-existing-water-temperature-factor",
+      "curveType": "extreme-heat-guardrail",
+      "proposedResponse": "Apply no separate bonus at 27-31 C; increase the existing high-temperature penalty only as sustained conditions enter 31-35 C.",
+      "effectCapTier": "severe-stress",
+      "missingBehavior": "Neutral beyond the ordinary thermal factor when heat history is unavailable.",
+      "doubleCountingGuard": "Replace the high-temperature tail of the thermal curve and ignore stress-related tank activity as positive catchability.",
+      "validationRequirements": [
+        "31 C onset continuity",
+        "35 C maximum penalty cap",
+        "no 27-31 C bonus",
+        "stress-activity exclusion"
+      ]
+    },
+    {
+      "ruleId": "rule-batch-7-common-carp-01",
+      "evidenceClass": "controlled temperature feeding experiment",
+      "modelConfidence": "moderate",
+      "sourceReviewStatus": "primary-publisher-abstract-preflight-complete",
+      "inputContract": "Observed or modeled water temperature in degrees C.",
+      "validRange": {
+        "temperatureC": [6, 34],
+        "anchors": "very low at 6 C, higher by 14 C, highest highlighted treatment at 28 C, lower at 34 C"
+      },
+      "integrationMode": "calibrate-existing-water-temperature-factor",
+      "curveType": "four-anchor-bounded-response",
+      "proposedResponse": "Fit a conservative shape through the four observed anchors without treating 28 C as a universal field optimum or extrapolating outside 6-34 C.",
+      "effectCapTier": "strong-conservative",
+      "missingBehavior": "Fall back to seasonal activity when water temperature is unavailable.",
+      "doubleCountingGuard": "Replace the existing thermal response; do not stack cold and warm carp rules separately.",
+      "validationRequirements": [
+        "anchor ordering",
+        "bounded interpolation",
+        "no extrapolation",
+        "juvenile-adult shared-direction test"
+      ]
+    },
+    {
+      "ruleId": "rule-batch-8-creek-chub-01",
+      "evidenceClass": "single-stream summer stomach-content chronology",
+      "modelConfidence": "moderate",
+      "sourceReviewStatus": "primary-publisher-abstract-claim-confirmed",
+      "inputContract": "Local solar-relative time and selected date.",
+      "validRange": {
+        "season": "summer",
+        "solarWindow": "early evening versus morning"
+      },
+      "integrationMode": "replace-generic-diel-factor",
+      "curveType": "late-day-shoulder",
+      "proposedResponse": "Apply a minor early-evening increase and modest morning decrease in summer, expressed relative to local sunset rather than fixed clock time.",
+      "effectCapTier": "minor",
+      "missingBehavior": "Neutral outside summer or without local solar time.",
+      "doubleCountingGuard": "Do not stack with a generic crepuscular profile.",
+      "validationRequirements": [
+        "early-evening greater than morning",
+        "solar-relative timing",
+        "summer-only activation",
+        "maximum-contribution cap"
+      ]
+    },
+    {
+      "ruleId": "rule-batch-8-fallfish-01",
+      "evidenceClass": "single 24-hour field stomach-content chronology",
+      "modelConfidence": "low",
+      "sourceReviewStatus": "primary-abstract-confirms-peak-exact-timing-unavailable",
+      "inputContract": "Local solar-relative time and selected date.",
+      "validRange": {
+        "season": "summer",
+        "timing": "a distinct peak is confirmed; the claimed late-day placement requires full-text sign-off"
+      },
+      "integrationMode": "replace-generic-diel-factor",
+      "curveType": "single-narrow-peak-blocked-without-timing",
+      "proposedResponse": "Remain neutral unless the primary full text or author-supplied material establishes the exact peak interval; the supplied late-day interpretation is not accepted as verified evidence.",
+      "effectCapTier": "minor",
+      "missingBehavior": "Neutral before full-text peak-timing review and outside summer.",
+      "doubleCountingGuard": "Do not stack with a generic diel pattern.",
+      "validationRequirements": [
+        "full-text peak interval required before activation",
+        "one-day study uncertainty",
+        "summer-only activation",
+        "maximum-contribution cap"
+      ]
+    },
+    {
+      "ruleId": "rule-batch-4-flathead-catfish-01",
+      "evidenceClass": "controlled juvenile temperature-consumption experiment",
+      "modelConfidence": "moderate",
+      "sourceReviewStatus": "primary-abstract-claim-confirmed",
+      "inputContract": "Observed or modeled water temperature in degrees C.",
+      "validRange": {
+        "temperatureC": [3, 32],
+        "anchors": "rare feeding below 15 C, most stopped at 11 C, none observed at 7 C or lower"
+      },
+      "integrationMode": "calibrate-existing-water-temperature-factor",
+      "curveType": "cold-tail-guardrail",
+      "proposedResponse": "Shape the existing cold-water tail around the observed anchors while retaining a small nonzero field possibility and avoiding extrapolation below 3 C.",
+      "effectCapTier": "severe-stress",
+      "missingBehavior": "Use the seasonal prior when water temperature is unavailable.",
+      "doubleCountingGuard": "This replaces the low-temperature tail; it is not an additional winter multiplier.",
+      "validationRequirements": [
+        "15-to-11 C decline",
+        "7 C maximum penalty",
+        "nonzero numerical floor",
+        "no below-range extrapolation"
+      ]
+    },
+    {
+      "ruleId": "rule-bitemap-largemouth-bass-research-archive-largemouth-bass-03",
+      "evidenceClass": "controlled prolonged upper-thermal exposure",
+      "modelConfidence": "moderate-low",
+      "sourceReviewStatus": "primary-publisher-abstract-claim-confirmed",
+      "inputContract": "Rolling estimated or observed water-temperature history, not a single hot-hour reading.",
+      "validRange": {
+        "temperatureC": [35, 35],
+        "exposureDays": 28
+      },
+      "integrationMode": "calibrate-existing-water-temperature-factor",
+      "curveType": "chronic-extreme-heat-anchor",
+      "proposedResponse": "Apply a severe-heat penalty only as multi-day exposure approaches 35 C; the study does not define the onset temperature, so ordinary hot days remain governed by the baseline thermal curve.",
+      "effectCapTier": "severe-stress",
+      "missingBehavior": "No additional penalty without rolling water-temperature history.",
+      "doubleCountingGuard": "Replace the extreme upper tail and do not stack with generic heat, seasonal summer, or low-oxygen penalties without an interaction model.",
+      "validationRequirements": [
+        "single-hot-day neutral test",
+        "chronic-exposure requirement",
+        "35 C capped penalty",
+        "unknown-onset non-extrapolation"
+      ]
+    },
+    {
+      "ruleId": "rule-batch-6-muskellunge-01",
+      "evidenceClass": "long-term angler trip-success model",
+      "modelConfidence": "moderate",
+      "sourceReviewStatus": "primary-full-text-claim-confirmed",
+      "inputContract": "Forecast surface solar radiation or a solar-relative low-light classification for lake/reservoir locations.",
+      "validRange": {
+        "solarRadiationWm2": [25, 450],
+        "waterbody": "lake or reservoir"
+      },
+      "integrationMode": "replace-generic-diel-light-factor",
+      "curveType": "bounded-radiation-slope",
+      "proposedResponse": "Apply a small decrease from very low toward high radiation; do not reproduce the study probability difference directly as BiteMap points.",
+      "effectCapTier": "minor",
+      "missingBehavior": "Use solar-relative light at reduced confidence, otherwise neutral.",
+      "doubleCountingGuard": "Cloud, radiation, and diel period feed one latent light factor and cannot stack.",
+      "validationRequirements": [
+        "low-radiation greater than high",
+        "range clamping",
+        "single-light-factor",
+        "lake-reservoir scope"
+      ]
+    },
+    {
+      "ruleId": "rule-batch-6-northern-snakehead-01",
+      "evidenceClass": "local tidal-river field feeding and movement study",
+      "modelConfidence": "moderate-high",
+      "sourceReviewStatus": "primary-full-text-preflight-complete",
+      "inputContract": "Local solar-relative time and selected date.",
+      "validRange": {
+        "months": [5, 6],
+        "waterbody": "tidal Potomac and comparable tidal river habitat",
+        "solarWindow": "daylight, especially morning, versus overnight"
+      },
+      "integrationMode": "replace-generic-diel-factor",
+      "curveType": "season-gated-daylight-morning-response",
+      "proposedResponse": "Apply a bounded morning/daylight increase and overnight decrease in May-June; strongly attenuate outside the source season or tidal setting.",
+      "effectCapTier": "moderate",
+      "missingBehavior": "Neutral without local solar time or location scope.",
+      "doubleCountingGuard": "Use one diel/tide joint cap so daylight and outgoing tide cannot independently reach full strength.",
+      "validationRequirements": [
+        "May-June scope",
+        "overnight lower than morning",
+        "non-tidal attenuation",
+        "joint diel-tide cap"
+      ]
+    },
+    {
+      "ruleId": "rule-batch-6-northern-snakehead-02",
+      "evidenceClass": "local tidal-river gut-content association",
+      "modelConfidence": "moderate",
+      "sourceReviewStatus": "primary-full-text-claim-confirmed",
+      "inputContract": "Forecast or computed tidal stage for the spot and selected hour.",
+      "validRange": {
+        "months": [5, 6],
+        "waterbody": "tidal Potomac and comparable tidal water",
+        "tidalStage": "outgoing versus other stages"
+      },
+      "integrationMode": "bounded-secondary-tidal-modifier",
+      "curveType": "tidal-stage-categorical",
+      "proposedResponse": "Apply a minor outgoing-tide increase only where a trustworthy tidal prediction exists; other stages remain neutral rather than penalized.",
+      "effectCapTier": "minor",
+      "missingBehavior": "Neutral on non-tidal waters or without a tidal prediction.",
+      "doubleCountingGuard": "Cap the combined snakehead diel and tide response because time of day and tide covaried in the study.",
+      "validationRequirements": [
+        "tidal-water gate",
+        "outgoing-versus-neutral ordering",
+        "missing-tide neutral test",
+        "joint diel-tide cap"
+      ]
+    },
+    {
+      "ruleId": "rule-bitemap-smallmouth-bass-deep-research-archive-smallmouth-bass-02",
+      "evidenceClass": "controlled adult feeding experiment",
+      "modelConfidence": "moderate-high",
+      "sourceReviewStatus": "primary-full-text-claim-confirmed",
+      "inputContract": "Observed turbidity in NTU, or FNU only when the provider documents comparable optics; never suspended sediment mass.",
+      "validRange": {
+        "turbidityNtu": [0, 40],
+        "treatmentsNtu": [0, 5, 10, 20, 40]
+      },
+      "integrationMode": "species-specific-water-quality-factor",
+      "curveType": "bounded-monotonic-decrease",
+      "proposedResponse": "Apply a modest decreasing response within 0-40 NTU and clamp outside the range; do not claim that every amount of stained water is harmful in the field.",
+      "effectCapTier": "moderate",
+      "missingBehavior": "Neutral when representative turbidity is unavailable or the unit is not comparable.",
+      "doubleCountingGuard": "Do not stack turbidity with rainfall or flow as separate visibility penalties.",
+      "validationRequirements": [
+        "0-40 NTU monotonic ordering",
+        "unit-compatibility gate",
+        "outside-range clamp",
+        "rain-flow-turbidity deduplication"
+      ]
+    },
+    {
+      "ruleId": "rule-batch-5-striped-bass-01",
+      "evidenceClass": "controlled juvenile dissolved-oxygen feeding experiment",
+      "modelConfidence": "moderate-high",
+      "sourceReviewStatus": "primary-publisher-claim-confirmed",
+      "inputContract": "Representative dissolved oxygen in mg/L and water temperature in degrees C.",
+      "validRange": {
+        "dissolvedOxygenMgL": [2, 8],
+        "temperatureC": [20, 30],
+        "oxygenTreatmentsMgL": [2, 4, 8]
+      },
+      "integrationMode": "replace-generic-oxygen-factor",
+      "curveType": "bounded-oxygen-anchor-response",
+      "proposedResponse": "Use a moderate penalty near 2 mg/L, a smaller penalty near 4 mg/L, and neutral at adequate oxygen; add no oxygen bonus above the tested adequate condition.",
+      "effectCapTier": "strong-conservative",
+      "missingBehavior": "Neutral with reduced confidence when representative dissolved oxygen is unavailable.",
+      "doubleCountingGuard": "Replace the generic striped-bass oxygen term and cap any warm-water interaction rather than multiplying two full penalties.",
+      "validationRequirements": [
+        "2-4-8 mg/L ordering",
+        "20-30 C scope",
+        "adequate-oxygen neutrality",
+        "gage representativeness attenuation"
+      ]
+    },
+    {
+      "ruleId": "rule-batch-6-walleye-02",
+      "evidenceClass": "long-term compulsory-creel angling-success model",
+      "modelConfidence": "moderate-high",
+      "sourceReviewStatus": "primary-full-text-preflight-complete",
+      "inputContract": "Local solar-relative period and optionally forecast surface solar radiation for lake/reservoir locations.",
+      "validRange": {
+        "solarRadiationWm2": [3, 570],
+        "periods": ["dawn", "day", "dusk"],
+        "waterbody": "lake or reservoir"
+      },
+      "integrationMode": "replace-generic-diel-light-factor",
+      "curveType": "single-latent-light-response",
+      "proposedResponse": "Apply bounded dawn and dusk increases relative to day, with radiation as an alternate continuous representation rather than an additional factor.",
+      "effectCapTier": "moderate",
+      "missingBehavior": "Use solar-relative period alone when radiation is missing; otherwise neutral.",
+      "doubleCountingGuard": "Dawn/dusk, cloud, and solar radiation are one latent light signal and cannot stack.",
+      "validationRequirements": [
+        "dawn-dusk greater than day",
+        "continuous solar boundaries",
+        "single-light-factor",
+        "lake-reservoir scope"
+      ]
+    },
+    {
+      "ruleId": "rule-batch-8-white-sucker-01",
+      "evidenceClass": "controlled juvenile feeding experiment",
+      "modelConfidence": "moderate",
+      "sourceReviewStatus": "primary-full-text-claim-confirmed",
+      "inputContract": "Observed or modeled water temperature in degrees C.",
+      "validRange": {
+        "temperatureC": [19, 28],
+        "treatmentsC": [19, 22, 25, 28]
+      },
+      "integrationMode": "calibrate-existing-water-temperature-factor",
+      "curveType": "four-anchor-bounded-response",
+      "proposedResponse": "Use a broad intermediate-temperature plateau with lower suitability at 19 and 28 C; do not treat 25 C as a precise adult field optimum.",
+      "effectCapTier": "moderate",
+      "missingBehavior": "Fall back to the seasonal prior when water temperature is unavailable.",
+      "doubleCountingGuard": "Replace the existing thermal response and do not add a second warm or cool penalty.",
+      "validationRequirements": [
+        "intermediate greater than extremes",
+        "broad plateau rather than point optimum",
+        "no extrapolation",
+        "modeled-temperature uncertainty attenuation"
+      ]
+    },
+    {
+      "ruleId": "rule-batch-5-yellow-perch-01",
+      "evidenceClass": "two summer 24-hour field feeding chronologies",
+      "modelConfidence": "moderate",
+      "sourceReviewStatus": "primary-author-full-text-claim-confirmed",
+      "inputContract": "Local solar-relative time and selected date.",
+      "validRange": {
+        "season": "summer",
+        "waterbody": "clear lake",
+        "solarWindow": "feeding rises through daylight, peaks late evening, and declines after sunset"
+      },
+      "integrationMode": "replace-generic-diel-factor",
+      "curveType": "daylight-to-late-evening-ramp",
+      "proposedResponse": "Use a modest daylight ramp toward late evening and decline after sunset; attenuate in turbid water and outside summer.",
+      "effectCapTier": "moderate",
+      "missingBehavior": "Neutral without local solar time; use reduced confidence when clarity is unknown.",
+      "doubleCountingGuard": "Use one diel/light factor and do not stack a separate dusk or cloud modifier.",
+      "validationRequirements": [
+        "daylight ramp",
+        "late-evening peak",
+        "post-sunset decline",
+        "summer-clear-water scope"
+      ]
+    }
+  ]
+}

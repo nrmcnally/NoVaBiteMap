@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "0.1.0-draft",
+  "modelVersion": "candidate-v0.2.0",
+  "snapshotDate": "2026-07-16",
+  "status": "pass",
+  "errorCount": 0,
+  "errors": [],
+  "checks": {
+    "modelableRuleCount": 22,
+    "fixtureRuleCount": 22,
+    "activeTestOnlyFixtureCount": 21,
+    "blockedFixtureCount": 1,
+    "goldenScenarioCount": 194,
+    "allProductionImportsDisabled": true,
+    "allLiveScorerEligibilityDisabled": true
+  }
+}

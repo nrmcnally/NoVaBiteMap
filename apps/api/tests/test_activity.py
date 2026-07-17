@@ -97,6 +97,85 @@ def test_air_temperature_never_acts_as_water_temperature():
     assert none["waterTempStatus"] == "unavailable"
 
 
+def test_regional_temperature_has_less_authority_than_an_observation():
+    tz = timezone(timedelta(hours=-4))
+    common = {
+        "dt_local": datetime(2026, 7, 15, 8, 0, tzinfo=tz),
+        "latitude": 38.91,
+        "longitude": -78.19,
+        "waterbody_type": "stream",
+        "water_temp_f": 78,
+        "wind_mph": 5,
+        "precip_prob": 10,
+        "short_forecast": "Clear",
+        "hydrology": None,
+    }
+    observed = hourly_activity(
+        PROFILES["rainbow-trout"],
+        **common,
+        water_temp_status="observed",
+        water_temp_confidence=1.0,
+    )
+    estimated = hourly_activity(
+        PROFILES["rainbow-trout"],
+        **common,
+        water_temp_status="estimated-regional",
+        water_temp_confidence=0.42,
+    )
+    assert observed["factors"]["waterTemperature"] < estimated["factors"]["waterTemperature"] < 1
+
+
+def test_spawn_phase_is_exposed_as_context_not_a_generic_bonus():
+    tz = timezone(timedelta(hours=-4))
+    activity = hourly_activity(
+        PROFILES["smallmouth-bass"],
+        dt_local=datetime(2026, 5, 15, 8, 0, tzinfo=tz),
+        latitude=38.91,
+        longitude=-78.19,
+        waterbody_type="river",
+        water_temp_f=60,
+        wind_mph=5,
+        precip_prob=10,
+        short_forecast="Clear",
+        hydrology=None,
+    )
+    assert activity["reproductivePhase"] == "spawn-window-temperature-aligned"
+    assert activity["factors"]["reproductivePhase"] == "spawn-window-temperature-aligned"
+
+
+def test_low_dissolved_oxygen_suppresses_activity_but_turbidity_is_context_only():
+    tz = timezone(timedelta(hours=-4))
+
+    def activity(do_mg_l, turbidity):
+        return hourly_activity(
+            PROFILES["rainbow-trout"],
+            dt_local=datetime(2026, 7, 15, 8, 0, tzinfo=tz),
+            latitude=38.91,
+            longitude=-78.19,
+            waterbody_type="stream",
+            water_temp_f=66,
+            wind_mph=5,
+            precip_prob=10,
+            short_forecast="Clear",
+            hydrology={
+                "available": True,
+                "rapidRise": False,
+                "extremeFlow": False,
+                "lowFlow": False,
+                "dissolvedOxygenMgL": do_mg_l,
+                "turbidityFnu": turbidity,
+                "associationFactor": 1.0,
+            },
+        )
+
+    high_oxygen = activity(8.0, 2)
+    low_oxygen = activity(3.5, 2)
+    muddy_but_oxygenated = activity(8.0, 100)
+    assert low_oxygen["suitability"] < high_oxygen["suitability"]
+    assert muddy_but_oxygenated["suitability"] == high_oxygen["suitability"]
+    assert high_oxygen["factors"]["hydrology"] == 1.0
+
+
 def test_forecast_produces_days_with_sunrise_and_confidence_decay():
     fc = build_species_forecast(
         PROFILES["largemouth-bass"], _periods("2026-05-10", range(0, 24)) + _periods("2026-05-11", range(0, 24)),
@@ -106,3 +185,4 @@ def test_forecast_produces_days_with_sunrise_and_confidence_decay():
     assert len(fc["days"]) >= 2
     assert fc["days"][0]["sunrise"] is not None
     assert fc["days"][1]["confidence"] < fc["days"][0]["confidence"]  # horizon decay
+    assert fc["waterTempStatus"] == "unavailable"

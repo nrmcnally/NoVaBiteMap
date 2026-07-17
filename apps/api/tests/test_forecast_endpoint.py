@@ -34,10 +34,35 @@ def mocked_conditions(client, monkeypatch):
         return {"available": True, "provider": "test", "retrieved_at": "2026-05-10T09:00:00Z", "periods": _fake_periods(), "alerts": []}
 
     async def fake_hydro(assoc):
-        return {"available": True, "waterTempF": 62.0, "flowTrend": "steady", "rapidRise": False, "associationFactor": assoc.get("association_factor", 0.85)}
+        return {
+            "available": True,
+            "waterTempF": 62.0,
+            "flowTrend": "steady",
+            "rapidRise": False,
+            "associationFactor": assoc.get("association_factor", 0.85),
+        }
+
+    async def fake_temperature(lat, lng, waterbody_type, hydrology=None):
+        return {
+            "status": "observed",
+            "valueF": 62.0,
+            "rangeF": None,
+            "uncertaintyF": None,
+            "confidence": 0.85,
+            "source": "test gage",
+            "observedAt": "2026-05-10T09:00:00Z",
+            "modelVersion": None,
+            "method": "test observation",
+            "daily": {},
+        }
 
     monkeypatch.setattr(conditions_service, "get_weather", fake_weather)
     monkeypatch.setattr(conditions_service, "get_hydrology_state", fake_hydro)
+    monkeypatch.setattr(
+        conditions_service,
+        "get_water_temperature_state",
+        fake_temperature,
+    )
     return client
 
 
@@ -47,6 +72,7 @@ def test_species_forecast_endpoint_returns_hourly_and_days(mocked_conditions):
     body = resp.json()
     assert body["speciesId"] == "smallmouth-bass"
     assert body["waterTempStatus"] == "observed"  # measured water temp was supplied
+    assert body["waterTemperature"]["valueF"] == 62.0
     assert len(body["forecast"]["hourly"]) > 0
     assert len(body["forecast"]["days"]) >= 2
     assert body["scores"]["availability_score"] >= 0.35

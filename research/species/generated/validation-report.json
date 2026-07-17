@@ -1,0 +1,272 @@
+{
+  "schemaVersion": "0.1.0-draft",
+  "pipelineVersion": "0.1.0",
+  "status": "pass-with-warnings",
+  "errorCount": 0,
+  "warningCount": 12,
+  "schemaDrift": {
+    "speciesActuallyStudied": [
+      "bool",
+      "str"
+    ],
+    "year": [
+      "NoneType",
+      "int",
+      "str"
+    ]
+  },
+  "archiveChecks": [
+    {
+      "archiveId": "batch-1",
+      "selfReportedStatus": "PASS_WITH_DOCUMENTED_LIMITATIONS",
+      "manifestCountMismatches": [],
+      "verifiedSourceLocatorsManifestValue": 48,
+      "verifiedSourceLocatorsPossibleSemantics": [
+        "evidence-with-nonempty-locator",
+        "evidence-claims-marked-verified"
+      ],
+      "unresolvedIssueCount": 6
+    },
+    {
+      "archiveId": "batch-10",
+      "selfReportedStatus": true,
+      "manifestCountMismatches": [
+        {
+          "field": "abstractOnlySources",
+          "manifest": 18,
+          "imported": 14
+        }
+      ],
+      "verifiedSourceLocatorsManifestValue": 30,
+      "verifiedSourceLocatorsPossibleSemantics": [
+        "evidence-claims-marked-verified"
+      ],
+      "unresolvedIssueCount": 43
+    },
+    {
+      "archiveId": "batch-11",
+      "selfReportedStatus": true,
+      "manifestCountMismatches": [
+        {
+          "field": "abstractOnlySources",
+          "manifest": 12,
+          "imported": 7
+        }
+      ],
+      "verifiedSourceLocatorsManifestValue": 30,
+      "verifiedSourceLocatorsPossibleSemantics": [
+        "evidence-claims-marked-verified"
+      ],
+      "unresolvedIssueCount": 24
+    },
+    {
+      "archiveId": "batch-2",
+      "selfReportedStatus": "PASS_WITH_DOCUMENTED_LIMITATIONS",
+      "manifestCountMismatches": [],
+      "verifiedSourceLocatorsManifestValue": 43,
+      "verifiedSourceLocatorsPossibleSemantics": [
+        "source-verification-rows"
+      ],
+      "unresolvedIssueCount": 8
+    },
+    {
+      "archiveId": "batch-3",
+      "selfReportedStatus": "PASS_WITH_DOCUMENTED_LIMITATIONS",
+      "manifestCountMismatches": [],
+      "verifiedSourceLocatorsManifestValue": 35,
+      "verifiedSourceLocatorsPossibleSemantics": [
+        "source-verification-rows"
+      ],
+      "unresolvedIssueCount": 8
+    },
+    {
+      "archiveId": "batch-4",
+      "selfReportedStatus": "PASS_WITH_DOCUMENTED_LIMITATIONS",
+      "manifestCountMismatches": [],
+      "verifiedSourceLocatorsManifestValue": 35,
+      "verifiedSourceLocatorsPossibleSemantics": [
+        "source-verification-rows"
+      ],
+      "unresolvedIssueCount": 8
+    },
+    {
+      "archiveId": "batch-5",
+      "selfReportedStatus": "PASS_WITH_DOCUMENTED_LIMITATIONS",
+      "manifestCountMismatches": [],
+      "verifiedSourceLocatorsManifestValue": 34,
+      "verifiedSourceLocatorsPossibleSemantics": [
+        "source-verification-rows"
+      ],
+      "unresolvedIssueCount": 8
+    },
+    {
+      "archiveId": "batch-6",
+      "selfReportedStatus": "PASS_WITH_DOCUMENTED_LIMITATIONS",
+      "manifestCountMismatches": [],
+      "verifiedSourceLocatorsManifestValue": 33,
+      "verifiedSourceLocatorsPossibleSemantics": [
+        "source-verification-rows"
+      ],
+      "unresolvedIssueCount": 8
+    },
+    {
+      "archiveId": "batch-7",
+      "selfReportedStatus": "PASS_WITH_DOCUMENTED_LIMITATIONS",
+      "manifestCountMismatches": [],
+      "verifiedSourceLocatorsManifestValue": 33,
+      "verifiedSourceLocatorsPossibleSemantics": [
+        "source-verification-rows"
+      ],
+      "unresolvedIssueCount": 8
+    },
+    {
+      "archiveId": "batch-8",
+      "selfReportedStatus": "PASS_WITH_DOCUMENTED_LIMITATIONS",
+      "manifestCountMismatches": [],
+      "verifiedSourceLocatorsManifestValue": 32,
+      "verifiedSourceLocatorsPossibleSemantics": [
+        "source-verification-rows"
+      ],
+      "unresolvedIssueCount": 8
+    },
+    {
+      "archiveId": "batch-9",
+      "selfReportedStatus": true,
+      "manifestCountMismatches": [],
+      "verifiedSourceLocatorsManifestValue": 35,
+      "verifiedSourceLocatorsPossibleSemantics": [
+        "evidence-claims-marked-verified"
+      ],
+      "unresolvedIssueCount": 15
+    },
+    {
+      "archiveId": "bitemap-channel-catfish-deep-verified-research-archive",
+      "selfReportedStatus": true,
+      "manifestCountMismatches": [],
+      "verifiedSourceLocatorsManifestValue": null,
+      "verifiedSourceLocatorsPossibleSemantics": [],
+      "unresolvedIssueCount": 0
+    },
+    {
+      "archiveId": "bitemap-largemouth-bass-research-archive",
+      "selfReportedStatus": null,
+      "manifestCountMismatches": [],
+      "verifiedSourceLocatorsManifestValue": null,
+      "verifiedSourceLocatorsPossibleSemantics": [],
+      "unresolvedIssueCount": 0
+    },
+    {
+      "archiveId": "bitemap-smallmouth-bass-deep-research-archive",
+      "selfReportedStatus": true,
+      "manifestCountMismatches": [],
+      "verifiedSourceLocatorsManifestValue": null,
+      "verifiedSourceLocatorsPossibleSemantics": [],
+      "unresolvedIssueCount": 0
+    }
+  ],
+  "diagnostics": [
+    {
+      "severity": "warning",
+      "code": "archive.missing-search-breadth-audit",
+      "message": "Archive has no separate search-breadth audit.",
+      "archiveId": "bitemap-largemouth-bass-research-archive"
+    },
+    {
+      "severity": "warning",
+      "code": "archive.missing-validation-report",
+      "message": "Archive has no separate validation report; claims remain unverified.",
+      "archiveId": "bitemap-largemouth-bass-research-archive"
+    },
+    {
+      "severity": "warning",
+      "code": "manifest.count-mismatch",
+      "message": "Manifest count does not match imported records.",
+      "archiveId": "batch-10",
+      "field": "abstractOnlySources",
+      "manifestValue": 18,
+      "importedValue": 14
+    },
+    {
+      "severity": "warning",
+      "code": "manifest.count-mismatch",
+      "message": "Manifest count does not match imported records.",
+      "archiveId": "batch-11",
+      "field": "abstractOnlySources",
+      "manifestValue": 12,
+      "importedValue": 7
+    },
+    {
+      "severity": "warning",
+      "code": "manifest.zero-weight-mixed-semantics",
+      "message": "Manifest zero-weight count uses different semantics from candidate rules.",
+      "archiveId": "batch-10",
+      "manifestValue": 34,
+      "candidateRuleCount": 5,
+      "zeroWeightVariableCount": 29
+    },
+    {
+      "severity": "warning",
+      "code": "manifest.zero-weight-mixed-semantics",
+      "message": "Manifest zero-weight count uses different semantics from candidate rules.",
+      "archiveId": "batch-11",
+      "manifestValue": 43,
+      "candidateRuleCount": 10,
+      "zeroWeightVariableCount": 33
+    },
+    {
+      "severity": "warning",
+      "code": "manifest.zero-weight-mixed-semantics",
+      "message": "Manifest zero-weight count uses different semantics from candidate rules.",
+      "archiveId": "batch-9",
+      "manifestValue": 26,
+      "candidateRuleCount": 2,
+      "zeroWeightVariableCount": 24
+    },
+    {
+      "severity": "warning",
+      "code": "source.search-or-listing-page-not-source-record",
+      "message": "Source URL does not identify a stable source record.",
+      "archiveId": "batch-7",
+      "speciesId": "spotted-bass",
+      "localSourceId": "S10",
+      "url": "https://seafwa.org/proceedings?field_year_target_id=All&id=5573&items_per_page=50&keys=&order=field_year&page=22&sort=desc"
+    },
+    {
+      "severity": "warning",
+      "code": "source.search-or-listing-page-not-source-record",
+      "message": "Source URL does not identify a stable source record.",
+      "archiveId": "batch-7",
+      "speciesId": "spotted-bass",
+      "localSourceId": "S7",
+      "url": "https://seafwa.org/proceedings?field_year_target_id=All&items_per_page=50&keys=&order=field_year&page=76&sort=asc"
+    },
+    {
+      "severity": "warning",
+      "code": "source.search-or-listing-page-not-source-record",
+      "message": "Source URL does not identify a stable source record.",
+      "archiveId": "batch-7",
+      "speciesId": "spotted-bass",
+      "localSourceId": "S9",
+      "url": "https://seafwa.org/journal?page=168"
+    },
+    {
+      "severity": "warning",
+      "code": "schema-drift.species-actually-studied-types",
+      "message": "Source records use multiple types for speciesActuallyStudied; canonical output normalizes them to strings.",
+      "observedTypes": [
+        "bool",
+        "str"
+      ]
+    },
+    {
+      "severity": "warning",
+      "code": "schema-drift.year-types",
+      "message": "Source records use multiple year types; canonical output normalizes valid four-digit years to integers and retains unknown years as null.",
+      "observedTypes": [
+        "NoneType",
+        "int",
+        "str"
+      ]
+    }
+  ]
+}
