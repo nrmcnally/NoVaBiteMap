@@ -1,0 +1,7 @@
+# Force LF on files that run inside Linux containers / on the deploy VM.
+# A CRLF shell script fails there with `bad interpreter: ...^M`.
+*.sh            text eol=lf
+Caddyfile       text eol=lf
+Dockerfile      text eol=lf
+*.Dockerfile    text eol=lf
+entrypoint.sh   text eol=lf
