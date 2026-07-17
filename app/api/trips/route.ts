@@ -8,7 +8,7 @@ import {
   responseErrorMessage,
   type PasswordFishingTripResponse,
 } from "../../lib/account-server";
-import { D1TripError } from "../../lib/d1-fishing-trips";
+import { D1TripError } from "../../lib/d1-errors";
 
 type TripBody = {
   locationId?: string;

@@ -1,4 +1,5 @@
 import { and, desc, eq } from "drizzle-orm";
+import { D1TripError } from "./d1-errors";
 import { getDb } from "../../db";
 import { fishingTrips } from "../../db/schema";
 import type { AccountFishingTrip, AccountUser } from "./account-server";
@@ -116,11 +117,7 @@ export async function saveD1ConditionReplay(
   return row ? normalizeD1Trip(row) : null;
 }
 
-export class D1TripError extends Error {
-  constructor(public readonly status: number, message: string) {
-    super(message);
-  }
-}
+export { D1TripError } from "./d1-errors";
 
 function normalizeD1Trip(row: typeof fishingTrips.$inferSelect): AccountFishingTrip {
   return {
