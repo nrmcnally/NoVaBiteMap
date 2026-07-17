@@ -40,6 +40,7 @@ async def get_weather(latitude: float, longitude: float) -> dict:
         "available": True,
         "provider": forecast["provider"],
         "retrieved_at": forecast["retrieved_at"],
+        "forecast_updated_at": forecast.get("forecast_updated_at"),
         "periods": forecast.get("periods", []),
         "alerts": alerts,
         "cached": False,

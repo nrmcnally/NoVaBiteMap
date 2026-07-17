@@ -53,6 +53,15 @@ the mapped USGS series actually supplies it. Signed preregistration, analyst
 review tools, and any use of these rows for confirmatory evaluation remain
 future work; see `docs/TRIP_LOG_AND_MODEL_CALIBRATION.md`.
 
+The species-agnostic `forecast-capabilities-v0.1.0` and
+`environmental-snapshot-v0.1.0` contracts are also implemented. They publish
+the real NWS hourly and derived daily boundaries, timestamp-specific input
+provenance, water-temperature coverage, deterministic solar context, and
+current-only USGS context. Unsupported timestamps are rejected with the
+capability response. Explore timeline controls and map-wide selected-time
+scoring are the next implementation slice; see
+`docs/ENVIRONMENTAL_SNAPSHOT_CONTRACT.md`.
+
 ## Product and scientific principles
 
 1. Presence, activity, practical opportunity, and data confidence are separate

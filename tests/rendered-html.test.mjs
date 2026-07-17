@@ -150,6 +150,24 @@ test("live public-data spine includes canonical science forecast, hydrology, mul
   assert.match(trout, /"waterCount": 13/);
 });
 
+test("forecast capability contracts bound timeline selection and keep snapshots species-agnostic", async () => {
+  const [capabilities, snapshot, contracts, service] = await Promise.all([
+    readFile(new URL("../app/api/forecast-capabilities/route.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/api/environmental-snapshot/route.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/lib/environmental-snapshot.ts", import.meta.url), "utf8"),
+    readFile(new URL("../apps/api/app/services/forecast_capabilities.py", import.meta.url), "utf8"),
+  ]);
+  assert.match(contracts, /forecast-capabilities-v0\.1\.0/);
+  assert.match(contracts, /environmental-snapshot-v0\.1\.0/);
+  assert.match(service, /unsupportedFutureDisabled/);
+  assert.match(service, /selectedTimestampExplicit/);
+  assert.match(service, /speciesAgnostic/);
+  assert.match(service, /scoreIncluded/);
+  assert.match(capabilities, /forecast-capabilities/);
+  assert.match(snapshot, /time is outside the supported forecast window/i);
+  assert.doesNotMatch(service, /catchCount|lureOrBait/);
+});
+
 test("spot details separate bite forecasts from presence-only fish and link every state to the guide", async () => {
   const [spot, whatsBiting] = await Promise.all([
     readFile(new URL("../app/locations/[id]/page.tsx", import.meta.url), "utf8"),

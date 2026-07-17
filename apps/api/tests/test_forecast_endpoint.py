@@ -83,3 +83,54 @@ def test_multispecies_live_uses_measured_water_temp(mocked_conditions):
     assert payload["liveConditions"] is True
     assert len(payload["species"]) >= 1
     assert all(s.get("activityLive") for s in payload["species"])
+
+
+def test_forecast_capabilities_publish_real_provider_boundaries(mocked_conditions):
+    response = mocked_conditions.get("/api/locations/front-royal/forecast-capabilities")
+    assert response.status_code == 200, response.text
+    body = response.json()
+    assert body["contractVersion"] == "forecast-capabilities-v0.1.0"
+    assert body["hourly"]["status"] == "available"
+    assert body["hourly"]["periodCount"] == 48
+    assert body["hourly"]["startTime"].startswith("2026-05-10T04:00:00")
+    assert body["hourly"]["endTime"].startswith("2026-05-12T03:00:00")
+    assert body["daily"]["resolution"] == "daily-outlook"
+    assert body["daily"]["dayCount"] == 2
+    assert body["daily"]["startDate"] == "2026-05-10"
+    assert body["daily"]["endDate"] == "2026-05-11"
+    assert body["selectionPolicy"]["unsupportedFutureDisabled"] is True
+    assert body["selectionPolicy"]["selectedTimestampRequiredForScoring"] is True
+    assert body["hydrology"]["forecasted"] is False
+
+
+def test_environmental_snapshot_is_species_agnostic_and_timestamp_explicit(mocked_conditions):
+    response = mocked_conditions.get(
+        "/api/locations/front-royal/environmental-snapshot",
+        params={"at": "2026-05-10T12:30:00-04:00"},
+    )
+    assert response.status_code == 200, response.text
+    body = response.json()
+    assert body["contractVersion"] == "environmental-snapshot-v0.1.0"
+    assert body["selectedTime"] == "2026-05-10T16:30:00+00:00"
+    assert body["weatherValidTime"] == "2026-05-10T16:00:00+00:00"
+    assert body["inputs"]["airTemperature"]["value"] == 70
+    assert body["inputs"]["airTemperature"]["provenance"] == "forecast"
+    assert body["inputs"]["solarPosition"]["provenance"] == "deterministic"
+    assert body["inputs"]["hydrology"]["provenance"] == "observed-current-context"
+    assert body["inputs"]["waterTemperature"]["status"] == "unavailable"
+    assert body["coverage"]["status"] == "partial"
+    assert body["scoring"]["speciesAgnostic"] is True
+    assert body["scoring"]["scoreIncluded"] is False
+    assert "speciesId" not in body
+    assert "score" not in body
+
+
+def test_environmental_snapshot_rejects_unsupported_time(mocked_conditions):
+    response = mocked_conditions.get(
+        "/api/locations/front-royal/environmental-snapshot",
+        params={"at": "2026-05-20T12:00:00-04:00"},
+    )
+    assert response.status_code == 422
+    detail = response.json()["detail"]
+    assert "outside the supported hourly forecast window" in detail["message"]
+    assert detail["capabilities"]["selectionPolicy"]["unsupportedFutureDisabled"] is True

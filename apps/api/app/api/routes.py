@@ -47,6 +47,10 @@ from ..scoring.service import score_species_at_location
 def _current_month() -> int:
     return datetime.now().month
 from ..services import conditions as conditions_service
+from ..services.forecast_capabilities import (
+    build_environmental_snapshot,
+    build_forecast_capabilities,
+)
 from ..services import opportunities as opp
 from . import serializers
 
@@ -440,6 +444,107 @@ async def location_hydrology(location_id: str, session: Session = Depends(get_se
     if not state.get("available"):
         raise HTTPException(status_code=503, detail=state.get("reason", "hydrology unavailable"))
     return state
+
+
+async def _environmental_context(record: FishingLocationRecord, association) -> tuple[dict, dict | None, dict, dict | None]:
+    association_payload = opp.association_dict(association) if association is not None else None
+    weather_task = asyncio.create_task(
+        conditions_service.get_weather(record.latitude, record.longitude)
+    )
+    hydro_task = (
+        asyncio.create_task(
+            conditions_service.get_hydrology_state(association_payload)
+        )
+        if association_payload is not None
+        else None
+    )
+    if hydro_task is not None:
+        weather, hydrology = await asyncio.gather(weather_task, hydro_task)
+    else:
+        weather = await weather_task
+        hydrology = None
+    water_temperature = await conditions_service.get_water_temperature_state(
+        record.latitude,
+        record.longitude,
+        record.waterbody_type,
+        hydrology if hydrology and hydrology.get("available") else None,
+    )
+    return weather, hydrology, water_temperature, association_payload
+
+
+def _environmental_location(record: FishingLocationRecord) -> dict:
+    return {
+        "id": record.id,
+        "name": record.name,
+        "waterbody": record.waterbody,
+        "waterbodyType": record.waterbody_type,
+        "latitude": record.latitude,
+        "longitude": record.longitude,
+    }
+
+
+@router.get("/locations/{location_id}/forecast-capabilities")
+async def location_forecast_capabilities(
+    location_id: str,
+    session: Session = Depends(get_session),
+) -> dict:
+    record = get_location(session, location_id)
+    association = opp.get_association(session, location_id)
+    weather, hydrology, water_temperature, association_payload = await _environmental_context(
+        record, association
+    )
+    return build_forecast_capabilities(
+        location=_environmental_location(record),
+        weather=weather,
+        hydrology=hydrology,
+        water_temperature=water_temperature,
+        association=association_payload,
+    )
+
+
+@router.get("/locations/{location_id}/environmental-snapshot")
+async def location_environmental_snapshot(
+    location_id: str,
+    at: datetime = Query(...),
+    session: Session = Depends(get_session),
+) -> dict:
+    if at.tzinfo is None:
+        raise HTTPException(status_code=400, detail="Selected time must include a time-zone offset")
+    record = get_location(session, location_id)
+    association = opp.get_association(session, location_id)
+    weather, hydrology, water_temperature, association_payload = await _environmental_context(
+        record, association
+    )
+    location = _environmental_location(record)
+    capabilities = build_forecast_capabilities(
+        location=location,
+        weather=weather,
+        hydrology=hydrology,
+        water_temperature=water_temperature,
+        association=association_payload,
+    )
+    if not weather.get("available"):
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "message": weather.get("reason", "Hourly weather is unavailable"),
+                "capabilities": capabilities,
+            },
+        )
+    try:
+        return build_environmental_snapshot(
+            selected_at=at,
+            location=location,
+            weather=weather,
+            hydrology=hydrology,
+            water_temperature=water_temperature,
+            association=association_payload,
+        )
+    except ValueError as error:
+        raise HTTPException(
+            status_code=422,
+            detail={"message": str(error), "capabilities": capabilities},
+        ) from error
 
 
 @router.get("/locations/{location_id}/forecast")
