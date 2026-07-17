@@ -3,7 +3,12 @@
 FROM node:22-bookworm-slim AS dependencies
 WORKDIR /app
 COPY package.json package-lock.json ./
-RUN npm ci --ignore-scripts --no-audit --no-fund
+# `npm install` (not `npm ci`) + `--include=optional`: the checked-in lockfile is
+# generated on Windows/x64, and `npm ci` from a cross-platform lockfile skips the
+# current platform's optional binaries (npm/cli#4828). vinext's build needs the
+# platform-correct @cloudflare/workerd binary (e.g. workerd-linux-arm64 on an
+# Oracle Ampere ARM VM), so we let npm re-resolve optionals for the build arch.
+RUN npm install --no-audit --no-fund --include=optional
 
 FROM dependencies AS build
 COPY . .
