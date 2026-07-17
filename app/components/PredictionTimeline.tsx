@@ -54,8 +54,13 @@ export function PredictionTimeline({
   function step(delta: number) {
     if (!selection || activeIndex < 0) return;
     const nextIndex = Math.max(0, Math.min(activeLength - 1, activeIndex + delta));
-    if (selection.mode === "daily") onChange({ mode: "daily", key: days[nextIndex].key });
-    else onChange({ mode: "hourly", key: periods[nextIndex].startTime });
+    selectIndex(nextIndex);
+  }
+
+  function selectIndex(index: number) {
+    if (!selection) return;
+    if (selection.mode === "daily") onChange({ mode: "daily", key: days[index].key });
+    else onChange({ mode: "hourly", key: periods[index].startTime });
   }
 
   function setMode(mode: ForecastSelection["mode"]) {
@@ -129,22 +134,18 @@ export function PredictionTimeline({
           <>
             <div className="timeline-scrubber">
               <button type="button" onClick={() => step(-1)} disabled={activeIndex <= 0} aria-label={`Previous ${selection.mode === "daily" ? "day" : "hour"}`}><ChevronLeft size={16} /></button>
-              {selection.mode === "hourly" ? (
-                <label className="timeline-range">
-                  <span>{hourlyIndex + 1}/{periods.length}</span>
-                  <input
-                    type="range"
-                    min={0}
-                    max={Math.max(0, periods.length - 1)}
-                    value={Math.max(0, hourlyIndex)}
-                    onChange={(event) => onChange({ mode: "hourly", key: periods[Number(event.target.value)].startTime })}
-                    aria-label="Forecast hour"
-                    aria-valuetext={selectedPeriod ? forecastHourLabel(selectedPeriod.startTime) : undefined}
-                  />
-                </label>
-              ) : (
-                <span className="timeline-day-position">Day {dailyIndex + 1} of {days.length}</span>
-              )}
+              <label className="timeline-range">
+                <span>{selection.mode === "daily" ? `${dailyIndex + 1}/${days.length}` : `${hourlyIndex + 1}/${periods.length}`}</span>
+                <input
+                  type="range"
+                  min={0}
+                  max={Math.max(0, activeLength - 1)}
+                  value={Math.max(0, activeIndex)}
+                  onChange={(event) => selectIndex(Number(event.target.value))}
+                  aria-label={`Forecast ${selection.mode === "daily" ? "day" : "hour"}`}
+                  aria-valuetext={selection.mode === "daily" ? days[dailyIndex]?.label : selectedPeriod ? forecastHourLabel(selectedPeriod.startTime) : undefined}
+                />
+              </label>
               <button type="button" onClick={() => step(1)} disabled={activeIndex >= activeLength - 1} aria-label={`Next ${selection.mode === "daily" ? "day" : "hour"}`}><ChevronRight size={16} /></button>
             </div>
 
@@ -167,16 +168,6 @@ export function PredictionTimeline({
           </>
         )}
       </div>
-
-      {status === "ready" && selection?.mode === "daily" && (
-        <div className="timeline-days" role="list" aria-label="Provider-backed forecast days">
-          {days.map((day) => (
-            <button type="button" role="listitem" key={day.key} className={selection.key === day.key ? "active" : ""} onClick={() => onChange({ mode: "daily", key: day.key })}>
-              <strong>{day.label}</strong><span>{day.periods.length} hrs</span>
-            </button>
-          ))}
-        </div>
-      )}
     </section>
   );
 }

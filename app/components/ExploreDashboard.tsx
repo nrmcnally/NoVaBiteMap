@@ -680,24 +680,24 @@ export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }
       <section className={`workspace-grid ${resultsOpen ? "results-open" : ""}`}>
         <div className="map-panel">
           <div className="map-toolbar">
-            <div>
+            <div className="map-summary">
               <span className="map-kicker">Northern Virginia</span>
               <strong>{visibleRows.length} verified access points{speciesIds.length > 0 ? ` · ${ranked.length} ranked` : ""}</strong>
             </div>
+            <PredictionTimeline
+              status={timelineForecast.status}
+              periods={timelineForecast.periods}
+              selection={timelineSelection}
+              anchorLabel={timelineAnchor.label}
+              retrievedAt={timelineForecast.retrievedAt}
+              error={timelineForecast.error}
+              onChange={setTimelineSelection}
+              onRefresh={refreshTimeline}
+            />
             <button className="results-toggle" onClick={() => setResultsOpen((open) => !open)} aria-expanded={resultsOpen}>
               <ListFilter size={17} /> {resultsOpen ? "Hide results" : speciesIds.length > 0 ? `Show ${ranked.length} ranked results` : "Open results"}
             </button>
           </div>
-          <PredictionTimeline
-            status={timelineForecast.status}
-            periods={timelineForecast.periods}
-            selection={timelineSelection}
-            anchorLabel={timelineAnchor.label}
-            retrievedAt={timelineForecast.retrievedAt}
-            error={timelineForecast.error}
-            onChange={setTimelineSelection}
-            onRefresh={refreshTimeline}
-          />
           <FishingMap
             locations={mapLocations}
             speciesIds={speciesIds}
