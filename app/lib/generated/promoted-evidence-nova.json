@@ -4,10 +4,10 @@
     "reviewed": "2026-07-14",
     "wildTroutReachesApproved": 20,
     "wildTroutClaims": 22,
-    "manualClaims": 71,
+    "manualClaims": 125,
     "vafwisClaims": 860,
     "anadromousClaims": 3,
-    "locations": 108
+    "locations": 118
   },
   "byLocation": {
     "belle-haven": [
@@ -105,6 +105,200 @@
         ],
         "sourceName": "Virginia DWR VAFWIS - Hunting Creek",
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28TaxaGrp%29%3D%27FISH%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25PERCH%2C%20YELLOW%25%27&geometry=-77.061072%2C38.765578%2C-77.037072%2C38.789578&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json"
+      }
+    ],
+    "breckenridge-reservoir": [
+      {
+        "speciesId": "black-crappie",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "MCB Quantico iSportsman fisheries page names black crappie as present in Breckenridge Reservoir.",
+        "lastEvidence": "MCB Quantico iSportsman fisheries page — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "MCB Quantico iSportsman fisheries page names black crappie as present in Breckenridge Reservoir."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "MCB Quantico iSportsman fisheries page",
+        "sourceUrl": "https://quantico.isportsman.net/Breckenridge.aspx"
+      },
+      {
+        "speciesId": "bluegill",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "MCB Quantico iSportsman fisheries page names bluegill as present in Breckenridge Reservoir.",
+        "lastEvidence": "MCB Quantico iSportsman fisheries page — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "MCB Quantico iSportsman fisheries page names bluegill as present in Breckenridge Reservoir."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "MCB Quantico iSportsman fisheries page",
+        "sourceUrl": "https://quantico.isportsman.net/Breckenridge.aspx"
+      },
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "MCB Quantico iSportsman fisheries page names channel catfish as present in Breckenridge Reservoir.",
+        "lastEvidence": "MCB Quantico iSportsman fisheries page — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "MCB Quantico iSportsman fisheries page names channel catfish as present in Breckenridge Reservoir."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "MCB Quantico iSportsman fisheries page",
+        "sourceUrl": "https://quantico.isportsman.net/Breckenridge.aspx"
+      },
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "MCB Quantico iSportsman fisheries page names largemouth bass as present in Breckenridge Reservoir.",
+        "lastEvidence": "MCB Quantico iSportsman fisheries page — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "MCB Quantico iSportsman fisheries page names largemouth bass as present in Breckenridge Reservoir."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "MCB Quantico iSportsman fisheries page",
+        "sourceUrl": "https://quantico.isportsman.net/Breckenridge.aspx"
+      }
+    ],
+    "broad-run-bles": [
+      {
+        "speciesId": "american-eel",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document American eel in Broad Run (~0.74 mi from the Bles Park (Broad Run) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Broad Run — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document American eel in Broad Run (~0.74 mi from the Bles Park (Broad Run) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Broad Run",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BROAD+RUN%27&geometry=-77.4739%2C39.0365%2C-77.4139%2C39.0965&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "bluegill",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document bluegill in Broad Run (~0.13 mi from the Bles Park (Broad Run) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Broad Run — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document bluegill in Broad Run (~0.13 mi from the Bles Park (Broad Run) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Broad Run",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BROAD+RUN%27&geometry=-77.4739%2C39.0365%2C-77.4139%2C39.0965&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "pumpkinseed",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document pumpkinseed in Broad Run (~0.13 mi from the Bles Park (Broad Run) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Broad Run — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document pumpkinseed in Broad Run (~0.13 mi from the Bles Park (Broad Run) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Broad Run",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BROAD+RUN%27&geometry=-77.4739%2C39.0365%2C-77.4139%2C39.0965&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "rock-bass",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document rock bass in Broad Run (~0.74 mi from the Bles Park (Broad Run) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Broad Run — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document rock bass in Broad Run (~0.74 mi from the Bles Park (Broad Run) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Broad Run",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BROAD+RUN%27&geometry=-77.4739%2C39.0365%2C-77.4139%2C39.0965&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "smallmouth-bass",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document smallmouth bass in Broad Run (~0.74 mi from the Bles Park (Broad Run) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Broad Run — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document smallmouth bass in Broad Run (~0.74 mi from the Bles Park (Broad Run) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Broad Run",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BROAD+RUN%27&geometry=-77.4739%2C39.0365%2C-77.4139%2C39.0965&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "yellow-bullhead",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document yellow bullhead in Broad Run (~0.13 mi from the Bles Park (Broad Run) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Broad Run — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document yellow bullhead in Broad Run (~0.13 mi from the Bles Park (Broad Run) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Broad Run",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BROAD+RUN%27&geometry=-77.4739%2C39.0365%2C-77.4139%2C39.0965&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
       }
     ],
     "bull-run-regional-park": [
@@ -240,6 +434,354 @@
         ],
         "sourceName": "Virginia DWR VAFWIS - Bull Run",
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BULL%20RUN%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25BASS%2C%20SMALLMOUTH%25%27&geometry=-77.4897%2C38.7636%2C-77.4297%2C38.8236&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json"
+      }
+    ],
+    "cedar-run-merrimac": [
+      {
+        "speciesId": "fallfish",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document fallfish in Cedar Run (~0.09 mi from the Cedar Run at Merrimac Farm WMA access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Cedar Run — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document fallfish in Cedar Run (~0.09 mi from the Cedar Run at Merrimac Farm WMA access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Cedar Run",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27CEDAR+RUN%27&geometry=-77.5829%2C38.5854%2C-77.52289999999999%2C38.6454&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "tessellated-darter",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document tessellated darter in Cedar Run (~0.0 mi from the Cedar Run at Merrimac Farm WMA access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Cedar Run — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document tessellated darter in Cedar Run (~0.0 mi from the Cedar Run at Merrimac Farm WMA access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Cedar Run",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27CEDAR+RUN%27&geometry=-77.5829%2C38.5854%2C-77.52289999999999%2C38.6454&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      }
+    ],
+    "chopawamsic-trout": [
+      {
+        "speciesId": "american-eel",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document American eel in Chopawamsic Creek (~0.11 mi from the Chopawamsic Creek Trout Waters (MCB Quantico) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Chopawamsic Creek — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document American eel in Chopawamsic Creek (~0.11 mi from the Chopawamsic Creek Trout Waters (MCB Quantico) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Chopawamsic Creek",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27CHOPAWAMSIC+CREEK%27&geometry=-77.40239%2C38.49282%2C-77.34239%2C38.552820000000004&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "blacknose-dace",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document blacknose dace in Chopawamsic Creek (~0.11 mi from the Chopawamsic Creek Trout Waters (MCB Quantico) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Chopawamsic Creek — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document blacknose dace in Chopawamsic Creek (~0.11 mi from the Chopawamsic Creek Trout Waters (MCB Quantico) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Chopawamsic Creek",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27CHOPAWAMSIC+CREEK%27&geometry=-77.40239%2C38.49282%2C-77.34239%2C38.552820000000004&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "bluegill",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document bluegill in Chopawamsic Creek (~0.11 mi from the Chopawamsic Creek Trout Waters (MCB Quantico) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Chopawamsic Creek — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document bluegill in Chopawamsic Creek (~0.11 mi from the Chopawamsic Creek Trout Waters (MCB Quantico) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Chopawamsic Creek",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27CHOPAWAMSIC+CREEK%27&geometry=-77.40239%2C38.49282%2C-77.34239%2C38.552820000000004&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Brook Trout is seasonally stocked (put-and-take) in Chopawamsic Creek per the DWR/MCB Quantico trout program.",
+        "lastEvidence": "MCB Quantico iSportsman / Virginia DWR Catchable Trout Stocking Plan — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "Brook Trout is seasonally stocked (put-and-take) in Chopawamsic Creek per the DWR/MCB Quantico trout program."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "MCB Quantico iSportsman / Virginia DWR Catchable Trout Stocking Plan",
+        "sourceUrl": "https://quantico.isportsman.net/choptrout.aspx"
+      },
+      {
+        "speciesId": "brown-bullhead",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document brown bullhead in Chopawamsic Creek (~0.11 mi from the Chopawamsic Creek Trout Waters (MCB Quantico) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Chopawamsic Creek — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document brown bullhead in Chopawamsic Creek (~0.11 mi from the Chopawamsic Creek Trout Waters (MCB Quantico) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Chopawamsic Creek",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27CHOPAWAMSIC+CREEK%27&geometry=-77.40239%2C38.49282%2C-77.34239%2C38.552820000000004&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "brown-trout",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Brown Trout is seasonally stocked (put-and-take) in Chopawamsic Creek per the DWR/MCB Quantico trout program.",
+        "lastEvidence": "MCB Quantico iSportsman / Virginia DWR Catchable Trout Stocking Plan — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "Brown Trout is seasonally stocked (put-and-take) in Chopawamsic Creek per the DWR/MCB Quantico trout program."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "MCB Quantico iSportsman / Virginia DWR Catchable Trout Stocking Plan",
+        "sourceUrl": "https://quantico.isportsman.net/choptrout.aspx"
+      },
+      {
+        "speciesId": "fallfish",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document fallfish in Chopawamsic Creek (~0.11 mi from the Chopawamsic Creek Trout Waters (MCB Quantico) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Chopawamsic Creek — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document fallfish in Chopawamsic Creek (~0.11 mi from the Chopawamsic Creek Trout Waters (MCB Quantico) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Chopawamsic Creek",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27CHOPAWAMSIC+CREEK%27&geometry=-77.40239%2C38.49282%2C-77.34239%2C38.552820000000004&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document largemouth bass in Chopawamsic Creek (~0.11 mi from the Chopawamsic Creek Trout Waters (MCB Quantico) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Chopawamsic Creek — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document largemouth bass in Chopawamsic Creek (~0.11 mi from the Chopawamsic Creek Trout Waters (MCB Quantico) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Chopawamsic Creek",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27CHOPAWAMSIC+CREEK%27&geometry=-77.40239%2C38.49282%2C-77.34239%2C38.552820000000004&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "northern-hogsucker",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document northern hog sucker in Chopawamsic Creek (~0.11 mi from the Chopawamsic Creek Trout Waters (MCB Quantico) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Chopawamsic Creek — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document northern hog sucker in Chopawamsic Creek (~0.11 mi from the Chopawamsic Creek Trout Waters (MCB Quantico) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Chopawamsic Creek",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27CHOPAWAMSIC+CREEK%27&geometry=-77.40239%2C38.49282%2C-77.34239%2C38.552820000000004&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "rainbow-trout",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Rainbow Trout is seasonally stocked (put-and-take) in Chopawamsic Creek per the DWR/MCB Quantico trout program.",
+        "lastEvidence": "MCB Quantico iSportsman / Virginia DWR Catchable Trout Stocking Plan — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "Rainbow Trout is seasonally stocked (put-and-take) in Chopawamsic Creek per the DWR/MCB Quantico trout program."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "MCB Quantico iSportsman / Virginia DWR Catchable Trout Stocking Plan",
+        "sourceUrl": "https://quantico.isportsman.net/choptrout.aspx"
+      },
+      {
+        "speciesId": "redbreast-sunfish",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document redbreast sunfish in Chopawamsic Creek (~0.11 mi from the Chopawamsic Creek Trout Waters (MCB Quantico) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Chopawamsic Creek — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document redbreast sunfish in Chopawamsic Creek (~0.11 mi from the Chopawamsic Creek Trout Waters (MCB Quantico) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Chopawamsic Creek",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27CHOPAWAMSIC+CREEK%27&geometry=-77.40239%2C38.49282%2C-77.34239%2C38.552820000000004&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "tessellated-darter",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document tessellated darter in Chopawamsic Creek (~0.11 mi from the Chopawamsic Creek Trout Waters (MCB Quantico) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Chopawamsic Creek — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document tessellated darter in Chopawamsic Creek (~0.11 mi from the Chopawamsic Creek Trout Waters (MCB Quantico) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Chopawamsic Creek",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27CHOPAWAMSIC+CREEK%27&geometry=-77.40239%2C38.49282%2C-77.34239%2C38.552820000000004&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "white-sucker",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document white sucker in Chopawamsic Creek (~0.11 mi from the Chopawamsic Creek Trout Waters (MCB Quantico) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Chopawamsic Creek — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document white sucker in Chopawamsic Creek (~0.11 mi from the Chopawamsic Creek Trout Waters (MCB Quantico) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Chopawamsic Creek",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27CHOPAWAMSIC+CREEK%27&geometry=-77.40239%2C38.49282%2C-77.34239%2C38.552820000000004&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      }
+    ],
+    "claude-moore-ponds": [
+      {
+        "speciesId": "bluegill",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Loudoun County Parks names bluegill as present in Claude Moore Park Ponds.",
+        "lastEvidence": "Loudoun County Parks — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "Loudoun County Parks names bluegill as present in Claude Moore Park Ponds."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Loudoun County Parks",
+        "sourceUrl": "https://www.loudoun.gov/1288/Sportsplex-Nature-Area"
+      },
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Loudoun County Parks names channel catfish as present in Claude Moore Park Ponds.",
+        "lastEvidence": "Loudoun County Parks — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "Loudoun County Parks names channel catfish as present in Claude Moore Park Ponds."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Loudoun County Parks",
+        "sourceUrl": "https://www.loudoun.gov/1288/Sportsplex-Nature-Area"
+      },
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Loudoun County Parks names largemouth bass as present in Claude Moore Park Ponds.",
+        "lastEvidence": "Loudoun County Parks — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "Loudoun County Parks names largemouth bass as present in Claude Moore Park Ponds."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Loudoun County Parks",
+        "sourceUrl": "https://www.loudoun.gov/1288/Sportsplex-Nature-Area"
       }
     ],
     "daingerfield-island": [
@@ -5916,6 +6458,314 @@
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28TaxaGrp%29%3D%27FISH%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25PERCH%2C%20YELLOW%25%27&geometry=-77.05879%2C38.750879%2C-77.03479%2C38.774879&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json"
       }
     ],
+    "goose-creek": [
+      {
+        "speciesId": "american-eel",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document American eel in Goose Creek (~0.1 mi from the Keep Loudoun Beautiful Park (Goose Creek) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Goose Creek — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document American eel in Goose Creek (~0.1 mi from the Keep Loudoun Beautiful Park (Goose Creek) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Goose Creek",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27GOOSE+CREEK%27&geometry=-77.5437493%2C39.056544099999996%2C-77.4837493%2C39.1165441&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "blacknose-dace",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document blacknose dace in Goose Creek (~0.11 mi from the Keep Loudoun Beautiful Park (Goose Creek) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Goose Creek — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document blacknose dace in Goose Creek (~0.11 mi from the Keep Loudoun Beautiful Park (Goose Creek) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Goose Creek",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27GOOSE+CREEK%27&geometry=-77.5437493%2C39.056544099999996%2C-77.4837493%2C39.1165441&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "bluegill",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document bluegill in Goose Creek (~0.1 mi from the Keep Loudoun Beautiful Park (Goose Creek) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Goose Creek — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document bluegill in Goose Creek (~0.1 mi from the Keep Loudoun Beautiful Park (Goose Creek) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Goose Creek",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27GOOSE+CREEK%27&geometry=-77.5437493%2C39.056544099999996%2C-77.4837493%2C39.1165441&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document channel catfish in Goose Creek (~0.26 mi from the Keep Loudoun Beautiful Park (Goose Creek) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Goose Creek — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document channel catfish in Goose Creek (~0.26 mi from the Keep Loudoun Beautiful Park (Goose Creek) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Goose Creek",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27GOOSE+CREEK%27&geometry=-77.5437493%2C39.056544099999996%2C-77.4837493%2C39.1165441&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "creek-chub",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document creek chub in Goose Creek (~0.12 mi from the Keep Loudoun Beautiful Park (Goose Creek) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Goose Creek — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document creek chub in Goose Creek (~0.12 mi from the Keep Loudoun Beautiful Park (Goose Creek) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Goose Creek",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27GOOSE+CREEK%27&geometry=-77.5437493%2C39.056544099999996%2C-77.4837493%2C39.1165441&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "green-sunfish",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document green sunfish in Goose Creek (~0.1 mi from the Keep Loudoun Beautiful Park (Goose Creek) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Goose Creek — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document green sunfish in Goose Creek (~0.1 mi from the Keep Loudoun Beautiful Park (Goose Creek) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Goose Creek",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27GOOSE+CREEK%27&geometry=-77.5437493%2C39.056544099999996%2C-77.4837493%2C39.1165441&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document largemouth bass in Goose Creek (~0.1 mi from the Keep Loudoun Beautiful Park (Goose Creek) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Goose Creek — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document largemouth bass in Goose Creek (~0.1 mi from the Keep Loudoun Beautiful Park (Goose Creek) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Goose Creek",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27GOOSE+CREEK%27&geometry=-77.5437493%2C39.056544099999996%2C-77.4837493%2C39.1165441&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "longnose-dace",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document longnose dace in Goose Creek (~0.1 mi from the Keep Loudoun Beautiful Park (Goose Creek) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Goose Creek — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document longnose dace in Goose Creek (~0.1 mi from the Keep Loudoun Beautiful Park (Goose Creek) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Goose Creek",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27GOOSE+CREEK%27&geometry=-77.5437493%2C39.056544099999996%2C-77.4837493%2C39.1165441&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "northern-hogsucker",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document northern hog sucker in Goose Creek (~0.1 mi from the Keep Loudoun Beautiful Park (Goose Creek) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Goose Creek — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document northern hog sucker in Goose Creek (~0.1 mi from the Keep Loudoun Beautiful Park (Goose Creek) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Goose Creek",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27GOOSE+CREEK%27&geometry=-77.5437493%2C39.056544099999996%2C-77.4837493%2C39.1165441&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "redbreast-sunfish",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document redbreast sunfish in Goose Creek (~0.1 mi from the Keep Loudoun Beautiful Park (Goose Creek) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Goose Creek — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document redbreast sunfish in Goose Creek (~0.1 mi from the Keep Loudoun Beautiful Park (Goose Creek) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Goose Creek",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27GOOSE+CREEK%27&geometry=-77.5437493%2C39.056544099999996%2C-77.4837493%2C39.1165441&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "rock-bass",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document rock bass in Goose Creek (~0.1 mi from the Keep Loudoun Beautiful Park (Goose Creek) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Goose Creek — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document rock bass in Goose Creek (~0.1 mi from the Keep Loudoun Beautiful Park (Goose Creek) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Goose Creek",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27GOOSE+CREEK%27&geometry=-77.5437493%2C39.056544099999996%2C-77.4837493%2C39.1165441&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "smallmouth-bass",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document smallmouth bass in Goose Creek (~0.12 mi from the Keep Loudoun Beautiful Park (Goose Creek) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Goose Creek — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document smallmouth bass in Goose Creek (~0.12 mi from the Keep Loudoun Beautiful Park (Goose Creek) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Goose Creek",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27GOOSE+CREEK%27&geometry=-77.5437493%2C39.056544099999996%2C-77.4837493%2C39.1165441&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "tessellated-darter",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document tessellated darter in Goose Creek (~0.1 mi from the Keep Loudoun Beautiful Park (Goose Creek) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Goose Creek — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document tessellated darter in Goose Creek (~0.1 mi from the Keep Loudoun Beautiful Park (Goose Creek) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Goose Creek",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27GOOSE+CREEK%27&geometry=-77.5437493%2C39.056544099999996%2C-77.4837493%2C39.1165441&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "white-sucker",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document white sucker in Goose Creek (~0.1 mi from the Keep Loudoun Beautiful Park (Goose Creek) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Goose Creek — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document white sucker in Goose Creek (~0.1 mi from the Keep Loudoun Beautiful Park (Goose Creek) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Goose Creek",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27GOOSE+CREEK%27&geometry=-77.5437493%2C39.056544099999996%2C-77.4837493%2C39.1165441&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      },
+      {
+        "speciesId": "yellow-bullhead",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "DWR VAFWIS fish-collection records document yellow bullhead in Goose Creek (~0.1 mi from the Keep Loudoun Beautiful Park (Goose Creek) access).",
+        "lastEvidence": "Virginia DWR VAFWIS - Goose Creek — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "DWR VAFWIS fish-collection records document yellow bullhead in Goose Creek (~0.1 mi from the Keep Loudoun Beautiful Park (Goose Creek) access)."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR VAFWIS - Goose Creek",
+        "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27GOOSE+CREEK%27&geometry=-77.5437493%2C39.056544099999996%2C-77.4837493%2C39.1165441&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json"
+      }
+    ],
+    "grays-reservoir": [
+      {
+        "speciesId": "rainbow-trout",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Rainbow Trout is seasonally stocked (put-and-take) in Gray's Reservoir per the DWR/MCB Quantico trout program.",
+        "lastEvidence": "MCB Quantico iSportsman / Virginia DWR Catchable Trout Stocking Plan — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "Rainbow Trout is seasonally stocked (put-and-take) in Gray's Reservoir per the DWR/MCB Quantico trout program."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "MCB Quantico iSportsman / Virginia DWR Catchable Trout Stocking Plan",
+        "sourceUrl": "https://quantico.isportsman.net/choptrout.aspx"
+      }
+    ],
     "hidden-pond": [
       {
         "speciesId": "american-eel",
@@ -6430,6 +7280,84 @@
         ],
         "sourceName": "Virginia DWR VAFWIS - Long Branch (Arlington)",
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28TaxaGrp%29%3D%27FISH%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25PERCH%2C%20YELLOW%25%27&geometry=-77.1173%2C38.8438%2C-77.0933%2C38.8678&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json"
+      }
+    ],
+    "lunga-reservoir": [
+      {
+        "speciesId": "black-crappie",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "MCB Quantico iSportsman fisheries page names black crappie as present in Lunga Reservoir.",
+        "lastEvidence": "MCB Quantico iSportsman fisheries page — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "MCB Quantico iSportsman fisheries page names black crappie as present in Lunga Reservoir."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "MCB Quantico iSportsman fisheries page",
+        "sourceUrl": "https://quantico.isportsman.net/Lunga%20Reservoir.aspx"
+      },
+      {
+        "speciesId": "bluegill",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "MCB Quantico iSportsman fisheries page names bluegill as present in Lunga Reservoir.",
+        "lastEvidence": "MCB Quantico iSportsman fisheries page — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "MCB Quantico iSportsman fisheries page names bluegill as present in Lunga Reservoir."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "MCB Quantico iSportsman fisheries page",
+        "sourceUrl": "https://quantico.isportsman.net/Lunga%20Reservoir.aspx"
+      },
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "MCB Quantico iSportsman fisheries page names largemouth bass as present in Lunga Reservoir.",
+        "lastEvidence": "MCB Quantico iSportsman fisheries page — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "MCB Quantico iSportsman fisheries page names largemouth bass as present in Lunga Reservoir."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "MCB Quantico iSportsman fisheries page",
+        "sourceUrl": "https://quantico.isportsman.net/Lunga%20Reservoir.aspx"
+      },
+      {
+        "speciesId": "yellow-perch",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "MCB Quantico iSportsman fisheries page names yellow perch as present in Lunga Reservoir.",
+        "lastEvidence": "MCB Quantico iSportsman fisheries page — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "MCB Quantico iSportsman fisheries page names yellow perch as present in Lunga Reservoir."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "MCB Quantico iSportsman fisheries page",
+        "sourceUrl": "https://quantico.isportsman.net/Lunga%20Reservoir.aspx"
       }
     ],
     "mason-neck": [
@@ -18366,6 +19294,124 @@
         ],
         "sourceName": "Virginia Department of Wildlife Resources (VAFWIS)",
         "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0"
+      }
+    ],
+    "secon-pool": [
+      {
+        "speciesId": "brook-trout",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Brook Trout is seasonally stocked (put-and-take) in Secon Pool per the DWR/MCB Quantico trout program.",
+        "lastEvidence": "MCB Quantico iSportsman / Virginia DWR Catchable Trout Stocking Plan — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "Brook Trout is seasonally stocked (put-and-take) in Secon Pool per the DWR/MCB Quantico trout program."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "MCB Quantico iSportsman / Virginia DWR Catchable Trout Stocking Plan",
+        "sourceUrl": "https://quantico.isportsman.net/secon.aspx"
+      },
+      {
+        "speciesId": "rainbow-trout",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Rainbow Trout is seasonally stocked (put-and-take) in Secon Pool per the DWR/MCB Quantico trout program.",
+        "lastEvidence": "MCB Quantico iSportsman / Virginia DWR Catchable Trout Stocking Plan — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "Rainbow Trout is seasonally stocked (put-and-take) in Secon Pool per the DWR/MCB Quantico trout program."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "MCB Quantico iSportsman / Virginia DWR Catchable Trout Stocking Plan",
+        "sourceUrl": "https://quantico.isportsman.net/secon.aspx"
+      }
+    ],
+    "sleeter-lake": [
+      {
+        "speciesId": "black-crappie",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Virginia DWR waterbody page names black crappie as present in Sleeter Lake.",
+        "lastEvidence": "Virginia DWR waterbody page — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "Virginia DWR waterbody page names black crappie as present in Sleeter Lake."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR waterbody page",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/sleeter-lake/"
+      },
+      {
+        "speciesId": "bluegill",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Virginia DWR waterbody page names bluegill as present in Sleeter Lake.",
+        "lastEvidence": "Virginia DWR waterbody page — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "Virginia DWR waterbody page names bluegill as present in Sleeter Lake."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR waterbody page",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/sleeter-lake/"
+      },
+      {
+        "speciesId": "channel-catfish",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Virginia DWR waterbody page names channel catfish as present in Sleeter Lake.",
+        "lastEvidence": "Virginia DWR waterbody page — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "Virginia DWR waterbody page names channel catfish as present in Sleeter Lake."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR waterbody page",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/sleeter-lake/"
+      },
+      {
+        "speciesId": "largemouth-bass",
+        "availability": 0.6,
+        "quality": null,
+        "evidenceConfidence": 0.8,
+        "evidenceType": "official listing",
+        "evidenceSummary": "Virginia DWR waterbody page names largemouth bass as present in Sleeter Lake.",
+        "lastEvidence": "Virginia DWR waterbody page — reviewed 2026-07-14",
+        "technique": "Match presentation to the species, season, and current conditions",
+        "depth": "Work accessible cover and structure first, then probe the first depth change",
+        "positive": [
+          "Virginia DWR waterbody page names largemouth bass as present in Sleeter Lake."
+        ],
+        "negative": [
+          "Reviewed primary-source record; conditions and access can change"
+        ],
+        "sourceName": "Virginia DWR waterbody page",
+        "sourceUrl": "https://dwr.virginia.gov/waterbody/sleeter-lake/"
       }
     ],
     "vernon-view": [
