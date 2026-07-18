@@ -9,6 +9,10 @@ COPY apps/api/alembic.ini ./alembic.ini
 COPY apps/api/entrypoint.sh ./entrypoint.sh
 RUN chmod +x ./entrypoint.sh
 
-# Run Alembic migrations (and seed once) before serving so the Postgres stack
-# comes up with a fully-provisioned schema and canonical data.
+# The API listens on 8000 (see entrypoint.sh). EXPOSE lets platforms like Railway
+# auto-detect the target port for a generated public domain.
+EXPOSE 8000
+
+# entrypoint.sh runs Alembic + seed on Postgres, or defers to the app's SQLite
+# startup path, then serves uvicorn.
 CMD ["./entrypoint.sh"]
