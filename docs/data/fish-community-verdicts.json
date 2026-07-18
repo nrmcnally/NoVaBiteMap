@@ -4861,6 +4861,2199 @@
         "currentPresenceClaimed": true,
         "accessSeparatelyReviewed": true
       }
+    },
+    {
+      "claimId": "listing-b34-germantown-lake-largemouth-bass",
+      "locationId": "germantown-lake",
+      "speciesId": "largemouth-bass",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/germantown-lake/",
+      "summary": "Virginia DWR waterbody page names largemouth bass as present in Germantown Lake.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-germantown-lake-bluegill",
+      "locationId": "germantown-lake",
+      "speciesId": "bluegill",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/germantown-lake/",
+      "summary": "Virginia DWR waterbody page names bluegill as present in Germantown Lake.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-germantown-lake-black-crappie",
+      "locationId": "germantown-lake",
+      "speciesId": "black-crappie",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/germantown-lake/",
+      "summary": "Virginia DWR waterbody page names black crappie as present in Germantown Lake.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-germantown-lake-channel-catfish",
+      "locationId": "germantown-lake",
+      "speciesId": "channel-catfish",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/germantown-lake/",
+      "summary": "Virginia DWR waterbody page names channel catfish as present in Germantown Lake.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-abel-lake-largemouth-bass",
+      "locationId": "abel-lake",
+      "speciesId": "largemouth-bass",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/abel-reservoir/",
+      "summary": "Virginia DWR waterbody page names largemouth bass as present in Abel Reservoir.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-abel-lake-bluegill",
+      "locationId": "abel-lake",
+      "speciesId": "bluegill",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/abel-reservoir/",
+      "summary": "Virginia DWR waterbody page names bluegill as present in Abel Reservoir.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-abel-lake-channel-catfish",
+      "locationId": "abel-lake",
+      "speciesId": "channel-catfish",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/abel-reservoir/",
+      "summary": "Virginia DWR waterbody page names channel catfish as present in Abel Reservoir.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-mooney-largemouth-bass",
+      "locationId": "lake-mooney",
+      "speciesId": "largemouth-bass",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-mooney/",
+      "summary": "Virginia DWR waterbody page names largemouth bass as present in Lake Mooney.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-mooney-bluegill",
+      "locationId": "lake-mooney",
+      "speciesId": "bluegill",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-mooney/",
+      "summary": "Virginia DWR waterbody page names bluegill as present in Lake Mooney.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-mooney-black-crappie",
+      "locationId": "lake-mooney",
+      "speciesId": "black-crappie",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-mooney/",
+      "summary": "Virginia DWR waterbody page names black crappie as present in Lake Mooney.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-mooney-channel-catfish",
+      "locationId": "lake-mooney",
+      "speciesId": "channel-catfish",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-mooney/",
+      "summary": "Virginia DWR waterbody page names channel catfish as present in Lake Mooney.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-ni-river-reservoir-largemouth-bass",
+      "locationId": "ni-river-reservoir",
+      "speciesId": "largemouth-bass",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/ni-reservoir/",
+      "summary": "Virginia DWR waterbody page names largemouth bass as present in Ni River Reservoir.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-ni-river-reservoir-bluegill",
+      "locationId": "ni-river-reservoir",
+      "speciesId": "bluegill",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/ni-reservoir/",
+      "summary": "Virginia DWR waterbody page names bluegill as present in Ni River Reservoir.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-ni-river-reservoir-white-perch",
+      "locationId": "ni-river-reservoir",
+      "speciesId": "white-perch",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/ni-reservoir/",
+      "summary": "Virginia DWR waterbody page names white perch as present in Ni River Reservoir.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-culpeper-largemouth-bass",
+      "locationId": "lake-culpeper",
+      "speciesId": "largemouth-bass",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-culpeper/",
+      "summary": "Virginia DWR waterbody page names largemouth bass as present in Lake Culpeper.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-culpeper-bluegill",
+      "locationId": "lake-culpeper",
+      "speciesId": "bluegill",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-culpeper/",
+      "summary": "Virginia DWR waterbody page names bluegill as present in Lake Culpeper.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-culpeper-pumpkinseed",
+      "locationId": "lake-culpeper",
+      "speciesId": "pumpkinseed",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-culpeper/",
+      "summary": "Virginia DWR waterbody page names pumpkinseed as present in Lake Culpeper.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-culpeper-yellow-perch",
+      "locationId": "lake-culpeper",
+      "speciesId": "yellow-perch",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-culpeper/",
+      "summary": "Virginia DWR waterbody page names yellow perch as present in Lake Culpeper.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-culpeper-channel-catfish",
+      "locationId": "lake-culpeper",
+      "speciesId": "channel-catfish",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-culpeper/",
+      "summary": "Virginia DWR waterbody page names channel catfish as present in Lake Culpeper.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-anna-sp-largemouth-bass",
+      "locationId": "lake-anna-sp",
+      "speciesId": "largemouth-bass",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-anna/",
+      "summary": "Virginia DWR waterbody page names largemouth bass as present in Lake Anna.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-anna-sp-striped-bass",
+      "locationId": "lake-anna-sp",
+      "speciesId": "striped-bass",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-anna/",
+      "summary": "Virginia DWR waterbody page names striped bass as present in Lake Anna.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-anna-sp-black-crappie",
+      "locationId": "lake-anna-sp",
+      "speciesId": "black-crappie",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-anna/",
+      "summary": "Virginia DWR waterbody page names black crappie as present in Lake Anna.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-anna-sp-bluegill",
+      "locationId": "lake-anna-sp",
+      "speciesId": "bluegill",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-anna/",
+      "summary": "Virginia DWR waterbody page names bluegill as present in Lake Anna.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-anna-sp-channel-catfish",
+      "locationId": "lake-anna-sp",
+      "speciesId": "channel-catfish",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-anna/",
+      "summary": "Virginia DWR waterbody page names channel catfish as present in Lake Anna.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-anna-sp-white-perch",
+      "locationId": "lake-anna-sp",
+      "speciesId": "white-perch",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-anna/",
+      "summary": "Virginia DWR waterbody page names white perch as present in Lake Anna.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-anna-sp-white-catfish",
+      "locationId": "lake-anna-sp",
+      "speciesId": "white-catfish",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-anna/",
+      "summary": "Virginia DWR waterbody page names white catfish as present in Lake Anna.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-phelps-pond-largemouth-bass",
+      "locationId": "phelps-pond",
+      "speciesId": "largemouth-bass",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/phelps-pond/",
+      "summary": "Virginia DWR waterbody page names largemouth bass as present in Phelps Pond.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-phelps-pond-bluegill",
+      "locationId": "phelps-pond",
+      "speciesId": "bluegill",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/phelps-pond/",
+      "summary": "Virginia DWR waterbody page names bluegill as present in Phelps Pond.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-phelps-pond-channel-catfish",
+      "locationId": "phelps-pond",
+      "speciesId": "channel-catfish",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/phelps-pond/",
+      "summary": "Virginia DWR waterbody page names channel catfish as present in Phelps Pond.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-arrowhead-largemouth-bass",
+      "locationId": "lake-arrowhead",
+      "speciesId": "largemouth-bass",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/arrowhead-lake/",
+      "summary": "Virginia DWR waterbody page names largemouth bass as present in Lake Arrowhead.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-arrowhead-bluegill",
+      "locationId": "lake-arrowhead",
+      "speciesId": "bluegill",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/arrowhead-lake/",
+      "summary": "Virginia DWR waterbody page names bluegill as present in Lake Arrowhead.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-arrowhead-channel-catfish",
+      "locationId": "lake-arrowhead",
+      "speciesId": "channel-catfish",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/arrowhead-lake/",
+      "summary": "Virginia DWR waterbody page names channel catfish as present in Lake Arrowhead.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-laura-largemouth-bass",
+      "locationId": "lake-laura",
+      "speciesId": "largemouth-bass",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-laura/",
+      "summary": "Virginia DWR waterbody page names largemouth bass as present in Lake Laura.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-laura-bluegill",
+      "locationId": "lake-laura",
+      "speciesId": "bluegill",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-laura/",
+      "summary": "Virginia DWR waterbody page names bluegill as present in Lake Laura.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-laura-pumpkinseed",
+      "locationId": "lake-laura",
+      "speciesId": "pumpkinseed",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-laura/",
+      "summary": "Virginia DWR waterbody page names pumpkinseed as present in Lake Laura.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-laura-yellow-perch",
+      "locationId": "lake-laura",
+      "speciesId": "yellow-perch",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-laura/",
+      "summary": "Virginia DWR waterbody page names yellow perch as present in Lake Laura.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-laura-channel-catfish",
+      "locationId": "lake-laura",
+      "speciesId": "channel-catfish",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-laura/",
+      "summary": "Virginia DWR waterbody page names channel catfish as present in Lake Laura.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-laura-muskellunge",
+      "locationId": "lake-laura",
+      "speciesId": "muskellunge",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/lake-laura/",
+      "summary": "Virginia DWR waterbody page names muskellunge as present in Lake Laura.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-bealers-ferry-pond-largemouth-bass",
+      "locationId": "bealers-ferry-pond",
+      "speciesId": "largemouth-bass",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/bealers-ferry-pond/",
+      "summary": "Virginia DWR waterbody page names largemouth bass as present in Bealers Ferry Pond.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-bealers-ferry-pond-bluegill",
+      "locationId": "bealers-ferry-pond",
+      "speciesId": "bluegill",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/bealers-ferry-pond/",
+      "summary": "Virginia DWR waterbody page names bluegill as present in Bealers Ferry Pond.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-bealers-ferry-pond-channel-catfish",
+      "locationId": "bealers-ferry-pond",
+      "speciesId": "channel-catfish",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/bealers-ferry-pond/",
+      "summary": "Virginia DWR waterbody page names channel catfish as present in Bealers Ferry Pond.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-anna-accessible-pond-largemouth-bass",
+      "locationId": "lake-anna-accessible-pond",
+      "speciesId": "largemouth-bass",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/2009-Anna-Lake-State-Park-Pond.pdf",
+      "summary": "Virginia DWR waterbody page names largemouth bass as present in Lake Anna State Park Pond.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-anna-accessible-pond-bluegill",
+      "locationId": "lake-anna-accessible-pond",
+      "speciesId": "bluegill",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/2009-Anna-Lake-State-Park-Pond.pdf",
+      "summary": "Virginia DWR waterbody page names bluegill as present in Lake Anna State Park Pond.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lake-anna-accessible-pond-channel-catfish",
+      "locationId": "lake-anna-accessible-pond",
+      "speciesId": "channel-catfish",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/2009-Anna-Lake-State-Park-Pond.pdf",
+      "summary": "Virginia DWR waterbody page names channel catfish as present in Lake Anna State Park Pond.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-n-fauquier-pond-1-largemouth-bass",
+      "locationId": "n-fauquier-pond-1",
+      "speciesId": "largemouth-bass",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "county/park official listing",
+      "sourceUrl": "https://www.fauquiercounty.gov/government/departments-h-z/parks-and-recreation/facilities/parks/northern-fauquier-community-park",
+      "summary": "county/park official listing names largemouth bass as present in Northern Fauquier Pond 1.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-n-fauquier-pond-1-common-carp",
+      "locationId": "n-fauquier-pond-1",
+      "speciesId": "common-carp",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "county/park official listing",
+      "sourceUrl": "https://www.fauquiercounty.gov/government/departments-h-z/parks-and-recreation/facilities/parks/northern-fauquier-community-park",
+      "summary": "county/park official listing names common carp as present in Northern Fauquier Pond 1.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-n-fauquier-pond-1-channel-catfish",
+      "locationId": "n-fauquier-pond-1",
+      "speciesId": "channel-catfish",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "county/park official listing",
+      "sourceUrl": "https://www.fauquiercounty.gov/government/departments-h-z/parks-and-recreation/facilities/parks/northern-fauquier-community-park",
+      "summary": "county/park official listing names channel catfish as present in Northern Fauquier Pond 1.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-n-fauquier-pond-1-bluegill",
+      "locationId": "n-fauquier-pond-1",
+      "speciesId": "bluegill",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "county/park official listing",
+      "sourceUrl": "https://www.fauquiercounty.gov/government/departments-h-z/parks-and-recreation/facilities/parks/northern-fauquier-community-park",
+      "summary": "county/park official listing names bluegill as present in Northern Fauquier Pond 1.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-n-fauquier-pond-1-yellow-perch",
+      "locationId": "n-fauquier-pond-1",
+      "speciesId": "yellow-perch",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "county/park official listing",
+      "sourceUrl": "https://www.fauquiercounty.gov/government/departments-h-z/parks-and-recreation/facilities/parks/northern-fauquier-community-park",
+      "summary": "county/park official listing names yellow perch as present in Northern Fauquier Pond 1.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-n-fauquier-pond-2-largemouth-bass",
+      "locationId": "n-fauquier-pond-2",
+      "speciesId": "largemouth-bass",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "county/park official listing",
+      "sourceUrl": "https://www.fauquiercounty.gov/government/departments-h-z/parks-and-recreation/facilities/parks/northern-fauquier-community-park",
+      "summary": "county/park official listing names largemouth bass as present in Northern Fauquier Pond 2.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-n-fauquier-pond-2-common-carp",
+      "locationId": "n-fauquier-pond-2",
+      "speciesId": "common-carp",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "county/park official listing",
+      "sourceUrl": "https://www.fauquiercounty.gov/government/departments-h-z/parks-and-recreation/facilities/parks/northern-fauquier-community-park",
+      "summary": "county/park official listing names common carp as present in Northern Fauquier Pond 2.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-n-fauquier-pond-2-channel-catfish",
+      "locationId": "n-fauquier-pond-2",
+      "speciesId": "channel-catfish",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "county/park official listing",
+      "sourceUrl": "https://www.fauquiercounty.gov/government/departments-h-z/parks-and-recreation/facilities/parks/northern-fauquier-community-park",
+      "summary": "county/park official listing names channel catfish as present in Northern Fauquier Pond 2.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-n-fauquier-pond-2-bluegill",
+      "locationId": "n-fauquier-pond-2",
+      "speciesId": "bluegill",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "county/park official listing",
+      "sourceUrl": "https://www.fauquiercounty.gov/government/departments-h-z/parks-and-recreation/facilities/parks/northern-fauquier-community-park",
+      "summary": "county/park official listing names bluegill as present in Northern Fauquier Pond 2.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-n-fauquier-pond-2-yellow-perch",
+      "locationId": "n-fauquier-pond-2",
+      "speciesId": "yellow-perch",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "county/park official listing",
+      "sourceUrl": "https://www.fauquiercounty.gov/government/departments-h-z/parks-and-recreation/facilities/parks/northern-fauquier-community-park",
+      "summary": "county/park official listing names yellow perch as present in Northern Fauquier Pond 2.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lakeside-lake-bluegill",
+      "locationId": "lakeside-lake",
+      "speciesId": "bluegill",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "county/park official listing",
+      "sourceUrl": "https://www.fcva.us/departments/parks-recreation/parks-facilities/parks/bowman-lake-trail-and-amphitheater",
+      "summary": "county/park official listing names bluegill as present in Lakeside Lake.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-lakeside-lake-common-carp",
+      "locationId": "lakeside-lake",
+      "speciesId": "common-carp",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "county/park official listing",
+      "sourceUrl": "https://www.fcva.us/departments/parks-recreation/parks-facilities/parks/bowman-lake-trail-and-amphitheater",
+      "summary": "county/park official listing names common carp as present in Lakeside Lake.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-tomahawk-pond-largemouth-bass",
+      "locationId": "tomahawk-pond",
+      "speciesId": "largemouth-bass",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/tomahawk-pond/",
+      "summary": "Virginia DWR waterbody page names largemouth bass as present in Tomahawk Pond.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-tomahawk-pond-bluegill",
+      "locationId": "tomahawk-pond",
+      "speciesId": "bluegill",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/tomahawk-pond/",
+      "summary": "Virginia DWR waterbody page names bluegill as present in Tomahawk Pond.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "listing-b34-tomahawk-pond-channel-catfish",
+      "locationId": "tomahawk-pond",
+      "speciesId": "channel-catfish",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/tomahawk-pond/",
+      "summary": "Virginia DWR waterbody page names channel catfish as present in Tomahawk Pond.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "stocked-b34-tomahawk-pond-rainbow-trout",
+      "locationId": "tomahawk-pond",
+      "speciesId": "rainbow-trout",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR waterbody page (seasonal trout stocking)",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/tomahawk-pond/",
+      "summary": "Virginia DWR stocks rainbow trout in Tomahawk Pond seasonally (put-and-take, ~Oct-May).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-aquia-creek-widewater-american-eel",
+      "locationId": "aquia-creek-widewater",
+      "speciesId": "american-eel",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Aquia Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27AQUIA+CREEK%27&geometry=-77.3674%2C38.3669%2C-77.28739999999999%2C38.4469&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document American eel in Aquia Creek (named-waterbody record near the Aquia Creek at Widewater State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-aquia-creek-widewater-black-crappie",
+      "locationId": "aquia-creek-widewater",
+      "speciesId": "black-crappie",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Aquia Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27AQUIA+CREEK%27&geometry=-77.3674%2C38.3669%2C-77.28739999999999%2C38.4469&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document black crappie in Aquia Creek (named-waterbody record near the Aquia Creek at Widewater State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-aquia-creek-widewater-blue-catfish",
+      "locationId": "aquia-creek-widewater",
+      "speciesId": "blue-catfish",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Aquia Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27AQUIA+CREEK%27&geometry=-77.3674%2C38.3669%2C-77.28739999999999%2C38.4469&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document blue catfish in Aquia Creek (named-waterbody record near the Aquia Creek at Widewater State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-aquia-creek-widewater-bluegill",
+      "locationId": "aquia-creek-widewater",
+      "speciesId": "bluegill",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Aquia Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27AQUIA+CREEK%27&geometry=-77.3674%2C38.3669%2C-77.28739999999999%2C38.4469&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document bluegill in Aquia Creek (named-waterbody record near the Aquia Creek at Widewater State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-aquia-creek-widewater-brown-bullhead",
+      "locationId": "aquia-creek-widewater",
+      "speciesId": "brown-bullhead",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Aquia Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27AQUIA+CREEK%27&geometry=-77.3674%2C38.3669%2C-77.28739999999999%2C38.4469&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document brown bullhead in Aquia Creek (named-waterbody record near the Aquia Creek at Widewater State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-aquia-creek-widewater-channel-catfish",
+      "locationId": "aquia-creek-widewater",
+      "speciesId": "channel-catfish",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Aquia Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27AQUIA+CREEK%27&geometry=-77.3674%2C38.3669%2C-77.28739999999999%2C38.4469&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document channel catfish in Aquia Creek (named-waterbody record near the Aquia Creek at Widewater State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-aquia-creek-widewater-common-carp",
+      "locationId": "aquia-creek-widewater",
+      "speciesId": "common-carp",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Aquia Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27AQUIA+CREEK%27&geometry=-77.3674%2C38.3669%2C-77.28739999999999%2C38.4469&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document common carp in Aquia Creek (named-waterbody record near the Aquia Creek at Widewater State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-aquia-creek-widewater-gizzard-shad",
+      "locationId": "aquia-creek-widewater",
+      "speciesId": "gizzard-shad",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Aquia Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27AQUIA+CREEK%27&geometry=-77.3674%2C38.3669%2C-77.28739999999999%2C38.4469&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document gizzard shad in Aquia Creek (named-waterbody record near the Aquia Creek at Widewater State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-aquia-creek-widewater-largemouth-bass",
+      "locationId": "aquia-creek-widewater",
+      "speciesId": "largemouth-bass",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Aquia Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27AQUIA+CREEK%27&geometry=-77.3674%2C38.3669%2C-77.28739999999999%2C38.4469&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document largemouth bass in Aquia Creek (named-waterbody record near the Aquia Creek at Widewater State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-aquia-creek-widewater-northern-snakehead",
+      "locationId": "aquia-creek-widewater",
+      "speciesId": "northern-snakehead",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Aquia Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27AQUIA+CREEK%27&geometry=-77.3674%2C38.3669%2C-77.28739999999999%2C38.4469&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document northern snakehead in Aquia Creek (named-waterbody record near the Aquia Creek at Widewater State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-aquia-creek-widewater-pumpkinseed",
+      "locationId": "aquia-creek-widewater",
+      "speciesId": "pumpkinseed",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Aquia Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27AQUIA+CREEK%27&geometry=-77.3674%2C38.3669%2C-77.28739999999999%2C38.4469&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document pumpkinseed in Aquia Creek (named-waterbody record near the Aquia Creek at Widewater State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-aquia-creek-widewater-striped-bass",
+      "locationId": "aquia-creek-widewater",
+      "speciesId": "striped-bass",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Aquia Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27AQUIA+CREEK%27&geometry=-77.3674%2C38.3669%2C-77.28739999999999%2C38.4469&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document striped bass in Aquia Creek (named-waterbody record near the Aquia Creek at Widewater State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-aquia-creek-widewater-white-catfish",
+      "locationId": "aquia-creek-widewater",
+      "speciesId": "white-catfish",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Aquia Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27AQUIA+CREEK%27&geometry=-77.3674%2C38.3669%2C-77.28739999999999%2C38.4469&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document white catfish in Aquia Creek (named-waterbody record near the Aquia Creek at Widewater State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-aquia-creek-widewater-white-perch",
+      "locationId": "aquia-creek-widewater",
+      "speciesId": "white-perch",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Aquia Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27AQUIA+CREEK%27&geometry=-77.3674%2C38.3669%2C-77.28739999999999%2C38.4469&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document white perch in Aquia Creek (named-waterbody record near the Aquia Creek at Widewater State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-aquia-creek-widewater-white-sucker",
+      "locationId": "aquia-creek-widewater",
+      "speciesId": "white-sucker",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Aquia Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27AQUIA+CREEK%27&geometry=-77.3674%2C38.3669%2C-77.28739999999999%2C38.4469&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document white sucker in Aquia Creek (named-waterbody record near the Aquia Creek at Widewater State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-aquia-creek-widewater-yellow-perch",
+      "locationId": "aquia-creek-widewater",
+      "speciesId": "yellow-perch",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Aquia Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27AQUIA+CREEK%27&geometry=-77.3674%2C38.3669%2C-77.28739999999999%2C38.4469&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document yellow perch in Aquia Creek (named-waterbody record near the Aquia Creek at Widewater State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-jetts-creek-lands-end-american-eel",
+      "locationId": "jetts-creek-lands-end",
+      "speciesId": "american-eel",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Jett's Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27JETTS+CREEK%27&geometry=-77.1435%2C38.1225%2C-77.06349999999999%2C38.2025&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document American eel in Jett's Creek (named-waterbody record near the Jett's Creek at Land's End WMA access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-jetts-creek-lands-end-black-crappie",
+      "locationId": "jetts-creek-lands-end",
+      "speciesId": "black-crappie",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Jett's Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27JETTS+CREEK%27&geometry=-77.1435%2C38.1225%2C-77.06349999999999%2C38.2025&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document black crappie in Jett's Creek (named-waterbody record near the Jett's Creek at Land's End WMA access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-jetts-creek-lands-end-blue-catfish",
+      "locationId": "jetts-creek-lands-end",
+      "speciesId": "blue-catfish",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Jett's Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27JETTS+CREEK%27&geometry=-77.1435%2C38.1225%2C-77.06349999999999%2C38.2025&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document blue catfish in Jett's Creek (named-waterbody record near the Jett's Creek at Land's End WMA access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-jetts-creek-lands-end-bluegill",
+      "locationId": "jetts-creek-lands-end",
+      "speciesId": "bluegill",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Jett's Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27JETTS+CREEK%27&geometry=-77.1435%2C38.1225%2C-77.06349999999999%2C38.2025&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document bluegill in Jett's Creek (named-waterbody record near the Jett's Creek at Land's End WMA access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-jetts-creek-lands-end-brown-bullhead",
+      "locationId": "jetts-creek-lands-end",
+      "speciesId": "brown-bullhead",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Jett's Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27JETTS+CREEK%27&geometry=-77.1435%2C38.1225%2C-77.06349999999999%2C38.2025&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document brown bullhead in Jett's Creek (named-waterbody record near the Jett's Creek at Land's End WMA access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-jetts-creek-lands-end-channel-catfish",
+      "locationId": "jetts-creek-lands-end",
+      "speciesId": "channel-catfish",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Jett's Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27JETTS+CREEK%27&geometry=-77.1435%2C38.1225%2C-77.06349999999999%2C38.2025&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document channel catfish in Jett's Creek (named-waterbody record near the Jett's Creek at Land's End WMA access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-jetts-creek-lands-end-gizzard-shad",
+      "locationId": "jetts-creek-lands-end",
+      "speciesId": "gizzard-shad",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Jett's Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27JETTS+CREEK%27&geometry=-77.1435%2C38.1225%2C-77.06349999999999%2C38.2025&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document gizzard shad in Jett's Creek (named-waterbody record near the Jett's Creek at Land's End WMA access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-jetts-creek-lands-end-largemouth-bass",
+      "locationId": "jetts-creek-lands-end",
+      "speciesId": "largemouth-bass",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Jett's Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27JETTS+CREEK%27&geometry=-77.1435%2C38.1225%2C-77.06349999999999%2C38.2025&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document largemouth bass in Jett's Creek (named-waterbody record near the Jett's Creek at Land's End WMA access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-jetts-creek-lands-end-pumpkinseed",
+      "locationId": "jetts-creek-lands-end",
+      "speciesId": "pumpkinseed",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Jett's Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27JETTS+CREEK%27&geometry=-77.1435%2C38.1225%2C-77.06349999999999%2C38.2025&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document pumpkinseed in Jett's Creek (named-waterbody record near the Jett's Creek at Land's End WMA access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-jetts-creek-lands-end-white-perch",
+      "locationId": "jetts-creek-lands-end",
+      "speciesId": "white-perch",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Jett's Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27JETTS+CREEK%27&geometry=-77.1435%2C38.1225%2C-77.06349999999999%2C38.2025&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document white perch in Jett's Creek (named-waterbody record near the Jett's Creek at Land's End WMA access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-jetts-creek-lands-end-yellow-perch",
+      "locationId": "jetts-creek-lands-end",
+      "speciesId": "yellow-perch",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Jett's Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27JETTS+CREEK%27&geometry=-77.1435%2C38.1225%2C-77.06349999999999%2C38.2025&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document yellow perch in Jett's Creek (named-waterbody record near the Jett's Creek at Land's End WMA access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-conway-river-american-eel",
+      "locationId": "conway-river",
+      "speciesId": "american-eel",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Conway River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27CONWAY+RIVER%27&geometry=-78.47940000000001%2C38.3715%2C-78.3994%2C38.451499999999996&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document American eel in Conway River (named-waterbody record near the Conway River (Rapidan WMA / SNP) access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-conway-river-blacknose-dace",
+      "locationId": "conway-river",
+      "speciesId": "blacknose-dace",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Conway River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27CONWAY+RIVER%27&geometry=-78.47940000000001%2C38.3715%2C-78.3994%2C38.451499999999996&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document blacknose dace in Conway River (named-waterbody record near the Conway River (Rapidan WMA / SNP) access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-conway-river-brook-trout",
+      "locationId": "conway-river",
+      "speciesId": "brook-trout",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Conway River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27CONWAY+RIVER%27&geometry=-78.47940000000001%2C38.3715%2C-78.3994%2C38.451499999999996&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document brook trout in Conway River (named-waterbody record near the Conway River (Rapidan WMA / SNP) access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-conway-river-brown-trout",
+      "locationId": "conway-river",
+      "speciesId": "brown-trout",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Conway River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27CONWAY+RIVER%27&geometry=-78.47940000000001%2C38.3715%2C-78.3994%2C38.451499999999996&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document brown trout in Conway River (named-waterbody record near the Conway River (Rapidan WMA / SNP) access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-conway-river-longnose-dace",
+      "locationId": "conway-river",
+      "speciesId": "longnose-dace",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Conway River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27CONWAY+RIVER%27&geometry=-78.47940000000001%2C38.3715%2C-78.3994%2C38.451499999999996&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document longnose dace in Conway River (named-waterbody record near the Conway River (Rapidan WMA / SNP) access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-conway-river-mottled-sculpin",
+      "locationId": "conway-river",
+      "speciesId": "mottled-sculpin",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Conway River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27CONWAY+RIVER%27&geometry=-78.47940000000001%2C38.3715%2C-78.3994%2C38.451499999999996&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document mottled sculpin in Conway River (named-waterbody record near the Conway River (Rapidan WMA / SNP) access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-conway-river-rainbow-trout",
+      "locationId": "conway-river",
+      "speciesId": "rainbow-trout",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Conway River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27CONWAY+RIVER%27&geometry=-78.47940000000001%2C38.3715%2C-78.3994%2C38.451499999999996&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document rainbow trout in Conway River (named-waterbody record near the Conway River (Rapidan WMA / SNP) access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-conway-river-tessellated-darter",
+      "locationId": "conway-river",
+      "speciesId": "tessellated-darter",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - Conway River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27CONWAY+RIVER%27&geometry=-78.47940000000001%2C38.3715%2C-78.3994%2C38.451499999999996&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document tessellated darter in Conway River (named-waterbody record near the Conway River (Rapidan WMA / SNP) access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-west-naked-creek-blacknose-dace",
+      "locationId": "west-naked-creek",
+      "speciesId": "blacknose-dace",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - West Naked Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27NAKED+CREEK%2C+WB%27&geometry=-78.5394%2C38.448%2C-78.45939999999999%2C38.528&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document blacknose dace in West Naked Creek (named-waterbody record near the West Naked Creek (SNP) access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-west-naked-creek-brook-trout",
+      "locationId": "west-naked-creek",
+      "speciesId": "brook-trout",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - West Naked Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27NAKED+CREEK%2C+WB%27&geometry=-78.5394%2C38.448%2C-78.45939999999999%2C38.528&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document brook trout in West Naked Creek (named-waterbody record near the West Naked Creek (SNP) access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-west-naked-creek-creek-chub",
+      "locationId": "west-naked-creek",
+      "speciesId": "creek-chub",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - West Naked Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27NAKED+CREEK%2C+WB%27&geometry=-78.5394%2C38.448%2C-78.45939999999999%2C38.528&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document creek chub in West Naked Creek (named-waterbody record near the West Naked Creek (SNP) access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-west-naked-creek-longnose-dace",
+      "locationId": "west-naked-creek",
+      "speciesId": "longnose-dace",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - West Naked Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27NAKED+CREEK%2C+WB%27&geometry=-78.5394%2C38.448%2C-78.45939999999999%2C38.528&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document longnose dace in West Naked Creek (named-waterbody record near the West Naked Creek (SNP) access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-west-naked-creek-mottled-sculpin",
+      "locationId": "west-naked-creek",
+      "speciesId": "mottled-sculpin",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - West Naked Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27NAKED+CREEK%2C+WB%27&geometry=-78.5394%2C38.448%2C-78.45939999999999%2C38.528&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document mottled sculpin in West Naked Creek (named-waterbody record near the West Naked Creek (SNP) access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-west-naked-creek-white-sucker",
+      "locationId": "west-naked-creek",
+      "speciesId": "white-sucker",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - West Naked Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27NAKED+CREEK%2C+WB%27&geometry=-78.5394%2C38.448%2C-78.45939999999999%2C38.528&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document white sucker in West Naked Creek (named-waterbody record near the West Naked Creek (SNP) access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-east-naked-creek-blacknose-dace",
+      "locationId": "east-naked-creek",
+      "speciesId": "blacknose-dace",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - East Naked Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27NAKED+CREEK%2C+EB%27&geometry=-78.522%2C38.437%2C-78.442%2C38.516999999999996&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document blacknose dace in East Naked Creek (named-waterbody record near the East Naked Creek (SNP) access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-east-naked-creek-brook-trout",
+      "locationId": "east-naked-creek",
+      "speciesId": "brook-trout",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - East Naked Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27NAKED+CREEK%2C+EB%27&geometry=-78.522%2C38.437%2C-78.442%2C38.516999999999996&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document brook trout in East Naked Creek (named-waterbody record near the East Naked Creek (SNP) access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-east-naked-creek-mottled-sculpin",
+      "locationId": "east-naked-creek",
+      "speciesId": "mottled-sculpin",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - East Naked Creek",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27NAKED+CREEK%2C+EB%27&geometry=-78.522%2C38.437%2C-78.442%2C38.516999999999996&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document mottled sculpin in East Naked Creek (named-waterbody record near the East Naked Creek (SNP) access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-shenandoah-river-sp-american-eel",
+      "locationId": "shenandoah-river-sp",
+      "speciesId": "american-eel",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - South Fork Shenandoah River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27SOUTH+FORK+SHENANDOAH+RIVER%27&geometry=-78.34637400000001%2C38.81466%2C-78.266374%2C38.89466&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document American eel in South Fork Shenandoah River (named-waterbody record near the South Fork Shenandoah River at Shenandoah River State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-shenandoah-river-sp-bluegill",
+      "locationId": "shenandoah-river-sp",
+      "speciesId": "bluegill",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - South Fork Shenandoah River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27SOUTH+FORK+SHENANDOAH+RIVER%27&geometry=-78.34637400000001%2C38.81466%2C-78.266374%2C38.89466&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document bluegill in South Fork Shenandoah River (named-waterbody record near the South Fork Shenandoah River at Shenandoah River State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-shenandoah-river-sp-channel-catfish",
+      "locationId": "shenandoah-river-sp",
+      "speciesId": "channel-catfish",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - South Fork Shenandoah River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27SOUTH+FORK+SHENANDOAH+RIVER%27&geometry=-78.34637400000001%2C38.81466%2C-78.266374%2C38.89466&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document channel catfish in South Fork Shenandoah River (named-waterbody record near the South Fork Shenandoah River at Shenandoah River State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-shenandoah-river-sp-common-carp",
+      "locationId": "shenandoah-river-sp",
+      "speciesId": "common-carp",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - South Fork Shenandoah River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27SOUTH+FORK+SHENANDOAH+RIVER%27&geometry=-78.34637400000001%2C38.81466%2C-78.266374%2C38.89466&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document common carp in South Fork Shenandoah River (named-waterbody record near the South Fork Shenandoah River at Shenandoah River State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-shenandoah-river-sp-green-sunfish",
+      "locationId": "shenandoah-river-sp",
+      "speciesId": "green-sunfish",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - South Fork Shenandoah River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27SOUTH+FORK+SHENANDOAH+RIVER%27&geometry=-78.34637400000001%2C38.81466%2C-78.266374%2C38.89466&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document green sunfish in South Fork Shenandoah River (named-waterbody record near the South Fork Shenandoah River at Shenandoah River State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-shenandoah-river-sp-largemouth-bass",
+      "locationId": "shenandoah-river-sp",
+      "speciesId": "largemouth-bass",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - South Fork Shenandoah River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27SOUTH+FORK+SHENANDOAH+RIVER%27&geometry=-78.34637400000001%2C38.81466%2C-78.266374%2C38.89466&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document largemouth bass in South Fork Shenandoah River (named-waterbody record near the South Fork Shenandoah River at Shenandoah River State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-shenandoah-river-sp-longnose-dace",
+      "locationId": "shenandoah-river-sp",
+      "speciesId": "longnose-dace",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - South Fork Shenandoah River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27SOUTH+FORK+SHENANDOAH+RIVER%27&geometry=-78.34637400000001%2C38.81466%2C-78.266374%2C38.89466&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document longnose dace in South Fork Shenandoah River (named-waterbody record near the South Fork Shenandoah River at Shenandoah River State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-shenandoah-river-sp-redbreast-sunfish",
+      "locationId": "shenandoah-river-sp",
+      "speciesId": "redbreast-sunfish",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - South Fork Shenandoah River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27SOUTH+FORK+SHENANDOAH+RIVER%27&geometry=-78.34637400000001%2C38.81466%2C-78.266374%2C38.89466&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document redbreast sunfish in South Fork Shenandoah River (named-waterbody record near the South Fork Shenandoah River at Shenandoah River State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-shenandoah-river-sp-rock-bass",
+      "locationId": "shenandoah-river-sp",
+      "speciesId": "rock-bass",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - South Fork Shenandoah River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27SOUTH+FORK+SHENANDOAH+RIVER%27&geometry=-78.34637400000001%2C38.81466%2C-78.266374%2C38.89466&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document rock bass in South Fork Shenandoah River (named-waterbody record near the South Fork Shenandoah River at Shenandoah River State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-shenandoah-river-sp-smallmouth-bass",
+      "locationId": "shenandoah-river-sp",
+      "speciesId": "smallmouth-bass",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - South Fork Shenandoah River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27SOUTH+FORK+SHENANDOAH+RIVER%27&geometry=-78.34637400000001%2C38.81466%2C-78.266374%2C38.89466&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document smallmouth bass in South Fork Shenandoah River (named-waterbody record near the South Fork Shenandoah River at Shenandoah River State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-shenandoah-river-sp-yellow-bullhead",
+      "locationId": "shenandoah-river-sp",
+      "speciesId": "yellow-bullhead",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - South Fork Shenandoah River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27SOUTH+FORK+SHENANDOAH+RIVER%27&geometry=-78.34637400000001%2C38.81466%2C-78.266374%2C38.89466&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document yellow bullhead in South Fork Shenandoah River (named-waterbody record near the South Fork Shenandoah River at Shenandoah River State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-seven-bends-sp-blacknose-dace",
+      "locationId": "seven-bends-sp",
+      "speciesId": "blacknose-dace",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - North Fork Shenandoah River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27NORTH+FORK+SHENANDOAH+RIVER%27&geometry=-78.529589%2C38.816695%2C-78.44958899999999%2C38.896695&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document blacknose dace in North Fork Shenandoah River (named-waterbody record near the North Fork Shenandoah River at Seven Bends State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-seven-bends-sp-bluegill",
+      "locationId": "seven-bends-sp",
+      "speciesId": "bluegill",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - North Fork Shenandoah River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27NORTH+FORK+SHENANDOAH+RIVER%27&geometry=-78.529589%2C38.816695%2C-78.44958899999999%2C38.896695&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document bluegill in North Fork Shenandoah River (named-waterbody record near the North Fork Shenandoah River at Seven Bends State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-seven-bends-sp-common-carp",
+      "locationId": "seven-bends-sp",
+      "speciesId": "common-carp",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - North Fork Shenandoah River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27NORTH+FORK+SHENANDOAH+RIVER%27&geometry=-78.529589%2C38.816695%2C-78.44958899999999%2C38.896695&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document common carp in North Fork Shenandoah River (named-waterbody record near the North Fork Shenandoah River at Seven Bends State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-seven-bends-sp-fallfish",
+      "locationId": "seven-bends-sp",
+      "speciesId": "fallfish",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - North Fork Shenandoah River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27NORTH+FORK+SHENANDOAH+RIVER%27&geometry=-78.529589%2C38.816695%2C-78.44958899999999%2C38.896695&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document fallfish in North Fork Shenandoah River (named-waterbody record near the North Fork Shenandoah River at Seven Bends State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-seven-bends-sp-green-sunfish",
+      "locationId": "seven-bends-sp",
+      "speciesId": "green-sunfish",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - North Fork Shenandoah River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27NORTH+FORK+SHENANDOAH+RIVER%27&geometry=-78.529589%2C38.816695%2C-78.44958899999999%2C38.896695&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document green sunfish in North Fork Shenandoah River (named-waterbody record near the North Fork Shenandoah River at Seven Bends State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-seven-bends-sp-largemouth-bass",
+      "locationId": "seven-bends-sp",
+      "speciesId": "largemouth-bass",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - North Fork Shenandoah River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27NORTH+FORK+SHENANDOAH+RIVER%27&geometry=-78.529589%2C38.816695%2C-78.44958899999999%2C38.896695&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document largemouth bass in North Fork Shenandoah River (named-waterbody record near the North Fork Shenandoah River at Seven Bends State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-seven-bends-sp-longnose-dace",
+      "locationId": "seven-bends-sp",
+      "speciesId": "longnose-dace",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - North Fork Shenandoah River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27NORTH+FORK+SHENANDOAH+RIVER%27&geometry=-78.529589%2C38.816695%2C-78.44958899999999%2C38.896695&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document longnose dace in North Fork Shenandoah River (named-waterbody record near the North Fork Shenandoah River at Seven Bends State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-seven-bends-sp-mottled-sculpin",
+      "locationId": "seven-bends-sp",
+      "speciesId": "mottled-sculpin",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - North Fork Shenandoah River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27NORTH+FORK+SHENANDOAH+RIVER%27&geometry=-78.529589%2C38.816695%2C-78.44958899999999%2C38.896695&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document mottled sculpin in North Fork Shenandoah River (named-waterbody record near the North Fork Shenandoah River at Seven Bends State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-seven-bends-sp-redbreast-sunfish",
+      "locationId": "seven-bends-sp",
+      "speciesId": "redbreast-sunfish",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - North Fork Shenandoah River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27NORTH+FORK+SHENANDOAH+RIVER%27&geometry=-78.529589%2C38.816695%2C-78.44958899999999%2C38.896695&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document redbreast sunfish in North Fork Shenandoah River (named-waterbody record near the North Fork Shenandoah River at Seven Bends State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-seven-bends-sp-rock-bass",
+      "locationId": "seven-bends-sp",
+      "speciesId": "rock-bass",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - North Fork Shenandoah River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27NORTH+FORK+SHENANDOAH+RIVER%27&geometry=-78.529589%2C38.816695%2C-78.44958899999999%2C38.896695&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document rock bass in North Fork Shenandoah River (named-waterbody record near the North Fork Shenandoah River at Seven Bends State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-seven-bends-sp-smallmouth-bass",
+      "locationId": "seven-bends-sp",
+      "speciesId": "smallmouth-bass",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - North Fork Shenandoah River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27NORTH+FORK+SHENANDOAH+RIVER%27&geometry=-78.529589%2C38.816695%2C-78.44958899999999%2C38.896695&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document smallmouth bass in North Fork Shenandoah River (named-waterbody record near the North Fork Shenandoah River at Seven Bends State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-seven-bends-sp-white-sucker",
+      "locationId": "seven-bends-sp",
+      "speciesId": "white-sucker",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - North Fork Shenandoah River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27NORTH+FORK+SHENANDOAH+RIVER%27&geometry=-78.529589%2C38.816695%2C-78.44958899999999%2C38.896695&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document white sucker in North Fork Shenandoah River (named-waterbody record near the North Fork Shenandoah River at Seven Bends State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-b34-seven-bends-sp-yellow-bullhead",
+      "locationId": "seven-bends-sp",
+      "speciesId": "yellow-bullhead",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "sourceName": "Virginia DWR VAFWIS - North Fork Shenandoah River",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27NORTH+FORK+SHENANDOAH+RIVER%27&geometry=-78.529589%2C38.816695%2C-78.44958899999999%2C38.896695&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME%2CWaterbody%2CObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document yellow bullhead in North Fork Shenandoah River (named-waterbody record near the North Fork Shenandoah River at Seven Bends State Park access).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "nps-b34-whiteoak-canyon-run-brook-trout",
+      "locationId": "whiteoak-canyon-run",
+      "speciesId": "brook-trout",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "sourceName": "NPS Shenandoah National Park",
+      "sourceUrl": "https://www.nps.gov/shen/planyourvisit/fishing.htm",
+      "summary": "NPS documents Whiteoak Canyon Run as a wild brook trout stream in Shenandoah NP (VAFWIS brook-trout record 0.42 mi corroborates).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
     }
   ],
   "contradictionReviews": [
