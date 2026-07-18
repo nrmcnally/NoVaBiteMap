@@ -3779,6 +3779,132 @@
         "currentPresenceClaimed": true,
         "accessSeparatelyReviewed": true
       }
+    },
+    {
+      "claimId": "vafwis-bull-run-smallmouth-bass",
+      "locationId": "bull-run-regional-park",
+      "speciesId": "smallmouth-bass",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "publicationYear": 2004,
+      "sourceName": "Virginia DWR VAFWIS - Bull Run",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BULL%20RUN%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25BASS%2C%20SMALLMOUTH%25%27&geometry=-77.4897%2C38.7636%2C-77.4297%2C38.8236&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document smallmouth bass in Bull Run (2004), ~0.81 mi from the Bull Run Regional Park / Bull Run-Occoquan Trail access.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-bull-run-largemouth-bass",
+      "locationId": "bull-run-regional-park",
+      "speciesId": "largemouth-bass",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "publicationYear": 2001,
+      "sourceName": "Virginia DWR VAFWIS - Bull Run",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BULL%20RUN%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25BASS%2C%20LARGEMOUTH%25%27&geometry=-77.4897%2C38.7636%2C-77.4297%2C38.8236&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document largemouth bass in Bull Run (2001), ~0.75 mi from the Bull Run Regional Park / Bull Run-Occoquan Trail access.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-bull-run-channel-catfish",
+      "locationId": "bull-run-regional-park",
+      "speciesId": "channel-catfish",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "publicationYear": 2001,
+      "sourceName": "Virginia DWR VAFWIS - Bull Run",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BULL%20RUN%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25CATFISH%2C%20CHANNEL%25%27&geometry=-77.4897%2C38.7636%2C-77.4297%2C38.8236&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document channel catfish in Bull Run (2001), ~0.75 mi from the Bull Run Regional Park / Bull Run-Occoquan Trail access.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-bull-run-flathead-catfish",
+      "locationId": "bull-run-regional-park",
+      "speciesId": "flathead-catfish",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "publicationYear": 2001,
+      "sourceName": "Virginia DWR VAFWIS - Bull Run",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BULL%20RUN%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25CATFISH%2C%20FLATHEAD%25%27&geometry=-77.4897%2C38.7636%2C-77.4297%2C38.8236&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document flathead catfish in Bull Run (2001), ~0.75 mi from the Bull Run Regional Park / Bull Run-Occoquan Trail access.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-bull-run-redbreast-sunfish",
+      "locationId": "bull-run-regional-park",
+      "speciesId": "redbreast-sunfish",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "publicationYear": 2001,
+      "sourceName": "Virginia DWR VAFWIS - Bull Run",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BULL%20RUN%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25SUNFISH%2C%20REDBREAST%25%27&geometry=-77.4897%2C38.7636%2C-77.4297%2C38.8236&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document redbreast sunfish in Bull Run (2001), ~0.75 mi from the Bull Run Regional Park / Bull Run-Occoquan Trail access.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-bull-run-bluegill",
+      "locationId": "bull-run-regional-park",
+      "speciesId": "bluegill",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "publicationYear": 2004,
+      "sourceName": "Virginia DWR VAFWIS - Bull Run",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BULL%20RUN%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25BLUEGILL%25%27&geometry=-77.4897%2C38.7636%2C-77.4297%2C38.8236&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document bluegill in Bull Run (2004), ~0.81 mi from the Bull Run Regional Park / Bull Run-Occoquan Trail access.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vafwis-bull-run-common-carp",
+      "locationId": "bull-run-regional-park",
+      "speciesId": "common-carp",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": null,
+      "publicationYear": 2004,
+      "sourceName": "Virginia DWR VAFWIS - Bull Run",
+      "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BULL%20RUN%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25CARP%2C%20COMMON%25%27&geometry=-77.4897%2C38.7636%2C-77.4297%2C38.8236&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json",
+      "summary": "DWR VAFWIS fish-collection records document common carp in Bull Run (2004), ~0.81 mi from the Bull Run Regional Park / Bull Run-Occoquan Trail access.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
     }
   ],
   "contradictionReviews": [

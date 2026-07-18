@@ -237,7 +237,15 @@ export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }
   const selectedLocation = selected?.location;
   const selectedOpportunity = selected?.opportunity ?? null;
   const selectedSpecies = speciesIds.map((id) => speciesById(id)).filter((item): item is NonNullable<typeof item> => Boolean(item));
-  const mapLocations = useMemo(() => visibleRows.map(({ location }) => location), [visibleRows]);
+  // With a target species selected, only show spots that actually have evidence
+  // for it (the ranked set) — hide the "evidence pending" access points. With no
+  // species chosen, every verified access point stays on the map.
+  const mapLocations = useMemo(
+    () => (speciesIds.length > 0
+      ? ranked.map((row) => row.location)
+      : visibleRows.map(({ location }) => location)),
+    [ranked, speciesIds, visibleRows],
+  );
   const mapOpportunities = useMemo(() => new Map(ranked.map((row) => [
     row.location.id,
     {
@@ -710,7 +718,7 @@ export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }
             <span><i className="marker-hot" /> 70+ strong</span>
             <span><i className="marker-mid" /> 55-69 fair</span>
             <span><i className="marker-low" /> under 55</span>
-            <span><i className="marker-pending" /> {speciesIds.length === 0 ? "access · evidence pending" : "evidence pending"}</span>
+            {speciesIds.length === 0 && <span><i className="marker-pending" /> access · evidence pending</span>}
             {activeAdvisoryCount > 0 && <span><i className="marker-advisory" /> {activeAdvisoryCount} relevant VDH restriction{activeAdvisoryCount === 1 ? "" : "s"}</span>}
           </div>
           <div className="map-source"><ShieldCheck size={14} /> Access verified by official agency sources</div>

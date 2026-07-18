@@ -1,7 +1,7 @@
 {
   "meta": {
     "generated": "2026-07-17",
-    "locationCount": 196,
+    "locationCount": 197,
     "guessReliantLocationCount": 36,
     "policy": "Candidates never affect rankings until finalVerdict is approved after exact-water, species, date, provenance, contradiction, and access review.",
     "priorAgentWork": "All existing seed evidence is retained under priorAgentClaims and explicitly queued for re-verification or quarantine.",
@@ -22,7 +22,7 @@
       "privacyNote": "Source geometries are used transiently for matching, then deliberately discarded; only distance-to-catalog-water is retained."
     },
     "queueCounts": {
-      "existing-direct-claims-reviewed": 160,
+      "existing-direct-claims-reviewed": 161,
       "no-direct-candidate-found": 33,
       "manual-primary-source-claim-approved": 2,
       "non-target-fish-candidate-found": 1
@@ -31,9 +31,9 @@
       "targetCandidateLocationCount": 0,
       "nonTargetOnlyLocationCount": 1,
       "noCandidateLocationCount": 33,
-      "approvedClaimCount": 119,
-      "approvedClaimLocationCount": 58,
-      "verifiedRuntimeClaimCount": 1149,
+      "approvedClaimCount": 126,
+      "approvedClaimLocationCount": 59,
+      "verifiedRuntimeClaimCount": 1156,
       "removedOrRejectedPriorClaimCount": 105,
       "unverifiedRuntimeDirectClaimCount": 0,
       "missingSourceRuntimeDirectClaimCount": 0,
@@ -11911,7 +11911,7 @@
     },
     {
       "locationId": "beaverdam-reservoir",
-      "name": "Reservoir Park",
+      "name": "Beaverdam Reservoir",
       "waterbody": "Beaverdam Reservoir",
       "waterbodyType": "reservoir",
       "county": "Loudoun",
@@ -12110,6 +12110,238 @@
         }
       ],
       "manualClaimReviews": [],
+      "contradictionReviews": [],
+      "finalVerdict": "pending",
+      "reviewerNotes": []
+    },
+    {
+      "locationId": "bull-run-regional-park",
+      "name": "Bull Run Regional Park",
+      "waterbody": "Bull Run",
+      "waterbodyType": "stream",
+      "county": "Fairfax",
+      "accessReview": {
+        "currentStatus": "verified",
+        "authority": "NOVA Parks",
+        "sourceUrl": "https://www.novaparks.com/parks/bull-run-regional-park",
+        "reviewStatus": "separate-access-review-required",
+        "decision": null
+      },
+      "evidenceQueue": "existing-direct-claims-reviewed",
+      "releaseEligible": false,
+      "priorAgentClaims": [
+        {
+          "speciesId": "bluegill",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "DWR VAFWIS fish-collection records document bluegill in Bull Run (2004), ~0.81 mi from the Bull Run Regional Park / Bull Run-Occoquan Trail access.",
+          "lastEvidence": "Virginia DWR VAFWIS - Bull Run (2004) — reviewed 2026-07-14",
+          "sourceName": "Virginia DWR VAFWIS - Bull Run",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BULL%20RUN%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25BLUEGILL%25%27&geometry=-77.4897%2C38.7636%2C-77.4297%2C38.8236&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        },
+        {
+          "speciesId": "channel-catfish",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "DWR VAFWIS fish-collection records document channel catfish in Bull Run (2001), ~0.75 mi from the Bull Run Regional Park / Bull Run-Occoquan Trail access.",
+          "lastEvidence": "Virginia DWR VAFWIS - Bull Run (2001) — reviewed 2026-07-14",
+          "sourceName": "Virginia DWR VAFWIS - Bull Run",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BULL%20RUN%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25CATFISH%2C%20CHANNEL%25%27&geometry=-77.4897%2C38.7636%2C-77.4297%2C38.8236&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        },
+        {
+          "speciesId": "common-carp",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "DWR VAFWIS fish-collection records document common carp in Bull Run (2004), ~0.81 mi from the Bull Run Regional Park / Bull Run-Occoquan Trail access.",
+          "lastEvidence": "Virginia DWR VAFWIS - Bull Run (2004) — reviewed 2026-07-14",
+          "sourceName": "Virginia DWR VAFWIS - Bull Run",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BULL%20RUN%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25CARP%2C%20COMMON%25%27&geometry=-77.4897%2C38.7636%2C-77.4297%2C38.8236&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        },
+        {
+          "speciesId": "flathead-catfish",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "DWR VAFWIS fish-collection records document flathead catfish in Bull Run (2001), ~0.75 mi from the Bull Run Regional Park / Bull Run-Occoquan Trail access.",
+          "lastEvidence": "Virginia DWR VAFWIS - Bull Run (2001) — reviewed 2026-07-14",
+          "sourceName": "Virginia DWR VAFWIS - Bull Run",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BULL%20RUN%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25CATFISH%2C%20FLATHEAD%25%27&geometry=-77.4897%2C38.7636%2C-77.4297%2C38.8236&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        },
+        {
+          "speciesId": "largemouth-bass",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "DWR VAFWIS fish-collection records document largemouth bass in Bull Run (2001), ~0.75 mi from the Bull Run Regional Park / Bull Run-Occoquan Trail access.",
+          "lastEvidence": "Virginia DWR VAFWIS - Bull Run (2001) — reviewed 2026-07-14",
+          "sourceName": "Virginia DWR VAFWIS - Bull Run",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BULL%20RUN%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25BASS%2C%20LARGEMOUTH%25%27&geometry=-77.4897%2C38.7636%2C-77.4297%2C38.8236&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        },
+        {
+          "speciesId": "redbreast-sunfish",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "DWR VAFWIS fish-collection records document redbreast sunfish in Bull Run (2001), ~0.75 mi from the Bull Run Regional Park / Bull Run-Occoquan Trail access.",
+          "lastEvidence": "Virginia DWR VAFWIS - Bull Run (2001) — reviewed 2026-07-14",
+          "sourceName": "Virginia DWR VAFWIS - Bull Run",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BULL%20RUN%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25SUNFISH%2C%20REDBREAST%25%27&geometry=-77.4897%2C38.7636%2C-77.4297%2C38.8236&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        },
+        {
+          "speciesId": "smallmouth-bass",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "DWR VAFWIS fish-collection records document smallmouth bass in Bull Run (2004), ~0.81 mi from the Bull Run Regional Park / Bull Run-Occoquan Trail access.",
+          "lastEvidence": "Virginia DWR VAFWIS - Bull Run (2004) — reviewed 2026-07-14",
+          "sourceName": "Virginia DWR VAFWIS - Bull Run",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BULL%20RUN%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25BASS%2C%20SMALLMOUTH%25%27&geometry=-77.4897%2C38.7636%2C-77.4297%2C38.8236&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        }
+      ],
+      "agencyObservationCandidates": [],
+      "agencyHabitatCandidates": [],
+      "agencyStockingCandidates": [],
+      "priorClaimReviews": [],
+      "sourceClaimRejections": [],
+      "sourceClaimReviews": [],
+      "manualClaimReviews": [
+        {
+          "claimId": "vafwis-bull-run-smallmouth-bass",
+          "locationId": "bull-run-regional-park",
+          "speciesId": "smallmouth-bass",
+          "verdict": "approved-exact-agency-report",
+          "evidenceDate": null,
+          "publicationYear": 2004,
+          "sourceName": "Virginia DWR VAFWIS - Bull Run",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BULL%20RUN%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25BASS%2C%20SMALLMOUTH%25%27&geometry=-77.4897%2C38.7636%2C-77.4297%2C38.8236&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json",
+          "summary": "DWR VAFWIS fish-collection records document smallmouth bass in Bull Run (2004), ~0.81 mi from the Bull Run Regional Park / Bull Run-Occoquan Trail access.",
+          "checks": {
+            "exactNamedWater": true,
+            "exactSpecies": true,
+            "primarySource": true,
+            "currentPresenceClaimed": true,
+            "accessSeparatelyReviewed": true
+          }
+        },
+        {
+          "claimId": "vafwis-bull-run-largemouth-bass",
+          "locationId": "bull-run-regional-park",
+          "speciesId": "largemouth-bass",
+          "verdict": "approved-exact-agency-report",
+          "evidenceDate": null,
+          "publicationYear": 2001,
+          "sourceName": "Virginia DWR VAFWIS - Bull Run",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BULL%20RUN%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25BASS%2C%20LARGEMOUTH%25%27&geometry=-77.4897%2C38.7636%2C-77.4297%2C38.8236&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json",
+          "summary": "DWR VAFWIS fish-collection records document largemouth bass in Bull Run (2001), ~0.75 mi from the Bull Run Regional Park / Bull Run-Occoquan Trail access.",
+          "checks": {
+            "exactNamedWater": true,
+            "exactSpecies": true,
+            "primarySource": true,
+            "currentPresenceClaimed": true,
+            "accessSeparatelyReviewed": true
+          }
+        },
+        {
+          "claimId": "vafwis-bull-run-channel-catfish",
+          "locationId": "bull-run-regional-park",
+          "speciesId": "channel-catfish",
+          "verdict": "approved-exact-agency-report",
+          "evidenceDate": null,
+          "publicationYear": 2001,
+          "sourceName": "Virginia DWR VAFWIS - Bull Run",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BULL%20RUN%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25CATFISH%2C%20CHANNEL%25%27&geometry=-77.4897%2C38.7636%2C-77.4297%2C38.8236&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json",
+          "summary": "DWR VAFWIS fish-collection records document channel catfish in Bull Run (2001), ~0.75 mi from the Bull Run Regional Park / Bull Run-Occoquan Trail access.",
+          "checks": {
+            "exactNamedWater": true,
+            "exactSpecies": true,
+            "primarySource": true,
+            "currentPresenceClaimed": true,
+            "accessSeparatelyReviewed": true
+          }
+        },
+        {
+          "claimId": "vafwis-bull-run-flathead-catfish",
+          "locationId": "bull-run-regional-park",
+          "speciesId": "flathead-catfish",
+          "verdict": "approved-exact-agency-report",
+          "evidenceDate": null,
+          "publicationYear": 2001,
+          "sourceName": "Virginia DWR VAFWIS - Bull Run",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BULL%20RUN%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25CATFISH%2C%20FLATHEAD%25%27&geometry=-77.4897%2C38.7636%2C-77.4297%2C38.8236&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json",
+          "summary": "DWR VAFWIS fish-collection records document flathead catfish in Bull Run (2001), ~0.75 mi from the Bull Run Regional Park / Bull Run-Occoquan Trail access.",
+          "checks": {
+            "exactNamedWater": true,
+            "exactSpecies": true,
+            "primarySource": true,
+            "currentPresenceClaimed": true,
+            "accessSeparatelyReviewed": true
+          }
+        },
+        {
+          "claimId": "vafwis-bull-run-redbreast-sunfish",
+          "locationId": "bull-run-regional-park",
+          "speciesId": "redbreast-sunfish",
+          "verdict": "approved-exact-agency-report",
+          "evidenceDate": null,
+          "publicationYear": 2001,
+          "sourceName": "Virginia DWR VAFWIS - Bull Run",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BULL%20RUN%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25SUNFISH%2C%20REDBREAST%25%27&geometry=-77.4897%2C38.7636%2C-77.4297%2C38.8236&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json",
+          "summary": "DWR VAFWIS fish-collection records document redbreast sunfish in Bull Run (2001), ~0.75 mi from the Bull Run Regional Park / Bull Run-Occoquan Trail access.",
+          "checks": {
+            "exactNamedWater": true,
+            "exactSpecies": true,
+            "primarySource": true,
+            "currentPresenceClaimed": true,
+            "accessSeparatelyReviewed": true
+          }
+        },
+        {
+          "claimId": "vafwis-bull-run-bluegill",
+          "locationId": "bull-run-regional-park",
+          "speciesId": "bluegill",
+          "verdict": "approved-exact-agency-report",
+          "evidenceDate": null,
+          "publicationYear": 2004,
+          "sourceName": "Virginia DWR VAFWIS - Bull Run",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BULL%20RUN%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25BLUEGILL%25%27&geometry=-77.4897%2C38.7636%2C-77.4297%2C38.8236&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json",
+          "summary": "DWR VAFWIS fish-collection records document bluegill in Bull Run (2004), ~0.81 mi from the Bull Run Regional Park / Bull Run-Occoquan Trail access.",
+          "checks": {
+            "exactNamedWater": true,
+            "exactSpecies": true,
+            "primarySource": true,
+            "currentPresenceClaimed": true,
+            "accessSeparatelyReviewed": true
+          }
+        },
+        {
+          "claimId": "vafwis-bull-run-common-carp",
+          "locationId": "bull-run-regional-park",
+          "speciesId": "common-carp",
+          "verdict": "approved-exact-agency-report",
+          "evidenceDate": null,
+          "publicationYear": 2004,
+          "sourceName": "Virginia DWR VAFWIS - Bull Run",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28Waterbody%29%3D%27BULL%20RUN%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25CARP%2C%20COMMON%25%27&geometry=-77.4897%2C38.7636%2C-77.4297%2C38.8236&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json",
+          "summary": "DWR VAFWIS fish-collection records document common carp in Bull Run (2004), ~0.81 mi from the Bull Run Regional Park / Bull Run-Occoquan Trail access.",
+          "checks": {
+            "exactNamedWater": true,
+            "exactSpecies": true,
+            "primarySource": true,
+            "currentPresenceClaimed": true,
+            "accessSeparatelyReviewed": true
+          }
+        }
+      ],
       "contradictionReviews": [],
       "finalVerdict": "pending",
       "reviewerNotes": []
@@ -49256,7 +49488,7 @@
           "lastObserved": "1999-08-05",
           "recency": {
             "band": "historical-over-10-years",
-            "ageYears": 26.9
+            "ageYears": 27
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder",
@@ -49356,7 +49588,7 @@
           "lastObserved": "1999-08-05",
           "recency": {
             "band": "historical-over-10-years",
-            "ageYears": 26.9
+            "ageYears": 27
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder",
@@ -49412,7 +49644,7 @@
           "lastObserved": "1999-08-05",
           "recency": {
             "band": "historical-over-10-years",
-            "ageYears": 26.9
+            "ageYears": 27
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder",
@@ -49468,7 +49700,7 @@
           "lastObserved": "1999-08-05",
           "recency": {
             "band": "historical-over-10-years",
-            "ageYears": 26.9
+            "ageYears": 27
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder",
@@ -49524,7 +49756,7 @@
           "lastObserved": "1999-08-05",
           "recency": {
             "band": "historical-over-10-years",
-            "ageYears": 26.9
+            "ageYears": 27
           },
           "observerTypes": [
             "professional biologists, could include pesonnel from several organizations including DGIF"
@@ -49568,7 +49800,7 @@
           "lastObserved": "1999-08-05",
           "recency": {
             "band": "historical-over-10-years",
-            "ageYears": 26.9
+            "ageYears": 27
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder",
@@ -68917,7 +69149,7 @@
           "lastObserved": "2021-09-10",
           "recency": {
             "band": "recent-0-to-5-years",
-            "ageYears": 4.8
+            "ageYears": 4.9
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder"
@@ -68961,7 +69193,7 @@
           "lastObserved": "2021-09-10",
           "recency": {
             "band": "recent-0-to-5-years",
-            "ageYears": 4.8
+            "ageYears": 4.9
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder",
@@ -69017,7 +69249,7 @@
           "lastObserved": "2021-09-10",
           "recency": {
             "band": "recent-0-to-5-years",
-            "ageYears": 4.8
+            "ageYears": 4.9
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder",
@@ -69128,7 +69360,7 @@
           "lastObserved": "2021-09-10",
           "recency": {
             "band": "recent-0-to-5-years",
-            "ageYears": 4.8
+            "ageYears": 4.9
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder",
@@ -69195,7 +69427,7 @@
           "lastObserved": "2021-09-10",
           "recency": {
             "band": "recent-0-to-5-years",
-            "ageYears": 4.8
+            "ageYears": 4.9
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder"
@@ -69239,7 +69471,7 @@
           "lastObserved": "2021-09-10",
           "recency": {
             "band": "recent-0-to-5-years",
-            "ageYears": 4.8
+            "ageYears": 4.9
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder",
@@ -69305,7 +69537,7 @@
           "lastObserved": "2021-09-10",
           "recency": {
             "band": "recent-0-to-5-years",
-            "ageYears": 4.8
+            "ageYears": 4.9
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder",
@@ -99229,7 +99461,7 @@
           "lastObserved": "2021-09-10",
           "recency": {
             "band": "recent-0-to-5-years",
-            "ageYears": 4.8
+            "ageYears": 4.9
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder"
@@ -99273,7 +99505,7 @@
           "lastObserved": "2021-09-10",
           "recency": {
             "band": "recent-0-to-5-years",
-            "ageYears": 4.8
+            "ageYears": 4.9
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder"
@@ -99317,7 +99549,7 @@
           "lastObserved": "2021-09-10",
           "recency": {
             "band": "recent-0-to-5-years",
-            "ageYears": 4.8
+            "ageYears": 4.9
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder"
@@ -99361,7 +99593,7 @@
           "lastObserved": "2021-09-10",
           "recency": {
             "band": "recent-0-to-5-years",
-            "ageYears": 4.8
+            "ageYears": 4.9
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder"
@@ -99405,7 +99637,7 @@
           "lastObserved": "2021-09-10",
           "recency": {
             "band": "recent-0-to-5-years",
-            "ageYears": 4.8
+            "ageYears": 4.9
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder"
@@ -99449,7 +99681,7 @@
           "lastObserved": "2021-09-10",
           "recency": {
             "band": "recent-0-to-5-years",
-            "ageYears": 4.8
+            "ageYears": 4.9
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder"
@@ -99493,7 +99725,7 @@
           "lastObserved": "2021-09-10",
           "recency": {
             "band": "recent-0-to-5-years",
-            "ageYears": 4.8
+            "ageYears": 4.9
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder"
@@ -99537,7 +99769,7 @@
           "lastObserved": "2021-09-10",
           "recency": {
             "band": "recent-0-to-5-years",
-            "ageYears": 4.8
+            "ageYears": 4.9
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder"
@@ -99581,7 +99813,7 @@
           "lastObserved": "2021-09-10",
           "recency": {
             "band": "recent-0-to-5-years",
-            "ageYears": 4.8
+            "ageYears": 4.9
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder"
@@ -99625,7 +99857,7 @@
           "lastObserved": "2021-09-10",
           "recency": {
             "band": "recent-0-to-5-years",
-            "ageYears": 4.8
+            "ageYears": 4.9
           },
           "observerTypes": [
             "DGIF collection or salvage permit holder"

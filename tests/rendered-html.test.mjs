@@ -122,7 +122,7 @@ test("source code preserves the species gate, provenance, and precise advisory l
   assert.match(coverage, /Lake Fairfax Park/);
   assert.match(coverage, /Gravelly Point/);
   assert.match(coverage, /accessAuthority/);
-  assert.equal((coverage.match(/verifiedLocation\(\{ id:/g) ?? []).length, 34);
+  assert.equal((coverage.match(/verifiedLocation\(\{ id:/g) ?? []).length, 35);
 });
 
 test("live public-data spine includes canonical science forecast, hydrology, multi-day weather, trout, and Aquatic GAP", async () => {
