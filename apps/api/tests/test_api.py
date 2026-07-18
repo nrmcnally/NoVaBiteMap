@@ -7,8 +7,8 @@ def test_health_and_openapi(client):
 
 
 def test_locations_list_has_provenance_backed_locations(client):
-    locations = client.get("/api/locations", params={"limit": 200}).json()
-    assert len(locations) == 197  # curated + region-wide DWR ramps + NHD public-park waters
+    locations = client.get("/api/locations", params={"limit": 250}).json()
+    assert len(locations) == 201  # curated + region-wide DWR ramps + NHD public-park waters
     assert all(item.get("sourceName") for item in locations)
     ids = {item["id"] for item in locations}
     assert {"lake-fairfax", "gravelly-point", "beaverdam-reservoir", "kellys-ford"}.issubset(ids)
@@ -19,7 +19,7 @@ def test_explore_catalog_is_canonical_and_score_consistent(client):
     assert response.status_code == 200, response.text
     payload = response.json()
     assert payload["dataSource"] == "canonical-api"
-    assert payload["counts"] == {"species": 20, "locations": 197}
+    assert payload["counts"] == {"species": 20, "locations": 201}
     assert len(payload["species"]) == 20
     burke = next(item for item in payload["locations"] if item["id"] == "lake-burke")
     assert burke["runtimeSource"] == "canonical-api"
@@ -137,12 +137,12 @@ def test_seasonal_run_species_carry_run_window(client):
 def test_data_source_status_is_derived_from_real_counts_and_runs(client):
     status = client.get("/api/data-sources/status").json()
     counts = status["counts"]
-    assert counts["locations"] == 197
+    assert counts["locations"] == 201
     assert counts["species"] == 37
     assert counts["hydrologyAssociations"] == 19
     assert counts["stockingRecords"] == 13
     assert counts["modeledEvidence"] == 334
-    assert counts["locationsWithEvidence"] == 175
+    assert counts["locationsWithEvidence"] == 176
     assert status["lastSuccessfulIngestion"] is not None
     assert status["lastSuccessfulIngestion"]["status"] == "success"
 

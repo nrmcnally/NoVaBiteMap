@@ -1,8 +1,8 @@
 {
   "meta": {
     "generated": "2026-07-17",
-    "locationCount": 197,
-    "guessReliantLocationCount": 36,
+    "locationCount": 201,
+    "guessReliantLocationCount": 39,
     "policy": "Candidates never affect rankings until finalVerdict is approved after exact-water, species, date, provenance, contradiction, and access review.",
     "priorAgentWork": "All existing seed evidence is retained under priorAgentClaims and explicitly queued for re-verification or quarantine.",
     "vafwisSource": {
@@ -22,18 +22,18 @@
       "privacyNote": "Source geometries are used transiently for matching, then deliberately discarded; only distance-to-catalog-water is retained."
     },
     "queueCounts": {
-      "existing-direct-claims-reviewed": 161,
-      "no-direct-candidate-found": 33,
+      "existing-direct-claims-reviewed": 162,
+      "no-direct-candidate-found": 36,
       "manual-primary-source-claim-approved": 2,
       "non-target-fish-candidate-found": 1
     },
     "reviewProgress": {
       "targetCandidateLocationCount": 0,
       "nonTargetOnlyLocationCount": 1,
-      "noCandidateLocationCount": 33,
-      "approvedClaimCount": 126,
-      "approvedClaimLocationCount": 59,
-      "verifiedRuntimeClaimCount": 1156,
+      "noCandidateLocationCount": 36,
+      "approvedClaimCount": 128,
+      "approvedClaimLocationCount": 60,
+      "verifiedRuntimeClaimCount": 1158,
       "removedOrRejectedPriorClaimCount": 105,
       "unverifiedRuntimeDirectClaimCount": 0,
       "missingSourceRuntimeDirectClaimCount": 0,
@@ -12342,6 +12342,176 @@
           }
         }
       ],
+      "contradictionReviews": [],
+      "finalVerdict": "pending",
+      "reviewerNotes": []
+    },
+    {
+      "locationId": "lake-cook",
+      "name": "Lake Cook",
+      "waterbody": "Lake Cook",
+      "waterbodyType": "lake",
+      "county": "Alexandria",
+      "accessReview": {
+        "currentStatus": "verified",
+        "authority": "City of Alexandria",
+        "sourceUrl": "https://www.alexandriava.gov/parks/location/lake-cook",
+        "reviewStatus": "separate-access-review-required",
+        "decision": null
+      },
+      "evidenceQueue": "no-direct-candidate-found",
+      "releaseEligible": false,
+      "priorAgentClaims": [],
+      "agencyObservationCandidates": [],
+      "agencyHabitatCandidates": [],
+      "agencyStockingCandidates": [],
+      "priorClaimReviews": [],
+      "sourceClaimRejections": [],
+      "sourceClaimReviews": [],
+      "manualClaimReviews": [],
+      "contradictionReviews": [],
+      "finalVerdict": "pending",
+      "reviewerNotes": []
+    },
+    {
+      "locationId": "ashby-pond",
+      "name": "Ashby Pond Conservatory",
+      "waterbody": "Ashby Pond",
+      "waterbodyType": "pond",
+      "county": "Fairfax City",
+      "accessReview": {
+        "currentStatus": "verified",
+        "authority": "City of Fairfax",
+        "sourceUrl": "https://www.fairfaxva.gov/Fun-Facilities/Parks",
+        "reviewStatus": "separate-access-review-required",
+        "decision": null
+      },
+      "evidenceQueue": "no-direct-candidate-found",
+      "releaseEligible": false,
+      "priorAgentClaims": [],
+      "agencyObservationCandidates": [],
+      "agencyHabitatCandidates": [],
+      "agencyStockingCandidates": [],
+      "priorClaimReviews": [],
+      "sourceClaimRejections": [],
+      "sourceClaimReviews": [],
+      "manualClaimReviews": [],
+      "contradictionReviews": [],
+      "finalVerdict": "pending",
+      "reviewerNotes": []
+    },
+    {
+      "locationId": "long-branch-arlington",
+      "name": "Long Branch (Glencarlyn Park)",
+      "waterbody": "Long Branch",
+      "waterbodyType": "stream",
+      "county": "Arlington",
+      "accessReview": {
+        "currentStatus": "verified",
+        "authority": "Arlington County",
+        "sourceUrl": "https://www.arlingtonva.us/Government/Programs/Sustainability/Streams",
+        "reviewStatus": "separate-access-review-required",
+        "decision": null
+      },
+      "evidenceQueue": "existing-direct-claims-reviewed",
+      "releaseEligible": false,
+      "priorAgentClaims": [
+        {
+          "speciesId": "redbreast-sunfish",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "DWR VAFWIS fish-collection records document redbreast sunfish on the Long Branch reach at Glencarlyn Park (~0.1-0.25 mi from the access).",
+          "lastEvidence": "Virginia DWR VAFWIS - Long Branch (Arlington) — reviewed 2026-07-14",
+          "sourceName": "Virginia DWR VAFWIS - Long Branch (Arlington)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28TaxaGrp%29%3D%27FISH%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25SUNFISH%2C%20REDBREAST%25%27&geometry=-77.1173%2C38.8438%2C-77.0933%2C38.8678&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        },
+        {
+          "speciesId": "yellow-perch",
+          "evidenceType": "official listing",
+          "modeled": false,
+          "summary": "DWR VAFWIS fish-collection records document yellow perch on the Long Branch reach at Glencarlyn Park (~0.1-0.25 mi from the access).",
+          "lastEvidence": "Virginia DWR VAFWIS - Long Branch (Arlington) — reviewed 2026-07-14",
+          "sourceName": "Virginia DWR VAFWIS - Long Branch (Arlington)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28TaxaGrp%29%3D%27FISH%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25PERCH%2C%20YELLOW%25%27&geometry=-77.1173%2C38.8438%2C-77.0933%2C38.8678&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json",
+          "reviewStatus": "corroborated-by-approved-agency-record",
+          "review": null
+        }
+      ],
+      "agencyObservationCandidates": [],
+      "agencyHabitatCandidates": [],
+      "agencyStockingCandidates": [],
+      "priorClaimReviews": [],
+      "sourceClaimRejections": [],
+      "sourceClaimReviews": [],
+      "manualClaimReviews": [
+        {
+          "claimId": "vafwis-long-branch-redbreast-sunfish",
+          "locationId": "long-branch-arlington",
+          "speciesId": "redbreast-sunfish",
+          "verdict": "approved-exact-agency-report",
+          "evidenceDate": null,
+          "publicationYear": null,
+          "sourceName": "Virginia DWR VAFWIS - Long Branch (Arlington)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28TaxaGrp%29%3D%27FISH%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25SUNFISH%2C%20REDBREAST%25%27&geometry=-77.1173%2C38.8438%2C-77.0933%2C38.8678&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json",
+          "summary": "DWR VAFWIS fish-collection records document redbreast sunfish on the Long Branch reach at Glencarlyn Park (~0.1-0.25 mi from the access).",
+          "checks": {
+            "exactNamedWater": false,
+            "exactLocationMatch": true,
+            "exactSpecies": true,
+            "primarySource": true,
+            "currentPresenceClaimed": true,
+            "accessSeparatelyReviewed": true
+          }
+        },
+        {
+          "claimId": "vafwis-long-branch-yellow-perch",
+          "locationId": "long-branch-arlington",
+          "speciesId": "yellow-perch",
+          "verdict": "approved-exact-agency-report",
+          "evidenceDate": null,
+          "publicationYear": null,
+          "sourceName": "Virginia DWR VAFWIS - Long Branch (Arlington)",
+          "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0/query?where=UPPER%28TaxaGrp%29%3D%27FISH%27%20AND%20UPPER%28COMMON_NAME%29%20LIKE%20%27%25PERCH%2C%20YELLOW%25%27&geometry=-77.1173%2C38.8438%2C-77.0933%2C38.8678&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=COMMON_NAME,Waterbody,ObsDate&f=json",
+          "summary": "DWR VAFWIS fish-collection records document yellow perch on the Long Branch reach at Glencarlyn Park (~0.1-0.25 mi from the access).",
+          "checks": {
+            "exactNamedWater": false,
+            "exactLocationMatch": true,
+            "exactSpecies": true,
+            "primarySource": true,
+            "currentPresenceClaimed": true,
+            "accessSeparatelyReviewed": true
+          }
+        }
+      ],
+      "contradictionReviews": [],
+      "finalVerdict": "pending",
+      "reviewerNotes": []
+    },
+    {
+      "locationId": "meadowood-ponds",
+      "name": "Meadowood SRMA Ponds",
+      "waterbody": "Meadowood Ponds",
+      "waterbodyType": "pond",
+      "county": "Fairfax",
+      "accessReview": {
+        "currentStatus": "verified",
+        "authority": "Bureau of Land Management",
+        "sourceUrl": "https://www.blm.gov/visit/meadowood-recreation-area",
+        "reviewStatus": "separate-access-review-required",
+        "decision": null
+      },
+      "evidenceQueue": "no-direct-candidate-found",
+      "releaseEligible": false,
+      "priorAgentClaims": [],
+      "agencyObservationCandidates": [],
+      "agencyHabitatCandidates": [],
+      "agencyStockingCandidates": [],
+      "priorClaimReviews": [],
+      "sourceClaimRejections": [],
+      "sourceClaimReviews": [],
+      "manualClaimReviews": [],
       "contradictionReviews": [],
       "finalVerdict": "pending",
       "reviewerNotes": []
