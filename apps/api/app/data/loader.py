@@ -304,7 +304,10 @@ def _upsert_all(session: Session, payload: dict, profiles_payload: dict) -> tupl
         loc_id = loc["id"]
         wb_id = waterbody_ids[loc["id"]]
         watershed = _watershed_for(loc["waterbody"], loc["name"], loc["county"])
-        details = {"consumptionAdvisory": loc.get("consumptionAdvisory")}
+        details = {
+            "consumptionAdvisory": loc.get("consumptionAdvisory"),
+            "accessConditions": loc.get("accessConditions", []),
+        }
         record = session.get(FishingLocationRecord, loc_id)
         if record is None:
             record = FishingLocationRecord(id=loc_id)

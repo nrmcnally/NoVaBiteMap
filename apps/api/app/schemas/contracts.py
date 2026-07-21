@@ -56,6 +56,14 @@ class FishingTripReplayUpdate(BaseModel):
     condition_replayed_at: datetime
 
 
+class AlphaFeedbackCreate(BaseModel):
+    category: str = Field(pattern="^(incorrect-data|bug|idea|other)$")
+    location_id: str | None = Field(default=None, max_length=100)
+    page_url: str | None = Field(default=None, max_length=500)
+    message: str = Field(min_length=10, max_length=3000)
+    contact_ok: bool = False
+
+
 class EvidenceInput(BaseModel):
     direction: int = Field(ge=-1, le=1)
     authority: float = Field(ge=0, le=1)
@@ -88,3 +96,13 @@ class ScoreRequest(BaseModel):
     safety_cap: int | None = Field(default=None, ge=0, le=100)
     horizon_factor: float = Field(default=1, ge=0, le=1)
     association_factor: float = Field(default=1, ge=0, le=1)
+
+
+class TimelineScoresRequest(BaseModel):
+    """Bounded batch request for the Explore prediction timeline."""
+
+    anchor_latitude: float = Field(ge=36, le=40.5)
+    anchor_longitude: float = Field(ge=-84, le=-74)
+    anchor_label: str = Field(default="Northern Virginia regional forecast", max_length=160)
+    location_ids: list[str] = Field(min_length=1, max_length=300)
+    species_ids: list[str] = Field(default_factory=list, max_length=80)

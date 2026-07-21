@@ -1,6 +1,6 @@
 {
   "meta": {
-    "reviewed": "2026-07-14",
+    "reviewed": "2026-07-21",
     "reviewer": "Codex adversarial source review",
     "policy": "Approval applies only to the exact species/evidence scope stated here. It does not approve abundance, bite quality, public access, harvest safety, or a catalog waypoint.",
     "primarySourcesOnly": true
@@ -734,13 +734,15 @@
     {
       "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/media/Walleye-Fishing-Forecast-2026.pdf",
       "locationIds": [
-        "lake-brittle"
+        "lake-brittle",
+        "lake-burke"
       ],
       "approvedSpeciesIds": [
-        "walleye"
+        "walleye",
+        "saugeye"
       ],
       "verdict": "approved-exact-dated-agency-survey-with-negative-evidence",
-      "limitations": "The 2025 electrofishing survey collected no walleye; DWR says some likely remain, while the current stocking program targets saugeye. The live claim must remain low-confidence and must not present walleye as a primary target."
+      "limitations": "The exact-water 2025 surveys and 2026 DWR forecast support saugeye at both lakes. Lake Brittle collected no walleye, so its separate walleye claim remains low-confidence and secondary. Electrofishing catch rates support relative population evidence, not guaranteed angler catch rates or shore availability."
     },
     {
       "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
@@ -1521,6 +1523,7 @@
         "gizzard-shad",
         "green-sunfish",
         "largemouth-bass",
+        "longnose-gar",
         "northern-snakehead",
         "pumpkinseed",
         "redbreast-sunfish",
@@ -1536,7 +1539,7 @@
         "yellow-perch"
       ],
       "verdict": "approved-exact-agency-observation",
-      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its distinct record count, observer type, and observation dates; confidence is scaled by recency. The longnose-gar claim is a single 2011 lower-tidal-reach collection and must be shown as historical presence, not current abundance or proof at the catalog waypoint. Access is reviewed separately."
     },
     {
       "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
@@ -1805,6 +1808,7 @@
       ],
       "approvedSpeciesIds": [
         "american-eel",
+        "american-shad",
         "black-crappie",
         "bluegill",
         "brown-bullhead",
@@ -1819,7 +1823,7 @@
         "yellow-perch"
       ],
       "verdict": "approved-exact-agency-observation",
-      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Each promoted claim carries its record count, observer type, and observation dates; confidence is scaled by recency. Presence is documented as of the observation date(s), not a guarantee of current abundance. Access is reviewed separately."
+      "limitations": "DWR VAFWIS collection/observation records with an exact named-water match and exact taxon match. Duplicate American-shad rows sharing sourceDatabaseId 3395532 are one underlying July 2022 collection and must count once. Its date and mouth-seine context support juvenile/nursery water use, not a year-round adult fishery or spring-run catchability. Access is reviewed separately."
     },
     {
       "sourceUrl": "https://services.dwr.virginia.gov/arcgis/rest/services/VAFWIS/Species_Observations_All_Distrib/FeatureServer/0",
@@ -2606,6 +2610,276 @@
     }
   ],
   "manualClaims": [
+    {
+      "claimId": "stabilization-carters-pond-bluegill",
+      "locationId": "carters-pond-pwfp",
+      "speciesId": "bluegill",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "publicationYear": null,
+      "sourceName": "National Park Service",
+      "sourceUrl": "https://www.nps.gov/places/000/carters-pond-wildlife-viewing-trail.htm",
+      "summary": "The National Park Service's Carter's Pond page explicitly lists bluegill and requires catch-and-release fishing.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "stabilization-carters-pond-pumpkinseed",
+      "locationId": "carters-pond-pwfp",
+      "speciesId": "pumpkinseed",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "publicationYear": null,
+      "sourceName": "National Park Service",
+      "sourceUrl": "https://www.nps.gov/places/000/carters-pond-wildlife-viewing-trail.htm",
+      "summary": "The National Park Service's Carter's Pond page explicitly lists pumpkinseed and requires catch-and-release fishing.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "stabilization-carters-pond-largemouth-bass",
+      "locationId": "carters-pond-pwfp",
+      "speciesId": "largemouth-bass",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "publicationYear": null,
+      "sourceName": "National Park Service",
+      "sourceUrl": "https://www.nps.gov/places/000/carters-pond-wildlife-viewing-trail.htm",
+      "summary": "The National Park Service's Carter's Pond page explicitly lists largemouth bass and requires catch-and-release fishing.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "stabilization-carters-pond-channel-catfish",
+      "locationId": "carters-pond-pwfp",
+      "speciesId": "channel-catfish",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "publicationYear": null,
+      "sourceName": "National Park Service",
+      "sourceUrl": "https://www.nps.gov/places/000/carters-pond-wildlife-viewing-trail.htm",
+      "summary": "The National Park Service's Carter's Pond page explicitly lists channel catfish and requires catch-and-release fishing.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "stabilization-hanson-pond-bluegill",
+      "locationId": "hanson-pond",
+      "speciesId": "bluegill",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "publicationYear": null,
+      "sourceName": "Loudoun County Parks, Recreation and Community Services",
+      "sourceUrl": "https://www.loudoun.gov/DocumentCenter/View/200353",
+      "summary": "Loudoun County's official Hanson Park fishing guide lists bluegill in the park fishing ponds and identifies them as catch-and-release waters.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "stabilization-hanson-pond-largemouth-bass",
+      "locationId": "hanson-pond",
+      "speciesId": "largemouth-bass",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "publicationYear": null,
+      "sourceName": "Loudoun County Parks, Recreation and Community Services",
+      "sourceUrl": "https://www.loudoun.gov/DocumentCenter/View/200353",
+      "summary": "Loudoun County's official Hanson Park fishing guide lists largemouth bass in the park fishing ponds and identifies them as catch-and-release waters.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "stabilization-hanson-pond-channel-catfish",
+      "locationId": "hanson-pond",
+      "speciesId": "channel-catfish",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "publicationYear": null,
+      "sourceName": "Loudoun County Parks, Recreation and Community Services",
+      "sourceUrl": "https://www.loudoun.gov/DocumentCenter/View/200353",
+      "summary": "Loudoun County's official Hanson Park fishing guide lists channel catfish in the park fishing ponds and identifies them as catch-and-release waters.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "stabilization-springhouse-pond-bluegill",
+      "locationId": "springhouse-pond",
+      "speciesId": "bluegill",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "publicationYear": 2026,
+      "sourceName": "Loudoun County Parks, Recreation and Community Services",
+      "sourceUrl": "https://prcsinfo.loudoun.gov/view/450296151/54/",
+      "summary": "Loudoun County's 2026 activity guide explicitly identifies bluegill among fish available at Springhouse Pond.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "stabilization-springhouse-pond-smallmouth-bass",
+      "locationId": "springhouse-pond",
+      "speciesId": "smallmouth-bass",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "publicationYear": 2026,
+      "sourceName": "Loudoun County Parks, Recreation and Community Services",
+      "sourceUrl": "https://prcsinfo.loudoun.gov/view/450296151/54/",
+      "summary": "Loudoun County's 2026 activity guide explicitly identifies smallmouth bass among fish available at Springhouse Pond.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "stabilization-clearbrook-channel-catfish",
+      "locationId": "clearbrook-lake",
+      "speciesId": "channel-catfish",
+      "verdict": "approved-official-waterbody-listing",
+      "evidenceDate": null,
+      "publicationYear": null,
+      "sourceName": "Virginia Department of Wildlife Resources",
+      "sourceUrl": "https://dwr.virginia.gov/waterbody/clearbrook-lake/",
+      "summary": "Virginia DWR's current Clearbrook Lake page explicitly says the lake's existing channel catfish population remains.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "stabilization-lake-thompson-smallmouth-bass-historical",
+      "locationId": "lake-thompson",
+      "speciesId": "smallmouth-bass",
+      "verdict": "approved-historical-exact-agency-report",
+      "evidenceDate": "2015-01-01",
+      "publicationYear": 2015,
+      "sourceName": "Virginia Department of Wildlife Resources",
+      "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/Thompson-Management-Report-2015.pdf",
+      "summary": "A 2015 DWR management report documented smallmouth bass at Lake Thompson; this historical record is retained for research but is not promoted as current presence.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": false,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "stabilization-lake-thompson-bluegill-historical",
+      "locationId": "lake-thompson",
+      "speciesId": "bluegill",
+      "verdict": "approved-historical-exact-agency-report",
+      "evidenceDate": "2015-01-01",
+      "publicationYear": 2015,
+      "sourceName": "Virginia Department of Wildlife Resources",
+      "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/Thompson-Management-Report-2015.pdf",
+      "summary": "A 2015 DWR management report documented bluegill at Lake Thompson; this historical record is retained for research but is not promoted as current presence.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": false,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "stabilization-lake-thompson-green-sunfish-historical",
+      "locationId": "lake-thompson",
+      "speciesId": "green-sunfish",
+      "verdict": "approved-historical-exact-agency-report",
+      "evidenceDate": "2015-01-01",
+      "publicationYear": 2015,
+      "sourceName": "Virginia Department of Wildlife Resources",
+      "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/Thompson-Management-Report-2015.pdf",
+      "summary": "A 2015 DWR management report documented green sunfish at Lake Thompson; this historical record is retained for research but is not promoted as current presence.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": false,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "stabilization-lake-thompson-pumpkinseed-historical",
+      "locationId": "lake-thompson",
+      "speciesId": "pumpkinseed",
+      "verdict": "approved-historical-exact-agency-report",
+      "evidenceDate": "2015-01-01",
+      "publicationYear": 2015,
+      "sourceName": "Virginia Department of Wildlife Resources",
+      "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/Thompson-Management-Report-2015.pdf",
+      "summary": "A 2015 DWR management report documented pumpkinseed at Lake Thompson; this historical record is retained for research but is not promoted as current presence.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": false,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "stabilization-lake-thompson-white-sucker-historical",
+      "locationId": "lake-thompson",
+      "speciesId": "white-sucker",
+      "verdict": "approved-historical-exact-agency-report",
+      "evidenceDate": "2015-01-01",
+      "publicationYear": 2015,
+      "sourceName": "Virginia Department of Wildlife Resources",
+      "sourceUrl": "https://dwr.virginia.gov/wp-content/uploads/Thompson-Management-Report-2015.pdf",
+      "summary": "A 2015 DWR management report documented white sucker at Lake Thompson; this historical record is retained for research but is not promoted as current presence.",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": false,
+        "accessSeparatelyReviewed": true
+      }
+    },
     {
       "claimId": "dwr-north-fork-thornton-brook-trout",
       "locationId": "nhd-stream-north-fork-thornton-river",
@@ -7047,6 +7321,29 @@
       "sourceName": "NPS Shenandoah National Park",
       "sourceUrl": "https://www.nps.gov/shen/planyourvisit/fishing.htm",
       "summary": "NPS documents Whiteoak Canyon Run as a wild brook trout stream in Shenandoah NP (VAFWIS brook-trout record 0.42 mi corroborates).",
+      "checks": {
+        "exactNamedWater": true,
+        "exactSpecies": true,
+        "primarySource": true,
+        "currentPresenceClaimed": true,
+        "accessSeparatelyReviewed": true
+      }
+    },
+    {
+      "claimId": "vmrc-2024-occoquan-river-hickory-shad",
+      "locationId": "occoquan-regional",
+      "speciesId": "hickory-shad",
+      "verdict": "approved-exact-agency-report",
+      "evidenceDate": "2024-12-03",
+      "publicationYear": 2024,
+      "reviewed": "2026-07-21",
+      "sourceName": "Virginia Marine Resources Commission briefing packet",
+      "sourceUrl": "https://www.mrc.virginia.gov/commission_briefing_packets/2024/2024-12-03-Briefing-Packet.pdf",
+      "summary": "Virginia VMRC identifies the Occoquan River near River Mill Park as a popular hickory-shad spring fishery. BiteMap applies this as seasonal shared-reach evidence at nearby Occoquan Regional Park, not as an access-point survey or abundance estimate.",
+      "seasonal": {
+        "months": [3, 4],
+        "label": "spring spawning run (Mar-Apr)"
+      },
       "checks": {
         "exactNamedWater": true,
         "exactSpecies": true,

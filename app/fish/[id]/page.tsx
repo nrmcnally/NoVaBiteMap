@@ -7,6 +7,7 @@ import { SeasonalChart, TempGauge, WaterTypeFit } from "../../components/FishVis
 import { speciesById } from "../../lib/data";
 import { localFishFacts, localSpeciesWaters } from "../../lib/fish-facts";
 import { fishImageFor } from "../../lib/fish-images";
+import { guideProfileFor } from "../../lib/species-profiles";
 
 type FishPageProps = { params: Promise<{ id: string }> };
 
@@ -28,6 +29,7 @@ export default async function FishPage({ params }: FishPageProps) {
   const scientificName = local.scientificName;
   const habitat = facts?.habitat ?? local.habitat ?? null;
   const image = fishImageFor(id);
+  const regulationAlert = guideProfileFor(id)?.regulationAlert;
   const topWaters = locations;
   const guideOnly = !local.targetable;
 
@@ -59,6 +61,14 @@ export default async function FishPage({ params }: FishPageProps) {
             </figure>
           )}
         </header>
+
+        {regulationAlert && (
+          <div className="regulation-banner">
+            <ShieldAlert size={18} />
+            <span><strong>{regulationAlert.title}</strong> {regulationAlert.detail}</span>
+            <a href={regulationAlert.sourceUrl} target="_blank" rel="noreferrer">{regulationAlert.sourceLabel} <ExternalLink size={12} /></a>
+          </div>
+        )}
 
         {facts?.nativeStatus === "invasive" && facts.handlingNote && (
           <div className="invasive-banner"><AlertTriangle size={16} /> <span>{facts.handlingNote}</span></div>

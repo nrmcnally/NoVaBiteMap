@@ -108,7 +108,7 @@ export function PredictionTimeline({
       ? `${selectedPeriods.length} forecast hours · best window by species`
       : `${selectedPeriod!.shortForecast} · ${selectedPeriod!.temperature}°${selectedPeriod!.temperatureUnit} · ${selectedPeriod!.windDirection} ${selectedPeriod!.windSpeed}`
     : status === "loading"
-      ? "Checking National Weather Service coverage"
+      ? "Checking NWS coverage and precomputing scores"
       : "Seasonal scores remain visible";
 
   return (

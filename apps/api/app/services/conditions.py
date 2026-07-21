@@ -26,11 +26,32 @@ HYDRO_TTL = 900
 AIR_HISTORY_TTL = 21600  # 6 hours; thermal state changes slowly
 
 
+def _normalized_weather_period(period: dict) -> dict:
+    """Preserve the NWS payload while exposing the numeric field the scorer uses."""
+    raw_probability = period.get("probabilityOfPrecipitation")
+    precipitation_probability = (
+        raw_probability.get("value")
+        if isinstance(raw_probability, dict)
+        else raw_probability
+    )
+    return {
+        **period,
+        "precipitationProbability": precipitation_probability,
+    }
+
+
 async def get_weather(latitude: float, longitude: float) -> dict:
     key = f"nws:{latitude:.3f},{longitude:.3f}"
     cached = await cache.get_json(key)
     if cached is not None:
-        return {**cached, "cached": True}
+        return {
+            **cached,
+            "periods": [
+                _normalized_weather_period(period)
+                for period in cached.get("periods", [])[:120]
+            ],
+            "cached": True,
+        }
     try:
         forecast = await NwsProvider().get_hourly_forecast(latitude, longitude)
     except ProviderError as error:
@@ -41,7 +62,10 @@ async def get_weather(latitude: float, longitude: float) -> dict:
         "provider": forecast["provider"],
         "retrieved_at": forecast["retrieved_at"],
         "forecast_updated_at": forecast.get("forecast_updated_at"),
-        "periods": forecast.get("periods", []),
+        "periods": [
+            _normalized_weather_period(period)
+            for period in forecast.get("periods", [])[:120]
+        ],
         "alerts": alerts,
         "cached": False,
     }

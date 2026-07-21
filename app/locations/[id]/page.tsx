@@ -15,6 +15,7 @@ import {
   Heart,
   Info,
   MapPin,
+  MessageSquare,
   Navigation,
   ShieldAlert,
   Waves,
@@ -26,6 +27,7 @@ import { consumptionAdviceFor } from "../../lib/advisories";
 import { locationById, sourceLinks, speciesById } from "../../lib/data";
 import { fetchLocation } from "../../lib/api";
 import { opportunityFor } from "../../lib/scoring";
+import { guideProfileFor } from "../../lib/species-profiles";
 import { googleDirectionsUrl } from "../../lib/travel";
 
 type LocationPageProps = { params: Promise<{ id: string }>; searchParams: Promise<{ species?: string }> };
@@ -43,8 +45,9 @@ export default async function LocationPage({ params, searchParams }: LocationPag
   const primaryEvidence = advisorySpeciesIds
     .map((speciesId) => location.evidence.find((evidence) => evidence.speciesId === speciesId))
     .find(Boolean) ?? location.evidence[0];
-  const opportunity = primaryEvidence ? opportunityFor(location, primaryEvidence.speciesId) : null;
   const target = primaryEvidence ? speciesById(primaryEvidence.speciesId) : null;
+  const opportunity = primaryEvidence && target?.targetable ? opportunityFor(location, primaryEvidence.speciesId) : null;
+  const regulationAlert = target ? guideProfileFor(target.id)?.regulationAlert : undefined;
 
   const knownSpecies: KnownSpecies[] = Array.from(
     location.evidence.reduce((bySpecies, evidence) => {
@@ -109,9 +112,24 @@ export default async function LocationPage({ params, searchParams }: LocationPag
               <Navigation size={17} /> Google Maps directions
             </a>
             <Link href="/my-spots"><Heart size={17} /> Save spot</Link>
-            <Link href={`/trips?location=${location.id}${target ? `&species=${target.id}` : ""}`}><ClipboardList size={17} /> Log a trip</Link>
+            <Link className="hero-primary-action" href={`/trips?location=${location.id}${target ? `&species=${target.id}` : ""}`}><ClipboardList size={17} /> Log a trip</Link>
+            <Link href={`/feedback?category=incorrect-data&location=${location.id}&source=${encodeURIComponent(`/locations/${location.id}`)}`}>
+              <MessageSquare size={17} /> Report spot data
+            </Link>
           </div>
         </header>
+
+        {primaryEvidence?.seasonal && (
+          <div className="seasonal-run-banner"><Clock3 size={17} /> <span><strong>Seasonal fish:</strong> {primaryEvidence.seasonal.label}. Evidence applies to the documented run or life-stage window, not year-round adult presence.</span></div>
+        )}
+
+        {regulationAlert && (
+          <div className="regulation-banner">
+            <ShieldAlert size={18} />
+            <span><strong>{regulationAlert.title}</strong> {regulationAlert.detail}</span>
+            <a href={regulationAlert.sourceUrl} target="_blank" rel="noreferrer">{regulationAlert.sourceLabel} <ExternalLink size={12} /></a>
+          </div>
+        )}
 
         <section className="detail-grid">
           <div className="detail-main">
@@ -197,6 +215,16 @@ export default async function LocationPage({ params, searchParams }: LocationPag
             <section className="safety-panel">
               <h3><ShieldAlert size={19} /> Safety & access note</h3>
               <p>{location.notice}</p>
+              {(location.accessConditions?.length ?? 0) > 0 && (
+                <div className="access-condition-list">
+                  {location.accessConditions?.map((condition) => (
+                    <div key={`${condition.kind}-${condition.label}`}>
+                      <strong>{condition.label}</strong>
+                      <span>{condition.detail}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
               <p>Do not wade rising water. Check severe weather, closures, and posted property boundaries.</p>
             </section>
             <section className={`consumption-panel consumption-${consumptionAdvisory.status}`}>

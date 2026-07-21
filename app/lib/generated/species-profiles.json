@@ -554,17 +554,16 @@
     },
     {
       "speciesId": "channel-catfish",
-      "preferredMinF": 70,
-      "preferredMaxF": 85,
       "toleranceMinF": 35,
       "toleranceMaxF": 95,
+      "temperatureResponse": "stress-only",
       "spawnMonths": [
         4,
         5,
         6
       ],
       "spawnTempF": 75,
-      "dielPattern": "nocturnal",
+      "dielPattern": "flexible",
       "waterbodyPreference": {
         "river": 0.9,
         "stream": 0.4,
@@ -601,7 +600,7 @@
         "https://dwr.virginia.gov/wildlife/information/channel-catfish/",
         "https://dwr.virginia.gov/fishing/trophy-fish/state-records/"
       ],
-      "notes": "VA DWR: spawn April-June in Virginia; nest-builders in concealed cover. Warm-water fish, optimal growth near 85F; broader catfish spawn window 70-84F, best ~80F. Most active dusk-into-night but readily feed by day in stained water. Thrives in pools/runs of moderate current, reservoirs, ponds; silty substrate with overhanging cover. Tolerance range widened to reflect winter survival and summer highs (numbers not on DWR page, hence borrowed from FWS/general references).",
+      "notes": "Virginia DWR documents April-June spawning and concealed nest sites. BiteMap's verified research found no portable universal feeding optimum or universal night-only rule: adult feeding was daylight-heavy in one Conowingo study, while other telemetry and juvenile evidence leaned nocturnal. The model therefore treats diel behavior as flexible and uses water temperature only for conservative cold or extreme-heat stress, not as a 70-85 F bite optimum. Barometric pressure and weather-front folklore receive zero biological weight.",
       "typicalMinInches": 12,
       "typicalMaxInches": 26,
       "citationLengthInches": 30,
@@ -1174,6 +1173,74 @@
         {
           "speciesId": "bowfin",
           "tell": "Bowfin (native) have a short anal fin, no scales on the head, and a dark tail spot; snakeheads have a long anal fin and reptilian scales covering the head. (Bowfin is not a separate entry in this app.)"
+        }
+      ],
+      "stateRecordLb": null
+    },
+    {
+      "speciesId": "saugeye",
+      "preferredMinF": 55,
+      "preferredMaxF": 75,
+      "toleranceMinF": 35,
+      "toleranceMaxF": 85,
+      "spawnMonths": [],
+      "dielPattern": "crepuscular",
+      "waterbodyPreference": {
+        "river": 0.2,
+        "stream": -0.7,
+        "reservoir": 1,
+        "lake": 0.9,
+        "pond": -0.5,
+        "bay": -0.9
+      },
+      "seasonalActivityByMonth": [
+        0.42,
+        0.52,
+        0.68,
+        0.76,
+        0.72,
+        0.58,
+        0.48,
+        0.48,
+        0.62,
+        0.76,
+        0.66,
+        0.48
+      ],
+      "primaryTechniquesBySeason": {
+        "cold": "Slow jig-and-minnow or blade-bait presentations near the first deep break, points, and remaining channel structure.",
+        "cool": "Jigs, jerkbaits, and trolled minnow-profile crankbaits along points and drop-offs; cover water around dawn and dusk.",
+        "warm": "At Burke Lake, DWR reports fish holding above the summer thermocline around 10 feet and feeding shallower at night; troll or jig that depth band rather than fishing below low-oxygen water."
+      },
+      "confidence": "medium",
+      "sourceUrls": [
+        "https://dwr.virginia.gov/blog/chasing-a-toothy-critter-saugeye-are-a-great-species-to-target/",
+        "https://dwr.virginia.gov/wp-content/uploads/media/Walleye-Fishing-Forecast-2026.pdf",
+        "https://dwr.virginia.gov/fishing/regulations/"
+      ],
+      "notes": "Saugeye are the hatchery-produced walleye x sauger hybrid now stocked by Virginia DWR at Burke Lake and Lake Brittle. The 2026 DWR forecast supplies exact-water population, summer-depth, and low-light guidance. Until a dedicated deep evidence review is completed, thermal and seasonal values are conservative coolwater proxies and are intentionally marked medium confidence rather than treated as hybrid-specific laboratory optima.",
+      "typicalMinInches": 14,
+      "typicalMaxInches": 24,
+      "citationLengthInches": null,
+      "citationWeightLb": null,
+      "identification": "An elongate olive-gold percid combining walleye and sauger traits. Saugeye commonly show dark side blotches or saddles and rows of spots in the spiny dorsal fin, plus a pale lower tail tip; hybrid markings vary, so identification should use several traits rather than one mark.",
+      "baits": [
+        "jig and minnow",
+        "soft-plastic minnow jigs",
+        "jerkbaits",
+        "trolled crankbaits",
+        "blade baits",
+        "nightcrawler harnesses"
+      ],
+      "family": "Perches and darters (Percidae)",
+      "nativeStatus": "introduced",
+      "statusNote": "A hatchery-produced walleye-sauger hybrid intentionally stocked by Virginia DWR in selected reservoirs, including Burke Lake and Lake Brittle.",
+      "handlingNote": "Use multiple markings when identifying a possible saugeye, then confirm the water-specific size and creel rules before harvest. Handle warm-water summer catches quickly and keep them out of low-oxygen deep water.",
+      "diet": "A predatory hybrid feeding mainly on small fish, with crayfish and aquatic invertebrates taken opportunistically.",
+      "confusedWith": [
+        {
+          "speciesId": "walleye",
+          "tell": "Walleye usually has a cleaner gold-olive flank, an unspotted lower tail, and a strong dark blotch at the rear base of the spiny dorsal; saugeye more often combines side saddles or blotches with rows of dorsal-fin spots. Hybrid markings remain variable."
         }
       ],
       "stateRecordLb": null

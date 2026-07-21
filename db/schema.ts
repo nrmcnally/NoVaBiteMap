@@ -95,3 +95,23 @@ export const fishingTrips = sqliteTable(
     index("fishing_trips_location_species_idx").on(table.locationId, table.speciesId),
   ],
 );
+
+export const alphaFeedback = sqliteTable(
+  "alpha_feedback",
+  {
+    id: text("id").primaryKey(),
+    userEmail: text("user_email").notNull(),
+    locationId: text("location_id"),
+    category: text("category").notNull(),
+    pageUrl: text("page_url"),
+    message: text("message").notNull(),
+    contactOk: integer("contact_ok", { mode: "boolean" }).notNull().default(false),
+    status: text("status").notNull().default("new"),
+    createdAt: text("created_at").notNull().default(sql`CURRENT_TIMESTAMP`),
+  },
+  (table) => [
+    index("alpha_feedback_user_created_idx").on(table.userEmail, table.createdAt),
+    index("alpha_feedback_location_idx").on(table.locationId),
+    index("alpha_feedback_status_idx").on(table.status),
+  ],
+);

@@ -1,6 +1,7 @@
 "use client";
 
-import { AlertTriangle, CheckCircle2, Clock3, DatabaseZap, ExternalLink, Fish, MapPin, ServerCog, ShieldCheck } from "lucide-react";
+import { AlertTriangle, CheckCircle2, Clock3, DatabaseZap, ExternalLink, Fish, MapPin, MessageSquare, ServerCog, ShieldCheck } from "lucide-react";
+import type { AccountAlphaFeedback } from "../../lib/account-server";
 import { TopNav } from "../../components/TopNav";
 import { advisorySegments } from "../../lib/advisories";
 import { locations, sourceLinks, species, targetSpecies } from "../../lib/data";
@@ -23,7 +24,15 @@ const providers = [
   { name: "USGS Aquatic GAP", status: "Imported", detail: `${publicDataStats.aquaticGapSamples} regional presence/absence samples across ${publicDataStats.aquaticGapSpecies} configured species`, updated: "Release v2.0", href: sourceLinks.aquaticGapPresence },
 ];
 
-export function DataHealthClient({ adminName }: { adminName: string }) {
+export function DataHealthClient({
+  adminName,
+  feedback,
+  feedbackReady,
+}: {
+  adminName: string;
+  feedback: AccountAlphaFeedback[];
+  feedbackReady: boolean;
+}) {
   const evidenceCount = locations.reduce((total, location) => total + location.evidence.length, 0);
   const missingEvidence = locations.filter((location) => location.evidence.length === 0).length;
   return (
@@ -48,6 +57,34 @@ export function DataHealthClient({ adminName }: { adminName: string }) {
               <strong>{provider.name}</strong><span>{provider.detail}</span><em>{provider.status}</em><small>{provider.updated}</small><ExternalLink size={15} />
             </a>
           ))}
+        </section>
+        <section className="feedback-queue">
+          <div className="table-heading">
+            <div><span className="eyebrow">Alpha review queue</span><h2>Tester feedback</h2></div>
+            <span><MessageSquare size={15} /> {feedback.length} recent report{feedback.length === 1 ? "" : "s"}</span>
+          </div>
+          {!feedbackReady ? (
+            <p className="feedback-queue-empty">Feedback storage is not ready in this environment. Apply the current database migration.</p>
+          ) : feedback.length === 0 ? (
+            <p className="feedback-queue-empty">No alpha feedback has been submitted yet.</p>
+          ) : (
+            feedback.map((report) => (
+              <article className="feedback-queue-row" key={report.id}>
+                <span className={`feedback-category feedback-category-${report.category}`}>{report.category.replace("-", " ")}</span>
+                <div>
+                  <strong>{report.locationName ?? report.locationId ?? "General app feedback"}</strong>
+                  <p>{report.message}</p>
+                  <small>
+                    {report.userDisplayName || report.userEmail || "Signed-in tester"}
+                    {report.contactOk ? " · follow-up permitted" : " · no follow-up requested"}
+                    {" · "}
+                    {new Date(report.createdAt).toLocaleString()}
+                  </small>
+                </div>
+                {report.pageUrl && <a href={report.pageUrl}>Open context <ExternalLink size={13} /></a>}
+              </article>
+            ))
+          )}
         </section>
       </main>
     </div>

@@ -109,7 +109,7 @@ def test_real_archives_generate_a_link_complete_canonical_library():
         assert set(species["candidateRuleIds"]) <= rule_ids
 
 
-def test_expected_research_catalog_matches_both_fish_guide_profile_sets():
+def test_deep_research_catalog_remains_covered_when_regional_guide_additions_are_present():
     expected_species_ids = set(
         json.loads(EXPECTED_SPECIES.read_text(encoding="utf-8"))["speciesIds"]
     )
@@ -117,7 +117,13 @@ def test_expected_research_catalog_matches_both_fish_guide_profile_sets():
     for path in (SCORED_PROFILES, COMMUNITY_PROFILES):
         value = json.loads(path.read_text(encoding="utf-8"))
         profile_species_ids.update(item["speciesId"] for item in value["profiles"])
-    assert profile_species_ids == expected_species_ids
+    assert expected_species_ids <= profile_species_ids
+    assert profile_species_ids - expected_species_ids == {
+        "american-shad",
+        "hickory-shad",
+        "longnose-gar",
+        "saugeye",
+    }
 
 
 def test_reviewed_source_override_is_auditable():

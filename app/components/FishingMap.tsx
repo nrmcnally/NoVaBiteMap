@@ -41,21 +41,25 @@ export function FishingMap({ locations, speciesIds, opportunities, selectedId, o
   const mapElement = useRef<HTMLDivElement>(null);
   const markerById = useRef<Map<string, import("leaflet").CircleMarker>>(new Map());
   const advisoryRingById = useRef<Map<string, import("leaflet").CircleMarker>>(new Map());
+  const markerVisualKeyById = useRef<Map<string, string>>(new Map());
   const opportunitiesRef = useRef(opportunities);
+  const speciesIdsRef = useRef(speciesIds);
   const selectedIdRef = useRef(selectedId);
   const onSelectRef = useRef(onSelect);
 
   useEffect(() => {
     opportunitiesRef.current = opportunities;
+    speciesIdsRef.current = speciesIds;
     selectedIdRef.current = selectedId;
     onSelectRef.current = onSelect;
-  }, [onSelect, opportunities, selectedId]);
+  }, [onSelect, opportunities, selectedId, speciesIds]);
 
   useEffect(() => {
     let disposed = false;
     let map: import("leaflet").Map | undefined;
     const markers = markerById.current;
     const advisoryRings = advisoryRingById.current;
+    const markerVisualKeys = markerVisualKeyById.current;
 
     async function mountMap() {
       if (!mapElement.current) return;
@@ -103,11 +107,19 @@ export function FishingMap({ locations, speciesIds, opportunities, selectedId, o
           fillOpacity: hasSpeciesEvidence ? 1 : 0.72,
         }).addTo(map!);
         marker.bindTooltip(
-          tooltipHtml(location, opportunity, speciesIds),
+          () => tooltipHtml(
+            location,
+            opportunitiesRef.current.get(location.id) ?? null,
+            speciesIdsRef.current,
+          ),
           { direction: "top", offset: [0, -8], opacity: 1 },
         );
         marker.on("click", () => onSelectRef.current(location.id));
         markers.set(location.id, marker);
+        markerVisualKeys.set(
+          location.id,
+          `${selected ? "selected" : "idle"}:${opportunityColor(opportunity)}:${hasSpeciesEvidence ? "evidenced" : "pending"}`,
+        );
         bounds.push([location.lat, location.lng]);
       });
 
@@ -134,6 +146,7 @@ export function FishingMap({ locations, speciesIds, opportunities, selectedId, o
       disposed = true;
       markers.clear();
       advisoryRings.clear();
+      markerVisualKeys.clear();
       map?.stop();
       map?.remove();
     };
@@ -145,6 +158,8 @@ export function FishingMap({ locations, speciesIds, opportunities, selectedId, o
       if (!marker) continue;
       const opportunity = opportunities.get(location.id) ?? null;
       const selected = location.id === selectedId;
+      const visualKey = `${selected ? "selected" : "idle"}:${opportunityColor(opportunity)}:${opportunity ? "evidenced" : "pending"}`;
+      if (markerVisualKeyById.current.get(location.id) === visualKey) continue;
       marker.setRadius(selected ? 12 : 9);
       marker.setStyle({
         color: selected ? "#fff8e8" : "#173b3f",
@@ -152,10 +167,10 @@ export function FishingMap({ locations, speciesIds, opportunities, selectedId, o
         fillColor: opportunityColor(opportunity),
         fillOpacity: opportunity ? 1 : 0.72,
       });
-      marker.setTooltipContent(tooltipHtml(location, opportunity, speciesIds));
       advisoryRingById.current.get(location.id)?.setRadius(selected ? 17 : 14);
+      markerVisualKeyById.current.set(location.id, visualKey);
     }
-  }, [locations, opportunities, selectedId, speciesIds]);
+  }, [locations, opportunities, selectedId]);
 
   return <div className="leaflet-shell" ref={mapElement} aria-label="Interactive map of fishing opportunities" />;
 }

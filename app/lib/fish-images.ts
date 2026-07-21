@@ -21,6 +21,7 @@ export const fishImages: Record<string, FishImage> = {
   "spotted-bass": { src: "/fish/spotted-bass.jpg", credit: "Noel Burkhead / Howard Jelks, U.S. Geological Survey (USGS)", license: "Public domain (U.S. Government work — USGS)", sourceUrl: "https://commons.wikimedia.org/wiki/File:Micropterus_punctulatus.jpg" },
   "striped-bass": { src: "/fish/striped-bass.jpg", credit: "Duane Raver / U.S. Fish & Wildlife Service", license: "Public domain (released into public domain; USFWS work)", sourceUrl: "https://commons.wikimedia.org/wiki/File:Striped_bass_morone_saxatilis_fish_(white_background).jpg" },
   "walleye": { src: "/fish/walleye.jpg", credit: "Sam Stukel / U.S. Fish & Wildlife Service", license: "Public domain (U.S. Government work — USFWS)", sourceUrl: "https://commons.wikimedia.org/wiki/File:Walleye_(Sander_vitreus)_(1).jpg" },
+  "saugeye": { src: "/fish/saugeye.png", credit: "BiteMap NOVA / OpenAI", license: "Original AI-generated field-guide illustration · not documentary evidence", sourceUrl: "/fish/saugeye.png" },
   "bluegill": { src: "/fish/bluegill.jpg", credit: "Ryan Hagerty/USFWS", license: "Public domain (U.S. Fish & Wildlife Service work)", sourceUrl: "https://www.fws.gov/media/bluegill" },
   "redbreast-sunfish": { src: "/fish/redbreast-sunfish.jpg", credit: "USFWS", license: "Public domain (U.S. Fish & Wildlife Service work)", sourceUrl: "https://www.fws.gov/media/redbreast-sunfishjpg" },
   "black-crappie": { src: "/fish/black-crappie.jpg", credit: "Duane Raver / USFWS", license: "Public domain (artwork commissioned by U.S. Fish & Wildlife Service)", sourceUrl: "https://www.fws.gov/media/black-crappie-1" },
@@ -53,6 +54,9 @@ export const fishImages: Record<string, FishImage> = {
   "yellow-bullhead": { src: "/fish/yellow-bullhead.jpg", credit: "Ryan Hagerty/USFWS", license: "Public domain (U.S. Fish & Wildlife Service work)", sourceUrl: "https://www.fws.gov/media/yellow-bullhead-catfish" },
   "white-catfish": { src: "/fish/white-catfish.jpg", credit: "Duane Raver/USFWS", license: "Public domain (artwork commissioned by U.S. Fish & Wildlife Service)", sourceUrl: "https://www.fws.gov/media/white-catfish" },
   "gizzard-shad": { src: "/fish/gizzard-shad.jpg", credit: "Hugh M. Smith / Freshwater and Marine Image Bank", license: "Public domain", sourceUrl: "https://commons.wikimedia.org/wiki/File:FMIB_51364_Gizzard_Shad;_Mud_Shad_Dorosoma_cepedianum.jpeg" },
+  "longnose-gar": { src: "/fish/longnose-gar.jpg", credit: "Sam Stukel / U.S. Fish & Wildlife Service", license: "Public domain (U.S. Fish & Wildlife Service work)", sourceUrl: "https://commons.wikimedia.org/wiki/File:Longnose_Gar_(Lepisosteus_osseus).jpg" },
+  "hickory-shad": { src: "/fish/hickory-shad.png", credit: "Duane Raver / U.S. Fish & Wildlife Service", license: "Public domain", sourceUrl: "https://commons.wikimedia.org/wiki/File:Hickory_shad_(Duane_Raver).png" },
+  "american-shad": { src: "/fish/american-shad.jpg", credit: "Duane Raver / U.S. Fish & Wildlife Service", license: "Public domain (U.S. Fish & Wildlife Service work)", sourceUrl: "https://www.fws.gov/media/american-shad-0" },
 };
 
 export function fishImageFor(speciesId: string): FishImage | undefined {

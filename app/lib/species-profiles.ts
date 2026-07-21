@@ -26,6 +26,7 @@ export type SpeciesProfile = {
   dielPattern?: string;
   preferredMinF?: number;
   preferredMaxF?: number;
+  temperatureResponse?: "preference-band" | "stress-only";
   toleranceMinF?: number;
   toleranceMaxF?: number;
   spawnMonths?: number[];
@@ -34,6 +35,12 @@ export type SpeciesProfile = {
   identification?: string;
   baits?: string[];
   handlingNote?: string;
+  regulationAlert?: {
+    title: string;
+    detail: string;
+    sourceUrl: string;
+    sourceLabel: string;
+  };
   diet?: string;
   confusedWith?: SpeciesLookalike[];
   sourceUrls?: string[];

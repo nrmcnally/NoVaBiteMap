@@ -152,6 +152,9 @@ const SPECIES_BY_SCIENTIFIC_NAME: Record<string, string> = {
   "Ameiurus natalis": "yellow-bullhead",
   "Ameiurus nebulosus": "brown-bullhead",
   "Dorosoma cepedianum": "gizzard-shad",
+  "Lepisosteus osseus": "longnose-gar",
+  "Alosa mediocris": "hickory-shad",
+  "Alosa sapidissima": "american-shad",
 };
 
 const normalized = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
@@ -165,20 +168,44 @@ const modeledEvidence = (record: Evidence) =>
   (record.sourceName ?? "").toLowerCase().includes("aquatic gap");
 const direct = (record: Evidence) => !modeledEvidence(record);
 const dateSort = (a: string | null, b: string | null) => (a ?? "").localeCompare(b ?? "");
-const localDate = () => new Intl.DateTimeFormat("en-CA", {
-  timeZone: "America/New_York",
-  year: "numeric",
-  month: "2-digit",
-  day: "2-digit",
-}).format(new Date());
+const observationKey = (record: Observation) => record.sourceDatabaseId
+  ? [record.sourceDatabaseId, record.scientificName, record.observationDate, record.waterbody, record.observer, record.locationDescription].join("|")
+  : ["observation", record.observationId, record.speciesObservationId].join("|");
+const CHECK = process.argv.includes("--check");
+const requestedAsOf = process.argv.find((argument) => argument.startsWith("--as-of="))?.slice("--as-of=".length);
+// Review age is intentionally pinned. Advancing it is a deliberate evidence-review
+// event that regenerates the checked-in ledger, not an incidental effect of running
+// tests on a later calendar day.
+const REVIEW_AS_OF = requestedAsOf ?? process.env.BITEMAP_REVIEW_AS_OF ?? "2026-07-21";
+const CURRENT_MANUAL_VERDICTS = new Set([
+  "approved-direct-observation",
+  "approved-official-waterbody-listing",
+  "approved-exact-agency-report",
+]);
+if (!/^\d{4}-\d{2}-\d{2}$/.test(REVIEW_AS_OF) || Number.isNaN(Date.parse(`${REVIEW_AS_OF}T12:00:00Z`))) {
+  throw new Error(`Invalid review as-of date: ${REVIEW_AS_OF}`);
+}
+const reviewAsOfMs = Date.parse(`${REVIEW_AS_OF}T12:00:00Z`);
+const localDate = () => REVIEW_AS_OF;
 const recency = (value: string | null) => {
   if (!value) return { band: "undated", ageYears: null };
-  const ageYears = (Date.now() - Date.parse(`${value}T12:00:00Z`)) / (365.2425 * 24 * 60 * 60 * 1000);
+  const ageYears = (reviewAsOfMs - Date.parse(`${value}T12:00:00Z`)) / (365.2425 * 24 * 60 * 60 * 1000);
   if (ageYears < -0.1) return { band: "future-date-review", ageYears: Number(ageYears.toFixed(1)) };
   if (ageYears <= 5) return { band: "recent-0-to-5-years", ageYears: Number(Math.max(0, ageYears).toFixed(1)) };
   if (ageYears <= 10) return { band: "aging-5-to-10-years", ageYears: Number(ageYears.toFixed(1)) };
   return { band: "historical-over-10-years", ageYears: Number(ageYears.toFixed(1)) };
 };
+
+function writeOrCheck(path: string, content: string) {
+  if (!CHECK) {
+    writeFileSync(path, content, "utf8");
+    return;
+  }
+  const current = readFileSync(path, "utf8");
+  if (current !== content) {
+    throw new Error(`Generated review artifact is stale: ${path}. Run the review builder without --check.`);
+  }
+}
 
 function main() {
   const here = dirname(fileURLToPath(import.meta.url));
@@ -208,10 +235,14 @@ function main() {
     const names = new Set(
       [location.waterbody, location.name, ...(location.aliases ?? [])].flatMap(nameVariants).map(normalized).filter(Boolean),
     );
-    const matched = vafwis.observations.filter((record) =>
-      record.waterbody && names.has(normalized(record.waterbody)) &&
-      record.locationMatches.some((match) => match.locationId === location.id),
-    );
+    const matched = [...new Map(
+      vafwis.observations
+        .filter((record) =>
+          record.waterbody && names.has(normalized(record.waterbody)) &&
+          record.locationMatches.some((match) => match.locationId === location.id),
+        )
+        .map((record) => [observationKey(record), record] as const),
+    ).values()];
     const mapped = matched
       .map((record) => ({ record, speciesId: record.scientificName ? SPECIES_BY_SCIENTIFIC_NAME[record.scientificName] : undefined }))
       .filter((item): item is { record: Observation; speciesId: string } => Boolean(item.speciesId));
@@ -327,10 +358,12 @@ function main() {
     const manualClaimReviews = verdicts.manualClaims.filter((review) => review.locationId === location.id);
     const contradictionReviews = verdicts.contradictionReviews.filter((review) => review.locationId === location.id);
     const approvedManualClaims = manualClaimReviews.filter((review) => review.verdict.startsWith("approved-"));
+    const currentApprovedManualClaims = approvedManualClaims.filter((review) => CURRENT_MANUAL_VERDICTS.has(review.verdict));
+    const historicalApprovedManualClaims = approvedManualClaims.filter((review) => !CURRENT_MANUAL_VERDICTS.has(review.verdict));
     const independentlyApprovedSpeciesIds = new Set([
       ...habitatCandidates.filter((candidate) => candidate.reviewStatus.startsWith("approved-")).map((candidate) => candidate.speciesId),
       ...stockingCandidates.filter((candidate) => candidate.reviewStatus.startsWith("approved-")).map((candidate) => candidate.speciesId),
-      ...approvedManualClaims.map((claim) => claim.speciesId),
+      ...currentApprovedManualClaims.map((claim) => claim.speciesId),
     ].filter((speciesId): speciesId is string => Boolean(speciesId)));
 
     const existingDirect = location.evidence.filter(direct);
@@ -357,8 +390,10 @@ function main() {
       ? "existing-direct-claim-needs-reverification"
       : existingDirect.length
         ? "existing-direct-claims-reviewed"
-      : approvedManualClaims.length
+      : currentApprovedManualClaims.length
         ? "manual-primary-source-claim-approved"
+      : historicalApprovedManualClaims.length
+        ? "historical-primary-source-only"
       : targetCandidates.length
         ? "direct-agency-candidate-found"
         : candidates.length || habitatCandidates.length
@@ -435,7 +470,16 @@ function main() {
     location.agencyObservationCandidates.length === 0 &&
     location.agencyHabitatCandidates.length === 0 &&
     location.agencyStockingCandidates.length === 0 &&
-    location.manualClaimReviews.length === 0
+    !location.manualClaimReviews.some((claim) => claim.verdict.startsWith("approved-"))
+  ).length;
+  const historicalOnlyCount = guessReliant.filter((location) =>
+    location.agencyObservationCandidates.length === 0 &&
+    location.agencyHabitatCandidates.length === 0 &&
+    location.agencyStockingCandidates.length === 0 &&
+    location.manualClaimReviews.some((claim) =>
+      claim.verdict.startsWith("approved-") && !CURRENT_MANUAL_VERDICTS.has(claim.verdict)
+    ) &&
+    !location.manualClaimReviews.some((claim) => CURRENT_MANUAL_VERDICTS.has(claim.verdict))
   ).length;
   const approvedClaimCount = locations.reduce((count, location) => count +
     location.agencyHabitatCandidates.filter((candidate) => candidate.reviewStatus.startsWith("approved-")).length +
@@ -477,6 +521,7 @@ function main() {
         targetCandidateLocationCount: targetCandidateCount,
         nonTargetOnlyLocationCount: nonTargetOnlyCount,
         noCandidateLocationCount: noCandidateCount,
+        historicalOnlyLocationCount: historicalOnlyCount,
         approvedClaimCount,
         approvedClaimLocationCount,
         verifiedRuntimeClaimCount,
@@ -490,8 +535,8 @@ function main() {
   };
 
   const dataDir = resolve(here, "../docs/data");
-  mkdirSync(dataDir, { recursive: true });
-  writeFileSync(resolve(dataDir, "fish-community-review-nova.json"), JSON.stringify(payload, null, 2) + "\n", "utf8");
+  if (!CHECK) mkdirSync(dataDir, { recursive: true });
+  writeOrCheck(resolve(dataDir, "fish-community-review-nova.json"), JSON.stringify(payload, null, 2) + "\n");
 
   const directRejections = [
     ...verdicts.priorClaimReviews
@@ -522,8 +567,8 @@ function main() {
     claims: directRejections,
   };
   const generatedDir = resolve(here, "../app/lib/generated");
-  mkdirSync(generatedDir, { recursive: true });
-  writeFileSync(resolve(generatedDir, "evidence-rejections.json"), JSON.stringify(rejectionSnapshot, null, 2) + "\n", "utf8");
+  if (!CHECK) mkdirSync(generatedDir, { recursive: true });
+  writeOrCheck(resolve(generatedDir, "evidence-rejections.json"), JSON.stringify(rejectionSnapshot, null, 2) + "\n");
 
   const markdown = `# Fish-community evidence review\n\n` +
     `Generated ${payload.meta.generated}. This is a review queue, not runtime evidence.\n\n` +
@@ -531,6 +576,7 @@ function main() {
     `- ${guessReliant.length} locations currently rely only on modeled/nearby evidence\n` +
     `- ${targetCandidateCount} guess-reliant locations now have exact-named-water agency target-fish candidates\n` +
     `- ${nonTargetOnlyCount} have exact-water agency records only for community fish without a reviewed target profile\n` +
+    `- ${historicalOnlyCount} have exact-water historical primary-source records that are not promoted as current presence\n` +
     `- ${noCandidateCount} have no exact-water primary-source candidate and still require another source\n\n` +
     `- ${approvedClaimCount} exact-water claims across ${approvedClaimLocationCount} locations have passed the first adversarial source review\n` +
     `- ${verifiedRuntimeClaimCount} prior-agent claims already present in runtime are now independently verified or corroborated\n` +
@@ -540,12 +586,12 @@ function main() {
     `- 0 newly researched candidate claims have been promoted into live rankings\n\n` +
     `## Promotion gate\n\n` +
     `A claim can be approved only after exact-water/segment, exact species, observation date, source provenance, contradictory evidence, and public-access status are reviewed. Automated candidates are never promoted by this script.\n`;
-  writeFileSync(resolve(here, "../docs/FISH_COMMUNITY_REVIEW.md"), markdown, "utf8");
+  writeOrCheck(resolve(here, "../docs/FISH_COMMUNITY_REVIEW.md"), markdown);
   console.log(
     `Built review ledger: ${guessReliant.length} guess-reliant; ${targetCandidateCount} target candidates; ` +
     `${nonTargetOnlyCount} non-target-only; ${noCandidateCount} unresolved.`,
   );
-  if (process.argv.includes("--check") && (unverifiedRuntimeDirectClaimCount || missingSourceRuntimeDirectClaimCount)) {
+  if (CHECK && (unverifiedRuntimeDirectClaimCount || missingSourceRuntimeDirectClaimCount)) {
     throw new Error(
       `Direct evidence review incomplete: ${unverifiedRuntimeDirectClaimCount} unverified and ` +
       `${missingSourceRuntimeDirectClaimCount} missing source URLs.`,

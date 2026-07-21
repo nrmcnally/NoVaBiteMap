@@ -119,18 +119,33 @@ def water_temp_multiplier(
     """Return effective thermal suitability, attenuated by estimate confidence."""
     if water_temp_f is None:
         return 1.0, "unavailable"
-    pmin = float(profile["preferredMinF"])
-    pmax = float(profile["preferredMaxF"])
     tmin = float(profile["toleranceMinF"])
     tmax = float(profile["toleranceMaxF"])
-    if pmin <= water_temp_f <= pmax:
-        suit = 1.0
-    elif tmin <= water_temp_f < pmin:
-        suit = 0.4 + 0.6 * (water_temp_f - tmin) / max(1e-6, pmin - tmin)
-    elif pmax < water_temp_f <= tmax:
-        suit = 0.4 + 0.6 * (tmax - water_temp_f) / max(1e-6, tmax - pmax)
+    if profile.get("temperatureResponse") == "stress-only":
+        # Some species have defensible cold/heat stress evidence but no portable
+        # feeding optimum. Keep the broad middle neutral instead of turning an
+        # aquaculture growth band into a bite multiplier.
+        cold_recovery_f = float(profile.get("coldStressRecoveryF", 50))
+        heat_stress_f = float(profile.get("heatStressStartF", 88))
+        if water_temp_f < tmin or water_temp_f > tmax:
+            suit = TEMP_FLOOR
+        elif water_temp_f < cold_recovery_f:
+            suit = 0.6 + 0.4 * (water_temp_f - tmin) / max(1e-6, cold_recovery_f - tmin)
+        elif water_temp_f <= heat_stress_f:
+            suit = 1.0
+        else:
+            suit = 1.0 - 0.45 * (water_temp_f - heat_stress_f) / max(1e-6, tmax - heat_stress_f)
     else:
-        suit = TEMP_FLOOR
+        pmin = float(profile["preferredMinF"])
+        pmax = float(profile["preferredMaxF"])
+        if pmin <= water_temp_f <= pmax:
+            suit = 1.0
+        elif tmin <= water_temp_f < pmin:
+            suit = 0.4 + 0.6 * (water_temp_f - tmin) / max(1e-6, pmin - tmin)
+        elif pmax < water_temp_f <= tmax:
+            suit = 0.4 + 0.6 * (tmax - water_temp_f) / max(1e-6, tmax - pmax)
+        else:
+            suit = TEMP_FLOOR
     reliability = clamp(confidence)
     effective = 1 - reliability * (1 - suit)
     return round(effective, 3), status

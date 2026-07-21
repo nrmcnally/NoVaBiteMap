@@ -6,11 +6,12 @@ practical question: where should I fish, what should I target, and when should I
 go—without pretending a score guarantees a catch.
 
 The current Phase 1 work in progress includes a polished map-first web app and a
-196-entry research catalog. Of those entries, 88 have authority-verified public
-access and 108 are only *listed* waters whose exact fishing waypoint or access
-still requires review. The runtime currently contains 245 independently reviewed
-direct species claims at 64 locations plus 391 clearly modeled/nearby-reach
-records; modeled records are not equivalent to exact-water observations.
+252-entry research catalog. Of those entries, 143 have authority-verified public
+access and 109 are *listed* waters whose exact fishing waypoint or access still
+requires review. The runtime currently contains 1,351 independently reviewed
+direct species claims at 199 locations plus 349 clearly modeled/nearby-reach
+records; modeled records are not equivalent to exact-water observations. In
+total, 213 waters carry some evidence and 39 remain honestly empty.
 
 The product also includes species and alias search, evidence-gated rankings,
 address- or ZIP-based travel estimates, Google Maps directions, live NWS
@@ -98,6 +99,12 @@ when it starts. To run the migration manually:
 docker compose run --rm api alembic upgrade head
 ```
 
+For a small tester release, use the
+[alpha test checklist](docs/ALPHA_TEST_CHECKLIST.md). Signed-in testers can send
+private feedback from any page or report a specific spot from its detail page.
+Allowlisted administrators review those reports at `/admin/data-health`;
+feedback never changes evidence or scores automatically.
+
 ## Data honesty
 
 - Verified access records come from the responsible public authority; `listed`
@@ -129,3 +136,4 @@ docker compose run --rm api alembic upgrade head
 - [Model card](docs/MODEL_CARD.md)
 - [Roadmap](docs/ROADMAP.md)
 - [Prioritized TODO](docs/TODO.md)
+- [Alpha test checklist](docs/ALPHA_TEST_CHECKLIST.md)

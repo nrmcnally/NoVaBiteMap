@@ -80,7 +80,7 @@ Because a promoted claim always corresponds to an approved candidate, the review
   creeks are largemouth/panfish waters, not the smallmouth the guess asserted).
 - **VAFWIS review criterion** = exact-named-water **and** exact-taxon match in DWR's
   own collection database, confidence scaled by recency band, always dated. Applied
-  consistently across all 196 waters — that consistent, transparent rule *is* the review.
+  consistently across all 252 waters — that consistent, transparent rule *is* the review.
 - **Same-waterbody completion (tier 5).** Access points on one river carried only the
   species documented at their exact point, so e.g. Shenandoah ramps showed smallmouth
   but not the channel catfish documented elsewhere on the same river (a "catfish
@@ -173,7 +173,7 @@ empty water from real sources, **(2)** ensure all public-access waters in the re
 are present, **(3)** per-water audit so each water's species are correct and none are
 overlooked.
 
-**Coverage state:** 174 / 196 waters carry evidence; **22 honestly empty**. The
+**Coverage state (2026-07-18):** 213 / 252 waters carry evidence; **39 honestly empty**. The
 remainder are mostly small SNP/GWNF mountain streams whose only records are non-game or
 in NPS survey PDFs (Wilson Run, Cabin Run, Rocky Run, Phils Arm/Sloan/Moody), a few tidal
 creeks with only a Mummichog record (Chotank Creek — not registered as a target), and a

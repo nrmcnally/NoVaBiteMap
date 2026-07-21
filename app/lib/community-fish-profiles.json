@@ -459,6 +459,105 @@
         "https://mdc.mo.gov/discover-nature/field-guide/gizzard-shad"
       ],
       "notes": "Shad abundance strongly affects predator fisheries, but this guide record is not a direct baitfish-density measurement at any BiteMap access point."
+    },
+    {
+      "speciesId": "longnose-gar",
+      "guideOnly": true,
+      "family": "Gars (Lepisosteidae)",
+      "nativeStatus": "native",
+      "statusNote": "A native ancient lineage documented by Virginia DWR throughout the Potomac and Rappahannock watersheds.",
+      "typicalMinInches": 24,
+      "typicalMaxInches": 48,
+      "identification": "A long cylindrical fish with armor-like diamond scales and an extremely narrow, elongated tooth-filled snout. The dorsal and anal fins sit far back near the rounded tail.",
+      "baits": ["live or dead baitfish where legal", "rope-style gar lure", "small jerkbaits", "cut fish beneath a float"],
+      "dielPattern": "flexible",
+      "spawnMonths": [4, 5, 6],
+      "waterbodyPreference": { "river": 1, "stream": 0.2, "reservoir": 0.7, "lake": 0.7, "pond": 0.1, "bay": 0.9 },
+      "diet": "An ambush predator feeding primarily on fishes, with crustaceans and other aquatic animals taken opportunistically.",
+      "handlingNote": "Use long pliers and support the fish horizontally. Gar have sharp teeth and hard scales; release carefully unless harvest is legal and intended.",
+      "primaryTechniquesBySeason": {
+        "cool": "Look for deeper pools and slow runs where fish can hold out of strong current; use a patient baitfish presentation.",
+        "warm": "Watch for gar rolling at the surface in slow tidal reaches, estuaries, and deep pools, then place a bait or gar lure ahead of the fish."
+      },
+      "confusedWith": [],
+      "confidence": "reviewed-guide-only",
+      "sourceUrls": [
+        "https://dwr.virginia.gov/wildlife/information/longnose-gar/",
+        "https://www.fws.gov/species/longnose-gar-lepisosteus-osseus"
+      ],
+      "notes": "The guide includes this fish because DWR documents regional watershed occurrence and VAFWIS has a named-water record in Dogue Creek. It remains outside bite scoring until a dedicated catchability review is complete."
+    },
+    {
+      "speciesId": "hickory-shad",
+      "guideOnly": true,
+      "family": "Herrings and shads (Clupeidae)",
+      "nativeStatus": "native",
+      "statusNote": "A native anadromous fish that enters Chesapeake tributaries during its spring spawning migration.",
+      "typicalMinInches": 12,
+      "typicalMaxInches": 20,
+      "identification": "A silvery, laterally compressed shad with a deeply forked tail, a dark shoulder spot followed by smaller spots, and a lower jaw that projects noticeably beyond the upper jaw.",
+      "baits": ["shad darts", "small spoons", "small bright jigs", "tandem dart-and-spoon rigs"],
+      "dielPattern": "flexible",
+      "spawnMonths": [3, 4],
+      "seasonalActivityByMonth": [0, 0.15, 0.9, 1, 0.35, 0, 0, 0, 0, 0, 0, 0],
+      "waterbodyPreference": { "river": 1, "stream": 0.2, "reservoir": -0.8, "lake": -0.8, "pond": -1, "bay": 0.9 },
+      "diet": "Zooplankton, small fishes, squid, fish eggs, and crustaceans; migrating adults commonly strike small flashing or brightly colored lures.",
+      "handlingNote": "Hickory and American shad have different harvest rules. Identify the fish carefully and verify the current rule for the exact water and jurisdiction before keeping anything.",
+      "regulationAlert": {
+        "title": "Check the exact-water shad rule",
+        "detail": "Hickory shad harvest rules can differ across inland, tidal, and Potomac jurisdictions. Confirm the current rule before keeping a fish, and release it if identification is uncertain.",
+        "sourceUrl": "https://dwr.virginia.gov/fishing/regulations/",
+        "sourceLabel": "Current Virginia fishing regulations"
+      },
+      "primaryTechniquesBySeason": {
+        "cool": "During the spring run, swing or retrieve shad darts and small spoons through current seams, river bends, and deeper holding water near the fall line."
+      },
+      "confusedWith": [
+        { "speciesId": "american-shad", "tell": "Hickory shad usually has a strongly projecting lower jaw and smaller average size; American shad is deeper-bodied with a lower jaw that does not project as strongly." }
+      ],
+      "confidence": "reviewed-guide-only",
+      "sourceUrls": [
+        "https://dwr.virginia.gov/wildlife/information/hickory-shad/",
+        "https://dwr.virginia.gov/blog/american-or-hickory-id-your-shad-catch/",
+        "https://www.mrc.virginia.gov/commission_briefing_packets/2024/2024-12-03-Briefing-Packet.pdf"
+      ],
+      "notes": "An official VMRC briefing identifies the Occoquan River near River Mill Park as a popular hickory-shad fishery. The isolated Hidden Pond observation is deliberately not promoted pending adversarial verification."
+    },
+    {
+      "speciesId": "american-shad",
+      "guideOnly": true,
+      "family": "Herrings and shads (Clupeidae)",
+      "nativeStatus": "native",
+      "statusNote": "A native anadromous fish and historic Potomac species of conservation concern that returns from the Atlantic to spawn in freshwater rivers.",
+      "typicalMinInches": 16,
+      "typicalMaxInches": 24,
+      "identification": "A large, deep-bodied silver shad with a greenish back, a deeply forked tail, sharp belly scutes, and one dark shoulder spot often followed by several smaller spots. The lower jaw does not project as strongly as a hickory shad's.",
+      "baits": ["shad darts", "small spoons", "small bright jigs", "tandem dart-and-spoon rigs"],
+      "dielPattern": "flexible",
+      "spawnMonths": [4, 5],
+      "seasonalActivityByMonth": [0, 0, 0.2, 0.95, 1, 0.25, 0, 0, 0, 0, 0, 0],
+      "waterbodyPreference": { "river": 1, "stream": 0.2, "reservoir": -0.8, "lake": -0.8, "pond": -1, "bay": 0.9 },
+      "diet": "Plankton, aquatic insects, crustaceans, and small fishes. Adults reduce feeding during the spawning migration but can still strike small moving lures.",
+      "handlingNote": "Virginia allows no possession of American shad. Release every fish immediately, minimize air exposure, and do not confuse it with hickory shad.",
+      "regulationAlert": {
+        "title": "Immediate release required",
+        "detail": "American shad are catch-and-release only statewide in Virginia: possession is unlawful. Release the fish immediately and verify current Potomac or tidal-jurisdiction rules before fishing.",
+        "sourceUrl": "https://dwr.virginia.gov/blog/american-or-hickory-id-your-shad-catch/",
+        "sourceLabel": "Virginia DWR shad identification and regulation notice"
+      },
+      "primaryTechniquesBySeason": {
+        "cool": "During the spring run, retrieve or swing shad darts and small spoons through tidal-river current seams; use tackle that allows a quick, low-stress release."
+      },
+      "confusedWith": [
+        { "speciesId": "hickory-shad", "tell": "American shad is generally larger and deeper-bodied with a less-projecting lower jaw; hickory shad usually has a pronounced underbite." }
+      ],
+      "confidence": "reviewed-guide-only",
+      "sourceUrls": [
+        "https://dwr.virginia.gov/wildlife/information/american-shad/",
+        "https://dwr.virginia.gov/shad-cam/history-of-american-shad-in-virginia/",
+        "https://dwr.virginia.gov/blog/american-or-hickory-id-your-shad-catch/"
+      ],
+      "notes": "BiteMap treats the spring adult run separately from a July 2022 juvenile/nursery collection at the mouth of Kanes Creek. That observation proves waterbody use, not a year-round adult fishery."
     }
   ]
 }

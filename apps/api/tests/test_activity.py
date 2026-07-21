@@ -66,18 +66,35 @@ def test_trout_and_bass_diverge_by_season():
     assert _avg_activity("rainbow-trout", "2026-01-15", "-05:00") > _avg_activity("smallmouth-bass", "2026-01-15", "-05:00")
 
 
-def test_nocturnal_and_crepuscular_diel_patterns_differ():
+def test_flexible_and_crepuscular_diel_patterns_differ_without_forcing_catfish_nocturnal():
     tz = timezone(timedelta(hours=-4))
     def suit(species, hour):
         return hourly_activity(
-            PROFILES[species], dt_local=datetime(2026, 7, 15, hour, 0, tzinfo=tz),
+            PROFILES[species], dt_local=datetime(2026, 10, 15, hour, 0, tzinfo=tz),
             latitude=38.91, longitude=-78.19, waterbody_type="river",
             water_temp_f=None, wind_mph=5, precip_prob=10, short_forecast="Clear", hydrology=None,
         )["suitability"]
-    # Channel catfish (nocturnal) favors night over bright midday.
-    assert suit("channel-catfish", 23) > suit("channel-catfish", 13)
+    # Channel catfish is flexible: low light has only a mild edge, not a universal
+    # night-only multiplier.
+    assert PROFILES["channel-catfish"]["dielPattern"] == "flexible"
+    assert abs(suit("channel-catfish", 23) / suit("channel-catfish", 13) - 1.0) < 0.1
     # Smallmouth (crepuscular) favors dawn over midday.
     assert suit("smallmouth-bass", 7) > suit("smallmouth-bass", 13)
+
+
+def test_channel_catfish_temperature_is_stress_only_not_a_fake_optimum_band():
+    tz = timezone(timedelta(hours=-4))
+
+    def temperature_factor(value):
+        return hourly_activity(
+            PROFILES["channel-catfish"], dt_local=datetime(2026, 7, 15, 8, 0, tzinfo=tz),
+            latitude=38.91, longitude=-78.19, waterbody_type="reservoir",
+            water_temp_f=value, wind_mph=5, precip_prob=10, short_forecast="Clear", hydrology=None,
+        )["factors"]["waterTemperature"]
+
+    assert temperature_factor(58) == temperature_factor(72) == temperature_factor(84) == 1.0
+    assert temperature_factor(40) < 1.0
+    assert temperature_factor(93) < 1.0
 
 
 def test_air_temperature_never_acts_as_water_temperature():

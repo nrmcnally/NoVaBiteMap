@@ -19,6 +19,7 @@ export {
   Info,
   LockKeyhole,
   MapPin,
+  MessageSquare,
   Navigation,
   Ruler,
   ShieldAlert,

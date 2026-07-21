@@ -16,54 +16,74 @@ before public launch. Priority order:
 - [ ] **Enable shared cache (Redis / Cloudflare KV)** so horizontal scaling doesn't
       fragment the cache and hammer NWS/USGS.
 - [ ] **Key the weather cache on gridpoint, not exact coordinate** (kills redundant fetches).
-- [ ] **Converge map + detail on the canonical scoring engine** (one spot, one number).
+- [x] **Converge map + detail on the canonical scoring engine.** Explore now
+      precomputes a canonical Python score matrix; remaining differences are the
+      disclosed regional-anchor versus spot-specific environmental inputs.
 - [ ] **Cache-stampede / rate-limit protection** (stale-while-revalidate + single-flight).
 
-## Phase 1 audit checkpoint (2026-07-14)
+## Phase 1 audit checkpoint (2026-07-18)
 
-Working completion estimate: **about 60-65% overall**. The visible product and
-core scoring architecture are substantially built; release readiness is being
-held back by access verification, direct-evidence coverage, operational
-ingestion and end-to-end QA. Email/password account integration is now in place.
+Working completion estimate: **about 84-87% overall**. The alpha product, account
+flow, core scoring architecture, timeline, trip logging, and regional catalog are
+substantially built. The production container path and persistence restart test
+are green. Phase 1 completion is now held back mainly by access review, the
+remaining honest evidence gaps, ingestion hardening, accessibility/cross-browser
+QA, and real-angler alpha feedback.
 
 Current audited baseline:
 
-- **196 catalog entries:** 88 authority-verified access points and 108 `listed`
+- **252 catalog entries:** 143 authority-verified access points and 109 `listed`
   public-land waters whose exact fishing access/waypoint still needs review.
-- **64 locations have live direct species evidence; 132 remain modeled-only.**
-- **245 live direct claims independently verified/corroborated; 105 unsupported
+- **199 locations have live direct species evidence; 14 are modeled-only and 39
+  remain honestly empty.**
+- **1,351 live direct claims independently verified/corroborated; 105 unsupported
   source/location/species triples rejected; 0 live direct claims left unchecked.**
-- Of the modeled-only locations, 79 have a target-fish agency candidate awaiting
-  record-level promotion review, 10 have only community-fish records without a
-  reviewed target profile, and 42
-  still have no exact-water candidate in the current source set.
-- **391 modeled records** remain available as visibly qualified fallback context;
-  135 come from historic Aquatic GAP samples near, not at, the catalog water.
-- The checked-in frontend assembly and FastAPI seed now have an automated parity
-  gate, and rejected claims are blocked on both surfaces.
-- The initial prompt's exact named-water list is still missing **Bull Run proper,
-  Goose Creek, Broad Run, Hunting Run Reservoir, and Motts Run Reservoir**.
-  Cedar Run is present only as a listed water and still needs waypoint review.
-  The current VDH advisory now supplies exact segment-level species evidence for
-  Bull Run and Broad Run/South Run, but it does not prove a legal public access
-  point; those locations still need an authoritative access coordinate.
+- **349 modeled records** remain available as visibly qualified fallback context.
+- The review queue has 49 waters with no direct candidate in the current primary
+  source set, one with only a non-target community-fish candidate, and two with
+  historical-only primary-source records that do not establish current presence.
+- Coverage stabilization added structured permit, credential, age, harvest,
+  seasonal, license, and vessel restrictions for 17 access points. Unsupported
+  tidal/park wading claims were removed.
+- Carter's Pond, Hanson Park, Springhouse Pond, and Clearbrook Lake now have
+  current exact-water species claims from official sources. Lake Thompson's 2015
+  DWR community remains in the research ledger as historical only.
+- Bull Run, Goose Creek, Broad Run, and Hunting Run are represented. **Motts Run
+  Reservoir remains a named-water coverage gap**; the existing Motts entry is a
+  Rappahannock River access point, not the reservoir.
 
 ### P0 execution order from this audit
 
-1. Review the 79 exact-water agency candidate queues record by record; promote
-   only claims that pass exact water/segment, exact species, recency, provenance,
-   contradiction, and access checks.
-2. Verify or quarantine the 108 `listed` entries. A park-boundary/NHD match is
-   not by itself a fishing access point. Add the five missing prompt waters only
-   from an authoritative access coordinate and permission source.
-3. Move DWR/VAFWIS, trout, Aquatic GAP, USGS, and NWS refreshes into scheduled,
+1. Verify or quarantine the 109 `listed` entries. A park-boundary/NHD match is
+   not by itself a fishing access point.
+2. Research the 39 honest evidence gaps from exact-water agency pages/reports;
+   keep historical-only records out of current presence rankings.
+3. Add Motts Run Reservoir only after attaching an authoritative fishing-access
+   coordinate and permission source.
+4. Move DWR/VAFWIS, trout, Aquatic GAP, USGS, and NWS refreshes into scheduled,
    idempotent database jobs with last-known-good protection and admin-only
    controls.
-4. **Completed:** unify the email/password account and favorites UI. Hosted Sites
-   now uses D1-backed password hashes/sessions; Docker uses the equivalent
-   FastAPI/PostgreSQL backend behind the same HTTP-only cookie contract.
 5. Complete browser/mobile/accessibility journeys for search, filters, travel,
-   directions, favorites, alerts/advisories, and empty/stale states.
+   directions, favorites, alerts/advisories, access conditions, and empty/stale
+   states. Canonical map/detail model convergence is complete; per-gridpoint map
+   weather remains a post-alpha scaling improvement.
+
+### Alpha release hardening completed 2026-07-18
+
+- [x] Build and start the production web/API/PostGIS/Redis stack from clean
+  Docker images with health-gated startup.
+- [x] Verify account, session, favorite, trip, and tester-feedback persistence
+  through a complete stack restart.
+- [x] Pass the administrator allowlist into both web and API containers.
+- [x] Make production Compose fail fast when the PostgreSQL password or
+  real-contact NWS user agent is missing.
+- [x] Add signed-in general/spot feedback with D1 and PostgreSQL persistence,
+  plus a private administrator review queue.
+- [x] Keep tester feedback isolated from automatic evidence or score promotion.
+- [x] Add a repeatable friend-alpha checklist.
+- [ ] Run the checklist with real anglers and triage every high-impact data
+  report through the existing source-verification workflow.
+- [ ] Finish keyboard, screen-reader, mobile-device, and cross-browser QA.
 
 ## Sprint 1 status (2026-07-14) — intelligence core on a real database
 
@@ -301,7 +321,7 @@ search results.
 - [x] Compare multiple target species at a spot without combining them into one
   misleading score.
 - [ ] Let users save preferred species and default tackle/access styles.
-- [ ] Add private trip notes and zero-catch reporting to improve later validation.
+- [x] Add private trip notes and zero-catch reporting to improve later validation.
 - [ ] Add stocking and severe-weather notifications after notification controls
   and user preferences exist.
 
@@ -312,5 +332,5 @@ search results.
 3. **Completed for the alpha journeys:** Explore rankings, spot base records,
    and My Spots cards prefer the canonical API; Fish Guide reference content
    intentionally remains bundled and versioned for offline fallback.
-4. Complete end-to-end release QA, then add licensed photography species by
-   species.
+4. Run the limited friend alpha and finish accessibility/cross-browser QA, then
+   close the remaining access/evidence verification queue.

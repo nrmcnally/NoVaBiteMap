@@ -30,9 +30,19 @@ services:
 
   api:
     environment:
+      DATABASE_URL: postgresql+psycopg://bitemap:${POSTGRES_PASSWORD:?set a long random POSTGRES_PASSWORD in .env}@db:5432/bitemap
+      NWS_USER_AGENT: ${NWS_USER_AGENT:?set NWS_USER_AGENT with a real contact address in .env}
       # Browser talks to the same-origin web proxy, not the API directly, so CORS
       # is belt-and-suspenders — but keep it pointed at the real site anyway.
       CORS_ORIGINS: https://${DOMAIN}
+
+  web:
+    environment:
+      NWS_USER_AGENT: ${NWS_USER_AGENT:?set NWS_USER_AGENT with a real contact address in .env}
+
+  db:
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set a long random POSTGRES_PASSWORD in .env}
 
 volumes:
   caddy_data:

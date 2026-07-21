@@ -26,7 +26,8 @@ const REJECTED = new Set((rejections.claims || []).map((c) => `${c.locationId}|$
 
 const approvedWildTrout = new Set(verdicts.recordReviews.dwrWildTrout.approvedObjectIds);
 const wtSourceUrl = habitats.meta.sourceUrls.wildTrout;
-const reviewed = habitats.meta.retrieved || '2026-07-15';
+const reviewed = verdicts.meta.reviewed || '2026-07-18';
+const habitatSnapshotDate = habitats.meta.retrieved || reviewed;
 
 function wildTroutAvailability(cls, speciesId) {
   const base = cls === 'I' ? 0.74 : cls === 'III' ? 0.58 : 0.66;
@@ -61,7 +62,7 @@ for (const reach of habitats.wildTrout) {
         evidenceConfidence: 0.85,
         evidenceType: 'official listing',
         evidenceSummary: `Virginia DWR classifies ${reach.name} as a Class ${cls} wild trout stream with a documented ${nice(speciesId)} population.`,
-        lastEvidence: `DWR Wild Trout Streams (VAFWIS) reviewed ${reviewed}`,
+        lastEvidence: `DWR Wild Trout Streams (VAFWIS) snapshot ${habitatSnapshotDate}; claim reviewed ${reviewed}`,
         technique: 'Small inline spinner, dry fly, or nymph drifted through pockets and pool heads',
         depth: 'Plunge pools, undercut banks, and cool current seams',
         positive: [`Official DWR wild-trout designation (Class ${cls})`, `${nice(speciesId)} documented in the DWR Wild Trout Streams layer`],
@@ -96,6 +97,7 @@ for (const m of verdicts.manualClaims) {
     negative: ['Reviewed primary-source record; conditions and access can change'],
     sourceName: m.sourceName,
     sourceUrl: m.sourceUrl,
+    ...(m.seasonal ? { seasonal: m.seasonal } : {}),
   });
   manualClaims++;
 }
@@ -125,18 +127,23 @@ for (const [locId, speciesSet] of Object.entries(vafwisApproved)) {
     const band = RECENCY[c.recency?.band] || RECENCY['historical-over-10-years'];
     const obs = (c.observerTypes || [])[0] || 'DWR biologists';
     const dates = c.firstObserved === c.lastObserved ? c.lastObserved : `${c.firstObserved}-${c.lastObserved}`;
+    const americanShadNurseryRecord = c.speciesId === 'american-shad' && locId === 'nhd-stream-kanes-creek';
     add(locId, {
       speciesId: c.speciesId,
       availability: band.avail,
       quality: null,
       evidenceConfidence: band.conf,
       evidenceType: 'agency survey',
-      evidenceSummary: `Virginia DWR VAFWIS records document ${nice(c.speciesId)} in ${wb} - ${c.recordCount} record${c.recordCount === 1 ? '' : 's'} (${obs}), ${dates}.`,
+      evidenceSummary: americanShadNurseryRecord
+        ? `Virginia DWR VAFWIS documents one distinct American shad collection at the mouth of ${wb} in July 2022. The date and seine context support juvenile/nursery water use, not a year-round adult fishery or a spring-run catch-rate claim.`
+        : `Virginia DWR VAFWIS records document ${nice(c.speciesId)} in ${wb} - ${c.recordCount} record${c.recordCount === 1 ? '' : 's'} (${obs}), ${dates}.`,
       lastEvidence: `DWR VAFWIS collection records; last observed ${c.lastObserved}`,
       technique: 'Match presentation to the species, season, and current conditions',
       depth: 'Work accessible cover and structure first, then probe the first depth change',
-      positive: [`${c.recordCount} DWR VAFWIS collection record${c.recordCount === 1 ? '' : 's'} - exact water + exact taxon`, `Observation ${band.note}`],
-      negative: ['Documents presence as of the observation date(s), not current abundance'],
+      positive: [`${c.recordCount} distinct DWR VAFWIS collection record${c.recordCount === 1 ? '' : 's'} - exact water + exact taxon`, `Observation ${band.note}`],
+      negative: americanShadNurseryRecord
+        ? ['Juvenile/nursery occurrence only; does not document adult spring-run catchability', 'American shad are immediate-release only in Virginia']
+        : ['Documents presence as of the observation date(s), not current abundance'],
       sourceName: 'Virginia Department of Wildlife Resources (VAFWIS)',
       sourceUrl: VAFWIS_URL,
     });
@@ -152,6 +159,7 @@ const ANAD_SPECIES = {
   'Morone saxatilis': { id: 'striped-bass', months: [4, 5, 6], label: 'spring spawning run (Apr-Jun)' },
   'Perca flavescens': { id: 'yellow-perch', months: [2, 3, 4], label: 'late-winter to spring spawning run (Feb-Apr)' },
   'Alosa sapidissima': { id: 'american-shad', months: [4, 5], label: 'spring spawning run (Apr-May)' },
+  'Alosa mediocris': { id: 'hickory-shad', months: [3, 4], label: 'spring spawning run (Mar-Apr)' },
   'Morone americana': { id: 'white-perch', months: [3, 4, 5], label: 'spring spawning run (Mar-May)' },
 };
 const approvedAnad = new Set(verdicts.recordReviews.dwrAnadromous.approvedObjectIds);

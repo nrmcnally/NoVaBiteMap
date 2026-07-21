@@ -9,8 +9,8 @@ by impact. See [[ARCHITECTURE]] and [[BITE_SCIENCE_ROADMAP]].
 
 Data is fetched **on-demand when a spot is viewed**, then cached server-side
 (`apps/api/app/core/cache.py`) for a short TTL. There is **no background poller**,
-and that is correct: a poller refreshing all 196 waters every 15 min would make
-~19k NWS calls/day with zero users, risk rate-limit bans, and not improve accuracy
+and that is correct: a poller refreshing all 252 waters every 15 min would make
+~24k NWS calls/day with zero users, risk rate-limit bans, and not improve accuracy
 (a forecast is a forecast). Lazy + cache + graceful degradation (no fabricated data
 on provider failure) is the right foundation. Current TTLs: weather/hydrology
 15 min, water-temp air history 6 hr (`apps/api/app/services/conditions.py:24-26`).
@@ -40,10 +40,18 @@ Weather cache key is `nws:{lat:.3f},{lng:.3f}` (`conditions.py:30`). Waters shar
 one NWS gridpoint each trigger a *separate* NWS fetch. **Fix:** key on the gridpoint
 — fewer upstream calls, higher hit rate. Same change as #1.
 
-### 4. Map vs. detail can show different scores for the same spot
-The map scores client-side (`opportunityForForecast` → `buildForecast`) off the
-anchor, while the detail page uses the canonical FastAPI engine. One spot showing two
-numbers erodes trust on a public site. **Fix:** converge the map on the canonical engine.
+### 4. Canonical model convergence is delivered; environmental convergence remains
+Explore now requests one precomputed score matrix from
+`POST /api/opportunities/timeline`. When FastAPI is available, that matrix and the
+spot-detail forecast run the same reviewed Python species model; the browser only
+selects an already-computed array value while scrubbing. The standalone hosted
+web fallback is explicitly labeled `bundled-fallback` and is precomputed
+server-side rather than in the scrub hot path.
+
+Map and detail numbers can still legitimately differ because Explore uses the
+disclosed regional anchor without spot-specific hydrology/water temperature,
+while detail uses the spot forecast and verified environmental associations.
+Per-gridpoint weather in gap #1 is the remaining convergence work.
 
 ### 5. No cache-stampede / rate-limit protection
 Under peak load (dawn/dusk), an expired cache entry can let many requests hit NWS at
@@ -54,4 +62,4 @@ single-flight behavior — verify before launch.)
 ## What background polling would (and wouldn't) buy
 Would NOT improve accuracy. WOULD help: selectively pre-warming the top-N popular
 spots to cut p99 latency at peak and decouple user latency from upstream hiccups.
-Do it for a handful of hot spots, never for all 196.
+Do it for a handful of hot spots, never for all 252.

@@ -22,14 +22,13 @@ def test_seed_counts_match_audited_dataset(seeded_db):
 
     with SessionLocal() as s:
         assert s.scalar(select(func.count()).select_from(FishingLocationRecord)) == 252
-        assert s.scalar(select(func.count()).select_from(SpeciesRecord)) == 37
-        assert s.scalar(select(func.count()).select_from(SpeciesEvidenceRecord)) == 1690
-        assert s.scalar(select(func.count()).select_from(SpeciesScoringProfile)) == 20
+        assert s.scalar(select(func.count()).select_from(SpeciesRecord)) == 41
+        assert s.scalar(select(func.count()).select_from(SpeciesEvidenceRecord)) == 1705
+        assert s.scalar(select(func.count()).select_from(SpeciesScoringProfile)) == 21
         assert s.scalar(select(func.count()).select_from(StockingRecord)) == 13
         assert s.scalar(select(func.count()).select_from(LocationStationAssociation)) == 19
-        # 209 of 252 waters carry evidence; the rest honestly have none (the retired
-        # county/basin guess used to fill all 196).
-        assert s.scalar(select(func.count(func.distinct(SpeciesEvidenceRecord.location_id)))) == 209
+        # 213 of 252 waters carry evidence; the rest honestly have none.
+        assert s.scalar(select(func.count(func.distinct(SpeciesEvidenceRecord.location_id)))) == 213
 
 
 def test_reseed_is_idempotent(seeded_db):

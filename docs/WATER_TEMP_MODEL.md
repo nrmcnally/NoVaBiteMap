@@ -58,16 +58,16 @@ The prior run reported streams near two days and Lake Anna sites between four
 and ten days. That is directionally consistent with thermal inertia, but one
 short reservoir record cannot establish a general depth-to-τ conversion.
 
-## Coverage — what it takes to run this on all 196 waters
+## Coverage — what it takes to run this on all 252 waters
 
 | Input | Availability |
 |---|---|
 | Air-temp history | **Free everywhere** — Open-Meteo daily history/forecast at runtime |
-| Thermal memory τ | **163/196 waters are classified as flowing** and can receive the conservative regional alpha. The **33 standing waters** remain unavailable without an observation until a lake model is validated |
+| Thermal memory τ | **179/252 waters are classified as flowing** and can receive the conservative regional alpha. The **73 standing waters** remain unavailable without an observation until a lake model is validated |
 | Calibration gages | **58 stream + 3 lake** USGS 00010 sites in-region — many of our waters sit within a few miles of one |
-| Mean depth (33 standing waters) | Published for larger managed lakes (DWR pages/dam records); estimate small ponds from surface area (NHD polygons) with wider error |
+| Mean depth (73 standing waters) | Published for larger managed lakes (DWR pages/dam records); estimate small ponds from surface area (NHD polygons) with wider error |
 
-So **83% of catalog waters can receive a labeled regional alpha estimate without
+So **71% of catalog waters can receive a labeled regional alpha estimate without
 new depth data.** Standing-water work will require more than a depth pass:
 surface-temperature observations and stratification-aware validation are needed.
 

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { BookOpen, ClipboardList, Fish, Heart, Map } from "lucide-react";
+import { BookOpen, ClipboardList, Fish, Heart, Map, MessageSquare } from "lucide-react";
 import { AccountNav } from "./AccountNav";
 
 type TopNavProps = { active?: "explore" | "spots" | "trips" | "methodology" | "fish" | "account" };
@@ -34,6 +34,10 @@ export function TopNav({ active = "explore" }: TopNavProps) {
         </Link>
       </nav>
       <div className="nav-actions">
+        <Link className="feedback-nav" href="/feedback" title="Send alpha feedback">
+          <MessageSquare size={15} />
+          <span>Feedback</span>
+        </Link>
         <div className="nav-status" title="Recommendations never guarantee a catch">
           <span className="status-dot" /> Evidence-led
         </div>

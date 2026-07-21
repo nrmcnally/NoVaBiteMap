@@ -11,12 +11,13 @@ from fastapi import APIRouter, Depends, HTTPException, Query, Response, status
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from sqlalchemy import func, select
 from sqlalchemy.exc import IntegrityError
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, selectinload
 
 from ..auth.service import create_session_token, hash_password, token_hash, user_for_token, verify_password
 from ..core.config import settings
 from ..core.database import get_session
 from ..models.entities import (
+    AlphaFeedback,
     DataIngestionRun,
     FishingLocationRecord,
     HydrologyStation,
@@ -32,17 +33,20 @@ from ..models.entities import (
 from ..providers.base import ProviderError
 from ..providers.usgs import UsgsWaterProvider
 from ..schemas.contracts import (
+    AlphaFeedbackCreate,
     FavoriteCreate,
     FavoriteUpdate,
     LoginRequest,
     RegisterRequest,
     ScoreRequest,
+    TimelineScoresRequest,
     FishingTripCreate,
     FishingTripReplayUpdate,
 )
 from ..scoring.activity import build_species_forecast
 from ..scoring.engine import score_opportunity
 from ..scoring.service import score_species_at_location
+from ..scoring.water_temperature import unavailable_temperature_state
 
 
 def _current_month() -> int:
@@ -708,6 +712,170 @@ def calculate_opportunity(payload: ScoreRequest) -> dict:
     return score_opportunity(payload.model_dump())
 
 
+@router.post("/opportunities/timeline")
+async def timeline_opportunities(
+    payload: TimelineScoresRequest,
+    session: Session = Depends(get_session),
+) -> dict:
+    """Precompute Explore scores once so timeline scrubbing is an O(1) lookup.
+
+    This intentionally uses one disclosed regional NWS anchor. It runs the same
+    reviewed Python species model as spot details, but does not pretend the
+    regional pass includes location-specific hydrology or water temperature.
+    """
+    weather = await conditions_service.get_weather(
+        payload.anchor_latitude,
+        payload.anchor_longitude,
+    )
+    if not weather.get("available"):
+        raise HTTPException(
+            status_code=503,
+            detail=(
+                f"{weather.get('reason', 'weather unavailable')}. "
+                "Timeline scores require provider-backed forecast periods."
+            ),
+        )
+    periods = weather.get("periods", [])
+    if not periods:
+        raise HTTPException(status_code=503, detail="NWS returned no forecast periods")
+
+    requested_location_ids = list(dict.fromkeys(payload.location_ids))
+    requested_species_ids = set(payload.species_ids)
+    records = session.scalars(
+        select(FishingLocationRecord)
+        .options(selectinload(FishingLocationRecord.evidence))
+        .where(
+            FishingLocationRecord.id.in_(requested_location_ids),
+            FishingLocationRecord.public_access == True,  # noqa: E712
+        )
+    ).all()
+    records_by_id = {record.id: record for record in records}
+    associations = session.scalars(
+        select(LocationStationAssociation).where(
+            LocationStationAssociation.location_id.in_(requested_location_ids)
+        )
+    ).all()
+    associations_by_location: dict[str, LocationStationAssociation] = {}
+    for association in associations:
+        associations_by_location.setdefault(association.location_id, association)
+
+    profiles = opp.load_active_profiles(session)
+    period_index = {
+        period.get("startTime"): index
+        for index, period in enumerate(periods)
+        if period.get("startTime")
+    }
+    day_keys = list(
+        dict.fromkeys(
+            datetime.fromisoformat(period["startTime"]).strftime("%Y-%m-%d")
+            for period in periods
+            if period.get("startTime")
+        )
+    )[:5]
+    unavailable_temperature = unavailable_temperature_state(
+        "Regional Explore matrix does not apply location-specific water temperature."
+    )
+    matrix: dict[str, dict[str, dict]] = {}
+
+    for location_id in requested_location_ids:
+        record = records_by_id.get(location_id)
+        if record is None:
+            continue
+        association = associations_by_location.get(location_id)
+        grouped: dict[str, list[SpeciesEvidenceRecord]] = {}
+        for evidence in record.evidence:
+            if requested_species_ids and evidence.species_id not in requested_species_ids:
+                continue
+            if evidence.species_id not in profiles:
+                continue
+            grouped.setdefault(evidence.species_id, []).append(evidence)
+
+        location_scores: dict[str, dict] = {}
+        for species_id, evidence_records in grouped.items():
+            scored = score_species_at_location(
+                evidence_records,
+                activity=record.activity_estimate,
+                activity_available=True,
+                access_fit=record.access_fit,
+                has_hydrology=association is not None,
+                association_factor=association.association_factor if association else 1.0,
+            )
+            if scored is None:
+                continue
+            forecast = build_species_forecast(
+                profiles[species_id],
+                periods,
+                waterbody_type=record.waterbody_type,
+                latitude=record.latitude,
+                longitude=record.longitude,
+                availability=scored["availability_score"],
+                quality=scored["fishery_quality_score"],
+                access_fit=record.access_fit,
+                base_confidence=scored["confidence_score"],
+                hydrology=None,
+                alerts=weather.get("alerts", []),
+                water_temperature=unavailable_temperature,
+                association_factor=association.association_factor if association else 1.0,
+            )
+            hourly = forecast["hourly"]
+            days_by_key = {day["dateKey"]: day for day in forecast["days"]}
+            daily_scores: list[int | None] = []
+            daily_best_period_indexes: list[int | None] = []
+            for day_key in day_keys:
+                day = days_by_key.get(day_key)
+                daily_scores.append(day["score"] if day else None)
+                candidates = [row for row in hourly if row["dateKey"] == day_key]
+                best = max(candidates, key=lambda row: row["score"]) if candidates else None
+                daily_best_period_indexes.append(
+                    period_index.get(best["startTime"]) if best else None
+                )
+            location_scores[species_id] = {
+                "baseScore": scored["opportunity_score"],
+                "confidence": scored["confidence_score"],
+                "confidenceLabel": scored["confidence_label"],
+                "hourlyScores": [row["score"] for row in hourly],
+                "dailyScores": daily_scores,
+                "dailyBestPeriodIndexes": daily_best_period_indexes,
+            }
+        if location_scores:
+            matrix[location_id] = location_scores
+
+    return {
+        "contractVersion": "timeline-score-matrix-v0.1.0",
+        "engine": "canonical-api",
+        "provider": weather.get("provider", "National Weather Service"),
+        "retrievedAt": weather.get("retrieved_at"),
+        "forecastUpdatedAt": weather.get("forecast_updated_at"),
+        "anchor": {
+            "lat": payload.anchor_latitude,
+            "lng": payload.anchor_longitude,
+            "label": payload.anchor_label,
+        },
+        "basis": (
+            "One disclosed regional NWS anchor; canonical evidence and reviewed "
+            "species model per access point. Location-specific hydrology and water "
+            "temperature are reserved for spot details."
+        ),
+        "periods": [
+            {
+                "startTime": period.get("startTime"),
+                "temperature": period.get("temperature"),
+                "temperatureUnit": period.get("temperatureUnit"),
+                "shortForecast": period.get("shortForecast"),
+                "windSpeed": period.get("windSpeed"),
+                "windDirection": period.get("windDirection"),
+                "windGust": period.get("windGust"),
+                "isDaytime": period.get("isDaytime"),
+                "precipitationProbability": period.get("precipitationProbability"),
+            }
+            for period in periods
+        ],
+        "alerts": weather.get("alerts", []),
+        "dayKeys": day_keys,
+        "locations": matrix,
+    }
+
+
 # ---------------------------------------------------------------------------
 # Hydrology passthrough
 # ---------------------------------------------------------------------------
@@ -770,6 +938,30 @@ def fishing_trip_dict(trip: FishingTrip) -> dict:
     }
 
 
+def alpha_feedback_dict(
+    feedback: AlphaFeedback,
+    *,
+    user: User | None = None,
+    location: FishingLocationRecord | None = None,
+) -> dict:
+    result = {
+        "id": feedback.id,
+        "location_id": feedback.location_id,
+        "category": feedback.category,
+        "page_url": feedback.page_url,
+        "message": feedback.message,
+        "contact_ok": feedback.contact_ok,
+        "status": feedback.status,
+        "created_at": feedback.created_at,
+    }
+    if user is not None:
+        result["user_email"] = user.email
+        result["user_display_name"] = user.display_name
+    if location is not None:
+        result["location_name"] = location.name
+    return result
+
+
 @router.post("/auth/register", status_code=status.HTTP_201_CREATED)
 def register(payload: RegisterRequest, session: Session = Depends(get_session)) -> dict:
     user = User(
@@ -820,6 +1012,29 @@ def delete_account(user: User = Depends(current_user), session: Session = Depend
     session.delete(user)
     session.commit()
     return Response(status_code=204)
+
+
+@router.post("/users/me/feedback", status_code=201)
+def create_alpha_feedback(
+    payload: AlphaFeedbackCreate,
+    user: User = Depends(current_user),
+    session: Session = Depends(get_session),
+) -> dict:
+    if payload.location_id:
+        get_location(session, payload.location_id)
+    feedback = AlphaFeedback(
+        id=str(uuid.uuid4()),
+        user_id=user.id,
+        location_id=payload.location_id,
+        category=payload.category,
+        page_url=payload.page_url.strip() if payload.page_url else None,
+        message=payload.message.strip(),
+        contact_ok=payload.contact_ok,
+    )
+    session.add(feedback)
+    session.commit()
+    session.refresh(feedback)
+    return alpha_feedback_dict(feedback)
 
 
 @router.get("/users/me/favorites")
@@ -1063,6 +1278,24 @@ def _nested_dict_keys(value: object) -> set[str]:
 # ---------------------------------------------------------------------------
 # Data health (derived from real ingestion runs + DB counts)
 # ---------------------------------------------------------------------------
+@router.get("/admin/feedback")
+def list_alpha_feedback(
+    _: User = Depends(require_admin),
+    session: Session = Depends(get_session),
+) -> list[dict]:
+    rows = session.execute(
+        select(AlphaFeedback, User, FishingLocationRecord)
+        .join(User, User.id == AlphaFeedback.user_id)
+        .outerjoin(FishingLocationRecord, FishingLocationRecord.id == AlphaFeedback.location_id)
+        .order_by(AlphaFeedback.created_at.desc())
+        .limit(200)
+    ).all()
+    return [
+        alpha_feedback_dict(feedback, user=user, location=location)
+        for feedback, user, location in rows
+    ]
+
+
 @router.get("/data-sources/status")
 def data_source_status(session: Session = Depends(get_session)) -> dict:
     location_count = session.scalar(select(func.count()).select_from(FishingLocationRecord)) or 0

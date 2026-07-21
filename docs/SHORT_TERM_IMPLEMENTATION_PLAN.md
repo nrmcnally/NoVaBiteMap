@@ -507,6 +507,12 @@ new scoring systems during rollout.
 
 ## Milestone 15 - add the alpha feedback loop
 
+Status 2026-07-18: the private trip log captures the structured fishing outcome
+fields below, and a separate signed-in feedback form now captures incorrect-data
+reports, bugs, and ideas. Both hosted D1 and self-hosted PostgreSQL persist the
+records. Administrators review general reports privately; neither path can
+automatically change evidence or scoring.
+
 Allow testers to optionally report:
 
 - species targeted and caught;

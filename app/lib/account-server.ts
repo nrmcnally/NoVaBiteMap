@@ -54,6 +54,22 @@ export type AccountFishingTrip = {
   updatedAt: string;
 };
 
+export type AlphaFeedbackCategory = "incorrect-data" | "bug" | "idea" | "other";
+
+export type AccountAlphaFeedback = {
+  id: string;
+  userEmail: string | null;
+  userDisplayName: string | null;
+  locationId: string | null;
+  locationName: string | null;
+  category: AlphaFeedbackCategory;
+  pageUrl: string | null;
+  message: string;
+  contactOk: boolean;
+  status: string;
+  createdAt: string;
+};
+
 type PasswordUserResponse = {
   id: number;
   email: string;
@@ -98,6 +114,20 @@ export type PasswordFishingTripResponse = {
   condition_replayed_at: string | null;
   created_at: string;
   updated_at: string;
+};
+
+type PasswordAlphaFeedbackResponse = {
+  id: string;
+  user_email?: string;
+  user_display_name?: string | null;
+  location_id: string | null;
+  location_name?: string | null;
+  category: AlphaFeedbackCategory;
+  page_url: string | null;
+  message: string;
+  contact_ok: boolean;
+  status: string;
+  created_at: string;
 };
 
 export function accountMode(): AccountMode {
@@ -192,6 +222,19 @@ export async function listAccountFishingTrips(): Promise<AccountFishingTrip[]> {
   return trips.map(normalizePasswordFishingTrip);
 }
 
+export async function listAdminAlphaFeedback(): Promise<AccountAlphaFeedback[]> {
+  if (accountBackend() === "d1") {
+    const { listD1AlphaFeedbackForAdmin } = await import("./d1-feedback");
+    return listD1AlphaFeedbackForAdmin();
+  }
+  const token = await passwordSessionToken();
+  if (!token) return [];
+  const response = await passwordApiRequest("/api/admin/feedback", { method: "GET" }, token);
+  if (!response.ok) throw new Error("Alpha feedback is unavailable.");
+  return (await response.json() as PasswordAlphaFeedbackResponse[])
+    .map(normalizePasswordAlphaFeedback);
+}
+
 export async function passwordSessionToken(): Promise<string | null> {
   return (await cookies()).get(SESSION_COOKIE)?.value ?? null;
 }
@@ -262,6 +305,23 @@ export function normalizePasswordFishingTrip(trip: PasswordFishingTripResponse):
   };
 }
 
+export function normalizePasswordAlphaFeedback(
+  report: PasswordAlphaFeedbackResponse,
+): AccountAlphaFeedback {
+  return {
+    id: report.id,
+    userEmail: report.user_email ?? null,
+    userDisplayName: report.user_display_name ?? null,
+    locationId: report.location_id,
+    locationName: report.location_name ?? null,
+    category: report.category,
+    pageUrl: report.page_url,
+    message: report.message,
+    contactOk: report.contact_ok,
+    status: report.status,
+    createdAt: report.created_at,
+  };
+}
 export async function responseErrorMessage(response: Response, fallback: string): Promise<string> {
   try {
     const body = await response.clone().json() as { detail?: string; error?: string };

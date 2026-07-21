@@ -12,6 +12,19 @@ export type WaterbodyType = "river" | "reservoir" | "lake" | "pond" | "bay" | "s
 //  listed    = named public water an agency lists, access point not pinpointed.
 //  unverified = named water surfaced for discovery; confirm public access before fishing.
 export type AccessStatus = "verified" | "listed" | "unverified";
+export type AccessConditionKind =
+  | "permit"
+  | "credential"
+  | "age"
+  | "harvest"
+  | "seasonal"
+  | "license"
+  | "vessel";
+export type AccessCondition = {
+  kind: AccessConditionKind;
+  label: string;
+  detail: string;
+};
 export type { AdvisoryStatus, ConsumptionAdvisory } from "./advisories";
 
 export type Species = {
@@ -79,6 +92,7 @@ export type FishingLocation = {
   accessSourceUrl: string;
   sourceReviewed: string;
   accessStatus?: AccessStatus;
+  accessConditions?: AccessCondition[];
   hydrology?: HydrologyAssociation;
   stocking?: {
     category: string;
@@ -109,6 +123,8 @@ export const sourceLinks = {
     "https://dwr.virginia.gov/waterbody/shenandoah-river-south-fork/",
   walleye2026:
     "https://dwr.virginia.gov/wp-content/uploads/media/Walleye-Fishing-Forecast-2026.pdf",
+  saugeye:
+    "https://dwr.virginia.gov/blog/chasing-a-toothy-critter-saugeye-are-a-great-species-to-target/",
   aquaticGap:
     "https://www.usgs.gov/data/aquatic-gap-analysis-project-aquatic-gap-aquatic-species-distribution-modeling-national",
   aquaticGapPresence: "https://doi.org/10.5066/P9FZ6J6R",
@@ -149,6 +165,7 @@ export const species: Species[] = [
   { id: "common-carp", name: "Common carp", scientificName: "Cyprinus carpio", short: "CARP", habitat: "Slow rivers, reservoirs, flats", targetable: true },
   { id: "northern-snakehead", name: "Northern snakehead", scientificName: "Channa argus", short: "NSH", habitat: "Tidal vegetation and backwaters", targetable: true },
   { id: "walleye", name: "Walleye", scientificName: "Sander vitreus", short: "WAE", habitat: "Rivers and reservoirs where supported", targetable: true },
+  { id: "saugeye", name: "Saugeye", scientificName: "Sander vitreus × Sander canadensis", short: "SAE", habitat: "Stocked reservoirs, drop-offs, points, and open-water structure", targetable: true },
   { id: "yellow-perch", name: "Yellow perch", scientificName: "Perca flavescens", short: "YEP", habitat: "Reservoir edges and tidal tributaries", targetable: true },
   { id: "white-perch", name: "White perch", scientificName: "Morone americana", short: "WHP", habitat: "Tidal fresh and brackish water", targetable: true },
   { id: "striped-bass", name: "Striped bass", scientificName: "Morone saxatilis", short: "STB", habitat: "Large reservoirs and tidal rivers", targetable: true },
@@ -174,6 +191,9 @@ export const species: Species[] = [
   { id: "yellow-bullhead", name: "Yellow bullhead", scientificName: "Ameiurus natalis", short: "YBH", habitat: "Warm ponds and slow vegetated water", family: "Bullhead catfishes", targetable: false },
   { id: "white-catfish", name: "White catfish", scientificName: "Ameiurus catus", short: "WCF", habitat: "Tidal rivers, estuaries, and slow lower rivers", family: "Bullhead catfishes", targetable: false },
   { id: "gizzard-shad", name: "Gizzard shad", scientificName: "Dorosoma cepedianum", short: "GZS", habitat: "Reservoirs and large rivers; open-water forage schools", family: "Herrings and shads", targetable: false },
+  { id: "longnose-gar", name: "Longnose gar", scientificName: "Lepisosteus osseus", short: "LNG", habitat: "Tidal rivers, estuaries, deep pools, and slow runs", family: "Gars", targetable: false },
+  { id: "hickory-shad", name: "Hickory shad", scientificName: "Alosa mediocris", short: "HKS", habitat: "Tidal rivers and tributaries during the spring spawning run", family: "Herrings and shads", targetable: false },
+  { id: "american-shad", name: "American shad", scientificName: "Alosa sapidissima", short: "AMS", habitat: "Tidal rivers and tributaries during the spring spawning run", family: "Herrings and shads", targetable: false },
 ];
 
 export const targetSpecies = species.filter((item) => item.targetable);
@@ -219,6 +239,21 @@ const shenandoahWalleye = (freshness: string): SpeciesEvidence => ({
 });
 
 const burkeEvidence: SpeciesEvidence[] = [
+  {
+    speciesId: "saugeye",
+    availability: 0.91,
+    quality: 0.82,
+    evidenceConfidence: 0.94,
+    evidenceType: "agency survey",
+    evidenceSummary: "Virginia DWR's 2026 forecast reports annual saugeye stocking at Burke Lake and 147 saugeye collected in its 2025 electrofishing survey.",
+    lastEvidence: "2025 electrofishing; DWR forecast published 2026",
+    technique: "Minnow-profile jig, jerkbait, or trolling presentation along points and drop-offs; shift shallower in low light",
+    depth: "Above the summer thermocline (about 10 ft in DWR's survey context); shallower at night",
+    positive: ["Recent exact-water DWR electrofishing evidence", "Annual DWR saugeye stocking", "Strong public bank and boat access"],
+    negative: ["Survey abundance does not guarantee shore catchability", "Seasonal depth changes remain important"],
+    sourceName: "Virginia Department of Wildlife Resources",
+    sourceUrl: sourceLinks.walleye2026,
+  },
   {
     speciesId: "largemouth-bass",
     availability: 0.86,
@@ -300,6 +335,21 @@ const lakeFrederickEvidence: SpeciesEvidence[] = [
 ];
 
 const lakeBrittleEvidence: SpeciesEvidence[] = [
+  {
+    speciesId: "saugeye",
+    availability: 0.93,
+    quality: 0.88,
+    evidenceConfidence: 0.95,
+    evidenceType: "agency survey",
+    evidenceSummary: "Virginia DWR's 2026 forecast documents the current saugeye stocking program at Lake Brittle and 147 saugeye collected in the 2025 electrofishing survey (90 fish/hour).",
+    lastEvidence: "2025 electrofishing; DWR forecast published 2026",
+    technique: "Jig-and-minnow, jerkbait, or trolled crankbait along points, drop-offs, and the first break",
+    depth: "Lower light: first break and points; daylight: deeper structure",
+    positive: ["Recent exact-water DWR electrofishing evidence", "Current DWR saugeye stocking program", "DWR describes excellent bank and boat access"],
+    negative: ["Survey catch rate is not an angler catch-rate guarantee"],
+    sourceName: "Virginia Department of Wildlife Resources",
+    sourceUrl: sourceLinks.walleye2026,
+  },
   {
     speciesId: "walleye",
     availability: 0.43,
@@ -462,7 +512,7 @@ const dwrLocations: Array<Omit<FishingLocationSeed, "accessAuthority" | "accessS
     publicAccess: true,
     access: ["shore", "kayak", "boat"],
     aliases: ["Brittle Lake"],
-    notice: "Species evidence distinguishes walleye from the lake’s current saugeye program.",
+    notice: "Saugeye are the lake's current stocked percid and primary toothy-fish opportunity; walleye remain a lower-confidence secondary possibility.",
     flowStatus: "Lake · live temperature pending",
     activityEstimate: 0.64,
     accessFit: 0.94,

@@ -1,5 +1,9 @@
 import { notFound, redirect } from "next/navigation";
-import { accountSignInPath, getAccountUser } from "../../lib/account-server";
+import {
+  accountSignInPath,
+  getAccountUser,
+  listAdminAlphaFeedback,
+} from "../../lib/account-server";
 import { DataHealthClient } from "./DataHealthClient";
 
 export const dynamic = "force-dynamic";
@@ -14,5 +18,19 @@ export default async function AdminDataHealthPage() {
 
   if (configuredAdmins.length === 0 || !configuredAdmins.includes(user.email.toLowerCase())) notFound();
 
-  return <DataHealthClient adminName={user.displayName} />;
+  let feedback: Awaited<ReturnType<typeof listAdminAlphaFeedback>> = [];
+  let feedbackReady = true;
+  try {
+    feedback = await listAdminAlphaFeedback();
+  } catch {
+    feedbackReady = false;
+  }
+
+  return (
+    <DataHealthClient
+      adminName={user.displayName}
+      feedback={feedback}
+      feedbackReady={feedbackReady}
+    />
+  );
 }

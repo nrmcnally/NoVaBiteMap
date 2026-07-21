@@ -38,6 +38,7 @@ class User(Base):
     favorites: Mapped[list["SavedLocation"]] = relationship(cascade="all, delete-orphan")
     sessions: Mapped[list["SessionToken"]] = relationship(cascade="all, delete-orphan")
     fishing_trips: Mapped[list["FishingTrip"]] = relationship(cascade="all, delete-orphan")
+    feedback_reports: Mapped[list["AlphaFeedback"]] = relationship(cascade="all, delete-orphan")
 
 
 class SessionToken(Base):
@@ -99,6 +100,25 @@ class FishingTrip(Base):
     condition_replayed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, onupdate=utcnow)
+
+
+class AlphaFeedback(Base):
+    """Private alpha feedback; never feeds scoring or evidence automatically."""
+
+    __tablename__ = "alpha_feedback"
+
+    id: Mapped[str] = mapped_column(String(36), primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
+    location_id: Mapped[str | None] = mapped_column(
+        ForeignKey("fishing_locations.id", ondelete="SET NULL"),
+        index=True,
+    )
+    category: Mapped[str] = mapped_column(String(30), index=True)
+    page_url: Mapped[str | None] = mapped_column(String(500))
+    message: Mapped[str] = mapped_column(Text)
+    contact_ok: Mapped[bool] = mapped_column(Boolean, default=False)
+    status: Mapped[str] = mapped_column(String(20), default="new", index=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, index=True)
 
 
 # ---------------------------------------------------------------------------

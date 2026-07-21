@@ -19,8 +19,8 @@ def test_explore_catalog_is_canonical_and_score_consistent(client):
     assert response.status_code == 200, response.text
     payload = response.json()
     assert payload["dataSource"] == "canonical-api"
-    assert payload["counts"] == {"species": 20, "locations": 252}
-    assert len(payload["species"]) == 20
+    assert payload["counts"] == {"species": 21, "locations": 252}
+    assert len(payload["species"]) == 21
     burke = next(item for item in payload["locations"] if item["id"] == "lake-burke")
     assert burke["runtimeSource"] == "canonical-api"
     assert burke["consumptionAdvisory"] is not None
@@ -68,6 +68,22 @@ def test_location_detail_exposes_all_evidenced_species(client):
     assert detail["consumptionAdvisory"] is not None
     assert detail["runtimeSource"] == "canonical-api"
     assert detail["opportunities"]
+
+
+def test_location_detail_exposes_structured_access_conditions(client):
+    secon = client.get("/api/locations/secon-pool").json()
+    kinds = {condition["kind"] for condition in secon["accessConditions"]}
+    assert {"credential", "permit", "age"}.issubset(kinds)
+
+    carters = client.get("/api/locations/carters-pond-pwfp").json()
+    assert {condition["kind"] for condition in carters["accessConditions"]} == {"harvest"}
+    assert {"bluegill", "channel-catfish", "largemouth-bass", "pumpkinseed"}.issubset(
+        set(carters["evidenceSpeciesIds"])
+    )
+
+    nanzattico = client.get("/api/locations/nanzattico-bay").json()
+    assert "wade" not in nanzattico["access"]
+    assert any(condition["kind"] == "permit" for condition in nanzattico["accessConditions"])
 
 
 def test_vdh_segment_species_reconcile_with_morgans_ford(client):
@@ -138,11 +154,11 @@ def test_data_source_status_is_derived_from_real_counts_and_runs(client):
     status = client.get("/api/data-sources/status").json()
     counts = status["counts"]
     assert counts["locations"] == 252
-    assert counts["species"] == 37
+    assert counts["species"] == 41
     assert counts["hydrologyAssociations"] == 19
     assert counts["stockingRecords"] == 13
     assert counts["modeledEvidence"] == 349
-    assert counts["locationsWithEvidence"] == 209
+    assert counts["locationsWithEvidence"] == 213
     assert status["lastSuccessfulIngestion"] is not None
     assert status["lastSuccessfulIngestion"]["status"] == "success"
 
@@ -201,3 +217,43 @@ def test_likely_present_is_flagged_modeled_not_a_survey(client):
     # Documented waters are NOT modeled.
     burke = client.get("/api/locations/lake-burke/species", params={"live": "false"}).json()
     assert any(not s["modeled"] for s in burke["species"])
+
+
+def test_alpha_feedback_is_authenticated_private_and_admin_reviewable(client):
+    import uuid
+
+    from app.core.config import settings
+
+    email = f"feedback-{uuid.uuid4().hex[:8]}@example.com"
+    registered = client.post(
+        "/api/auth/register",
+        json={"email": email, "password": "correcthorsebattery"},
+    )
+    assert registered.status_code == 201, registered.text
+    headers = {"Authorization": f"Bearer {registered.json()['access_token']}"}
+    payload = {
+        "category": "incorrect-data",
+        "location_id": "lake-burke",
+        "page_url": "/locations/lake-burke",
+        "message": "The posted boat-ramp detail should be checked against the park sign.",
+        "contact_ok": True,
+    }
+
+    assert client.post("/api/users/me/feedback", json=payload).status_code == 401
+    created = client.post("/api/users/me/feedback", json=payload, headers=headers)
+    assert created.status_code == 201, created.text
+    assert created.json()["location_id"] == "lake-burke"
+    assert created.json()["status"] == "new"
+
+    # Signed-in testers cannot read the administrator review queue.
+    assert client.get("/api/admin/feedback", headers=headers).status_code == 403
+    settings.admin_emails.append(email)
+    try:
+        review = client.get("/api/admin/feedback", headers=headers)
+        assert review.status_code == 200, review.text
+        report = next(item for item in review.json() if item["id"] == created.json()["id"])
+        assert report["user_email"] == email
+        assert report["location_name"] == "Lake Burke"
+        assert report["contact_ok"] is True
+    finally:
+        settings.admin_emails.remove(email)

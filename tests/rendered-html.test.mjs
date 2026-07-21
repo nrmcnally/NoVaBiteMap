@@ -45,6 +45,28 @@ test("favorites refresh live and data health is removed from public navigation",
   assert.match(adminHealth, /getAccountUser/);
 });
 
+test("alpha feedback is durable, attributed, and separated from evidence promotion", async () => {
+  const [page, client, route, d1, schema, admin, nav, spot] = await Promise.all([
+    readFile(new URL("../app/feedback/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/feedback/FeedbackClient.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/api/feedback/route.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/lib/d1-feedback.ts", import.meta.url), "utf8"),
+    readFile(new URL("../db/schema.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/admin/data-health/DataHealthClient.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/components/TopNav.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/locations/[id]/page.tsx", import.meta.url), "utf8"),
+  ]);
+  assert.match(page, /Sign in to send feedback/);
+  assert.match(client, /Send private feedback/);
+  assert.match(client, /not fishing evidence/i);
+  assert.match(route, /createD1AlphaFeedback/);
+  assert.match(route, /\/api\/users\/me\/feedback/);
+  assert.match(`${d1}${schema}`, /alpha_feedback/);
+  assert.match(admin, /Alpha review queue/);
+  assert.match(nav, /Send alpha feedback/);
+  assert.match(spot, /Report spot data/);
+});
+
 test("alpha accounts use email and password with private cookie sessions", async () => {
   const [accountPage, register, login, logout, passwordAuth, dockerfile] = await Promise.all([
     readFile(new URL("../app/account/AccountClient.tsx", import.meta.url), "utf8"),
@@ -126,9 +148,10 @@ test("source code preserves the species gate, provenance, and precise advisory l
 });
 
 test("live public-data spine includes canonical science forecast, hydrology, multi-day weather, trout, and Aquatic GAP", async () => {
-  const [hydrology, conditions, canonical, detail, publicEvidence, importer, gap, trout] = await Promise.all([
+  const [hydrology, conditions, nwsSource, canonical, detail, publicEvidence, importer, gap, trout] = await Promise.all([
     readFile(new URL("../app/api/hydrology/route.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/api/conditions/route.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/lib/server/nws.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/api/live-forecast/route.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/components/LocationIntelligence.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/lib/public-evidence.ts", import.meta.url), "utf8"),
@@ -138,8 +161,9 @@ test("live public-data spine includes canonical science forecast, hydrology, mul
   ]);
   assert.match(hydrology, /manually verified USGS association/i);
   assert.match(hydrology, /stale-while-revalidate=1800/);
-  assert.match(conditions, /periods: .*slice\(0, 120\)/);
-  assert.match(conditions, /alerts:/);
+  assert.match(nwsSource, /slice\(0, 120\)/);
+  assert.match(nwsSource, /alerts/);
+  assert.match(conditions, /fetchNwsConditions/);
   assert.match(canonical, /\/forecast/);
   assert.match(detail, /Today through day five/);
   assert.match(detail, /Canonical science model/);
@@ -170,21 +194,32 @@ test("forecast capability contracts bound timeline selection and keep snapshots 
   assert.doesNotMatch(service, /catchCount|lureOrBait/);
 });
 
-test("Explore timeline uses exact provider bounds and one score set for the map and list", async () => {
-  const [dashboard, timeline, timelineContract, map, scoring] = await Promise.all([
+test("Explore timeline uses a precomputed score matrix for the map, list, and menu", async () => {
+  const [dashboard, timeline, timelineContract, matrixContract, matrixRoute, map, scoring] = await Promise.all([
     readFile(new URL("../app/components/ExploreDashboard.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/components/PredictionTimeline.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/lib/prediction-timeline.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/lib/timeline-score-matrix.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/api/timeline-scores/route.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/components/FishingMap.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/lib/scoring.ts", import.meta.url), "utf8"),
   ]);
-  assert.match(dashboard, /selectionSearch\(url\.search, timelineSelection\)/);
-  assert.match(dashboard, /opportunityForForecast/);
+  assert.match(dashboard, /selectionFromSearch\(window\.location\.search, periods\)/);
+  assert.doesNotMatch(dashboard, /history\.replaceState|selectionSearch\(url\.search/);
+  assert.match(dashboard, /selectedScoresFromMatrix/);
+  assert.match(dashboard, /setScoringTimelineSelection\(timelineSelection\)/);
+  assert.match(dashboard, /\/api\/timeline-scores/);
+  assert.doesNotMatch(dashboard, /opportunityForForecast/);
   assert.match(dashboard, /opportunities=\{mapOpportunities\}/);
   assert.match(timeline, /Times beyond this boundary are unavailable/);
   assert.match(timeline, /type="range"/);
   assert.match(timeline, /each species uses its best supported hour/);
   assert.match(timelineContract, /periods\.find\(\(item\) => item\.startTime === selection\.key\)/);
+  assert.match(matrixContract, /timeline-score-matrix-v0\.1\.0/);
+  assert.match(matrixContract, /dailyBestPeriodIndexes/);
+  assert.match(matrixRoute, /canonicalMatrix/);
+  assert.match(matrixRoute, /bundledMatrix/);
+  assert.match(matrixRoute, /x-bitemap-timeline-cache/);
   assert.match(map, /opportunities\.get\(location\.id\)/);
   assert.doesNotMatch(map, /opportunityFor\(/);
   assert.match(scoring, /profileFor\(speciesId\)/);
