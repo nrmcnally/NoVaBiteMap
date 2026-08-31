@@ -4,6 +4,7 @@ import {
   getAccountUser,
   listAdminAlphaFeedback,
 } from "../../lib/account-server";
+import { isConfiguredAdmin } from "../../lib/admin-auth";
 import { DataHealthClient } from "./DataHealthClient";
 
 export const dynamic = "force-dynamic";
@@ -11,12 +12,7 @@ export const dynamic = "force-dynamic";
 export default async function AdminDataHealthPage() {
   const user = await getAccountUser();
   if (!user) redirect(accountSignInPath("/admin/data-health"));
-  const configuredAdmins = (process.env.BITEMAP_ADMIN_EMAILS ?? "")
-    .split(",")
-    .map((email) => email.trim().toLowerCase())
-    .filter(Boolean);
-
-  if (configuredAdmins.length === 0 || !configuredAdmins.includes(user.email.toLowerCase())) notFound();
+  if (!isConfiguredAdmin(user)) notFound();
 
   let feedback: Awaited<ReturnType<typeof listAdminAlphaFeedback>> = [];
   let feedbackReady = true;

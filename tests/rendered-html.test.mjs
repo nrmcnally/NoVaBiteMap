@@ -45,6 +45,35 @@ test("favorites refresh live and data health is removed from public navigation",
   assert.match(adminHealth, /getAccountUser/);
 });
 
+test("hydrology editor traces durable paths and keeps inferred direction explicit", async () => {
+  const [page, client, map, collectionRoute, itemRoute, elevationRoute, d1, schema, adminAuth] = await Promise.all([
+    readFile(new URL("../app/admin/hydrology/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/admin/hydrology/HydrologyGraphClient.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/admin/hydrology/HydrologyGraphMap.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/api/admin/hydrology-connections/route.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/api/admin/hydrology-connections/[id]/route.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/api/admin/hydrology-elevations/route.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/lib/d1-hydrology-graph.ts", import.meta.url), "utf8"),
+    readFile(new URL("../db/schema.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/lib/admin-auth.ts", import.meta.url), "utf8"),
+  ]);
+  assert.match(page, /isConfiguredAdmin/);
+  assert.match(adminAuth, /BITEMAP_ADMIN_EMAILS/);
+  assert.match(client, /Click the map at every bend/);
+  assert.match(client, /USGS 3DEP EPQS/);
+  assert.match(client, /Use suggested direction/);
+  assert.match(client, /Tidal \/ bidirectional/);
+  assert.match(client, /Export graph JSON/);
+  assert.match(map, /L\.polyline/);
+  assert.match(map, /hydrology-flow-arrow/);
+  assert.match(`${collectionRoute}${itemRoute}`, /isConfiguredAdmin/);
+  assert.match(elevationRoute, /epqs\.nationalmap\.gov\/v1\/json/);
+  assert.match(elevationRoute, /suggest flow direction, never to verify it/);
+  assert.match(`${d1}${schema}`, /hydrology_connections/);
+  assert.match(schema, /hydrology_node_elevations/);
+  assert.match(schema, /direction_basis/);
+});
+
 test("alpha feedback is durable, attributed, and separated from evidence promotion", async () => {
   const [page, client, route, d1, schema, admin, nav, spot] = await Promise.all([
     readFile(new URL("../app/feedback/page.tsx", import.meta.url), "utf8"),

@@ -1,6 +1,7 @@
 "use client";
 
-import { AlertTriangle, CheckCircle2, Clock3, DatabaseZap, ExternalLink, Fish, MapPin, MessageSquare, ServerCog, ShieldCheck } from "lucide-react";
+import Link from "next/link";
+import { AlertTriangle, CheckCircle2, Clock3, DatabaseZap, ExternalLink, Fish, MapPin, MessageSquare, Network, ServerCog, ShieldCheck } from "lucide-react";
 import type { AccountAlphaFeedback } from "../../lib/account-server";
 import { TopNav } from "../../components/TopNav";
 import { advisorySegments } from "../../lib/advisories";
@@ -41,7 +42,7 @@ export function DataHealthClient({
       <main className="content-shell health-shell">
         <header className="health-header">
           <div><span className="eyebrow">Administrative data health</span><h1>What BiteMap knows—and what it doesn&apos;t.</h1><p>This operational view is authenticated and excluded from public navigation.</p></div>
-          <div className="admin-badges"><span className="identity-chip"><ShieldCheck size={16} /> {adminName}</span><span className="model-chip"><ServerCog size={17} /> Score profile v1.1 active</span></div>
+          <div className="admin-badges"><span className="identity-chip"><ShieldCheck size={16} /> {adminName}</span><span className="model-chip"><ServerCog size={17} /> Score profile v1.1 active</span><Link className="admin-tool-link" href="/admin/hydrology"><Network size={16} /> Open hydrology editor</Link></div>
         </header>
         <section className="health-stats">
           <article><MapPin size={21} /><strong>{locations.length}</strong><span>Verified locations</span><small>Multi-agency access catalog</small></article>

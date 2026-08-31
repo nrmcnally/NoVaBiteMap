@@ -115,3 +115,34 @@ export const alphaFeedback = sqliteTable(
     index("alpha_feedback_status_idx").on(table.status),
   ],
 );
+
+export const hydrologyConnections = sqliteTable(
+  "hydrology_connections",
+  {
+    id: text("id").primaryKey(),
+    fromLocationId: text("from_location_id").notNull(),
+    toLocationId: text("to_location_id").notNull(),
+    flowKind: text("flow_kind").notNull().default("downstream"),
+    directionBasis: text("direction_basis").notNull().default("unknown"),
+    elevationDropFeet: real("elevation_drop_feet"),
+    pathJson: text("path_json").notNull(),
+    notes: text("notes"),
+    createdByEmail: text("created_by_email").notNull(),
+    createdAt: text("created_at").notNull().default(sql`CURRENT_TIMESTAMP`),
+    updatedAt: text("updated_at").notNull().default(sql`CURRENT_TIMESTAMP`),
+  },
+  (table) => [
+    uniqueIndex("hydrology_connections_direction_idx").on(table.fromLocationId, table.toLocationId),
+    index("hydrology_connections_to_idx").on(table.toLocationId),
+    index("hydrology_connections_kind_idx").on(table.flowKind),
+  ],
+);
+
+export const hydrologyNodeElevations = sqliteTable("hydrology_node_elevations", {
+  locationId: text("location_id").primaryKey(),
+  elevationFeet: real("elevation_feet").notNull(),
+  resolutionMeters: real("resolution_meters"),
+  source: text("source").notNull().default("USGS 3DEP EPQS"),
+  sourceUrl: text("source_url").notNull(),
+  sampledAt: text("sampled_at").notNull().default(sql`CURRENT_TIMESTAMP`),
+});
