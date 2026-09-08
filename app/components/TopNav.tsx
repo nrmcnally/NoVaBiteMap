@@ -38,8 +38,8 @@ export function TopNav({ active = "explore" }: TopNavProps) {
           <MessageSquare size={15} />
           <span>Feedback</span>
         </Link>
-        <div className="nav-status" title="Recommendations never guarantee a catch">
-          <span className="status-dot" /> Evidence-led
+        <div className="nav-status" title="Spot and fish sources are available throughout the app">
+          <span className="status-dot" /> Sources included
         </div>
         <AccountNav />
       </div>

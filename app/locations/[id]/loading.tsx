@@ -7,7 +7,7 @@ export default function LocationLoading() {
       <main className="detail-shell">
         <div className="route-loading" role="status" aria-live="polite">
           <span className="route-loading-spinner" />
-          <p>Loading spot intelligence…</p>
+          <p>Loading spot details…</p>
         </div>
       </main>
     </div>

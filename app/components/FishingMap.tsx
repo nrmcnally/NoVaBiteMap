@@ -30,7 +30,7 @@ function opportunityColor(opportunity: MapOpportunity | null) {
 function tooltipHtml(location: FishingLocation, opportunity: MapOpportunity | null, speciesIds: string[]) {
   const advisory = consumptionAdviceFor(location.consumptionAdvisory, speciesIds);
   const status = !opportunity
-    ? (speciesIds.length === 0 ? "Verified access · evidence pending" : "Selected-species evidence pending")
+    ? (speciesIds.length === 0 ? "Public access · fish records incomplete" : "Not enough data for selected species")
     : speciesIds.length === 0
       ? `${opportunity.score}/100 · top target ${opportunity.speciesName}`
       : `${opportunity.score}/100 best selected target${opportunity.matchCount > 1 ? ` · ${opportunity.matchCount} matches` : ""}`;

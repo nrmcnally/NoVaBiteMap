@@ -70,6 +70,59 @@ export type ForecastInput = {
   seasonalActivityByMonth?: number[];
 };
 
+export type PreparedForecastPeriod = NwsForecastPeriod & {
+  dateKey: string;
+  dayLabel: string;
+  hour: number;
+  month: number;
+  timeLabel: string;
+  windMph: number;
+  windFit: number;
+  precipitationFit: number;
+  weatherSafetyCapped: boolean;
+};
+
+export type PreparedForecastTimeline = {
+  periods: PreparedForecastPeriod[];
+  dayKeys: string[];
+  activeSafetyAlerts: NwsAlert[];
+};
+
+export type TimelineScoreInput = {
+  availability: number;
+  quality: number | null;
+  accessFit: number;
+  dielPattern?: string;
+  seasonalActivityByMonth?: number[];
+};
+
+const EASTERN_TIME_ZONE = "America/New_York";
+const dateKeyFormatter = new Intl.DateTimeFormat("en-CA", {
+  timeZone: EASTERN_TIME_ZONE,
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+});
+const dayLabelFormatter = new Intl.DateTimeFormat("en-US", {
+  timeZone: EASTERN_TIME_ZONE,
+  weekday: "short",
+  month: "short",
+  day: "numeric",
+});
+const hourNumberFormatter = new Intl.DateTimeFormat("en-US", {
+  timeZone: EASTERN_TIME_ZONE,
+  hour: "numeric",
+  hourCycle: "h23",
+});
+const monthNumberFormatter = new Intl.DateTimeFormat("en-US", {
+  timeZone: EASTERN_TIME_ZONE,
+  month: "numeric",
+});
+const timeLabelFormatter = new Intl.DateTimeFormat("en-US", {
+  timeZone: EASTERN_TIME_ZONE,
+  hour: "numeric",
+});
+
 function maxWindMph(value: string) {
   const matches = value.match(/\d+(?:\.\d+)?/g)?.map(Number) ?? [];
   return Math.max(0, ...matches);
@@ -77,11 +130,11 @@ function maxWindMph(value: string) {
 function localParts(value: string) {
   const date = new Date(value);
   return {
-    dateKey: new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).format(date),
-    dayLabel: new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", weekday: "short", month: "short", day: "numeric" }).format(date),
-    hour: Number(new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", hour: "numeric", hourCycle: "h23" }).format(date)),
-    month: Number(new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", month: "numeric" }).format(date)),
-    timeLabel: new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", hour: "numeric" }).format(date),
+    dateKey: dateKeyFormatter.format(date),
+    dayLabel: dayLabelFormatter.format(date),
+    hour: Number(hourNumberFormatter.format(date)),
+    month: Number(monthNumberFormatter.format(date)),
+    timeLabel: timeLabelFormatter.format(date),
   };
 }
 
@@ -147,37 +200,107 @@ function rapidRise(hydrology?: HydrologyResponse | null) {
   );
 }
 
-export function buildForecast(input: ForecastInput) {
-  const activeSafetyAlerts = input.alerts.filter(isSafetyAlert);
-  const fastRise = rapidRise(input.hydrology);
-  const hourly = input.periods.map((period) => {
+function activityForPeriod(
+  period: PreparedForecastPeriod,
+  dielPattern?: string,
+  seasonalActivityByMonth?: number[],
+) {
+  const time = timeSuitability(period.hour, dielPattern);
+  const seasonal = seasonalActivityByMonth?.[period.month - 1];
+  const activity = typeof seasonal === "number"
+    ? 0.35 * time + 0.2 * period.windFit + 0.2 * period.precipitationFit + 0.25 * seasonal
+    : 0.5 * time + 0.25 * period.windFit + 0.25 * period.precipitationFit;
+  return { activity, time };
+}
+
+function scoreForActivity(input: TimelineScoreInput, activity: number, safetyCapped: boolean) {
+  const quality = input.quality ?? 0.5;
+  const raw = Math.round(
+    100
+      * Math.pow(input.availability, 1.5)
+      * (0.35 * quality + 0.5 * activity + 0.15 * input.accessFit),
+  );
+  const score = safetyCapped ? Math.min(raw, 35) : raw;
+  return Math.max(0, Math.min(100, score));
+}
+
+export function prepareForecastTimeline(
+  periods: NwsForecastPeriod[],
+  alerts: NwsAlert[],
+): PreparedForecastTimeline {
+  const activeSafetyAlerts = alerts.filter(isSafetyAlert);
+  const preparedPeriods = periods.map((period) => {
     const local = localParts(period.startTime);
-    const wind = maxWindMph(period.windSpeed);
-    const time = timeSuitability(local.hour, input.dielPattern);
-    const windFit = windSuitability(wind);
-    const precipitation = precipitationSuitability(period.precipitationProbability, period.shortForecast);
-    const seasonal = input.seasonalActivityByMonth?.[local.month - 1];
-    const activity = typeof seasonal === "number"
-      ? 0.35 * time + 0.2 * windFit + 0.2 * precipitation + 0.25 * seasonal
-      : 0.5 * time + 0.25 * windFit + 0.25 * precipitation;
-    const quality = input.quality ?? 0.5;
-    const raw = Math.round(100 * Math.pow(input.availability, 1.5) * (0.35 * quality + 0.5 * activity + 0.15 * input.accessFit));
-    const periodSafetyCap = activeSafetyAlerts.some((alert) => alertAppliesAt(alert, period.startTime))
-      || (input.wadingSelected && fastRise)
-      ? 35
-      : null;
-    const score = periodSafetyCap === null ? raw : Math.min(raw, periodSafetyCap);
+    const windMph = maxWindMph(period.windSpeed);
     return {
       ...period,
       ...local,
-      windMph: wind,
+      windMph,
+      windFit: windSuitability(windMph),
+      precipitationFit: precipitationSuitability(period.precipitationProbability, period.shortForecast),
+      weatherSafetyCapped: activeSafetyAlerts.some((alert) => alertAppliesAt(alert, period.startTime)),
+    };
+  });
+  return {
+    periods: preparedPeriods,
+    dayKeys: [...new Set(preparedPeriods.map((period) => period.dateKey))].slice(0, 5),
+    activeSafetyAlerts,
+  };
+}
+
+export function buildTimelineScoreSeries(
+  timeline: PreparedForecastTimeline,
+  input: TimelineScoreInput,
+) {
+  const hourlyScores = timeline.periods.map((period) => {
+    const { activity } = activityForPeriod(period, input.dielPattern, input.seasonalActivityByMonth);
+    return scoreForActivity(input, activity, period.weatherSafetyCapped);
+  });
+  const dailyScores: Array<number | null> = [];
+  const dailyBestPeriodIndexes: Array<number | null> = [];
+
+  for (const dayKey of timeline.dayKeys) {
+    let bestScore: number | null = null;
+    let bestIndex: number | null = null;
+    for (let index = 0; index < timeline.periods.length; index += 1) {
+      if (timeline.periods[index].dateKey !== dayKey) continue;
+      const score = hourlyScores[index];
+      if (bestScore === null || score > bestScore) {
+        bestScore = score;
+        bestIndex = index;
+      }
+    }
+    dailyScores.push(bestScore);
+    dailyBestPeriodIndexes.push(bestIndex);
+  }
+
+  return { hourlyScores, dailyScores, dailyBestPeriodIndexes };
+}
+
+export function buildForecast(input: ForecastInput) {
+  const prepared = prepareForecastTimeline(input.periods, input.alerts);
+  const activeSafetyAlerts = prepared.activeSafetyAlerts;
+  const fastRise = rapidRise(input.hydrology);
+  const hourly = prepared.periods.map((period) => {
+    const { activity, time } = activityForPeriod(period, input.dielPattern, input.seasonalActivityByMonth);
+    const safetyCapped = period.weatherSafetyCapped || Boolean(input.wadingSelected && fastRise);
+    const score = scoreForActivity(input, activity, safetyCapped);
+    const {
+      windFit,
+      precipitationFit,
+      weatherSafetyCapped: _weatherSafetyCapped,
+      ...publicPeriod
+    } = period;
+    void _weatherSafetyCapped;
+    return {
+      ...publicPeriod,
       activity: Number(activity.toFixed(3)),
-      score: Math.max(0, Math.min(100, score)),
-      safetyCapped: periodSafetyCap !== null,
+      score,
+      safetyCapped,
       factors: {
         timeOfDay: Number(time.toFixed(2)),
         wind: Number(windFit.toFixed(2)),
-        precipitation: Number(precipitation.toFixed(2)),
+        precipitation: Number(precipitationFit.toFixed(2)),
       },
     };
   });
@@ -214,12 +337,12 @@ export function buildForecast(input: ForecastInput) {
     activeSafetyAlerts,
     rapidRise: fastRise,
     explanation: [
-      "Availability and fishery quality remain evidence-gated.",
+      "The fish record and long-term fishery data set the baseline.",
       input.dielPattern
-        ? "Hourly activity uses the reviewed species diel and seasonal profile plus forecast wind and precipitation; air temperature is shown but is not treated as water temperature."
-        : "Hourly activity uses forecast time of day, wind, and precipitation; air temperature is shown but is not treated as water temperature.",
-      input.hydrology?.available ? `USGS ${input.hydrology.association?.stationId} adds freshness and association confidence.` : "Hydrology is unavailable or unassociated, so confidence is reduced where flow matters.",
-      safetyCap ? "An official weather warning or rapid representative-gage rise applied a safety cap." : "No automatic safety cap is active; always assess conditions at the water.",
+        ? "Hourly scores adjust for this species' daily and seasonal activity, wind, and rain. Air temperature is shown only as context."
+        : "Hourly scores adjust for time of day, wind, and rain. Air temperature is shown only as context.",
+      input.hydrology?.available ? `USGS station ${input.hydrology.association?.stationId} contributes recent stream conditions.` : "No suitable stream gauge is available, so confidence is lower when flow matters.",
+      safetyCap ? "A weather warning or rapidly rising stream gauge limited the score." : "No automatic safety limit is active; always assess conditions at the water.",
     ],
   };
 }

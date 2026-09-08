@@ -140,10 +140,10 @@ function canonicalForDisplay(payload: CanonicalForecastResponse) {
 
 function temperatureNote(state: WaterTemperatureState | undefined) {
   if (!state || state.status === "unavailable" || state.valueF === null) {
-    return "No measured or modeled water temperature is available. Air temperature is shown but is not treated as water temperature.";
+    return "Water temperature is unavailable. The air temperature shown above is only weather context.";
   }
   if (state.status === "observed") {
-    return `Representative USGS water temperature: ${state.valueF.toFixed(0)}°F. The station association is included in forecast confidence.`;
+    return `Nearby USGS water temperature: ${state.valueF.toFixed(0)}°F. The gauge's location and river connection affect forecast confidence.`;
   }
   const range = state.rangeF
     ? `; model range ${state.rangeF[0].toFixed(0)}–${state.rangeF[1].toFixed(0)}°F`
@@ -151,7 +151,7 @@ function temperatureNote(state: WaterTemperatureState | undefined) {
   const label = state.status === "estimated-calibrated"
     ? "gage-calibrated estimate"
     : "regional stream estimate";
-  return `Estimated surface water temperature: ${state.valueF.toFixed(0)}°F (${label}${range}). Air temperature is never substituted directly.`;
+  return `Estimated surface water temperature: ${state.valueF.toFixed(0)}°F (${label}${range}). This is a stream estimate, not a direct measurement at the spot.`;
 }
 
 export function LocationIntelligence(props: Props) {
@@ -253,7 +253,7 @@ export function LocationIntelligence(props: Props) {
         <div><span className="eyebrow">Today through day five</span><h2>Live fishing outlook</h2></div>
         <span className={`live-provider-badge provider-${state.status}`}>
           {state.status === "loading" ? <LoaderCircle className="spin" size={14} /> : state.status === "ready" ? <CheckCircle2 size={14} /> : <AlertTriangle size={14} />}
-          {state.status === "loading" ? "Loading public data" : state.canonical ? "Canonical science model" : state.status === "ready" ? "NWS + USGS live" : state.status === "partial" ? "Partial live data" : "Seasonal fallback"}
+          {state.status === "loading" ? "Loading current conditions" : state.canonical ? "Full forecast" : state.status === "ready" ? "NWS + USGS live" : state.status === "partial" ? "Some live data unavailable" : "Seasonal estimate"}
         </span>
       </div>
 
@@ -261,7 +261,7 @@ export function LocationIntelligence(props: Props) {
         <div className="live-alert" key={alert.id}><AlertTriangle size={18} /><div><strong>{alert.event}</strong><span>{alert.headline}</span></div></div>
       ))}
       {forecast?.rapidRise && (
-        <div className="live-alert"><Waves size={18} /><div><strong>Rapid representative-gage rise</strong><span>Do not infer wading or boating safety from the score. Check the water and official warnings.</span></div></div>
+        <div className="live-alert"><Waves size={18} /><div><strong>Rapid rise at nearby stream gauge</strong><span>Do not use the score to judge wading or boating safety. Check the water and official warnings.</span></div></div>
       )}
 
       {forecast ? (
@@ -295,13 +295,13 @@ export function LocationIntelligence(props: Props) {
         </>
       ) : (
         <>
-          <div className="fallback-note"><AlertTriangle size={16} /> Live forecast is unavailable right now, so no hourly bite estimate is shown. BiteMap does not fabricate replacement weather — the evidence-based species list above is unaffected.</div>
+          <div className="fallback-note"><AlertTriangle size={16} /> The live forecast is unavailable right now, so no hourly bite estimate is shown. The fish records above are still available.</div>
         </>
       )}
 
       <div className="hydrology-panel">
         <div className="hydrology-title">
-          <div><span className="eyebrow">Verified hydrology association</span><h3>{state.hydrology?.association?.stationName ?? "No verified representative gage"}</h3></div>
+          <div><span className="eyebrow">Nearby stream gauge</span><h3>{state.hydrology?.association?.stationName ?? "No suitable stream gauge"}</h3></div>
           {state.hydrology?.association && <a href={state.hydrology.association.monitorUrl} target="_blank" rel="noreferrer">USGS station {state.hydrology.association.stationId} <ExternalLink size={13} /></a>}
         </div>
         {hydroMetrics.length > 0 ? (
@@ -310,7 +310,7 @@ export function LocationIntelligence(props: Props) {
               <div key={key}>{key === "waterTemperature" ? <Droplets size={17} /> : <Gauge size={17} />}<span>{metric.label}<strong>{metricValue(key, metric)}</strong><small>{metricTrend(metric)}</small></span></div>
             ))}
           </div>
-        ) : <p>{state.hydrology?.error ?? state.hydrology?.reason ?? "Waiting for the verified USGS observation."}</p>}
+        ) : <p>{state.hydrology?.error ?? state.hydrology?.reason ?? "Waiting for the latest USGS reading."}</p>}
         {state.hydrology?.association && <small>{state.hydrology.association.basis} {state.hydrology.association.limitation} Data are provisional and may be revised.</small>}
       </div>
     </article>

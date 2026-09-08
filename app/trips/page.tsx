@@ -58,7 +58,7 @@ export default async function TripsPage({ searchParams }: TripsPageProps) {
             <a href={accountSignInPath(`/trips${query.location ? `?location=${encodeURIComponent(query.location)}` : ""}`)}><LockKeyhole size={17} /> Sign in to BiteMap</a>
           </section>
         ) : !databaseReady ? (
-          <section className="signin-panel"><Sparkles size={30} /><h2>Trip storage is warming up.</h2><p>The trip-log database migration has not been applied in this environment yet.</p></section>
+          <section className="signin-panel"><Sparkles size={30} /><h2>Trip log unavailable.</h2><p>The trip database is not ready in this environment yet.</p></section>
         ) : (
           <TripLogClient
             initialTrips={trips}

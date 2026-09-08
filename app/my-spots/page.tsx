@@ -37,7 +37,7 @@ export default async function MySpotsPage() {
             <small>Favorites belong to your authenticated account and are not shared publicly.</small>
           </section>
         ) : !databaseReady ? (
-          <section className="signin-panel"><Sparkles size={30} /><h2>Favorite storage is warming up.</h2><p>The signed-in dashboard is ready, but its database migration has not been applied in this environment yet.</p></section>
+          <section className="signin-panel"><Sparkles size={30} /><h2>Saved spots unavailable.</h2><p>The saved-spots database is not ready in this environment yet.</p></section>
         ) : (
           <MySpotsClient initialFavorites={favorites} catalog={catalog} />
         )}

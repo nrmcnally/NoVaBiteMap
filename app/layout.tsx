@@ -10,11 +10,11 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase,
     title: {
-      default: "BiteMap NOVA — Fishing intelligence for Northern Virginia",
+      default: "BiteMap NOVA — Northern Virginia fishing map",
       template: "%s · BiteMap NOVA",
     },
     description:
-      "Evidence-led freshwater fishing opportunities, conditions, access, and transparent confidence for Northern Virginia.",
+      "Find public fishing access, fish records, forecasts, and consumption advisories across Northern Virginia.",
     applicationName: "BiteMap NOVA",
     keywords: ["Northern Virginia fishing", "fishing conditions", "Virginia DWR", "USGS water data"],
     openGraph: {

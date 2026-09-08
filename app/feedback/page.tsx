@@ -55,9 +55,9 @@ export default async function FeedbackPage({ searchParams }: FeedbackPageProps) 
       <main className="content-shell feedback-shell">
         <header className="spots-header feedback-header">
           <div>
-            <span className="eyebrow">Alpha feedback</span>
-            <h1>Help make BiteMap more trustworthy.</h1>
-            <p>Report incorrect spot data, a bug, or an idea. Reports go to the private administrator review queue and never change scores automatically.</p>
+            <span className="eyebrow">Feedback</span>
+            <h1>Help improve BiteMap.</h1>
+            <p>Report incorrect spot data, a bug, or an idea. Your message is sent privately to the BiteMap administrator and never changes a score automatically.</p>
           </div>
           {user && <span className="identity-chip"><ShieldCheck size={16} /> {user.displayName}</span>}
         </header>
@@ -65,9 +65,9 @@ export default async function FeedbackPage({ searchParams }: FeedbackPageProps) 
         {!user ? (
           <section className="signin-panel">
             <div className="signin-illustration"><MessageSquare size={34} /></div>
-            <span className="eyebrow">Attributed reports</span>
+            <span className="eyebrow">Private feedback</span>
             <h2>Sign in to send feedback.</h2>
-            <p>Your account helps us follow up and prevents anonymous spam. Your report remains private to the BiteMap administrator.</p>
+            <p>Your account allows a follow-up and helps prevent anonymous spam. Your message remains private to the BiteMap administrator.</p>
             <a href={accountSignInPath(returnTo)}><LockKeyhole size={17} /> Sign in to BiteMap</a>
           </section>
         ) : (

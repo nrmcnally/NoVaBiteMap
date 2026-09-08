@@ -34,12 +34,12 @@ const EVIDENCE_LABEL: Record<string, string> = {
   "official listing": "Official listing",
   "agency survey": "Agency survey",
   stocking: "Stocked-water designation",
-  modeled: "Nearby / modeled",
+  modeled: "Reported nearby",
 };
 
 function evidenceBadge(type: string, modeled: boolean, summary?: string | null) {
-  if (summary && summary.toLowerCase().startsWith("inferred")) return "Inferred (basin)";
-  if (modeled) return "Nearby / modeled";
+  if (summary && summary.toLowerCase().startsWith("inferred")) return "Reported in the watershed";
+  if (modeled) return "Reported nearby";
   return EVIDENCE_LABEL[type] ?? type;
 }
 
@@ -78,7 +78,7 @@ function SpeciesLinks({ speciesId, sourceName, sourceUrl }: { speciesId: string;
       <Link href={`/fish/${speciesId}`}>Open fish guide</Link>
       {sourceUrl && (
         <a href={sourceUrl} target="_blank" rel="noreferrer">
-          {sourceName ?? "Evidence source"} <ExternalLink size={11} />
+          {sourceName ?? "Fish record source"} <ExternalLink size={11} />
         </a>
       )}
     </div>
@@ -116,9 +116,9 @@ function EvidenceOnlySection({ title, description, fish }: { title: string; desc
                 scientificName={item.scientificName}
                 badge={<span className="biting-badge biting-badge-neutral">No bite forecast</span>}
               />
-              <div className="biting-score biting-score-muted" title="Evidence-based occurrence support, not a bite score">
+              <div className="biting-score biting-score-muted" title="Strength of the fish record, not a bite score">
                 <strong>{Math.round(item.availability * 100)}</strong>
-                <span>/100 presence</span>
+                <span>/100 record</span>
               </div>
             </div>
             <div className="biting-meta">
@@ -141,12 +141,12 @@ export async function WhatsBiting({ locationId, known }: Props) {
         <div className="section-heading">
           <div>
             <span className="eyebrow">Fish at this water</span>
-            <h2>No species evidence yet</h2>
+            <h2>No fish records yet</h2>
           </div>
         </div>
         <p className="biting-empty">
-          Public access here is agency-verified, but no species evidence has cleared the BiteMap evidence gate.
-          Absence of evidence is not evidence a fish is absent—it means BiteMap has nothing reliable to show.
+          This is a documented public access point, but BiteMap does not yet have a reliable fish list for it.
+          Fish may still be present; there simply is not enough information to show them here yet.
         </p>
       </article>
     );
@@ -183,27 +183,27 @@ export async function WhatsBiting({ locationId, known }: Props) {
     <article className="biting-card">
       <div className="section-heading">
         <div>
-          <span className="eyebrow">Fish at this water · what&apos;s biting</span>
-          <h2>{known.length} fish {known.length === 1 ? "record" : "records"} at this spot</h2>
+          <span className="eyebrow">Fish at this spot</span>
+          <h2>{known.length} species on record</h2>
         </div>
         {scored ? (
           <span className="biting-mode">
             {scored.liveConditions ? "Live conditions" : "Seasonal estimate"}
           </span>
         ) : (
-          <span className="biting-mode biting-mode-offline">Evidence only</span>
+          <span className="biting-mode biting-mode-offline">Records only</span>
         )}
       </div>
 
       {scored ? (
         <>
           <p className="biting-intro">
-            Bite forecasts appear only for fish with both sufficient presence evidence and a reviewed activity model.
-            Presence-only records stay visible without an invented score.
+            Bite forecasts are shown only when the fish has a reliable local record and a reviewed activity model.
+            Other recorded species remain listed without a bite score.
           </p>
           <div className="biting-counts" aria-label="Fish outlook summary">
             <span><strong>{scored.species.length}</strong> bite {scored.species.length === 1 ? "forecast" : "forecasts"}</span>
-            <span><strong>{presenceOnly.length}</strong> presence-only</span>
+            <span><strong>{presenceOnly.length}</strong> records without forecasts</span>
             {scored.insufficient.length > 0 && <span><strong>{scored.insufficient.length}</strong> unconfirmed</span>}
           </div>
 
@@ -265,20 +265,20 @@ export async function WhatsBiting({ locationId, known }: Props) {
           )}
 
           <EvidenceOnlySection
-            title="Present in the evidence · no bite forecast"
-            description="Agency-supported occurrence records for this water or mapped segment. They remain visible even without a reviewed bite model."
+            title="Recorded here · no bite forecast"
+            description="Agency records identify these fish in this water or mapped river section, but BiteMap does not yet have a reviewed activity model for them."
             fish={presenceOnly.filter((item) => !item.modeled)}
           />
           <EvidenceOnlySection
-            title="Nearby or modeled records · not confirmed here"
-            description="These records help describe the surrounding fish community, but they are not proof that the fish occurs at this exact access point."
+            title="Reported nearby · not confirmed at this spot"
+            description="These fish are documented nearby or elsewhere in the watershed, not at this exact access point."
             fish={presenceOnly.filter((item) => item.modeled)}
           />
 
           {scored.insufficient.length > 0 && (
             <div className="biting-insufficient">
               <h3>Reported, but not confirmed at this spot</h3>
-              <p>The evidence has not cleared the presence gate, so these fish are neither presented as present nor given a bite forecast.</p>
+              <p>The available records are not specific or strong enough to confirm these fish at this spot, so they do not receive a bite forecast.</p>
               <div className="biting-insufficient-links">
                 {scored.insufficient.map((item) => <Link key={item.speciesId} href={`/fish/${item.speciesId}`}>{item.name}</Link>)}
               </div>
@@ -291,16 +291,16 @@ export async function WhatsBiting({ locationId, known }: Props) {
       ) : (
         <>
           <p className="biting-offline-note">
-            <Info size={13} /> Bite forecasting is unavailable right now. The records below show occurrence evidence only; none are labeled as biting or not biting.
+            <Info size={13} /> The bite forecast is unavailable right now. The fish records below are still available, but they do not say whether a species is currently biting.
           </p>
           <EvidenceOnlySection
-            title="Documented fish records · forecast offline"
-            description="Agency-supported occurrence records for this water or mapped segment. Open a fish to see its full field guide."
+            title="Recorded fish · forecast unavailable"
+            description="Agency records identify these fish in this water or mapped river section. Open a species for its full field guide."
             fish={known.filter((species) => !species.modeled)}
           />
           <EvidenceOnlySection
-            title="Nearby or modeled records · not confirmed here"
-            description="These surrounding records are useful context, not proof of presence at this exact access point."
+            title="Reported nearby · not confirmed at this spot"
+            description="These fish are documented nearby or elsewhere in the watershed, not at this exact access point."
             fish={known.filter((species) => species.modeled)}
           />
         </>

@@ -74,7 +74,7 @@ export async function GET(request: Request) {
   const locationId = new URL(request.url).searchParams.get("locationId")?.trim() ?? "";
   const association = hydrologyForLocation(locationId);
   if (!association) {
-    return Response.json({ available: false, reason: "No manually verified USGS association for this location." }, { status: 404 });
+    return Response.json({ available: false, reason: "No suitable USGS stream gauge is linked to this spot." }, { status: 404 });
   }
 
   const endpoint = new URL("https://waterservices.usgs.gov/nwis/iv/");
@@ -105,7 +105,7 @@ export async function GET(request: Request) {
       available: false,
       provider: "USGS Water Data for the Nation",
       association,
-      error: "Live USGS observations are temporarily unavailable. BiteMap did not invent a substitute reading.",
+      error: "Live USGS observations are temporarily unavailable.",
       detail: error instanceof Error ? error.message : "Unknown provider error",
     }, { status: 503 });
   }

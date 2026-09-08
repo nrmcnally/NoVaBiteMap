@@ -95,8 +95,8 @@ export function AccountClient({ initialUser, returnTo }: AccountClientProps) {
         <button type="button" role="tab" aria-selected={form === "register"} className={form === "register" ? "active" : ""} onClick={() => { setForm("register"); setError(null); }}>Create account</button>
       </div>
       <span className="account-icon"><LockKeyhole size={28} /></span>
-      <h2>{form === "login" ? "Welcome back." : "Create your alpha account."}</h2>
-      <p>{form === "login" ? "Sign in to sync My Spots on this BiteMap server." : "Use a unique password with at least 12 characters."}</p>
+      <h2>{form === "login" ? "Welcome back." : "Create your account."}</h2>
+      <p>{form === "login" ? "Sign in to see your saved spots and trip log." : "Use a unique password with at least 12 characters."}</p>
       <form className="account-form" onSubmit={(event) => void submit(event)}>
         {form === "register" && <label>Display name <input name="displayName" autoComplete="name" maxLength={120} placeholder="What should we call you?" /></label>}
         <label>Email address <input name="email" type="email" autoComplete="email" required maxLength={320} /></label>

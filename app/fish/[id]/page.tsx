@@ -23,7 +23,7 @@ export default async function FishPage({ params }: FishPageProps) {
   const locations = localSpeciesWaters(id);
   const disclaimer = local.targetable
     ? "Species facts are researched reference content, not a guarantee of presence or catch at any specific water."
-    : "Community records describe agency-supported or nearby historic occurrence evidence. They are not access-point surveys, abundance estimates, or bite forecasts.";
+    : "Regional records show that this fish has been documented nearby. They do not confirm it at every access point or provide a bite forecast.";
 
   const name = local.name;
   const scientificName = local.scientificName;
@@ -43,7 +43,7 @@ export default async function FishPage({ params }: FishPageProps) {
           <div>
             <div className="hero-tags">
               <span><Fish size={14} /> Species guide</span>
-              {!local.targetable && <span className="community-badge">Community record · not bite-scored</span>}
+              {!local.targetable && <span className="community-badge">Regional record · no bite forecast</span>}
               {facts?.nativeStatus && (
                 <span className={`native-badge native-${facts.nativeStatus}`}>{NATIVE_LABEL[facts.nativeStatus]}</span>
               )}
@@ -109,8 +109,8 @@ export default async function FishPage({ params }: FishPageProps) {
               </article>
             ) : (
               <article className="fish-id-card">
-                <span className="eyebrow">Fish-community reference</span>
-                <p>This species is tracked because it appears in the regional evidence, but it does not yet have a reviewed bite-scoring profile. BiteMap shows its verified taxonomy, broad habitat, and supporting waters without inventing activity, size, or lure guidance.</p>
+                <span className="eyebrow">Regional fish record</span>
+                <p>This species has been documented in the region, but BiteMap does not yet have enough reviewed research to forecast its bite. Identification, general habitat, and linked waters are still shown.</p>
               </article>
             )}
 
@@ -136,7 +136,7 @@ export default async function FishPage({ params }: FishPageProps) {
           <aside className="detail-aside">
             <section>
               <div className="fish-where-heading">
-                <div><span className="eyebrow">{guideOnly ? "Where it has evidence" : "Where to fish for it"}</span><h2>{locations.length > 0 ? `${locations.length} evidenced water${locations.length === 1 ? "" : "s"}` : "No evidenced waters yet"}</h2></div>
+                <div><span className="eyebrow">{guideOnly ? "Linked fishing waters" : "Where to fish for it"}</span><h2>{locations.length > 0 ? `${locations.length} linked water${locations.length === 1 ? "" : "s"}` : "No linked waters yet"}</h2></div>
                 {locations.length > 0 && local.targetable && <Link className="see-on-map" href={`/?species=${id}`}>See on map <ArrowRight size={13} /></Link>}
               </div>
               {topWaters.length > 0 ? (
@@ -154,9 +154,9 @@ export default async function FishPage({ params }: FishPageProps) {
                   </div>
                 </div>
               ) : (
-                <p className="fish-empty">BiteMap has no location that clears the evidence gate for this species yet. That is not evidence the fish is absent from the region.</p>
+                <p className="fish-empty">BiteMap does not yet have a fishing spot with a reliable enough record for this species. The fish may still occur elsewhere in the region.</p>
               )}
-              {locations.length > 0 && <small className="fish-where-note">{local.targetable ? "Ranked by estimated opportunity (documented waters first). Live conditions refine each score on the spot page." : "Ordered by evidence strength, with documented waters before nearby modeled records. Scores here describe presence support, not bite quality."} Scroll for more.</small>}
+              {locations.length > 0 && <small className="fish-where-note">{local.targetable ? "Fishing waters are ranked by the current bite estimate, with directly documented waters first. Open a spot for live conditions." : "Directly documented waters appear before nearby watershed records. These values describe the strength of the fish record, not how well it is biting."} Scroll for more.</small>}
             </section>
 
             {facts?.stateRecordLb && (

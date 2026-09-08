@@ -56,7 +56,7 @@ export async function POST(request: Request) {
     if ("error" in checked) return Response.json({ error: checked.error }, { status: 400 });
     const { location, species, input } = checked;
     if (!location.evidence.some((item) => item.speciesId === species.id && item.availability >= 0.35)) {
-      return Response.json({ error: "That species is not evidenced at this BiteMap spot." }, { status: 400 });
+      return Response.json({ error: "That species is not recorded at this BiteMap spot." }, { status: 400 });
     }
     const candidateCohort = species.id === "northern-snakehead" || species.id === "walleye";
 

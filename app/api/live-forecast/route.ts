@@ -23,7 +23,7 @@ export async function GET(request: Request) {
   const base = backendBaseUrl();
   if (!base) {
     return Response.json(
-      { error: "Canonical forecast backend is disabled." },
+      { error: "The detailed fishing forecast is unavailable." },
       { status: 503 },
     );
   }
@@ -44,7 +44,7 @@ export async function GET(request: Request) {
     if (!response.ok) {
       return Response.json(
         {
-          error: "Canonical fishing forecast is temporarily unavailable.",
+          error: "The detailed fishing forecast is temporarily unavailable.",
           detail: payload,
         },
         { status: response.status },
@@ -56,7 +56,7 @@ export async function GET(request: Request) {
   } catch (error) {
     return Response.json(
       {
-        error: "Canonical fishing forecast is temporarily unavailable.",
+        error: "The detailed fishing forecast is temporarily unavailable.",
         detail: error instanceof Error ? error.message : "Unknown backend error",
       },
       { status: 503 },

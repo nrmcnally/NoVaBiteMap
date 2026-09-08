@@ -1,6 +1,5 @@
 import { locations as bundledLocations } from "../../lib/data";
-import { buildForecast } from "../../lib/forecast";
-import { forecastDateKey } from "../../lib/prediction-timeline";
+import { buildTimelineScoreSeries, prepareForecastTimeline } from "../../lib/forecast";
 import { opportunityFor } from "../../lib/scoring";
 import { fetchNwsConditions } from "../../lib/server/nws";
 import { profileFor } from "../../lib/species-profiles";
@@ -18,7 +17,10 @@ type TimelineCacheEntry = {
 };
 
 const TIMELINE_CACHE_TTL_MS = 10 * 60 * 1000;
-const TIMELINE_CACHE_MAX_ENTRIES = 12;
+// A full regional matrix is compact, but retaining many address-specific
+// variants wastes memory on small Railway instances. Four entries cover the
+// common current-location and default-location cases without unbounded growth.
+const TIMELINE_CACHE_MAX_ENTRIES = 4;
 const timelineCache = new Map<string, TimelineCacheEntry>();
 
 function backendBaseUrl() {
@@ -71,8 +73,13 @@ async function bundledMatrix(
   const conditions = await fetchNwsConditions(anchor.lat, anchor.lng);
   const requestedLocations = new Set(locationIds);
   const requestedSpecies = new Set(speciesIds);
-  const dayKeys = [...new Set(conditions.periods.map((period) => forecastDateKey(period.startTime)))].slice(0, 5);
-  const periodIndexes = new Map(conditions.periods.map((period, index) => [period.startTime, index]));
+  // Parsing dates, weather, and alert windows is the expensive part of the
+  // forecast. Do it once per request, then reuse the compact values for every
+  // location/species pair. The previous implementation rebuilt a full
+  // forecast (including Intl formatters and daily objects) for every pair and
+  // exhausted the production Worker's CPU allowance.
+  const preparedTimeline = prepareForecastTimeline(conditions.periods, conditions.alerts);
+  const dayKeys = preparedTimeline.dayKeys;
   const matrix: TimelineScoreMatrix["locations"] = {};
 
   for (const location of bundledLocations) {
@@ -85,32 +92,18 @@ async function bundledMatrix(
       const base = opportunityFor(location, speciesId);
       const profile = profileFor(speciesId);
       if (!base || !profile) continue;
-      const forecast = buildForecast({
-        periods: conditions.periods,
-        alerts: conditions.alerts,
+      const series = buildTimelineScoreSeries(preparedTimeline, {
         availability: base.availability,
         quality: base.quality,
         accessFit: base.accessFit,
-        baseConfidence: base.confidence,
-        associationFactor: 1,
-        hydrologyRelevant: false,
         dielPattern: profile.dielPattern,
         seasonalActivityByMonth: profile.seasonalActivityByMonth,
-      });
-      const daysByKey = new Map(forecast.days.map((day) => [day.dateKey, day]));
-      const dailyBestPeriodIndexes = dayKeys.map((dayKey) => {
-        const candidates = forecast.hourly.filter((period) => period.dateKey === dayKey);
-        if (candidates.length === 0) return null;
-        const best = candidates.reduce((winner, period) => period.score > winner.score ? period : winner);
-        return periodIndexes.get(best.startTime) ?? null;
       });
       locationScores[speciesId] = {
         baseScore: base.score,
         confidence: base.confidence,
         confidenceLabel: base.confidenceLabel,
-        hourlyScores: forecast.hourly.map((period) => period.score),
-        dailyScores: dayKeys.map((dayKey) => daysByKey.get(dayKey)?.score ?? null),
-        dailyBestPeriodIndexes,
+        ...series,
       };
     }
     if (Object.keys(locationScores).length > 0) matrix[location.id] = locationScores;
@@ -122,7 +115,7 @@ async function bundledMatrix(
     provider: conditions.provider,
     retrievedAt: conditions.retrievedAt,
     anchor,
-    basis: "One disclosed regional NWS anchor with the bundled reviewed species profiles. Scores were precomputed on the server; location-specific hydrology and water temperature are not applied.",
+    basis: "Scores use one Northern Virginia NWS forecast point and the fish records available for each spot. Location-specific stream-gauge and water-temperature data are not included.",
     periods: conditions.periods,
     alerts: conditions.alerts,
     dayKeys,
@@ -207,7 +200,7 @@ export async function POST(request: Request) {
     });
   } catch (error) {
     return Response.json({
-      error: "Timeline forecast unavailable. BiteMap did not fabricate forecast periods.",
+      error: "The fishing timeline is unavailable because the weather forecast could not be loaded.",
       detail: error instanceof Error ? error.message : "Unknown provider error",
     }, { status: 503 });
   }

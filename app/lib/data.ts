@@ -476,7 +476,7 @@ const rappahannockLocations: Array<Omit<FishingLocationSeed, "accessAuthority" |
 ];
 
 const accessOnlyNotice =
-  "Public access is verified by Virginia DWR. Species evidence has not yet cleared the Phase 1 evidence gate.";
+  "Public access is verified by Virginia DWR. Reliable fish records for this spot are not available yet.";
 
 const dwrLocations: Array<Omit<FishingLocationSeed, "accessAuthority" | "accessSourceUrl" | "sourceReviewed">> = [
   {

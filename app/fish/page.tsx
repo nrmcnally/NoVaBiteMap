@@ -8,7 +8,7 @@ import { familyGroup } from "../lib/fish-taxonomy";
 
 export const metadata = {
   title: "Fish guide — BiteMap NOVA",
-  description: "Every freshwater species BiteMap tracks in Northern Virginia, with identification, conditions, and where they have evidence.",
+  description: "Freshwater fish found across Northern Virginia, with identification, habitat, seasonal patterns, and linked fishing waters.",
 };
 
 function evidenceCount(speciesId: string): number {
@@ -46,11 +46,11 @@ export default function FishGuidePage() {
         <header className="content-hero">
           <span className="eyebrow"><Fish size={14} /> Species field guide</span>
           <h1>Northern Virginia fish guide</h1>
-          <p>Target species and fish-community records supported by BiteMap&apos;s regional evidence. Search or browse, then open a fish to see its habitat and the waters where evidence supports it.</p>
+          <p>Browse freshwater fish found across Northern Virginia. Open a species for identification, habitat, seasonal patterns, and linked fishing waters.</p>
         </header>
 
         <div className="fish-guide-note">
-          <Info size={15} /> {species.length} species tracked: {targetSpecies.length} have dedicated bite-scoring profiles and {species.length - targetSpecies.length} are evidence-backed community records. A nearby historic record is not proof at an access point.
+          <Info size={15} /> {species.length} species tracked: {targetSpecies.length} have bite forecasts and {species.length - targetSpecies.length} are listed as regional fish records. A nearby record does not confirm a fish at every access point.
         </div>
 
         <FishGlossaryClient fish={fish} />

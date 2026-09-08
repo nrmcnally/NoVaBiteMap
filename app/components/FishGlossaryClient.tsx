@@ -73,7 +73,7 @@ export function FishGlossaryClient({ fish }: { fish: GlossaryFish[] }) {
                   <div className="fish-guide-card-body">
                     <div className="fish-guide-title">
                       <h3>{item.name}</h3>
-                      {!item.targetable && <span className="community-badge">Community record</span>}
+                      {!item.targetable && <span className="community-badge">Regional record</span>}
                       {item.nativeStatus && <span className={`native-badge native-${item.nativeStatus}`}>{NATIVE_LABEL[item.nativeStatus]}</span>}
                     </div>
                     <p className="fish-guide-sci"><em>{item.scientificName}</em></p>
@@ -81,7 +81,7 @@ export function FishGlossaryClient({ fish }: { fish: GlossaryFish[] }) {
                       {[item.typicalSize, item.topWater ? `favors ${item.topWater}` : item.habitat].filter(Boolean).join(" · ")}
                     </p>
                     <span className="fish-guide-evidence">
-                      {item.evidenceCount > 0 ? `${item.evidenceCount} water${item.evidenceCount === 1 ? "" : "s"}` : "No evidenced waters"}
+                      {item.evidenceCount > 0 ? `${item.evidenceCount} linked water${item.evidenceCount === 1 ? "" : "s"}` : "No linked waters yet"}
                       <ArrowRight size={13} />
                     </span>
                   </div>

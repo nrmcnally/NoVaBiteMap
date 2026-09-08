@@ -108,8 +108,8 @@ export function PredictionTimeline({
       ? `${selectedPeriods.length} forecast hours · best window by species`
       : `${selectedPeriod!.shortForecast} · ${selectedPeriod!.temperature}°${selectedPeriod!.temperatureUnit} · ${selectedPeriod!.windDirection} ${selectedPeriod!.windSpeed}`
     : status === "loading"
-      ? "Checking NWS coverage and precomputing scores"
-      : "Seasonal scores remain visible";
+      ? "Loading the National Weather Service forecast"
+      : "Seasonal estimates remain available";
 
   return (
     <section className={`prediction-timeline timeline-${status} timeline-${selection?.mode ?? "hourly"}`} aria-label="Interactive fishing prediction timeline">
@@ -125,7 +125,7 @@ export function PredictionTimeline({
         {status === "error" && (
           <div className="timeline-error">
             <CloudSun size={16} />
-            <span>{error || "BiteMap did not invent replacement weather."}</span>
+            <span>{error || "The weather forecast is unavailable right now."}</span>
             <button type="button" onClick={onRefresh}><RefreshCw size={13} /> Retry</button>
           </div>
         )}
@@ -159,8 +159,8 @@ export function PredictionTimeline({
                 <summary aria-label="Forecast coverage details"><Info size={15} /></summary>
                 <div>
                   <strong>{anchorLabel}</strong>
-                  <span>NWS coverage: {forecastHourLabel(coverageStart!)} through {forecastHourLabel(coverageEnd!)}. Times beyond this boundary are unavailable.</span>
-                  <small>{selection.mode === "daily" ? "Day view: each species uses its best supported hour for the selected day. " : ""}{refreshedLabel ? `Provider updated ${refreshedLabel}. ` : ""}Air temperature is not treated as water temperature.</small>
+                  <span>Forecast available from {forecastHourLabel(coverageStart!)} through {forecastHourLabel(coverageEnd!)}.</span>
+                  <small>{selection.mode === "daily" ? "Day view shows each species at its best forecast hour that day. " : ""}{refreshedLabel ? `NWS updated ${refreshedLabel}. ` : ""}Air temperature is shown for context and is not used as water temperature.</small>
                 </div>
               </details>
               <button type="button" className="timeline-refresh" onClick={onRefresh} aria-label="Refresh NWS forecast"><RefreshCw size={14} /></button>

@@ -15,7 +15,7 @@ export async function GET(request: Request) {
   }
   const base = backendBaseUrl();
   if (!base) {
-    return Response.json({ error: "Canonical forecast backend is disabled." }, { status: 503 });
+    return Response.json({ error: "The detailed fishing forecast is unavailable." }, { status: 503 });
   }
   try {
     const response = await fetch(

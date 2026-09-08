@@ -12,24 +12,32 @@ export type ForecastDay = {
 };
 
 const EASTERN_TIME_ZONE = "America/New_York";
+const dateKeyFormatter = new Intl.DateTimeFormat("en-CA", {
+  timeZone: EASTERN_TIME_ZONE,
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+});
+const hourLabelFormatter = new Intl.DateTimeFormat("en-US", {
+  timeZone: EASTERN_TIME_ZONE,
+  weekday: "short",
+  month: "short",
+  day: "numeric",
+  hour: "numeric",
+});
+const dayLabelFormatter = new Intl.DateTimeFormat("en-US", {
+  timeZone: EASTERN_TIME_ZONE,
+  weekday: "short",
+  month: "short",
+  day: "numeric",
+});
 
 export function forecastDateKey(value: string) {
-  return new Intl.DateTimeFormat("en-CA", {
-    timeZone: EASTERN_TIME_ZONE,
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  }).format(new Date(value));
+  return dateKeyFormatter.format(new Date(value));
 }
 
 export function forecastHourLabel(value: string) {
-  return new Intl.DateTimeFormat("en-US", {
-    timeZone: EASTERN_TIME_ZONE,
-    weekday: "short",
-    month: "short",
-    day: "numeric",
-    hour: "numeric",
-  }).format(new Date(value));
+  return hourLabelFormatter.format(new Date(value));
 }
 
 export function forecastDays(periods: NwsForecastPeriod[]): ForecastDay[] {
@@ -40,12 +48,7 @@ export function forecastDays(periods: NwsForecastPeriod[]): ForecastDay[] {
   }
   return [...grouped.entries()].map(([key, dayPeriods]) => ({
     key,
-    label: new Intl.DateTimeFormat("en-US", {
-      timeZone: EASTERN_TIME_ZONE,
-      weekday: "short",
-      month: "short",
-      day: "numeric",
-    }).format(new Date(dayPeriods[0].startTime)),
+    label: dayLabelFormatter.format(new Date(dayPeriods[0].startTime)),
     periods: dayPeriods,
   }));
 }

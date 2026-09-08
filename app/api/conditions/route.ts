@@ -11,7 +11,7 @@ export async function GET(request: Request) {
     return Response.json(await fetchNwsConditions(lat, lon));
   } catch (error) {
     return Response.json({
-      error: "Live NWS forecast unavailable. BiteMap did not create a fallback observation.",
+      error: "The National Weather Service forecast is unavailable right now.",
       detail: error instanceof Error ? error.message : "Unknown provider error",
       provider: "National Weather Service",
     }, { status: 503 });

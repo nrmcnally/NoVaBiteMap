@@ -72,8 +72,8 @@ export function FeedbackClient({
       <section className="feedback-card feedback-success">
         <span className="feedback-success-icon"><CheckCircle2 size={30} /></span>
         <span className="eyebrow">Report received</span>
-        <h2>Thank you—that is exactly what the alpha needs.</h2>
-        <p>The report is waiting in the private administrator review queue. It will be checked before any data or scoring change is made.</p>
+        <h2>Thank you for the report.</h2>
+        <p>The BiteMap administrator will review it before making any change to the data or scores.</p>
         <button type="button" onClick={() => {
           setMessage("");
           setContactOk(false);
@@ -87,7 +87,7 @@ export function FeedbackClient({
     <section className="feedback-card">
       <div className="feedback-card-heading">
         <span className="feedback-card-icon"><MessageSquare size={24} /></span>
-        <div><span className="eyebrow">Private review queue</span><h2>What did you notice?</h2></div>
+        <div><span className="eyebrow">Private feedback</span><h2>What did you notice?</h2></div>
       </div>
       <form className="feedback-form" onSubmit={submit}>
         <fieldset>
@@ -145,7 +145,7 @@ export function FeedbackClient({
           <Send size={17} /> {submitting ? "Sending…" : "Send private feedback"}
         </button>
       </form>
-      <p className="feedback-policy">Feedback is review input, not fishing evidence. Nothing submitted here is promoted into the species catalog or bite model without separate verification.</p>
+      <p className="feedback-policy">Feedback never changes spot information or bite scores automatically. Claims about fish or access are checked against a separate source first.</p>
     </section>
   );
 }

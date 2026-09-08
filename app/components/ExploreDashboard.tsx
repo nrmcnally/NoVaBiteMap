@@ -167,7 +167,7 @@ export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }
       && origin.lng <= -74;
     return originIsSupported
       ? { lat: origin.lat, lng: origin.lng, label: `Regional forecast near ${origin.label}` }
-      : { lat: 38.8462, lng: -77.3064, label: "Fairfax regional forecast anchor" };
+      : { lat: 38.8462, lng: -77.3064, label: "Weather near Fairfax" };
   }, [origin]);
 
   const selectedMatrixScores = useMemo(
@@ -575,9 +575,9 @@ export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }
     if (targets.some((speciesId) => opportunityFor(location, speciesId))) {
       setResultsOpen(true);
     } else if (speciesIds.length > 0) {
-      setToast(`${location.name} has no qualifying evidence for the selected species yet.`);
+      setToast(`${location.name} does not have a strong enough record for the selected species yet.`);
     } else {
-      setToast(`${location.name} is verified public access, but no species has cleared the evidence gate yet.`);
+      setToast(`${location.name} is a public access point, but its fish records are still incomplete.`);
     }
   }, [locations, speciesIds]);
 
@@ -591,9 +591,9 @@ export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }
 
       <section className="command-bar" aria-label="Fishing opportunity search">
         <div className="command-intro">
-          <span className="eyebrow"><Sparkles size={14} /> Today&apos;s opportunity board</span>
+          <span className="eyebrow"><Sparkles size={14} /> Fishing conditions</span>
           <h1>Find your next <em>bite.</em></h1>
-          <p>Start with a place, then choose a target species when you want ranked opportunities.</p>
+          <p>Search for a spot, or choose a species to compare where it may be most active.</p>
         </div>
         <div className="search-stack">
           <label className="unified-search">
@@ -614,7 +614,7 @@ export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }
           <div className="filter-row">
             <FilterMenu label="Target species" value={selectedSpeciesLabel} icon={<Fish size={17} />} className="species-filter-menu" highlighted={speciesIds.length > 0}>
               <div className="filter-popover-heading">
-                <div><strong>Choose one or more</strong><span>Colors show the best evidence-backed score in your current map.</span></div>
+                <div><strong>Select one or more species</strong><span>Colors show today&apos;s highest score for each species on the current map.</span></div>
                 {speciesIds.length > 0 && <button type="button" onClick={() => { setSpeciesIds([]); setSelectedId(undefined); }}>Clear</button>}
               </div>
               <div className="species-option-list">
@@ -626,12 +626,12 @@ export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }
                     <button type="button" className={`filter-option species-option ${selected ? "active" : ""}`} key={item.id} onClick={() => toggleSpecies(item.id)} aria-pressed={selected}>
                       <span className="option-check">{selected && <Check size={13} />}</span>
                       <span className="species-option-copy"><strong>{item.name}</strong><small>{item.habitat}</small></span>
-                      <em className={`species-signal signal-${tier}`}>{score ? `${score} ${tier}` : "Evidence pending"}</em>
+                      <em className={`species-signal signal-${tier}`}>{score ? `${score} ${tier}` : "Not enough data"}</em>
                     </button>
                   );
                 })}
               </div>
-              <p className="menu-footnote">With multiple targets, results use the strongest individual species score and show every supported match. Scores are never averaged.</p>
+              <p className="menu-footnote">For multiple species, each spot uses its highest individual score. Species scores are not averaged together.</p>
             </FilterMenu>
 
             <FilterMenu label="Travel range" value={travelLabel} icon={<Clock3 size={17} />} highlighted={timeFilter !== "any"}>
@@ -657,7 +657,7 @@ export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }
                   return (
                     <button type="button" className={`filter-option compact-option ${selected ? "active" : ""}`} key={option.value} disabled={count === 0} onClick={() => toggleWaterType(option.value)} aria-pressed={selected}>
                       <span className="option-check">{selected && <Check size={13} />}</span>
-                      <strong>{option.label}</strong><small>{count || "Coverage coming"}</small>
+                      <strong>{option.label}</strong><small>{count || "No matching spots"}</small>
                     </button>
                   );
                 })}
@@ -752,7 +752,7 @@ export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }
         <aside className={`results-panel ${resultsOpen ? "open" : ""}`} aria-hidden={!resultsOpen}>
           <div className="results-heading">
             <div>
-              <span className="eyebrow">{selectedSpecies.length === 1 ? `Ranked for ${selectedSpecies[0].short}` : selectedSpecies.length > 1 ? "Best supported selected target" : "Opportunity results"}</span>
+              <span className="eyebrow">{selectedSpecies.length === 1 ? `Ranked for ${selectedSpecies[0].short}` : selectedSpecies.length > 1 ? "Selected species" : "Fishing outlook"}</span>
               <h2>{selectedSpecies.length === 1 ? selectedSpecies[0].name : selectedSpecies.length > 1 ? `${selectedSpecies.length} selected species` : "Best fish by water"}</h2>
             </div>
             <button className="close-results" onClick={() => setResultsOpen(false)} aria-label="Collapse results"><PanelRightClose size={20} /></button>
@@ -761,25 +761,25 @@ export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }
           <div className="ranking-note">
             <Info size={15} /> {timelineForecast.status === "ready"
               ? selectedSpecies.length > 1
-                ? "Precomputed forecast scores applied. Each spot uses its strongest selected species; scores stay separate."
+                ? "Each spot is ranked by whichever selected species has the highest score for this time."
                 : selectedSpecies.length === 1
-                  ? "Precomputed forecast scores apply official species evidence and the reviewed activity profile."
-                  : "Precomputed forecast scores applied. Each water uses its strongest evidenced, forecast-supported target."
+                  ? "Scores combine documented fish records with forecast conditions for the selected time."
+                  : "Each spot shows its highest-scoring fish for the selected time."
               : selectedSpecies.length > 1
-                ? "Each spot is ranked by its strongest selected species; matching scores stay separate."
+                ? "Each spot is ranked by whichever selected species has the highest score."
                 : selectedSpecies.length === 1
-                  ? "Rankings use official species evidence plus a seasonal activity estimate."
-                  : "Each water is ranked by its strongest evidenced species. Pick a target species above to rank for a specific fish."}
-            <Link href="/methodology">What this means</Link>
+                  ? "Scores use documented fish records and typical seasonal activity."
+                  : "Each spot shows the fish with its highest current score. Choose a species to compare one target across the map."}
+            <Link href="/methodology">How scores work</Link>
           </div>
 
           {ranked.length === 0 ? (
             <div className="empty-state">
               <Fish size={34} />
-              <h3>No evidence-qualified matches</h3>
+              <h3>No matching fishing spots</h3>
               <p>{selectedSpecies.length === 0
-                ? "No evidenced fish match your current filters. Try a wider travel range or a different water type — access-only spots stay on the map."
-                : "Try a wider travel range, another access method, or a different species. BiteMap will not fill gaps with invented species claims."}</p>
+                ? "No fish records match these filters. Try a wider travel range or a different water type; public access points will remain on the map."
+                : "Try a wider travel range, another access method, or a different species."}</p>
               <button onClick={() => { setQuery(""); setAccess("any"); setTimeFilter("any"); setWaterbodyTypes([]); setHarvestFilter("any"); }}>Clear filters</button>
             </div>
           ) : (
@@ -822,7 +822,7 @@ export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }
                         {walkable && <span><Footprints size={14} /> ~{travel.walkMinutes} min walk</span>}
                         <span><Clock3 size={14} /> {location.bestWindow}</span>
                         {matches[0]?.forecastPeriod && (
-                          <span><CloudSun size={14} /> Modeled for {new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", weekday: "short", hour: "numeric" }).format(new Date(matches[0].forecastPeriod.startTime))}</span>
+                          <span><CloudSun size={14} /> Forecast for {new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", weekday: "short", hour: "numeric" }).format(new Date(matches[0].forecastPeriod.startTime))}</span>
                         )}
                         <span className={`confidence confidence-${opportunity.confidenceLabel.toLowerCase()}`}>{opportunity.confidenceLabel} confidence</span>
                         <span className={`advisory-badge advisory-${advisory.status}`}>
@@ -843,7 +843,7 @@ export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }
                       {matches.length > 1 && <div className="species-match-row" aria-label="Matching selected species">
                         {matches.map((match) => <span key={match.fish.id}>{match.fish.short} <strong>{match.opportunity.score}</strong></span>)}
                       </div>}
-                      <p className="why-line"><strong>Why it ranks:</strong> {opportunity.evidence.evidenceSummary}</p>
+                      <p className="why-line"><strong>Fish record:</strong> {opportunity.evidence.evidenceSummary}</p>
                       <div className="result-actions">
                         <a href={googleDirectionsUrl(location, origin)} target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()}><Navigation size={14} /> Google Maps directions</a>
                         <Link href={`/locations/${location.id}${speciesIds.length > 0 ? `?species=${speciesIds.join(",")}` : ""}`} onClick={(event) => event.stopPropagation()}>Spot details <ArrowRight size={14} /></Link>
@@ -871,22 +871,22 @@ export function ExploreDashboard({ catalog }: { catalog: ExploreCatalog | null }
         <section className="condition-dock">
           <div className="dock-location">
             <span className="mini-map-pin"><MapPin size={18} /></span>
-            <div><span>On deck</span><strong>{selectedLocation.name}</strong></div>
+            <div><span>Selected spot</span><strong>{selectedLocation.name}</strong></div>
           </div>
           <div className="condition-cell">
             <CloudSun size={19} />
             <div><span>{selected?.matches[0]?.forecastPeriod ? "Selected forecast" : "NWS forecast"}</span><strong>{selected?.matches[0]?.forecastPeriod ? `${selected.matches[0].forecastPeriod.temperature}°${selected.matches[0].forecastPeriod.temperatureUnit}` : live.status === "ready" ? `${live.temperature}°${live.temperatureUnit ?? "F"}` : live.status === "loading" ? "Refreshing..." : "Unavailable"}</strong></div>
-            <small>{selected?.matches[0]?.forecastPeriod?.shortForecast ?? (live.status === "ready" ? live.shortForecast : "No fabricated fallback")}</small>
+            <small>{selected?.matches[0]?.forecastPeriod?.shortForecast ?? (live.status === "ready" ? live.shortForecast : "Forecast unavailable")}</small>
           </div>
           <div className="condition-cell">
             <Wind size={19} />
             <div><span>Wind</span><strong>{selected?.matches[0]?.forecastPeriod ? `${selected.matches[0].forecastPeriod.windDirection} ${selected.matches[0].forecastPeriod.windSpeed}` : live.status === "ready" ? `${live.windDirection ?? ""} ${live.windSpeed ?? ""}` : "—"}</strong></div>
-            <small>{selected?.matches[0]?.forecastPeriod ? "Selected NWS period" : live.status === "ready" ? "Official hourly period" : "Awaiting provider"}</small>
+            <small>{selected?.matches[0]?.forecastPeriod ? "Selected NWS hour" : live.status === "ready" ? "Current NWS hour" : "Forecast unavailable"}</small>
           </div>
           <div className="condition-cell">
             <Droplets size={19} />
             <div><span>Water status</span><strong>{selectedLocation.flowStatus}</strong></div>
-            <small>Association status shown</small>
+            <small>Open the spot for gauge details</small>
           </div>
           <div className="condition-cell risk-cell">
             <AlertTriangle size={19} />

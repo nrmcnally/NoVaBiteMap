@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import type { CanonicalOpportunity } from "../app/lib/data";
 import type { NwsForecastPeriod } from "../app/lib/forecast";
+import { buildForecast, buildTimelineScoreSeries, prepareForecastTimeline } from "../app/lib/forecast";
 import {
   forecastDays,
   periodsForSelection,
@@ -149,4 +150,42 @@ test("an alert caps only provider hours inside its official validity window", ()
   assert.ok(result);
   assert.notEqual(result.period.startTime, periods[1].startTime);
   assert.ok(result.opportunity.score > 35);
+});
+
+test("the optimized timeline series matches the full forecast scorer", () => {
+  const alerts = [{
+    id: "warning",
+    event: "Severe Thunderstorm Warning",
+    severity: "Severe",
+    urgency: "Immediate",
+    headline: "Severe Thunderstorm Warning",
+    description: "",
+    instruction: null,
+    onset: "2026-07-17T22:30:00-04:00",
+    expires: "2026-07-17T23:30:00-04:00",
+  }];
+  const input = {
+    availability: 0.84,
+    quality: 0.68,
+    accessFit: 0.8,
+    dielPattern: "nocturnal",
+    seasonalActivityByMonth: [0.35, 0.4, 0.5, 0.62, 0.75, 0.82, 0.88, 0.85, 0.72, 0.58, 0.44, 0.36],
+  };
+  const prepared = prepareForecastTimeline(periods, alerts);
+  const series = buildTimelineScoreSeries(prepared, input);
+  const full = buildForecast({
+    periods,
+    alerts,
+    ...input,
+    baseConfidence: 70,
+    associationFactor: 1,
+    hydrologyRelevant: false,
+  });
+
+  assert.deepEqual(series.hourlyScores, full.hourly.map((period) => period.score));
+  assert.deepEqual(series.dailyScores, full.days.map((day) => day.score));
+  assert.deepEqual(
+    series.dailyBestPeriodIndexes.map((index) => index === null ? null : series.hourlyScores[index]),
+    full.days.map((day) => day.score),
+  );
 });

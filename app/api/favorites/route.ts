@@ -55,7 +55,7 @@ export async function POST(request: Request) {
     }
 
     if (!body.locationId || !locationById(body.locationId)) {
-      return Response.json({ error: "A valid verified location is required." }, { status: 400 });
+      return Response.json({ error: "Choose a valid BiteMap fishing spot." }, { status: 400 });
     }
     if (body.preferredSpecies && !speciesById(body.preferredSpecies)) {
       return Response.json({ error: "Unknown species." }, { status: 400 });

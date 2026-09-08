@@ -21,7 +21,7 @@ test("build contains the BiteMap opportunity board product contract", async () =
   assert.match(dashboard, /useState\(false\)/);
   assert.match(dashboard, /Choose fish species/);
   assert.match(dashboard, /Keep-and-eat mode/);
-  assert.match(dashboard, /scores are never averaged/i);
+  assert.match(dashboard, /scores are not averaged/i);
   assert.match(dashboard, /Water type/);
   assert.match(dashboard, /Starting address or ZIP/);
   assert.match(dashboard, /Google Maps directions/);
@@ -87,7 +87,7 @@ test("alpha feedback is durable, attributed, and separated from evidence promoti
   ]);
   assert.match(page, /Sign in to send feedback/);
   assert.match(client, /Send private feedback/);
-  assert.match(client, /not fishing evidence/i);
+  assert.match(client, /never changes spot information/i);
   assert.match(route, /createD1AlphaFeedback/);
   assert.match(route, /\/api\/users\/me\/feedback/);
   assert.match(`${d1}${schema}`, /alpha_feedback/);
@@ -128,7 +128,7 @@ test("private trip logs record actual spot and time without freezing a forecast"
   assert.match(tripPage, /does not freeze a forecast/i);
   assert.match(tripClient, /type="datetime-local"/);
   assert.match(tripClient, /A zero-catch trip is useful data too/);
-  assert.match(tripRoute, /That species is not evidenced at this BiteMap spot/);
+  assert.match(tripRoute, /That species is not recorded at this BiteMap spot/);
   assert.match(`${tripRoute}${d1Trips}`, /validationEligible: false/);
   assert.match(schema, /first-party-alpha-trip-log/);
   assert.match(tripClient, /Reconstruct conditions/);
@@ -137,19 +137,19 @@ test("private trip logs record actual spot and time without freezing a forecast"
   assert.match(replayRoute, /locationId: trip\.locationId[\s\S]*startedAt: trip\.startedAt[\s\S]*endedAt: trip\.endedAt/);
   assert.doesNotMatch(replay, /catchCount|lureOrBait|validationEligible/);
   assert.doesNotMatch(`${tripRoute}${d1Trips}${schema}`, /environmentSnapshot|snapshotId/);
-  assert.match(methodology, /calibration evidence, not proof/i);
+  assert.match(methodology, /may help tune the model/i);
   assert.match(methodology, /Open-Meteo modeled history/);
   assert.match(methodology, /manually mapped USGS station/);
 });
 
 test("methodology explains the score without exposing provider health", async () => {
   const methodology = await readFile(new URL("../app/methodology/page.tsx", import.meta.url), "utf8");
-  assert.match(methodology, /A useful forecast should show its work/);
+  assert.match(methodology, /What goes into a BiteMap score/);
   assert.match(methodology, /not a catch probability/i);
-  assert.match(methodology, /No evidence = no ranking/);
-  assert.match(methodology, /strongest supported target/);
-  assert.match(methodology, /one labeled regional weather anchor/i);
-  assert.match(methodology, /Times beyond the provider/);
+  assert.match(methodology, /No reliable record = no score/);
+  assert.match(methodology, /selected fish with the highest score/);
+  assert.match(methodology, /one clearly named weather location/i);
+  assert.match(methodology, /Hours beyond the NWS forecast/);
   assert.doesNotMatch(methodology, /Inspect provider health|data-health/);
 });
 
@@ -162,7 +162,7 @@ test("source code preserves the species gate, provenance, and precise advisory l
     readFile(new URL("../app/lib/advisories.ts", import.meta.url), "utf8"),
   ]);
   assert.match(scoring, /Math\.pow\(evidence\.availability, 1\.5\)/);
-  assert.match(conditions, /did not create a fallback observation/);
+  assert.match(conditions, /National Weather Service forecast is unavailable/);
   assert.match(data, /Public access is verified by Virginia DWR/);
   assert.match(advisories, /PotomacRiver_2026-1\.pdf/);
   assert.match(advisories, /ShenandoahRiver_2025\.pdf/);
@@ -188,16 +188,16 @@ test("live public-data spine includes canonical science forecast, hydrology, mul
     readFile(new URL("../app/lib/generated/aquatic-gap-nova.json", import.meta.url), "utf8"),
     readFile(new URL("../app/lib/generated/dwr-trout-nova.json", import.meta.url), "utf8"),
   ]);
-  assert.match(hydrology, /manually verified USGS association/i);
+  assert.match(hydrology, /hydrologyForLocation/);
   assert.match(hydrology, /stale-while-revalidate=1800/);
   assert.match(nwsSource, /slice\(0, 120\)/);
   assert.match(nwsSource, /alerts/);
   assert.match(conditions, /fetchNwsConditions/);
   assert.match(canonical, /\/forecast/);
   assert.match(detail, /Today through day five/);
-  assert.match(detail, /Canonical science model/);
+  assert.match(detail, /Full forecast/);
   assert.match(detail, /estimated-regional/);
-  assert.match(detail, /air temperature is shown but is not treated as water temperature/i);
+  assert.match(detail, /air temperature shown above is only weather context/i);
   assert.match(publicEvidence, /nearby historic stream evidence, not proof at the access point/i);
   assert.match(publicEvidence, /designated stocked-water layer/);
   assert.match(importer, /dataset_md5/);
@@ -240,14 +240,16 @@ test("Explore timeline uses a precomputed score matrix for the map, list, and me
   assert.match(dashboard, /\/api\/timeline-scores/);
   assert.doesNotMatch(dashboard, /opportunityForForecast/);
   assert.match(dashboard, /opportunities=\{mapOpportunities\}/);
-  assert.match(timeline, /Times beyond this boundary are unavailable/);
+  assert.match(timeline, /Forecast available from/);
   assert.match(timeline, /type="range"/);
-  assert.match(timeline, /each species uses its best supported hour/);
+  assert.match(timeline, /each species at its best forecast hour/);
   assert.match(timelineContract, /periods\.find\(\(item\) => item\.startTime === selection\.key\)/);
   assert.match(matrixContract, /timeline-score-matrix-v0\.1\.0/);
   assert.match(matrixContract, /dailyBestPeriodIndexes/);
   assert.match(matrixRoute, /canonicalMatrix/);
   assert.match(matrixRoute, /bundledMatrix/);
+  assert.match(matrixRoute, /prepareForecastTimeline/);
+  assert.match(matrixRoute, /buildTimelineScoreSeries/);
   assert.match(matrixRoute, /x-bitemap-timeline-cache/);
   assert.match(map, /opportunities\.get\(location\.id\)/);
   assert.doesNotMatch(map, /opportunityFor\(/);
@@ -262,8 +264,8 @@ test("spot details separate bite forecasts from presence-only fish and link ever
   ]);
   assert.match(spot, /Prefer direct documentation over modeled evidence/);
   assert.match(whatsBiting, /Bite forecast/);
-  assert.match(whatsBiting, /Present in the evidence · no bite forecast/);
-  assert.match(whatsBiting, /Nearby or modeled records · not confirmed here/);
-  assert.match(whatsBiting, /none are labeled as biting or not biting/i);
+  assert.match(whatsBiting, /Recorded here · no bite forecast/);
+  assert.match(whatsBiting, /Reported nearby · not confirmed at this spot/);
+  assert.match(whatsBiting, /do not say whether a species is currently biting/i);
   assert.match(whatsBiting, /Open fish guide/);
 });

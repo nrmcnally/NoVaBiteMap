@@ -120,7 +120,7 @@ export default async function LocationPage({ params, searchParams }: LocationPag
         </header>
 
         {primaryEvidence?.seasonal && (
-          <div className="seasonal-run-banner"><Clock3 size={17} /> <span><strong>Seasonal fish:</strong> {primaryEvidence.seasonal.label}. Evidence applies to the documented run or life-stage window, not year-round adult presence.</span></div>
+          <div className="seasonal-run-banner"><Clock3 size={17} /> <span><strong>Seasonal fish:</strong> {primaryEvidence.seasonal.label}. This record applies to the documented migration or life stage, not year-round adult presence.</span></div>
         )}
 
         {regulationAlert && (
@@ -137,7 +137,7 @@ export default async function LocationPage({ params, searchParams }: LocationPag
               <article className="outlook-card">
                 <div className="outlook-topline">
                   <div>
-                    <span className="eyebrow">Evidence baseline · live outlook below</span>
+                    <span className="eyebrow">Current fishing outlook</span>
                     <h2>{target.name} outlook</h2>
                   </div>
                   <div className="large-score"><strong>{opportunity.score}</strong><span>/100<br />opportunity</span></div>
@@ -145,14 +145,14 @@ export default async function LocationPage({ params, searchParams }: LocationPag
                 <div className="outlook-summary">
                   <div><Clock3 size={19} /><span>Best window<strong>{location.bestWindow}</strong></span></div>
                   <div><Gauge size={19} /><span>Confidence<strong>{opportunity.confidenceLabel} · {opportunity.confidence}%</strong></span></div>
-                  <div><Fish size={19} /><span>Presence support<strong>{Math.round(opportunity.availability * 100)}/100</strong></span></div>
+                  <div><Fish size={19} /><span>Fish record<strong>{Math.round(opportunity.availability * 100)}/100</strong></span></div>
                 </div>
-                <div className="basis-banner"><Info size={16} /> Hourly activity is an estimated seasonal profile until NWS and verified hydrology associations refresh. It is not an observed catch rate.</div>
+                <div className="basis-banner"><Info size={16} /> This starting score uses seasonal patterns until current weather and stream data load. It is not an observed catch rate.</div>
               </article>
             ) : (
               <article className="outlook-card no-evidence">
                 <ShieldAlert size={30} />
-                <div><span className="eyebrow">Evidence gate active</span><h2>No species outlook yet</h2><p>{location.notice}</p></div>
+                <div><span className="eyebrow">Fish records incomplete</span><h2>No species outlook yet</h2><p>{location.notice}</p></div>
               </article>
             )}
 
@@ -177,7 +177,7 @@ export default async function LocationPage({ params, searchParams }: LocationPag
 
             {primaryEvidence && (
               <article className="factors-card">
-                <div className="section-heading"><div><span className="eyebrow">Explain the score</span><h2>What moved this outlook</h2></div></div>
+                <div className="section-heading"><div><span className="eyebrow">Why this score</span><h2>What affects the outlook</h2></div></div>
                 <div className="factor-columns">
                   <div className="positive-factors">
                     <h3><CheckCircle2 size={18} /> Positive factors</h3>
@@ -203,7 +203,7 @@ export default async function LocationPage({ params, searchParams }: LocationPag
 
           <aside className="detail-aside">
             <section>
-              <span className="eyebrow">Access intelligence</span>
+              <span className="eyebrow">Access details</span>
               <h2>Before you go</h2>
               <dl>
                 <div><dt>Coordinates</dt><dd>{location.lat.toFixed(5)}, {location.lng.toFixed(5)}</dd></div>
@@ -267,18 +267,18 @@ export default async function LocationPage({ params, searchParams }: LocationPag
               <small>Reviewed {consumptionAdvisory.reviewed}. One meal is eight ounces. VDH advises pregnant or potentially pregnant people, nursing mothers, and young children not to eat any fish listed in an advisory. No mapped match is a safety guarantee.</small>
             </section>
             <section>
-              <span className="eyebrow">Source trail</span>
-              <h2>Why you can trust it</h2>
+              <span className="eyebrow">Sources</span>
+              <h2>Where this information comes from</h2>
               <a href={location.accessSourceUrl} target="_blank" rel="noreferrer">{location.accessAuthority} access source <ExternalLink size={14} /></a>
-              {primaryEvidence?.sourceUrl && <a href={primaryEvidence.sourceUrl} target="_blank" rel="noreferrer">{primaryEvidence.sourceName ?? "Official species evidence"} <ExternalLink size={14} /></a>}
+              {primaryEvidence?.sourceUrl && <a href={primaryEvidence.sourceUrl} target="_blank" rel="noreferrer">{primaryEvidence.sourceName ?? "Official fish record"} <ExternalLink size={14} /></a>}
               {location.waterbody.includes("Shenandoah") && <a href={sourceLinks.shenandoah} target="_blank" rel="noreferrer">DWR regional fishery feature <ExternalLink size={14} /></a>}
               {location.id === "lake-brittle" && <a href={sourceLinks.walleye2026} target="_blank" rel="noreferrer">2026 DWR Walleye Forecast <ExternalLink size={14} /></a>}
               <Link href="/methodology">Read the scoring methodology <ExternalLink size={14} /></Link>
               <small>Access source reviewed {location.sourceReviewed}. Always verify current regulations with the official authority.</small>
             </section>
             <section className="condition-mini">
-              <div><Waves size={18} /><span>Hydrology<strong>{location.hydrology ? `USGS ${location.hydrology.stationId} linked` : "No verified association"}</strong></span></div>
-              <div><Droplets size={18} /><span>Water temperature<strong>{location.hydrology ? "Shown when station reports it" : "No verified station"}</strong></span></div>
+              <div><Waves size={18} /><span>Stream gauge<strong>{location.hydrology ? `USGS ${location.hydrology.stationId}` : "No suitable gauge"}</strong></span></div>
+              <div><Droplets size={18} /><span>Water temperature<strong>{location.hydrology ? "Shown when the gauge reports it" : "No suitable gauge"}</strong></span></div>
             </section>
             {location.stocking && (
               <section>
